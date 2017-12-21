@@ -9,6 +9,6 @@ The CCCEV contains two basic and complementary core concepts:
 
 Copyright © 2016 European Union. This vocabulary is published under the ISA Open Metadata Licence v1.1, https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11
 
-The current version of the Core Criterion and Core Evidence Vocabulary can be downloaded from https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary.
+The current version of the Core Criterion and Core Evidence Vocabulary can be downloaded from https://joinup.ec.europa.eu/release/core-criterion-and-core-evidence-vocabulary-v100.
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Criterion and Core Evidence Vocabulary repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/CCCEV/wiki.

@@ -1,0 +1,123 @@
+{
+	"@context":
+	{
+		"Criteron": "http://data.europa.eu/m8g/Criteron",
+		"RequirementGroup": "http://data.europa.eu/m8g/RequirementGroup",
+		"CriterionRequirement": "http://data.europa.eu/m8g/CriterionRequirement",
+		"RequirementResponse": "http://data.europa.eu/m8g/RequirementResponse",
+		"PeriodOfTime": "http://data.europa.eu/m8g/PeriodOfTime",
+		"Evidence": "http://data.europa.eu/m8g/Evidence",
+		"Agent": "http://xmlns.com/foaf/0.1/Agent",
+		"Organization": "http://www.w3.org/ns/org#Organization",
+		"Person": "http://xmlns.com/foaf/0.1/Person",
+		"DocumentReference": "http://data.europa.eu/m8g/DocumentReference",
+		"criterionType": {
+			"@id": "http://data.europa.eu/m8g/criterionType"
+		},
+		"title": {
+			"@id": "http://purl.org/dc/terms/title",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"description": {
+			"@id": "http://purl.org/dc/terms/description",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+		},
+		"fulfilledIndicator": {
+			"@id": "http://data.europa.eu/m8g/fulfilledIndicator"
+		},
+		"weight": {
+			"@id": "http://data.europa.eu/m8g/weight"
+		},
+		"isDefinedInFormalFramework": {
+			"@id": "http://data.europa.eu/m8g/isDefinedInFormalFramework",
+			"@type": "http://purl.org/vocab/cpsv#FormalFramework"
+		},
+		"fulfilledByRequirementGroup": {
+			"@id": "http://data.europa.eu/m8g/fulfilledByRequirementGroup",
+			"@type": "http://data.europa.eu/m8g/RequirementGroup"
+		},
+		"hasCriterionRequirement": {
+			"@id": "http://data.europa.eu/m8g/hasCriterionRequirement",
+			"@type": "http://data.europa.eu/m8g/CriterionRequirement"
+		},
+		"expectedDataType": {
+			"@id": "http://data.europa.eu/m8g/expectedDataType"
+		},
+		"expectedValue": {
+			"@id": "http://data.europa.eu/m8g/expectedValue"
+		},
+		"maximumValue": {
+			"@id": "http://data.europa.eu/m8g/maximumValue"
+		},
+		"minimumValue": {
+			"@id": "http://data.europa.eu/m8g/minimumValue"
+		},
+		"typeOfTranslation": {
+			"@id": "http://data.europa.eu/m8g/typeOfTranslation"
+		},
+		"levelOfCertification": {
+			"@id": "http://data.europa.eu/m8g/levelOfCertification"
+		},
+		"typeOfCopyQuality": {
+			"@id": "http://data.europa.eu/m8g/typeOfCopyQuality"
+		},
+		"applicableinPeriodOfTime": {
+			"@id": "http://data.europa.eu/m8g/applicableinPeriodOfTime",
+			"@type": "http://data.europa.eu/m8g/PeriodOfTime"
+		},
+		"metByEvidence": {
+			"@id": "http://data.europa.eu/m8g/metByEvidence",
+			"@type": "http://data.europa.eu/m8g/Evidence"
+		},
+		"value": {
+			"@id": "http://data.europa.eu/m8g/value"
+		},
+		"appliesToPeriodOfTime": {
+			"@id": "http://data.europa.eu/m8g/appliesToPeriodOfTime",
+			"@type": "http://data.europa.eu/m8g/PeriodOfTime"
+		},
+		"validatesCriterionRequirement": {
+			"@id": "http://data.europa.eu/m8g/validatesCriterionRequirement",
+			"@type": "http://data.europa.eu/m8g/CriterionRequirement"
+		},
+		"provenByEvidence": {
+			"@id": "http://data.europa.eu/m8g/provenByEvidence",
+			"@type": "http://data.europa.eu/m8g/Evidence"
+		},
+		"startTime": {
+			"@id": "http://data.europa.eu/m8g/startTime"
+		},
+		"endTime": {
+			"@id": "http://data.europa.eu/m8g/endTime"
+		},
+		"type": {
+			"@id": "http://purl.org/dc/terms/type"
+		},
+		"language": {
+			"@id": "http://purl.org/dc/terms/language"
+		},
+		"issuedByOrganisation": {
+			"@id": "http://data.europa.eu/m8g/issuedByOrganisation",
+			"@type": "http://www.w3.org/ns/org#Organization"
+		},
+		"isSupportedByDocumentReference": {
+			"@id": "http://data.europa.eu/m8g/isSupportedByDocumentReference",
+			"@type": "http://data.europa.eu/m8g/DocumentReference"
+		},
+		"belongsToAgent": {
+			"@id": "http://data.europa.eu/m8g/belongsToAgent",
+			"@type": "http://xmlns.com/foaf/0.1/Agent"
+		},
+		"satisfiesCriterion": {
+			"@id": "http://data.europa.eu/m8g/satisfiesCriterion",
+			"@type": "http://data.europa.eu/m8g/Criterion"
+		},
+		"providesRequirementResponse": {
+			"@id": "http://data.europa.eu/m8g/providesRequirementResponse",
+			"@type": "http://data.europa.eu/m8g/RequirementResponse"
+		},
+		"url": {
+			"@id": "http://data.europa.eu/m8g/url"
+		}
+	}
+}

@@ -91,10 +91,12 @@
 			"@id": "http://data.europa.eu/m8g/endTime"
 		},
 		"type": {
-			"@id": "http://purl.org/dc/terms/type"
+			"@id": "http://purl.org/dc/terms/type",
+			"@type": "http://www.w3.org/2000/01/rdf-schema#Class"
 		},
 		"language": {
-			"@id": "http://purl.org/dc/terms/language"
+			"@id": "http://purl.org/dc/terms/language",
+			"@type": "http://purl.org/dc/terms/LinguisticSystem"
 		},
 		"issuedByOrganisation": {
 			"@id": "http://data.europa.eu/m8g/issuedByOrganisation",

@@ -1,0 +1,343 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://data.europa.eu/m8g/cccev>
+  a owl:Ontology, adms:Asset ;
+  dct:title "Core Criterion and Core Evidence Vocabulary"@en ;
+  dct:description "The Core Criterion and Core Evidence Vocabulary (CCCEV) contains two basic and complementary core concepts: the criterion, something used as the basis for making a judgement or decision, e.g. a requirement set in a public tender or a condition that has to be fulfilled for a public service to be executed; and the evidence, something which proves that something else exists or is true, in particular an evidence is used to prove that a specific criterion is met by someone of by something."@en ;
+  dct:created "2016-11-10"^^xsd:date ;
+  vann:preferredNamespacePrefix "cccev" ;
+  foaf:homepage <https://joinup.ec.europa.eu/asset/criterion_evidence_cv/home> ;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+  dct:creator <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+  dct:type <http://purl.org/adms/assettype/Ontology> ;
+  dct:status <http://purl.org/adms/status/Completed> .
+
+#---------------------------->
+#----- Criterion Class ------>
+#---------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/Criteron> a rdfs:Class ;
+  rdfs:label "Criterion"@en ;
+  rdfs:comment "The Criterion class represents the rule or principle used to judge, evaluate or assess something. The Criterion class has the properties described below."@en .
+
+#-- Properties definition -->
+
+<http://data.europa.eu/m8g/criterionType> a rdf:Property ;
+  rdfs:label "criterion type"@en ;
+  rdfs:comment "A Criterion must be defined in terms of a coded type in order to allow for classification and automatic translation. The types of criterion shall be based on controlled vocabularies."@en ;
+  rdfs:domain cv:Criterion .
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "name"@en ;
+  vann:usageNote "A Criterion must have a name. It can be used as a short descriptive text."@en .
+  
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "A Criterion may be textually described using this property. The description can be used to add details and further explanation about the Criterion."@en .
+  
+<http://data.europa.eu/m8g/fulfilledIndicator> a rdf:Property ;
+  rdfs:label "fulfilled indicator"@en ;
+  rdfs:comment "This property is used when the Criterion class is informed as a response and the submitter wants to specify whether the Criterion is considered to be fulfilled (true) or not (false)."@en ;
+  rdfs:domain cv:Criterion .  
+
+<http://data.europa.eu/m8g/weight> a rdf:Property ;
+  rdfs:label "weight"@en ;
+  rdfs:comment "A Criterion may have a weight to provide for automatic scoring of the Criterion responses. It implies that there are multiple criteria, and the weight represents the importance of one criterion among the whole set of criteria."@en ;
+  rdfs:domain cv:Criterion .  
+  
+<http://data.europa.eu/m8g/isDefinedInFormalFramework> a rdf:Property ;
+  rdfs:label "is defined in Formal Framework"@en ;
+  rdfs:comment "A legal text or any other Formal framework defines the legal basis for the criterion."@en ;
+  rdfs:domain cv:Criterion ;
+  rdfs:range cpsv:FormalFramework .
+
+<http://data.europa.eu/m8g/fulfilledByRequirementGroup> a rdf:Property ;
+  rdfs:label "fulfilled by Requirement Group"@en ;
+  rdfs:comment "A Criterion shall be fulfilled by means of one or more groups of options. Each one of these options is defined as a Requirements group. There might be different ways to validate a single criterion, therefore there can be multiple Requirement groups associated with a criterion. Each Requirement group contains all the requirement criteria that must be fulfilled in order to fulfil the whole criterion."@en ;
+  rdfs:domain cv:Criterion ;
+  rdfs:range cv:RequirementGroup .
+
+#------------------------------------>
+#----- Requirement Group Class ------>
+#------------------------------------>
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/RequirementGroup> a rdfs:Class ;
+  rdfs:label "Requirement group"@en ;
+  rdfs:comment "Criterion requirement group is the set of requirements that must be fulfilled together to validate a criterion. A Criterion can be satisfied using different options. The Requirement group class is used to wrap the set of criteria requirements that validate a criterion. All criteria requirements belonging to a requirement group shall be valid for the requirement group to be considered valid. When there is more than one Requirement group for a Criterion, at least one of them has to be positively validated for the Criterion to be considered fulfilled."@en .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "A Requirement group may be textually described using this property. The description can be used to add details and explanation about the Requirement group."@en .
+
+<http://data.europa.eu/m8g/hasCriterionRequirement> a rdf:Property ;
+  rdfs:label "has Criterion Requirement"@en ;
+  rdfs:comment "A Requirement group is a collection of Criterion requirements. At least, a Requirement group shall contain one Criterion requirement."@en ;
+  rdfs:domain cv:RequirementGroup ;
+  rdfs:range cv:CriterionRequirement .    
+  
+#---------------------------------------->
+#----- Criterion Requirement Class ------>
+#---------------------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/CriterionRequirement> a rdfs:Class ;
+  rdfs:label "Criterion requirement"@en ;
+  rdfs:comment "A Criterion can be expressed as a set of requirements where every requirement must be valid. A Criterion requirement is an atomic requirement. Some criteria can be expressed with several atomic requirements. A Criterion requirement can specify the expected value that the Criterion response has to contain, or a range of threshold values within which the Criterion response has to fit in. The Criterion requirement may apply to a certain period of time. It also can provide a list of candidate evidences that the responder can use to prove the Criterion requirement."@en .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "name"@en ;
+  vann:usageNote "A Criterion requirement may have a name by which it can be referred to."@en .
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "A Criterion requirement may have an explanatory description."@en .
+  
+<http://data.europa.eu/m8g/expectedDataType> a rdf:Property ;
+  rdfs:label "expected data type"@en ;
+  rdfs:comment "Each Criterion requirement shall describe the expected data type that the response has to provide."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/expectedValue> a rdf:Property ;
+  rdfs:label "expected value"@en ;
+  rdfs:comment "This property is used to define the expected value that the responder has to provide in the Criterion response."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/maximumValue> a rdf:Property ;
+  rdfs:label "maximum value"@en ;
+  rdfs:comment "When the value of the Criterion response must fall into a range or it shall be lesser than a threshold, this property is used to define the maximum expected value."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/minimumValue> a rdf:Property ;
+  rdfs:label "minimum value"@en ;
+  rdfs:comment "When the value of the Criterion response must fall into a range or it shall be larger than a specific threshold, this property is used to define the minimum expected value."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/typeOfTranslation> a rdf:Property ;
+  rdfs:label "type of translation"@en ;
+  rdfs:comment "A Criterion requirement may specify whether the evidence proving that this Criterion requirement shall be translated and what type of translation shall apply, for instance, certified translation."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/levelOfCertification> a rdf:Property ;
+  rdfs:label "level of certification"@en ;
+  rdfs:comment "A Criterion requirement may specify whether the Evidence proving this Criterion requirement shall belong to a specific level of certification, for instance, legalisation."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/typeOfCopyQuality> a rdf:Property ;
+  rdfs:label "type of copy quality"@en ;
+  rdfs:comment "A Criterion requirement may specify whether the Evidence proving this Criterion requirement shall be of a specific type of copy, for instance, certified copy."@en ;
+  rdfs:domain cv:CriterionRequirement .
+  
+<http://data.europa.eu/m8g/applicableinPeriodOfTime> a rdf:Property ;
+  rdfs:label "applicable in Period of time"@en ;
+  rdfs:comment "If the Criterion requirement shall apply to a specific time period, this class is used to describe it."@en ;
+  rdfs:domain cv:CriterionRequirement ;
+  rdfs:range cv:PeriodOfTime .
+
+<http://data.europa.eu/m8g/metByEvidence> a rdf:Property ;
+  rdfs:label "met by Evidence"@en ;
+  rdfs:comment "A Criterion Requirement may point to a list of candidate Evidences that can be used by the responder to prove the Criterion requirement is fulfilled."@en ;
+  rdfs:domain cv:CriterionRequirement ;
+  rdfs:range cv:Evidence .
+  
+#--------------------------------------->
+#----- Requirement Response Class ------>
+#--------------------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/RequirementResponse> a rdfs:Class ;
+  rdfs:label "Requirement response"@en ;
+  rdfs:comment "Requirement response is an assertion that responds to a criterion requirement. Requirement Response is the class used to define the actual response to a Criterion requirement. It provides the value for the specific requirement and the period to which it applies. It refers to the Criterion requirement that validates."@en .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "name"@en ;
+  vann:usageNote "A Requirement response may have a name by which it is referred to."@en .
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "A Requirement response may have an explanatory description."@en .
+
+<http://data.europa.eu/m8g/value> a rdf:Property ;
+  rdfs:label "value"@en ;
+  rdfs:comment "The Requirement response must contain the value that responds to the Criterion requirement. In order to fulfil the Criterion requirement, when there is an expected value or an expected threshold, the value should be equal to the expected value or within the range established by the thresholds."@en ;
+  rdfs:domain cv:RequirementResponse .
+
+<http://data.europa.eu/m8g/appliesToPeriodOfTime> a rdf:Property ;
+  rdfs:label "applies to Period of time"@en ;
+  rdfs:comment "If the Requirement response applies to a specific period, this class is used to establish it."@en ;
+  rdfs:domain cv:RequirementResponse ;
+  rdfs:range cv:PeriodOfTime .
+
+<http://data.europa.eu/m8g/validatesCriterionRequirement> a rdf:Property ;
+  rdfs:label "validates Criterion requirement"@en ;
+  rdfs:comment "The Requirement response must refer to the Criterion requirement it is replying to."@en ;
+  rdfs:domain cv:RequirementResponse ;
+  rdfs:range cv:CriterionRequirement .
+
+<http://data.europa.eu/m8g/provenByEvidence> a rdf:Property ;
+  rdfs:label "proven by Evidence"@en ;
+  rdfs:comment "The Requirement response may provide the Evidence that proves the response, and thus the Criterion requirement."@en ;
+  rdfs:domain cv:RequirementResponse ;
+  rdfs:range cv:Evidence .  
+ 
+#--------------------------------->
+#----- Period of Time Class ------>
+#--------------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/PeriodOfTime> a rdfs:Class ;
+  rdfs:label "Period of time"@en ;
+  rdfs:comment "An interval of time that is named or defined by its start and end times."@en .
+
+#-- Properties definition -->
+
+<http://data.europa.eu/m8g/startTime> a rdf:Property ;
+  rdfs:label "start time"@en ;
+  rdfs:comment "The date and time on which the period of time starts."@en ;
+  rdfs:domain cv:PeriodOfTime .
+
+<http://data.europa.eu/m8g/endTime> a rdf:Property ;
+  rdfs:label "end time"@en ;
+  rdfs:comment "The date and time on which the period of time finalizes."@en ;
+  rdfs:domain cv:PeriodOfTime .
+
+#--------------------------->
+#----- Evidence Class ------>
+#--------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/Evidence> a rdfs:Class ;
+  rdfs:label "Evidence"@en ;
+  rdfs:comment "Evidence is any resource that can document or support a Requirement response. The Evidence class contains information that proves that a Criterion requirement exists or is true, in particular Evidences are used to prove that a specific Criterion is met."@en .
+
+#-- Properties definition -->
+
+<http://purl.org/dc/terms/type> a rdf:Property ;
+  rdfs:label "evidence type"@en ;
+  vann:usageNote "The Evidences contain a property type to categorize Evidences and to allow for the creation of controlled vocabularies that can facilitate automatic translation."@en .
+
+<http://purl.org/dc/terms/title> a rdf:Property ;
+  rdfs:label "name"@en ;
+  vann:usageNote "An Evidence may have a name by which it is referred to."@en .
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "An Evidence may have an explanatory description."@en .
+
+<http://purl.org/dc/terms/language> a rdf:Property ;
+  rdfs:label "language"@en ;
+  vann:usageNote "An Evidence may define the language the attestation of evidentiary document is written in."@en .
+
+<http://data.europa.eu/m8g/issuedByOrganisation> a rdf:Property ;
+  rdfs:label "issued by Organisation"@en ;
+  rdfs:comment "An Evidence may refer to the organisation that issued the attestation or evidentiary document."@en ;
+  rdfs:domain cv:Evidence ;
+  rdfs:range org:Organization .
+
+<http://data.europa.eu/m8g/isSupportedByDocumentReference> a rdf:Property ;
+  rdfs:label "is supported by Document reference"@en ;
+  rdfs:comment "An Evidence may refer to the attestation, to the evidentiary document or to the URL where the proof from a third party can be found."@en ;
+  rdfs:domain cv:Evidence ;
+  rdfs:range cv:DocumentReference .
+
+<http://data.europa.eu/m8g/belongsToAgent> a rdf:Property ;
+  rdfs:label "belongs to Agent"@en ;
+  rdfs:comment "An Evidence shall belong to an Agent. A Criterion may affect several Agents; therefore the evidences shall define to which Agent they belong. For instance, a criterion of non-conviction applied to an organization requires evidences of non-conviction for the organisation responsible persons. Each of those evidences shall indicate to which person within the organisation they belong."@en ;
+  rdfs:domain cv:Evidence ;
+  rdfs:range foaf:Agent .  
+ 
+#------------------------>
+#----- Agent Class ------>
+#------------------------>
+
+#-- Class definition -->
+
+<http://xmlns.com/foaf/0.1/Agent> a rdfs:Class ;
+  rdfs:label "Agent"@en ;
+  vann:usageNote "An Organisation or Natural person providing a Requirement response that satisfies a Criterion. The Agent class is a generalisation of the Person and Organisation classes defined in the Core Person Vocabulary and the Organisation Ontology respectively."@en .
+
+#-- Properties definition -->
+
+<http://data.europa.eu/m8g/satisfiesCriterion> a rdf:Property ;
+  rdfs:label "satisfies Criterion"@en ;
+  rdfs:comment "An Agent satisfies a Criterion. It shall satisfy the Criterion by providing Requirement responses that validate the Criterion requirements of the Criterion."@en ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range cv:Criterion .
+
+<http://data.europa.eu/m8g/providesRequirementResponse> a rdf:Property ;
+  rdfs:label "provides Requirement response"@en ;
+  rdfs:comment "An Agent provides Requirement responses to validate the Criterion requirements defined in the Criterion."@en ;
+  rdfs:domain foaf:Agent ;
+  rdfs:range cv:RequirementResponse .  
+
+#------------------------------->
+#----- Organisation Class ------>
+#------------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/org#Organization> a rdfs:Class ;
+  rdfs:label "Organisation"@en ;
+  vann:usageNote "This is a subclass of the class Agent. This subclass contains the properties defined in the class Agent above plus the properties defined in the Organisation Ontology. The modelling of the Legal Entities must follow the Core Business Vocabulary (rov:LegalEntity is a subclass  of org:Organisation) and the modelling of Public Organisations must follow the Core Public Organisation Vocabulary (cpov:PublicOrganization is a subclass of org:FormalOrganisation)."@en ;
+  rdfs:subClassOf foaf:Agent .
+  
+#------------------------->
+#----- Person Class ------>
+#------------------------->
+
+#-- Class definition -->
+
+<http://xmlns.com/foaf/0.1/Person> a rdfs:Class ;
+  rdfs:label "Person"@en ;
+  vann:usageNote "This is a subclass of the class Agent. This subclass contains the properties defined in the class Agent above plus the properties defined in the Core Person Vocabulary."@en ;
+  rdfs:subClassOf foaf:Agent .
+  
+#------------------------------------->
+#----- Document Reference Class ------>
+#------------------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/DocumentReference> a rdfs:Class ;
+  rdfs:label "Document reference"@en ;
+  rdfs:comment "A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response."@en .
+
+#-- Properties definition -->
+
+<http://data.europa.eu/m8g/url> a rdf:Property ;
+  rdfs:label "URL"@en ;
+  rdfs:comment "The Uniform Resource Locator where the document or attestation can be found."@en ;
+  rdfs:domain cv:DocumentReference .
+  
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "A Document reference may contain the description of the attestation or evidentiary document."@en .
+  
+<http://purl.org/dc/terms/type> a rdf:Property ;
+  rdfs:label "type"@en ;
+  vann:usageNote "The Document reference may contain the type that categorizes the attestation or evidentiary document."@en .
+

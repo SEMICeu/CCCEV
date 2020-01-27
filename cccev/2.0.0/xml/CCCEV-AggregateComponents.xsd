@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
+<xsd:schema xmlns="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#"
+	xmlns:cac="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#"
+	xmlns:cbc="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CommonAggregateComponents.xsd"/>
+	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CommonBasicComponents.xsd"/>
+	
+	<!-- Element declaration -->
+	<xsd:element name="Criterion" type="CriterionType"/>
+	<xsd:element name="CriterionConstraintProperty" type="PropertyType"/>
+	<xsd:element name="DatumValue" type="cac:ValueType"/>
+	<xsd:element name="Evidence" type="EvidenceType"/>
+	<xsd:element name="EvidenceType" type="EvidenceTypeType"/>
+	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
+	<xsd:element name="InformationRequirementConstraint" type="PropertyType"/>
+	<xsd:element name="InformationRequirementProperty" type="PropertyType"/>
+	<xsd:element name="MatchingEvidenceType" type="EvidenceTypeType"/>
+	<xsd:element name="PeriodValue" type="cac:PeriodType"/>
+	<xsd:element name="SubCriterion" type="CriterionType"/>
+	
+	<!-- Element definition -->
+	<xsd:complexType name="CriterionType">
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Weight" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:EvaluationMethod" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Bias" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="cbc:FromReferenceFrameWorkIdRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:TargetCriterionIdRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:SourceCriterionIdRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="InformationRequirementProperty" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="CriterionConstraintProperty" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SubCriterion" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PropertyType">
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:ProvidedEvidenceIdRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:RequiredEvidenceTypeIdRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="DatumValue" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="InformationRequirementConstraint" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EvidenceType">
+		<xsd:complexContent>
+			<xsd:extension base="cac:AssetType">
+				<xsd:sequence>
+					<xsd:element ref="cbc:MatchingEvidenceTypeIdRef" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>		
+	</xsd:complexType>
+	<xsd:complexType name="EvidenceTypeType">
+		<xsd:complexContent>
+			<xsd:extension base="cac:AssetType">
+				<xsd:sequence>
+					
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>		
+</xsd:schema>

@@ -1,0 +1,554 @@
+@prefix : <https://joinup.ec.europa.eu/node/157823/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ubl: <http://docs.oasis-open.org/ubl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ccts: <http://www.unece.org/cefact#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/elements/1.1/> .
+
+
+################################################################
+# METADATA
+################################################################
+
+<https://joinup.ec.europa.eu/node/157823/> rdf:type owl:Ontology ;
+                            # owl:versionIRI <> ;
+                             owl:versionInfo "1.0"@en ;
+                             skos:note "The ontology namespace is used for the distribution of the T-Box. Documentation, datasets and resources associated to the ontology can be accessed via the DCAT accessURL and downloadURL properties. In OWL2 ontology IRI can be different from the versionIRI. See OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) in <https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI>."@en ;
+                             dct:description "The CCCEV Ontology conceptualises, formally encodes and makes available in an open, structured and machine-readable format data about criterions and evidences in many different scenarios."@en ;
+                             dct:title "CCCEV Ontology."@en ;
+                             dct:publisher "Publications Office of the European Commission."@en ; 
+                             dct:creator "everis Spain, S.L.U"@en ;
+                             dcterms:modified "2019-12-19T14:28:10Z" .
+                           #  dcterms:contributor [ foaf:mbox "..."] ;
+                           #  dcat:distribution [
+                                            #     dcat:accessURL <> ;
+                                             #    dcat:downloadURL <> 
+                                             #  ] .		
+
+#In progress
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:amount rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+				rdfs:domain :Value ;
+				rdfs:range ccts:Amount ;
+				rdfs:comment "TBD"@en ;
+				rdfs:isDefinedBy <http://www.unece.org/cefact#> ;
+				rdfs:label "amount"@en ;
+				skos:definition "TBD"@en .
+
+:confidentialityLevelType rdf:type owl:ObjectProperty, owl:FunctionalProperty;
+													rdfs:domain :Evidence ;
+													rdfs:range skos:Concept ;
+													rdfs:comment "TBD."@en ;
+												  rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+												  rdfs:label "has Confidentiality Level Type"@en ;
+												  skos:definition "TBD"@en .
+
+:criterionConstraint rdf:type owl:ObjectProperty ;
+										 owl:propertyDisjointWith :informationRequirement ;
+										 rdfs:domain :Criterion ;
+										 rdfs:range :Property ;
+										 rdfs:comment "TBD."@en ;
+										 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+										 rdfs:label "has Criterion Constraint"@en ;
+										 skos:definition "TBD"@en .
+
+:criterionType rdf:type owl:ObjectProperty ;
+							 rdfs:domain :Criterion ;
+							 rdfs:range skos:Concept ;
+							 rdfs:comment "TBD."@en ;
+						   rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						   rdfs:label "has Criterion Type"@en ;
+						   skos:definition "TBD"@en .
+
+:datumValue rdf:type owl:ObjectProperty ;
+						rdfs:domain :Property ;
+						rdfs:range :Value ;
+						rdfs:comment "TBD."@en ;
+						rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						rdfs:label "has Datum Value"@en ;
+						skos:definition "TBD"@en .
+
+:derivedFrom rdf:type owl:ObjectProperty ;
+						 rdfs:domain :Criterion ;
+						 rdfs:range :ReferenceFramework ;
+						 rdfs:comment "TBD."@en ;
+						 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						 rdfs:label "is Derived From"@en ;
+						 skos:definition "TBD"@en .
+
+:durationMeasure rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+								 owl:equivalentProperty ubl:durationMeasure ;
+								 rdfs:domain :Period ;
+								 rdfs:range ccts:Measure ;
+								 rdfs:comment "UBL definition: The duration of this period, expressed as an ISO 8601 code. See also the ccts:Measure data type in the ePO package 'ccts'."@en ;
+								 rdfs:isDefinedBy <http://docs.oasis-open.org/ubl#> ;
+								 rdfs:label "duration Measure"@en ;
+								 skos:definition "UBL definition: The duration of this period, expressed as an ISO 8601 code."@en .
+
+:evaluatedBy rdf:type owl:ObjectProperty ;
+						 rdfs:domain :Criterion ;
+						 rdfs:range :Agent ;
+						 rdfs:comment "TBD."@en ;
+						 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						 rdfs:label "is Evaluated By"@en ;
+						 skos:definition "TBD"@en .
+
+#:evaluationMethodType
+
+:hasPart rdf:type owl:ObjectProperty ;
+				 owl:inverseOf :partOf ;
+				 rdfs:domain :ReferenceFramework ;
+				 rdfs:range :ReferenceFramework ;
+				 rdfs:comment "TBD."@en ;
+				 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+				 rdfs:label "has Part"@en ;
+				 skos:definition "TBD."@en .
+
+:id rdf:type owl:ObjectProperty ;
+		rdfs:domain [
+								 a owl:Class ;
+								 owl:unionOf (:Criterion :Property :Value :Evidence) ;
+								] ;
+		rdfs:range ccts:Identifier ;
+		rdfs:comment "A unique identifier of the instance of the concept."@en ;
+		rdfs:isDefinedBy <http://www.unece.org/cefact#> ;
+		rdfs:label "identifier"@en ;
+		skos:definition "A unique identifier of the instance of the concept."@en .
+
+:informationRequirement rdf:type owl:ObjectProperty ;
+												owl:propertyDisjointWith :criterionConstraint ;
+												rdfs:domain :Criterion ;
+												rdfs:range :Property ;
+												rdfs:comment "TBD."@en ;
+												rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+												rdfs:label "has Information Requirement"@en ;
+												skos:definition "TBD"@en .
+
+:informationRequirementConstraint rdf:type owl:ObjectProperty, owl:SymmetricProperty ;
+																	rdfs:domain :Property ;
+																	rdfs:range :Property ;
+																	rdfs:comment "TBD."@en ;
+																	rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+																	rdfs:label "has Information Requirement Constraint"@en ;
+																	skos:definition "TBD"@en .
+
+:matches rdf:type owl:ObjectProperty ;
+				 rdfs:subPropertyOf :relatesTo ;
+				 rdfs:domain :Evidence ;
+				 rdfs:range :EvidenceType ;
+				 rdfs:comment "TBD."@en ;
+				 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+				 rdfs:label "matches"@en ;
+				 skos:definition "TBD."@en .
+
+:parentCriterionRelationType rdf:type owl:ObjectProperty ;
+														 rdfs:domain :Criterion ;
+														 rdfs:range skos:Concept ;
+														 rdfs:comment "TBD."@en ;
+														 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+														 rdfs:label "has Parent Criterion Relation Type"@en ;
+														 skos:definition "TBD"@en .
+
+:partOf rdf:type owl:ObjectProperty ;
+				owl:inverseOf :hasPart ;
+				rdfs:domain :ReferenceFramework ;
+				rdfs:range :ReferenceFramework ;
+				rdfs:comment "TBD."@en ;
+				rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+				rdfs:label "is Part Of"@en ;
+				skos:definition "TBD."@en .
+
+:periodValue rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+						 rdfs:domain :Value ;
+						 rdfs:range :Period ;
+						 rdfs:comment "TBD."@en ;
+						 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						 rdfs:label "has Period Value"@en ;
+						 skos:definition "TBD"@en .
+
+:propertyType rdf:type owl:ObjectProperty ;
+							rdfs:domain :Property ;
+							rdfs:range skos:Concept ;
+							rdfs:comment "TBD."@en ;
+						  rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						  rdfs:label "has Property Type"@en ;
+						  skos:definition "TBD"@en .
+
+:provided rdf:type owl:ObjectProperty ;
+					rdfs:domain :Property ;
+					rdfs:range :Evidence ;
+					rdfs:comment "TBD"@en ;
+					rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					rdfs:label "provided"@en ;
+					skos:definition "TBD"@en .
+
+:quantity rdf:type owl:ObjectProperty, owl:FunctionalProperty ;
+					rdfs:domain :Value ;
+					rdfs:range ccts:Quantity ;
+					rdfs:comment "TBD"@en ;
+					rdfs:isDefinedBy <http://www.unece.org/cefact#> ;
+					rdfs:label "quantity"@en ;
+					skos:definition "TBD"@en .
+
+:relatesTo rdf:type owl:ObjectProperty, owl:SymmetricProperty ;
+					 rdfs:domain :Dataset ;
+					 rdfs:range :Dataset ;
+					 rdfs:comment "TBD."@en ;
+					 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					 rdfs:label "relates To"@en ;
+					 skos:definition "TBD"@en .
+
+:required rdf:type owl:ObjectProperty ;
+				  rdfs:domain :Property ;
+				  rdfs:range :EvidenceType ;
+					rdfs:comment "TBD."@en ;
+					rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					rdfs:label "is Fulfilled By"@en ;
+					skos:definition "TBD"@en .
+
+:scored rdf:type owl:ObjectProperty ;
+				rdfs:domain :Criterion ;
+				rdfs:range :Score ;
+				rdfs:comment "TBD."@en ;
+				rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+				rdfs:label "scored"@en ;
+				skos:definition "TBD."@en .
+
+:subCriterion rdf:type owl:ObjectProperty, owl:SymmetricProperty ;
+							rdfs:domain :Criterion ;
+							rdfs:range :Criterion ;
+							rdfs:comment "TBD."@en ;
+							rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+							rdfs:label "has SubCriterion"@en ;
+							skos:definition "TBD"@en .
+
+:weightType rdfs:domain :Criterion ;
+						rdfs:range skos:Concept ;
+						rdfs:comment "TBD."@en ;
+						rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						rdfs:label "has Weight Type"@en ;
+						skos:definition "TBD"@en .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:bias rdf:type owl:DatatypeProperty ;
+			rdfs:domain :Criterion ;
+			rdfs:range xsd:positiveInteger ;
+			rdfs:comment "TBD."@en ;
+			rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			rdfs:label "bias"@en ;
+			skos:definition "TBD."@en .
+
+:date rdf:type owl:DatatypeProperty ;
+			rdfs:domain :Value ;
+			rdfs:range xsd:date ;
+			rdfs:comment "TBD."@en ;
+			rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			rdfs:label "date"@en ;
+			skos:definition "TBD."@en .
+
+:description rdf:type owl:DatatypeProperty ;
+						 rdfs:domain [
+						 							a owl:Class ;
+						 							owl:unionOf (:Criterion :Property :Period :Evidence ) ;
+						 						 ] ;
+						 rdfs:range xsd:string ;
+						 rdfs:comment "A narrative description describing the content of the group of properties inside a criterion."@en ;
+						 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+						 rdfs:label "description"@en ;
+						 skos:definition "A narrative description describing the content of the group of properties inside a criterion."@en .
+
+:descriptionCode rdf:type owl:DatatypeProperty ;
+								 rdfs:domain :Period ;
+								 rdfs:range xsd:string ;
+								 rdfs:comment "TBD"@en ;
+								 rdfs:isDefinedBy <http://docs.oasis-open.org/ubl#> ;
+								 rdfs:label "description Code"@en ;
+								 skos:definition "UBL definition: A description of this period, expressed as a code."@en .
+
+:endDate rdf:type owl:DatatypeProperty ;
+				 rdfs:domain :Period ;
+				 owl:equivalentProperty ubl:endDateTime ;
+				 rdfs:range xsd:dateTime ;
+				 rdfs:comment "UBL definition: The date on which this period ends."@en ;
+				 rdfs:isDefinedBy <http://docs.oasis-open.org/ubl#> ;
+				 rdfs:label "end Date"@en ;
+				 skos:definition "UBL definition: The date on which this period ends."@en .
+
+:indicator rdf:type owl:DatatypeProperty ;
+					 rdfs:domain :Value ;
+					 rdfs:range xsd:boolean ;
+					 rdfs:comment "TBD"@en ;
+					 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					 rdfs:label "indicator"@en ;
+					 skos:definition "TBD"@en .
+
+:maximumScore rdf:type owl:DatatypeProperty ;
+							rdfs:domain :Score ;
+							rdfs:range xsd:decimal ;
+							rdfs:comment "TBD"@en ;
+							rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+							rdfs:label "maximum Score"@en ;
+							skos:definition "TBD"@en .
+
+:minimumRequiredScore rdf:type owl:DatatypeProperty ;
+											rdfs:domain :Score ;
+											rdfs:range xsd:integer ;
+											rdfs:comment "TBD"@en ;
+											rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+											rdfs:label "minimum Required Score"@en ;
+											skos:definition "TBD"@en .
+
+:minimumScore rdf:type owl:DatatypeProperty ;
+							rdfs:domain :Score ;
+							rdfs:range xsd:decimal ;
+							rdfs:comment "TBD"@en ;
+							rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+							rdfs:label "minimum Score"@en ;
+							skos:definition "TBD"@en .
+
+:name rdf:type owl:DatatypeProperty ;
+			rdfs:domain [
+									 a rdfs:Class ;
+									 owl:unionOf (:Criterion :Property :Evidence) ;
+									] ;
+			rdfs:range xsd:string ;
+			rdfs:comment "A short text representing an instance of the class. A short text representing the group of properties inside a criterion."@en ;
+			rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			rdfs:label "name"@en ;
+			skos:definition "A short text representing an instance of the class. A short text representing the group of properties inside a criterion."@en .
+
+:objective rdf:type owl:DatatypeProperty ;
+					 rdfs:domain :Criterion ;
+					 rdfs:range xsd:boolean ;
+					 rdfs:comment "TBD."@en ;
+					 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					 rdfs:label "objective"@en ;
+					 skos:definition "TBD."@en .
+
+:score rdf:type owl:DatatypeProperty ;
+			 rdfs:domain :Score ;
+			 rdfs:range xsd:decimal ;
+			 rdfs:comment "TBD."@en ;
+			 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			 rdfs:label "score"@en ;
+			 skos:definition "TBD."@en .
+
+:startDate rdf:type owl:DatatypeProperty ;
+					 rdfs:domain :Period ;
+					 owl:equivalentProperty ubl:startDateTime ;
+					 rdfs:range xsd:dateTime ;
+					 rdfs:comment "UBL definition: The date on which this period begins."@en ;
+					 rdfs:isDefinedBy <http://docs.oasis-open.org/ubl#> ;
+					 rdfs:label "start Date"@en ;
+					 skos:definition "UBL definition: The date on which this period begins."@en .
+
+:text rdf:type owl:DatatypeProperty ;
+			rdfs:domain :Value ;
+			rdfs:range xsd:string ;
+			rdfs:comment "TBD"@en ;
+			rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			rdfs:label "text"@en ;
+			skos:definition "TBD"@en .
+
+:time rdf:type owl:DatatypeProperty ;
+			rdfs:domain :Value ;
+			rdfs:range xsd:time ;
+			rdfs:comment "TBD"@en ;
+			rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			rdfs:label "time"@en ;
+			skos:definition "TBD"@en .
+
+:uri rdf:type owl:DatatypeProperty ;
+		 rdfs:domain :Value ;
+		 rdfs:range xsd:anyURI ;
+		 rdfs:comment "TBD"@en ;
+		 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+		 rdfs:label "URI"@en ;
+		 skos:definition "TBD"@en .
+
+:weight rdf:type owl:DatatypeProperty ;
+				rdfs:domain :Criterion ;
+				rdfs:range xsd:decimal ;
+				rdfs:comment "Relative importance assigned to a given criterion."@en ;
+				rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+				rdfs:label "weight"@en ;
+				skos:definition "Relative importance assigned to a given criterion."@en .
+
+:weightConsiderationDescription rdf:type owl:DatatypeProperty ;
+																rdfs:domain :Criterion ;
+																rdfs:range xsd:string ;
+																rdfs:comment "The textual description of the Weighting Description."@en ;
+																rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+																rdfs:label "weight Consideration Description"@en ;
+																skos:definition "The textual description of the Weighting Description."@en .
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:Agent rdf:type owl:Class ;
+			 owl:equivalentClass foaf:Agent ;
+			 rdfs:comment "TBD"@en ;
+			 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+			 rdfs:label "Agent"@en ;
+			 skos:definiton "FOAF definition: An agent (eg. person, group, software or physical artifact)."@en .
+
+:Criterion rdf:type owl:Class ;
+					 rdfs:comment "A condition that needs to be answered for evaluation purposes."@en ;
+					 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					 rdfs:label "Criterion"@en ;
+					 rdfs:subClassOf [
+					 									a owl:Restriction ;
+					 									owl:onProperty :evaluatedBy ;
+					 									owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+					 									owl:onClass :Agent ;
+					 								 ] ;
+					 rdfs:subClassOf [
+					 									a owl:Restriction ;
+					 									owl:onProperty :scored ;
+					 									owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+					 									owl:onClass :Score ;
+					 								 ] ;
+					 rdfs:subClassOf [
+					 									a owl:Restriction ;
+					 									owl:onProperty :informationRequirement ;
+					 									owl:allValuesFrom :Property ;
+					 								 ] ;
+					 rdfs:subClassOf [
+					 									a owl:Restriction ;
+					 									owl:onProperty :criterionConstraint ;
+					 									owl:allValuesFrom :Property ;
+					 								 ] ;			
+					 rdfs:subClassOf [
+					 									a owl:Restriction ;
+					 									owl:onProperty :derivedFrom ;
+					 									owl:allValuesFrom :ReferenceFramework ;
+					 								 ] ;				 
+					 skos:definition "A condition that needs to be answered for evaluation purposes."@en .
+
+:Dataset rdf:type owl:Class ;
+				 owl:equivalentClass dcat:Dataset ;
+				 rdfs:comment "Represents a dataset."@en ;
+				 rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
+				 rdfs:label "Dataset"@en ;
+				 skos:defintion "DCAT definition: A dataset is a collection of data, published or curated by a single agent. Data comes in many forms including numbers, words, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset."@en .
+
+:Evidence rdf:type owl:Class ;
+					rdfs:subClassOf :Dataset ;
+					rdfs:comment "A reference to a record used to prove the veracity of a criterion."@en ;
+					rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					rdfs:label "Evidence"@en ;
+					rdfs:subClassOf [
+														a owl:Restriction ;
+														owl:onProperty :confidentialityLevelType ;
+														owl:cardinality "1"^^xsd:nonNegativeInteger ;
+													] ;
+					rdfs:subClassOf [
+														a owl:Restriction ;
+														owl:onProperty :matches ;
+														owl:allValuesFrom :EvidenceType ;
+													] ;
+					skos:definition "A reference to a record used to prove the veracity of a criterion."@en .
+
+:EvidenceType rdf:type owl:Class ;
+							rdfs:subClassOf :Dataset ;
+							rdfs:comment "TBD."@en ;
+							rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+							rdfs:label "Evidence Type"@en ;
+							skos:definition "TBD."@en .
+
+:Identifier rdf:type owl:Class ;
+						owl:equivalentClass ccts:Identifier ;
+						rdfs:comment "A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information. This class is based on the UN/CEFACT Identifier complex type defined in See Section 5.8 of Core Components Data Type Catalogue Version 3.1 (http://www.unece.org/fileadmin/DAM/cefact/codesfortrade/CCTS/CCTS-DTCatalogueVersion3p1.pdf). In RDF this is expressed using the following properties: - the content string should be provided using skos:notation, datatyped with the identifier scheme (inclduing the version number if appropriate); - use dcterms:creator to link to a class describing the agency that manages the identifier scheme or adms:schemaAgency to provide the name as a literal. Although not part of the ADMS conceptual model, it may be useful to provide further properties to the Identifier class such as dcterms:created to provide the date on which the identifier was issued."@en ;
+						rdfs:isDefinedBy <http://www.unece.org/cefact#> ;
+						rdfs:label "Identifier"@en ;
+						skos:definition "A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information. This class is based on the UN/CEFACT Identifier complex type defined in See Section 5.8 of Core Components Data Type Catalogue Version 3.1 (http://www.unece.org/fileadmin/DAM/cefact/codesfortrade/CCTS/CCTS-DTCatalogueVersion3p1.pdf). In RDF this is expressed using the following properties: - the content string should be provided using skos:notation, datatyped with the identifier scheme (inclduing the version number if appropriate); - use dcterms:creator to link to a class describing the agency that manages the identifier scheme or adms:schemaAgency to provide the name as a literal. Although not part of the ADMS conceptual model, it may be useful to provide further properties to the Identifier class such as dcterms:created to provide the date on which the identifier was issued."@en .
+
+:Period rdf:type owl:Class ;
+				owl:equivalentClass ubl:Period ;
+				rdfs:comment "A lapse of time determined by a start date and end date or a duration expressed in  an pre-agreed measure (seconds, minutes, hours, days, months, years, etc.)."@en ;
+				rdfs:isDefinedBy <http://docs.oasis-open.org/ubl#> ;
+				rdfs:label "Period"@en ;
+				skos:definition "UBL definition: A class to describe a period of time."@en .
+
+:Property rdf:type owl:Class ;
+					rdfs:comment "TBD."@en ;
+					rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+					rdfs:label "Property"@en ;
+					rdfs:subClassOf [
+														a owl:Restriction ;
+														owl:onProperty :datumValue ;
+														owl:allValuesFrom :Value ;
+													] ;
+					rdfs:subClassOf [
+														a owl:Restriction ;
+														owl:onProperty :informationRequirementConstraint ;
+														owl:someValuesFrom :Property ;
+													] ;
+					rdfs:subClassOf [
+														a owl:Restriction ;
+														owl:onProperty :provided ;
+														owl:allValuesFrom :Evidence ;
+													] ;
+					rdfs:subClassOf [
+														a owl:Restriction ;
+														owl:onProperty :required ;
+														owl:allValuesFrom :EvidenceType ;
+													] ;
+					skos:definition "TBD."@en .
+
+:ReferenceFramework rdf:type owl:Class ;
+										rdfs:subClassOf :Dataset ;
+										rdfs:comment "TBD."@en ;
+										rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+										rdfs:label "Reference Framework"@en ;
+										rdfs:subClassOf [
+																		 a owl:Restriction ;
+																		 owl:onProperty :hasPart ;
+																		 owl:someValuesFrom :ReferenceFramework ;
+																		] ;
+										skos:definition "TBD."@en .
+
+:Score rdf:type owl:Class ;
+			 rdfs:comment "TBD"@en ;
+			 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			 rdfs:label "Score"@en ;
+			 skos:definition "TBD"@en .
+
+:Value rdf:type owl:Class ;
+			 rdfs:comment "A datum provided for a criterion property."@en ;
+			 rdfs:isDefinedBy <https://joinup.ec.europa.eu/node/157823/> ;
+			 rdfs:label "Value"@en ;
+			 rdfs:subClassOf [
+			 									a owl:Restriction ;
+			 									owl:onProperty :periodValue ;
+			 									owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			 									owl:onClass :Period ;
+			 								 ] ;
+			 skos:definition "A datum provided for a criterion property."@en .
+
+
+#################################################################
+#    General Axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Evidence :EvidenceType :ReferenceFramework )
+] .

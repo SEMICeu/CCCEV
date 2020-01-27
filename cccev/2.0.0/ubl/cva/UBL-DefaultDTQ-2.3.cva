@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/"
+                             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                             xmlns:c="urn:X-Crane-gc2obdndr"
+                             xmlns:x="http://www.w3.org/1999/xhtml"
+                             name="UBL-DataTypeQualifications-2.3"
+                             version="2019-03-24 02:10:00(UTC)"
+                             id="urn:oasis:names:specification:ubl:cva:UBL-Qualified-Data-Types:2">
+   <Annotation>
+      <Description>
+         <x:p>
+        This describes all of the qualified supplementary components and 
+        business information entities for the OASIS Universal Business
+        Language (UBL) 2.3 vocabulary.  It includes all of the UBL 2.2,
+        UBL 2.1, and UBL 2.0 constructs as well for backward compatibility.
+      </x:p>
+         <x:p>
+        In UBL 2.1+ qualified data types are anonymous (in that they are
+        not expressly named or identified) and UBL information items with
+        qualifications are addressed in this document and associated with
+        their respective value qualifications.
+      </x:p>
+         <x:p>
+        At this time all value qualifications are code lists, which are
+        a type of value list (the other type being identifier lists).
+        Instance metadata for UBL is described by the UN/CEFACT Core Component
+        Technical Specification (CCTS) Version 2.01.  Users may also choose
+        to qualify other BBIE data types.
+         </x:p>
+        <x:p>
+        The document contexts need to have all of the supplementary components
+        and business entities in a UBL instance that have qualified values.
+        Each context address in the skeleton is empty, which is invalid as an
+        XPath address for downstream processing.  The empty address of the
+        skeleton must be replaced with an XPath address for production use.
+      </x:p>
+        <x:p>
+          This skeleton has been annotated with information regarding the
+          Naming and Design Rules qualified data type 
+        </x:p>
+      </Description>
+   </Annotation>
+   <Title>
+    UBL 2.0, 2.1, 2.2, and UBL 2.3 qualified information items
+  </Title>
+   <ValueLists>
+      <Annotation>
+         <Description>
+            <x:p>
+          These list all of the genericode files of code lists used by
+          UBL information items whose values are qualified by code lists.
+        </x:p>
+            <x:p>
+          The unique identifier <x:samp>xml:id=</x:samp> is used later in
+          this file when describing the context for each entity that has
+          a qualified value.
+        </x:p>
+            <x:p>
+          The URI value points to the genericode file associated with the 
+          identifer. The URI is hyperlinked in this report to a rendering
+          of the contents of the genericode file that follows the rendering
+          of the contexts.
+        </x:p>
+         </Description>
+      </Annotation>
+      <ValueList xml:id="AllowanceChargeReason-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/AllowanceChargeReasonCode-2.0.gc"/>
+      <ValueList xml:id="AllowanceChargeReason-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/AllowanceChargeReasonCode-2.1.gc"/>
+      <ValueList xml:id="AllowanceChargeReason-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/AllowanceChargeReasonCode-2.2.gc"/>
+      <ValueList xml:id="AllowanceChargeReason-2.3"
+                 uri="../cl/gc/default/AllowanceChargeReasonCode-2.3.gc"/>
+      <ValueList xml:id="BinaryObjectMime-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/cefact/BinaryObjectMimeCode-2.0.gc"/>
+      <ValueList xml:id="BinaryObjectMime-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/BinaryObjectMimeCode-2.1.gc"/>
+      <ValueList xml:id="BinaryObjectMime-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/BinaryObjectMimeCode-2.2.gc"/>
+      <ValueList xml:id="BinaryObjectMime-2.3"
+                 uri="../cl/gc/default/BinaryObjectMimeCode-2.3.gc"/>
+      <ValueList xml:id="Channel-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/ChannelCode-2.0.gc"/>
+      <ValueList xml:id="Channel-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/ChannelCode-2.1.gc"/>
+      <ValueList xml:id="Channel-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/ChannelCode-2.2.gc"/>
+      <ValueList xml:id="Channel-2.3" uri="../cl/gc/default/ChannelCode-2.3.gc"/>
+      <ValueList xml:id="Chip-2.0" uri="../../os-UBL-2.0/cl/gc/default/ChipCode-2.0.gc"/>
+      <ValueList xml:id="CountryIdentification-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"/>
+      <ValueList xml:id="CountryIdentification-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/CountryIdentificationCode-2.1.gc"/>
+      <ValueList xml:id="CountryIdentification-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/CountryIdentificationCode-2.2.gc"/>
+      <ValueList xml:id="CountryIdentification-2.3"
+                 uri="../cl/gc/default/CountryIdentificationCode-2.3.gc"/>
+      <ValueList xml:id="Currency-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/cefact/CurrencyCode-2.0.gc"/>
+      <ValueList xml:id="Currency-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/CurrencyCode-2.1.gc"/>
+      <ValueList xml:id="Currency-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/CurrencyCode-2.2.gc"/>
+      <ValueList xml:id="Currency-2.3" uri="../cl/gc/default/CurrencyCode-2.3.gc"/>
+      <ValueList xml:id="DocumentStatus-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/DocumentStatusCode-2.0.gc"/>
+      <ValueList xml:id="DocumentStatus-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/DocumentStatusCode-2.1.gc"/>
+      <ValueList xml:id="Language-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/LanguageCode-2.2.gc"/>
+      <ValueList xml:id="Language-2.3" uri="../cl/gc/default/LanguageCode-2.3.gc"/>
+      <ValueList xml:id="LatitudeDirection-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/LatitudeDirectionCode-2.0.gc"/>
+      <ValueList xml:id="LineStatus-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/LineStatusCode-2.0.gc"/>
+      <ValueList xml:id="LongitudeDirection-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/LongitudeDirectionCode-2.0.gc"/>
+      <ValueList xml:id="Operator-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/OperatorCode-2.0.gc"/>
+      <ValueList xml:id="PackagingType-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/PackagingTypeCode-2.0.gc"/>
+      <ValueList xml:id="PackagingType-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/PackagingTypeCode-2.1.gc"/>
+      <ValueList xml:id="PackagingType-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/PackagingTypeCode-2.2.gc"/>
+      <ValueList xml:id="PackagingType-2.3"
+                 uri="../cl/gc/default/PackagingTypeCode-2.3.gc"/>
+      <ValueList xml:id="PaymentMeans-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/PaymentMeansCode-2.0.gc"/>
+      <ValueList xml:id="PaymentMeans-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/PaymentMeansCode-2.1.gc"/>
+      <ValueList xml:id="PaymentMeans-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/PaymentMeansCode-2.2.gc"/>
+      <ValueList xml:id="PaymentMeans-2.3"
+                 uri="../cl/gc/default/PaymentMeansCode-2.3.gc"/>
+      <ValueList xml:id="ReceiptAdviceType-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/ReceiptAdviceTypeCode-2.1.gc"/>
+      <ValueList xml:id="SubstitutionStatus-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc"/>
+      <ValueList xml:id="TransportEquipmentType-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/TransportEquipmentTypeCode-2.0.gc"/>
+      <ValueList xml:id="TransportEquipmentType-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/TransportEquipmentTypeCode-2.1.gc"/>
+      <ValueList xml:id="TransportEquipmentType-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/TransportEquipmentTypeCode-2.2.gc"/>
+      <ValueList xml:id="TransportEquipmentType-2.3"
+                 uri="../cl/gc/default/TransportEquipmentTypeCode-2.3.gc"/>
+      <ValueList xml:id="TransportMode-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/default/TransportModeCode-2.0.gc"/>
+      <ValueList xml:id="TransportMode-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/TransportModeCode-2.1.gc"/>
+      <ValueList xml:id="TransportMode-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/TransportModeCode-2.2.gc"/>
+      <ValueList xml:id="TransportMode-2.3"
+                 uri="../cl/gc/default/TransportModeCode-2.3.gc"/>
+      <ValueList xml:id="UnitOfMeasure-2.0"
+                 uri="../../os-UBL-2.0/cl/gc/cefact/UnitOfMeasureCode-2.0.gc"/>
+      <ValueList xml:id="UnitOfMeasure-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/UnitOfMeasureCode-2.1.gc"/>
+      <ValueList xml:id="UnitOfMeasure-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/UnitOfMeasureCode-2.2.gc"/>
+      <ValueList xml:id="UnitOfMeasure-2.3"
+                 uri="../cl/gc/default/UnitOfMeasureCode-2.3.gc"/>
+      <ValueList xml:id="WeekDay-2.1"
+                 uri="../../os-UBL-2.1/cl/gc/default/WeekDayCode-2.1.gc"/>
+      <ValueList xml:id="WeighingMethod-2.2"
+                 uri="../../os-UBL-2.2/cl/gc/default/WeighingMethodCode-2.2.gc"/>
+   </ValueLists>
+   <InstanceMetadataSets>
+      <Annotation>
+         <Description>
+            <x:p>
+          A supplementary component is a piece of metadata describing a
+          property of the list of values in which a particular value is
+          found.  For example, each code list of currency values has a
+          version and when a currency value is specified in a UBL document
+          it may be important to specify which version of the currency 
+          code list that value is found.  By knowing the list from which a
+          value is found, the semantics representated by that value are
+          unambiguous.
+        </x:p>
+            <x:p>
+          These sets of supplementary components describe where instance-level
+          metadata is found that contains values of list-level metadata from
+          genericode files.  Each set is identified in a context using that
+          set's unique <x:samp>xml:id=</x:samp> attribute.
+        </x:p>
+            <x:p>
+          Each component pairs an XPath address of the supplementary component
+          (specified in <x:samp>address=</x:samp>) relative to the item with
+          the code list value in the UBL document, with the XPath address of
+          the corresponding list-level metadata item in the genericode file
+          (specified in <x:samp>identification=</x:samp>) relative to the
+          <x:samp>&lt;Identification&gt;</x:samp> element in the code list file.
+        </x:p>
+            <x:p>
+          All supplementary components in UBL are defined by the UN/CEFACT Core
+          Component Technical Specification (CCTS) Version 2.01 dated
+          15 November 2003
+          <x:a href="http://www.unece.org/cefact/ebxml/CCTS_V2-01_Final.pdf">
+                  <x:samp>http://www.unece.org/cefact/ebxml/CCTS_V2-01_Final.pdf</x:samp>.</x:a>
+          Table 8-2 "Approved Core Component Type Content
+          and Supplementary Components" lists the various supplementary
+          components available.  The UN/CEFACT 
+          UnqualifiedDataTypeSchemaModule-2.0.xsd schema fragment specifies
+          the names of the attributes for supplementary components.
+        </x:p>
+         </Description>
+      </Annotation>
+      <InstanceMetadataSet xml:id="cctsV2.01-amount">
+         <Annotation>
+            <Description>
+               <x:p>
+            The <x:samp>Amount. Type</x:samp> supplementary component.
+          </x:p>
+            </Description>
+         </Annotation>
+         <InstanceMetadata address="../@currencyCodeListVersionID" identification="Version"/>
+      </InstanceMetadataSet>
+      <InstanceMetadataSet xml:id="cctsV2.01-binary">
+         <Annotation>
+            <Description>
+               <x:p>
+            There are no supplementary components for the
+            <x:samp>Binary Object. Type</x:samp>.
+          </x:p>
+            </Description>
+         </Annotation>
+      </InstanceMetadataSet>
+      <InstanceMetadataSet xml:id="cctsV2.01-code">
+         <Annotation>
+            <Description>
+               <x:p>
+            The <x:samp>Code. Type</x:samp> supplementary components.
+          </x:p>
+            </Description>
+         </Annotation>
+         <InstanceMetadata address="@listName"
+                           identification="LongName[not(@Identifier='listID')]"/>
+         <InstanceMetadata address="@listID" identification="LongName[@Identifier='listID']"/>
+         <InstanceMetadata address="@listVersionID" identification="Version"/>
+         <InstanceMetadata address="@listSchemeURI" identification="CanonicalUri"/>
+         <InstanceMetadata address="@listURI" identification="LocationUri"/>
+         <InstanceMetadata address="@listAgencyName" identification="Agency/LongName"/>
+         <InstanceMetadata address="@listAgencyID" identification="Agency/Identifier"/>
+      </InstanceMetadataSet>
+      <InstanceMetadataSet xml:id="cctsV2.01-measure">
+         <Annotation>
+            <Description>
+               <x:p>
+            The <x:samp>Measure. Type</x:samp> supplementary component.
+          </x:p>
+            </Description>
+         </Annotation>
+         <InstanceMetadata address="../@unitCodeListVersionID" identification="Version"/>
+      </InstanceMetadataSet>
+      <InstanceMetadataSet xml:id="cctsV2.01-quantity">
+         <Annotation>
+            <Description>
+               <x:p>
+            The <x:samp>Quantity. Type</x:samp> supplementary components.
+          </x:p>
+            </Description>
+         </Annotation>
+         <InstanceMetadata address="../@unitCodeListID"
+                           identification="LongName[@Identifier='listID']"/>
+         <InstanceMetadata address="../@unitCodeListAgencyName" identification="Agency/LongName"/>
+         <InstanceMetadata address="../@unitCodeListAgencyID" identification="Agency/Identifier"/>
+      </InstanceMetadataSet>
+   </InstanceMetadataSets>
+   <Contexts>
+      <Annotation>
+         <Description>
+            <x:p>
+          The contexts in which various items with a qualified value
+          are specified.  
+        </x:p>
+            <x:p>
+          The <x:samp>address=</x:samp> attribute is an XPath address that
+          satisfies all of the UBL items in the instance that are qualified
+          with the indicated value lists using the indicated associated set
+          of instance-level metadata items.
+        </x:p>
+            <x:p>
+          Each context identifies the collection of supplementary components 
+          (by its identifier) where instance-level metadata is found, then
+          all value lists (by their identifier) that apply to the item being
+          addressed.
+        </x:p>
+            <x:p>
+          The contexts are listed first for attribute items and then for
+          element items.
+        </x:p>
+         </Description>
+      </Annotation>
+      <Context values="Currency-2.0 Currency-2.1 Currency-2.2 Currency-2.3"
+               metadata="cctsV2.01-amount"
+               address="@currencyID"/>
+      <Context values="BinaryObjectMime-2.0 BinaryObjectMime-2.1 BinaryObjectMime-2.2 BinaryObjectMime-2.3"
+               metadata="cctsV2.01-binary"
+               address="@mimeCode"/>
+      <Context values="UnitOfMeasure-2.0 UnitOfMeasure-2.1 UnitOfMeasure-2.2 UnitOfMeasure-2.3"
+               metadata="cctsV2.01-measure"
+               address="cbc:AltitudeMeasure/@unitCode | cbc:BaseUnitMeasure/@unitCode | cbc:ChargeableWeightMeasure/@unitCode | cbc:ComparedValueMeasure/@unitCode | cbc:DurationMeasure/@unitCode | cbc:GrossMassMeasure/@unitCode | cbc:GrossTonnageMeasure/@unitCode | cbc:GrossVolumeMeasure/@unitCode | cbc:GrossWeightMeasure/@unitCode | cbc:LatitudeDegreesMeasure/@unitCode | cbc:LatitudeMinutesMeasure/@unitCode | cbc:LeadTimeMeasure/@unitCode | cbc:LoadingLengthMeasure/@unitCode | cbc:LongitudeDegreesMeasure/@unitCode | cbc:LongitudeMinutesMeasure/@unitCode | cbc:MaximumDataLossDurationMeasure/@unitCode | cbc:MaximumIncidentNotificationDurationMeasure/@unitCode | cbc:MaximumMeasure/@unitCode | cbc:MeanTimeToRecoverDurationMeasure/@unitCode | cbc:Measure/@unitCode | cbc:MinimumDownTimeScheduleDurationMeasure/@unitCode | cbc:MinimumMeasure/@unitCode | cbc:MinimumResponseTimeDurationMeasure/@unitCode | cbc:NetNetWeightMeasure/@unitCode | cbc:NetTonnageMeasure/@unitCode | cbc:NetVolumeMeasure/@unitCode | cbc:NetWeightMeasure/@unitCode | cbc:PostEventNotificationDurationMeasure/@unitCode | cbc:PreEventNotificationDurationMeasure/@unitCode | cbc:ResponseMeasure/@unitCode | cbc:SourceValueMeasure/@unitCode | cbc:TareWeightMeasure/@unitCode | cbc:ValueMeasure/@unitCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Measure. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="UnitOfMeasure-2.0 UnitOfMeasure-2.1 UnitOfMeasure-2.2 UnitOfMeasure-2.3"
+               metadata="cctsV2.01-quantity"
+               address="cbc:ActualTemperatureReductionQuantity/@unitCode | cbc:BackorderQuantity/@unitCode | cbc:BaseQuantity/@unitCode | cbc:BasicConsumedQuantity/@unitCode | cbc:BatchQuantity/@unitCode | cbc:ChargeableQuantity/@unitCode | cbc:ChildConsignmentQuantity/@unitCode | cbc:ConsignmentQuantity/@unitCode | cbc:ConsumerUnitQuantity/@unitCode | cbc:ConsumptionEnergyQuantity/@unitCode | cbc:ConsumptionWaterQuantity/@unitCode | cbc:ContentUnitQuantity/@unitCode | cbc:CreditedQuantity/@unitCode | cbc:CrewQuantity/@unitCode | cbc:CustomsTariffQuantity/@unitCode | cbc:DebitedQuantity/@unitCode | cbc:DeliveredQuantity/@unitCode | cbc:DifferenceTemperatureReductionQuantity/@unitCode | cbc:EmployeeQuantity/@unitCode | cbc:EstimatedConsumedQuantity/@unitCode | cbc:EstimatedOverallContractQuantity/@unitCode | cbc:ExpectedOperatorQuantity/@unitCode | cbc:ExpectedQuantity/@unitCode | cbc:GasPressureQuantity/@unitCode | cbc:InvoicedQuantity/@unitCode | cbc:LatestMeterQuantity/@unitCode | cbc:MaximumBackorderQuantity/@unitCode | cbc:MaximumOperatorQuantity/@unitCode | cbc:MaximumOrderQuantity/@unitCode | cbc:MaximumQuantity/@unitCode | cbc:MaximumVariantQuantity/@unitCode | cbc:MinimumBackorderQuantity/@unitCode | cbc:MinimumInventoryQuantity/@unitCode | cbc:MinimumOrderQuantity/@unitCode | cbc:MinimumQuantity/@unitCode | cbc:MultipleOrderQuantity/@unitCode | cbc:NormalTemperatureReductionQuantity/@unitCode | cbc:OperatingYearsQuantity/@unitCode | cbc:OutstandingQuantity/@unitCode | cbc:OversupplyQuantity/@unitCode | cbc:PackQuantity/@unitCode | cbc:PassengerQuantity/@unitCode | cbc:PerformanceValueQuantity/@unitCode | cbc:PreviousMeterQuantity/@unitCode | cbc:Quantity/@unitCode | cbc:ReceivedElectronicTenderQuantity/@unitCode | cbc:ReceivedForeignTenderQuantity/@unitCode | cbc:ReceivedQuantity/@unitCode | cbc:ReceivedTenderQuantity/@unitCode | cbc:RejectedQuantity/@unitCode | cbc:ResponseQuantity/@unitCode | cbc:ReturnableQuantity/@unitCode | cbc:SharesNumberQuantity/@unitCode | cbc:ShortQuantity/@unitCode | cbc:TargetInventoryQuantity/@unitCode | cbc:ThresholdQuantity/@unitCode | cbc:TimeDeltaDaysQuantity/@unitCode | cbc:TotalConsumedQuantity/@unitCode | cbc:TotalDeliveredQuantity/@unitCode | cbc:TotalGoodsItemQuantity/@unitCode | cbc:TotalMeteredQuantity/@unitCode | cbc:TotalPackageQuantity/@unitCode | cbc:TotalPackagesQuantity/@unitCode | cbc:TotalTransportHandlingUnitQuantity/@unitCode | cbc:ValueQuantity/@unitCode | cbc:VarianceQuantity/@unitCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Quantity. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="AllowanceChargeReason-2.0 AllowanceChargeReason-2.1 AllowanceChargeReason-2.2 AllowanceChargeReason-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:AllowanceChargeReasonCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Allowance Charge Reason_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="Channel-2.0 Channel-2.1 Channel-2.2 Channel-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:ChannelCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Channel_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="Chip-2.0"
+               metadata="cctsV2.01-code"
+               address="cbc:CardChipCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Chip_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="CountryIdentification-2.0 CountryIdentification-2.1 CountryIdentification-2.2 CountryIdentification-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:IdentificationCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Country Identification_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="Currency-2.0 Currency-2.1 Currency-2.2 Currency-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:CurrencyCode | cbc:DocumentCurrencyCode | cbc:PaymentAlternativeCurrencyCode | cbc:PaymentCurrencyCode | cbc:PricingCurrencyCode | cbc:RequestedInvoiceCurrencyCode | cbc:SourceCurrencyCode | cbc:TargetCurrencyCode | cbc:TaxCurrencyCode | cbc:ValueCurrencyCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Currency_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="DocumentStatus-2.0 DocumentStatus-2.1"
+               metadata="cctsV2.01-code"
+               address="cbc:DocumentStatusCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Document Status_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="Language-2.2 Language-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:LocaleCode | cbc:NoticeLanguageCode | cbc:PreferredLanguageLocaleCode | cbc:TenderLanguageLocaleCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Language_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="LatitudeDirection-2.0"
+               metadata="cctsV2.01-code"
+               address="cbc:LatitudeDirectionCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Latitude Direction_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="LineStatus-2.0"
+               metadata="cctsV2.01-code"
+               address="cbc:LineStatusCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Line Status_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="LongitudeDirection-2.0"
+               metadata="cctsV2.01-code"
+               address="cbc:LongitudeDirectionCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Longitude Direction_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="Operator-2.0"
+               metadata="cctsV2.01-code"
+               address="cbc:MathematicOperatorCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Operator_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="PackagingType-2.0 PackagingType-2.1 PackagingType-2.2 PackagingType-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:PackagingTypeCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Packaging Type_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="PaymentMeans-2.0 PaymentMeans-2.1 PaymentMeans-2.2 PaymentMeans-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:PaymentMeansCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Payment Means_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="ReceiptAdviceType-2.1"
+               metadata="cctsV2.01-code"
+               address="/*[parent::*]">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Receipt Advice_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="SubstitutionStatus-2.0"
+               metadata="cctsV2.01-code"
+               address="cbc:SubstitutionStatusCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Substitution Status_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="TransportEquipmentType-2.0 TransportEquipmentType-2.1 TransportEquipmentType-2.2 TransportEquipmentType-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:TransportEquipmentTypeCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Transport Equipment Type_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="TransportMode-2.0 TransportMode-2.1 TransportMode-2.2 TransportMode-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:TransportModeCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Transport Mode_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="UnitOfMeasure-2.0 UnitOfMeasure-2.1 UnitOfMeasure-2.2 UnitOfMeasure-2.3"
+               metadata="cctsV2.01-code"
+               address="cbc:ValueUnitCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Unit Of Measure_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="WeekDay-2.1"
+               metadata="cctsV2.01-code"
+               address="cbc:WeekDayCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Week Day_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+      <Context values="WeighingMethod-2.2"
+               metadata="cctsV2.01-code"
+               address="cbc:WeighingMethodCode">
+         <Annotation>
+            <AppInfo>
+               <c:DataType>Weighing Method_ Code. Type</c:DataType>
+            </AppInfo>
+        </Annotation>
+      </Context>
+   </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="https://github.com/everis-semic/common/2.0.0/xml/DataTypes#"
+   xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   targetNamespace="https://github.com/everis-semic/common/2.0.0/xml/DataTypes#"
+   elementFormDefault="qualified"
+   attributeFormDefault="unqualified"
+   version="2.0.0">
+
+   <!-- ===== Imports ===== -->
+  <xsd:import schemaLocation="CCTS_CCT_SchemaModule-2.3.xsd"
+      namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"/>
+   
+   <!-- ==== Element Declaration ==== -->
+   <xsd:element name="Amount" type="AmountType"/>
+   <xsd:element name="Code" type="CodeType"/>
+   <xsd:element name="Date" type="DateType"/>
+   <xsd:element name="DateTime" type="DateTimeType"/>   
+   <xsd:element name="ID" type="IdentifierType"/> <!-- identifies a class instance, i.e. it's an object identifier -->
+   <xsd:element name="Identifier" type="IdentifierType"/> <!-- a value that 'is' an identifier, used exclusively in the class "cac:Value", where mutually exclusive (disjoint) types of values -->
+   <xsd:element name="Indicator" type="IndicatorType"/>
+   <xsd:element name="Name" type="NameType"/>
+   <xsd:element name="Measure" type="MeasureType"/>
+   <xsd:element name="Quantity" type="QuantityType"/>
+   <xsd:element name="Text" type="TextType"/>
+   <xsd:element name="Time" type="TimeType"/>
+   <xsd:element name="Type" type="TypeType"/>
+   <xsd:element name="URI" type="URIType"/>
+
+<!-- ===== Entity Type Definitions ===== -->
+   <xsd:complexType name="AmountType">
+      <xsd:simpleContent>
+         <xsd:extension base="ccts:AmountType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="CodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="DateType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:date"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="DateTimeType">
+      <xsd:simpleContent>
+         <xsd:extension base="ccts:DateTimeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+  <xsd:complexType name="IdentifierType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:IdentifierType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="IndicatorType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="NameType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="NumericType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:NumericType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="MeasureType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:MeasureType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="QuantityType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:QuantityType"/>
+      </xsd:simpleContent>
+   </xsd:complexType> 
+   <xsd:complexType name="TextType">
+      <xsd:simpleContent>
+         <xsd:extension base="ccts:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="TimeType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:time"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="TypeType">
+      <xsd:simpleContent>
+         <xsd:extension base="ccts:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="URIType">
+      <xsd:simpleContent>
+         <xsd:restriction base="ccts:IdentifierType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema> 

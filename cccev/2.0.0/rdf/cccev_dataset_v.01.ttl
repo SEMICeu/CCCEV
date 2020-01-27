@@ -1,0 +1,823 @@
+@prefix : <https://joinup.ec.europa.eu/node/157823/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ubl: <http://docs.oasis-open.org/ubl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ccts: <http://www.unece.org/cefact#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/elements/1.1/> .
+
+
+#################################################################
+#    METADATA
+#################################################################
+
+<https://joinup.ec.europa.eu/node/157823/> rdf:type owl:Ontology ;
+                            # owl:versionIRI <> ;
+                             owl:versionInfo "1.0"@en ;
+                             skos:note "The ontology namespace is used for the distribution of the T-Box. Documentation, datasets and resources associated to the ontology can be accessed via the DCAT accessURL and downloadURL properties. In OWL2 ontology IRI can be different from the versionIRI. See OWL 2 Web Ontology Language Structural Specification and Functional-Style Syntax (Second Edition) in <https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI>."@en ;
+                             dct:description "The CCCEV Ontology conceptualises, formally encodes and makes available in an open, structured and machine-readable format data about criterions and evidences in many different scenarios."@en ;
+                             dct:title "CCCEV Ontology."@en ;
+                             dct:publisher "Publications Office of the European Commission."@en ; 
+                             dct:creator "everis Spain, S.L.U"@en ;
+                             dcterms:modified "2019-12-19T14:28:10Z" .
+                           #  dcterms:contributor [ foaf:mbox "..."] ;
+                           #  dcat:distribution [
+                                            #     dcat:accessURL <> ;
+                                             #    dcat:downloadURL <> 
+                                             #  ] .		
+
+#In progress
+
+
+#################################################################
+#    AGENTS
+#################################################################
+
+:Agent-1 a :Agent;
+		  		 :id :Agent-1-ID .
+
+:Agent-2 a :Agent;
+		  		 :id :Agent-2-ID .
+
+:Agent-3 a :Agent;
+		  		 :id :Agent-3-ID .
+
+:Agent-4 a :Agent;
+		  		 :id :Agent-4-ID .
+
+:Agent-5 a :Agent;
+		 			 :id :Agent-5-ID .
+
+
+
+#################################################################
+#    CRITERION
+#################################################################
+
+:Cr-1 a :Criterion ;
+	  		:name "Criterion 1"@en ;
+	  		:description "Description of the criterion 1"@en ;
+	  		:bias "1"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-1 ;
+	  		:weight "10"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 1"@en ;
+	  		:criterionConstraint :Prop-1 ;
+	  		:informationReqirement :Prop-7 ;
+	  		:scored :Score-1 ;
+	  		:evaluatedBy :Agent-1 ;
+	  		:derivedFrom :RF-3 . 
+
+:Cr-2 a :Criterion ;
+	  		:name "Criterion 2"@en ;
+	  		:description "Description of the criterion 2"@en ;
+	  		:bias "2"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-2 ;
+	  		:weight "20"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 2"@en ;
+	  		:criterionConstraint :Prop-2 ;
+	  		:informationReqirement :Prop-8, :Prop-7 ;
+	  		:scored :Score-2 ;
+				:subCriterion :Cr-1 .
+
+:Cr-3 a :Criterion ;
+				:name "Criterion 3"@en ;
+	  		:description "Description of the criterion 3"@en ;
+	  		:bias "3"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-3 ;
+	  		:weight "30"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 3"@en ;
+	  		:criterionConstraint :Prop-3 ;
+	  		:informationReqirement :Prop-9, :Prop-10 ;
+	  		:scored :Score-3 ;
+	  		:evaluatedBy :Agent-3 ;
+	  		:derivedFrom :RF-1 . 
+
+:Cr-4 a :Criterion ;
+				:name "Criterion 4"@en ;    
+	  		:description "Description of the criterion 4"@en ;
+	  		:bias "4"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-4 ;
+	  		:weight "40"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 4"@en ;
+	  		:criterionConstraint :Prop-4, :Prop-3 ;
+	  		:scored :Score-4 ;
+	  		:evaluatedBy :Agent-4 ;
+	  		:derivedFrom :RF-2 .
+
+:Cr-5 a :Criterion ;
+				:name "Criterion 5"@en ;
+	  		:description "Description of the criterion 5"@en ;
+	  		:bias "5"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-5 ;
+	  		:weight "50"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 5"@en ;
+	  		:criterionConstraint :Prop-5, :Prop-2 ;
+	  		:informationReqirement :Prop-11 ;
+	  		:scored :Score-5 ;
+	  		:evaluatedBy :Agent-5 ;
+				:subCriterion :Cr-4 . 
+
+:Cr-6 a :Criterion ;
+				:name "Criterion 6"@en ;
+	  		:description "Description of the criterion 6"@en ;
+	  		:bias "6"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-6 ;
+	  		:weight "60"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 6"@en ;
+	  		:criterionConstraint :Prop-6 ;
+	  		:informationReqirement :Prop-12, :Prop-11 ;
+	  		:scored :Score-6 ;
+	  		:evaluatedBy :Agent-1 ;
+	  		:derivedFrom :RF-3, :RF-4 ;
+				:subCriterion :Cr-7 .
+	  		
+:Cr-7 a :Criterion ;
+				:name "Criterion 6"@en ;
+	  		:description "Description of the criterion 6"@en ;
+	  		:bias "6"^^xsd:positiveInteger ;
+	  		:id :Criterion-ID-7 ;
+	  		:weight "60"^^xsd:decimal ;
+	  		:weightConsiderationDescription "Weight Consideration Description 7"@en ;
+	  		:scored :Score-6 ;
+	  		:evaluatedBy :Agent-2 ;
+	  		:derivedFrom :RF-2, :RF-5 .
+
+
+
+#################################################################
+#    EVIDENCE
+#################################################################                                                                          
+
+:Evidence-1 a :Evidence ;
+							:id :Evidence-ID-1 ;
+							:name "Evidence 1"@en ;
+							:description "Description of the evidence 1"@en ;
+							:matches :ET-1, :ET-2 .
+
+:Evidence-2 a :Evidence ;
+							:id :Evidence-ID-2 ;
+							:name "Evidence 2"@en ;
+							:description "Description of the evidence 2"@en .
+
+:Evidence-3 a :Evidence ;
+							:id :Evidence-ID-3;
+							:name "Evidence 3"@en ;
+							:description "Description of the evidence 3"@en ;
+							:matches :ET-2 .
+
+:Evidence-4 a :Evidence ;
+							:id :Evidence-ID-4;
+							:name "Evidence 4"@en ;
+							:description "Description of the evidence 4"@en ;
+							:matches :ET-4, :ET-3, :ET-1 .
+
+:Evidence-5 a :Evidence ;
+							:id :Evidence-ID-5 ;
+							:name "Evidence 5"@en ;
+							:description "Description of the evidence 5"@en .
+
+:Evidence-6 a :Evidence ;
+							:id :Evidence-ID-6 ;
+							:name "Evidence 6"@en ;
+							:description "Description of the evidence 6"@en ;
+							:matches :ET-1, :ET-8 .
+
+:Evidence-7 a :Evidence ;
+							:id :Evidence-ID-7 ;
+							:name "Evidence 7"@en ;
+							:description "Description of the evidence 7"@en ;
+							:matches :ET-4, :ET-9 .
+
+
+
+#################################################################
+#    EVIDENCE TYPE
+#################################################################
+
+:ET-1 a :EvidenceType ;
+	  		:id :ET-ID-1 .
+
+:ET-2 a :EvidenceType ;
+	  		:id :ET-ID-2 .
+
+:ET-3 a :EvidenceType ;
+	  		:id :ET-ID-3 .
+
+:ET-4 a :EvidenceType ;
+	  		:id :ET-ID-4 .
+
+:ET-5 a :EvidenceType ;
+	  		:id :ET-ID-5 .
+
+:ET-6 a :EvidenceType ;
+	  		:id :ET-ID-6 .
+
+:ET-7 a :EvidenceType ;
+	  		:id :ET-ID-7 .
+
+:ET-8 a :EvidenceType ;
+	  		:id :ET-ID-8 .
+
+:ET-9 a :EvidenceType ;
+	  		:id :ET-ID-9 .
+
+
+#################################################################
+#    PERIOD 
+#################################################################
+
+:Period-1 a ubl:Period .
+
+
+
+
+#################################################################
+#    PROPERTY
+#################################################################
+
+:Prop-1 a :Property ;
+					:id :Prop-ID-1 ;
+					:name "Criterion constraint 1"@en ;
+					:description "Description of the criterion constraint 1"@en ;
+					:provided :Evidence-1, :Evidence-3 ;
+					:required :ET-1, :ET-2 ;
+					:datumValue :Value-1 .
+
+:Prop-2 a :Property ;
+					:id :Prop-ID-2 ;
+					:name "Criterion constraint 2"@en ;
+					:description "Description of the criterion constraint 2"@en ;
+					:provided :Evidence-2 ;
+					:datumValue :Value-6 .
+
+:Prop-3 a :Property ;
+					:id :Prop-ID-3 ;
+					:name "Criterion constraint 3"@en ;
+					:description "Description of the criterion constraint 3"@en ;
+					:provided :Evidence-4 ;
+					:required :ET-1, :ET-3, :ET-4 ;
+					:informationRequirementConstraint :Prop-1 .
+
+:Prop-4 a :Property ;
+					:id :Prop-ID-4 ;
+					:name "Criterion constraint 4"@en ;
+					:description "Description of the criterion constraint 4"@en ;
+					:provided :Evidence-5 .
+
+:Prop-5 a :Property ;
+					:id :Prop-ID-5 ;
+					:name "Criterion constraint 5"@en ;
+					:description "Description of the criterion constraint 5"@en ;
+					:provided :Evidence-4 ;
+					:required :ET-3 ;
+					:datumValue :Value-2 ;
+					:informationRequirementConstraint :Prop-3, :Prop-12 .
+
+:Prop-6 a :Property ;
+					:id :Prop-ID-6 ;
+					:name "Criterion constraint 6"@en ;
+					:description "Description of the criterion constraint 6"@en ;
+					:provided :Evidence-1 ;
+					:required :ET-2 ;
+					:datumValue :Value-3 ;
+					:informationRequirementConstraint :Prop-7 .
+
+:Prop-7 a :Property ;
+					:id :Prop-ID-7 ;
+					:name "Information Requirement 1"@en ;
+					:description "Description of the information requirement 1"@en ;
+					:provided :Evidence-1 ;
+					:required :ET-2 .
+
+:Prop-8 a :Property ;
+					:id :Prop-ID-8 ;
+					:name "Information Requirement 2"@en ;
+					:description "Description of the information requirement 2"@en ;
+					:provided :Evidence-7 ;
+					:informationRequirementConstraint :Prop-12 .
+
+:Prop-9 a :Property ;
+					:id :Prop-ID-9 ;
+					:name "Information Requirement 3"@en ;
+					:description "Description of the information requirement 3"@en ;
+					:provided :Evidence-6 ;
+					:required :ET-1, :ET-8 ;
+					:datumValue :Value-4 .
+
+:Prop-10 a :Property ;
+						 :id :Prop-ID-10 ;
+						 :name "Information Requirement 4"@en ;
+						 :description "Description of the information requirement 4"@en ;
+						 :provided :Evidence-7 ;
+						 :required :ET-9 ;
+						 :datumValue :Value-2 , :Value-3 .
+
+:Prop-11 a :Property ;
+						 :id :Prop-ID-11 ;
+						 :name "Information Requirement 5"@en ;
+						 :description "Description of the information requirement 5"@en ;
+						 :provided :Evidence-6 ;
+						 :required :ET-1 ;
+						 :informationRequirementConstraint :Prop-10 .
+
+:Prop-12 a :Property ;
+						 :id :Prop-ID-12 ;
+						 :name "Information Requirement 6"@en ;
+						 :description "Description of the information requirement 6"@en ;
+						 :provided :Evidence-4 ;
+						 :required :ET-3 ;
+						 :datumValue :Value-6.
+
+
+#################################################################
+#    REFERENCE FRAMEWORK
+#################################################################
+
+:RF-1 a :ReferenceFramework ;
+	  		:id :RF-ID-1 .
+
+:RF-2 a :ReferenceFramework ;
+	  		:id :RF-ID-2 .
+
+:RF-3 a :ReferenceFramework ;
+	  		:id :RF-ID-3 .
+
+:RF-4 a :ReferenceFramework ;
+	  		:id :RF-ID-4 .
+
+:RF-5 a :ReferenceFramework ;
+	  		:id :RF-ID-5 .
+
+
+#################################################################
+#    SCORE
+#################################################################
+
+:Score-1 a :Score ;
+					 :maximumScore "10,0"^^xsd:decimal ;
+					 :minimumRequiredScore "5,0"^^xsd:positiveInteger ;
+					 :minimumScore "4,0"^^xsd:decimal ;
+					 :score "5,4"^^xsd:decimal .
+
+:Score-2 a :Score ;
+					 :maximumScore "10,0"^^xsd:decimal ;
+					 :minimumRequiredScore "6,0"^^xsd:positiveInteger ;
+					 :minimumScore "2,5"^^xsd:decimal ;
+					 :score "7,0"^^xsd:decimal .
+
+:Score-3 a :Score ;
+					 :maximumScore "10,0"^^xsd:decimal ;
+					 :minimumRequiredScore "60"^^xsd:positiveInteger ;
+					 :minimumScore "20"^^xsd:decimal ;
+					 :score "40"^^xsd:decimal .
+
+:Score-4 a :Score ;
+					 :maximumScore "10,0"^^xsd:decimal ;
+					 :minimumRequiredScore "6,5"^^xsd:positiveInteger ;
+					 :minimumScore "2,5"^^xsd:decimal ;
+					 :score "7,3"^^xsd:decimal .
+
+:Score-5 a :Score ;
+					 :maximumScore "10,0"^^xsd:decimal ;
+					 :minimumRequiredScore "5,5"^^xsd:positiveInteger ;
+					 :minimumScore "5,0"^^xsd:decimal ;
+					 :score "9,5"^^xsd:decimal .
+
+:Score-6 a :Score ;
+					 :maximumScore "10,0"^^xsd:decimal ;
+					 :minimumRequiredScore "5"^^xsd:positiveInteger ;
+					 :minimumScore "3,5"^^xsd:decimal ;
+					 :score "8,2"^^xsd:decimal .
+
+
+
+#################################################################
+#    VALUE
+#################################################################
+
+:Value-1 a :Value ;
+					 :amount :Amount-1 ;
+					 :date "2018-02-20"^^xsd:date ;
+					 :time "09:00:00"^^xsd:time ;
+					 :identifierValue :Value-ID-1 ;
+					 :text "description of the value 1."@en ;
+					 :periodValue :Period-1 .
+
+:Value-2 a :Value ;
+					 :amount :Amount-2 ;
+					 :date "2018-07-01"^^xsd:date ;
+					 :time "11:00:00"^^xsd:time ;
+					 :identifierValue :Value-ID-2 ;
+					 :text "description of the value 2."@en ;
+					 :periodValue :Period-2 .
+
+:Value-3 a :Value ;
+					 :quantity :Quantity-1 ;
+					 :date "2019-02-20"^^xsd:date ;
+					 :time "09:00:00"^^xsd:time ;
+					 :identifierValue :Value-ID-3 ;
+					 :text "description of the value 3."@en ;
+					 :periodValue :Period-3 .
+
+:Value-4 a :Value ;
+					 :amount :Amount-3 ;
+					 :date "2019-04-23"^^xsd:date ;
+					 :time "09:00:00"^^xsd:time ;
+					 :identifierValue :Value-ID-4 ;
+					 :text "description of the value 4."@en .
+
+:Value-5 a :Value ;
+					 :quantity :Quantity-2 ;
+					 :date "2020-02-01"^^xsd:date ;
+					 :time "10:00:00"^^xsd:time ;
+					 :identifierValue :Value-ID-5 ;
+					 :text "description of the value 5."@en ;
+					 :periodValue :Period-4 .
+
+:Value-6 a :Value ;
+					 :quantity :Quantity-3 ;
+					 :date "2020-02-01"^^xsd:date ;
+					 :time "10:00:00"^^xsd:time ;
+					 :identifierValue :Value-ID-6 ;
+					 :text "description of the value 6."@en .
+
+
+
+#################################################################
+#    AMOUNT + QUANTITY  
+#################################################################
+
+:Amount-1 a ccts:Amount ;
+						ccts:amountValue "25.000,1"^^xsd:decimal .
+
+:Amount-2 a ccts:Amount ;
+						ccts:amountValue "75,5"^^xsd:decimal .
+
+:Amount-3 a ccts:Amount ;
+						ccts:amountValue "1.500,7"^^xsd:decimal .
+
+:Quantity-1 a ccts:Quantity ;
+							ccts:quantityValue "23"^^xsd:decimal .
+
+:Quantity-2 a ccts:Quantity ;
+							ccts:quantityValue "7"^^xsd:decimal .
+
+:Quantity-3 a ccts:Quantity ;
+							ccts:quantityValue "12"^^xsd:decimal .
+
+
+
+#################################################################
+#    IDENTIFIERS -- TO BE REVIEWED 
+#################################################################
+
+# # # Agents # # #
+
+:Agent-1-ID a ccts:Identifier ;
+							ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/agent/ed68b945-ebdf-4242-84c3-28d58d2f9f5c" ;
+							ccts:schemeID :SEMIC-URI ;
+							skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+							ccts:schemeAgencyID "SEMIC" ;
+							ccts:schemeVersionID "1.0.0" .
+
+:Agent-2-ID a ccts:Identifier ;
+							ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/agent/76b6db28-b6d8-4529-83d9-cebd3b23aed6" ;
+							ccts:schemeID :SEMIC-URI ;
+							skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+							ccts:schemeAgencyID "SEMIC" ;
+							ccts:schemeVersionID "1.0.0" .
+
+:Agent-3-ID a ccts:Identifier ;
+							ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/agent/c0f4e607-61b1-4f81-86a7-0d2ea4153cd8" ;
+							ccts:schemeID :SEMIC-URI ;
+							skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+							ccts:schemeAgencyID "SEMIC" ;
+							ccts:schemeVersionID "1.0.0" .
+
+:Agent-4-ID a ccts:Identifier ;
+							ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/agent/51f882dd-f68c-4d75-b46f-72da75b1ee90" ;
+							ccts:schemeID :SEMIC-URI ;
+							skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+							ccts:schemeAgencyID "SEMIC" ;
+							ccts:schemeVersionID "1.0.0" .
+
+:Agent-5-ID a ccts:Identifier ;
+							ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/agent/cd9500b1-1fcf-4f94-9d95-e3df9df22555" ;
+							ccts:schemeID :SEMIC-URI ;
+							skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+							ccts:schemeAgencyID "SEMIC" ;
+							ccts:schemeVersionID "1.0.0" .
+
+
+
+# # # Criterion # # #
+
+:Criterion-ID-1 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/0da2daf8-94f1-4a2c-9154-ac2d86ac3daf" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+:Criterion-ID-2 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/705b00ca-eb44-49f6-8b7a-38a257a6c344" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+:Criterion-ID-3 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/f53562d2-99aa-46db-8f00-536d9beb108c" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+:Criterion-ID-4 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/48dcc672-411b-4734-a831-b3f44b2f3e3c" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+:Criterion-ID-5 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/87527c54-516b-4c5e-a594-783f115d783a" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+:Criterion-ID-6 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/b0b09ba0-2add-4582-bc6c-0c82f8694090" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+:Criterion-ID-7 a ccts:Identifier ;
+									ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/criterion/4a4b123c-85c7-4ee2-aca2-d6316b49f514" ;
+									ccts:schemeID :SEMIC-URI ;
+									skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+									ccts:schemeAgencyID "SEMIC" ;
+									ccts:schemeVersionID "1.0.0" .
+
+
+
+# # # Evidence # # #
+
+:Evidence-ID-1 a ccts:Identifier ;
+								 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidence/bb9d1f05-007b-4239-80f6-8eb2515b79a5" ;
+								 ccts:schemeID :SEMIC-URI ;
+								 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+								 ccts:schemeAgencyID "SEMIC" ;
+								 ccts:schemeVersionID "1.0.0" .
+
+:Evidence-ID-2 a ccts:Identifier ;
+								 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidence/93aa0e03-930a-4d64-b665-a7d41d5cd256" ;
+								 ccts:schemeID :SEMIC-URI ;
+								 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+								 ccts:schemeAgencyID "SEMIC" ;
+								 ccts:schemeVersionID "1.0.0" .
+
+:Evidence-ID-3 a ccts:Identifier ;
+								 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidence/4decb207-e3b9-4a78-83fe-f8680bd19b6a" ;
+								 ccts:schemeID :SEMIC-URI ;
+								 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+								 ccts:schemeAgencyID "SEMIC" ;
+								 ccts:schemeVersionID "1.0.0" .
+
+:Evidence-ID-4 a ccts:Identifier ;
+								 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidence/dc9c443a-ac02-445e-831c-097d0e9497eb" ;
+								 ccts:schemeID :SEMIC-URI ;
+								 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+								 ccts:schemeAgencyID "SEMIC" ;
+								 ccts:schemeVersionID "1.0.0" .
+
+:Evidence-ID-5 a ccts:Identifier ;
+								 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidence/2cba610b-7a79-43af-97a9-3a1647548c1d" ;
+								 ccts:schemeID :SEMIC-URI ;
+								 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+								 ccts:schemeAgencyID "SEMIC" ;
+								 ccts:schemeVersionID "1.0.0" .
+
+
+
+# # # Evidence Type # # #
+
+:ET-ID-1 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/a43025c7-13d6-4c45-9b93-3c0387ba6aeb" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:ET-ID-2 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/40902d79-5747-4944-9cec-acaed7b8c9db" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:ET-ID-3 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/67232179-3ab2-4d48-a744-db68831a8a6f" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:ET-ID-4 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/efd801cb-1006-4d8b-aa95-f9c91490aa00" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:ET-ID-5 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/33468f1c-83ab-488c-97ac-a0e14613129e" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:ET-ID-6 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/880bc392-df2a-4166-8e3e-8290208109f2" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:ET-ID-7 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/evidenceType/767d401a-fac0-4f58-94fa-e5f99504f5f7" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+
+
+# # # Period # # #
+
+
+
+# # # Property # # #
+
+:Prop-ID-1 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/9a139d6e-6edd-4e9e-870a-fe79fdbbbb2c" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-2 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/0e798065-a690-434a-b6ac-d0cb8bb1af45" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-3 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/47561ae0-c707-4abb-9cec-51835fcb4c90" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-4 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/1c9f3f41-18e5-4913-b204-0347c154cdbf" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-5 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/349f63aa-67a0-48ae-9b92-dddd7a97e9d8" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-6 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/6c9fcb84-7a35-4ed2-8306-7c9d9d133345" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-7 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/e44d12e6-3eef-49bb-bdde-15d59d56a212" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-8 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/62d91661-ea8f-43cb-8288-108ad365e603" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-9 a ccts:Identifier ;
+						 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/dfd4d208-2bc4-409c-a66c-57e609a2d2b3" ;
+						 ccts:schemeID :SEMIC-URI ;
+						 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						 ccts:schemeAgencyID "SEMIC" ;
+						 ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-10 a ccts:Identifier ;
+  					  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/40befdb9-5174-4f27-a51f-689b86324a72" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-11 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/6c985c1e-9159-4e80-bc29-0e1f8c991eba" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Prop-ID-12 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/property/b70350f6-6e7c-4a9c-b736-412f1818b5cc" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+
+
+# # # Reference Framework # # #
+
+:RF-ID-1 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/referenceFramework/149cfc22-7918-470d-886c-a0a5e4b5c0b8" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:RF-ID-2 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/referenceFramework/4af3befc-3c04-41b8-9443-c009eea33aa4" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+:RF-ID-3 a ccts:Identifier ;
+					 ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/referenceFramework/f16bc589-0325-40aa-b68f-de7d71268695" ;
+					 ccts:schemeID :SEMIC-URI ;
+					 skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+					 ccts:schemeAgencyID "SEMIC" ;
+					 ccts:schemeVersionID "1.0.0" .
+
+
+
+# # # Value # # #
+
+:Value-ID-1 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/value/e0b19064-c37b-4774-985b-31a1a3362176" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Value-ID-2 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/value/2b07ceb6-e1cd-4e13-a045-b39e09bcf48f" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Value-ID-3 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/value/a74a11a9-343d-4a66-943c-6314163b9546" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Value-ID-4 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/value/db71a32c-2514-4dcb-bd0f-c641cb6662bd" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Value-ID-5 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/value/4cce7002-ba55-462a-bfd4-9ae6ba48b8e3" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .
+
+:Value-ID-6 a ccts:Identifier ;
+						  ccts:identifierValue "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/cccev/value/861ca9df-0e23-4224-9272-ead3293a4821" ;
+						  ccts:schemeID :SEMIC-URI ;
+						  skos:note "SEMIC-URI is the acronym for an URI that is conformant to the SEMIC URI Scheme Specification."@en ;
+						  ccts:schemeAgencyID "SEMIC" ;
+						  ccts:schemeVersionID "1.0.0" .

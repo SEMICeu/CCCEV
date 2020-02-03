@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="https://github.com/everis-semic/common/2.0.0/xml/DataTypes#"
-   xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+   xmlns:udt="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    targetNamespace="https://github.com/everis-semic/common/2.0.0/xml/DataTypes#"
    elementFormDefault="qualified"
@@ -8,8 +8,8 @@
    version="2.0.0">
 
    <!-- ===== Imports ===== -->
-  <xsd:import schemaLocation="CCTS_CCT_SchemaModule-2.3.xsd"
-      namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"/>
+   <xsd:import namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2" 
+               schemaLocation="CCTS_CCT_SchemaModule-2.3.xsd"/>
    
    <!-- ==== Element Declaration ==== -->
    <xsd:element name="Amount" type="AmountType"/>
@@ -26,16 +26,30 @@
    <xsd:element name="Time" type="TimeType"/>
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="URI" type="URIType"/>
+   <xsd:element name="Cantidad" type="udt:AmountType"/>
 
 <!-- ===== Entity Type Definitions ===== -->
    <xsd:complexType name="AmountType">
       <xsd:simpleContent>
-         <xsd:extension base="ccts:AmountType"/>
+         <xsd:extension base="udt:AmountType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>         
       </xsd:simpleContent>
    </xsd:complexType>
+   <!-- Each DataType needs to extend the base udt: components with the group of attributes allowing to identify the values of a codelist indicating what is the assurance
+      level type carried within the datum.
+      The AssuranceLevelType attributes mimic CCTS-CCT attributes for the CodeType. Each EU Member State has the obligation of pre-notifying, and finally publishing their
+      level of assurance for identifier schemes on the OJEU (https://ec.europa.eu/cefdigital/wiki/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS),
+      which are based on  the definitions provided in Article 8 of the eIDAS Regulation (https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG) -->
+   <xsd:attributeGroup name="AssuranceLevelAttributes">
+      <xsd:attribute name="AssuranceLevelCodeListID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelCodeListVerionID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelAgencyID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelAgencyName" type="xsd:string"/>
+   </xsd:attributeGroup>
    <xsd:complexType name="CodeType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:CodeType"/>
+         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DateType">
@@ -45,42 +59,42 @@
    </xsd:complexType>
    <xsd:complexType name="DateTimeType">
       <xsd:simpleContent>
-         <xsd:extension base="ccts:DateTimeType"/>
+         <xsd:extension base="udt:DateTimeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
   <xsd:complexType name="IdentifierType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:IdentifierType"/>
+         <xsd:restriction base="udt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="IndicatorType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:IndicatorType"/>
+         <xsd:restriction base="udt:IndicatorType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="NameType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:TextType"/>
+         <xsd:restriction base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="NumericType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:NumericType"/>
+         <xsd:restriction base="udt:NumericType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="MeasureType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:MeasureType"/>
+         <xsd:restriction base="udt:MeasureType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="QuantityType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:QuantityType"/>
+         <xsd:restriction base="udt:QuantityType"/>
       </xsd:simpleContent>
    </xsd:complexType> 
    <xsd:complexType name="TextType">
       <xsd:simpleContent>
-         <xsd:extension base="ccts:TextType"/>
+         <xsd:extension base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="TimeType">
@@ -90,12 +104,12 @@
    </xsd:complexType>
    <xsd:complexType name="TypeType">
       <xsd:simpleContent>
-         <xsd:extension base="ccts:CodeType"/>
+         <xsd:extension base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="URIType">
       <xsd:simpleContent>
-         <xsd:restriction base="ccts:IdentifierType"/>
+         <xsd:restriction base="udt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
 </xsd:schema> 

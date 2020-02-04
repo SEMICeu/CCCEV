@@ -26,7 +26,6 @@
    <xsd:element name="Time" type="TimeType"/>
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="URI" type="URIType"/>
-   <xsd:element name="Cantidad" type="udt:AmountType"/>
 
 <!-- ===== Entity Type Definitions ===== -->
    <xsd:complexType name="AmountType">
@@ -49,7 +48,9 @@
    </xsd:attributeGroup>
    <xsd:complexType name="CodeType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
+         <xsd:extension base="udt:CodeType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DateType">
@@ -59,52 +60,72 @@
    </xsd:complexType>
    <xsd:complexType name="DateTimeType">
       <xsd:simpleContent>
-         <xsd:extension base="udt:DateTimeType"/>
+         <xsd:extension base="udt:DateTimeType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
   <xsd:complexType name="IdentifierType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:IdentifierType"/>
+         <xsd:extension base="udt:IdentifierType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="IndicatorType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:IndicatorType"/>
+         <xsd:extension base="udt:IndicatorType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="NameType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:TextType"/>
+         <xsd:extension base="udt:TextType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="NumericType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:NumericType"/>
+         <xsd:extension base="udt:NumericType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="MeasureType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:MeasureType"/>
+         <xsd:extension base="udt:MeasureType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="QuantityType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:QuantityType"/>
+         <xsd:extension base="udt:QuantityType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType> 
    <xsd:complexType name="TextType">
       <xsd:simpleContent>
-         <xsd:extension base="udt:TextType"/>
+         <xsd:extension base="udt:TextType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="TimeType">
       <xsd:simpleContent>
-         <xsd:extension base="xsd:time"/>
+         <xsd:extension base="xsd:time">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="TypeType">
       <xsd:simpleContent>
-         <xsd:extension base="udt:CodeType"/>
+         <xsd:extension base="udt:CodeType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="URIType">

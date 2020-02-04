@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.w3.org/ns/locn#" 
+           targetNamespace="http://www.w3.org/ns/locn#"
+           elementFormDefault="qualified"> 
+
+<xs:element name="Address" type="AddressType"/>
+    
+<xs:complexType name="AddressType">
+    <xs:sequence>
+        <xs:element name="fullAddress" type="xs:string">
+            <xs:annotation>
+                <xs:documentation>
+                    The complete address written as a string, with or without formatting.  
+                </xs:documentation>
+                <xs:appinfo>
+                    The domain of locn:fullAddress is locn:Address.
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:element>
+        <xs:element name="poBox" type="xs:string" minOccurs="0"/>
+        <xs:element name="thoroughfare" type="xs:string"/>
+        <xs:element name="locatorDesignator" type="xs:string"/>
+        <xs:element name="locatorName" type="xs:string" minOccurs="0"/>
+        <xs:element name="addressArea" type="xs:string" minOccurs="0"/>
+        <xs:element name="postName" type="xs:string"/>
+        <xs:element name="adminUnitLevel1" type="xs:string" minOccurs="0"/>
+        <xs:element name="adminUnitLevel2" type="xs:string" minOccurs="0"/>
+        <xs:element name="postCode" type="xs:string"/>
+        <xs:element name="addressId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:anyURI" use="required"></xs:attribute>
+</xs:complexType>
+
+</xs:schema>
+

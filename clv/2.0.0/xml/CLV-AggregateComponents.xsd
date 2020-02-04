@@ -4,47 +4,53 @@
     xmlns:cac="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#"
     xmlns:cbc="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:clv="https://github.com/everis-semic/clv/2.0.0/xml/Core_Location_Vocabulary#"
+    xmlns:locn="http://www.w3.org/ns/locn#" 
     
     targetNamespace="https://github.com/everis-semic/clv/2.0.0/xml/CLV-AggregateComponents#" 
     elementFormDefault="qualified" 
     attributeFormDefault="unqualified" version="2.0.0">
     <xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CommonAggregateComponents.xsd"/>
     <xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CommonBasicComponents.xsd"/>
+    <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../xml/locn.xsd"/>
          
     <!-- Element declaration -->
     <xsd:element name="Address" type="AddressType"/>
     <xsd:element name="Geometry" type="GeometryType"/>
     <xsd:element name="RegisteredAddress" type="AddressType"/>
     
+    
     <!-- Element definition -->
     <xsd:complexType name="AddressType">
-        <xsd:sequence>
-            <xsd:element ref="cbc:AdditionalStreetName" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:Address" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:BlockName" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:BuildingName" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:BuildingNumber" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:CityName" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:CitySubdivisionName" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:CountryCode" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:CountrySubentity" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:CountrySubentityCode" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:Department" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:District" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:Floor" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:PostalAddressIdRef" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:InhouseMail" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:MarkAttention" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:MarkCare" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:PlotIdentification" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:PostalZone" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:PostBox" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:Region" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:Room" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:StreetName" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="cbc:TimezoneOffset" minOccurs="0" maxOccurs="unbounded"/>           
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="locn:AddressType">
+                <xsd:sequence>
+                    <xsd:element ref="cbc:AdditionalStreetName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:Address" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:BlockName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:BuildingName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:BuildingNumber" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:CityName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:CitySubdivisionName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:CountryCode" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:CountrySubentity" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:CountrySubentityCode" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:Department" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:District" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:Floor" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:PostalAddressIdRef" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:InhouseMail" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:MarkAttention" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:MarkCare" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:PlotIdentification" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:PostalZone" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:PostBox" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:Region" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:Room" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:StreetName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="cbc:TimezoneOffset" minOccurs="0" maxOccurs="unbounded"/>           
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="GeometryType">
         <xsd:sequence>
@@ -52,7 +58,5 @@
             <xsd:element ref="cbc:Lat" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element ref="cbc:Long" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
-    </xsd:complexType>
-    
-    
+    </xsd:complexType>    
 </xsd:schema>

@@ -55,7 +55,9 @@
    </xsd:complexType>
    <xsd:complexType name="DateType">
       <xsd:simpleContent>
-         <xsd:extension base="xsd:date"/>
+         <xsd:extension base="xsd:date">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DateTimeType">
@@ -130,7 +132,9 @@
    </xsd:complexType>
    <xsd:complexType name="URIType">
       <xsd:simpleContent>
-         <xsd:restriction base="udt:IdentifierType"/>
+         <xsd:extension base="udt:IdentifierType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
 </xsd:schema> 

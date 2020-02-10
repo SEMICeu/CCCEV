@@ -76,4 +76,13 @@ with the final ones, preferably PURIs.-->
     </xsd:complexContent>
   </xsd:complexType>
   
+  <xsd:element name="LegalPerson" type="LegalPersonType"/>
+  <xsd:complexType name="LegalPersonType">
+    <xsd:complexContent>
+      <xsd:extension base="cagv:OrganizationType">
+        <xsd:sequence/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
 </xsd:schema>

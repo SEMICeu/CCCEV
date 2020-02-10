@@ -10,11 +10,23 @@
 	<!-- Element declaration -->
 	
 	<xsd:element name="Agent" type="AgentType"/>
+	<xsd:element name="Person" type="PersonType"/>
+	<xsd:element name="Organization" type="OrganizationType"/>
 
 	
 	<!-- Element definition -->
 
 	<xsd:complexType name="AgentType">
+		<xsd:sequence>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PersonType">
+		<xsd:sequence>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrganizationType">
 		<xsd:sequence>
 		</xsd:sequence>
 	</xsd:complexType>

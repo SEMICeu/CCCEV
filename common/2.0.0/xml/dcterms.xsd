@@ -17,10 +17,10 @@
 	<!-- The objective of this declaration is to state that the dct terms Agent is an equivalent class of foaf:Agent. We do not intend
 	to extend the dct Agents; this should be done by DCMI.-->
 	
-	<xsd:element name="AgentType" type="foaf:AgentType"/>
+	<xsd:element name="Agent" type="foaf:AgentType"/>
 	
 	<!-- If the need is to extend dct:Agent, then use the following structure below: -->
-	<!--
+	
 		<xsd:complexType name="AgentType">
 		<xsd:complexContent>
 			<xsd:extension base="foaf:AgentType">
@@ -29,5 +29,5 @@
 			</xsd:extension>		
 		</xsd:complexContent>
 	</xsd:complexType>
-	-->
+	
 </xsd:schema>

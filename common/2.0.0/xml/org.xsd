@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
+<xsd:schema xmlns="http://www.w3.org/ns/org#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:org="http://www.w3.org/ns/org#"
+	targetNamespace="http://xmlns.com/foaf/" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+	
+	<!-- Element declaration -->
+	
+	<xsd:element name="Organization" type="OrganizationType"/>
+	
+	<!-- Element definition -->
+
+	
+	<xsd:complexType name="OrganizationType">
+		<xsd:complexContent>
+			<xsd:extension base="foaf:OrganizationType">
+				<xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>		
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+</xsd:schema>

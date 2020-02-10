@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
-<xsd:schema xmlns="https://github.com/semiceu/common/2.0.0/xml/foaf#"
+<xsd:schema xmlns="http://xmlns.com/foaf/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:foaf="https://github.com/semiceu/common/2.0.0/xml/foaf#"
-	targetNamespace="https://github.com/semiceu/common/2.0.0/xml/foaf#" 
+	xmlns:foaf="http://xmlns.com/foaf/"
+	targetNamespace="http://xmlns.com/foaf/" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	
 	<!-- Element declaration -->
+	
 	<xsd:element name="Agent" type="AgentType"/>
 
 	
@@ -17,4 +18,5 @@
 		<xsd:sequence>
 		</xsd:sequence>
 	</xsd:complexType>
+	
 </xsd:schema>

@@ -7,22 +7,23 @@
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 
-<xsd:import
+	<xsd:import
 	namespace="http://purl.org/dc/terms/"
-	schemaLocation="../../common/2.0.0/xml/dcterms.xsd"/>
+	schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
 	
 	<!-- Element declaration -->
 	<xsd:element name="Agent" type="AgentType"/>
-
+	
 	
 	<!-- Element definition -->
-	<xsd:complexType name="Agentype">
+	<xsd:complexType name="AgentType">
 		<xsd:complexContent>
-			<xsd:extension base="dct:Agent">
+			<xsd:extension base="dct:AgentType">
 				<xsd:sequence>
-					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+					<!--xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/-->
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
+	
 </xsd:schema>

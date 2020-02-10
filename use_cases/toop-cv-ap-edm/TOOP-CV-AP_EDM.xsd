@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Beware that the namespaces referring to the SEMIC vocabularies and common components are temporary.
+A final proposal is currently being drafted in SEMIC and, when adopted will replace what is now under the GitHub registry.
+The namespaces used below use the GitHub CCCV repository in order to not to mess with previous versions of the Core Vocabularies.
+Our suggestion is that: 1) the whole GitHub registry is reorganised, so different vocabularies import other vocabularies and common
+components from a single source, instead of repeating the libraries inside each vocabulary; 2) to replace the temporary namespaces
+with the final ones, preferably PURIs.-->
+<xsd:schema 
+  xmlns ="urn:eu:toop-ap:ns:dataexchange-1p40"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:cv-dt="https://github.com/semiceu/cccev/common/2.0.0/xml/CV-DataTypes#"
+  xmlns:cagv="https://github.com/semiceu/cccev/cagv/2.0.0/xml/CV-Agent#"
+  targetNamespace="urn:eu:toop-ap:ns:dataexchange-1p40"
+  version="specsVersion1.4.0"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">  
+  
+  <xsd:import    
+    namespace="https://github.com/everis-semic/common/2.0.0/xml/CV-DataTypes#"
+    schemaLocation="../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+  <xsd:import    
+    namespace="https://github.com/semiceu/cccev/cagv/2.0.0/xml/CV-Agent#"
+    schemaLocation="../../cagv/2.0.0/xml/CV-Agent.xsd" />
+    
+  
+  <!--alternative ROOT elements-->
+ 
+  <xsd:element name="Request" type="RequestType"></xsd:element>
+  <xsd:element name="Response" type="ResponseType"></xsd:element>
+  
+  <xsd:complexType name="RequestType">
+    <xsd:sequence>
+      <!--
+      <xsd:element name="DocumentUniversalUniqueIdentifier" type="udt:IdentifierType"/>
+      <xsd:element name="DocumentIssueDate" type="xsd:date"/>
+      <xsd:element name="DocumentIssueTime" type="xsd:time" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CopyIndicator" type="udt:IndicatorType"  minOccurs="0" maxOccurs="1" default="false"/>
+      <xsd:element name="SpecificationIdentifier" type="udt:IdentifierType"/>
+      <xsd:element name="DataConsumerDocumentIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DataConsumerGlobalSessionIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DataConsumerRequestPurpose" type="udt:TextType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="DataRequestIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RoutingInformation" type="toop:RoutingInformationType"/>
+      <xsd:element name="DataConsumer" type="toop:DataConsumerType"/>
+      <xsd:element name="DataRequestSubject" type="toop:DataRequestSubjectType"/>
+      <xsd:element name="DataRequestAuthorization" type="toop:DataRequestAuthorizationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DataElementRequest" type="toop:DataElementRequestType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="DocumentRequest" type="toop:DocumentRequestType" minOccurs="0" maxOccurs="unbounded"/>
+      -->
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="ResponseType">
+    <xsd:complexContent>
+      <xsd:extension base="RequestType">
+        <xsd:sequence>
+          <!--
+          <xsd:element name="DataProvider" type="toop:DataProviderType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="Error" type="toop:ErrorType" minOccurs="0" maxOccurs="unbounded"/>
+          -->
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+</xsd:schema>

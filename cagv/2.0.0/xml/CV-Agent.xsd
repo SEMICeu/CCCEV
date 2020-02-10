@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
+<xsd:schema xmlns="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:dct="http://purl.org/dc/terms/"
+	targetNamespace="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+
+<xsd:import
+	namespace="http://purl.org/dc/terms/"
+	schemaLocation="../../common/2.0.0/xml/dcterms.xsd"/>
+	
+	<!-- Element declaration -->
+	<xsd:element name="Agent" type="AgentType"/>
+
+	
+	<!-- Element definition -->
+	<xsd:complexType name="Agentype">
+		<xsd:complexContent>
+			<xsd:extension base="dct:Agent">
+				<xsd:sequence>
+					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>		
+	</xsd:complexType>
+</xsd:schema>

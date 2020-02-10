@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
+<xsd:schema xmlns="https://github.com/semiceu/common/2.0.0/xml/dcterms#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:foaf="http://xmlns.com/foaf/"
+	targetNamespace="https://github.com/semiceu/cagv/2.0.0/xml/dcterms#" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+
+<xsd:import
+	namespace="http://xmlns.com/foaf/"
+	schemaLocation="../../common/2.0.0/xml/foaf.xsd"/>
+	
+	<!-- Element declaration -->
+	<xsd:element name="Agent" type="AgentType"/>
+
+	
+	<!-- Element definition -->
+	<xsd:complexType name="Agentype">
+		<xsd:complexContent>
+			<xsd:extension base="foaf:Agent">
+				<xsd:sequence>
+					
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>		
+	</xsd:complexType>
+</xsd:schema>

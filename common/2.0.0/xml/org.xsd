@@ -16,7 +16,7 @@
 	
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
-			<xsd:extension base="foaf:OrganizationType">
+			<xsd:extension base="">
 				<xsd:sequence>
 				</xsd:sequence>
 			</xsd:extension>		

@@ -42,7 +42,7 @@
 	
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
-			<xsd:extension base="foaf:OrganizationType">
+			<xsd:extension base="org:OrganizationType">
 				<xsd:sequence>
 					<!--xsd:element ref="cbc:XXX" minOccurs="0" maxOccurs="unbounded"/-->
 				</xsd:sequence>

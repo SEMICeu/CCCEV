@@ -8,6 +8,7 @@ with the final ones, preferably PURIs.-->
 <xsd:schema 
   xmlns ="urn:eu:toop-ap:ns:dataexchange-1p40"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:udt="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
   xmlns:cv-dt="https://github.com/semiceu/cccev/common/2.0.0/xml/CV-DataTypes#"
   xmlns:cagv="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
   xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
@@ -19,6 +20,9 @@ with the final ones, preferably PURIs.-->
   <xsd:import    
     namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
     schemaLocation="../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+  
+  <xsd:import namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2" 
+    schemaLocation="CCTS_CCT_SchemaModule-2.3.xsd"/>
   
   <xsd:import    
     namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
@@ -49,7 +53,6 @@ with the final ones, preferably PURIs.-->
   
   <xsd:complexType name="RequestType">
     <xsd:sequence>
-      <!--
       <xsd:element name="DocumentUniversalUniqueIdentifier" type="udt:IdentifierType"/>
       <xsd:element name="DocumentIssueDate" type="xsd:date"/>
       <xsd:element name="DocumentIssueTime" type="xsd:time" minOccurs="0" maxOccurs="1"/>
@@ -65,7 +68,6 @@ with the final ones, preferably PURIs.-->
       <xsd:element name="DataRequestAuthorization" type="toop:DataRequestAuthorizationType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="DataElementRequest" type="toop:DataElementRequestType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="DocumentRequest" type="toop:DocumentRequestType" minOccurs="0" maxOccurs="unbounded"/>
-      -->
     </xsd:sequence>
   </xsd:complexType>
   

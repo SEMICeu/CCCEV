@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<toop:Response xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2" xmlns:toop="urn:eu:toop:ns:dataexchange-1p40">
+    <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="DE167064991">cf3abd18-8d4f-4770-b800-40722d9d4eaf</toop:DocumentUniversalUniqueIdentifier>
+    <toop:DocumentIssueDate>2020-01-21</toop:DocumentIssueDate>
+    <toop:DocumentIssueTime>13:41:14.341607</toop:DocumentIssueTime>
+    <toop:CopyIndicator>false</toop:CopyIndicator>
+    <toop:SpecificationIdentifier schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Response</toop:SpecificationIdentifier>
+    <toop:DataConsumerDocumentIdentifier schemeAgencyID="**DEFINED_BY_DC**"></toop:DataConsumerDocumentIdentifier>
+    <toop:DataConsumerGlobalSessionIdentifier schemeAgencyID="UKL-TOOP-ESPD-SERVICE" schemeID="ISO/IEC 9834-8:2008 - 4UUID">17a7ff9e-fa42-4c85-9c77-9e61b3d5f3d2</toop:DataConsumerGlobalSessionIdentifier>
+    <toop:DataConsumerRequestPurpose languageID="en"></toop:DataConsumerRequestPurpose>
+    <toop:DataRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">bcbdf951-e715-48ff-9e3f-bc8a9da639d4</toop:DataRequestIdentifier>
+    <toop:RoutingInformation>
+        <toop:DocumentTypeIdentifier schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Response##urn:eu.toop.response.evidence::1.40</toop:DocumentTypeIdentifier>
+        <toop:ProcessIdentifier schemeID="toop-procid-agreement">urn:eu.toop.process.documentrequestresponse</toop:ProcessIdentifier>
+        <toop:DataConsumerElectronicAddressIdentifier schemeAgencyID="0007" schemeID="iso6523-actorid-upis">9930:153901674</toop:DataConsumerElectronicAddressIdentifier>
+        <toop:DataConsumerCountryCode>DE</toop:DataConsumerCountryCode>
+        <toop:DataProviderElectronicAddressIdentifier schemeAgencyID="0007" schemeID="iso6523-actorid-upis">9930:167064991</toop:DataProviderElectronicAddressIdentifier>
+        <toop:DataProviderCountryCode>DE</toop:DataProviderCountryCode>
+    </toop:RoutingInformation>
+    <toop:DataConsumer>
+        <toop:DCUniqueIdentifier schemeAgencyID="**DEFINED_BY_DC**">VAT5469754124</toop:DCUniqueIdentifier>
+        <toop:DCName></toop:DCName>
+        <toop:DCLegalAddress>
+            <toop:AddressLine>Stadtwerkstr. 25</toop:AddressLine>
+            <toop:AddressLine></toop:AddressLine>
+            <toop:AddressLine></toop:AddressLine>
+            <toop:StreetName></toop:StreetName>
+            <toop:StreetNumber></toop:StreetNumber>
+            <toop:City>Viernheim</toop:City>
+            <toop:PostCode>68519</toop:PostCode>
+            <toop:Country></toop:Country>
+            <toop:CountryCode>DE</toop:CountryCode>
+        </toop:DCLegalAddress>
+    </toop:DataConsumer>
+    <toop:DataRequestSubject>
+        <toop:DataRequestSubjectTypeCode>LE</toop:DataRequestSubjectTypeCode>
+        <toop:LegalPerson>
+            <toop:LegalPersonUniqueIdentifier levelOfAssurance="Substantial">DE/DE/1665469009</toop:LegalPersonUniqueIdentifier>
+            <toop:LegalName levelOfAssurance="Substantial">D.Q. Baulogistik GmbH und Co. KG</toop:LegalName>
+            <toop:VATRegistrationNumber levelOfAssurance="None">DE1665469009</toop:VATRegistrationNumber>
+            <toop:TaxReferenceNumber levelOfAssurance="None"></toop:TaxReferenceNumber>
+            <toop:BusinessCodes levelOfAssurance="None"></toop:BusinessCodes>
+            <toop:EORIIdentifier levelOfAssurance="None"></toop:EORIIdentifier>
+            <toop:SEEDIdentifier levelOfAssurance="None"></toop:SEEDIdentifier>
+            <toop:AuthorizedRepresentativeIdentifier>DE/DE/MirkoSchmitz</toop:AuthorizedRepresentativeIdentifier>
+            <toop:LegalPersonLegalAddress>
+                <toop:AddressLine levelOfAssurance="None">Auf der Kaiserfuhr 137</toop:AddressLine>
+                <toop:AddressLine levelOfAssurance="None"></toop:AddressLine>
+                <toop:StreetName levelOfAssurance="None"></toop:StreetName>
+                <toop:StreetNumber levelOfAssurance="None"></toop:StreetNumber>
+                <toop:City levelOfAssurance="None">Noerdlingen</toop:City>
+                <toop:PostCode levelOfAssurance="None">86720</toop:PostCode>
+                <toop:Country levelOfAssurance="None"></toop:Country>
+                <toop:CountryCode levelOfAssurance="None">DE</toop:CountryCode>
+            </toop:LegalPersonLegalAddress>
+        </toop:LegalPerson>
+        <toop:NaturalPerson>
+            <toop:PersonIdentifier levelOfAssurance="Substantial">DE/DE/MirkoSchmitz</toop:PersonIdentifier>
+            <toop:FamilyName levelOfAssurance="Substantial">Schmitz</toop:FamilyName>
+            <toop:FirstName levelOfAssurance="Substantial">Mirko</toop:FirstName>
+            <toop:BirthDate levelOfAssurance="Substantial">1963-10-11</toop:BirthDate>
+            <toop:BirthFamilyName levelOfAssurance="None"></toop:BirthFamilyName>
+            <toop:BirthPlace levelOfAssurance="None"></toop:BirthPlace>
+            <toop:NaturalPersonLegalAddress>
+                <toop:AddressLine levelOfAssurance="None"></toop:AddressLine>
+                <toop:AddressLine levelOfAssurance="None"></toop:AddressLine>
+                <toop:StreetName levelOfAssurance="None"></toop:StreetName>
+                <toop:StreetNumber levelOfAssurance="None"></toop:StreetNumber>
+                <toop:City levelOfAssurance="None"></toop:City>
+                <toop:PostCode levelOfAssurance="None"></toop:PostCode>
+                <toop:Country levelOfAssurance="None"></toop:Country>
+                <toop:CountryCode levelOfAssurance="None">DE</toop:CountryCode>
+            </toop:NaturalPersonLegalAddress>
+        </toop:NaturalPerson>
+    </toop:DataRequestSubject>
+    <toop:DataRequestAuthorization>
+        <toop:DataRequestConsentToken mimeCode="example/text"></toop:DataRequestConsentToken>
+    </toop:DataRequestAuthorization>
+    <toop:DocumentRequest>
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">15e5aa92-e075-4aa0-b2ad-a1fa00548e72</toop:DocumentRequestIdentifier>
+        <toop:DocumentURI>https://www.poyry-pq.eu/pq-stelle-web-test/app/espdDocumentAccess?url=dataExchange/showDocument/F056445A6BC0010E</toop:DocumentURI>
+        <toop:DocumentResponse>
+            <toop:DocumentName>Eigenerklärung über Insolvenz, Liquidation, Zuverlässigkeit</toop:DocumentName>
+            <toop:DocumentValidityPeriod>13 Month</toop:DocumentValidityPeriod>
+            <toop:DocumentIssueDate>2018-03-23</toop:DocumentIssueDate>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="DE167064991">DE1665469009</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>Kessler Gerüstbau GbR</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <toop:DocumentURI>eabc6889-67d2-4fea-b6b5-303be2b67ccc</toop:DocumentURI>
+                <toop:DocumentTypeCode>ETR</toop:DocumentTypeCode>
+                <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode>
+            </toop:Document>
+        </toop:DocumentResponse>
+    </toop:DocumentRequest>
+    <toop:DocumentRequest>
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">192a87f3-dc6e-4d3d-addb-dd1df7e0e7e6</toop:DocumentRequestIdentifier>
+        <toop:DocumentURI>https://www.gbd-test.online/quality-platform/app/dataExchange/showDocument/75369A70C2C67504</toop:DocumentURI>
+        <toop:DocumentResponse>
+            <toop:DocumentName>Auszug aus dem Handelsregister</toop:DocumentName>
+            <toop:DocumentValidityPeriod>13 Month</toop:DocumentValidityPeriod>
+            <toop:DocumentIssueDate>2018-09-06</toop:DocumentIssueDate>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="DE167064991">DE1665468040</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>FG Baulogistik GmbH</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <toop:DocumentURI>f04a390c-11ea-4615-a4c6-51e1c2e2c4aa</toop:DocumentURI>
+                <toop:DocumentTypeCode>ETR</toop:DocumentTypeCode>
+                <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode>
+            </toop:Document>
+        </toop:DocumentResponse>
+    </toop:DocumentRequest>
+    <toop:DocumentRequest>
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">b6e24973-d86e-4c92-8a8f-6664de560e08</toop:DocumentRequestIdentifier>
+        <toop:DocumentURI>https://www.gbd-test.online/quality-platform/app/dataExchange/showDocument/E48F08BA18D4DBB7</toop:DocumentURI>
+        <toop:DocumentResponse>
+            <toop:DocumentName>Eintragung in das Berufsregister</toop:DocumentName>
+            <toop:DocumentValidityPeriod>13 Month</toop:DocumentValidityPeriod>
+            <toop:DocumentIssueDate>2018-07-19</toop:DocumentIssueDate>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="DE167064991">DE1665468040</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>FG Baulogistik GmbH</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <toop:DocumentURI>f67eb1fd-a6bd-4520-9d13-2d9d5924b07b</toop:DocumentURI>
+                <toop:DocumentTypeCode>ETR</toop:DocumentTypeCode>
+                <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode>
+            </toop:Document>
+        </toop:DocumentResponse>
+    </toop:DocumentRequest>
+    <toop:DocumentRequest>
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">3e1362b5-f402-4fd0-83c7-7a6eb9af595e</toop:DocumentRequestIdentifier>
+        <toop:DocumentURI>https://www.gbd-test.online/quality-platform/app/dataExchange/showDocument/45485BD5493B9654</toop:DocumentURI>
+        <toop:DocumentResponse>
+            <toop:DocumentName>Freistellungsbescheinigung gem. §48b Abs. 1 des EStG</toop:DocumentName>
+            <toop:DocumentValidityPeriod>13 Month</toop:DocumentValidityPeriod>
+            <toop:DocumentIssueDate>2018-04-28</toop:DocumentIssueDate>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="DE167064991">DE1665468040</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>FG Baulogistik GmbH</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <toop:DocumentURI>1595b3cd-db6c-4fbf-b15b-5782621cc284</toop:DocumentURI>
+                <toop:DocumentTypeCode>ETR</toop:DocumentTypeCode>
+                <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode>
+            </toop:Document>
+        </toop:DocumentResponse>
+    </toop:DocumentRequest>
+    <toop:DocumentRequest>
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">dabf52f0-e74d-4e24-a37a-20d456bd9a17</toop:DocumentRequestIdentifier>
+        <toop:DocumentURI>https://www.gbd-test.online/quality-platform/app/dataExchange/showDocument/B506CD21D5B63E8E</toop:DocumentURI>
+        <toop:DocumentResponse>
+            <toop:DocumentName>Unbedenklichkeitsbescheinigung der BG mit Angabe der Lohnsummen</toop:DocumentName>
+            <toop:DocumentValidityPeriod>13 Month</toop:DocumentValidityPeriod>
+            <toop:DocumentIssueDate>2019-01-15</toop:DocumentIssueDate>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="DE167064991">DE1665468040</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>FG Baulogistik GmbH</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <toop:DocumentURI>7132d17e-2ebb-4ba5-ae5c-34fd32a5d26b</toop:DocumentURI>
+                <toop:DocumentTypeCode>ETR</toop:DocumentTypeCode>
+                <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode>
+            </toop:Document>
+        </toop:DocumentResponse>
+    </toop:DocumentRequest>
+    <toop:DocumentRequest>
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">af4ca6a2-a709-4c3f-9765-1cdb55eedee7</toop:DocumentRequestIdentifier>
+        <toop:DocumentURI>https://www.gbd-test.online/quality-platform/app/dataExchange/showDocument/00E06B79D588E5BC</toop:DocumentURI>
+        <toop:DocumentResponse>
+            <toop:DocumentName>Bescheinigung in Steuersachen</toop:DocumentName>
+            <toop:DocumentValidityPeriod>12 Month</toop:DocumentValidityPeriod>
+            <toop:DocumentIssueDate>2018-09-25</toop:DocumentIssueDate>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="DE167064991">DE1665468040</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>FG Baulogistik GmbH</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <toop:DocumentURI>7e9d7964-614d-4cb3-b6ea-b716cd6e5ddc</toop:DocumentURI>
+                <toop:DocumentTypeCode>ETR</toop:DocumentTypeCode>
+                <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode>
+            </toop:Document>
+        </toop:DocumentResponse>
+    </toop:DocumentRequest>
+    <toop:DataProvider>
+        <toop:DPIdentifier schemeAgencyID="DE167064991">DE167064991</toop:DPIdentifier>
+        <toop:DPName>Pöyry Deutschland GmbH</toop:DPName>
+        <toop:DPAdministrativeUnit></toop:DPAdministrativeUnit>
+        <toop:DPLegalAddress>
+            <toop:AddressLine>Binger Str. 14 - 16</toop:AddressLine>
+            <toop:AddressLine>DE 55122 Mainz</toop:AddressLine>
+            <toop:StreetName></toop:StreetName>
+            <toop:StreetNumber></toop:StreetNumber>
+            <toop:City></toop:City>
+            <toop:PostCode></toop:PostCode>
+            <toop:Country></toop:Country>
+            <toop:CountryCode>DE</toop:CountryCode>
+        </toop:DPLegalAddress>
+        <toop:DPContactDetails>
+            <toop:ContactPoint></toop:ContactPoint>
+            <toop:ContactTelephoneNumber></toop:ContactTelephoneNumber>
+            <toop:ContactEmailAddress>9930:167064991</toop:ContactEmailAddress>
+        </toop:DPContactDetails>
+    </toop:DataProvider>
+</toop:Response>

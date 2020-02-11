@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gc:CodeList xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Identification>
+		<ShortName>Gender</ShortName>
+		<LongName xml:lang="en">Gender Code</LongName>
+		<Version>2018-03-28</Version>
+		<CanonicalUri>urn:hl7.gendercode</CanonicalUri>
+		<CanonicalVersionUri>2018-03-28</CanonicalVersionUri>
+		<LocationUri>http://www.oid-info.com/get/2.16.840.1.113883.5.1</LocationUri>
+		<Agency>
+			<LongName xml:lang="en">Health Level 7</LongName>
+			<Identifier>HL7</Identifier>
+		</Agency>
+	</Identification>
+	<ColumnSet>
+		<Column Id="code" Use="required">
+			<ShortName>Code</ShortName>
+			<Data Type="normalizedString" Lang="en"/>
+		</Column>
+		<Column Use="optional" Id="name-en">
+			<ShortName>Name</ShortName>
+			<Data Type="string" Lang="en"/>
+		</Column>
+		<Key Id="codeKey">
+			<ShortName>CodeKey</ShortName>
+			<ColumnRef Ref="code"/>
+		</Key>
+	</ColumnSet>
+	<SimpleCodeList>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>M</SimpleValue>
+			</Value>
+			<Value ColumnRef="name-en">
+				<SimpleValue>Male</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>F</SimpleValue>
+			</Value>
+			<Value ColumnRef="name-en">
+				<SimpleValue>Female</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>UN</SimpleValue>
+			</Value>
+			<Value ColumnRef="name-en">
+				<SimpleValue>Undifferentiated (the gender of a person could not be uniquely defined as male or female, such as hermaphrodite)</SimpleValue>
+			</Value>
+		</Row>
+	</SimpleCodeList>
+</gc:CodeList>

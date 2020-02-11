@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2018 toop.eu
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+
+<!--
+    
+    ENTITIES IN THIS EXAMPLE:
+    The ship SEA WIND (IMO: 7128332, Flag: EE) calls to a Danish port. PSCO prepares for an inspection. 
+    The ship carries EE flag and has already submitted the crew list to DK.
+    DMA requests for ship certificates list from TOOP (in STEP 1a), by inputting IMONumber and FlagState.
+    Since the FlagState is EE, request is sent to Estonian Maritime Administration (EMA). 
+    EMA returns the list of valid certificates (in STEP 1b).
+    Between all available documents in the list, a Document of Compliance is requested (in STEP 2a) and returned (in STEP 2b).
+    
+-->
+
+<!--with some XML editors you can uncomment next row to link this instance to the Schematron (change the path if needed)-->
+<!-- <?xml-model href="../schematron/TOOP_BusinessRules_DataExchange.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> -->
+
+<toop:Response xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+ xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+ xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
+ xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2">
+    <!--Example XML instance, including comments and sample data taken from the Data Exchange Model specifications, checked with latest Schematron rules -->
+    <!--Rule: The UUID MUST be created following the UUID Version 4 specification. Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute-->
+    <!--DP ACTION: generate a new UUID-->
+    <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="**DEFINED_BY_DP**">68c3460a-8049-42eb-a8c5-ecad531b2686</toop:DocumentUniversalUniqueIdentifier>
+    <!--Rule: A date using the following format: YYYY + “-“ + MM + “-“ + DD (as defined for xsd:date)-->
+    <!--DP ACTION: insert the current date (could be a different day, if a request is issued just before midnight...)-->
+    <toop:DocumentIssueDate>2019-01-17</toop:DocumentIssueDate>
+    <!--DP ACTION: insert the current timestamp (in this example, the DP took two minutes to provide the Response)--> 
+    <toop:DocumentIssueTime>10:13:11</toop:DocumentIssueTime>
+    <!--Rule: Compulsory use of the identifiers defined in Guideline "Toop Policy for using Identifiers". Compulsory use of attribute schemeID "toop-doctypeid-qns".-->
+    <toop:CopyIndicator>false</toop:CopyIndicator> 
+    <!--Rule: A response MUST have the specification identifier "urn:eu:toop:ns:dataexchange-1p40::Response"-->
+    <toop:SpecificationIdentifier schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Response</toop:SpecificationIdentifier>
+    <!--Note: Do not change this identifier. It was assigned by the DC to identify this document internally-->
+    <toop:DataConsumerDocumentIdentifier schemeAgencyID="**DEFINED_BY_DC**">101-287.56666-1</toop:DataConsumerDocumentIdentifier>
+    <!--Note: Do not change this identifier. It was assigned by the DC to identify multiple request that belong together. -->
+    <toop:DataConsumerGlobalSessionIdentifier schemeAgencyID="**DEFINED_BY_DC**">394956-1</toop:DataConsumerGlobalSessionIdentifier>
+    <!--Please describe the purpose in english and use the language attribute "en"-->
+    <toop:DataConsumerRequestPurpose  languageID="en">Retrieve META data for ship certificates</toop:DataConsumerRequestPurpose>
+    <!--DP ACTION: copy the DocumentUniversalUniqueIdentifier from the corresponding TOOP Data Request to link the Response to that particular Request)--> 
+    <toop:DataRequestIdentifier schemeAgencyID="**DEFINED_BY_DP**">8acda8d6-1a37-11e9-ab14-d663bd873d93</toop:DataRequestIdentifier> 
+    <toop:RoutingInformation>
+        <!--DP ACTION:  change the value with the one identifier used in the Response -->
+        <toop:DocumentTypeIdentifier schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Response##urn:eu.toop.response.shipcertificate-list::1.40</toop:DocumentTypeIdentifier>
+        <!--keep the routing data from the Request-->
+        <toop:ProcessIdentifier schemeID="toop-procid-agreement">urn:eu.toop.process.twophasedrequestresponse</toop:ProcessIdentifier>
+        <!--Rule: An electronic address identifier MUST have a scheme identifier attribute. An electronic address identifier scheme MUST be from the list of Toop Party Identifiers described in the "Toop Policy for using Identifiers""-->
+        <toop:DataConsumerElectronicAddressIdentifier schemeID="iso6523-actorid-upis" schemeAgencyID="0007">0088:4035811991014</toop:DataConsumerElectronicAddressIdentifier>
+        <!--keep the routing data from the Request-->
+        <toop:DataConsumerCountryCode>DK</toop:DataConsumerCountryCode>
+        <!--DP ACTION: you can add the DP identifier here-->
+        <toop:DataProviderElectronicAddressIdentifier schemeID="iso6523-actorid-upis" schemeAgencyID="0007">0072:991010101332</toop:DataProviderElectronicAddressIdentifier>
+        <!--keep the routing data from the Request-->
+        <toop:DataProviderCountryCode>EE</toop:DataProviderCountryCode>
+    </toop:RoutingInformation>
+    <toop:DataConsumer>
+        <!--keep the data from the Request-->
+        <!--Rule: The preferred identifier is the national VAT number.  Compulsory use of the attribute schemeAgencyID.-->
+        <toop:DCUniqueIdentifier schemeAgencyID="**DEFINED_BY_DC**">DK3848484848</toop:DCUniqueIdentifier>
+        <toop:DCName>Maritime Authority - Port Control</toop:DCName>
+        <toop:DCLegalAddress>
+            <toop:AddressLine>Fjordvænget 30</toop:AddressLine>
+            <toop:AddressLine>4220 Korsør, Denmark</toop:AddressLine>
+            <toop:StreetName>Fjordvænget</toop:StreetName>
+            <toop:StreetNumber>30</toop:StreetNumber>
+            <toop:City>Korsør</toop:City>
+            <toop:PostCode>4220</toop:PostCode>
+            <toop:Country>Denmark</toop:Country>
+            <!--The country of the data consumer MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+            <toop:CountryCode>DK</toop:CountryCode>
+        </toop:DCLegalAddress>
+    </toop:DataConsumer>  
+    <toop:DataRequestSubject>
+        <!--keep the data from the Request-->
+        <toop:DataRequestSubjectTypeCode>LE</toop:DataRequestSubjectTypeCode>
+        <toop:LegalPerson>
+            <!--The uniqueness identifier consists of: 1. The first part is the Nationality Code of the identifier. This is one of the ISO 3166-1 alpha-2 codes, followed by a slash (“/“))  2. The second part is the Nationality Code of the destination country or international organization. This is one of the ISO 3166-1 alpha-2 codes, followed by a slash (“/“)  3. The third part a combination of readable characters. This uniquely identifies the identity asserted in the country of origin but does not necessarily reveal any discernible correspondence with the subject's actual identifier (for example, username, fiscal number etc)-->
+            <toop:LegalPersonUniqueIdentifier levelOfAssurance="None">EE/DK/7128332</toop:LegalPersonUniqueIdentifier>
+            <toop:LegalName levelOfAssurance="None">Sea Wind</toop:LegalName>
+            <toop:AlternativeLegalPersonIdentifier schemeID="**DEFINED_BY_DC**">7128332</toop:AlternativeLegalPersonIdentifier>
+            <!--Note: The address is not a mandatory attribute but you can add it here-->
+            <toop:LegalPersonLegalAddress>
+                <!--The country of the legal entity MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+                <toop:CountryCode levelOfAssurance="None">EE</toop:CountryCode>
+            </toop:LegalPersonLegalAddress>
+        </toop:LegalPerson>
+    </toop:DataRequestSubject>   
+    <toop:DocumentRequest> 
+        <!--keep the data from the Request-->
+        <toop:DocumentRequestIdentifier schemeAgencyID="**DEFINED_BY_DC**">10264d7b-9966-4d09-936f-43dd8fe99c42</toop:DocumentRequestIdentifier> 
+        <!--keep the data from the Request-->
+        <toop:DocumentRequestTypeCode>LIST</toop:DocumentRequestTypeCode>
+    <!--DP ACTION: add a block with the DocumentResponse for each DocumentRequest; in this example only one document was requested in STEP 2b for clarity-->
+    <!--DP ACTION: add all the data to identify the document - refer to the messaging model specifications-->
+    <toop:DocumentResponse>
+        <toop:DocumentName>ISMCompliance</toop:DocumentName>
+        <toop:DocumentDescription>Document of Compliance (DOC)</toop:DocumentDescription> 
+        <toop:DocumentValidityPeriod>until 26/12/2021</toop:DocumentValidityPeriod> 
+        <toop:LegalReference>SOLAS 1974</toop:LegalReference>
+        <toop:DocumentIdentifier>077SM/16</toop:DocumentIdentifier>
+        <toop:DocumentIssueDate>2016-12-12</toop:DocumentIssueDate>
+        <toop:DocumentIssuePlace>Tallinn, Estonia</toop:DocumentIssuePlace>
+        <toop:ErrorIndicator>false</toop:ErrorIndicator>
+        <toop:DocumentIssuer>
+            <toop:DocumentIssuerIdentifier schemeAgencyID="**DEFINED_BY_DP**">EE12345678</toop:DocumentIssuerIdentifier>
+            <toop:DocumentIssuerName>EE-EMA</toop:DocumentIssuerName>
+        </toop:DocumentIssuer>
+        <toop:Document>
+            <!--DP ACTION: add the masked internal URI of the document (endorsement URL) -->
+            <toop:DocumentURI>https://koolitus.emde.ee/cc/b0/67/123456</toop:DocumentURI> 
+            <!--DP ACTION: this is not mandatory, but if there is an agreement on document type you can put its code here-->
+            <!--toop:DocumentTypeCode>DOC</toop:DocumentTypeCode-->
+            <!--DP ACTION: the actual DocumentMimeTypeCode could be the preferred one shown in PreferredDocumentMimeTypeCode, but in any case this shows the correct MIME type of the sent document-->
+            <toop:DocumentMimeTypeCode>application/pdf</toop:DocumentMimeTypeCode> 
+        </toop:Document>
+    </toop:DocumentResponse>  
+    <toop:DocumentResponse>
+            <toop:DocumentName>ContinuousSynopsis</toop:DocumentName>
+            <toop:DocumentDescription>Continuous Synopsis Record (CSR)</toop:DocumentDescription> 
+            <toop:DocumentIssueDate>2015-03-26</toop:DocumentIssueDate>
+            <toop:DocumentIssuePlace>Tallinn, Estonia</toop:DocumentIssuePlace>
+            <toop:ErrorIndicator>false</toop:ErrorIndicator>
+            <toop:DocumentIssuer>
+                <toop:DocumentIssuerIdentifier schemeAgencyID="**DEFINED_BY_DP**">EE12345678</toop:DocumentIssuerIdentifier>
+                <toop:DocumentIssuerName>EE-EMA</toop:DocumentIssuerName>
+            </toop:DocumentIssuer>
+            <toop:Document>
+                <!--DP ACTION: add the masked internal URI of the document (endorsement URL) -->
+                <toop:DocumentURI>https://koolitus.emde.ee/cc/b0/11/5544332211</toop:DocumentURI> 
+                <!--DP ACTION: this is not mandatory, but if there is an agreement on document type you can put its code here-->
+                <!--toop:DocumentTypeCode>DOC</toop:DocumentTypeCode-->
+                <!--DP ACTION: the actual DocumentMimeTypeCode could be the preferred one shown in PreferredDocumentMimeTypeCode, but in any case this shows the correct MIME type of the sent document-->
+                <toop:DocumentMimeTypeCode>application/xml</toop:DocumentMimeTypeCode> 
+            </toop:Document>
+     </toop:DocumentResponse> 
+    </toop:DocumentRequest> 
+    <!--DP ACTION: provide this block of information about the Data Provider-->
+    <toop:DataProvider>
+        <!--Rule: The preferred identifier is the national VAT number.  Compulsory use of the attribute schemeAgencyID.-->
+        <toop:DPIdentifier schemeAgencyID="**DEFINED_BY_DC**">EE12345678</toop:DPIdentifier> 
+        <toop:DPName>EE-EMA</toop:DPName>
+        <toop:DPAdministrativeUnit>0072:991010101332</toop:DPAdministrativeUnit>
+        <toop:DPLegalAddress>
+            <toop:AddressLine>Valge 4</toop:AddressLine>
+            <toop:StreetName>Valge</toop:StreetName>
+            <toop:StreetNumber>4</toop:StreetNumber>
+            <toop:City>Tallinn</toop:City>
+            <toop:PostCode>11413</toop:PostCode>
+            <toop:Country>Estonia</toop:Country>
+            <!--The country of the data provider MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+            <toop:CountryCode>EE</toop:CountryCode>
+        </toop:DPLegalAddress>
+        <toop:DPContactDetails>
+            <toop:ContactPoint>Helin Tamm</toop:ContactPoint>
+            <toop:ContactTelephoneNumber>+372 620 5555</toop:ContactTelephoneNumber>
+            <toop:ContactEmailAddress>provider@uk.org</toop:ContactEmailAddress>
+        </toop:DPContactDetails>
+    </toop:DataProvider>
+</toop:Response>

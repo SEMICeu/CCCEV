@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright (C) 2018 toop.eu
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    
+-->
+
+<!--
+    
+    ENTITIES IN THIS EXAMPLE:
+    a British citizen, John Cleese, is using a German portal to fill a form with the data of its own company - in this case, asking for the Legal Form.
+    The portal retrieves his personal data through the UK eIDAS, 
+    and then asks for the required German Concepts which will become UK Concepts on the DP side. This example describes how a DC from Germany is creating a TOOP data request.
+    
+    (John is from London; its company "AnyCompanyName" is located in Liverpool; the Data Consumer portal is set in Berlin)
+    
+    In this example John only needs Data Elements, not Documents.
+    Look at the DC ACTIONs to understand how the DC should create the Request.
+    
+-->
+
+<!--with some XML editors you can uncomment next row to link this instance to the Schematron (change the path if needed)-->
+<!--<?xml-model href="../schematron/TOOP_BusinessRules_DataExchange.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>--> 
+
+<toop:Request xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+    xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
+    xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2">
+    <!--Example XML instance, including comments and sample data taken from the Data Exchange Model specifications, checked with latest Schematron rules -->
+    <!--Rule: The UUID MUST be created following the UUID Version 4 specification. Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute-->
+    <!--DC ACTION: generate a new UUID-->
+    <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="**DEFINED_BY_DC**">1f17a4fa-a905-4d9c-8191-97d1e76985df</toop:DocumentUniversalUniqueIdentifier>
+    <!--Rule: A date using the following format: YYYY + “-“ + MM + “-“ + DD (as defined for xsd:date)-->
+    <!--DC ACTION: insert the current date -->
+    <toop:DocumentIssueDate>2018-02-22</toop:DocumentIssueDate>
+    <!--DC ACTION: insert the current timestamp -->
+    <toop:DocumentIssueTime>09:55:23</toop:DocumentIssueTime>
+    <!--The Copy Indicator component is used if the same document is forwarded several times to the same or to different destinations. The default value is "false". Use it in combination with the Document Universal Unique Identifier. Copies should be indicated with "true" have have a different "Document Univeral Unique Identifier".-->
+    <toop:CopyIndicator>false</toop:CopyIndicator>
+    <!--Rule: Compulsory use of the identifiers defined in Guideline "Toop Policy for using Identifiers". Compulsory use of attribute schemeID "toop-doctypeid-qns".-->
+    <!--Rule: A request MUST have the specification identifier "urn:eu:toop:ns:dataexchange-1p40::Request"-->
+    <toop:SpecificationIdentifier schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Request</toop:SpecificationIdentifier>
+    <!--Use the schemeAgencyID attribute to identify the organisation responsible for the document.-->
+    <!--DC ACTION: If needed, assign an identifier which enables you to refer to this request within your system. The identifier will be kept in the response -->
+    <toop:DataConsumerDocumentIdentifier schemeAgencyID="**DEFINED_BY_DC**">101-287.56666</toop:DataConsumerDocumentIdentifier>
+    <!--DC ACTION: If needed, assign an identifier which enables you to refer to a group of request which belong together. The identifier will be kept in the response  -->
+    <toop:DataConsumerGlobalSessionIdentifier schemeAgencyID="**DEFINED_BY_DC**">394956</toop:DataConsumerGlobalSessionIdentifier>
+    <!--Please describe the purpose in english and use the language attribute "en"-->
+    <toop:DataConsumerRequestPurpose  languageID="en">Qualification Procedure in Public Procurement</toop:DataConsumerRequestPurpose>
+    <toop:RoutingInformation>
+        <!--DC ACTION:  mark this as a "toop.eu.data.request.registeredorganization"-->
+        <toop:DocumentTypeIdentifier schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Request##urn:eu.toop.request.registeredorganization::1.40</toop:DocumentTypeIdentifier>
+        <!--Compulsory use of the identifiers defined in Guideline "Toop Policy for using Identifiers".-->
+        <toop:ProcessIdentifier schemeID="toop-procid-agreement">urn:eu.toop.process.datarequestresponse</toop:ProcessIdentifier>
+        <!--Rule: An electronic address identifier MUST have a scheme identifier attribute. An electronic address identifier scheme MUST be from the list of Toop Party Identifiers described in the ""Toop Policy for using Identifiers"""-->
+        <toop:DataConsumerElectronicAddressIdentifier schemeID="iso6523-actorid-upis" schemeAgencyID="0007">0088:4035811991014</toop:DataConsumerElectronicAddressIdentifier>
+        <!--The country of the data consumer/provider MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+        <toop:DataConsumerCountryCode>DE</toop:DataConsumerCountryCode>
+        <!--DC ACTION:  use this OPTIONAL field if you want to specify a Data Provider to answer this Request"-->
+        <toop:DataProviderElectronicAddressIdentifier>123456789</toop:DataProviderElectronicAddressIdentifier>
+        <!--The country of the data consumer/provider MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+        <toop:DataProviderCountryCode>GB</toop:DataProviderCountryCode>
+    </toop:RoutingInformation>
+    <toop:DataConsumer>
+        <!--Rule: The preferred identifier is the national VAT number.  Compulsory use of the attribute schemeAgencyID.-->
+        <toop:DCUniqueIdentifier schemeAgencyID="**DEFINED_BY_DC**">DE999999999</toop:DCUniqueIdentifier>
+        <toop:DCName>MyCompany</toop:DCName>
+        <toop:DCLegalAddress>
+            <toop:AddressLine>Koenigstrasse 22</toop:AddressLine>
+            <toop:AddressLine>Floor 2</toop:AddressLine>
+            <toop:AddressLine>10115 Berlin (Germany)</toop:AddressLine>
+            <toop:StreetName>Koenigstrasse</toop:StreetName>
+            <toop:StreetNumber>22</toop:StreetNumber>
+            <toop:City>Berlin</toop:City>
+            <toop:PostCode>10115</toop:PostCode>
+            <toop:Country>Germany</toop:Country>
+            <toop:CountryCode>DE</toop:CountryCode>
+        </toop:DCLegalAddress>
+    </toop:DataConsumer>
+    <toop:DataRequestSubject>
+        <!--Compusory use of the code list "data subject type code" with the value "natural person" and "legal entity"-->
+        <toop:DataRequestSubjectTypeCode>LE</toop:DataRequestSubjectTypeCode>
+        <!--DC Action: This information entity should be filled by calling the eIDAS node in the UK-->
+        <toop:LegalPerson>
+            <!--The uniqueness identifier consists of: 1. The first part is the Nationality Code of the identifier. This is one of the ISO 3166-1 alpha-2 codes, followed by a slash (“/“))  2. The second part is the Nationality Code of the destination country or international organization. This is one of the ISO 3166-1 alpha-2 codes, followed by a slash (“/“)  3. The third part a combination of readable characters. This uniquely identifies the identity asserted in the country of origin but does not necessarily reveal any discernible correspondence with the subject's actual identifier (for example, username, fiscal number etc)-->
+            <toop:LegalPersonUniqueIdentifier levelOfAssurance="Substantial">DE/GB/02735442Z</toop:LegalPersonUniqueIdentifier>
+            <toop:LegalName levelOfAssurance="Substantial">AnyCompanyName</toop:LegalName>
+            <!--NOTE: we assume in this example that all the following alternative identifiers all are pointing to the same company, called AnyCompanyName-->
+            <!--An identifier that starts with an ISO 3166-1 alpha-2 (2 letters) country code (except for Greece, which uses the ISO 639-1 language code EL for the Greek language, instead of its ISO 3166-1 alpha-2 country code GR) and then has between 2 and 13 characters. The identifiers are composed of numeric digits in most countries, but in some countries they may contain letters.-->
+            <toop:VATRegistrationNumber levelOfAssurance="None">DE730757727</toop:VATRegistrationNumber>
+            <!--Attribute describing the Tax Reference number related to the legal person. Indicates a country, tax office, and an organisation-->
+            <toop:TaxReferenceNumber levelOfAssurance="None">ABZ1230789</toop:TaxReferenceNumber>
+            <!--Attribute describing the identifier referred to in Article 3(1) of Directive 2009/101/EG of the European Parliament and of the Council.-->
+            <toop:BusinessCodes levelOfAssurance="None">GB7552671243</toop:BusinessCodes>
+            <!--A 20-character identifier (defined by ISO 17442) to distinct legal entities that engage in financial transactions.-->
+            <toop:LegalEntityIdentifier levelOfAssurance="None">ES123567983568437254</toop:LegalEntityIdentifier>
+            <!--A number assigned by a customs authority or designated authority or authorities in a Member State to economic operators and other persons in accordance with the rules laid down in Part I, Title I, Chapter 6 of the CCIP-->
+            <toop:EORIIdentifier levelOfAssurance="None">GB123456789000</toop:EORIIdentifier>
+            <!--Attribute describing the System for Exchange of Excise Data (SEED) Excise Number for the legal person--> 
+            <toop:SEEDIdentifier levelOfAssurance="None">GB00000987ABC</toop:SEEDIdentifier>
+            <!--A 4-digit code describing the Standard Industrial Classification (SIC) code for the legal person-->
+            <toop:StandardIndustrialClassification levelOfAssurance="None">6010</toop:StandardIndustrialClassification>
+            <!--Rule: Use the value that is used in the element: DataSubject/NaturalPerson/PersonIdentifier-->
+            <toop:AuthorizedRepresentativeIdentifier>GB/GB/02635542Y</toop:AuthorizedRepresentativeIdentifier>
+            <!--Add any identifier you need for record matching, since eIDAS may not provide the required identification information needed by the Data Provider to identify the data subject --> 
+            <!--Rule: Compulsory use of schemeID in these optional identifiers-->
+            <toop:AlternativeLegalPersonIdentifier schemeID="**DEFINED_BY_DC**">IMO9176187</toop:AlternativeLegalPersonIdentifier>
+            <toop:AlternativeLegalPersonIdentifier schemeID="**DEFINED_BY_DC**">XYZ</toop:AlternativeLegalPersonIdentifier>
+            <!--DC Action: The address is not mandatory attribute for eIDAS but the DC has to fill at least the country of the company-->
+            <toop:LegalPersonLegalAddress>
+                <toop:AddressLine levelOfAssurance="None">Princess Street 21</toop:AddressLine>
+                <toop:AddressLine levelOfAssurance="None">Liverpool (United Kingdom) L1</toop:AddressLine>
+                <toop:StreetName levelOfAssurance="None">Princess Street </toop:StreetName>
+                <toop:StreetNumber levelOfAssurance="None">21</toop:StreetNumber>
+                <toop:City levelOfAssurance="None">Liverpool</toop:City>
+                <toop:PostCode levelOfAssurance="None">L1</toop:PostCode>
+                <toop:Country levelOfAssurance="None">United Kingdom</toop:Country>
+                <!--The country of the legal entity MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+                <toop:CountryCode levelOfAssurance="None">GB</toop:CountryCode>
+            </toop:LegalPersonLegalAddress>
+        </toop:LegalPerson>
+        <!--DC Action: This information entity should be filled by calling the eIDAS node in the UK-->
+        <toop:NaturalPerson>
+            <!--"The uniqueness identifier consists of:  1. The first part is the Nationality Code of the identifier. This is one of the ISO 3166-1 alpha-2 codes, followed by a slash (“/“))  2. The second part is the Nationality Code of the destination country or international organization. This is one of the ISO 3166-1 alpha-2 codes, followed by a slash (“/“)  3. The third part a combination of readable characters. This uniquely identifies the identity asserted in the country of origin but does not necessarily reveal any discernible correspondence with the subject's actual identifier (for example, username, fiscal number etc)"-->
+            <toop:PersonIdentifier levelOfAssurance="Substantial">GB/GB/02635542Y</toop:PersonIdentifier>
+            <!--The FamilyNamye of the natural person MUST always be specified-->
+            <toop:FamilyName levelOfAssurance="Substantial">John</toop:FamilyName>
+            <!--The FirstName of the natural person MUST always be specified-->
+            <toop:FirstName levelOfAssurance="Substantial">Cleese</toop:FirstName>
+            <!--The Data of Birth of the natural person MUST be always specified using the following format: YYYY + “-“ + MM + “-“ + DD (as defined for xsd:date)-->
+            <toop:BirthDate levelOfAssurance="Substantial">1939-10-27</toop:BirthDate>
+            <toop:BirthFamilyName levelOfAssurance="None">Cheese</toop:BirthFamilyName>
+            <toop:BirthPlace levelOfAssurance="None">Weston-super-Mare</toop:BirthPlace>
+            <toop:GenderCode levelOfAssurance="None">M</toop:GenderCode>
+            <!--Rule: Compulsory use of schemeID in these optional identifiers-->
+            <toop:AlternativeNaturalPersonIdentifier schemeID="**DEFINED_BY_DC**">1234010180</toop:AlternativeNaturalPersonIdentifier>
+            <!--DC Action: The address is not mandatory attribute for eIDAS but the DC has to fill at least the country of the natural person-->
+            <toop:NaturalPersonLegalAddress>
+                <toop:AddressLine levelOfAssurance="None">Queens Street 22</toop:AddressLine>
+                <toop:AddressLine levelOfAssurance="None">London EC4</toop:AddressLine>
+                <toop:StreetName levelOfAssurance="None">Queens Street</toop:StreetName>
+                <toop:StreetNumber levelOfAssurance="None">22</toop:StreetNumber>
+                <toop:City levelOfAssurance="None">London</toop:City>
+                <toop:PostCode levelOfAssurance="None">EC4</toop:PostCode>
+                <toop:Country levelOfAssurance="None">United Kingdom</toop:Country>
+                <!--The country MUST always be specified using the code list CountryCodeIdentifier (ISO 3166-1 2A:2006)-->
+                <toop:CountryCode levelOfAssurance="None">GB</toop:CountryCode>
+            </toop:NaturalPersonLegalAddress>
+        </toop:NaturalPerson>
+    </toop:DataRequestSubject>
+    <toop:DataRequestAuthorization>
+        <!--The token is a signed JSON. The token is proving the consent that the Data Consumer can request data on behalf of the Data Subject. -->
+        <toop:DataRequestConsentToken mimeCode="example/text">eyJlaWRhc0F0dHJpYnV0ZXMiOgoKICAgWwoKICAgICAgeyDigJxuYW1l4oCdOuKAnGZhbWlseU5hbWXigJ0sCgogICAgICAgICDigJxsb2HigJ0gOiDigJxodHRwOi8vZWlkYXMuZXVyb3BhLmV1L0xvQS9sb3figJ0sCgogICAgICAgIOKAnHZhbHVl4oCdOiDigJxjcGg44oCdCgogICAgIH0sCgogICAgIHsg4oCcbmFtZeKAnTrigJxmaXJzdE5hbWXigJ0sCgogICAgICAgICDigJxsb2HigJ0gOiDigJxodHRwOi8vZWlkYXMuZXVyb3BhLmV1L0xvQS9sb3figJ0sCgogICAgICAgIOKAnHZhbHVl4oCdOiDigJxjcGg44oCdCgogICAgIH0KCiAgIF0sCgogICDigJx0aW1lc3RhbXDigJ0gOuKAnTIwMTctMDktMTZUMDg6MTE6MjEuMTkxWuKAnSwKCiAgICDigJxhdWRpZW5jZVJlc3RyaWN0aW9u4oCdOiDigJxodHRwOi8vZnJlZWRvbmlhLmVpZG1vZHVsZS9tZXRhZGF0YeKAnSwKCiAgICDigJxpc3N1ZXLigJ06IOKAnWh0dHA6Ly84NC4yMDUuMjQ4LjE4MDo4MC9FaWRhc05vZGUvQ29ubmVjdG9yUmVzcG9uZGVyTWV0YWRhdGHigJ0sCgogICAg4oCcY291bnRyeeKAnTog4oCcU1figJ0KCn0=</toop:DataRequestConsentToken>
+    </toop:DataRequestAuthorization>
+    <toop:DataElementRequest>
+        <!--DC Action: Even if this is an optional element, it is recommeded to use this element in order to correlate responses to a given request on the side of the DC. DCs may use there own format for this identifier. However, the concept is optional as the  "Concept Namespace" is the major identifier to identify concepts within the TOOP network. If your internal system is also using the Toop "Concept Namespace" to identify concepts you can use duplicate them here or leave this element empty.-->
+        <toop:DataElementRequestIdentifier>REQ#1342344</toop:DataElementRequestIdentifier>
+        <toop:ConceptRequest>
+            <!--Rule: Compulsory use of the code list "ConceptTypeCodes" with the values  "Data Consumer Concept (DC)", "Toop Concept (TC)" and "Data Provider Concept (DP)".--> 
+            <!--DC Action: Choose the right code for your concept request (in this example DC). If your system has an internal mapping to the TOOP concepts, you may also start with the value "TC" for TOOP  -->
+            <toop:ConceptTypeCode>DC</toop:ConceptTypeCode>
+            <!--Rule: If the Semantic Mapping Module was used to map between two Concepts with different Concept Type Codes the Semantic Mapping Indicator MUST be set on "true". "If the mapping between Concepts Types (Concept Type Code) was done locally, the "Semantic Mapping Indicator" MUST be set on false".-->
+            <!--DC Action: as in this example the type code is not yet mapped to DC, the SemanticMappingExecutionIndicator is set to "false"-->
+            <toop:SemanticMappingExecutionIndicator>false</toop:SemanticMappingExecutionIndicator>
+            <!--Rule: Compulsory use of the IDs defined in the list "Concepts & Namespaces".  Rule: If the Concept Type Code is set on "Data Consumer" the cardinality of this element MUST be set to 1…1.-->
+            <!--DC Action: Add the complete path to the Data Consumer concept inlcuding its namespace.--> 
+            <toop:ConceptNamespace>deu:Rechtsform</toop:ConceptNamespace>
+            <toop:ConceptName>Rechtsform</toop:ConceptName>
+            <!--Rule: If the Concept Type Code is set on "Data Consumer" the cardinality of this element MUST be set to 1…1."-->
+            <toop:ConceptDefinition>The legal form under which the  company is registered.</toop:ConceptDefinition>  
+            <!--DC Action: Add the name of the Data Consumer concept.-->
+            <toop:ConceptRequest>
+                <toop:ConceptTypeCode>TC</toop:ConceptTypeCode>
+                <!--DC Action: as in this example the type code is mapped from a Data Consumer Concept to a TOOP Concept, the SemanticMappingExecutionIndicator is set to "true"-->
+                <toop:SemanticMappingExecutionIndicator>true</toop:SemanticMappingExecutionIndicator>
+                <!--Semantic Mapping: The Semantic Mapping adds the complete path to the TOOP concept inlcuding its namespace.--> 
+                <toop:ConceptNamespace>toop:ToopLegalForm</toop:ConceptNamespace>
+                <!--Semantic Mapping: The Semantic Mapping adds the name of the TOOP concept.-->
+                <toop:ConceptName>ToopLegalForm</toop:ConceptName>
+                <toop:ConceptRequest>
+                    <toop:ConceptTypeCode>DP</toop:ConceptTypeCode>
+                    <!--DC Action: as in this example the type code is mapped from a TOOP Concept to a Data Provider Concept, the SemanticMappingExecutionIndicator is set to "true"-->
+                    <toop:SemanticMappingExecutionIndicator>true</toop:SemanticMappingExecutionIndicator>
+                    <!--Semantic Mapping: The Semantic Mapping adds the complete path to the Data Provider concept inlcuding its namespace.-->
+                    <toop:ConceptNamespace>uk:LegalFrom</toop:ConceptNamespace>
+                    <!--Semantic Mapping: The Semantic Mapping adds the name of the Data Provider concept.-->
+                    <toop:ConceptName>LegalForm</toop:ConceptName>
+                </toop:ConceptRequest>
+            </toop:ConceptRequest>
+        </toop:ConceptRequest>
+    </toop:DataElementRequest>
+</toop:Request>

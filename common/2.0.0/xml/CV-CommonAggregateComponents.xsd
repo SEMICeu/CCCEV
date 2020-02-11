@@ -1,25 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CCCEV-related namespaces are temporary for the time being. They point to the GitHub where the development is being done. -->
-<xsd:schema xmlns="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#"
-	xmlns:cbc="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#"
+<xsd:schema xmlns="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#"
+   xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dt="https://github.com/everis-semic/common/2.0.0/xml/CV-DataTypes#"
-	targetNamespace="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#" 
+	xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
+	xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:lcn="http://www.w3.org/ns/locn#"
+	targetNamespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
-	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CommonBasicComponents.xsd"/>
-	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CV-DataTypes#" schemaLocation="../../../common/2.0.0/xml/CV-DataTypes.xsd"/>
-	 <!-- ===== Element Declarations ===== -->
+   <xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+   <xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="../../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../../../common/2.0.0/xml/UBL-CommonAggregateComponents-2.3.xsd"/>
+   <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
+   <!-- ===== Element Declarations ===== -->
    <!-- Asset should be defined in ADMS. For the time being we use the data structure defined for dcat:DataSet -->
+   <xsd:element name="Address" type="AddressType"/>
    <xsd:element name="Agent" type="AgentType"/>
+   <xsd:element name="Asset" type="AssetType"/>
    <xsd:element name="NaturalPerson" type="NaturalPersonType"/>
    <xsd:element name="Organization" type="OrganizationType"/>
-   <xsd:element name="Asset" type="AssetType"/>
    <xsd:element name="Period" type="PeriodType"/>
    <xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
    
    <!-- ===== Type Definitions ===== -->
+   <xsd:complexType name="AddressType">
+      <xsd:complexContent>
+         <xsd:extension base="lcn:AddressType">
+            <xsd:sequence>
+               <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AddressTypeCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AddressFormatCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Postbox" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Floor" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Room" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:StreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AdditionalStreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:BlockName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:BuildingName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:BuildingNumber" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="cbc:InhouseMail" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Department" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:MarkAttention" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:MarkCare" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:PlotIdentification" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CitySubdivisionName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CityName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:PostalZone" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CountrySubentity" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CountrySubentityCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Region" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:District" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:TimezoneOffset" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cac:AddressLine" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="cac:Country" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cac:LocationCoordinate" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>                     
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
    <xsd:complexType name="AgentType">
       <xsd:sequence>         
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>

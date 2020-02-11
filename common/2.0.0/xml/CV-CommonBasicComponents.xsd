@@ -10,21 +10,43 @@
    <xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="./CV-DataTypes.xsd"/>
    
    <!-- ==== Element Declaration ==== -->
+   <xsd:element name="AdditionalStreetName" type="NameType"/>
+   <xsd:element name="Address" type="AddressType"/>
    <xsd:element name="Alias" type="NameType"/>
-   <xsd:element name="ID" type="IDRefType"/>
-   <xsd:element name="CreatorIdRef" type="IDRefType"/>
-   <xsd:element name="PublisherIdRef" type="IDRefType"/>
-   <xsd:element name="ProviderIdRef" type="IDRefType"/>
+   <xsd:element name="AlternativeName" type="NameType"/>
    <xsd:element name="AuthoritativeSourceIdRef" type="IDRefType"/>
    <xsd:element name="Bias" type="BiasType"/>
+   <xsd:element name="BirthName" type="NameType"/>
+   <xsd:element name="BlockName" type="NameType"/>
+   <xsd:element name="BuildingName" type="NameType"/>
+   <xsd:element name="BuildingNumber" type="BuildingNumberType"/>
+   <xsd:element name="CityName" type="NameType"/>
+   <xsd:element name="CitySubdivisionName" type="NameType"/>
+   <xsd:element name="CountryCode" type="CountryCodeType"/>
+   <xsd:element name="CountrySubentity" type="CountrySubentityType"/>
+   <xsd:element name="CountrySubentityCode" type="CountrySubentityCodeType"/>
+   <xsd:element name="CreatorIdRef" type="IDRefType"/>
+   <xsd:element name="DateOfBirth" type="DateOfBirthType"/>
+   <xsd:element name="DateOfDeath" type="DateOfDeathType"/>
+   <xsd:element name="Department" type="DepartmentType"/>
    <xsd:element name="Description" type="DescriptionType"/>
-   <xsd:element name="DurationMeasure" type="DurationMeasureType"/>
    <xsd:element name="DescriptionCode" type="DescriptionCodeType"/>
+   <xsd:element name="DurationMeasure" type="DurationMeasureType"/>
    <xsd:element name="EndDate" type="EndDateType"/>
    <xsd:element name="EndTime" type="EndTimeType"/>
+   <xsd:element name="EvaluationMethod" type="EvaluationMethodType"/>
+   <xsd:element name="FamilyName" type="NameType"/>
+   <xsd:element name="FullName" type="NameType"/>
+   <xsd:element name="Floor" type="FloorType"/>
+   <xsd:element name="Gender" type="GenderType"/>
+   <xsd:element name="GeographicName" type="NameType"/>
+   <xsd:element name="GeographicIdentifier" type="URIType"/>
+   <xsd:element name="GivenName" type="NameType"/>
+   <xsd:element name="ID" type="IDRefType"/>
+   <xsd:element name="PublisherIdRef" type="IDRefType"/>
+   <xsd:element name="ProviderIdRef" type="IDRefType"/>
    <xsd:element name="SourceCriterionIdRef" type="IDRefType"/>
    <xsd:element name="TargetCriterionIdRef" type="IDRefType"/>
-   <xsd:element name="EvaluationMethod" type="EvaluationMethodType"/>
    <xsd:element name="FromReferenceFrameWorkIdRef" type="IDRefType"/>
    <xsd:element name="Modified" type="ModifiedType"/>
    <xsd:element name="Issued" type="IssuedType"/>
@@ -40,33 +62,11 @@
    <xsd:element name="VersionInfo" type="VersionInfoType"/>
    <xsd:element name="Weight" type="WeightType"/>
    <xsd:element name="WeightingConsiderationDescription" type="WeightingConsiderationDescriptionType"/>
-   <xsd:element name="FullName" type="NameType"/>
-   <xsd:element name="FamilyName" type="NameType"/>
-   <xsd:element name="GivenName" type="NameType"/>
-   <xsd:element name="BirthName" type="NameType"/>
-   <xsd:element name="Gender" type="GenderType"/>
    <xsd:element name="PatronymicName" type="NameType"/>
-   <xsd:element name="AlternativeName" type="NameType"/>
-   <xsd:element name="DateOfBirth" type="DateOfBirthType"/>
-   <xsd:element name="DateOfDeath" type="DateOfDeathType"/>
-   <xsd:element name="GeographicName" type="NameType"/>
-   <xsd:element name="GeographicIdentifier" type="URIType"/>
-   <xsd:element name="Address" type="AddressType"/>
-   <xsd:element name="AdditionalStreetName" type="NameType"/>
-   <xsd:element name="BlockName" type="NameType"/>
-   <xsd:element name="BuildingName" type="NameType"/>
-   <xsd:element name="BuildingNumber" type="BuildingNumberType"/>
-   <xsd:element name="CityName" type="NameType"/>
-   <xsd:element name="CitySubdivisionName" type="NameType"/>
-   <xsd:element name="CountryCode" type="CountryCodeType"/>
-   <xsd:element name="CountrySubentity" type="CountrySubentityType"/>
-   <xsd:element name="CountrySubentityCode" type="CountrySubentityCodeType"/>
-   <xsd:element name="Department" type="DepartmentType"/>
    <xsd:element name="Wkt" type="WktType"/>
    <xsd:element name="Lat" type="LatType"/>
    <xsd:element name="Long" type="LongType"/>
    <xsd:element name="District" type="DistrictType"/>
-   <xsd:element name="Floor" type="FloorType"/>
    <xsd:element name="PostalAddressIdRef" type="IDRefType"/>
    <xsd:element name="InhouseMail" type="InhouseMailType"/>
    <xsd:element name="MarkAttention" type="MarkAttentionType"/>
@@ -188,12 +188,12 @@
    </xsd:complexType>   
    <xsd:complexType name="DateOfDeathType">
       <xsd:simpleContent>
-         <xsd:extension base="dt:DateTimeType"/>
+         <xsd:extension base="dt:DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DateOfBirthType">
       <xsd:simpleContent>
-         <xsd:extension base="dt:DateTimeType"/>
+         <xsd:extension base="dt:DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="GenderType">

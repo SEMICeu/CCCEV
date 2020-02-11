@@ -10,6 +10,7 @@ with the final ones, preferably PURIs.-->
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:cv-dt="https://github.com/semiceu/cccev/common/2.0.0/xml/CV-DataTypes#"
   xmlns:cagv="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
+  xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
   targetNamespace="urn:eu:toop-ap:ns:dataexchange-1p40"
   version="specsVersion1.4.0"
   elementFormDefault="qualified"
@@ -18,6 +19,11 @@ with the final ones, preferably PURIs.-->
   <xsd:import    
     namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
     schemaLocation="../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+  
+  <xsd:import    
+    namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
+    schemaLocation="../../common/2.0.0/xml/CV-CommonBasicComponents.xsd" />
+  
   <xsd:import    
     namespace="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
     schemaLocation="../../cagv/2.0.0/xml/CV-Agent.xsd" />
@@ -81,6 +87,17 @@ with the final ones, preferably PURIs.-->
     <xsd:complexContent>
       <xsd:extension base="cagv:OrganizationType">
         <xsd:sequence/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:element name="NaturalPerson" type="NaturalPersonType"/>
+  <xsd:complexType name="NaturalPersonType">
+    <xsd:complexContent>
+      <xsd:extension base="cagv:PersonType">
+        <xsd:sequence>
+          <xsd:element name="birthFamilyName" type="cbc:NameType"></xsd:element>
+        </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

@@ -21,6 +21,7 @@
    <xsd:element name="Indicator" type="IndicatorType"/>
    <xsd:element name="Name" type="NameType"/>
    <xsd:element name="Measure" type="MeasureType"/>
+   <xsd:element name="PositiveInteger" type="PositiveIntegerType"/>
    <xsd:element name="Quantity" type="QuantityType"/>
    <xsd:element name="Text" type="TextType"/>
    <xsd:element name="Time" type="TimeType"/>
@@ -98,6 +99,13 @@
    <xsd:complexType name="MeasureType">
       <xsd:simpleContent>
          <xsd:extension base="udt:MeasureType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="PositiveIntegerType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:positiveInteger">
             <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
          </xsd:extension>
       </xsd:simpleContent>

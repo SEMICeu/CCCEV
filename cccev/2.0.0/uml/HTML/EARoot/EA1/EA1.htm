@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>1. Overview (simplified)</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2.png" usemap="#EA2" border="0" />
+
+<MAP NAME="EA2">
+<area shape="rect" coords="1567,1134,1772,1303" href="./EA3/EA37.htm" target="_self">
+<area shape="rect" coords="267,774,439,830" href="./EA8/EA74.htm" target="_self">
+<area shape="rect" coords="806,635,911,664" href="./EA1/EA31.htm" target="_self">
+<area shape="rect" coords="1774,575,1963,815" href="./EA1/EA30.htm" target="_self">
+<area shape="rect" coords="1127,924,1373,988" href="./EA8/EA75.htm" target="_self">
+<area shape="rect" coords="1596,1013,1716,1053" href="./EA3/EA38.htm" target="_self">
+<area shape="rect" coords="726,264,942,324" href="./EA1/EA32.htm" target="_self">
+<area shape="rect" coords="538,114,857,166" href="./EA8/EA77.htm" target="_self">
+<area shape="rect" coords="531,33,919,97" href="./EA8/EA76.htm" target="_self">
+<area shape="rect" coords="1049,633,1147,667" href="./EA6/EA66.htm" target="_self">
+<area shape="rect" coords="807,1394,1100,1458" href="./EA8/EA78.htm" target="_self">
+<area shape="rect" coords="516,1263,696,1328" href="./EA8/EA80.htm" target="_self">
+<area shape="rect" coords="497,463,625,539" href="./EA8/EA81.htm" target="_self">
+<area shape="rect" coords="476,633,636,672" href="./EA1/EA33.htm" target="_self">
+<area shape="rect" coords="116,53,248,97" href="./EA8/EA79.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">1. Overview (simplified) : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">29/04/2019 13:27:56</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/02/2020 14:03:20</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">estaromi</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A5CC03C2-922B-4ed7-B42F-A4CAA33D439E}</td>
+		</tr>
+	</table>
+	
+</div>
+ 
+</body>
+</html>

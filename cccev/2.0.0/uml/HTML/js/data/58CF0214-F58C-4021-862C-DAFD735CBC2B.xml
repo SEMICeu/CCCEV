@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("0.1.1:1", "", "Asset", "EARoot/EA1/EA1/EA30.htm", "5.png", "E315", "0", "", "Class0","{E11A6FF2-6B2A-481b-8E58-CE284571C388}");
+tocTab[tocTab.length] = new Array("0.1.1:2", "", "Period", "EARoot/EA1/EA1/EA31.htm", "5.png", "E319", "0", "", "Class0","{4E124935-8688-4699-A377-F63AC825E103}");
+tocTab[tocTab.length] = new Array("0.1.1:3", "", "ReferenceFramework", "EARoot/EA1/EA1/EA32.htm", "5.png", "E295", "0", "", "Class0","{187EF4EA-1124-4eba-964C-C1FBF4E1EC54}");
+tocTab[tocTab.length] = new Array("0.1.1:4", "", "Value", "EARoot/EA1/EA1/EA33.htm", "5.png", "E42", "0", "", "Class0","{A30247B8-67DF-4be1-9628-78FAF307DF80}");

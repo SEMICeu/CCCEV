@@ -1,0 +1,15 @@
+tocTab[tocTab.length] = new Array("0.1.1:1", "", "Address", "EARoot/EA1/EA1/EA8.htm", "5.png", "E392", "0", "", "Class0","{FBD231A8-E949-4b36-ADBC-29E940BB0A82}");
+tocTab[tocTab.length] = new Array("0.1.1:2", "", "Agent", "EARoot/EA1/EA1/EA9.htm", "5.png", "E342", "0", "", "Class0","{E84B97D8-2656-498d-B584-D95C2DBBD7A1}");
+tocTab[tocTab.length] = new Array("0.1.1:3", "", "Business", "EARoot/EA1/EA1/EA10.htm", "5.png", "E520", "0", "", "Class0","{C5813A3B-95C1-42ef-894E-2EFBAE78D71C}");
+tocTab[tocTab.length] = new Array("0.1.1:4", "", "Channel", "EARoot/EA1/EA1/EA11.htm", "5.png", "E517", "0", "", "Class0","{7F350BA6-9807-4f3e-A52B-CB509DABA0BA}");
+tocTab[tocTab.length] = new Array("0.1.1:5", "", "ContactPoint", "EARoot/EA1/EA1/EA12.htm", "5.png", "E516", "0", "", "Class0","{F146BB60-B3CC-419b-BCE2-391D12BEF6A7}");
+tocTab[tocTab.length] = new Array("0.1.1:6", "", "FormalOrganization", "EARoot/EA1/EA1/EA13.htm", "5.png", "E502", "0", "", "Class0","{627168D9-3274-4671-8874-BFC267D941DC}");
+tocTab[tocTab.length] = new Array("0.1.1:7", "", "LegalForm", "EARoot/EA1/EA1/EA14.htm", "247.png", "E398", "0", "", "Enumeration0","{61BD960A-0AC5-4e95-9558-BEB3A555ADD9}");
+tocTab[tocTab.length] = new Array("0.1.1:8", "", "OpeningHoursSpecification", "EARoot/EA1/EA1/EA15.htm", "5.png", "E518", "0", "", "Class0","{86CA4C60-D7CB-42de-9036-4A3B1483FC5C}");
+tocTab[tocTab.length] = new Array("0.1.1:9", "", "Organization", "EARoot/EA1/EA1/EA16.htm", "5.png", "E341", "0", "", "Class0","{029FD14D-C413-41b1-81DD-DA4802D8A322}");
+tocTab[tocTab.length] = new Array("0.1.1:10", "", "Person", "EARoot/EA1/EA1/EA17.htm", "5.png", "E343", "0", "", "Class0","{0549BA10-DC2D-4188-B54C-B6CDF1726225}");
+tocTab[tocTab.length] = new Array("0.1.1:11", "", "PublicOrganization", "EARoot/EA1/EA1/EA18.htm", "5.png", "E519", "0", "", "Class0","{48133D6A-BE44-43c9-A647-04650698EC95}");
+tocTab[tocTab.length] = new Array("0.1.1:12", "", "RegisteredOrganization", "EARoot/EA1/EA1/EA19.htm", "5.png", "E378", "0", "", "Class0","{3D032CC7-8323-4324-8CD5-7068BD71F8AB}");
+tocTab[tocTab.length] = new Array("0.1.1:13", "", "«abstract» Role", "EARoot/EA1/EA1/EA20.htm", "5.png", "E501", "0", "", "Class0","{4B85906E-78A4-4f5a-9AE8-1438AF447827}");
+tocTab[tocTab.length] = new Array("0.1.1:14", "", "Size", "EARoot/EA1/EA1/EA21.htm", "247.png", "E399", "0", "", "Enumeration0","{1BFB43D2-655A-4eb4-87D6-A69AB2DF4F54}");
+tocTab[tocTab.length] = new Array("0.1.1:15", "", "System", "EARoot/EA1/EA1/EA22.htm", "5.png", "E400", "0", "", "Class0","{DC5A8DC6-4D0A-4432-B667-CE2C1E6D5A96}");

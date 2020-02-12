@@ -1,3 +1,0 @@
-tocTab[tocTab.length] = new Array("0.1.5:1", "", "Format", "EARoot/EA1/EA5/EA61.htm", "5.png", "E235", "0", "", "Class0","{BA45870B-F291-456c-AA32-2B4A86FF5016}");
-tocTab[tocTab.length] = new Array("0.1.5:2", "", "LegalExpression", "EARoot/EA1/EA5/EA62.htm", "5.png", "E234", "0", "", "Class0","{817CB324-098D-451e-9046-A85E23482788}");
-tocTab[tocTab.length] = new Array("0.1.5:3", "", "LegalResource", "EARoot/EA1/EA5/EA63.htm", "5.png", "E233", "0", "", "Class0","{7CF1492B-52EC-4612-B039-93E0F84556F2}");

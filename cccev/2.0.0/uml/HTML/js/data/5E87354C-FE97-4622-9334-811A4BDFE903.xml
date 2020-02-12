@@ -1,8 +1,0 @@
-tocTab[tocTab.length] = new Array("0.1.9:1", "", "Numeric", "EARoot/EA1/EA9/EA83.htm", "230.png", "E333", "0", "", "DataType0","{BA0ECB44-F297-4940-91DA-4E3997919BD8}");
-tocTab[tocTab.length] = new Array("0.1.9:2", "", "Text", "EARoot/EA1/EA9/EA84.htm", "230.png", "E128", "0", "", "DataType0","{B3A020A7-49BD-4d49-87CD-87B194FCC323}");
-tocTab[tocTab.length] = new Array("0.1.9:3", "", "Amount", "EARoot/EA1/EA9/EA85.htm", "230.png", "E20", "0", "", "DataType0","{83211DE7-FC08-41ca-90ED-B1D747548AC4}");
-tocTab[tocTab.length] = new Array("0.1.9:4", "", "Code", "EARoot/EA1/EA9/EA86.htm", "230.png", "E15", "0", "", "DataType0","{CE9906F5-A833-4f77-9B6A-6B3B29A35460}");
-tocTab[tocTab.length] = new Array("0.1.9:5", "", "Identifier", "EARoot/EA1/EA9/EA87.htm", "230.png", "E19", "0", "", "DataType0","{ECF07FF0-8693-499d-AD7B-7484B8FDA398}");
-tocTab[tocTab.length] = new Array("0.1.9:6", "", "Indicator", "EARoot/EA1/EA9/EA88.htm", "230.png", "E17", "0", "", "DataType0","{911C6357-DC1C-4ff7-9744-616046F6F0BF}");
-tocTab[tocTab.length] = new Array("0.1.9:7", "", "Measure", "EARoot/EA1/EA9/EA89.htm", "230.png", "E11", "0", "", "DataType0","{7B1D00E9-E850-4739-8639-19A76F6FFF4D}");
-tocTab[tocTab.length] = new Array("0.1.9:8", "", "Quantity", "EARoot/EA1/EA9/EA90.htm", "230.png", "E12", "0", "", "DataType0","{F9677E04-DED2-4052-8D25-BA714BA9C3EC}");

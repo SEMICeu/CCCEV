@@ -2,10 +2,11 @@
 <!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
 <xsd:schema xmlns="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:cac="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#"
 	xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
+	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:foaf="http://xmlns.com/foaf/"
+	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:org="http://www.w3.org/ns/org#"
 	xmlns:rov="http://www.w3.org/ns/regorg#"
 	targetNamespace="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#" 
@@ -23,7 +24,10 @@
 	schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
 	<xsd:import
 		namespace="http://xmlns.com/foaf/"
-		schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>	
+		schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
+	<xsd:import
+		namespace="http://www.w3.org/ns/locn#"
+		schemaLocation="../../../common/2.0.0/xml/locn.xsd"/>
 	<xsd:import
 		namespace="http://www.w3.org/ns/org#"
 		schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
@@ -62,7 +66,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="RegisteredOrganizationType">
 				<xsd:sequence>
-					<xsd:element name="Size" type="cbc:PositiveInteger" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="Size" type="cbc:PositiveIntegerType" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -127,6 +131,7 @@
 			<xsd:extension base="FormalOrganizationType">
 				<xsd:sequence>
 					<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="FormalLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -137,6 +142,7 @@
 			<xsd:extension base="rov:RegisteredOrganizationType">
 				<xsd:sequence>
 					<xsd:element name="LegalForm" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="RegisteredLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>

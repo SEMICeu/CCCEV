@@ -5,6 +5,7 @@
            elementFormDefault="qualified"> 
 
 <xs:element name="Address" type="AddressType"/>
+<xs:element name="Location" type="LocationType"/>
     
 <xs:complexType name="AddressType">
     <xs:sequence>
@@ -30,6 +31,10 @@
         <xs:element name="addressId" type="xs:string" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:anyURI" use="required"></xs:attribute>
+</xs:complexType>
+    
+<xs:complexType name="LocationType">
+    <xs:sequence/>
 </xs:complexType>
 
 </xs:schema>

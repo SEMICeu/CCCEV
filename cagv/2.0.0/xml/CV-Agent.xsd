@@ -18,7 +18,7 @@
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
 	<xsd:import
 		namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
-		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>	
+		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<xsd:import
 	namespace="http://purl.org/dc/terms/"
 	schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
@@ -54,9 +54,12 @@
 		<xsd:complexContent>
 			<xsd:extension base="dct:AgentType">
 				<xsd:sequence>
-					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="cbc:Alias" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Channel" type="ChannelType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Role" type="RoleType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="cbc:SubClassType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="System" type="SystemType" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -66,7 +69,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="RegisteredOrganizationType">
 				<xsd:sequence>
-					<xsd:element name="Size" type="cbc:PositiveIntegerType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="Size" type="cbc:CodeType" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -93,6 +96,7 @@
 			<xsd:extension base="org:OrganizationType">
 				<xsd:sequence>
 					<xsd:element name="Name" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Location" type="lcn:LocationType"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -114,13 +118,18 @@
 				<xsd:sequence>
 					<xsd:element name="AlternativeName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="BirthFamilyName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="CountryOfBirth" type="lcn:LocationType"/>
+					<xsd:element name="CountryOfDeath" type="lcn:LocationType"/>
 					<xsd:element name="DateOfBirth" type="cbc:DateOfBirthType"  minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="DateOfDeath" type="cbc:DateOfDeathType"  minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="FamilyName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="FullName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="Gender" type="cbc:CodeType"  minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="GivenName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="LegalLocation" type="lcn:LocationType"/>
 					<xsd:element name="PatronimicName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="PlaceOfBirth" type="lcn:LocationType"/>
+					<xsd:element name="PlaceOfDeath" type="lcn:LocationType"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -151,6 +160,7 @@
 	
 	<xsd:complexType name="RoleType">
 		<xsd:sequence>
+			<xsd:element name="Agent" type="AgentType" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="SubClassType" type="cbc:IRIType"/>
 			<xsd:element name="ContactPoint" type="ContactPointType" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>				
@@ -160,6 +170,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
+					<xsd:element name="Agent" type="AgentType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element name="LegalForm" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>

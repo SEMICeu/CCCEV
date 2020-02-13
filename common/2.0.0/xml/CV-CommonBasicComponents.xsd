@@ -73,7 +73,6 @@
    <xsd:element name="MarkAttention" type="MarkAttentionType"/>
    <xsd:element name="MarkCare" type="MarkCareType"/>
    <xsd:element name="PlotIdentification" type="PlotIdentificationType"/>
-   <xsd:element name="PosistiveInteger" type="PositiveIntegerType"/>
    <xsd:element name="PostalZone" type="PostalZoneType"/>
    <xsd:element name="PostBox" type="PostBoxType"/>
    <xsd:element name="Region" type="RegionType"/>
@@ -89,11 +88,6 @@
       </xsd:simpleContent>
    </xsd:complexType>
    
-   <xsd:complexType name="PositiveIntegerType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:NumericType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="TimezoneOffsetType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>

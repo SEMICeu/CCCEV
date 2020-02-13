@@ -38,15 +38,20 @@ with the final ones, preferably PURIs.-->
   <xsd:element name="Request" type="RequestType"></xsd:element>
   <xsd:element name="Response" type="ResponseType"></xsd:element>
   
+  <xsd:element name="DataConsumer" type="DataConsumerType"/>
   <xsd:complexType name="DataConsumerType">
     <xsd:complexContent>
       <xsd:extension base="cagv:AgentType">
-        <xsd:sequence>
-          <!--
-          <xsd:element name="DataProvider" type="toop:DataProviderType" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Error" type="toop:ErrorType" minOccurs="0" maxOccurs="unbounded"/>
-          -->
-        </xsd:sequence>
+        <xsd:sequence/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>
+  <xsd:complexType name="DataRequestSubjectType">
+    <xsd:complexContent>
+      <xsd:extension base="cagv:AgentType">
+        <xsd:sequence/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

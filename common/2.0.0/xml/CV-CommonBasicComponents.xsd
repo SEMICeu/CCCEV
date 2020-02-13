@@ -43,6 +43,7 @@
    <xsd:element name="GeographicIdentifier" type="URIType"/>
    <xsd:element name="GivenName" type="NameType"/>
    <xsd:element name="ID" type="IDRefType"/>
+   <xsd:element name="IRI" type="IRIType"/>
    <xsd:element name="PublisherIdRef" type="IDRefType"/>
    <xsd:element name="ProviderIdRef" type="IDRefType"/>
    <xsd:element name="SourceCriterionIdRef" type="IDRefType"/>
@@ -81,6 +82,12 @@
    
    <!-- ===== Entity Type Definitions ===== -->
    
+   <xsd:complexType name="IRIType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:URIType"/>
+      </xsd:simpleContent>
+      
+   </xsd:complexType>
    <xsd:complexType name="TimezoneOffsetType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>

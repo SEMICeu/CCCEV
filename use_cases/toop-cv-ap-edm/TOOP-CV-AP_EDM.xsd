@@ -18,11 +18,11 @@ with the final ones, preferably PURIs.-->
   attributeFormDefault="unqualified">  
   
   <xsd:import    
-    namespace="https://github.com/semiceu/cccev/common/2.0.0/xml/CV-DataTypes#"
+    namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
     schemaLocation="../../common/2.0.0/xml/CV-DataTypes.xsd"/>
   
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2" 
-    schemaLocation="CCTS_CCT_SchemaModule-2.3.xsd"/>
+    schemaLocation="../../common/2.0.0/xml/CCTS_CCT_SchemaModule-2.3.xsd"/>
   
   <xsd:import    
     namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
@@ -35,8 +35,9 @@ with the final ones, preferably PURIs.-->
   
   <!--alternative ROOT elements-->
  
-  <xsd:element name="Request" type="RequestType"></xsd:element>
-  <xsd:element name="Response" type="ResponseType"></xsd:element>
+  <xsd:element name="Request" type="RequestType"/>
+  <xsd:element name="Response" type="ResponseType"/>
+  <xsd:element name="EDM" type="EDMType"/>
   
   <xsd:element name="Business" type="BusinessType"/>
   <xsd:complexType name="BusinessType">
@@ -77,23 +78,25 @@ with the final ones, preferably PURIs.-->
   </xsd:complexType>
   
   <xsd:complexType name="RequestType">
-    <xsd:sequence>
-      <xsd:element name="DocumentUniversalUniqueIdentifier" type="udt:IdentifierType"/>
-      <xsd:element name="DocumentIssueDate" type="xsd:date"/>
-      <xsd:element name="DocumentIssueTime" type="xsd:time" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="CopyIndicator" type="udt:IndicatorType"  minOccurs="0" maxOccurs="1" default="false"/>
-      <xsd:element name="SpecificationIdentifier" type="udt:IdentifierType"/>
-      <xsd:element name="DataConsumerDocumentIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="DataConsumerGlobalSessionIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="DataConsumerRequestPurpose" type="udt:TextType" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="DataRequestIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="RoutingInformation" type="RoutingInformationType"/>
-      <xsd:element name="DataConsumer" type="DataConsumerType"/>
-      <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>
-      <xsd:element name="DataRequestAuthorization" type="DataRequestAuthorizationType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="DataElementRequest" type="DataElementRequestType" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="DocumentRequest" type="DocumentRequestType" minOccurs="0" maxOccurs="unbounded"/>
-    </xsd:sequence>
+    <xsd:complexContent>
+      <xsd:extension base="EDMType">
+         <xsd:sequence>
+           <xsd:element name="DocumentUniversalUniqueIdentifier" type="udt:IdentifierType"/>
+           <xsd:element name="DocumentIssueDate" type="xsd:date"/>
+           <xsd:element name="DocumentIssueTime" type="xsd:time" minOccurs="0" maxOccurs="1"/>
+           <xsd:element name="CopyIndicator" type="udt:IndicatorType"  minOccurs="0" maxOccurs="1" default="false"/>
+           <xsd:element name="SpecificationIdentifier" type="udt:IdentifierType"/>
+           <xsd:element name="DataConsumerDocumentIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
+           <xsd:element name="DataConsumerGlobalSessionIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
+           <xsd:element name="DataConsumerRequestPurpose" type="udt:TextType" minOccurs="0" maxOccurs="unbounded"/>
+           <xsd:element name="DataRequestIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
+           <xsd:element name="DataConsumer" type="DataConsumerType"/>
+           <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>
+           <xsd:element name="DataElementRequest" type="DataElementRequestType" minOccurs="0" maxOccurs="unbounded"/>
+           <xsd:element name="DocumentRequest" type="DocumentRequestType" minOccurs="0" maxOccurs="unbounded"/>
+         </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   
   <xsd:complexType name="ResponseType">
@@ -108,6 +111,35 @@ with the final ones, preferably PURIs.-->
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  
+  <xsd:complexType name="EDMType">
+    <xsd:sequence>
+      <xsd:element name="RoutingInformation" type="RoutingInformationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DataRequestAuthorization" type="DataRequestAuthorizationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Request" type="RequestType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="RoutingInformationType">
+    <xsd:sequence>
+      <xsd:element name="DataConsumerCountry" type="cv-dt:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="DataConsumerElectronicAddress" type="cv-dt:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="DataProviderCountry" type="cv-dt:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="DataProviderElectronicAddress" type="cv-dt:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="DocumentType" type="cv-dt:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Process" type="cv-dt:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="DataRequestAuthorizationType">
+    <xsd:sequence>
+      <xsd:element name="ConsentToken" type="cv-dt:BinaryObjectType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="DataElementRequestType"/>
+  <xsd:complexType name="DocumentRequestType"/>
+  
   
   <xsd:element name="LegalPerson" type="LegalPersonType"/>
   <xsd:complexType name="LegalPersonType">

@@ -27,8 +27,14 @@
    <xsd:element name="Time" type="TimeType"/>
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="URI" type="URIType"/>
+   <xsd:element name="BinaryObject" type="BinaryObjectType"/>
 
 <!-- ===== Entity Type Definitions ===== -->
+   <xsd:complexType name="BinaryObjectType">
+      <xsd:simpleContent>
+         <xsd:extension base="udt:BinaryObjectType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="AmountType">
       <xsd:simpleContent>
          <xsd:extension base="udt:AmountType">

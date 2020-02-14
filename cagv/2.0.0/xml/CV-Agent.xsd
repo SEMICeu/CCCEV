@@ -54,9 +54,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="dct:AgentType">
 				<xsd:sequence>
-					<xsd:element ref="cbc:Alias" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Alias" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="Channel" type="ChannelType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="ID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="Role" type="RoleType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="cbc:SubClassType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="System" type="SystemType" minOccurs="0" maxOccurs="unbounded"/>

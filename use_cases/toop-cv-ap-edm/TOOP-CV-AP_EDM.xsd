@@ -56,6 +56,15 @@ with the final ones, preferably PURIs.-->
     </xsd:complexContent>
   </xsd:complexType>
   
+  <xsd:element name="DocumentIssuer" type="DataRequestSubjectType"/>
+  <xsd:complexType name="DataRequestSubjectType">
+    <xsd:complexContent>
+      <xsd:extension base="cagv:AgentType">
+        <xsd:sequence/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <xsd:complexType name="RequestType">
     <xsd:sequence>
       <xsd:element name="DocumentUniversalUniqueIdentifier" type="udt:IdentifierType"/>

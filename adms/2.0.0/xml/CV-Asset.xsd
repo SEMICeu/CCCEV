@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
+<xsd:schema xmlns="https://github.com/everis-semic/asset/2.0.0/xml/CV-Asset#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:dcat-ap="https://github.com/everis-semic/dcat-ap/2.0.0/xml/CV-DCAT-AP#"
+	xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
+	targetNamespace="https://github.com/everis-semic/asset/2.0.0/xml/CV-Asset#" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+	<xsd:import namespace="https://github.com/everis-semic/dcat-ap/2.0.0/xml/CV-DCAT-AP#" schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
+	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="../../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+
+	<xsd:element name="ID" type="dt:IdentifierType"/>
+	<xsd:element name="Type" type="dt:CodeType"/>
+	<xsd:element name="Dataset" type="dcat-ap:DatasetType"/>
+	<xsd:element name="VersionID" type="dt:IdentifierType"/>
+	
+	<xsd:element name="Asset" type="AssetType"/>
+	<xsd:complexType name="AssetType">
+		<xsd:complexContent>
+			<xsd:extension base="dcat-ap:DatasetType">
+				<xsd:sequence>
+					<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Type" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Dataset" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>	
+</xsd:schema>

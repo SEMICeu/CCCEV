@@ -3,13 +3,13 @@
 <xsd:schema xmlns="http://purl.org/dc/terms/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:foaf="http://xmlns.com/foaf/"
+	xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
 	targetNamespace="http://purl.org/dc/terms/" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 
-<xsd:import
-	namespace="http://xmlns.com/foaf/"
-	schemaLocation="../xml/foaf.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/" schemaLocation="../xml/foaf.xsd"/>
+	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="./CV-DataTypes.xsd"/>
 	
 	
 	<!-- Element declaration -->
@@ -18,6 +18,11 @@
 	to extend the dct Agents; this should be done by DCMI.-->
 	
 	<xsd:element name="Agent" type="foaf:AgentType"/>
+	<xsd:element name="Title" type="dt:TextType"/>
+	<xsd:element name="Description" type="dt:TextType"/>
+	<xsd:element name="Modified" type="dt:DateTimeType"/>
+	<!-- check how DCMI defines MediaType...and update this...Can MediaType to mean MimeType? is so then the cbc:MimeTypeCodeType should extend MediaType -->
+	<xsd:element name="MediaType" type="dt:CodeType"/>
 	
 	<!-- If the need is to extend dct:Agent, then use the following structure below: -->
 	
@@ -29,5 +34,5 @@
 			</xsd:extension>		
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 </xsd:schema>

@@ -12,9 +12,11 @@
    <!-- ==== Element Declaration ==== -->
    <xsd:element name="AdditionalStreetName" type="NameType"/>
    <xsd:element name="Address" type="AddressType"/>
+   <xsd:element name="AddressFormatCode" type="AddressFormatCodeType"/>
+   <xsd:element name="AddressTypeCode" type="AddresTypeCodeType"/>
+   <xsd:element name="AddressLine" type="AddressLineType"/>
    <xsd:element name="Alias" type="NameType"/>
    <xsd:element name="AlternativeName" type="NameType"/>
-   <xsd:element name="AuthoritativeSourceIdRef" type="IDRefType"/>
    <xsd:element name="Bias" type="BiasType"/>
    <xsd:element name="BirthName" type="NameType"/>
    <xsd:element name="BlockName" type="NameType"/>
@@ -25,7 +27,7 @@
    <xsd:element name="CountryCode" type="CountryCodeType"/>
    <xsd:element name="CountrySubentity" type="CountrySubentityType"/>
    <xsd:element name="CountrySubentityCode" type="CountrySubentityCodeType"/>
-   <xsd:element name="CreatorIdRef" type="IDRefType"/>
+   <xsd:element name="CopyIndicator" type="CopyIndicatorType"/>
    <xsd:element name="DateOfBirth" type="DateOfBirthType"/>
    <xsd:element name="DateOfDeath" type="DateOfDeathType"/>
    <xsd:element name="Department" type="DepartmentType"/>
@@ -42,22 +44,15 @@
    <xsd:element name="GeographicName" type="NameType"/>
    <xsd:element name="GeographicIdentifier" type="URIType"/>
    <xsd:element name="GivenName" type="NameType"/>
-   <xsd:element name="ID" type="IDRefType"/>
+   <xsd:element name="ID" type="IDType"/>
    <xsd:element name="IRI" type="IRIType"/>
-   <xsd:element name="PublisherIdRef" type="IDRefType"/>
-   <xsd:element name="ProviderIdRef" type="IDRefType"/>
-   <xsd:element name="SourceCriterionIdRef" type="IDRefType"/>
-   <xsd:element name="TargetCriterionIdRef" type="IDRefType"/>
-   <xsd:element name="FromReferenceFrameWorkIdRef" type="IDRefType"/>
    <xsd:element name="Modified" type="ModifiedType"/>
    <xsd:element name="Issued" type="IssuedType"/>
    <xsd:element name="Name" type="NameType"/>
-   <xsd:element name="MatchingEvidenceTypeIdRef" type="IDRefType"/>
-   <xsd:element name="ProvidedEvidenceIdRef" type="IDRefType"/>
-   <xsd:element name="RequiredEvidenceTypeIdRef" type="IDRefType"/>		
+   <xsd:element name="RefID" type="ReferenceIDType"/>
    <xsd:element name="StartDate" type="StartDateType"/>
    <xsd:element name="StartTime" type="StartTimeType"/>
-   <xsd:element name="SubClassType" type="DescriptionType"/>
+   <xsd:element name="SubClassIRI" type="IRIType"/>
    <xsd:element name="Title" type="TitleType"/>
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="VersionInfo" type="VersionInfoType"/>
@@ -68,10 +63,11 @@
    <xsd:element name="Lat" type="LatType"/>
    <xsd:element name="Long" type="LongType"/>
    <xsd:element name="District" type="DistrictType"/>
-   <xsd:element name="PostalAddressIdRef" type="IDRefType"/>
+   <xsd:element name="Postbox" type="PostBoxType"/>
    <xsd:element name="InhouseMail" type="InhouseMailType"/>
    <xsd:element name="MarkAttention" type="MarkAttentionType"/>
    <xsd:element name="MarkCare" type="MarkCareType"/>
+   <xsd:element name="MimeType" type="MimeTypeCodeType"/>
    <xsd:element name="PlotIdentification" type="PlotIdentificationType"/>
    <xsd:element name="PostalZone" type="PostalZoneType"/>
    <xsd:element name="PostBox" type="PostBoxType"/>
@@ -81,13 +77,39 @@
    <xsd:element name="TimezoneOffset" type="TimezoneOffsetType"/>
    
    <!-- ===== Entity Type Definitions ===== -->
+   <xsd:complexType name="AddressLineType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="AddressFormatCodeType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="AddresTypeCodeType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="CopyIndicatorType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    
    <xsd:complexType name="IRIType">
       <xsd:simpleContent>
          <xsd:extension base="dt:URIType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   
+   <xsd:complexType name="MimeTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="dt:CodeType">
+        <xsd:attribute name="priority" type="xsd:decimal" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>   
    <xsd:complexType name="TimezoneOffsetType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>
@@ -278,11 +300,11 @@
          <xsd:restriction base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="IDRefType">
+   <xsd:complexType name="IDType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
-   </xsd:complexType>
+   </xsd:complexType> 
    <xsd:complexType name="NameType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:TextType"/>

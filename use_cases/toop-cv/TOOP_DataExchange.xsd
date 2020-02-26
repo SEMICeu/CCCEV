@@ -113,15 +113,10 @@
   
   <xsd:complexType name="DocumentRequestType">  
     <xsd:sequence>
-      <!-- Asset.ID -->
-      <xsd:element name="DocumentRequestIdentifier" type="udt:IdentifierType"/>
-      <!-- Asset.Type -->  
+      <xsd:element name="DocumentRequestIdentifier" type="udt:IdentifierType"/>  
       <xsd:element name="DocumentRequestTypeCode" type="udt:CodeType" minOccurs="0" maxOccurs="1"/>
-      <!-- Defined in the EDM-CV so the attribute added used the CV-DataTypes instead of udt so it captures the SALs. -->
       <xsd:element name="PreferredDocumentMimeTypeCode" type="toop:PreferredDocumentMimeTypeCodeType" minOccurs="0" maxOccurs="unbounded"/>
-      <!-- Asset.Distribution.DownloadURL -->
       <xsd:element name="DocumentURI" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
-      <!-- In the EDM-CV the DocumentResponse has been decoupled from the DocumentRequest --> 
       <xsd:element name="DocumentResponse" type="toop:DocumentResponseType" minOccurs="0" maxOccurs="unbounded"/>  <!--NOTE: the DocumentResponse is mandatory in the Response message, but its current cardinality is 0..n for compatibility with the Request message-->
     </xsd:sequence>
   </xsd:complexType>
@@ -213,21 +208,16 @@
   
   <xsd:complexType name="TOOPRequestType">
     <xsd:sequence>
-      <!-- Asset.ID -->
       <xsd:element name="DocumentUniversalUniqueIdentifier" type="udt:IdentifierType"/>
-      <!-- Asset.Issued (DCAT defines it as a dct:issued xsd:dateTime) -->
       <xsd:element name="DocumentIssueDate" type="xsd:date"/>
       <xsd:element name="DocumentIssueTime" type="xsd:time" minOccurs="0" maxOccurs="1"/>
-      <!-- The following elements are kept as in TOOP but use CV-DataType instead of udt, so it captures the SALs --> 
       <xsd:element name="CopyIndicator" type="udt:IndicatorType"  minOccurs="0" maxOccurs="1" default="false"/>
       <xsd:element name="SpecificationIdentifier" type="udt:IdentifierType"/>
       <xsd:element name="DataConsumerDocumentIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="DataConsumerGlobalSessionIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="DataConsumerRequestPurpose" type="udt:TextType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="DataRequestIdentifier" type="udt:IdentifierType" minOccurs="0" maxOccurs="1"/>
-      <!-- In EDM-CV The routing information is in the base class EDM, as it is needed to the Request and Response -->
       <xsd:element name="RoutingInformation" type="toop:RoutingInformationType"/>
-      <!-- In EDM-CV these are references to cgav:Agents -->
       <xsd:element name="DataConsumer" type="toop:DataConsumerType"/>
       <xsd:element name="DataRequestSubject" type="toop:DataRequestSubjectType"/>
       <xsd:element name="DataRequestAuthorization" type="toop:DataRequestAuthorizationType" minOccurs="0" maxOccurs="1"/>

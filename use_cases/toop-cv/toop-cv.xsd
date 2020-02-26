@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema 
+  xmlns="urn:eu:toop:ns:dataexchange-1p40"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
+  xmlns:ao="https://github.com/everis-semic/asset/2.0.0/xml/CV-Asset#"
+  xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
+  xmlns:cagv="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
+  targetNamespace="urn:eu:toop:ns:dataexchange-1p40"
+  version="specsVersion1.4.0"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">  
+  
+  <xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+  <xsd:import namespace="https://github.com/everis-semic/asset/2.0.0/xml/CV-Asset#" schemaLocation="../../adms/2.0.0/xml/CV-Asset.xsd"/>
+  <xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#" schemaLocation="../../../CCCEV/common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+  <xsd:import namespace="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#" schemaLocation="../../../CCCEV/cagv/2.0.0/xml/CV-Agent.xsd"/>
+  
+  <!--alternative ROOT elements-->
+  <xsd:element name="Request" type="TOOPRequestType"/>  
+  <xsd:element name="Response" type="TOOPResponseType"/>  
+  <xsd:element name="Asset" type="ao:AssetType"/>
+  <xsd:element name="CopyIndicator" type="dt:IndicatorType"/>
+  <xsd:element name="SpecificationIdentifier" type="dt:IdentifierType"/>
+  <xsd:element name="DataConsumerDocumentIdentifier" type="dt:IdentifierType"/>
+  <xsd:element name="DataConsumerGlobalSessionIdentifier" type="dt:IdentifierType"/>
+  <xsd:element name="DataConsumerRequestPurpose" type="dt:TextType"/>
+  <xsd:element name="DataRequestIdentifier" type="dt:IdentifierType"/>  
+  <xsd:element name="DataConsumerRefID" type="dt:IdentifierType"/>
+  <xsd:element name="DataRequestSubjectRefID" type="dt:IdentifierType"/>  
+  <xsd:element name="NaturalPerson" type="cagv:PersonType"/>
+  <xsd:element name="Business" type="cagv:BusinessType"/>
+  <xsd:element name="PublicAdministration" type="cagv:PublicOrganizationType"/>
+  <xsd:element name="FormalOrganization" type="cagv:FormalOrganizationType"/>
+  <!--************************** -->
+  <!--COMMON elements start here -->
+  
+  <!-- Abstract base class containing elements common to both the TOOP EDM Request and the EDM Response -->
+  <xsd:complexType name="EDMType">
+  <xsd:complexContent>
+       <xsd:extension base="ao:AssetType">
+        <xsd:sequence>
+          <xsd:element name="RoutingInformation" type="RoutingInformationType"/>
+        </xsd:sequence>
+      </xsd:extension>
+  </xsd:complexContent>
+  </xsd:complexType>
+     
+  <xsd:complexType name="RoutingInformationType"> 
+    <xsd:sequence>
+      <xsd:element name="DocumentTypeIdentifier" type="dt:IdentifierType"/> 
+      <xsd:element name="ProcessIdentifier" type="dt:IdentifierType"/> 
+      <xsd:element name="DataConsumerElectronicAddressIdentifier" type="dt:IdentifierType"/>
+      <xsd:element name="DataConsumerCountryCode" type="dt:CodeType"/> 
+      <xsd:element name="DataProviderElectronicAddressIdentifier" type="dt:IdentifierType" minOccurs="0" maxOccurs="1"/>  
+      <xsd:element name="DataProviderCountryCode" type="dt:CodeType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="PreferredDocumentMimeTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="dt:CodeType">
+        <xsd:attribute name="priority" type="xsd:decimal" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="TOOPRequestType">
+    <xsd:complexContent>
+      <xsd:extension base="EDMType">
+        <xsd:sequence>
+            <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="SpecificationIdentifier"></xsd:element>
+            <xsd:element ref="DataConsumerDocumentIdentifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="DataConsumerGlobalSessionIdentifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="DataConsumerRequestPurpose" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="DataRequestIdentifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="DataConsumerRefID"></xsd:element>
+            <xsd:element ref="DataRequestSubjectRefID"></xsd:element>
+            <!-- The possible types of Agents in the request are toop:LegalEntities, but in CV LegalEntities can be: Person, Business, Public Administration and FormalOrganizations (e.g. Consortia that are not registered yet, NGOs, other). -->  
+            <xsd:element ref="NaturalPerson" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="Business" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="PublicAdministration" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="FormalOrganization" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+       </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="TOOPResponseType">
+    <xsd:complexContent>
+      <xsd:extension base="EDMType">
+        <xsd:sequence>
+        </xsd:sequence>
+       </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

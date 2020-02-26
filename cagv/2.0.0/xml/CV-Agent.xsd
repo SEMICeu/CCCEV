@@ -2,80 +2,117 @@
 <!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
 <xsd:schema xmlns="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cac="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#"
 	xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:foaf="http://xmlns.com/foaf/"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:org="http://www.w3.org/ns/org#"
 	xmlns:rov="http://www.w3.org/ns/regorg#"
+	xmlns:cac="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#"
 	targetNamespace="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
-<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
-	<xsd:import
-		namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#"
-		schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
-	<xsd:import
-		namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
-		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
-	<xsd:import
-	namespace="http://purl.org/dc/terms/"
-	schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
-	<xsd:import
-		namespace="http://xmlns.com/foaf/"
-		schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
-	<xsd:import
-		namespace="http://www.w3.org/ns/locn#"
-		schemaLocation="../../../common/2.0.0/xml/locn.xsd"/>
-	<xsd:import
-		namespace="http://www.w3.org/ns/org#"
-		schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
-	<xsd:import
-		namespace="http://www.w3.org/ns/regorg#"
-		schemaLocation="../../../common/2.0.0/xml/regorg.xsd"/>
-		
+
+	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
+	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/" schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
+	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../common/2.0.0/xml/regorg.xsd"/>
+	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"></xsd:import>
+	
+	
 	<!-- Element declaration -->
-	<xsd:element name="Address" type="cac:AddressType"/>
+	<xsd:element name="Address" type="AddressType"/>
 	<xsd:element name="Agent" type="AgentType"/>
+	<xsd:element name="Alias" type="cbc:NameType"/>
+	<xsd:element name="AvailabilityRestriction" type="OpeningHoursSpecificationType"></xsd:element>
+	<xsd:element name="ContactPoint" type="ContactPointType"/>
+	<xsd:element name="Description" type="cbc:DescriptionType"/>
+	<xsd:element name="Endpoint" type="cbc:URIType"/>
+	<xsd:element name="Email" type="cbc:URIType"/>
+	<xsd:element name="Fax" type="cbc:TextType"/>
+	<xsd:element name="ID" type="cbc:IDType"/>
+	<xsd:element name="InternetAddress" type="cbc:URIType"/>
+	<xsd:element name="IntervalPeriod" type="cac:PeriodType"/>
+	<xsd:element name="PlayedByAgentIDRef" type="cbc:ReferenceIDType"/>
+	<xsd:element name="Role" type="RoleType"/>
+	<xsd:element name="Telephone" type="cbc:TextType"/>
+	
+
+	<!--
 	<xsd:element name="Business" type="BusinessType"/>
 	<xsd:element name="Channel" type="ChannelType"/>
 	<xsd:element name="ContactPoint" type="ContactPointType"/>
 	<xsd:element name="OpeningHoursSpecificationHours" type="OpeningHoursSpecificationType"/>
 	<xsd:element name="Organization" type="OrganizationType"/>
+	<xsd:element name="OwnedByIDRef" type="cbc:IDRefType"/>
 	<xsd:element name="FormalOrganization" type="FormalOrganizationType"/>
 	<xsd:element name="Location" type="lcn:LocationType"/>
 	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="PublicOrganization" type="PublicOrganizationType"/>
 	<xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
-	<xsd:element name="Role" type="RoleType"/>
 	<xsd:element name="System" type="SystemType"/>
-	
+	-->
 	<!-- Element definition -->
-	
 	<xsd:complexType name="AddressType">
-		<xsd:complexContent>
-			<xsd:extension base="cac:AddressType">
-				<xsd:sequence/>
-			</xsd:extension>
-		</xsd:complexContent>		
-	</xsd:complexType>
-	
+      <xsd:complexContent>
+         <xsd:extension base="lcn:AddressType">
+            <xsd:sequence>
+               <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AddressTypeCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AddressFormatCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:PostBox" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Floor" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Room" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:StreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AdditionalStreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:BlockName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:BuildingName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:BuildingNumber" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="cbc:InhouseMail" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Department" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:MarkAttention" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:MarkCare" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:PlotIdentification" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CitySubdivisionName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CityName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:PostalZone" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CountrySubentity" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:CountrySubentityCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:Region" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:District" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:TimezoneOffset" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:AddressLine" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="cbc:CountryCode" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>                     
+         </xsd:extension>
+      </xsd:complexContent>
+   	</xsd:complexType>
+
+	<xsd:group name="Agent">
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Alias" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Role" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="Role">
+		<xsd:sequence>
+			<xsd:element ref="PlayedByAgentIDRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ContactPoint" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
 	<xsd:complexType name="AgentType">
-		<xsd:complexContent>
-			<xsd:extension base="dct:AgentType">
-				<xsd:sequence>
-					<xsd:element name="Alias" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="Channel" type="ChannelType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="ID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="Role" type="RoleType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="cbc:SubClassType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="System" type="SystemType" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>		
+		<xsd:sequence>
+			<xsd:group ref="Agent"/>
+			<xsd:group ref="Role"/>
+		</xsd:sequence>
 	</xsd:complexType>
 	
+	<!--
 	<xsd:complexType name="BusinessType">
 		<xsd:complexContent>
 			<xsd:extension base="RegisteredOrganizationType">
@@ -85,27 +122,44 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
+		
 	<xsd:complexType name="ChannelType">
 		<xsd:sequence>
-			<xsd:element name="AvailabilityRestriction" type="OpeningHoursSpecificationType" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Endpoint" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="AvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>	
 	</xsd:complexType>
 	
+
 	<xsd:complexType name="ContactPointType">
 		<xsd:sequence>
-			<xsd:element name="AvailabilityRestriction" type="OpeningHoursSpecificationType" minOccurs="0" maxOccurs="unbounded"/>	
-		</xsd:sequence>	
+			<xsd:element ref="Email" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="Fax" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="Telephone" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="InternetAddress" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="Description" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="Channel" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element name="AvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
+		</xsd:sequence>		
 	</xsd:complexType>
 	
+	
 	<xsd:complexType name="OpeningHoursSpecificationType">
-		<xsd:sequence/>
+		<xsd:sequence>
+			<xsd:element name="Description" type="cbc:DescriptionType"/>
+			<xsd:element ref="IntervalPeriod" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
 	</xsd:complexType>
+	
 	
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="org:OrganizationType">
 				<xsd:sequence>
+					<xsd:group ref="Agent"/>
 					<xsd:element name="Name" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="Location" type="lcn:LocationType"/>
 				</xsd:sequence>
@@ -113,6 +167,7 @@
 		</xsd:complexContent>		
 	</xsd:complexType>
 	
+	<!--
 	<xsd:complexType name="FormalOrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="org:FormalOrganizationType">
@@ -122,7 +177,8 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
+	<!--
 	<xsd:complexType name="LocationType">
 		<xsd:complexContent>
 			<xsd:extension base="lcn:LocationType">
@@ -132,7 +188,8 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
+	<!--
 	<xsd:complexType name="PersonType">
 		<xsd:complexContent>
 			<xsd:extension base="foaf:PersonType">
@@ -155,7 +212,8 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
+	<!--
 	<xsd:complexType name="PublicOrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="FormalOrganizationType">
@@ -166,7 +224,8 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
+	<!--
 	<xsd:complexType name="RegisteredOrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="rov:RegisteredOrganizationType">
@@ -178,25 +237,21 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
 	<xsd:complexType name="RoleType">
 		<xsd:sequence>
-			<xsd:element name="Agent" type="AgentType" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SubClassType" type="cbc:IRIType"/>
-			<xsd:element name="ContactPoint" type="ContactPointType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:group ref="Role"/>
 		</xsd:sequence>				
 	</xsd:complexType>
-	
+	<!--
 	<xsd:complexType name="SystemType">
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:element name="Agent" type="AgentType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="LegalForm" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="OwnedByRefID"></xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>				
 	</xsd:complexType>
-		
+	-->		
 </xsd:schema>

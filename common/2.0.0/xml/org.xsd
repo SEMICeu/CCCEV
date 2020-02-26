@@ -15,6 +15,7 @@
 	<!-- Element declaration -->
 	
 	<xsd:element name="Organization" type="OrganizationType"/>
+	<xsd:element name="FormalOrganization" type="FormalOrganizationType"/>
 	
 	<!-- Element definition -->
 

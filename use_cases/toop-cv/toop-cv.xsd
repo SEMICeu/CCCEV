@@ -26,12 +26,9 @@
   <xsd:element name="DataConsumerGlobalSessionIdentifier" type="dt:IdentifierType"/>
   <xsd:element name="DataConsumerRequestPurpose" type="dt:TextType"/>
   <xsd:element name="DataRequestIdentifier" type="dt:IdentifierType"/>  
-  <xsd:element name="DataConsumerRefID" type="dt:IdentifierType"/>
-  <xsd:element name="DataRequestSubjectRefID" type="dt:IdentifierType"/>  
-  <xsd:element name="NaturalPerson" type="cagv:PersonType"/>
-  <xsd:element name="Business" type="cagv:BusinessType"/>
-  <xsd:element name="PublicAdministration" type="cagv:PublicOrganizationType"/>
-  <xsd:element name="FormalOrganization" type="cagv:FormalOrganizationType"/>
+  <xsd:element name="DataConsumer" type="DataConsumerType"/>
+  <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>  
+  
   <!--************************** -->
   <!--COMMON elements start here -->
   
@@ -65,6 +62,54 @@
     </xsd:simpleContent>
   </xsd:complexType>
 
+  <xsd:complexType name="DataConsumerType">
+    <xsd:sequence>
+      <xsd:element name="DCUniqueIdentifier" type="cbc:IDType"/>
+      <xsd:element name="DCName" type="cbc:NameType"/>
+      <xsd:element name="DCLegalAddress" type="cagv:AddressType" minOccurs="0" maxOccurs="1"/> 
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="DataRequestSubjectType">
+    <xsd:sequence>
+      <xsd:element name="Type" type="cbc:CodeType"/>
+      <xsd:element name="LegalPerson" type="LegalPersonType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="NaturalPerson" type="NaturalPersonType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="LegalPersonType">
+    <xsd:sequence>
+      <xsd:element name="ID" type="cbc:IDType"/>
+      <xsd:element name="LegalName" type="cbc:NameType"/>  
+      <xsd:element name="VATRegistrationNumber" type="cbc:IDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="TaxReferenceNumber" type="cbc:IDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BusinessCodes" type="cbc:IDType" minOccurs="0" maxOccurs="1"/> 
+      <xsd:element name="LegalEntityIdentifier" type="cbc:IDType" minOccurs="0" maxOccurs="1"/> 
+      <xsd:element name="EORIIdentifier" type="cbc:IDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="SEEDIdentifier" type="cbc:IDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="StandardIndustrialClassification" type="cbc:CodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AuthorizedRepresentativeIdentifier" type="cbc:IDType" minOccurs="0" maxOccurs="1"/>  
+      <xsd:element name="AlternativeLegalPersonIdentifier" type="cbc:IDType" minOccurs="0" maxOccurs="unbounded"/> 
+      <xsd:element name="LegalPersonLegalAddress" type="cagv:AddressType" minOccurs="0" maxOccurs="1"/>   
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="NaturalPersonType">
+    <xsd:sequence>
+      <xsd:element name="ID" type="cbc:IDType"/>
+      <xsd:element name="FamilyName" type="cbc:NameType"/> 
+      <xsd:element name="FirstName" type="cbc:NameType"/> 
+      <xsd:element name="BirthDate" type="cbc:DateOfBirthType"/> 
+      <xsd:element name="BirthFamilyName" type="cbc:NameType" minOccurs="0" maxOccurs="1"/> 
+      <xsd:element name="BirthPlace" type="cbc:NameType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GenderCode" type="cbc:CodeType" minOccurs="0" maxOccurs="1"/>   
+      <xsd:element name="AlternativeNaturalPersonIdentifier" type="cbc:IDType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="NaturalPersonLegalAddress" type="cagv:AddressType" minOccurs="0" maxOccurs="1"/>   
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
   <xsd:complexType name="TOOPRequestType">
     <xsd:complexContent>
       <xsd:extension base="EDMType">
@@ -75,13 +120,8 @@
             <xsd:element ref="DataConsumerGlobalSessionIdentifier" minOccurs="0" maxOccurs="1"/>
             <xsd:element ref="DataConsumerRequestPurpose" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element ref="DataRequestIdentifier" minOccurs="0" maxOccurs="1"/>
-            <xsd:element ref="DataConsumerRefID"></xsd:element>
-            <xsd:element ref="DataRequestSubjectRefID"></xsd:element>
-            <!-- The possible types of Agents in the request are toop:LegalEntities, but in CV LegalEntities can be: Person, Business, Public Administration and FormalOrganizations (e.g. Consortia that are not registered yet, NGOs, other). -->  
-            <xsd:element ref="NaturalPerson" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="Business" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="PublicAdministration" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element ref="FormalOrganization" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="DataConsumer"></xsd:element>
+            <xsd:element ref="DataRequestSubject"></xsd:element>
         </xsd:sequence>
        </xsd:extension>
     </xsd:complexContent>

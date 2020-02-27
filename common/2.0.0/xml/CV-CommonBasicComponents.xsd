@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
+<xsd:schema xmlns="https://semic.org/sa/cv/common/cv-cbc_2.0.0#"
    xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   targetNamespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
+   targetNamespace="https://semic.org/sa/cv/common/cv-cbc_2.0.0#"
    elementFormDefault="qualified"
    attributeFormDefault="unqualified"
    version="2.0.0">

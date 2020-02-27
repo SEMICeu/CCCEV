@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
-<xsd:schema xmlns="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#"
-	xmlns:cac="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#"
-	xmlns:cbc="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#"
+<xsd:schema xmlns="https://semic.org/sa/cv/cccev_2.0.0#"
+	xmlns:cac="https://semic.org/sa/cv/common/cv-cac_2.0.0#" 
+	xmlns:cbc="https://semic.org/sa/cv/common/cv-cbc_2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#" 
+	targetNamespace="https://semic.org/sa/cv/cccev_2.0.0#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
-	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CommonAggregateComponents.xsd"/>
-	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CommonBasicComponents.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/common/cv-cac_2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/common/cv-cbc_2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	
 	<!-- Element declaration -->
 	<xsd:element name="Criterion" type="CriterionType"/>
 	<xsd:element name="CriterionConstraintProperty" type="PropertyType"/>
-	<xsd:element name="DatumValue" type="cac:ValueType"/>
+	<!-- Value should go to the cccev, not to cac -->
+	<!--xsd:element name="DatumValue" type="cac:"/-->
 	<xsd:element name="Evidence" type="EvidenceType"/>
 	<xsd:element name="EvidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
@@ -33,10 +34,12 @@
 			<xsd:element ref="cbc:WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Weight" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:EvaluationMethod" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Bias" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="cbc:Bias" minOccurs="0" maxOccurs="unbounded"/>
+			<!--			
 			<xsd:element ref="cbc:FromReferenceFrameWorkIdRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:TargetCriterionIdRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:SourceCriterionIdRef" minOccurs="0" maxOccurs="unbounded"/>
+			-->
 			<xsd:element ref="InformationRequirementProperty" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="CriterionConstraintProperty" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="SubCriterion" minOccurs="0" maxOccurs="unbounded"/>
@@ -48,12 +51,15 @@
 			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<!--
 			<xsd:element ref="cbc:ProvidedEvidenceIdRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:RequiredEvidenceTypeIdRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="DatumValue" minOccurs="0" maxOccurs="unbounded"/>
+			-->
 			<xsd:element ref="InformationRequirementConstraint" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	<!--
 	<xsd:complexType name="EvidenceType">
 		<xsd:complexContent>
 			<xsd:extension base="cac:AssetType">
@@ -63,6 +69,8 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
+	-->
+	<!--
 	<xsd:complexType name="EvidenceTypeType">
 		<xsd:complexContent>
 			<xsd:extension base="cac:AssetType">
@@ -71,5 +79,6 @@
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
-	</xsd:complexType>		
+	</xsd:complexType>
+	-->
 </xsd:schema>

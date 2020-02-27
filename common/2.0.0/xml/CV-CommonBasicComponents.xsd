@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="https://semic.org/sa/cv/common/cv-cbc_2.0.0#"
-   xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
+<xsd:schema xmlns="https://semic.org/sa/cv/common/cbc-2.0.0#"
+   xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   targetNamespace="https://semic.org/sa/cv/common/cv-cbc_2.0.0#"
+   targetNamespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
    elementFormDefault="qualified"
    attributeFormDefault="unqualified"
    version="2.0.0">
    <!-- ===== Imports ===== -->
-   <xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="./CV-DataTypes.xsd"/>
+   <xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#" schemaLocation="./CV-DataTypes.xsd"/>
    
    <!-- ==== Element Declaration ==== -->
    <xsd:element name="AdditionalStreetName" type="NameType"/>
@@ -18,6 +18,7 @@
    <xsd:element name="Alias" type="NameType"/>
    <xsd:element name="AlternativeName" type="NameType"/>
    <xsd:element name="Bias" type="BiasType"/>
+   <xsd:element name="BinaryObject" type="BinaryObjectType"/>
    <xsd:element name="BirthName" type="NameType"/>
    <xsd:element name="BlockName" type="NameType"/>
    <xsd:element name="BuildingName" type="NameType"/>
@@ -95,6 +96,12 @@
    <xsd:complexType name="CopyIndicatorType">
       <xsd:simpleContent>
          <xsd:extension base="dt:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   
+   <xsd:complexType name="BinaryObjectType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:BinaryObjectType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
-<xsd:schema xmlns="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#"
+<xsd:schema xmlns="https://semic.org/sa/cv/cagv/agent-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cbc="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#"
+	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:foaf="http://xmlns.com/foaf/"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:org="http://www.w3.org/ns/org#"
 	xmlns:rov="http://www.w3.org/ns/regorg#"
-	xmlns:cac="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#"
-	targetNamespace="https://github.com/semiceu/cagv/2.0.0/xml/CV-Agent#" 
+	targetNamespace="https://semic.org/sa/cv/cagv/agent-2.0.0#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
-	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/" schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
 	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../common/2.0.0/xml/regorg.xsd"/>
-	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"></xsd:import>
+	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"></xsd:import>
 	
 	
 	<!-- Element declaration -->
@@ -136,11 +136,11 @@
 
 	<xsd:complexType name="ContactPointType">
 		<xsd:sequence>
-			<xsd:element ref="Email" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="Fax" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="Email" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Fax" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Telephone" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="InternetAddress" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="Description" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="InternetAddress" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="Channel" minOccurs="0" maxOccurs="unbounded"/>	
 			<xsd:element name="AvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>		

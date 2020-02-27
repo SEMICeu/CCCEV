@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CCCEV-related namespaces are temporary for the time being. They point to the GitHub where the development is being done. -->
-<xsd:schema xmlns="https://semic.org/sa/cv/common/cv-cac_2.0.0#"
-   xmlns:cbc="https://semic.org/sa/cv/common/cv-cbc_2.0.0#"
+<xsd:schema xmlns="https://semic.org/sa/cv/common/cac-2.0.0#"
+   xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
 	xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
-	targetNamespace="https://semic.org/sa/cv/common/cv-cac_2.0.0#" 
+	targetNamespace="https://semic.org/sa/cv/common/cac-2.0.0#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
-   <xsd:import namespace="https://semic.org/sa/cv/common/cv-cbc_2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
    <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
    <!-- ===== Element Declarations ===== -->
    <!-- Asset should be defined in ADMS. For the time being we use the data structure defined for dcat:DataSet -->

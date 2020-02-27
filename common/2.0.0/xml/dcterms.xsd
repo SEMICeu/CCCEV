@@ -3,13 +3,13 @@
 <xsd:schema xmlns="http://purl.org/dc/terms/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:foaf="http://xmlns.com/foaf/"
-	xmlns:dt="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#"
+	xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
 	targetNamespace="http://purl.org/dc/terms/" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<xsd:import namespace="http://xmlns.com/foaf/" schemaLocation="../xml/foaf.xsd"/>
-	<xsd:import namespace="https://github.com/semiceu/common/2.0.0/xml/CV-DataTypes#" schemaLocation="./CV-DataTypes.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#" schemaLocation="./CV-DataTypes.xsd"/>
 	
 	
 	<!-- Element declaration -->

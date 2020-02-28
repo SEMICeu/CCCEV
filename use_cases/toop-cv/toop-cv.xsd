@@ -34,6 +34,7 @@
   <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>
   <xsd:element name="DocumentRequest" type="DocumentRequestType"/>
   <xsd:element name="Error" type="ErrorType"/>
+  <xsd:element name="RequestIDRef" type="cbc:IDType"/>
   <xsd:element name="SpecificationIdentifier" type="dt:IdentifierType"/>
 
   <!--************************** -->
@@ -198,7 +199,17 @@
         <xsd:sequence>
           <xsd:element ref="DataProvider" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element ref="Request" minOccurs="0" maxOccurs="unbounded"/>
+          <!--  
+            For the XSD serialisation, a decision has to be made by TOOP on:
+            
+            1. Whether to refer to the ID of the Request, or
+            2. to aggregate the Request within the Response, 0r
+            3. have both possibilities in the EDM XSD and implement a Schematron rule to check that both are disjoint.
+            
+            The cardinality 0..1 for both elements is necessary to not make one of them or both compulsory. However, an additional Schematron rule would be necessary to impose one instance of either the reference or the aggregate object.
+          -->
+          <xsd:element ref="Request" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="RequestIDRef" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>

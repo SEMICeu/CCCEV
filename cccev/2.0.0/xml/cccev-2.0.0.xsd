@@ -21,10 +21,11 @@
 	<xsd:element name="Concept" type="ConceptType"/>
 	<xsd:element name="Constraint" type="ConstraintType"/>
 	<xsd:element name="Criterion" type="CriterionType"/>
-	<!-- Value should go to the cccev, not to cac -->
-	<!--xsd:element name="DatumValue" type="cac:"/-->
+	<xsd:element name="ConceptIDRef" type="cbc:IDType"/>
+	<xsd:element name="RepresentedByIDRef" type="cbc:IDType"/>
 	<xsd:element name="Evidence" type="EvidenceType"/>
 	<xsd:element name="EvidenceType" type="EvidenceTypeType"/>
+	<xsd:element name="EvidenceTypeIDRef" type="cbc:IDType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
 	<xsd:element name="Requirement" type="RequirementType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
@@ -38,6 +39,7 @@
 	<xsd:complexType name="ConceptType">
 		<xsd:sequence>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RepresentedByIDRef" type="cbc:IDType" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="Namespace" type="cbc:IRIType" minOccurs="0" maxOccurs="unbounded"/>
@@ -57,6 +59,8 @@
 			<xsd:element ref="cbc:Bias" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:EvaluationMethod" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
@@ -72,8 +76,10 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element name="confidentialityLevel" type="cbc:CodeType" minOccurs="0"
+					<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="ConfidentialityLevel" type="cbc:CodeType" minOccurs="0"
 						maxOccurs="unbounded"/>
+					<xsd:element ref="EvidenceTypeIDRef" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>

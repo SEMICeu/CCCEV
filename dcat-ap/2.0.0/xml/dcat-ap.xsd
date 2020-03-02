@@ -12,10 +12,13 @@
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
   
 	<xsd:element name="Dataset" type="DatasetType"/>
+	<xsd:element name="DatasetService" type="DataServiceType"/>
 	<xsd:element name="Distribution" type="DistributionType"/>
 	<xsd:element name="Issued" type="dt:DateTimeType"/>
 	<xsd:element name="AccessURL" type="dt:URIType"/>
 	<xsd:element name="DownloadURL" type="dt:URIType"/>
+	<xsd:element name="Reelationship" type="RelationshipType"/>
+	<xsd:element name="Resource" type="ResourceType"/>
 
 	<xsd:complexType name="DatasetType">
 		<xsd:sequence>
@@ -41,6 +44,18 @@
 			<xsd:element ref="AccessURL"/>
 			<xsd:element ref="DownloadURL" minOccurs="0"/>
 		</xsd:sequence>
-	</xsd:complexType>	
+	</xsd:complexType>
+	
+	<xsd:complexType name="RelationshipType">
+		<xsd:sequence>
+			<xsd:element name="Relation" type="ResourceType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ResourceType">
+		<xsd:sequence>
+			<xsd:element name="QualifiedRelation" type="RelationshipType"/>
+		</xsd:sequence>
+	</xsd:complexType>
 
 </xsd:schema>

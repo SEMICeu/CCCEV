@@ -5,7 +5,6 @@
 	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:cv-dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
@@ -16,8 +15,6 @@
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#"
-		schemaLocation="../../../common/2.0.0/xml/skos.xsd"/>
 
 	<!-- Element declaration -->
 	<xsd:element name="Concept" type="ConceptType"/>

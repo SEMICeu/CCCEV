@@ -63,11 +63,13 @@
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ParentCriterionRelation" type="cbc:CodeType" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="SubCriterion" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Weight" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="WeightingType" type="cbc:CodeType" minOccurs="0" maxOccurs="1"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -112,7 +114,7 @@
 			<xsd:element ref="cbc:Text" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Time" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
-			<!--<xsd:element ref="ubl:Period" minOccurs="0" maxOccurs="1"/>-->			
+			<xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 

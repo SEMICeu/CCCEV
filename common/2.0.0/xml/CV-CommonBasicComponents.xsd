@@ -77,7 +77,6 @@
    <xsd:element name="MarkAttention" type="MarkAttentionType"/>
    <xsd:element name="MarkCare" type="MarkCareType"/>
    <xsd:element name="MimeType" type="MimeTypeCodeType"/>
-   <!--<xsd:element name="Period" type="ubl:Period"/>-->
    <xsd:element name="PlotIdentification" type="PlotIdentificationType"/>
    <xsd:element name="PostalZone" type="PostalZoneType"/>
    <xsd:element name="PostBox" type="PostBoxType"/>

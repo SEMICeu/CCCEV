@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsd:schema xmlns="urn:eu:toop:ns:dataexchange-1p40" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:dcat-ap="http://data.europa.eu/r5r/" xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+  xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+  xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
   xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-  xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+  xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:dcat-ap="http://data.europa.eu/r5r/"
   targetNamespace="urn:eu:toop:ns:dataexchange-1p40" version="specsVersion1.4.0"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
 
@@ -12,6 +13,8 @@
     schemaLocation="../../../CCCEV/cagv/2.0.0/xml/CV-Agent.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#"
     schemaLocation="../../../CCCEV/cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
+  <xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
+    schemaLocation="../../../CCCEV/common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
     schemaLocation="../../../CCCEV/common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 
@@ -19,20 +22,40 @@
   <xsd:element name="Request" type="TOOPRequestType"/>
   <xsd:element name="Response" type="TOOPResponseType"/>
   <!--element declaration-->
+  <xsd:element name="AdministrativeUnit" type="cbc:TextType"/>
+  <xsd:element name="Category" type="cbc:CodeType"/>
+  <xsd:element name="ConsentToken" type="cbc:BinaryObjectType"/>
+  <xsd:element name="ContactDetails" type="cagv:ContactPointType"/>
   <xsd:element name="CopyIndicator" type="cbc:IndicatorType"/>
   <xsd:element name="DataConsumer" type="DataConsumerType"/>
-  <xsd:element name="DataConsumerDocumentIdentifier" type="cbc:IDType"/>
-  <xsd:element name="DataConsumerGlobalSessionIdentifier" type="cbc:IDType"/>
+  <xsd:element name="DataConsumerCountry" type="cbc:CodeType"/>
+  <xsd:element name="DataConsumerDocument" type="cbc:IDType"/>
+  <xsd:element name="DataConsumerElectronicAddress" type="cbc:IDType"/>
+  <xsd:element name="DataConsumerGlobalSession" type="cbc:IDType"/>
   <xsd:element name="DataConsumerRequestPurpose" type="cbc:TextType"/>
   <xsd:element name="DataProvider" type="DataProviderType"/>
+  <xsd:element name="DataProviderCountry" type="cbc:CodeType"/>
+  <xsd:element name="DataProviderElectronicAddress" type="cbc:IDType"/>
+  <xsd:element name="dataProviderID" type="cbc:IDType"/>
   <xsd:element name="DataRequestAuthorisation" type="DataRequestAuthorisationType"/>
-  <xsd:element name="DataRequestIdentifier" type="cbc:IDType"/>
+  <xsd:element name="DataRequest" type="cbc:IDType"/>
   <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>
+  <xsd:element name="DocumentType" type="cbc:IDType"/>
   <xsd:element name="EvidenceRequest" type="EvidenceRequestType"/>
   <xsd:element name="Error" type="ErrorType"/>
+  <xsd:element name="ErrorCode" type="cbc:CodeType"/>
+  <xsd:element name="ErrorIndicator" type="cbc:IndicatorType"/>
   <xsd:element name="EvidenceResponse" type="EvidenceResponseType"/>
+  <xsd:element name="LegalAddress" type="cagv:AddressType"/>
+  <xsd:element name="LegalPerson" type="LegalPersonType"/>
+  <xsd:element name="NaturalPerson" type="NaturalPersonType"/>
+  <xsd:element name="Origin" type="cbc:CodeType"/>
+  <xsd:element name="Process" type="cbc:IDType"/>
   <xsd:element name="RoutingInformation" type="RoutingInformationType"/>
-  <xsd:element name="SpecificationIdentifier" type="cbc:IDType"/>
+  <xsd:element name="Severity" type="cbc:CodeType"/>
+  <xsd:element name="Specification" type="cbc:IDType"/>
+  <xsd:element name="Type" type="cbc:CodeType"/>
+  <xsd:element name="UniqueIdentifier" type="cbc:IDType"/>
 
   <!--************************** -->
   <!--COMMON elements start here -->
@@ -51,13 +74,13 @@
 
   <xsd:complexType name="RoutingInformationType">
     <xsd:sequence>
-      <xsd:element name="DocumentTypeIdentifier" type="cbc:IDType"/>
-      <xsd:element name="ProcessIdentifier" type="cbc:IDType"/>
-      <xsd:element name="DataConsumerElectronicAddressIdentifier" type="cbc:IDType"/>
-      <xsd:element name="DataConsumerCountryCode" type="cbc:CodeType"/>
-      <xsd:element name="DataProviderElectronicAddressIdentifier" type="cbc:IDType" minOccurs="0"
+      <xsd:element ref="DocumentType"/>
+      <xsd:element ref="Process"/>
+      <xsd:element ref="DataConsumerElectronicAddress"/>
+      <xsd:element ref="DataConsumerCountry"/>
+      <xsd:element ref="DataProviderElectronicAddress" minOccurs="0"
         maxOccurs="1"/>
-      <xsd:element name="DataProviderCountryCode" type="cbc:CodeType"/>
+      <xsd:element ref="DataProviderCountry"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -71,33 +94,33 @@
 
   <xsd:complexType name="DataConsumerType">
     <xsd:sequence>
-      <xsd:element name="DCUniqueIdentifier" type="cbc:IDType"/>
-      <xsd:element ref="cbc:Name"/>
-      <xsd:element name="DCLegalAddress" type="cagv:AddressType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="UniqueIdentifier" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="LegalAddress" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="DataRequestAuthorisationType">
     <xsd:sequence>
-      <xsd:element name="ConsentToken" type="cbc:BinaryObjectType"/>
+      <xsd:element ref="ConsentToken" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="DataProviderType">
     <xsd:sequence>
-      <xsd:element name="AdministrativeUnit" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="DPContactDetails" type="cagv:ContactPointType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="DCName" type="cbc:NameType"/>
-      <xsd:element name="DCLegalAddress" type="cagv:AddressType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="AdministrativeUnit" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ContactDetails" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="LegalAddress" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="cbc:ID"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="DataRequestSubjectType">
     <xsd:sequence>
-      <xsd:element name="Type" type="cbc:CodeType"/>
-      <xsd:element name="LegalPerson" type="LegalPersonType" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="NaturalPerson" type="NaturalPersonType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="Type"/>
+      <xsd:element ref="LegalPerson" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="NaturalPerson" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -116,11 +139,11 @@
       <xsd:extension base="dcat-ap:DatasetType">
         <xsd:sequence>
           <xsd:sequence>
-            <xsd:element name="Category" type="cbc:CodeType"/>
+            <xsd:element ref="Category"/>
             <xsd:element ref="cbc:Code"/>
-            <xsd:element name="Origin" type="cbc:CodeType"/>
-            <xsd:element name="dataProviderID" type="cbc:IDType" minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="Severity" type="cbc:CodeType"/>
+            <xsd:element ref="Origin"/>
+            <xsd:element ref="dataProviderID" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="Severity"/>
           </xsd:sequence>
         </xsd:sequence>
       </xsd:extension>
@@ -129,8 +152,8 @@
 
   <xsd:complexType name="EvidenceResponseType">
     <xsd:sequence>
-      <xsd:element name="ErrorCode" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="ErrorIndicator" type="cbc:IndicatorType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ErrorCode" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ErrorIndicator" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="cbc:ID"/>
       <xsd:element name="IssueDate" type="cbc:DateTimeType"/>
       <xsd:element name="IssuePlace" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
@@ -138,7 +161,7 @@
       <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="Remarks" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="RespondsTo" type="cccev:CriterionType" minOccurs="0" maxOccurs="unbounded"/>
-      <!--  <xsd:element name="ValidityPeriod" type="cbc:Period" minOccurs="0" maxOccurs="unbounded"/>  -->
+      <xsd:element name="ValidityPeriod" type="cac:PeriodType" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -185,12 +208,12 @@
       <xsd:extension base="EDMType">
         <xsd:sequence>
           <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
-          <xsd:element ref="SpecificationIdentifier"/>
+          <xsd:element ref="Specification"/>
           <xsd:element ref="DataConsumer"/>
-          <xsd:element ref="DataConsumerDocumentIdentifier" minOccurs="0" maxOccurs="1"/>
-          <xsd:element ref="DataConsumerGlobalSessionIdentifier" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="DataConsumerDocument" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="DataConsumerGlobalSession" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataConsumerRequestPurpose" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element ref="DataRequestIdentifier" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="DataRequest" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataRequestSubject"/>
           <xsd:element ref="EvidenceRequest" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>

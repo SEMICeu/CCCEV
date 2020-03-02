@@ -17,6 +17,7 @@
    <xsd:element name="AddressLine" type="AddressLineType"/>
    <xsd:element name="Alias" type="NameType"/>
    <xsd:element name="AlternativeName" type="NameType"/>
+   <xsd:element name="Amount" type="AmountType"/>
    <xsd:element name="Bias" type="BiasType"/>
    <xsd:element name="BinaryObject" type="BinaryObjectType"/>
    <xsd:element name="BirthName" type="NameType"/>
@@ -25,10 +26,12 @@
    <xsd:element name="BuildingNumber" type="BuildingNumberType"/>
    <xsd:element name="CityName" type="NameType"/>
    <xsd:element name="CitySubdivisionName" type="NameType"/>
+   <xsd:element name="Code" type="CodeType"/>
    <xsd:element name="CountryCode" type="CountryCodeType"/>
    <xsd:element name="CountrySubentity" type="CountrySubentityType"/>
    <xsd:element name="CountrySubentityCode" type="CountrySubentityCodeType"/>
    <xsd:element name="CopyIndicator" type="CopyIndicatorType"/>
+   <xsd:element name="Date" type="dt:DateType"/>
    <xsd:element name="DateOfBirth" type="DateOfBirthType"/>
    <xsd:element name="DateOfDeath" type="DateOfDeathType"/>
    <xsd:element name="Department" type="DepartmentType"/>
@@ -46,16 +49,21 @@
    <xsd:element name="GeographicIdentifier" type="URIType"/>
    <xsd:element name="GivenName" type="NameType"/>
    <xsd:element name="ID" type="IDType"/>
+   <xsd:element name="Indicator" type="IndicatorType"/>
    <xsd:element name="IRI" type="IRIType"/>
-   <xsd:element name="Modified" type="ModifiedType"/>
    <xsd:element name="Issued" type="IssuedType"/>
+   <xsd:element name="Modified" type="ModifiedType"/>
    <xsd:element name="Name" type="NameType"/>
+   <xsd:element name="Quantity" type="QuantityType"/>
    <xsd:element name="RefID" type="ReferenceIDType"/>
    <xsd:element name="StartDate" type="StartDateType"/>
    <xsd:element name="StartTime" type="StartTimeType"/>
    <xsd:element name="SubClassIRI" type="IRIType"/>
+   <xsd:element name="Text" type="dt:TextType"/>
    <xsd:element name="Title" type="TitleType"/>
+   <xsd:element name="Time" type="TimeType"/>
    <xsd:element name="Type" type="TypeType"/>
+   <xsd:element name="URI" type="dt:URIType"/>
    <xsd:element name="VersionInfo" type="VersionInfoType"/>
    <xsd:element name="Weight" type="WeightType"/>
    <xsd:element name="WeightingConsiderationDescription" type="WeightingConsiderationDescriptionType"/>
@@ -69,6 +77,7 @@
    <xsd:element name="MarkAttention" type="MarkAttentionType"/>
    <xsd:element name="MarkCare" type="MarkCareType"/>
    <xsd:element name="MimeType" type="MimeTypeCodeType"/>
+   <!--<xsd:element name="Period" type="ubl:Period"/>-->
    <xsd:element name="PlotIdentification" type="PlotIdentificationType"/>
    <xsd:element name="PostalZone" type="PostalZoneType"/>
    <xsd:element name="PostBox" type="PostBoxType"/>
@@ -91,6 +100,11 @@
    <xsd:complexType name="AddresTypeCodeType">
       <xsd:simpleContent>
          <xsd:extension base="dt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="AmountType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:AmountType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="CopyIndicatorType">
@@ -242,6 +256,11 @@
          <xsd:extension base="dt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="TimeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:TimeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="WeightingConsiderationDescriptionType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>
@@ -312,6 +331,16 @@
          <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType> 
+   <xsd:complexType name="IndicatorType">
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="QuantityType">
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:QuantityType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="NameType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:TextType"/>

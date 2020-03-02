@@ -5,17 +5,19 @@
 	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:cv-dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
+	
 	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
-		schemaLocation="../../../common/2.0.0/xml/CV-DataTypes.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#"
+		schemaLocation="../../../common/2.0.0/xml/skos.xsd"/>
 
 	<!-- Element declaration -->
 	<xsd:element name="Concept" type="ConceptType"/>
@@ -30,21 +32,23 @@
 	<xsd:element name="Requirement" type="RequirementType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="PeriodValue" type="cac:PeriodType"/>
-	<xsd:element name="ResponseValue" type="ResponseValueType"/>
 	<xsd:element name="SubCriterion" type="CriterionType"/>
+	<xsd:element name="EvidenceIDRef" type="EvidenceType"/>
+	<xsd:element name="RequirementIDRef" type="RequirementType"/>
 	<xsd:element name="Value" type="ValueType"/>
 
 	<!-- Element definition -->
-
+	
 	<xsd:complexType name="ConceptType">
 		<xsd:sequence>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element name="RepresentedByIDRef" type="cbc:IDType" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="Namespace" type="cbc:IRIType" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="ResponseValue" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="CustomDataType" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Namespace" type="cbc:IRIType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Datum" type="ValueType" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -57,10 +61,8 @@
 	<xsd:complexType name="CriterionType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:Bias" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="GlobalConstraint" type="ConstraintType" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:EvaluationMethod" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
@@ -76,10 +78,10 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="ConfidentialityLevel" type="cbc:CodeType" minOccurs="0"
-						maxOccurs="unbounded"/>
+						maxOccurs="1"/>
 					<xsd:element ref="EvidenceTypeIDRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="RequirementIDRef" minOccurs="1" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -87,7 +89,7 @@
 
 	<xsd:complexType name="EvidenceTypeListType">
 		<xsd:sequence>
-			<xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EvidenceType" minOccurs="1" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -95,35 +97,40 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element name="preferredMIME" type="cbc:CodeType" minOccurs="0"
-						maxOccurs="unbounded"/>
+					<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="preferredMIME" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:complexType name="ResponseValueType">
-		<xsd:sequence>
-			<xsd:element name="AlternativeErrorIndicator" type="cv-dt:IndicatorType" minOccurs="0"
-				maxOccurs="unbounded"/>
-			<xsd:element name="Error" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="ErrorIndicator" type="cv-dt:IndicatorType" minOccurs="0"
-				maxOccurs="unbounded"/>
-			<xsd:element ref="Value" minOccurs="0" maxOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-
 	<xsd:complexType name="ValueType">
-		<xsd:sequence/>
+		<xsd:sequence>
+			<xsd:element ref="cbc:Amount" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Date"/>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Indicator" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Quantity" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Text" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Time" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
+			<!--<xsd:element ref="ubl:Period" minOccurs="0" maxOccurs="1"/>-->			
+		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="RequirementType">
 		<xsd:sequence>
-			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Description"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="InformationRequirementConstraint" type="ConstraintType"
+				minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiresConcept" type="ConceptType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiresEvidenceTypeList" type="EvidenceTypeListType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="SubRequirement" type="RequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>
 	</xsd:complexType>
-
 </xsd:schema>

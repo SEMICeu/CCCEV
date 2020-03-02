@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsd:schema xmlns="urn:eu:toop:ns:dataexchange-1p40" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
   xmlns:dcat-ap="http://data.europa.eu/r5r/"
   xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
   xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
@@ -12,8 +11,6 @@
     schemaLocation="../../../CCCEV/dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
     schemaLocation="../../../CCCEV/cagv/2.0.0/xml/CV-Agent.xsd"/>
-  <xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
-    schemaLocation="../../common/2.0.0/xml/CV-DataTypes.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#"
     schemaLocation="../../../CCCEV/cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
@@ -23,19 +20,19 @@
   <xsd:element name="Request" type="TOOPRequestType"/>
   <xsd:element name="Response" type="TOOPResponseType"/>
   <!--element declaration-->
-  <xsd:element name="CopyIndicator" type="dt:IndicatorType"/>
+  <xsd:element name="CopyIndicator" type="cbc:IndicatorType"/>
   <xsd:element name="DataConsumer" type="DataConsumerType"/>
-  <xsd:element name="DataConsumerDocumentIdentifier" type="dt:IdentifierType"/>
-  <xsd:element name="DataConsumerGlobalSessionIdentifier" type="dt:IdentifierType"/>
-  <xsd:element name="DataConsumerRequestPurpose" type="dt:TextType"/>
-  <xsd:element name="DataElementRequest" type="DataElementRequestType"/>
+  <xsd:element name="DataConsumerDocumentIdentifier" type="cbc:IDType"/>
+  <xsd:element name="DataConsumerGlobalSessionIdentifier" type="cbc:IDType"/>
+  <xsd:element name="DataConsumerRequestPurpose" type="cbc:TextType"/>
   <xsd:element name="DataProvider" type="DataProviderType"/>
-  <xsd:element name="DataRequestIdentifier" type="dt:IdentifierType"/>
+  <xsd:element name="DataRequestIdentifier" type="cbc:IDType"/>
   <xsd:element name="DataRequestSubject" type="DataRequestSubjectType"/>
-  <xsd:element name="DocumentRequest" type="DocumentRequestType"/>
+  <xsd:element name="EvidenceRequest" type="EvidenceRequestType"/>
   <xsd:element name="Error" type="ErrorType"/>
-  <xsd:element name="RequestIDRef" type="cbc:IDType"/>
-  <xsd:element name="SpecificationIdentifier" type="dt:IdentifierType"/>
+  <xsd:element name="ResponseValue" type="ResponseValueType"/>
+  <xsd:element name="ResponseValueIDRef" type="cbc:IDType"/>
+  <xsd:element name="SpecificationIdentifier" type="cbc:IDType"/>
 
   <!--************************** -->
   <!--COMMON elements start here -->
@@ -54,19 +51,19 @@
 
   <xsd:complexType name="RoutingInformationType">
     <xsd:sequence>
-      <xsd:element name="DocumentTypeIdentifier" type="dt:IdentifierType"/>
-      <xsd:element name="ProcessIdentifier" type="dt:IdentifierType"/>
-      <xsd:element name="DataConsumerElectronicAddressIdentifier" type="dt:IdentifierType"/>
-      <xsd:element name="DataConsumerCountryCode" type="dt:CodeType"/>
-      <xsd:element name="DataProviderElectronicAddressIdentifier" type="dt:IdentifierType"
+      <xsd:element name="DocumentTypeIdentifier" type="cbc:IDType"/>
+      <xsd:element name="ProcessIdentifier" type="cbc:IDType"/>
+      <xsd:element name="DataConsumerElectronicAddressIdentifier" type="cbc:IDType"/>
+      <xsd:element name="DataConsumerCountryCode" type="cbc:CodeType"/>
+      <xsd:element name="DataProviderElectronicAddressIdentifier" type="cbc:IDType"
         minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="DataProviderCountryCode" type="dt:CodeType"/>
+      <xsd:element name="DataProviderCountryCode" type="cbc:CodeType"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="PreferredDocumentMimeTypeCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="dt:CodeType">
+      <xsd:extension base="cbc:CodeType">
         <xsd:attribute name="priority" type="xsd:decimal" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
@@ -86,17 +83,10 @@
     </xsd:sequence>
   </xsd:complexType>
   
-  <xsd:complexType name="DataElementRequestType">
-    <xsd:sequence>
-      <xsd:element name="ID" type="cbc:IDType"/>
-      <xsd:element ref="cccev:Criterion"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  
   <xsd:complexType name="DataProviderType">
     <xsd:sequence>
       <xsd:element name="AdministrativeUnit" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="cagv:ContactPoint" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DPContactDetails" type="cagv:ContactPointType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="DCName" type="cbc:NameType"/>
       <xsd:element name="DCLegalAddress" type="cagv:AddressType" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="ID" type="cbc:IDType"/>
@@ -111,11 +101,11 @@
     </xsd:sequence>
   </xsd:complexType>
   
-  <xsd:complexType name="DocumentRequestType">
+  <xsd:complexType name="EvidenceRequestType">
     <xsd:complexContent>
       <xsd:extension base="dcat-ap:DatasetType">
         <xsd:sequence>
-          <xsd:element ref="cccev:Criterion"/>
+          <xsd:element name="RequirementForEvidence" type="cccev:CriterionType"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -135,6 +125,21 @@
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:complexType name="ResponseValueType">
+    <xsd:sequence>
+      <xsd:element name="ErrorCode" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="ErrorIndicator" type="cbc:IndicatorType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ID" type="cbc:IDType"/>
+      <xsd:element name="IssueDate" type="cbc:DateTimeType"/>
+      <xsd:element name="IssuePlace" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="LegalReference" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Name" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Remarks" type="cbc:TextType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="RespondsTo" type="EvidenceRequestType" minOccurs="0" maxOccurs="unbounded"/>
+    <!--  <xsd:element name="ValidityPeriod" type="cbc:Period" minOccurs="0" maxOccurs="unbounded"/>  -->
+    </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name="LegalPersonType">
@@ -185,10 +190,9 @@
           <xsd:element ref="DataConsumerDocumentIdentifier" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataConsumerGlobalSessionIdentifier" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataConsumerRequestPurpose" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element ref="DataElementRequest" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="DataRequestIdentifier" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataRequestSubject"/>
-          <xsd:element ref="DocumentRequest" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="EvidenceRequest" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -199,6 +203,7 @@
         <xsd:sequence>
           <xsd:element ref="DataProvider" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ResponseValueIDRef" minOccurs="0" maxOccurs="unbounded"/>
           <!--  
             For the XSD serialisation, a decision has to be made by TOOP on:
             
@@ -208,8 +213,6 @@
             
             The cardinality 0..1 for both elements is necessary to not make one of them or both compulsory. However, an additional Schematron rule would be necessary to impose one instance of either the reference or the aggregate object.
           -->
-          <xsd:element ref="Request" minOccurs="0" maxOccurs="1"/>
-          <xsd:element ref="RequestIDRef" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>

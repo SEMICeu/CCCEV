@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsd:schema xmlns="urn:eu:toop:ns:dataexchange-1p40" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns="urn:eu:toop:ns:dataexchange-1p40"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
   xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
   xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-  xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:dcat-ap="http://data.europa.eu/r5r/"
+  xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+  xmlns:dcat-ap="http://data.europa.eu/r5r/"
   targetNamespace="urn:eu:toop:ns:dataexchange-1p40" version="specsVersion1.4.0"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
 
@@ -104,8 +106,7 @@
       <xsd:element ref="Process"/>
       <xsd:element ref="DataConsumerElectronicAddress"/>
       <xsd:element ref="DataConsumerCountry"/>
-      <xsd:element ref="DataProviderElectronicAddress" minOccurs="0"
-        maxOccurs="1"/>
+      <xsd:element ref="DataProviderElectronicAddress" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="DataProviderCountry"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -161,7 +162,6 @@
       <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="RequirementForEvidence" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="RespondsTo" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -201,14 +201,10 @@
       <xsd:element ref="LegalEntityIdentifier" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="EORIIdentifier" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="SEEDIdentifier" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="StandardIndustrialClassification" minOccurs="0"
-        maxOccurs="1"/>
-      <xsd:element ref="AuthorizedRepresentativeIdentifier" minOccurs="0"
-        maxOccurs="1"/>
-      <xsd:element ref="AlternativeLegalPersonIdentifier" minOccurs="0"
-        maxOccurs="unbounded"/>
-      <xsd:element ref="LegalPersonLegalAddress" minOccurs="0"
-        maxOccurs="1"/>
+      <xsd:element ref="StandardIndustrialClassification" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="AuthorizedRepresentativeIdentifier" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="AlternativeLegalPersonIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="LegalPersonLegalAddress" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -221,10 +217,8 @@
       <xsd:element ref="BirthFamilyName" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="BirthPlace" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="GenderCode" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="AlternativeNaturalPersonIdentifier" minOccurs="0"
-        maxOccurs="unbounded"/>
-      <xsd:element ref="NaturalPersonLegalAddress" minOccurs="0"
-        maxOccurs="1"/>
+      <xsd:element ref="AlternativeNaturalPersonIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="NaturalPersonLegalAddress" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 

@@ -24,7 +24,7 @@
 	<xsd:element name="ConfidentialityLevel" type="cbc:CodeType"/>
 	<xsd:element name="CustomDataType" type="cbc:CodeType"/>
 	<xsd:element name="Datum" type="ValueType"/>
-	<xsd:element name="DerivesFrom" type="ReferenceFrameworkType"/>
+<!--	<xsd:element name="DerivesFrom" type="ReferenceFrameworkType"/>-->
 	<xsd:element name="Evidence" type="EvidenceType"/>
 	<xsd:element name="EvidenceIDRef" type="EvidenceType"/>
 	<xsd:element name="EvidenceType" type="EvidenceTypeType"/>
@@ -32,9 +32,9 @@
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
 	<xsd:element name="GlobalConstraint" type="ConstraintType"/>
-	<xsd:element name="hasPart" type="ReferenceFrameworkType"/>
+<!--	<xsd:element name="hasPart" type="ReferenceFrameworkType"/>-->
 	<xsd:element name="InformationRequirementConstraint" type="ConstraintType"/>
-	<xsd:element name="isPartOf" type="ReferenceFrameworkType"/>
+	<!--<xsd:element name="isPartOf" type="ReferenceFrameworkType"/>-->
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
 	<xsd:element name="Requirement" type="RequirementType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
@@ -103,7 +103,7 @@
 
 	<xsd:complexType name="EvidenceTypeListType">
 		<xsd:sequence>
-			<xsd:element ref="EvidenceType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -133,22 +133,23 @@
 		</xsd:sequence>
 	</xsd:complexType>
 	
-	<xsd:complexType name="ReferenceFrameworkType">
+<!--	This is work in progress -->
+<!--	<xsd:complexType name="ReferenceFrameworkType">
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
 					<xsd:element ref="hasPart" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="isPartOf"/>
+					<xsd:element ref="isPartOf" minOccurs="0"/>
 				</xsd:sequence>				
 			</xsd:extension>
 		</xsd:complexContent>
-	</xsd:complexType>
+	</xsd:complexType>-->
 
 	<xsd:complexType name="RequirementType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:Description"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="DerivesFrom" minOccurs="0" maxOccurs="unbounded"/>
+<!--			<xsd:element ref="DerivesFrom" minOccurs="0" maxOccurs="unbounded"/>-->
 			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="InformationRequirementConstraint" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>

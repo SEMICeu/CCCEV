@@ -474,10 +474,6 @@
                              AssuranceLevelAgencyID="AssuranceLevelAgencyID104" AssuranceLevelAgencyName="AssuranceLevelAgencyName104">2006-05-04</cbc:Date>
                     </cccev:Datum>
                 </cccev:RequiresConcept>
-                <cccev:RequiresEvidenceTypeList>
-                    <cccev:EvidenceType>
-                    </cccev:EvidenceType>
-                </cccev:RequiresEvidenceTypeList>
                 <cbc:Type AssuranceLevelCodeListID="AssuranceLevelCodeListID105" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID105"
                      AssuranceLevelAgencyID="AssuranceLevelAgencyID105" AssuranceLevelAgencyName="AssuranceLevelAgencyName105"
                      listID="listID20" listAgencyID="listAgencyID20" listAgencyName="listAgencyName20"

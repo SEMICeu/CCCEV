@@ -17,28 +17,32 @@
 	
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../common/2.0.0/xml/skos.xsd"/>
   
+	<xsd:element name="AccessURL" type="dt:URIType"/>
 	<xsd:element name="Dataset" type="DatasetType"/>
 	<xsd:element name="DatasetService" type="DataServiceType"/>
 	<xsd:element name="Distribution" type="DistributionType"/>
-	<xsd:element name="Issued" type="dt:DateTimeType"/>
-	<xsd:element name="AccessURL" type="dt:URIType"/>
 	<xsd:element name="DownloadURL" type="dt:URIType"/>
+	<xsd:element name="endpointDescription" type="DistributionType"/>
+	<xsd:element name="endpointURL" type="dt:URIType"/>
+	<xsd:element name="Issued" type="dt:DateTimeType"/>
+	<xsd:element name="QualifiedRelation" type="RelationshipType"/>
 	<xsd:element name="Relationship" type="RelationshipType"/>
+	<xsd:element name="RelatedDatasetIDRef" type="cbc:IDType"/>
 	<xsd:element name="Role" type="RoleType"/>
 
 	<xsd:complexType name="DatasetType">
 		<xsd:sequence>
 			<xsd:element ref="dct:Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="Distribution" type="DistributionType" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="QualifiedRelation" type="RelationshipType" minOccurs="0"/>
+			<xsd:element ref="Distribution" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="QualifiedRelation" minOccurs="0"/>
 			<xsd:element ref="dct:Title" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="DataServiceType">
 		<xsd:sequence>
-			<xsd:element name="endpointDescription" type="DistributionType" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="endpointURL" type="dt:URIType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="endpointDescription" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="endpointURL" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Dataset" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -55,7 +59,7 @@
 	
 	<xsd:complexType name="RelationshipType">
 		<xsd:sequence>
-			<xsd:element name="RelatedDatasetIDRef" type="cbc:IDType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="RelatedDatasetIDRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Role" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>

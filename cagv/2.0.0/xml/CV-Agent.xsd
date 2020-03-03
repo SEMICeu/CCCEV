@@ -160,8 +160,8 @@
 			<xsd:extension base="org:OrganizationType">
 				<xsd:sequence>
 					<xsd:group ref="Agent"/>
-					<xsd:element name="Name" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="Location" type="lcn:LocationType"/>
+					<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="lcn:Location"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		

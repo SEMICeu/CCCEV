@@ -10,15 +10,15 @@
   elementFormDefault="qualified" attributeFormDefault="unqualified">
 
   <xsd:import namespace="http://data.europa.eu/r5r/"
-    schemaLocation="../../../CCCEV/dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
+    schemaLocation="../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-    schemaLocation="../../../CCCEV/cagv/2.0.0/xml/CV-Agent.xsd"/>
+    schemaLocation="../../cagv/2.0.0/xml/CV-Agent.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#"
-    schemaLocation="../../../CCCEV/cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
+    schemaLocation="../../cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
-    schemaLocation="../../../CCCEV/common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
+    schemaLocation="../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
-    schemaLocation="../../../CCCEV/common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+    schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 
   <!--alternative ROOT elements-->
   <xsd:element name="Request" type="TOOPRequestType"/>
@@ -56,6 +56,7 @@
   <xsd:element name="ErrorIndicator" type="cbc:IndicatorType"/>
   <xsd:element name="EvidenceRequest" type="EvidenceRequestType"/>
   <xsd:element name="EvidenceResponse" type="EvidenceResponseType"/>
+  <xsd:element name="EvidenceType" type="cccev:EvidenceTypeType"/>
   <xsd:element name="FamilyName" type="cbc:NameType"/>
   <xsd:element name="FirstName" type="cbc:NameType"/>
   <xsd:element name="GenderCode" type="cbc:CodeType"/>
@@ -73,7 +74,6 @@
   <xsd:element name="Process" type="cbc:IDType"/>
   <xsd:element name="Criterion" type="cccev:CriterionType"/>
   <xsd:element name="Remarks" type="cbc:TextType"/>
-  <xsd:element name="RespondsTo" type="cccev:CriterionType"/>
   <xsd:element name="RoutingInformation" type="RoutingInformationType"/>
   <xsd:element name="SEEDIdentifier" type="cbc:IDType"/>
   <xsd:element name="Severity" type="cbc:CodeType"/>
@@ -186,7 +186,7 @@
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="RespondsTo" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -236,6 +236,7 @@
           <xsd:element ref="DataRequest" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataRequestSubject"/>
           <xsd:element ref="EvidenceRequest" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -244,7 +245,7 @@
     <xsd:complexContent>
       <xsd:extension base="EDMType">
         <xsd:sequence>
-          <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>          
           <xsd:element ref="Specification"/>
           <xsd:element ref="DataConsumerDocument" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataConsumerGlobalSession" minOccurs="0" maxOccurs="1"/>
@@ -253,6 +254,8 @@
           <xsd:element ref="DataProvider" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceResponse" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="Evidence" type="cccev:EvidenceType"/>
+          <xsd:element name="EvidenceType" type="cccev:EvidenceTypeType"/>
           <!--  
             For the XSD serialisation, a decision has to be made by TOOP on:
             

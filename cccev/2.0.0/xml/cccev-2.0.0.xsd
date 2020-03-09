@@ -121,7 +121,7 @@
 		<xsd:sequence>
 			<xsd:element ref="cbc:Amount" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Date"/>
+			<xsd:element ref="cbc:Date" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Indicator" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Quantity" minOccurs="0" maxOccurs="1"/>
@@ -146,7 +146,7 @@
 
 	<xsd:complexType name="RequirementType">
 		<xsd:sequence>
-			<xsd:element ref="cbc:Description"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 <!--			<xsd:element ref="DerivesFrom" minOccurs="0" maxOccurs="unbounded"/>-->
 			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>

@@ -50,6 +50,7 @@
    <xsd:attributeGroup name="AssuranceLevelAttributes">
       <xsd:attribute name="AssuranceLevelCodeListID" type="xsd:normalizedString"/>
       <xsd:attribute name="AssuranceLevelCodeListVerionID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelValue" type="xsd:normalizedString"/>
       <xsd:attribute name="AssuranceLevelAgencyID" type="xsd:normalizedString"/>
       <xsd:attribute name="AssuranceLevelAgencyName" type="xsd:string"/>
    </xsd:attributeGroup>

@@ -71,7 +71,7 @@
   <xsd:element name="NaturalPersonLegalAddress" type="cagv:AddressType"/>
   <xsd:element name="Origin" type="cbc:CodeType"/>
   <xsd:element name="Process" type="cbc:IDType"/>
-  <xsd:element name="RequirementForEvidence" type="cccev:CriterionType"/>
+  <xsd:element name="Criterion" type="cccev:CriterionType"/>
   <xsd:element name="Remarks" type="cbc:TextType"/>
   <xsd:element name="RespondsTo" type="cccev:CriterionType"/>
   <xsd:element name="RoutingInformation" type="RoutingInformationType"/>
@@ -161,7 +161,7 @@
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="RequirementForEvidence" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>

@@ -452,11 +452,11 @@
      </EvidenceResponse>
      <Evidence>
         <dct:Description AssuranceLevelValue="High" languageID="en">Description3</dct:Description>
-        <dcat-ap:Distribution>
-             <dcat-ap:Issued AssuranceLevelValue="High" AssuranceLevelAgencyID="AssuranceLevelAgencyID96" AssuranceLevelAgencyName="AssuranceLevelAgencyName96" format="DATETIME">2020-08-09+12:00Z</dcat-ap:Issued>
+        <!--<dcat-ap:Distribution>
+            <dcat-ap:Issued AssuranceLevelValue="High" format="DATETIME">2020-08-09+12:00Z</dcat-ap:Issued>
             <dct:Title AssuranceLevelValue="High" languageID="en">Title3</dct:Title>
             <dct:Description AssuranceLevelValue="High" languageID="en">Description4</dct:Description>
-           <!-- <dcat-ap:AccessURL AssuranceLevelCodeListID="AssuranceLevelCodeListID99" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID99"
+            <dcat-ap:AccessURL AssuranceLevelCodeListID="AssuranceLevelCodeListID99" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID99"
                  AssuranceLevelValue="AssuranceLevelValue99" AssuranceLevelAgencyID="AssuranceLevelAgencyID99"
                  AssuranceLevelAgencyName="AssuranceLevelAgencyName99" schemeID="schemeID21" schemeName="schemeName21"
                  schemeAgencyID="schemeAgencyID21" schemeAgencyName="schemeAgencyName21" schemeVersionID="schemeVersionID21"
@@ -465,8 +465,8 @@
                  AssuranceLevelValue="AssuranceLevelValue100" AssuranceLevelAgencyID="AssuranceLevelAgencyID100"
                  AssuranceLevelAgencyName="AssuranceLevelAgencyName100" schemeID="schemeID22" schemeName="schemeName22"
                  schemeAgencyID="schemeAgencyID22" schemeAgencyName="schemeAgencyName22" schemeVersionID="schemeVersionID22"
-                 schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DownloadURL1</dcat-ap:DownloadURL>-->
-        </dcat-ap:Distribution>
+                 schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DownloadURL1</dcat-ap:DownloadURL>
+        </dcat-ap:Distribution>-->
         <!--<dcat-ap:QualifiedRelation>
             <dcat-ap:RelatedDatasetIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID101" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID101"
                  AssuranceLevelValue="AssuranceLevelValue101" AssuranceLevelAgencyID="AssuranceLevelAgencyID101"
@@ -477,11 +477,7 @@
         </dcat-ap:QualifiedRelation>-->
         <dct:Title AssuranceLevelValue="High" languageID="en">Title4</dct:Title>
         <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-        <cccev:EvidenceTypeIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID104" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID104"
-             AssuranceLevelValue="AssuranceLevelValue104" AssuranceLevelAgencyID="AssuranceLevelAgencyID104"
-             AssuranceLevelAgencyName="AssuranceLevelAgencyName104" schemeID="schemeID24" schemeName="schemeName24"
-             schemeAgencyID="schemeAgencyID24" schemeAgencyName="schemeAgencyName24" schemeVersionID="schemeVersionID24"
-             schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">EvidenceTypeIDRef2</cccev:EvidenceTypeIDRef>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EvidenceTypeIDRef2</cccev:EvidenceTypeIDRef>
         <cccev:RequirementIDRef>
             <cccev:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">ID2</cccev:ID>
             <cccev:Name AssuranceLevelValue="High" languageID="en">Name2</cccev:Name>
@@ -494,11 +490,11 @@
              <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
             <cccev:EvidenceIDRef>
                 <dct:Description AssuranceLevelValue="High" languageID="en">Description5</dct:Description>
-                <dcat-ap:Distribution>
-                     <dcat-ap:Issued AssuranceLevelValue="High" AssuranceLevelAgencyID="AssuranceLevelAgencyID96" AssuranceLevelAgencyName="AssuranceLevelAgencyName96" format="DATETIME">2020-09-09+12:00Z</dcat-ap:Issued>
+               <!-- <dcat-ap:Distribution>
+                    <dcat-ap:Issued AssuranceLevelValue="High" format="DATETIME">2020-09-09+12:00Z</dcat-ap:Issued>
                     <dct:Title AssuranceLevelValue="High" languageID="en">Title5</dct:Title>
                     <dct:Description AssuranceLevelValue="High" languageID="en">Description6</dct:Description>
-                   <!-- <dcat-ap:AccessURL AssuranceLevelCodeListID="AssuranceLevelCodeListID114" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID114"
+                    <dcat-ap:AccessURL AssuranceLevelCodeListID="AssuranceLevelCodeListID114" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID114"
                          AssuranceLevelValue="AssuranceLevelValue114" AssuranceLevelAgencyID="AssuranceLevelAgencyID114"
                          AssuranceLevelAgencyName="AssuranceLevelAgencyName114" schemeID="schemeID26"
                          schemeName="schemeName26" schemeAgencyID="schemeAgencyID26" schemeAgencyName="schemeAgencyName26"
@@ -509,9 +505,9 @@
                          AssuranceLevelAgencyName="AssuranceLevelAgencyName115" schemeID="schemeID27"
                          schemeName="schemeName27" schemeAgencyID="schemeAgencyID27" schemeAgencyName="schemeAgencyName27"
                          schemeVersionID="schemeVersionID27" schemeDataURI="http://www.oxygenxml.com/"
-                         schemeURI="http://www.oxygenxml.com/">DownloadURL2</dcat-ap:DownloadURL>-->
-                </dcat-ap:Distribution>
-                <!--<dcat-ap:QualifiedRelation>
+                         schemeURI="http://www.oxygenxml.com/">DownloadURL2</dcat-ap:DownloadURL>
+                </dcat-ap:Distribution>-->
+               <!--<dcat-ap:QualifiedRelation>
                     <dcat-ap:RelatedDatasetIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID116" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID116"
                          AssuranceLevelValue="AssuranceLevelValue116" AssuranceLevelAgencyID="AssuranceLevelAgencyID116"
                          AssuranceLevelAgencyName="AssuranceLevelAgencyName116" schemeID="schemeID28"
@@ -522,19 +518,11 @@
                 </dcat-ap:QualifiedRelation>-->
                 <dct:Title AssuranceLevelValue="High" languageID="en">Title6</dct:Title>
                 <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">PUBLIC</cccev:ConfidentialityLevel>
-                <cccev:EvidenceTypeIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID119" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID119"
-                     AssuranceLevelValue="AssuranceLevelValue119" AssuranceLevelAgencyID="AssuranceLevelAgencyID119"
-                     AssuranceLevelAgencyName="AssuranceLevelAgencyName119" schemeID="schemeID29" schemeName="schemeName29"
-                     schemeAgencyID="schemeAgencyID29" schemeAgencyName="schemeAgencyName29" schemeVersionID="schemeVersionID29"
-                     schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">EvidenceTypeIDRef3</cccev:EvidenceTypeIDRef>
+                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EvidenceTypeIDRef3</cccev:EvidenceTypeIDRef>
                 <cccev:RequirementIDRef/>
             </cccev:EvidenceIDRef>
             <cccev:EvidenceTypeList>
-                <cccev:EvidenceTypeIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID120" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID120"
-                     AssuranceLevelValue="AssuranceLevelValue120" AssuranceLevelAgencyID="AssuranceLevelAgencyID120"
-                     AssuranceLevelAgencyName="AssuranceLevelAgencyName120" schemeID="schemeID30" schemeName="schemeName30"
-                     schemeAgencyID="schemeAgencyID30" schemeAgencyName="schemeAgencyName30" schemeVersionID="schemeVersionID30"
-                     schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">EvidenceTypeIDRef4</cccev:EvidenceTypeIDRef>
+                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EvidenceTypeIDRef4</cccev:EvidenceTypeIDRef>
             </cccev:EvidenceTypeList>
         </cccev:RequirementIDRef>
     </Evidence>

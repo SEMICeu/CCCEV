@@ -31,7 +31,7 @@
    <xsd:element name="District" type="cbc:TextType"/>
    <xsd:element name="Floor" type="cbc:TextType"/> 
    <xsd:element name="ID" type="cbc:IDType"/>
-   <xsd:element name="InhouseMail" type="cbc:URIType"/>
+   <xsd:element name="InhouseMail" type="cbc:TextType"/>
    <xsd:element name="MarkAttention" type="cbc:TextType"/>
    <xsd:element name="MarkCare" type="cbc:TextType"/>
    <xsd:element name="Period" type="PeriodType"/>
@@ -53,6 +53,7 @@
                <xsd:element ref="ID" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="AddressTypeCode" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="AddressFormatCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="Postbox" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="Floor" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="Room" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="StreetName" minOccurs="0" maxOccurs="1"/>

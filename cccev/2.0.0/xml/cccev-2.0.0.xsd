@@ -163,11 +163,10 @@
 			<xsd:element ref="BehaviouralType" minOccurs="0" maxOccurs="unbounded"/>
 <!--			<xsd:element ref="DerivesFrom" minOccurs="0" maxOccurs="unbounded"/>-->
 			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="InformationRequirement" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="InformationRequirementConstraint" minOccurs="0" maxOccurs="unbounded"/>
-				
+			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>

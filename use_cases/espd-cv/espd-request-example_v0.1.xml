@@ -232,7 +232,7 @@
           <Criterion>
                <cccev:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cccev:ID>
                <cccev:Name AssuranceLevelValue="High" languageID="en">Participation in a criminal organisation</cccev:Name>   
-               <cccev:Type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.0.2">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cccev:Type>  
+               <cccev:Type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cccev:Type>  
                <cccev:Description AssuranceLevelValue="High" languageID="en">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cccev:Description> 
                <cccev:EvaluationMethod  AssuranceLevelValue="High" listID="EvaluationMethodType" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">PASSFAIL</cccev:EvaluationMethod>
                <cccev:InformationRequirement>

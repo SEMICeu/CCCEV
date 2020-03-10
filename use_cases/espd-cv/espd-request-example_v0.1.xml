@@ -57,8 +57,8 @@
      <Specification AssuranceLevelCodeListID="AssuranceLevelCodeListID27" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID27" AssuranceLevelValue="AssuranceLevelValue27" AssuranceLevelAgencyID="AssuranceLevelAgencyID27" AssuranceLevelAgencyName="AssuranceLevelAgencyName27" schemeID="schemeID10" schemeName="schemeName10" schemeAgencyID="schemeAgencyID10" schemeAgencyName="schemeAgencyName10" schemeVersionID="schemeVersionID10" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Specification0</Specification>
      <DataConsumer>
           <UniqueIdentifier AssuranceLevelCodeListID="AssuranceLevelCodeListID28" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID28" AssuranceLevelValue="AssuranceLevelValue28" AssuranceLevelAgencyID="AssuranceLevelAgencyID28" AssuranceLevelAgencyName="AssuranceLevelAgencyName28" schemeID="schemeID11" schemeName="schemeName11" schemeAgencyID="schemeAgencyID11" schemeAgencyName="schemeAgencyName11" schemeVersionID="schemeVersionID11" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">UniqueIdentifier0</UniqueIdentifier>
-          <cbc:Name AssuranceLevelCodeListID="AssuranceLevelCodeListID29" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID29" AssuranceLevelValue="AssuranceLevelValue29" AssuranceLevelAgencyID="AssuranceLevelAgencyID29" AssuranceLevelAgencyName="AssuranceLevelAgencyName29" languageID="en-US" languageLocaleID="languageLocaleID12">Name0</cbc:Name>
-          <cbc:Name AssuranceLevelCodeListID="AssuranceLevelCodeListID30" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID30" AssuranceLevelValue="AssuranceLevelValue30" AssuranceLevelAgencyID="AssuranceLevelAgencyID30" AssuranceLevelAgencyName="AssuranceLevelAgencyName30" languageID="en-US" languageLocaleID="languageLocaleID13">Name1</cbc:Name>
+          <Name AssuranceLevelCodeListID="AssuranceLevelCodeListID29" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID29" AssuranceLevelValue="AssuranceLevelValue29" AssuranceLevelAgencyID="AssuranceLevelAgencyID29" AssuranceLevelAgencyName="AssuranceLevelAgencyName29" languageID="en-US" languageLocaleID="languageLocaleID12">Name0</Name>
+          <Name AssuranceLevelCodeListID="AssuranceLevelCodeListID30" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID30" AssuranceLevelValue="AssuranceLevelValue30" AssuranceLevelAgencyID="AssuranceLevelAgencyID30" AssuranceLevelAgencyName="AssuranceLevelAgencyName30" languageID="en-US" languageLocaleID="languageLocaleID13">Name1</Name>
           <LegalAddress id="http://www.oxygenxml.com/">
                <lcn:fullAddress>fullAddress0</lcn:fullAddress>
                <lcn:poBox>poBox0</lcn:poBox>
@@ -71,7 +71,7 @@
                <lcn:adminUnitLevel2>adminUnitLevel20</lcn:adminUnitLevel2>
                <lcn:postCode>postCode0</lcn:postCode>
                <lcn:addressId>addressId0</lcn:addressId>
-               <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID31" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID31" AssuranceLevelValue="AssuranceLevelValue31" AssuranceLevelAgencyID="AssuranceLevelAgencyID31" AssuranceLevelAgencyName="AssuranceLevelAgencyName31" schemeID="schemeID12" schemeName="schemeName12" schemeAgencyID="schemeAgencyID12" schemeAgencyName="schemeAgencyName12" schemeVersionID="schemeVersionID12" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID0</cbc:ID>
+               <ID AssuranceLevelCodeListID="AssuranceLevelCodeListID31" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID31" AssuranceLevelValue="AssuranceLevelValue31" AssuranceLevelAgencyID="AssuranceLevelAgencyID31" AssuranceLevelAgencyName="AssuranceLevelAgencyName31" schemeID="schemeID12" schemeName="schemeName12" schemeAgencyID="schemeAgencyID12" schemeAgencyName="schemeAgencyName12" schemeVersionID="schemeVersionID12" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID0</ID>
                <cbc:AddressTypeCode AssuranceLevelCodeListID="AssuranceLevelCodeListID32" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID32" AssuranceLevelValue="AssuranceLevelValue32" AssuranceLevelAgencyID="AssuranceLevelAgencyID32" AssuranceLevelAgencyName="AssuranceLevelAgencyName32" listID="listID2" listAgencyID="listAgencyID2" listAgencyName="listAgencyName2" listName="listName2" listVersionID="listVersionID2" name="name2" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">AddressTypeCode0</cbc:AddressTypeCode>
                <cbc:AddressFormatCode AssuranceLevelCodeListID="AssuranceLevelCodeListID33" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID33" AssuranceLevelValue="AssuranceLevelValue33" AssuranceLevelAgencyID="AssuranceLevelAgencyID33" AssuranceLevelAgencyName="AssuranceLevelAgencyName33" listID="listID3" listAgencyID="listAgencyID3" listAgencyName="listAgencyName3" listName="listName3" listVersionID="listVersionID3" name="name3" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">AddressFormatCode0</cbc:AddressFormatCode>
                <cbc:PostBox AssuranceLevelCodeListID="AssuranceLevelCodeListID34" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID34" AssuranceLevelValue="AssuranceLevelValue34" AssuranceLevelAgencyID="AssuranceLevelAgencyID34" AssuranceLevelAgencyName="AssuranceLevelAgencyName34" languageID="en-US" languageLocaleID="languageLocaleID14">PostBox0</cbc:PostBox>
@@ -110,7 +110,7 @@
      <DataRequestSubject>
           <Type AssuranceLevelCodeListID="AssuranceLevelCodeListID65" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID65" AssuranceLevelValue="AssuranceLevelValue65" AssuranceLevelAgencyID="AssuranceLevelAgencyID65" AssuranceLevelAgencyName="AssuranceLevelAgencyName65" listID="listID6" listAgencyID="listAgencyID6" listAgencyName="listAgencyName6" listName="listName6" listVersionID="listVersionID6" name="name6" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">Type0</Type>
           <LegalPerson>
-               <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID66" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID66" AssuranceLevelValue="AssuranceLevelValue66" AssuranceLevelAgencyID="AssuranceLevelAgencyID66" AssuranceLevelAgencyName="AssuranceLevelAgencyName66" schemeID="schemeID16" schemeName="schemeName16" schemeAgencyID="schemeAgencyID16" schemeAgencyName="schemeAgencyName16" schemeVersionID="schemeVersionID16" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID1</cbc:ID>
+               <ID AssuranceLevelCodeListID="AssuranceLevelCodeListID66" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID66" AssuranceLevelValue="AssuranceLevelValue66" AssuranceLevelAgencyID="AssuranceLevelAgencyID66" AssuranceLevelAgencyName="AssuranceLevelAgencyName66" schemeID="schemeID16" schemeName="schemeName16" schemeAgencyID="schemeAgencyID16" schemeAgencyName="schemeAgencyName16" schemeVersionID="schemeVersionID16" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID1</ID>
                <LegalName AssuranceLevelCodeListID="AssuranceLevelCodeListID67" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID67" AssuranceLevelValue="AssuranceLevelValue67" AssuranceLevelAgencyID="AssuranceLevelAgencyID67" AssuranceLevelAgencyName="AssuranceLevelAgencyName67" languageID="en-US" languageLocaleID="languageLocaleID40">LegalName0</LegalName>
                <VATRegistrationNumber AssuranceLevelCodeListID="AssuranceLevelCodeListID68" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID68" AssuranceLevelValue="AssuranceLevelValue68" AssuranceLevelAgencyID="AssuranceLevelAgencyID68" AssuranceLevelAgencyName="AssuranceLevelAgencyName68" schemeID="schemeID17" schemeName="schemeName17" schemeAgencyID="schemeAgencyID17" schemeAgencyName="schemeAgencyName17" schemeVersionID="schemeVersionID17" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">VATRegistrationNumber0</VATRegistrationNumber>
                <TaxReferenceNumber AssuranceLevelCodeListID="AssuranceLevelCodeListID69" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID69" AssuranceLevelValue="AssuranceLevelValue69" AssuranceLevelAgencyID="AssuranceLevelAgencyID69" AssuranceLevelAgencyName="AssuranceLevelAgencyName69" schemeID="schemeID18" schemeName="schemeName18" schemeAgencyID="schemeAgencyID18" schemeAgencyName="schemeAgencyName18" schemeVersionID="schemeVersionID18" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">TaxReferenceNumber0</TaxReferenceNumber>
@@ -134,7 +134,7 @@
                     <lcn:adminUnitLevel2>adminUnitLevel21</lcn:adminUnitLevel2>
                     <lcn:postCode>postCode1</lcn:postCode>
                     <lcn:addressId>addressId1</lcn:addressId>
-                    <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID78" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID78" AssuranceLevelValue="AssuranceLevelValue78" AssuranceLevelAgencyID="AssuranceLevelAgencyID78" AssuranceLevelAgencyName="AssuranceLevelAgencyName78" schemeID="schemeID26" schemeName="schemeName26" schemeAgencyID="schemeAgencyID26" schemeAgencyName="schemeAgencyName26" schemeVersionID="schemeVersionID26" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID2</cbc:ID>
+                    <ID AssuranceLevelCodeListID="AssuranceLevelCodeListID78" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID78" AssuranceLevelValue="AssuranceLevelValue78" AssuranceLevelAgencyID="AssuranceLevelAgencyID78" AssuranceLevelAgencyName="AssuranceLevelAgencyName78" schemeID="schemeID26" schemeName="schemeName26" schemeAgencyID="schemeAgencyID26" schemeAgencyName="schemeAgencyName26" schemeVersionID="schemeVersionID26" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID2</ID>
                     <cbc:AddressTypeCode AssuranceLevelCodeListID="AssuranceLevelCodeListID79" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID79" AssuranceLevelValue="AssuranceLevelValue79" AssuranceLevelAgencyID="AssuranceLevelAgencyID79" AssuranceLevelAgencyName="AssuranceLevelAgencyName79" listID="listID8" listAgencyID="listAgencyID8" listAgencyName="listAgencyName8" listName="listName8" listVersionID="listVersionID8" name="name8" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">AddressTypeCode1</cbc:AddressTypeCode>
                     <cbc:AddressFormatCode AssuranceLevelCodeListID="AssuranceLevelCodeListID80" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID80" AssuranceLevelValue="AssuranceLevelValue80" AssuranceLevelAgencyID="AssuranceLevelAgencyID80" AssuranceLevelAgencyName="AssuranceLevelAgencyName80" listID="listID9" listAgencyID="listAgencyID9" listAgencyName="listAgencyName9" listName="listName9" listVersionID="listVersionID9" name="name9" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">AddressFormatCode1</cbc:AddressFormatCode>
                     <cbc:PostBox AssuranceLevelCodeListID="AssuranceLevelCodeListID81" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID81" AssuranceLevelValue="AssuranceLevelValue81" AssuranceLevelAgencyID="AssuranceLevelAgencyID81" AssuranceLevelAgencyName="AssuranceLevelAgencyName81" languageID="en-US" languageLocaleID="languageLocaleID41">PostBox1</cbc:PostBox>
@@ -166,7 +166,7 @@
                </LegalPersonLegalAddress>
           </LegalPerson>
           <NaturalPerson>
-               <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID107" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID107" AssuranceLevelValue="AssuranceLevelValue107" AssuranceLevelAgencyID="AssuranceLevelAgencyID107" AssuranceLevelAgencyName="AssuranceLevelAgencyName107" schemeID="schemeID27" schemeName="schemeName27" schemeAgencyID="schemeAgencyID27" schemeAgencyName="schemeAgencyName27" schemeVersionID="schemeVersionID27" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID3</cbc:ID>
+               <ID AssuranceLevelCodeListID="AssuranceLevelCodeListID107" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID107" AssuranceLevelValue="AssuranceLevelValue107" AssuranceLevelAgencyID="AssuranceLevelAgencyID107" AssuranceLevelAgencyName="AssuranceLevelAgencyName107" schemeID="schemeID27" schemeName="schemeName27" schemeAgencyID="schemeAgencyID27" schemeAgencyName="schemeAgencyName27" schemeVersionID="schemeVersionID27" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID3</ID>
                <FamilyName AssuranceLevelCodeListID="AssuranceLevelCodeListID108" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID108" AssuranceLevelValue="AssuranceLevelValue108" AssuranceLevelAgencyID="AssuranceLevelAgencyID108" AssuranceLevelAgencyName="AssuranceLevelAgencyName108" languageID="en-US" languageLocaleID="languageLocaleID65">FamilyName0</FamilyName>
                <FirstName AssuranceLevelCodeListID="AssuranceLevelCodeListID109" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID109" AssuranceLevelValue="AssuranceLevelValue109" AssuranceLevelAgencyID="AssuranceLevelAgencyID109" AssuranceLevelAgencyName="AssuranceLevelAgencyName109" languageID="en-US" languageLocaleID="languageLocaleID66">FirstName0</FirstName>
                <BirthDate AssuranceLevelCodeListID="AssuranceLevelCodeListID110"
@@ -192,7 +192,7 @@
                     <lcn:adminUnitLevel2>adminUnitLevel22</lcn:adminUnitLevel2>
                     <lcn:postCode>postCode2</lcn:postCode>
                     <lcn:addressId>addressId2</lcn:addressId>
-                    <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID116" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID116" AssuranceLevelValue="AssuranceLevelValue116" AssuranceLevelAgencyID="AssuranceLevelAgencyID116" AssuranceLevelAgencyName="AssuranceLevelAgencyName116" schemeID="schemeID30" schemeName="schemeName30" schemeAgencyID="schemeAgencyID30" schemeAgencyName="schemeAgencyName30" schemeVersionID="schemeVersionID30" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID4</cbc:ID>
+                    <ID AssuranceLevelCodeListID="AssuranceLevelCodeListID116" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID116" AssuranceLevelValue="AssuranceLevelValue116" AssuranceLevelAgencyID="AssuranceLevelAgencyID116" AssuranceLevelAgencyName="AssuranceLevelAgencyName116" schemeID="schemeID30" schemeName="schemeName30" schemeAgencyID="schemeAgencyID30" schemeAgencyName="schemeAgencyName30" schemeVersionID="schemeVersionID30" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID4</ID>
                     <cbc:AddressTypeCode AssuranceLevelCodeListID="AssuranceLevelCodeListID117" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID117" AssuranceLevelValue="AssuranceLevelValue117" AssuranceLevelAgencyID="AssuranceLevelAgencyID117" AssuranceLevelAgencyName="AssuranceLevelAgencyName117" listID="listID13" listAgencyID="listAgencyID13" listAgencyName="listAgencyName13" listName="listName13" listVersionID="listVersionID13" name="name13" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">AddressTypeCode2</cbc:AddressTypeCode>
                     <cbc:AddressFormatCode AssuranceLevelCodeListID="AssuranceLevelCodeListID118" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID118" AssuranceLevelValue="AssuranceLevelValue118" AssuranceLevelAgencyID="AssuranceLevelAgencyID118" AssuranceLevelAgencyName="AssuranceLevelAgencyName118" listID="listID14" listAgencyID="listAgencyID14" listAgencyName="listAgencyName14" listName="listName14" listVersionID="listVersionID14" name="name14" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">AddressFormatCode2</cbc:AddressFormatCode>
                     <cbc:PostBox AssuranceLevelCodeListID="AssuranceLevelCodeListID119" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID119" AssuranceLevelValue="AssuranceLevelValue119" AssuranceLevelAgencyID="AssuranceLevelAgencyID119" AssuranceLevelAgencyName="AssuranceLevelAgencyName119" languageID="en-US" languageLocaleID="languageLocaleID69">PostBox2</cbc:PostBox>
@@ -225,92 +225,13 @@
           </NaturalPerson>
      </DataRequestSubject>
      <EvidenceRequest>
-          <cbc:ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ER1</cbc:ID>
+          <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ER1</ID>
           <IssueDate AssuranceLevelValue="High">2020-03-09+12:00Z</IssueDate>
-          <cbc:Name AssuranceLevelValue="High" languageID="en">Types of evidences for participation in a criminal organisation conviction.</cbc:Name>
+          <Name AssuranceLevelValue="High" languageID="en">Types of evidences for participation in a criminal organisation conviction.</Name>
           <Remarks>A combination of different types of Evidences captured from e-Certis can be used.</Remarks>
           <Criterion>
-               <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:ID>
-               <cbc:Name AssuranceLevelValue="High" languageID="en">Participation in a criminal organisation</cbc:Name>   
-               <cbc:Type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.0.2">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:Type>  
-               <cbc:Description AssuranceLevelValue="High" languageID="en">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:Description> 
-               <cbc:EvaluationMethod  AssuranceLevelValue="High" listID="EvaluationMethodType" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">PASSFAIL</cbc:EvaluationMethod>
-               <cccev:InformationRequirement>
-                    <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7c637c0c-7703-4389-ba52-02997a055bd7</cbc:ID>
-                    <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ON*</cccev:BehaviouralType>
-                    <cccev:Concept>
-                    <!-- 
-                    Remember that in ESPD the IDs of the "Questions" is built dynamically. The ESPD issue comment https://github.com/ESPD/ESPD-EDM/issues/226#issuecomment-467821355
-                    provides and Excel file explaining how to generate these UUIDs dynamically when drafting the ESPD Response.
-                    -->
-                         <cbc:Description AssuranceLevelValue="High" languageID="en">Your answer</cbc:Description>  
-                         <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">INDICATOR</cbc:Type>
-                    </cccev:Concept>
-                    <cccev:InformationRequirement>
-                         <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cbc:ID>
-                         <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                         <cccev:Concept>
-                              <cbc:Description AssuranceLevelValue="High" languageID="en">Date of conviction</cbc:Description>  
-                              <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                   DATE</cbc:Type>
-                         </cccev:Concept>
-                         <cccev:Concept>
-                              <cbc:Description AssuranceLevelValue="High" languageID="en">Reason</cbc:Description>  
-                              <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                   DESCRITPION</cbc:Type>
-                         </cccev:Concept>
-                         <cccev:Concept>
-                              <cbc:Description AssuranceLevelValue="High" languageID="en">Who has been convicted</cbc:Description>  
-                              <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                   DESCRIPTION</cbc:Type>
-                         </cccev:Concept>
-                         <cccev:Concept>
-                              <cbc:Description AssuranceLevelValue="High" languageID="en">Length of the period of exclusion</cbc:Description>  
-                              <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                   DATE</cbc:Type>
-                         </cccev:Concept>
-                         <cccev:EvidenceTypeList>
-                              <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_1</cccev:EvidenceTypeIDRef>
-                              <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_2</cccev:EvidenceTypeIDRef>
-                              <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_3</cccev:EvidenceTypeIDRef>
-                         </cccev:EvidenceTypeList>
-                         <cccev:EvidenceTypeList>
-                              <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_1</cccev:EvidenceTypeIDRef>
-                              <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_4</cccev:EvidenceTypeIDRef>
-                         </cccev:EvidenceTypeList>
-                         <cccev:InformationRequirement>
-                              <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">f4978772-3126-4ded-bc30-f50da8c3a038</cbc:ID>
-                              <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                              <cccev:Concept>
-                                   <cbc:Description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:Description>  
-                                   <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                        INDICATOR</cbc:Type>
-                              </cccev:Concept>
-                              <cccev:EvidenceTypeList>
-                                   <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
-                              </cccev:EvidenceTypeList>
-                              <cccev:InformationRequirement>
-                                   <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">74e6c7b4-757b-4b40-ada6-fad6a997c310</cbc:ID>
-                                   <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                                   <cccev:Concept>
-                                        <cbc:Description AssuranceLevelValue="High" languageID="en">Please describe them</cbc:Description>  
-                                        <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                             DESCRIPTION</cbc:Type>
-                                   </cccev:Concept>
-                              </cccev:InformationRequirement>
-                         </cccev:InformationRequirement>
-                    </cccev:InformationRequirement>
-               </cccev:InformationRequirement>
-               <cccev:InformationRequirement>
-                    <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7458d42a-e581-4640-9283-34ceb3ad4345</cbc:ID>
-                    <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                    <cccev:Concept>
-                         <cbc:Description AssuranceLevelValue="High" languageID="en">Is this information available electronically?</cbc:Description>  
-                         <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                              INDICATOR</cbc:Type>
-                    </cccev:Concept>
-               </cccev:InformationRequirement>
-          </Criterion>  
+               
+          </Criterion>
           <ValidityPeriod>
                <cbc:StartDate AssuranceLevelCodeListID="AssuranceLevelCodeListID1077"
                     AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID1077"
@@ -346,6 +267,15 @@
                <cbc:Description AssuranceLevelCodeListID="AssuranceLevelCodeListID1084" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID1084" AssuranceLevelValue="AssuranceLevelValue1084" AssuranceLevelAgencyID="AssuranceLevelAgencyID1084" AssuranceLevelAgencyName="AssuranceLevelAgencyName1084" languageID="en-US" languageLocaleID="languageLocaleID441">Description98</cbc:Description>
                <cbc:Description AssuranceLevelCodeListID="AssuranceLevelCodeListID1085" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID1085" AssuranceLevelValue="AssuranceLevelValue1085" AssuranceLevelAgencyID="AssuranceLevelAgencyID1085" AssuranceLevelAgencyName="AssuranceLevelAgencyName1085" languageID="en-US" languageLocaleID="languageLocaleID442">Description99</cbc:Description>
           </ValidityPeriod>
+     </EvidenceRequest>
+     <EvidenceRequest>
+          <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ER2</ID>
+          <IssueDate AssuranceLevelValue="High">2020-03-10+12:00Z</IssueDate>
+          <Name AssuranceLevelValue="High" languageID="en">Types of evidences for the general average turnover.</Name>
+          <Remarks>A combination of different types of Evidences captured from e-Certis is used.</Remarks>
+          <Criterion>
+               
+          </Criterion>
           <ValidityPeriod>
                <cbc:StartDate AssuranceLevelCodeListID="AssuranceLevelCodeListID1086"
                     AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID1086"
@@ -385,31 +315,32 @@
      <EvidenceType>
           <dct:Description AssuranceLevelValue="High" languageID="en">See file case 2018-01-02/1234. Description and date of the conviction.</dct:Description>
           <dct:Title AssuranceLevelValue="High" languageID="en">Criminal record ACME SL participated in collusion.</dct:Title>
-          <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_1</cbc:ID>
+          
+          <!--<ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_1</ID>-->
           <cccev:preferredMIME AssuranceLevelValue="High" listID="rfc2045" listVersionID="1.0" listAgencyID="IETF" listURI="https://tools.ietf.org/html/rfc2045">application/pdf</cccev:preferredMIME>
      </EvidenceType>
      <EvidenceType>
           <dct:Description AssuranceLevelValue="High" languageID="en">See file case 2018-01-02/1234. Subject convicted.</dct:Description>
           <dct:Title AssuranceLevelValue="High" languageID="en">Criminal record ACME SL participated in collusion.</dct:Title>
-          <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_2</cbc:ID>
+          <ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_2</ID>
           <cccev:preferredMIME AssuranceLevelValue="High" listID="rfc2045" listVersionID="1.0" listAgencyID="IETF" listURI="https://tools.ietf.org/html/rfc2045">application/pdf</cccev:preferredMIME>
      </EvidenceType>
      <EvidenceType>
           <dct:Description AssuranceLevelValue="High" languageID="en">See file case 2018-01-02/1234. Reason of conviction and lenght of exclusion.</dct:Description>
           <dct:Title AssuranceLevelValue="High" languageID="en">Criminal record ACME SL participated in collusion.</dct:Title>
-          <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_3</cbc:ID>
+          <ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_3</ID>
           <cccev:preferredMIME AssuranceLevelValue="High" listID="rfc2045" listVersionID="1.0" listAgencyID="IETF" listURI="https://tools.ietf.org/html/rfc2045">application/pdf</cccev:preferredMIME>
      </EvidenceType>
      <EvidenceType>
           <dct:Description AssuranceLevelValue="High" languageID="en">See file case 2018-03-06/5678. Lenght of the period of the exclusion and rationale for the conviction.</dct:Description>
           <dct:Title AssuranceLevelValue="High" languageID="en">Criminal record ACME SL participated in collusion. Final resolution.</dct:Title>
-          <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_4</cbc:ID>
+          <ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_4</ID>
           <cccev:preferredMIME AssuranceLevelValue="High" listID="rfc2045" listVersionID="1.0" listAgencyID="IETF" listURI="https://tools.ietf.org/html/rfc2045">application/pdf</cccev:preferredMIME>
      </EvidenceType>
      <EvidenceType>
           <dct:Description AssuranceLevelValue="High" languageID="en">See file case 2018-10-06/4628. Self-clearance measures.</dct:Description>
           <dct:Title AssuranceLevelValue="High" languageID="en">Self-clearance measures.</dct:Title>
-          <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cbc:ID>
+          <ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</ID>
           <cccev:preferredMIME AssuranceLevelValue="High" listID="rfc2045" listVersionID="1.0" listAgencyID="IETF" listURI="https://tools.ietf.org/html/rfc2045">application/pdf</cccev:preferredMIME>
      </EvidenceType>
 </Request>

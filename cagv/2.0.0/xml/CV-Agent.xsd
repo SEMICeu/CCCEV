@@ -24,7 +24,7 @@
 	
 	
 	<!-- Element declaration -->
-	<xsd:element name="Address" type="AddressType"/>
+	<xsd:element name="Address" type="cac:AddressType"/>
 	<xsd:element name="Agent" type="AgentType"/>
 	<xsd:element name="Alias" type="cbc:NameType"/>
 	<xsd:element name="AvailabilityRestriction" type="OpeningHoursSpecificationType"></xsd:element>
@@ -56,42 +56,7 @@
 	<xsd:element name="System" type="SystemType"/>
 	-->
 	<!-- Element definition -->
-	<xsd:complexType name="AddressType">
-      <xsd:complexContent>
-         <xsd:extension base="lcn:AddressType">
-            <xsd:sequence>
-               <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AddressTypeCode" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AddressFormatCode" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:PostBox" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Floor" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Room" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:StreetName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AdditionalStreetName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:BlockName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:BuildingName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:BuildingNumber" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-               <xsd:element ref="cbc:InhouseMail" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Department" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:MarkAttention" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:MarkCare" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:PlotIdentification" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CitySubdivisionName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CityName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:PostalZone" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CountrySubentity" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CountrySubentityCode" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Region" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:District" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:TimezoneOffset" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AddressLine" minOccurs="0" maxOccurs="unbounded"/>
-               <xsd:element ref="cbc:CountryCode" minOccurs="0" maxOccurs="1"/>
-            </xsd:sequence>                     
-         </xsd:extension>
-      </xsd:complexContent>
-   	</xsd:complexType>
-
+	
 	<xsd:group name="Agent">
 		<xsd:sequence>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>

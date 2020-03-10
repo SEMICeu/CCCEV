@@ -10,40 +10,24 @@
    <xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#" schemaLocation="./CV-DataTypes.xsd"/>
    
    <!-- ==== Element Declaration ==== -->
-   <xsd:element name="AdditionalStreetName" type="NameType"/>
-   <xsd:element name="Address" type="AddressType"/>
-   <xsd:element name="AddressFormatCode" type="AddressFormatCodeType"/>
-   <xsd:element name="AddressTypeCode" type="AddresTypeCodeType"/>
-   <xsd:element name="AddressLine" type="AddressLineType"/>
+   
    <xsd:element name="Alias" type="NameType"/>
    <xsd:element name="AlternativeName" type="NameType"/>
    <xsd:element name="Amount" type="AmountType"/>
-   <xsd:element name="Bias" type="BiasType"/>
    <xsd:element name="BinaryObject" type="BinaryObjectType"/>
    <xsd:element name="BirthName" type="NameType"/>
-   <xsd:element name="BlockName" type="NameType"/>
-   <xsd:element name="BuildingName" type="NameType"/>
-   <xsd:element name="BuildingNumber" type="BuildingNumberType"/>
-   <xsd:element name="CityName" type="NameType"/>
-   <xsd:element name="CitySubdivisionName" type="NameType"/>
    <xsd:element name="Code" type="CodeType"/>
-   <xsd:element name="CountryCode" type="CountryCodeType"/>
-   <xsd:element name="CountrySubentity" type="CountrySubentityType"/>
-   <xsd:element name="CountrySubentityCode" type="CountrySubentityCodeType"/>
    <xsd:element name="CopyIndicator" type="CopyIndicatorType"/>
    <xsd:element name="Date" type="dt:DateType"/>
    <xsd:element name="DateOfBirth" type="DateOfBirthType"/>
    <xsd:element name="DateOfDeath" type="DateOfDeathType"/>
-   <xsd:element name="Department" type="DepartmentType"/>
    <xsd:element name="Description" type="DescriptionType"/>
    <xsd:element name="DescriptionCode" type="DescriptionCodeType"/>
    <xsd:element name="DurationMeasure" type="DurationMeasureType"/>
    <xsd:element name="EndDate" type="EndDateType"/>
    <xsd:element name="EndTime" type="EndTimeType"/>
-   <xsd:element name="EvaluationMethod" type="EvaluationMethodType"/>
    <xsd:element name="FamilyName" type="NameType"/>
    <xsd:element name="FullName" type="NameType"/>
-   <xsd:element name="Floor" type="FloorType"/>
    <xsd:element name="Gender" type="GenderType"/>
    <xsd:element name="GeographicName" type="NameType"/>
    <xsd:element name="GeographicIdentifier" type="URIType"/>
@@ -54,6 +38,7 @@
    <xsd:element name="Issued" type="IssuedType"/>
    <xsd:element name="Modified" type="ModifiedType"/>
    <xsd:element name="Name" type="NameType"/>
+   <xsd:element name="Numeric" type="NumericType"/>
    <xsd:element name="Quantity" type="QuantityType"/>
    <xsd:element name="RefID" type="ReferenceIDType"/>
    <xsd:element name="StartDate" type="StartDateType"/>
@@ -65,9 +50,8 @@
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="URI" type="dt:URIType"/>
    <xsd:element name="VersionInfo" type="VersionInfoType"/>
-   <xsd:element name="Weight" type="WeightType"/>
-   <xsd:element name="WeightingConsiderationDescription" type="WeightingConsiderationDescriptionType"/>
-   <xsd:element name="PatronymicName" type="NameType"/>
+   
+   <!--<xsd:element name="PatronymicName" type="NameType"/>
    <xsd:element name="Wkt" type="WktType"/>
    <xsd:element name="Lat" type="LatType"/>
    <xsd:element name="Long" type="LongType"/>
@@ -83,24 +67,10 @@
    <xsd:element name="Region" type="RegionType"/>
    <xsd:element name="Room" type="DepartmentType"/>
    <xsd:element name="StreetName" type="NameType"/>
-   <xsd:element name="TimezoneOffset" type="TimezoneOffsetType"/>
+   <xsd:element name="TimezoneOffset" type="TimezoneOffsetType"/>-->
    
    <!-- ===== Entity Type Definitions ===== -->
-   <xsd:complexType name="AddressLineType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="AddressFormatCodeType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="AddresTypeCodeType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
+   
    <xsd:complexType name="AmountType">
       <xsd:simpleContent>
          <xsd:extension base="dt:AmountType"/>
@@ -130,56 +100,6 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>   
-   <xsd:complexType name="TimezoneOffsetType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="RoomType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="RegionType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="PostBoxType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="PostalZoneType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="PlotIdentificationType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="MarkCareType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="MarkAttentionType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="InhouseMailType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="FloorType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="LongType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>
@@ -193,41 +113,6 @@
    <xsd:complexType name="WktType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="DistrictType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="DepartmentType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="CountrySubentityCodeType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="CountrySubentityType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="CountryCodeType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="BuildingNumberType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="AddressType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="GeographicIdentifier">
@@ -260,11 +145,6 @@
          <xsd:restriction base="dt:TimeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="WeightingConsiderationDescriptionType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="VersionInfoType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>
@@ -280,7 +160,7 @@
          <xsd:extension base="dt:DateTimeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-      <xsd:complexType name="BiasType">
+      <xsd:complexType name="NumericType">
       <xsd:simpleContent>
          <xsd:extension base="dt:NumericType"/>
       </xsd:simpleContent>
@@ -318,11 +198,6 @@
    <xsd:complexType name="EndTimeType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:TimeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="EvaluationMethodType">
-      <xsd:simpleContent>
-         <xsd:restriction base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="IDType">
@@ -375,10 +250,5 @@
          <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>   
-   <xsd:complexType name="WeightType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:NumericType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
 </xsd:schema>   
 

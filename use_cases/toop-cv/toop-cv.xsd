@@ -33,6 +33,7 @@
   <xsd:element name="BirthPlace" type="cbc:NameType"/>
   <xsd:element name="BusinessCodes" type="cbc:IDType"/>
   <xsd:element name="Category" type="cbc:CodeType"/>
+  <xsd:element name="Code" type="cbc:CodeType"/>
   <xsd:element name="ConsentToken" type="cbc:BinaryObjectType"/>
   <xsd:element name="ContactDetails" type="cagv:ContactPointType"/>
   <xsd:element name="CopyIndicator" type="cbc:IndicatorType"/>
@@ -60,16 +61,18 @@
   <xsd:element name="FamilyName" type="cbc:NameType"/>
   <xsd:element name="FirstName" type="cbc:NameType"/>
   <xsd:element name="GenderCode" type="cbc:CodeType"/>
+  <xsd:element name="ID" type="cbc:IDType"/>
   <xsd:element name="IssueDate" type="cbc:DateTimeType"/>
   <xsd:element name="IssuePlace" type="cbc:TextType"/>
-  <xsd:element name="LegalAddress" type="cagv:AddressType"/>
+  <xsd:element name="LegalAddress" type="cac:AddressType"/>
   <xsd:element name="LegalEntityIdentifier" type="cbc:IDType"/>
   <xsd:element name="LegalName" type="cbc:NameType"/>
   <xsd:element name="LegalPerson" type="LegalPersonType"/>
-  <xsd:element name="LegalPersonLegalAddress" type="cagv:AddressType"/>
+  <xsd:element name="LegalPersonLegalAddress" type="cac:AddressType"/>
   <xsd:element name="LegalReference" type="cbc:TextType"/>
+  <xsd:element name="Name" type="cbc:NameType"/>
   <xsd:element name="NaturalPerson" type="NaturalPersonType"/>
-  <xsd:element name="NaturalPersonLegalAddress" type="cagv:AddressType"/>
+  <xsd:element name="NaturalPersonLegalAddress" type="cac:AddressType"/>
   <xsd:element name="Origin" type="cbc:CodeType"/>
   <xsd:element name="Process" type="cbc:IDType"/>
   <xsd:element name="Criterion" type="cccev:CriterionType"/>
@@ -122,7 +125,7 @@
   <xsd:complexType name="DataConsumerType">
     <xsd:sequence>
       <xsd:element ref="UniqueIdentifier" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="LegalAddress" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -137,9 +140,9 @@
     <xsd:sequence>
       <xsd:element ref="AdministrativeUnit" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ContactDetails" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="LegalAddress" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="cbc:ID"/>
+      <xsd:element ref="ID"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -153,13 +156,13 @@
 
   <xsd:complexType name="EvidenceRequestType">
     <xsd:sequence>
-      <xsd:element ref="cbc:ID"/>
+      <xsd:element ref="ID"/>
       <xsd:element ref="ErrorCode" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ErrorIndicator" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="IssueDate"/>
       <xsd:element ref="IssuePlace" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
@@ -169,7 +172,7 @@
   <xsd:complexType name="ErrorType">
     <xsd:sequence>
       <xsd:element ref="Category"/>
-      <xsd:element ref="cbc:Code"/>
+      <xsd:element ref="Code"/>
       <xsd:element ref="Origin"/>
       <xsd:element ref="DataProviderID" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="Severity"/>
@@ -178,13 +181,13 @@
 
   <xsd:complexType name="EvidenceResponseType">
     <xsd:sequence>
-      <xsd:element ref="cbc:ID"/>
+      <xsd:element ref="ID"/>
       <xsd:element ref="ErrorCode" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ErrorIndicator" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="IssueDate"/>
       <xsd:element ref="IssuePlace" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
@@ -193,7 +196,7 @@
 
   <xsd:complexType name="LegalPersonType">
     <xsd:sequence>
-      <xsd:element ref="cbc:ID"/>
+      <xsd:element ref="ID"/>
       <xsd:element ref="LegalName"/>
       <xsd:element ref="VATRegistrationNumber" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="TaxReferenceNumber" minOccurs="0" maxOccurs="1"/>
@@ -210,7 +213,7 @@
 
   <xsd:complexType name="NaturalPersonType">
     <xsd:sequence>
-      <xsd:element ref="cbc:ID"/>
+      <xsd:element ref="ID"/>
       <xsd:element ref="FamilyName"/>
       <xsd:element ref="FirstName"/>
       <xsd:element ref="BirthDate"/>

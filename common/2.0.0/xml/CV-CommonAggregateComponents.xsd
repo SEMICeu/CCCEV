@@ -13,42 +13,69 @@
    <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
    <!-- ===== Element Declarations ===== -->
    <!-- Asset should be defined in ADMS. For the time being we use the data structure defined for dcat:DataSet -->
+   <xsd:element name="AdditionalStreetName" type="cbc:TextType"/>
    <xsd:element name="Address" type="AddressType"/>
+   <xsd:element name="AddressFormatCode" type="cbc:CodeType"/>
+   <xsd:element name="AddressLine" type="cbc:TextType"/>
+   <xsd:element name="AddressTypeCode" type="cbc:CodeType"/>
+   <xsd:element name="BlockName" type="cbc:TextType"/>
+   <xsd:element name="BuildingName" type="cbc:TextType"/>
+   <xsd:element name="BuildingNumber" type="cbc:TextType"/>
+   <xsd:element name="CityName" type="cbc:TextType"/>
+   <xsd:element name="CitySubdivisionName" type="cbc:TextType"/>
+   <xsd:element name="CountryCode" type="cbc:CodeType"/>
+   <xsd:element name="CountrySubentity" type="cbc:TextType"/>
+   <xsd:element name="CountrySubentityCode" type="cbc:CodeType"/>
+   <xsd:element name="Department" type="cbc:TextType"/>
+   <xsd:element name="Description" type="cbc:DescriptionType"/>
+   <xsd:element name="District" type="cbc:TextType"/>
+   <xsd:element name="Floor" type="cbc:TextType"/> 
+   <xsd:element name="ID" type="cbc:IDType"/>
+   <xsd:element name="InhouseMail" type="cbc:URIType"/>
+   <xsd:element name="MarkAttention" type="cbc:TextType"/>
+   <xsd:element name="MarkCare" type="cbc:TextType"/>
    <xsd:element name="Period" type="PeriodType"/>
+   <xsd:element name="PlotIdentification" type="cbc:TextType"/>
+   <xsd:element name="PostalZone" type="cbc:TextType"/>
+   <xsd:element name="Postbox" type="cbc:TextType"/>
    <xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
+   <xsd:element name="Region" type="cbc:TextType"/>
+   <xsd:element name="Room" type="cbc:TextType"/>
+   <xsd:element name="StreetName" type="cbc:TextType"/>
+   <xsd:element name="TimezoneOffset" type="cbc:NumericType"/>
+   
    
    <!-- ===== Type Definitions ===== -->
    <xsd:complexType name="AddressType">
       <xsd:complexContent>
          <xsd:extension base="lcn:AddressType">
             <xsd:sequence>
-               <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AddressTypeCode" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AddressFormatCode" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Postbox" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Floor" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Room" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:StreetName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AdditionalStreetName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:BlockName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:BuildingName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:BuildingNumber" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-               <xsd:element ref="cbc:InhouseMail" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Department" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:MarkAttention" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:MarkCare" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:PlotIdentification" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CitySubdivisionName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CityName" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:PostalZone" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CountrySubentity" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:CountrySubentityCode" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:Region" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:District" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:TimezoneOffset" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="cbc:AddressLine" minOccurs="0" maxOccurs="unbounded"/>
-               <xsd:element ref="cbc:CountryCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="ID" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="AddressTypeCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="AddressFormatCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="Floor" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="Room" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="StreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="AdditionalStreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="BlockName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="BuildingName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="BuildingNumber" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="InhouseMail" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="Department" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="MarkAttention" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="MarkCare" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="PlotIdentification" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="CitySubdivisionName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="CityName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="PostalZone" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="CountrySubentity" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="CountrySubentityCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="Region" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="District" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="TimezoneOffset" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="AddressLine" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="CountryCode" minOccurs="0" maxOccurs="1"/>
             </xsd:sequence>                     
          </xsd:extension>
       </xsd:complexContent>

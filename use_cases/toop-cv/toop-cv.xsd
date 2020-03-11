@@ -57,6 +57,7 @@
   <xsd:element name="ErrorIndicator" type="cbc:IndicatorType"/>
   <xsd:element name="EvidenceRequest" type="EvidenceRequestType"/>
   <xsd:element name="EvidenceResponse" type="EvidenceResponseType"/>
+  <xsd:element name="Evidence" type="cccev:EvidenceType"/>
   <xsd:element name="EvidenceType" type="cccev:EvidenceTypeType"/>
   <xsd:element name="FamilyName" type="cbc:NameType"/>
   <xsd:element name="FirstName" type="cbc:NameType"/>
@@ -86,6 +87,7 @@
   <xsd:element name="Type" type="cbc:CodeType"/>
   <xsd:element name="UniqueIdentifier" type="cbc:IDType"/>
   <xsd:element name="ValidityPeriod" type="cac:PeriodType"/>
+  <xsd:element name="Value" type="cccev:ValueType"/>
   <xsd:element name="VATRegistrationNumber" type="cbc:IDType"/>
 
   <!--************************** -->
@@ -257,8 +259,8 @@
           <xsd:element ref="DataProvider" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceResponse" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element name="Evidence" type="cccev:EvidenceType"/>
-          <xsd:element name="EvidenceType" type="cccev:EvidenceTypeType"/>
+          <xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
           <!--  
             For the XSD serialisation, a decision has to be made by TOOP on:
             

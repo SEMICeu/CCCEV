@@ -49,7 +49,7 @@
 	<xsd:element name="preferredMIME" type="cbc:CodeType"/>
 	<xsd:element name="RequiresConcept" type="ConceptType"/>
 	<xsd:element name="RequiresEvidenceTypeList" type="EvidenceTypeListType"/>
-	<xsd:element name="RequirementIDRef" type="InformationRequirementType"/>
+	<xsd:element name="RequirementIDRef" type="cbc:IDType"/>
 	<xsd:element name="RepresentedByIDRef" type="cbc:IDType"/>
 	<xsd:element name="Type" type="cbc:CodeType"/>
 	<xsd:element name="Value" type="ValueType"/>
@@ -128,6 +128,7 @@
 
 	<xsd:complexType name="ValueType">
 		<xsd:sequence>
+			<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Amount" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Date" minOccurs="0" maxOccurs="1"/>
@@ -163,9 +164,9 @@
 			<xsd:element ref="BehaviouralType" minOccurs="0" maxOccurs="unbounded"/>
 <!--			<xsd:element ref="DerivesFrom" minOccurs="0" maxOccurs="unbounded"/>-->
 			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="InformationRequirement" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="InformationRequirementConstraint" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>

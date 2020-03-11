@@ -238,30 +238,22 @@
                <cccev:InformationRequirement>
                     <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7c637c0c-7703-4389-ba52-02997a055bd7</cccev:ID>
                     <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ON*</cccev:BehaviouralType>
+                    <cccev:Concept>
+                         <!-- 
+                    Remember that in ESPD the IDs of the "Questions" is built dynamically. The ESPD issue comment https://github.com/ESPD/ESPD-EDM/issues/226#issuecomment-467821355
+                    provides and Excel file explaining how to generate these UUIDs dynamically when drafting the ESPD Response.
+                    -->
+                         <cccev:Description AssuranceLevelValue="High" languageID="en">Your answer</cccev:Description>  
+                         <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">INDICATOR</cccev:DataType>
+                    </cccev:Concept>
                     <cccev:InformationRequirement>
                          <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cccev:ID>
                          <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                         <cccev:InformationRequirement>
-                              <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">f4978772-3126-4ded-bc30-f50da8c3a038</cccev:ID>
-                              <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                              <cccev:InformationRequirement>
-                                   <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">74e6c7b4-757b-4b40-ada6-fad6a997c310</cccev:ID>
-                                   <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
-                                   <cccev:Concept>
-                                        <cccev:Description AssuranceLevelValue="High" languageID="en">Please describe them</cccev:Description>  
-                                        <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                             DESCRIPTION</cccev:DataType>
-                                   </cccev:Concept>
-                              </cccev:InformationRequirement>
-                              <cccev:Concept>
-                                   <cccev:Description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cccev:Description>  
-                                   <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                        INDICATOR</cccev:DataType>
-                              </cccev:Concept>
-                              <cccev:EvidenceTypeList>
-                                   <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
-                              </cccev:EvidenceTypeList>
-                         </cccev:InformationRequirement>
+                         <cccev:Concept>
+                              <cccev:Description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cccev:Description>  
+                              <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                   INDICATOR</cccev:DataType>
+                         </cccev:Concept>
                          <cccev:Concept>
                               <cccev:Description AssuranceLevelValue="High" languageID="en">Date of conviction</cccev:Description>  
                               <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
@@ -282,6 +274,22 @@
                               <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                    DATE</cccev:DataType>
                          </cccev:Concept>
+                         <cccev:InformationRequirement>
+                              <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">f4978772-3126-4ded-bc30-f50da8c3a038</cccev:ID>
+                              <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
+                              <cccev:InformationRequirement>
+                                   <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">74e6c7b4-757b-4b40-ada6-fad6a997c310</cccev:ID>
+                                   <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:BehaviouralType>
+                                   <cccev:Concept>
+                                        <cccev:Description AssuranceLevelValue="High" languageID="en">Please describe them</cccev:Description>  
+                                        <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                             DESCRIPTION</cccev:DataType>
+                                   </cccev:Concept>
+                              </cccev:InformationRequirement>
+                              <cccev:EvidenceTypeList>
+                                   <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
+                              </cccev:EvidenceTypeList>
+                         </cccev:InformationRequirement>
                          <cccev:EvidenceTypeList>
                               <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_1</cccev:EvidenceTypeIDRef>
                               <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_2</cccev:EvidenceTypeIDRef>
@@ -292,14 +300,7 @@
                               <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_4</cccev:EvidenceTypeIDRef>
                          </cccev:EvidenceTypeList>
                     </cccev:InformationRequirement>
-                    <cccev:Concept>
-                         <!-- 
-                    Remember that in ESPD the IDs of the "Questions" is built dynamically. The ESPD issue comment https://github.com/ESPD/ESPD-EDM/issues/226#issuecomment-467821355
-                    provides and Excel file explaining how to generate these UUIDs dynamically when drafting the ESPD Response.
-                    -->
-                         <cccev:Description AssuranceLevelValue="High" languageID="en">Your answer</cccev:Description>  
-                         <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">INDICATOR</cccev:DataType>
-                    </cccev:Concept>
+                    
                </cccev:InformationRequirement>
                <cccev:InformationRequirement>
                     <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7458d42a-e581-4640-9283-34ceb3ad4345</cccev:ID>
@@ -363,6 +364,16 @@
                <cccev:InformationRequirement>
                     <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">53882893-f4a8-40ae-99dc-cad7b0748790</cccev:ID>
                     <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ON*</cccev:BehaviouralType>
+                    <cccev:Concept>
+                         <cccev:Description AssuranceLevelValue="High" languageID="en">Average for the required period</cccev:Description>  
+                         <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                              AMOUNT</cccev:DataType>
+                    </cccev:Concept>
+                    <cccev:Concept>
+                         <cccev:Description AssuranceLevelValue="High" languageID="en">Additional information</cccev:Description>  
+                         <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                              DESCRIPTION</cccev:DataType>
+                    </cccev:Concept>
                     <cccev:InformationRequirementConstraint>
                          <cccev:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">e1886054-ada4-473c-9afc-2fde82c24cf4</cccev:ID>
                          <cccev:BehaviouralType AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ON*</cccev:BehaviouralType>
@@ -383,16 +394,6 @@
                               </cccev:Value>
                          </cccev:Concept>
                     </cccev:InformationRequirementConstraint>
-                    <cccev:Concept>
-                         <cccev:Description AssuranceLevelValue="High" languageID="en">Average for the required period</cccev:Description>  
-                         <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                              AMOUNT</cccev:DataType>
-                    </cccev:Concept>
-                    <cccev:Concept>
-                         <cccev:Description AssuranceLevelValue="High" languageID="en">Additional information</cccev:Description>  
-                         <cccev:DataType AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                              DESCRIPTION</cccev:DataType>
-                    </cccev:Concept>
                     <cccev:EvidenceTypeList>
                          <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_6</cccev:EvidenceTypeIDRef>
                     </cccev:EvidenceTypeList>

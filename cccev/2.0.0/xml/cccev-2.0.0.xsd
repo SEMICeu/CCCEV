@@ -34,7 +34,6 @@
 	<xsd:element name="EvidenceTypeIDRef" type="cbc:IDType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
-	<xsd:element name="GlobalConstraint" type="ConstraintType"/>
 	<xsd:element name="ID" type="cbc:IDType"/>
 	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
 	<xsd:element name="InformationRequirementIDRef" type="cbc:CodeType"/>

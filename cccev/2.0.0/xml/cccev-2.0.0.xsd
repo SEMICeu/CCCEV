@@ -16,7 +16,7 @@
 		schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
 
 	<!-- Element declaration -->
-	<xsd:element name="BehaviouralType" type="cbc:CodeType"/>
+	<xsd:element name="ProcessingInstruction" type="cbc:CodeType"/>
 	<xsd:element name="Bias" type="cbc:NumericType"/>
 	<xsd:element name="Concept" type="ConceptType"/>
 	<xsd:element name="Constraint" type="ConstraintType"/>
@@ -42,6 +42,7 @@
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
 	<xsd:element name="PreferredMIMEType" type="cbc:CodeType"/>
+	<xsd:element name="QualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
 	<xsd:element name="ReferenceFrameworkIDRef" type="cbc:IDType"/>
 	<xsd:element name="RequirementIDRef" type="cbc:IDType"/>
@@ -69,11 +70,12 @@
 	<xsd:complexType name="RequirementType">
 		<xsd:sequence>
 			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ProcessingInstruction" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="RequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="QualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	
@@ -81,11 +83,10 @@
 		<xsd:complexContent>
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
-					<xsd:element ref="Concept" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+					<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"></xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
-		</xsd:complexContent>
-		
+		</xsd:complexContent>		
 	</xsd:complexType>
 
 	<xsd:complexType name="CriterionType">
@@ -152,7 +153,7 @@
 			<xsd:element ref="cbc:Text" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Time" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
-		<!--	<xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>-->
+			<xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	
@@ -172,7 +173,6 @@
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
 					<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="BehaviouralType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>

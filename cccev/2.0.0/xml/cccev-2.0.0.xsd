@@ -19,6 +19,7 @@
 	<xsd:element name="Bias" type="cbc:NumericType"/>
 	<xsd:element name="Concept" type="ConceptType"/>
 	<xsd:element name="Constraint" type="ConstraintType"/>
+	<xsd:element name="ConstraintIDRef" type="cbc:IDType"/>
 	<xsd:element name="Criterion" type="CriterionType"/>
 	<xsd:element name="ConceptIDRef" type="cbc:IDType"/>
 	<xsd:element name="ConfidentialityLevel" type="cbc:CodeType"/>
@@ -36,7 +37,7 @@
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
 	<xsd:element name="ID" type="cbc:IDType"/>
 	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
-	<xsd:element name="InformationRequirementIDRef" type="cbc:CodeType"/>
+	<xsd:element name="InformationRequirementIDRef" type="cbc:IDType"/>
 	<xsd:element name="Name" type="cbc:NameType"/>
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
@@ -64,6 +65,7 @@
 			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Namespace" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="ValueIDRef" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="ConstraintIDRef" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

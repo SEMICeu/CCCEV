@@ -340,16 +340,16 @@
                     <cccev:InformationRequirementIDRef AssuranceLevelValue="High">7c637c0c-7703-4389-ba52-02997a055bd7</cccev:InformationRequirementIDRef>
                 </cccev:EvidenceIDRef>
                 <cccev:Concept>
-                    <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">411e5b92-bcb8-471a-b6d1-83940b161e36</cbc:ID>
-                    <cccev:Description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cccev:Description>
-                    <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                        INDICATOR</cccev:Type>
-                </cccev:Concept>
-                <cccev:Concept>
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e21fb902-6fb0-4586-9890-52d46ba9c4a3</cbc:ID>
                     <cccev:Description AssuranceLevelValue="High" languageID="en">Date of conviction?</cccev:Description>
                     <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                         DATE</cccev:Type>
+                </cccev:Concept>
+                <cccev:Concept>
+                    <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">411e5b92-bcb8-471a-b6d1-83940b161e36</cbc:ID>
+                    <cccev:Description AssuranceLevelValue="High" languageID="en">Reason</cccev:Description>
+                    <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                        DESCRIPTION</cccev:Type>
                 </cccev:Concept>
                 <cccev:Concept>
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">311e8c5e-3522-4559-bb60-c05c6d091291</cbc:ID>
@@ -357,7 +357,7 @@
                     <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                         DESCRIPTION</cccev:Type>
                 </cccev:Concept>
-                <cccev:Concept>
+                <cccev:Concept>     
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">a41073de-5811-4398-9285-2efedc8e32c9</cbc:ID>
                     <cccev:Description AssuranceLevelValue="High" languageID="en">Length of the period of exclusion?</cccev:Description>
                     <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
@@ -387,9 +387,9 @@
                 </cccev:EvidenceIDRef>
                 <cccev:Concept>
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">0ed92940-4e63-48c4-a492-4a1ccebcba3f</cbc:ID>
-                    <cccev:Description AssuranceLevelValue="High" languageID="en">Reason?</cccev:Description>
+                    <cccev:Description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cccev:Description>
                     <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                        DESCRIPTION</cccev:Type>
+                        INDICATOR</cccev:Type>
                 </cccev:Concept>
             </cccev:InformationRequirement>
             <cccev:InformationRequirement>
@@ -455,12 +455,12 @@
             </cccev:Constraint>
             <cccev:EvidenceTypeList>
                 <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">d9b1a363-8c28-4de1-8e7a-29ad34bef740</cbc:ID>
-                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_6</cccev:EvidenceTypeIDRef>
+                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
             </cccev:EvidenceTypeList>
             <cccev:EvidenceTypeList>
                 <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">fe070464-980c-4b5a-b8dc-41bd5e226024</cbc:ID>
-                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_7</cccev:EvidenceTypeIDRef>
-                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_8</cccev:EvidenceTypeIDRef>
+                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_6</cccev:EvidenceTypeIDRef>
+                <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
             </cccev:EvidenceTypeList>
             <cccev:Weight AssuranceLevelValue="High" format="PERCENT">5</cccev:Weight>
             <cccev:WeightingConsiderationDescription AssuranceLevelValue="High" languageID="en">This is a multistage Procedure. The same weight will be used in subsequent selection stages.</cccev:WeightingConsiderationDescription>
@@ -470,19 +470,19 @@
                 <cccev:EvidenceIDRef>
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">14dc8b6b-b7c1-4c3d-af6e-588932fd6729</cbc:ID>
                     <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-                    <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_6</cccev:EvidenceTypeIDRef>
+                    <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
                     <cccev:InformationRequirementIDRef AssuranceLevelValue="High">53882893-f4a8-40ae-99dc-cad7b0748790</cccev:InformationRequirementIDRef>
                 </cccev:EvidenceIDRef>
                 <cccev:EvidenceIDRef>
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">89cbe042-7f1c-4c68-b01a-02449987f42a</cbc:ID>
                     <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-                    <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_7</cccev:EvidenceTypeIDRef>
+                    <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_6</cccev:EvidenceTypeIDRef>
                     <cccev:InformationRequirementIDRef AssuranceLevelValue="High">53882893-f4a8-40ae-99dc-cad7b0748790</cccev:InformationRequirementIDRef>
                 </cccev:EvidenceIDRef>
                 <cccev:EvidenceIDRef>
                     <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">8d91ea18-9188-48b8-bfd8-f910b34e16cc</cbc:ID>
                     <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-                    <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_8</cccev:EvidenceTypeIDRef>
+                    <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_7</cccev:EvidenceTypeIDRef>
                     <cccev:InformationRequirementIDRef AssuranceLevelValue="High">53882893-f4a8-40ae-99dc-cad7b0748790</cccev:InformationRequirementIDRef>
                 </cccev:EvidenceIDRef>
                 <cccev:Concept>
@@ -510,40 +510,58 @@
     </Value>
     <Evidence>
         <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">349532ba-2be1-4766-8d7a-5c4f35a0d984</cbc:ID>
-        <dct:Title AssuranceLevelValue="High" languageID="en">EVIDENCE_1</dct:Title>
-        <cbc:Description AssuranceLevelValue="High" languageID="en">Description_EVIDENCE_1</cbc:Description>
-        <dcat-ap:QualifiedRelation>
-            <dcat-ap:RelatedDatasetIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID189" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID189"
-                 AssuranceLevelValue="AssuranceLevelValue189" AssuranceLevelAgencyID="AssuranceLevelAgencyID189"
-                 AssuranceLevelAgencyName="AssuranceLevelAgencyName189" schemeID="schemeID54" schemeName="schemeName54"
-                 schemeAgencyID="schemeAgencyID54" schemeAgencyName="schemeAgencyName54" schemeVersionID="schemeVersionID54"
-                 schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">RelatedDatasetIDRef6</dcat-ap:RelatedDatasetIDRef>
-            <dcat-ap:Role AssuranceLevelCodeListID="AssuranceLevelCodeListID190" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID190"
-                 AssuranceLevelValue="AssuranceLevelValue190" AssuranceLevelAgencyID="AssuranceLevelAgencyID190"
-                 AssuranceLevelAgencyName="AssuranceLevelAgencyName190" listID="listID42" listAgencyID="listAgencyID42"
-                 listAgencyName="listAgencyName42" listName="listName42" listVersionID="listVersionID42"
-                 name="name42" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">Role6</dcat-ap:Role>
-        </dcat-ap:QualifiedRelation>
-        <cccev:ConceptIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID191" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID191"
-             AssuranceLevelValue="AssuranceLevelValue191" AssuranceLevelAgencyID="AssuranceLevelAgencyID191"
-             AssuranceLevelAgencyName="AssuranceLevelAgencyName191" schemeID="schemeID55" schemeName="schemeName55"
-             schemeAgencyID="schemeAgencyID55" schemeAgencyName="schemeAgencyName55" schemeVersionID="schemeVersionID55"
-             schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ConceptIDRef1</cccev:ConceptIDRef>
-        <cccev:ConfidentialityLevel AssuranceLevelCodeListID="AssuranceLevelCodeListID192" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID192"
-             AssuranceLevelValue="AssuranceLevelValue192" AssuranceLevelAgencyID="AssuranceLevelAgencyID192"
-             AssuranceLevelAgencyName="AssuranceLevelAgencyName192" listID="listID43" listAgencyID="listAgencyID43"
-             listAgencyName="listAgencyName43" listName="listName43" listVersionID="listVersionID43"
-             name="name43" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">ConfidentialityLevel1</cccev:ConfidentialityLevel>
-        <cccev:EvidenceTypeIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID193" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID193"
-             AssuranceLevelValue="AssuranceLevelValue193" AssuranceLevelAgencyID="AssuranceLevelAgencyID193"
-             AssuranceLevelAgencyName="AssuranceLevelAgencyName193" schemeID="schemeID56" schemeName="schemeName56"
-             schemeAgencyID="schemeAgencyID56" schemeAgencyName="schemeAgencyName56" schemeVersionID="schemeVersionID56"
-             schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">EvidenceTypeIDRef5</cccev:EvidenceTypeIDRef>
-        <cccev:ErrorCode AssuranceLevelCodeListID="AssuranceLevelCodeListID194" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID194"
-             AssuranceLevelValue="AssuranceLevelValue194" AssuranceLevelAgencyID="AssuranceLevelAgencyID194"
-             AssuranceLevelAgencyName="AssuranceLevelAgencyName194" listID="listID44" listAgencyID="listAgencyID44"
-             listAgencyName="listAgencyName44" listName="listName44" listVersionID="listVersionID44"
-             name="name44" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">ErrorCode2</cccev:ErrorCode>
-        <cccev:InformationRequirementIDRef AssuranceLevelCodeListID="AssuranceLevelCodeListID195">InformationRequirementIDRef2</cccev:InformationRequirementIDRef>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Negative fiscal fraud certificate.</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certificates that the holder has not committed tax fraud..</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_1</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>f4978772-3126-4ded-bc30-f50da8c3a038</cccev:InformationRequirementIDRef>
+    </Evidence>
+    <Evidence>
+        <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</cbc:ID>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Negative convictions certificate</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certificates that the holder has not been convicted.</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_2</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>7c637c0c-7703-4389-ba52-02997a055bd7</cccev:InformationRequirementIDRef>
+    </Evidence>
+    <Evidence>
+        <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</cbc:ID>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Negative social security fraud</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certificates that the holder has not committed social security fraud.</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_3</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>ad947230-ed35-4909-a2f4-5a84b4a836ed</cccev:InformationRequirementIDRef>
+    </Evidence>
+    <Evidence>
+        <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</cbc:ID>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Taxation authority certificate</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certificates that the holder has no debts with the taxation authorities</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_4</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>7c637c0c-7703-4389-ba52-02997a055bd7</cccev:InformationRequirementIDRef>
+    </Evidence>
+    <Evidence>
+        <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">14dc8b6b-b7c1-4c3d-af6e-588932fd6729</cbc:ID>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Gross revenue</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certifies the gross revenue of the company during the chosen fiscal years..</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_5</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>7c637c0c-7703-4389-ba52-02997a055bd7</cccev:InformationRequirementIDRef>
+    </Evidence>
+    <Evidence>
+        <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</cbc:ID>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Tax declaration</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certificates the tax payment to the authorities during the last five years.</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_6</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>89cbe042-7f1c-4c68-b01a-02449987f42a</cccev:InformationRequirementIDRef>
+    </Evidence>
+    <Evidence>
+        <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">8d91ea18-9188-48b8-bfd8-f910b34e16cc1</cbc:ID>
+        <dct:Title AssuranceLevelValue="High" languageID="en">Social security payments</dct:Title>
+        <cbc:Description AssuranceLevelValue="High" languageID="en">This certificates the amount pay to the social security.</cbc:Description>
+        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
+        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVIDENCE_TYPE_7</cccev:EvidenceTypeIDRef>
+        <cccev:InformationRequirementIDRef>8d91ea18-9188-48b8-bfd8-f910b34e16cc</cccev:InformationRequirementIDRef>
     </Evidence>
 </Response>

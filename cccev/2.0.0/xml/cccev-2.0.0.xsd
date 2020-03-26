@@ -62,10 +62,10 @@
 			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Namespace" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="ValueIDRef" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="ConstraintIDRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -75,6 +75,7 @@
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
 					<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+					<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"></xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -104,7 +105,7 @@
 					<xsd:element ref="ConfidentialityLevel" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="EvidenceTypeIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="ErrorCode" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="InformationRequirementIDRef" minOccurs="1" maxOccurs="unbounded"/>
+					<xsd:element ref="InformationRequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -134,8 +135,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
-					<xsd:element ref="EvidenceIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="InformationRequirement" minOccurs="0" maxOccurs="unbounded"></xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>	
@@ -157,9 +159,9 @@
 			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ProcessingInstruction" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="QualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -178,6 +180,7 @@
 			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ErrorCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	

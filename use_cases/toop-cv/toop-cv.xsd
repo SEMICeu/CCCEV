@@ -36,6 +36,7 @@
   <xsd:element name="Code" type="cbc:CodeType"/>
   <xsd:element name="ConsentToken" type="cbc:BinaryObjectType"/>
   <xsd:element name="ContactDetails" type="cagv:ContactPointType"/>
+  <xsd:element name="Constraint" type="cccev:ConstraintType"/>
   <xsd:element name="CopyIndicator" type="cbc:IndicatorType"/>
   <xsd:element name="DataConsumer" type="DataConsumerType"/>
   <xsd:element name="DataConsumerCountry" type="cbc:CodeType"/>
@@ -63,6 +64,7 @@
   <xsd:element name="FirstName" type="cbc:NameType"/>
   <xsd:element name="GenderCode" type="cbc:CodeType"/>
   <xsd:element name="ID" type="cbc:IDType"/>
+  <xsd:element name="InformationRequirement" type="cccev:InformationRequirementType"/>
   <xsd:element name="IssueDate" type="cbc:DateTimeType"/>
   <xsd:element name="IssuePlace" type="cbc:TextType"/>
   <xsd:element name="LegalAddress" type="cac:AddressType"/>
@@ -191,8 +193,10 @@
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="InformationRequirement" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -261,6 +265,7 @@
           <xsd:element ref="EvidenceResponse" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
+          
           <!--  
             For the XSD serialisation, a decision has to be made by TOOP on:
             

@@ -5,9 +5,9 @@
     xsi:schemaLocation="http://example.org/ Criteria-Polymorphism-example.xsd">
     <cccev:Criterion>
         <cbc:ID>CRITERION_1</cbc:ID>
-        <cbc:Name>Age Majority</cbc:Name>
-        <cbc:Description>The Candidate has reach the majority</cbc:Description>
-        <cbc:Type>EXCLUSION</cbc:Type>
+        <cbc:Name>Fraud</cbc:Name>
+        <cbc:Description>Breach of law because EO was convicted of fraud in Italy</cbc:Description>
+        <cbc:Type>EXCLUSION.CONVICTIONS.FRAUD</cbc:Type>
         <cccev:Requirement xsi:type="cccev:InformationRequirementType">
             <cbc:ID>INFORMATION_REQUIREMENT_1</cbc:ID>
             <cbc:Name>Age-related concepts</cbc:Name>
@@ -27,6 +27,8 @@
                 </cccev:Concept>
             </cccev:Requirement>                        
         </cccev:Requirement>
+        <cccev:Weight>0.1</cccev:Weight>
+        <cccev:WeightingType>PERCENTAGE</cccev:WeightingType>
     </cccev:Criterion>
     <cccev:Value>
         <cbc:Numeric>54</cbc:Numeric>

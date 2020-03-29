@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:CriteriaCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ex="http://example.org/" xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+ xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+    xsi:schemaLocation="http://example.org/ Criteria-Polymorphism-example.xsd">
+    <cccev:Criterion>
+        <cbc:ID>CRITERION_1</cbc:ID>
+        <cbc:Name>Age Majority</cbc:Name>
+        <cbc:Description>The Candidate has reach the majority</cbc:Description>
+        <cbc:Type>EXCLUSION</cbc:Type>
+        <cccev:Requirement xsi:type="cccev:InformationRequirementType">
+            <cbc:ID>INFORMATION_REQUIREMENT_1</cbc:ID>
+            <cbc:Name>Age-related concepts</cbc:Name>
+            <cccev:Concept>
+                <cbc:ID>QUESTION_1</cbc:ID>
+                <cbc:Name>Age</cbc:Name>
+                <cbc:Description>What is your age?</cbc:Description>
+                <cccev:Namespace>http://xmlns.com/foaf/0.1/age</cccev:Namespace>
+            </cccev:Concept>
+            <cccev:Requirement xsi:type="cccev:ConstraintType">
+                <cbc:ID>CONSTRAINT_1</cbc:ID>
+                <cbc:Name>EU legal majority</cbc:Name>
+                <cccev:Concept>
+                    <cccev:Namespace>http://matlab.org/operators/comparison#get</cccev:Namespace>
+                    <cccev:Value><cbc:Numeric>18</cbc:Numeric>
+                    </cccev:Value>
+                </cccev:Concept>
+            </cccev:Requirement>                        
+        </cccev:Requirement>
+    </cccev:Criterion>
+    <cccev:Value>
+        <cbc:Numeric>54</cbc:Numeric>
+        <cccev:ConceptIDRef>QUESTION_1</cccev:ConceptIDRef>
+    </cccev:Value>
+</ex:CriteriaCollection>
+

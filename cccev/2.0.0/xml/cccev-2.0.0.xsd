@@ -26,19 +26,16 @@
 	<xsd:element name="CustomDataType" type="cbc:CodeType"/>
 	<xsd:element name="CustomFunction" type="cbc:IDType"/>
 	<xsd:element name="DataSetType" type="cbc:CodeType"/>
-	<xsd:element name="Description" type="cbc:DescriptionType"/>
 	<xsd:element name="Error" type="cbc:CodeType"/>
 	<xsd:element name="Evidence" type="EvidenceType"/>
-	<xsd:element name="EvidenceIDRef" type="EvidenceType"/>
+	<xsd:element name="EvidenceIDRef" type="cbc:IDType"/>
 	<xsd:element name="EvidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="RepresentationType" type="cbc:CodeType"/>
 	<xsd:element name="EvidenceTypeIDRef" type="cbc:IDType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
-	<xsd:element name="ID" type="cbc:IDType"/>
 	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
 	<xsd:element name="InformationRequirementIDRef" type="cbc:IDType"/>
-	<xsd:element name="Name" type="cbc:NameType"/>
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
 	<xsd:element name="PreferredMIMEType" type="cbc:CodeType"/>
@@ -47,7 +44,6 @@
 	<xsd:element name="ReferenceFrameworkIDRef" type="cbc:IDType"/>
 	<xsd:element name="RequirementIDRef" type="cbc:IDType"/>
 	<xsd:element name="Requirement" type="RequirementType"/>
-	<xsd:element name="Type" type="cbc:CodeType"/>
 	<xsd:element name="Value" type="ValueType"/>
 	<xsd:element name="ValueIDRef" type="cbc:IDType"/>
 	<xsd:element name="Weight" type="cbc:NumericType"/>
@@ -59,9 +55,9 @@
 	<xsd:complexType name="ConceptType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="Name" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Namespace" minOccurs="0" maxOccurs="unbounded"/>
@@ -142,16 +138,17 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:complexType name="RequirementType">
+	<xsd:complexType name="RequirementType" abstract="false">
 		<xsd:sequence>
-			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ProcessingInstruction" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="QualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="RequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="ReferenceFramework" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
@@ -166,6 +163,7 @@
 			<xsd:element ref="cbc:Date" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>	
 			<xsd:element ref="cbc:Indicator" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Numeric" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Quantity" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:Text" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Time" minOccurs="0" maxOccurs="1"/>

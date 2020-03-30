@@ -15,8 +15,10 @@
 		schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
 
 	<!-- Element declaration -->
+	<xsd:element name="AmountValue" type="cbc:AmountType"/>
 	<xsd:element name="ProcessingInstruction" type="cbc:CodeType"/>
 	<xsd:element name="Bias" type="cbc:NumericType"/>
+	<xsd:element name="CodeValue" type="cbc:CodeType"/>
 	<xsd:element name="Concept" type="ConceptType"/>
 	<xsd:element name="Constraint" type="ConstraintType"/>
 	<xsd:element name="ConstraintIDRef" type="cbc:IDType"/>
@@ -26,6 +28,7 @@
 	<xsd:element name="CustomDataType" type="cbc:CodeType"/>
 	<xsd:element name="CustomFunction" type="cbc:IDType"/>
 	<xsd:element name="DataSetType" type="cbc:CodeType"/>
+	<xsd:element name="DateValue" type="cbc:DateTimeType"/>
 	<xsd:element name="Error" type="cbc:CodeType"/>
 	<xsd:element name="Evidence" type="EvidenceType"/>
 	<xsd:element name="EvidenceIDRef" type="cbc:IDType"/>
@@ -34,16 +37,24 @@
 	<xsd:element name="EvidenceTypeIDRef" type="cbc:IDType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
+	<xsd:element name="IdentifierValue" type="cbc:IDType"/>
 	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
 	<xsd:element name="InformationRequirementIDRef" type="cbc:IDType"/>
+	<xsd:element name="IndicatorValue" type="cbc:IndicatorType"/>
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
+	<xsd:element name="NumericValue" type="cbc:NumericType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
+	<xsd:element name="PeriodValue" type="cac:PeriodType"/>
 	<xsd:element name="PreferredMIMEType" type="cbc:CodeType"/>
 	<xsd:element name="QualifiedRelation" type="dcat-ap:RelationshipType"/>
+	<xsd:element name="QuantityValue" type="cbc:QuantityType"/>
 	<xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
 	<xsd:element name="ReferenceFrameworkIDRef" type="cbc:IDType"/>
 	<xsd:element name="RequirementIDRef" type="cbc:IDType"/>
 	<xsd:element name="Requirement" type="RequirementType"/>
+	<xsd:element name="TextValue" type="cbc:TextType"/>
+	<xsd:element name="TimeValue" type="cbc:TimeType"/>
+	<xsd:element name="URIValue" type="cbc:URIType"/>
 	<xsd:element name="Value" type="ValueType"/>
 	<xsd:element name="ValueIDRef" type="cbc:IDType"/>
 	<xsd:element name="Weight" type="cbc:NumericType"/>
@@ -156,19 +167,19 @@
 
 	<xsd:complexType name="ValueType">
 		<xsd:sequence>
-			<xsd:element ref="cbc:Amount" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="AmountValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="CodeValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="DateValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="IdentifierValue" minOccurs="0" maxOccurs="1"/>	
+			<xsd:element ref="IndicatorValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="NumericValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="QuantityValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="TextValue" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="URIValue" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="PeriodValue" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="CustomDataType" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="CustomFunction" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Date" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>	
-			<xsd:element ref="cbc:Indicator" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Numeric" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Quantity" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Text" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Time" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Error" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>

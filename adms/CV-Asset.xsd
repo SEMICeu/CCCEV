@@ -2,14 +2,13 @@
 <!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
 <xsd:schema xmlns="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#"
 	xmlns:cac="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#"
-	xmlns:cbc="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#"
+	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CommonAggregateComponents.xsd"/>
-	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonBasicComponents#" schemaLocation="../../../common/2.0.0/xml/CommonBasicComponents.xsd"/>
-	
+	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<!-- Element declaration -->
 	<xsd:element name="Criterion" type="CriterionType"/>
 	<xsd:element name="CriterionConstraintProperty" type="PropertyType"/>

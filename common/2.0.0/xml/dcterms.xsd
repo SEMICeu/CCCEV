@@ -20,9 +20,12 @@
 	<xsd:element name="Agent" type="foaf:AgentType"/>
 	<xsd:element name="Title" type="dt:TextType"/>
 	<xsd:element name="Description" type="dt:TextType"/>
+	<xsd:element name="EndDate" type="dt:DateType"/>
 	<xsd:element name="Modified" type="dt:DateTimeType"/>
 	<!-- check how DCMI defines MediaType...and update this...Can MediaType to mean MimeType? is so then the cbc:MimeTypeCodeType should extend MediaType -->
 	<xsd:element name="MediaType" type="dt:CodeType"/>
+	<xsd:element name="PeriodOfTime" type="PeriodOfTimeType"/>
+	<xsd:element name="StartDate" type="dt:DateType"/>
 	
 	<!-- If the need is to extend dct:Agent, then use the following structure below: -->
 	
@@ -33,6 +36,13 @@
 				</xsd:sequence>
 			</xsd:extension>		
 		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PeriodOfTimeType">
+		<xsd:sequence>
+			<xsd:element ref="StartDate" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EndDate" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>	
 	</xsd:complexType>
 
 </xsd:schema>

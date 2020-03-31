@@ -21,6 +21,8 @@
 	<xsd:element name="Title" type="dt:TextType"/>
 	<xsd:element name="Description" type="dt:TextType"/>
 	<xsd:element name="EndDate" type="dt:DateType"/>
+	<xsd:element name="Language" type="dt:CodeType"/>
+	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>
 	<xsd:element name="Modified" type="dt:DateTimeType"/>
 	<!-- check how DCMI defines MediaType...and update this...Can MediaType to mean MimeType? is so then the cbc:MimeTypeCodeType should extend MediaType -->
 	<xsd:element name="MediaType" type="dt:CodeType"/>
@@ -38,11 +40,16 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	
+	<xsd:complexType name="LinguisticSystemType">
+		<xsd:sequence>
+			<xsd:element ref="Language" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>	
+	</xsd:complexType>
+	
 	<xsd:complexType name="PeriodOfTimeType">
 		<xsd:sequence>
 			<xsd:element ref="StartDate" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EndDate" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>	
 	</xsd:complexType>
-
 </xsd:schema>

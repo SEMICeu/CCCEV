@@ -23,6 +23,7 @@
 	<xsd:element name="endpointDescription" type="DistributionType"/>
 	<xsd:element name="endpointURL" type="cbc:URIType"/>
 	<xsd:element name="Issued" type="cbc:DateTimeType"/>
+	<xsd:element name="LinguisticSystem" type="dct:LinguisticSystemType"></xsd:element>
 	<xsd:element name="MediaType" type="dt:CodeType"/>
 	<xsd:element name="PeriodOfTime" type="dct:PeriodOfTimeType"/>
 	<xsd:element name="QualifiedRelation" type="RelationshipType"/>
@@ -37,12 +38,12 @@
 				Instead if prefers using the CCTS IdentifierType component, so it takes advantage of the attributes
 				schemID, schemeAgencyID, schemeVersionID, etc.
 			-->
-			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:Title" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Distribution" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="QualifiedRelation" minOccurs="0"/>
 			<xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="LinguisticSystem" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

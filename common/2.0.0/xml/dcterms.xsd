@@ -24,11 +24,14 @@
 	<xsd:element name="Language" type="dt:CodeType"/>
 	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>
 	<xsd:element name="identifier" type="identifierType"/>
-	<xsd:element name="Modified" type="dt:DateTimeType"/>
+	<xsd:element name="issued" type="dt:DateType"/>
+	<xsd:element name="modified" type="dt:DateTimeType"/>
 	<!-- check how DCMI defines MediaType...and update this...Can MediaType to mean MimeType? is so then the cbc:MimeTypeCodeType should extend MediaType -->
 	<xsd:element name="MediaType" type="dt:CodeType"/>
 	<xsd:element name="PeriodOfTime" type="PeriodOfTimeType"/>
 	<xsd:element name="StartDate" type="dt:DateType"/>
+	<xsd:element name="title" type="dt:TextType"/>
+	<xsd:element name="type" type="dt:CodeType"/>
 	
 	<!-- If the need is to extend dct:Agent, then use the following structure below: -->
 	

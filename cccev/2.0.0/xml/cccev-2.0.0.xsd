@@ -4,6 +4,7 @@
 	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
 	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
 	
@@ -13,8 +14,11 @@
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+		schemaLocation="../../../cagv/2.0.0/xml/CV-Agent.xsd" />
 
 	<!-- Element declaration -->
+	<xsd:element name="Agent" type="cagv:AgentType"/>
 	<xsd:element name="AmountValue" type="cbc:AmountType"/>
 	<xsd:element name="ProcessingInstruction" type="cbc:CodeType"/>
 	<xsd:element name="Bias" type="cbc:NumericType"/>
@@ -22,15 +26,20 @@
 	<xsd:element name="Concept" type="ConceptType"/>
 	<xsd:element name="Constraint" type="ConstraintType"/>
 	<xsd:element name="ConstraintIDRef" type="cbc:IDType"/>
+	<xsd:element name="CopyIndicator" type="cbc:IndicatorType"/>
 	<xsd:element name="Criterion" type="CriterionType"/>
+	<xsd:element name="Code" type="cbc:CodeType"/>
 	<xsd:element name="ConceptIDRef" type="cbc:IDType"/>
 	<xsd:element name="ConfidentialityLevel" type="cbc:CodeType"/>
 	<xsd:element name="CustomDataType" type="cbc:CodeType"/>
 	<xsd:element name="CustomFunction" type="cbc:IDType"/>
-	<xsd:element name="Dataset" type="DatasetType"/>
 	<xsd:element name="DataSetType" type="cbc:CodeType"/>
 	<xsd:element name="DateValue" type="cbc:DateTimeType"/>
-	<xsd:element name="Distribution" type="DistributionType"/>
+	<xsd:element name="Description" type="cbc:DescriptionType"/>
+	<xsd:element name="DocumentDescription" type="cbc:DescriptionType"/>
+	<xsd:element name="DocumentReference" type="DocumentReferenceType"/>
+	<xsd:element name="DocumentType" type="cbc:TextType"/>
+	<xsd:element name="DocumentTypeCode" type="cbc:CodeType"/>
 	<xsd:element name="DocumentURI" type="cbc:IDType"/>
 	<xsd:element name="Error" type="cbc:CodeType"/>
 	<xsd:element name="Evidence" type="EvidenceType"/>
@@ -40,10 +49,16 @@
 	<xsd:element name="EvidenceTypeIDRef" type="cbc:IDType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
+	<xsd:element name="ID" type="cbc:IDType"/>
 	<xsd:element name="IdentifierValue" type="cbc:IDType"/>
 	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
 	<xsd:element name="InformationRequirementIDRef" type="cbc:IDType"/>
 	<xsd:element name="IndicatorValue" type="cbc:IndicatorType"/>
+	<xsd:element name="IssueDate" type="cbc:DateTimeType"/>
+	<xsd:element name="IssueTime" type="cbc:TimeType"/>
+	<xsd:element name="LanguageID" type="cbc:IDType"/>
+	<xsd:element name="LocaleCode" type="cbc:CodeType"/>
+	<xsd:element name="Name" type="cbc:NameType"/>
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
 	<xsd:element name="NumericValue" type="cbc:NumericType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
@@ -55,26 +70,31 @@
 	<xsd:element name="ReferenceFrameworkIDRef" type="cbc:IDType"/>
 	<xsd:element name="RequirementIDRef" type="cbc:IDType"/>
 	<xsd:element name="Requirement" type="RequirementType"/>
+	<xsd:element name="StatusCode" type="cbc:CodeType"/>
 	<xsd:element name="TextValue" type="cbc:TextType"/>
 	<xsd:element name="TimeValue" type="cbc:TimeType"/>
+	<xsd:element name="Type" type="cbc:TypeType"/>
 	<xsd:element name="URIValue" type="cbc:URIType"/>
+	<xsd:element name="UUID" type="cbc:IDType"/>
 	<xsd:element name="Value" type="ValueType"/>
 	<xsd:element name="ValueIDRef" type="cbc:IDType"/>
+	<xsd:element name="VersionID" type="cbc:IDType"/>
 	<xsd:element name="Weight" type="cbc:NumericType"/>
 	<xsd:element name="WeightingConsiderationDescription" type="cbc:DescriptionType"/>
 	<xsd:element name="WeightingType" type="cbc:CodeType"/>
+	<xsd:element name="xPath" type="cbc:TextType"/>
 
 	<!-- Element definition -->
 	
 	<xsd:complexType name="ConceptType">
 		<xsd:sequence>
-			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Name" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Code" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Namespace" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
@@ -98,27 +118,31 @@
 					<xsd:element ref="WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="WeightingType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="Bias" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Agent" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>	
 	</xsd:complexType>
 
-	<xsd:complexType name="DatasetType">
-		<xsd:complexContent>
-			<xsd:extension base="dcat-ap:DatasetType">
-				<xsd:sequence>
-					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="Distribution" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	
-	<xsd:complexType name="DistributionType">
+	<xsd:complexType name="DocumentReferenceType">
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DistributionType">
 				<xsd:sequence>
 					<xsd:element ref="DocumentURI" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="ID" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="CopyIndicator" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="UUID" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="DocumentDescription" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="StatusCode" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="DocumentType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="DocumentTypeCode" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="IssueDate" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="IssueTime" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="LanguageID" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="LocaleCode" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="VersionID" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="xPath" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -126,7 +150,7 @@
 	
 	<xsd:complexType name="EvidenceType">
 		<xsd:complexContent>
-			<xsd:extension base="DatasetType">
+			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
 					<xsd:element ref="ConfidentialityLevel" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
@@ -140,17 +164,17 @@
 
 	<xsd:complexType name="EvidenceTypeListType">
 		<xsd:sequence>
-			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeIDRef" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="RequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="EvidenceTypeType">
 		<xsd:complexContent>
-			<xsd:extension base="DatasetType">
+			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
 					<xsd:element ref="RepresentationType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="DataSetType" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -166,7 +190,7 @@
 	
 	<xsd:complexType name="ReferenceFrameworkType">
 		<xsd:complexContent>
-			<xsd:extension base="DatasetType">
+			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence/>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -174,10 +198,10 @@
 
 	<xsd:complexType name="RequirementType" abstract="false">
 		<xsd:sequence>
-			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ProcessingInstruction" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>

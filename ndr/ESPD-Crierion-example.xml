@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ex:CriteriaCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:ex="http://example.org/" xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
- xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+  xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://data.europa.eu/r5r/"
+  xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
     xsi:schemaLocation="http://example.org/ Criteria-Polymorphism-example.xsd">
     <cccev:Criterion>
         <cbc:ID>CRITERION_1</cbc:ID>
@@ -16,13 +19,27 @@
                 <cbc:Name>Age</cbc:Name>
                 <cbc:Description>What is your age?</cbc:Description>
                 <cccev:Namespace>http://xmlns.com/foaf/0.1/age</cccev:Namespace>
+                <cccev:Evidence>
+                    <dct:identifier AssuranceLevelValue="HIGH" schemeID="COMPATIBLE_DCAT_XSD-TYPE-ID+CCTS_ATTRIBUTES_AND_NORMALIZEDSTRING-XSD-TYPE" schemeAgencyID="semic">EVIDENCE_1</dct:identifier>
+                    <dct:type>SELF-DECLARATION</dct:type>
+                    <dcat:Distribution xsi:type="cccev:DocumentReferenceType">
+                        <dct:Title>SC-20191221-X-21</dct:Title>
+                        <dct:Description>everis ESPD tender SEMIC ABC-IV Specific Contract SC-20191221-X-21 for the maintenance of core vocabularies et al.</dct:Description>
+                        <dcat:MediaType>pdf</dcat:MediaType>
+                        <cccev:DocumentURI>urn:digit:isa2:procurement:contracts:frameworkagreement:abc-iv:sc#sc-20191221</cccev:DocumentURI>
+                        <cccev:AssociatedRole>
+                            <cbc:Type AssuranceLevelValue="HIGH" listID="role-type" listAgencyID="SEMIC" listVersionID="CCCEV-2.0.0-PROXY-EXAMPLE">CREATOR</cbc:Type>
+                            <cagv:PlayedByAgentIDRef>http://everis.com</cagv:PlayedByAgentIDRef>
+                        </cccev:AssociatedRole>
+                    </dcat:Distribution>
+                </cccev:Evidence>
             </cccev:Concept>
             <cccev:Requirement xsi:type="cccev:ConstraintType">
                 <cbc:ID>CONSTRAINT_1</cbc:ID>
                 <cbc:Name>EU legal majority</cbc:Name>
                 <cccev:Concept>
                     <cccev:Namespace>http://matlab.org/operators/comparison#get</cccev:Namespace>
-                    <cccev:Value><cbc:Numeric>18</cbc:Numeric>
+                    <cccev:Value><cccev:NumericValue>18</cccev:NumericValue>
                     </cccev:Value>
                 </cccev:Concept>
             </cccev:Requirement>                        
@@ -31,7 +48,7 @@
         <cccev:WeightingType>PERCENTAGE</cccev:WeightingType>
     </cccev:Criterion>
     <cccev:Value>
-        <cbc:Numeric>54</cbc:Numeric>
+        <cccev:NumericValue>54</cccev:NumericValue>
         <cccev:ConceptIDRef>QUESTION_1</cccev:ConceptIDRef>
     </cccev:Value>
 </ex:CriteriaCollection>

@@ -19,6 +19,7 @@
 
 	<!-- Element declaration -->
 	<xsd:element name="Agent" type="cagv:AgentType"/>
+	<xsd:element name="AssociatedRole" type="cagv:RoleType"/>
 	<xsd:element name="AmountValue" type="cbc:AmountType"/>
 	<xsd:element name="ProcessingInstruction" type="cbc:CodeType"/>
 	<xsd:element name="Bias" type="cbc:NumericType"/>
@@ -28,14 +29,12 @@
 	<xsd:element name="ConstraintIDRef" type="cbc:IDType"/>
 	<xsd:element name="CopyIndicator" type="cbc:IndicatorType"/>
 	<xsd:element name="Criterion" type="CriterionType"/>
-	<xsd:element name="Code" type="cbc:CodeType"/>
 	<xsd:element name="ConceptIDRef" type="cbc:IDType"/>
 	<xsd:element name="ConfidentialityLevel" type="cbc:CodeType"/>
 	<xsd:element name="CustomDataType" type="cbc:CodeType"/>
 	<xsd:element name="CustomFunction" type="cbc:IDType"/>
 	<xsd:element name="DataSetType" type="cbc:CodeType"/>
 	<xsd:element name="DateValue" type="cbc:DateTimeType"/>
-	<xsd:element name="Description" type="cbc:DescriptionType"/>
 	<xsd:element name="DocumentDescription" type="cbc:DescriptionType"/>
 	<xsd:element name="DocumentReference" type="DocumentReferenceType"/>
 	<xsd:element name="DocumentType" type="cbc:TextType"/>
@@ -49,7 +48,6 @@
 	<xsd:element name="EvidenceTypeIDRef" type="cbc:IDType"/>
 	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
 	<xsd:element name="FromReferenceFrameWork" type="cac:ReferenceFrameworkType"/>
-	<xsd:element name="ID" type="cbc:IDType"/>
 	<xsd:element name="IdentifierValue" type="cbc:IDType"/>
 	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
 	<xsd:element name="InformationRequirementIDRef" type="cbc:IDType"/>
@@ -58,7 +56,6 @@
 	<xsd:element name="IssueTime" type="cbc:TimeType"/>
 	<xsd:element name="LanguageID" type="cbc:IDType"/>
 	<xsd:element name="LocaleCode" type="cbc:CodeType"/>
-	<xsd:element name="Name" type="cbc:NameType"/>
 	<xsd:element name="Namespace" type="cbc:IRIType"/>
 	<xsd:element name="NumericValue" type="cbc:NumericType"/>
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
@@ -88,10 +85,10 @@
 	
 	<xsd:complexType name="ConceptType">
 		<xsd:sequence>
-			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Name" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Code" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Namespace" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
@@ -129,9 +126,9 @@
 			<xsd:extension base="dcat-ap:DistributionType">
 				<xsd:sequence>
 					<xsd:element ref="DocumentURI" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="ID" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="CopyIndicator" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="UUID" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="DocumentDescription" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="StatusCode" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="DocumentType" minOccurs="0" maxOccurs="1"/>
@@ -142,7 +139,7 @@
 					<xsd:element ref="LocaleCode" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="VersionID" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="xPath" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="AssociatedRole" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -164,8 +161,9 @@
 
 	<xsd:complexType name="EvidenceTypeListType">
 		<xsd:sequence>
-			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeIDRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="AssociatedRole" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -198,10 +196,10 @@
 
 	<xsd:complexType name="RequirementType" abstract="false">
 		<xsd:sequence>
-			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ProcessingInstruction" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>

@@ -49,6 +49,7 @@
    <xsd:element name="Time" type="TimeType"/>
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="URI" type="dt:URIType"/>
+   <xsd:element name="UUID" type="dt:IdentifierType"/>
    <xsd:element name="VersionInfo" type="VersionInfoType"/>
    
    <!--<xsd:element name="PatronymicName" type="NameType"/>

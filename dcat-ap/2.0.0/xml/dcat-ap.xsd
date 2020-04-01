@@ -24,6 +24,7 @@
 	<xsd:element name="endpointDescription" type="DistributionType"/>
 	<xsd:element name="endpointURL" type="cbc:URIType"/>
 	<xsd:element name="Issued" type="cbc:DateTimeType"/>
+	<xsd:element name="LinguisticSystem" type="dct:LinguisticSystemType"></xsd:element>
 	<xsd:element name="MediaType" type="dt:CodeType"/>
 	<xsd:element name="PeriodOfTime" type="dct:PeriodOfTimeType"/>
 	<xsd:element name="QualifiedRelation" type="RelationshipType"/>
@@ -44,6 +45,7 @@
 			<xsd:element ref="Distribution" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="QualifiedRelation" minOccurs="0"/>
 			<xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="LinguisticSystem" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

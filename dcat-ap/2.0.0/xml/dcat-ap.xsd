@@ -53,7 +53,8 @@
 			<xsd:element ref="QualifiedRelation" minOccurs="0"/>
 			<xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="LinguisticSystem" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:creator" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:publisher" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

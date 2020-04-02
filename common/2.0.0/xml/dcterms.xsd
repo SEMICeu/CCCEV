@@ -19,6 +19,7 @@
 	
 	<xsd:element name="Agent" type="foaf:AgentType"/>
 	<xsd:element name="Title" type="dt:TextType"/>
+	<xsd:element name="creator" type="foaf:AgentType"/>
 	<xsd:element name="Description" type="dt:TextType"/>
 	<xsd:element name="EndDate" type="dt:DateType"/>
 	<xsd:element name="Language" type="dt:CodeType"/>
@@ -29,6 +30,7 @@
 	<!-- check how DCMI defines MediaType...and update this...Can MediaType to mean MimeType? is so then the cbc:MimeTypeCodeType should extend MediaType -->
 	<xsd:element name="MediaType" type="dt:CodeType"/>
 	<xsd:element name="PeriodOfTime" type="PeriodOfTimeType"/>
+	<xsd:element name="publisher" type="foaf:AgentType"/>
 	<xsd:element name="StartDate" type="dt:DateType"/>
 	<xsd:element name="title" type="dt:TextType"/>
 	<xsd:element name="type" type="dt:CodeType"/>

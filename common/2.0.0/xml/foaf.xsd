@@ -10,14 +10,24 @@
 	<!-- Element declaration -->
 	
 	<xsd:element name="Agent" type="AgentType"/>
+	<xsd:element name="topic" type="xsd:anySimpleType"/>
 	<xsd:element name="Person" type="PersonType"/>
+	<xsd:element name="primaryTopic" type="xsd:anySimpleType"/>
+	<xsd:element name="sha1" type="xsd:hexBinary"/>
 	<xsd:element name="Organization" type="OrganizationType"/>
 
 	
 	<!-- Element definition -->
 
 	<xsd:complexType name="AgentType">
+		<xsd:sequence/>		
+	</xsd:complexType>
+	
+	<xsd:complexType name="DocumentType">
 		<xsd:sequence>
+			<xsd:element ref="topic" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="primaryTopic" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="sha1" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	

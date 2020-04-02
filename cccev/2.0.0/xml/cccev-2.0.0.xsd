@@ -61,6 +61,7 @@
 	<xsd:element name="ParentCriterionRelation" type="cbc:CodeType"/>
 	<xsd:element name="PeriodValue" type="cac:PeriodType"/>
 	<xsd:element name="PreferredMIMEType" type="cbc:CodeType"/>
+	<xsd:element name="ProvidedBy" type="cagv:RegisteredOrganizationType"/>
 	<xsd:element name="QualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="QuantityValue" type="cbc:QuantityType"/>
 	<xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
@@ -80,6 +81,15 @@
 	<xsd:element name="WeightingConsiderationDescription" type="cbc:DescriptionType"/>
 	<xsd:element name="WeightingType" type="cbc:CodeType"/>
 	<xsd:element name="xPath" type="cbc:TextType"/>
+	
+	<!--Foaf attributes-->
+	
+	<xsd:attributeGroup name="foafDocumentAttributes">
+		<xsd:attribute name="topic" type="xsd:normalizedString"/>
+		<xsd:attribute name="primaryTopic" type="xsd:normalizedString"/>
+		<xsd:attribute name="sha1" type="xsd:hexBinary"/>
+	</xsd:attributeGroup>
+	
 
 	<!-- Element definition -->
 	
@@ -124,7 +134,7 @@
 	<xsd:complexType name="DocumentReferenceType">
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DistributionType">
-				<xsd:sequence>
+				<xsd:sequence>					
 					<xsd:element ref="DocumentURI" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="CopyIndicator" minOccurs="0" maxOccurs="1"/>
@@ -141,6 +151,7 @@
 					<xsd:element ref="xPath" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="AssociatedRole" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
+				<xsd:attributeGroup ref="foafDocumentAttributes"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -154,6 +165,7 @@
 					<xsd:element ref="InformationRequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="EvidenceTypeIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="ProvidedBy" minOccurs="0" maxOccurs="1"/>
  				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>

@@ -37,6 +37,7 @@
 	<xsd:element name="InternetAddress" type="cbc:URIType"/>
 	<xsd:element name="IntervalPeriod" type="cac:PeriodType"/>
 	<xsd:element name="PlayedByAgentIDRef" type="cbc:ReferenceIDType"/>
+	<xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
 	<xsd:element name="Role" type="RoleType"/>
 	<xsd:element name="Telephone" type="cbc:TextType"/>
 	
@@ -52,7 +53,6 @@
 	<xsd:element name="Location" type="lcn:LocationType"/>
 	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="PublicOrganization" type="PublicOrganizationType"/>
-	<xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
 	<xsd:element name="System" type="SystemType"/>
 	-->
 	<!-- Element definition -->
@@ -193,19 +193,19 @@
 		</xsd:complexContent>		
 	</xsd:complexType>
 	-->
-	<!--
+	
 	<xsd:complexType name="RegisteredOrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="rov:RegisteredOrganizationType">
 				<xsd:sequence>
 					<xsd:element name="LegalForm" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="RegisteredLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
+				<!--	<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>-->
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
+	
 	<xsd:complexType name="RoleType">
 		<xsd:sequence>
 			<xsd:group ref="Role"/>

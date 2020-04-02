@@ -20,6 +20,9 @@
                 <cbc:Description>What is your age?</cbc:Description>
                 <cccev:Namespace>http://xmlns.com/foaf/0.1/age</cccev:Namespace>
                 <cccev:Evidence>
+                    
+                </cccev:Evidence>
+                <cccev:Evidence>
                     <dct:identifier AssuranceLevelValue="HIGH" schemeID="COMPATIBLE_DCAT_XSD-TYPE-ID+CCTS_ATTRIBUTES_AND_NORMALIZEDSTRING-XSD-TYPE" schemeAgencyID="semic">EVIDENCE_1</dct:identifier>
                     <dct:type>SELF-DECLARATION</dct:type>
                     <dcat:Distribution xsi:type="cccev:DocumentReferenceType">

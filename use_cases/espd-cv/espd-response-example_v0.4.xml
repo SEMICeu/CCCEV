@@ -357,38 +357,54 @@
                        <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                             INDICATOR
                        </cbc:Type>
+                       <cccev:Concept>
+                            <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:ID>
+                            <cccev:Concept>
+                                 <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e21fb902-6fb0-4586-9890-52d46ba9c4a3</cbc:ID>
+                                 <cbc:Description AssuranceLevelValue="High" languageID="en">Date of conviction?</cbc:Description>
+                                 <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                      DATE</cbc:Type>
+                            </cccev:Concept>
+                            <cccev:Concept>
+                                 <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">411e5b92-bcb8-471a-b6d1-83940b161e36</cbc:ID>
+                                 <cbc:Description AssuranceLevelValue="High" languageID="en">Reason</cbc:Description>
+                                 <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                      DESCRIPTION</cbc:Type>
+                            </cccev:Concept>
+                            <cccev:Concept>
+                                 <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">311e8c5e-3522-4559-bb60-c05c6d091291</cbc:ID>
+                                 <cbc:Description AssuranceLevelValue="High" languageID="en">Who has been convicted?</cbc:Description>
+                                 <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                      DESCRIPTION</cbc:Type>
+                            </cccev:Concept>
+                            <cccev:Concept>     
+                                 <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">a41073de-5811-4398-9285-2efedc8e32c9</cbc:ID>
+                                 <cbc:Description AssuranceLevelValue="High" languageID="en">Length of the period of exclusion?</cbc:Description>
+                                 <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                      DATE</cbc:Type>
+                            </cccev:Concept>
+                            <cccev:Concept>
+                                 <cccev:Concept>
+                                      <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">0ed92940-4e63-48c4-a492-4a1ccebcba3f</cbc:ID>
+                                 </cccev:Concept>
+                                 <cbc:Description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:Description>
+                                 <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
+                                      INDICATOR</cbc:Type>
+                                 <cccev:Constraint>
+                                      <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7c637c0c-7703-4389-ba52-02997a055bd7</cbc:ID>
+                                      <cccev:ProcessingInstruction AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:ProcessingInstruction>
+                                 </cccev:Constraint>
+                            </cccev:Concept>
+                            <cccev:Constraint>                                 
+                                 <cccev:ProcessingInstruction AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:ProcessingInstruction>
+                            </cccev:Constraint>
+                       </cccev:Concept>
                        <cccev:Value>
                             <cccev:IdentifierValue AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">bb2e9249-5942-4127-ab82-f423e250dc3e</cccev:IdentifierValue>
                             <cccev:IndicatorValue>false</cccev:IndicatorValue>
                        </cccev:Value>
                   </cccev:Concept>
-                  <cccev:Concept >
-                       <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7c637c0c-7703-4389-ba52-02997a055bd7</cbc:ID>
-                       <cccev:ProcessingInstruction AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">ONTRUE</cccev:ProcessingInstruction> 
-                       <cccev:Concept>
-                            <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e21fb902-6fb0-4586-9890-52d46ba9c4a3</cbc:ID>
-                            <cccev:Description AssuranceLevelValue="High" languageID="en">Date of conviction?</cccev:Description>
-                            <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                 DATE</cccev:Type>
-                       </cccev:Concept>
-                       <cccev:Concept>
-                            <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">411e5b92-bcb8-471a-b6d1-83940b161e36</cbc:ID>
-                            <cccev:Description AssuranceLevelValue="High" languageID="en">Reason</cccev:Description>
-                            <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                 DESCRIPTION</cccev:Type>
-                       </cccev:Concept>
-                       <cccev:Concept>
-                            <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">311e8c5e-3522-4559-bb60-c05c6d091291</cbc:ID>
-                            <cccev:Description AssuranceLevelValue="High" languageID="en">Who has been convicted?</cccev:Description>
-                            <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                 DESCRIPTION</cccev:Type>
-                       </cccev:Concept>
-                       <cccev:Concept>     
-                            <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">a41073de-5811-4398-9285-2efedc8e32c9</cbc:ID>
-                            <cccev:Description AssuranceLevelValue="High" languageID="en">Length of the period of exclusion?</cccev:Description>
-                            <cccev:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
-                                 DATE</cccev:Type>
-                       </cccev:Concept>
+                 
                        <cccev:Evidence>
                             <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">f2d896a4-5089-4579-b3ca-251314665ef1</cbc:ID>
                             <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>

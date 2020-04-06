@@ -18,9 +18,8 @@
 	to extend the dct Agents; this should be done by DCMI.-->
 	
 	<xsd:element name="Agent" type="foaf:AgentType"/>
-	<xsd:element name="Title" type="dt:TextType"/>
 	<xsd:element name="creator" type="foaf:AgentType"/>
-	<xsd:element name="Description" type="dt:TextType"/>
+	<xsd:element name="description" type="dt:TextType"/>
 	<xsd:element name="EndDate" type="dt:DateType"/>
 	<xsd:element name="Language" type="dt:CodeType"/>
 	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>

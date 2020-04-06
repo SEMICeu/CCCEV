@@ -19,7 +19,6 @@
 	<!-- Element declaration -->
 	<xsd:element name="Agent" type="cagv:AgentType"/>
 	<xsd:element name="AmountValue" type="cbc:AmountType"/>
-	<xsd:element name="ProcessingInstruction" type="cbc:CodeType"/>
 	<xsd:element name="Bias" type="cbc:NumericType"/>
 	<xsd:element name="CodeValue" type="cbc:CodeType"/>
 	<xsd:element name="Concept" type="ConceptType"/>
@@ -207,7 +206,6 @@
 			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="ProcessingInstruction" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="QualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>

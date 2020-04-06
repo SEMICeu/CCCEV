@@ -47,8 +47,8 @@
 				schemID, schemeAgencyID, schemeVersionID, etc.
 			-->
 			<xsd:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:Title" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:modified" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:type" minOccurs="0" maxOccurs="1"/>
@@ -72,8 +72,8 @@
 	<xsd:complexType name="DistributionType">
 		<xsd:sequence>
 			<xsd:element ref="Issued" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="dct:Title" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="AccessURL" minOccurs="0"/>
 			<xsd:element ref="DownloadURL" minOccurs="0"/>
 			<xsd:element ref="MediaType" minOccurs="0" maxOccurs="1"/>

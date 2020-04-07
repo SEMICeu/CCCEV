@@ -98,8 +98,8 @@
 			<xsd:element ref="Concept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Namespace" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 

@@ -60,6 +60,7 @@
 	<xsd:group name="Agent">
 		<xsd:sequence>
 			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Alias" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="Role" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
@@ -74,10 +75,14 @@
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:complexType name="AgentType">
-		<xsd:sequence>
-			<xsd:group ref="Agent"/>
+		<xsd:complexContent>
+			<xsd:extension base="foaf:AgentType">
+			<xsd:sequence>
+				<xsd:group ref="Agent"/>
 			<xsd:group ref="Role"/>
-		</xsd:sequence>
+			</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	
 	<!--

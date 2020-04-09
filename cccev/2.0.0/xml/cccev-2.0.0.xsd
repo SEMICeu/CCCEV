@@ -232,6 +232,7 @@
 			<xsd:element ref="CustomFunction" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="Error" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="ConceptIDRef" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>

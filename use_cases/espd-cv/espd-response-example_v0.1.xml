@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Response xmlns="urn:eu:toop:ns:dataexchange-1p40"
-     xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
-     xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-     xmlns:lcn="http://www.w3.org/ns/locn#"
-     xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#" xmlns:foaf="http://xmlns.com/foaf/"
-     xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-     xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-     xmlns:dcat-ap="http://data.europa.eu/r5r/"
-     xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
-     xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#" xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:org="http://www.w3.org/ns/org#" xmlns:rov="http://www.w3.org/ns/regorg#"
-     xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 file:/C:/Users/jrevenga/Documents/git/SEMIC/CoreVocabularies/CCCEV/use_cases/toop-cv/toop-cv.xsd">
+<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 espd-cv-request.xsd"
+ xmlns="urn:eu:toop:ns:dataexchange-1p40" xmlns:dcat-ap="http://data.europa.eu/r5r/"
+ xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+ xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+ xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" xmlns:org="http://www.w3.org/ns/org#"
+ xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+ xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:lcn="http://www.w3.org/ns/locn#"
+ xmlns:rov="http://www.w3.org/ns/regorg#"
+ xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:foaf="http://xmlns.com/foaf/">
      <dct:identifier AssuranceLevelCodeListID="AssuranceLevelCodeListID0" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID0" AssuranceLevelValue="AssuranceLevelValue0" AssuranceLevelAgencyID="AssuranceLevelAgencyID0" AssuranceLevelAgencyName="AssuranceLevelAgencyName0" schemeID="schemeID0" schemeName="schemeName0" schemeAgencyID="schemeAgencyID0" schemeAgencyName="schemeAgencyName0" schemeVersionID="schemeVersionID0" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">identifier0</dct:identifier>
      <dct:title AssuranceLevelCodeListID="AssuranceLevelCodeListID1" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID1" AssuranceLevelValue="AssuranceLevelValue1" AssuranceLevelAgencyID="AssuranceLevelAgencyID1" AssuranceLevelAgencyName="AssuranceLevelAgencyName1" languageID="en-US" languageLocaleID="languageLocaleID0">Title0</dct:title>
      <dct:description AssuranceLevelCodeListID="AssuranceLevelCodeListID2" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID2" AssuranceLevelValue="AssuranceLevelValue2" AssuranceLevelAgencyID="AssuranceLevelAgencyID2" AssuranceLevelAgencyName="AssuranceLevelAgencyName2" languageID="en-US" languageLocaleID="languageLocaleID1">Description0</dct:description>
@@ -82,7 +81,6 @@
                <cagv:Channel> </cagv:Channel>
                <cagv:AvailabilityRestriction> </cagv:AvailabilityRestriction>
           </ContactDetails>
-          <Name AssuranceLevelCodeListID="AssuranceLevelCodeListID35" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID35" AssuranceLevelValue="AssuranceLevelValue35" AssuranceLevelAgencyID="AssuranceLevelAgencyID35" AssuranceLevelAgencyName="AssuranceLevelAgencyName35" languageID="en-US" languageLocaleID="languageLocaleID9">Name0</Name>
           <LegalAddress id="http://www.oxygenxml.com/">
                <lcn:fullAddress>fullAddress0</lcn:fullAddress>
                <lcn:poBox>poBox0</lcn:poBox>
@@ -128,23 +126,22 @@
                <cac:AddressLine AssuranceLevelCodeListID="AssuranceLevelCodeListID61" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID61" AssuranceLevelValue="AssuranceLevelValue61" AssuranceLevelAgencyID="AssuranceLevelAgencyID61" AssuranceLevelAgencyName="AssuranceLevelAgencyName61" languageID="en-US" languageLocaleID="languageLocaleID30">AddressLine0</cac:AddressLine>
                <cac:CountryCode AssuranceLevelCodeListID="AssuranceLevelCodeListID62" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID62" AssuranceLevelValue="AssuranceLevelValue62" AssuranceLevelAgencyID="AssuranceLevelAgencyID62" AssuranceLevelAgencyName="AssuranceLevelAgencyName62" listID="listID9" listAgencyID="listAgencyID9" listAgencyName="listAgencyName9" listName="listName9" listVersionID="listVersionID9" name="name9" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">CountryCode0</cac:CountryCode>
           </LegalAddress>
-          <ID AssuranceLevelCodeListID="AssuranceLevelCodeListID63" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID63" AssuranceLevelValue="AssuranceLevelValue63" AssuranceLevelAgencyID="AssuranceLevelAgencyID63" AssuranceLevelAgencyName="AssuranceLevelAgencyName63" schemeID="schemeID15" schemeName="schemeName15" schemeAgencyID="schemeAgencyID15" schemeAgencyName="schemeAgencyName15" schemeVersionID="schemeVersionID15" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID0</ID>
      </DataProvider>
      <Error>
           <Category AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">Category0</Category>
-          <Code AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN</Code>
+          <cbc:Code AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN</cbc:Code>
           <Origin AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">Origin0</Origin>
           <DataProviderID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">DataProviderID0</DataProviderID>
           <Severity AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.0.2">Severity0</Severity>
      </Error>
      <EvidenceResponse>
-          <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ERES1</ID>
+          <cbc:ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ERES1</cbc:ID>
           <ErrorCode AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN/INDICATOR</ErrorCode>
           <ErrorIndicator AssuranceLevelValue="High">true</ErrorIndicator>
           <IssueDate AssuranceLevelValue="High">2020-06-09+12:00Z</IssueDate>
           <IssuePlace AssuranceLevelValue="High" languageID="en">Brussels</IssuePlace>
           <LegalReference AssuranceLevelValue="High" languageID="en">Legislation title</LegalReference>
-          <Name AssuranceLevelValue="High" languageID="en">Evidence response for participation in a criminal organisation conviction.</Name>
+          <cbc:Name AssuranceLevelValue="High" languageID="en">Evidence response for participation in a criminal organisation conviction.</cbc:Name>
           <Remarks AssuranceLevelValue="High" languageID="en">A combination of different types of Evidences captured from e-Certis is used.</Remarks>
           <Criterion>
                <cbc:ID AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:ID>

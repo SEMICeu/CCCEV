@@ -270,6 +270,7 @@
                <cbc:Name AssuranceLevelValue="High" languageID="en">General yearly turnover</cbc:Name>
                <cbc:Description AssuranceLevelValue="High" languageID="en">Its general yearly turnover for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or the ESPD is as follows:</cbc:Description>
                <cbc:Type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</cbc:Type>
+               <!-- Example of how to nest a National Sub-Criterion inside a parent Criterion.-->
                <cccev:Requirement xsi:type="cccev:CriterionType">
                     <cbc:ID AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">98517748-512e-4aa2-b71f-90a9777b712f</cbc:ID>
                     <cbc:Name AssuranceLevelValue="High" languageID="en">National Criterion 1</cbc:Name>

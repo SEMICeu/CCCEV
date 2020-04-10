@@ -1,90 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
-<xsd:schema xmlns="http://data.europa.eu/r5r/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" xmlns:dct="http://purl.org/dc/terms/"
-	xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
-	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-	xmlns:foaf="http://xmlns.com/foaf/"
+<xsd:schema xmlns="http://data.europa.eu/r5r/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	targetNamespace="http://data.europa.eu/r5r/" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
 
-	<xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
-		schemaLocation="../../../common/2.0.0/xml/CV-DataTypes.xsd"/>
 	<xsd:import namespace="http://purl.org/dc/terms/"
 		schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
-	<xsd:import namespace="http://purl.org/dc/terms/"
-		schemaLocation="../../../common/2.0.0/xml/skos.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-		schemaLocation="../../../cagv/2.0.0/xml/CV-Agent.xsd" />
-	<xsd:import namespace="http://xmlns.com/foaf/"
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
 		schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
 
 	<!-- Element declaration -->
-	<xsd:element name="Agent" type="cagv:AgentType"/>
-	<xsd:element name="AccessURL" type="cbc:URIType"/>
+	<!-- data properties -->
+	<!-- rdfs:Resource is mapped (considered equivalent) to xsd:anyURI --> 
+	<xsd:element name="accessURL" type="xsd:anyURI"/>
+	<xsd:element name="downloadURL" type="xsd:anyURI"/>
+	<xsd:element name="endpointURL" type="xsd:anyURI"/>
+	<xsd:element name="endpointDescription" type="xsd:string"/>
+	<xsd:element name="hadRole" type="RoleType"/>
+
+	<!-- object properties -->
+	<xsd:element name="distribution" type="DistributionType"/>
+	<xsd:element name="qualifiedRelation" type="RelationshipType"/>
+	<xsd:element name="servesDataset" type="DatasetType"/>
+	
+	<!-- Classes -->
 	<xsd:element name="Dataset" type="DatasetType"/>
-	<xsd:element name="DatasetService" type="DataServiceType"/>
 	<xsd:element name="Distribution" type="DistributionType"/>
-	<xsd:element name="DownloadURL" type="cbc:URIType"/>
-	<xsd:element name="endpointDescription" type="DistributionType"/>
-	<xsd:element name="endpointURL" type="cbc:URIType"/>
-	<xsd:element name="Issued" type="cbc:DateTimeType"/>
-	<xsd:element name="LinguisticSystem" type="dct:LinguisticSystemType"></xsd:element>
-	<xsd:element name="MediaType" type="dt:CodeType"/>
-	<xsd:element name="PeriodOfTime" type="dct:PeriodOfTimeType"/>
-	<xsd:element name="QualifiedRelation" type="RelationshipType"/>
+	<xsd:element name="DatasetService" type="DataServiceType"/>
 	<xsd:element name="Relationship" type="RelationshipType"/>
-	<xsd:element name="RelatedDatasetIDRef" type="cbc:IDType"/>
 	<xsd:element name="Role" type="RoleType"/>
 
 	<xsd:complexType name="DatasetType">
 		<xsd:sequence>
-			<!-- 
-				This XML serialisation does not reuse the dct:identifier data property. 
-				Instead if prefers using the CCTS IdentifierType component, so it takes advantage of the attributes
-				schemID, schemeAgencyID, schemeVersionID, etc.
-			-->
 			<xsd:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:type" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:modified" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="dct:type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="Distribution" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="QualifiedRelation" minOccurs="0"/>
-			<xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="LinguisticSystem" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:language" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:creator" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:publisher" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="distribution" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="qualifiedRelation" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="DataServiceType">
 		<xsd:sequence>
+			<xsd:element ref="dct:title" minOccurs="1"/>
+			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:acccessRights" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="endpointDescription" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="endpointURL" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Dataset" minOccurs="0" maxOccurs="unbounded"/>
+			
+			<xsd:element ref="servesDataset" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="DistributionType">
 		<xsd:sequence>
-			<xsd:element ref="Issued" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="AccessURL" minOccurs="0"/>
-			<xsd:element ref="DownloadURL" minOccurs="0"/>
-			<xsd:element ref="MediaType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:format" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="accessURL" minOccurs="0"/>
+			<xsd:element ref="downloadURL" minOccurs="0"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 
 
 	<xsd:complexType name="RelationshipType">
 		<xsd:sequence>
-			<xsd:element ref="RelatedDatasetIDRef" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Role" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:relation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hadRole" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 

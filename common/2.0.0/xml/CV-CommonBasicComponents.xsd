@@ -11,70 +11,56 @@
    
    <!-- ==== Element Declaration ==== -->
    
-   <xsd:element name="Alias" type="NameType"/>
-   <xsd:element name="AlternativeName" type="NameType"/>
-   <xsd:element name="Amount" type="AmountType"/>
-   <xsd:element name="BinaryObject" type="BinaryObjectType"/>
-   <xsd:element name="BirthName" type="NameType"/>
-   <xsd:element name="Code" type="CodeType"/>
-   <xsd:element name="CopyIndicator" type="CopyIndicatorType"/>
-   <xsd:element name="Date" type="dt:DateType"/>
-   <xsd:element name="DateOfBirth" type="DateOfBirthType"/>
-   <xsd:element name="DateOfDeath" type="DateOfDeathType"/>
-   <xsd:element name="Description" type="DescriptionType"/>
-   <xsd:element name="DescriptionCode" type="DescriptionCodeType"/>
-   <xsd:element name="DurationMeasure" type="DurationMeasureType"/>
-   <xsd:element name="EndDate" type="EndDateType"/>
-   <xsd:element name="EndTime" type="EndTimeType"/>
-   <xsd:element name="FamilyName" type="NameType"/>
-   <xsd:element name="FullName" type="NameType"/>
-   <xsd:element name="Gender" type="GenderType"/>
-   <xsd:element name="GeographicName" type="NameType"/>
-   <xsd:element name="GeographicIdentifier" type="URIType"/>
-   <xsd:element name="GivenName" type="NameType"/>
-   <xsd:element name="ID" type="IDType"/>
-   <xsd:element name="Indicator" type="IndicatorType"/>
-   <xsd:element name="IRI" type="IRIType"/>
-   <xsd:element name="Issued" type="IssuedType"/>
-   <xsd:element name="Modified" type="ModifiedType"/>
-   <xsd:element name="Name" type="NameType"/>
-   <xsd:element name="Numeric" type="NumericType"/>
-   <xsd:element name="Quantity" type="QuantityType"/>
-   <xsd:element name="RefID" type="ReferenceIDType"/>
-   <xsd:element name="StartDate" type="StartDateType"/>
-   <xsd:element name="StartTime" type="StartTimeType"/>
-   <xsd:element name="SubClassIRI" type="IRIType"/>
-   <xsd:element name="Text" type="dt:TextType"/>
-   <xsd:element name="Title" type="TitleType"/>
-   <xsd:element name="Time" type="TimeType"/>
-   <xsd:element name="Type" type="TypeType"/>
-   <xsd:element name="URI" type="dt:URIType"/>
-   <xsd:element name="UUID" type="dt:IdentifierType"/>
-   <xsd:element name="VersionInfo" type="VersionInfoType"/>
-   
-   <!--<xsd:element name="PatronymicName" type="NameType"/>
-   <xsd:element name="Wkt" type="WktType"/>
-   <xsd:element name="Lat" type="LatType"/>
-   <xsd:element name="Long" type="LongType"/>
-   <xsd:element name="District" type="DistrictType"/>
-   <xsd:element name="Postbox" type="PostBoxType"/>
-   <xsd:element name="InhouseMail" type="InhouseMailType"/>
-   <xsd:element name="MarkAttention" type="MarkAttentionType"/>
-   <xsd:element name="MarkCare" type="MarkCareType"/>
-   <xsd:element name="MimeType" type="MimeTypeCodeType"/>
-   <xsd:element name="PlotIdentification" type="PlotIdentificationType"/>
-   <xsd:element name="PostalZone" type="PostalZoneType"/>
-   <xsd:element name="PostBox" type="PostBoxType"/>
-   <xsd:element name="Region" type="RegionType"/>
-   <xsd:element name="Room" type="DepartmentType"/>
-   <xsd:element name="StreetName" type="NameType"/>
-   <xsd:element name="TimezoneOffset" type="TimezoneOffsetType"/>-->
+   <xsd:element name="alias" type="NameType"/>
+   <xsd:element name="amount" type="AmountType"/>
+   <xsd:element name="binaryObject" type="BinaryObjectType"/>
+   <xsd:element name="code" type="CodeType"/>
+   <xsd:element name="date" type="dt:DateType"/>
+   <xsd:element name="dateTime" type="dt:DateTimeType"/>
+   <xsd:element name="description" type="DescriptionType"/>
+   <xsd:element name="durationMeasure" type="DurationMeasureType"/>
+   <xsd:element name="endDate" type="EndDateType"/>
+   <xsd:element name="endPoint" type="EndPointType"/>
+   <xsd:element name="endTime" type="EndTimeType"/>
+   <xsd:element name="id" type="IDType"/>
+   <xsd:element name="indicator" type="IndicatorType"/>
+   <xsd:element name="iri" type="IRIType"/>
+   <xsd:element name="name" type="NameType"/>
+   <xsd:element name="namespace" type="IRIType"/>
+   <xsd:element name="measure" type="MeasureType"/>
+   <xsd:element name="numeric" type="NumericType"/>
+   <xsd:element name="quantity" type="QuantityType"/>
+   <xsd:element name="refID" type="IDReferenceType"/>
+   <xsd:element name="startDate" type="StartDateType"/>
+   <xsd:element name="startTime" type="StartTimeType"/>
+   <xsd:element name="text" type="dt:TextType"/>
+   <xsd:element name="title" type="TitleType"/>
+   <xsd:element name="time" type="TimeType"/>
+   <xsd:element name="type" type="TypeType"/>
+   <xsd:element name="uri" type="dt:URIType"/>
+   <xsd:element name="uuid" type="dt:IdentifierType"/>
+   <xsd:element name="versionInfo" type="VersionInfoType"/>
    
    <!-- ===== Entity Type Definitions ===== -->
    
+   <xsd:complexType name="AliasType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:NameType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="AmountType">
       <xsd:simpleContent>
          <xsd:extension base="dt:AmountType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="BinaryObjectType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:BinaryObjectType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="CodeType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="CopyIndicatorType">
@@ -82,58 +68,14 @@
          <xsd:extension base="dt:IndicatorType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   
-   <xsd:complexType name="BinaryObjectType">
+   <xsd:complexType name="DateType">
       <xsd:simpleContent>
-         <xsd:extension base="dt:BinaryObjectType"/>
+         <xsd:extension base="dt:DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   
    <xsd:complexType name="IRIType">
       <xsd:simpleContent>
          <xsd:extension base="dt:URIType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="MimeTypeCodeType">
-    <xsd:simpleContent>
-      <xsd:extension base="dt:CodeType">
-        <xsd:attribute name="priority" type="xsd:decimal" use="optional"/>
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>   
-   <xsd:complexType name="LongType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="LatType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="WktType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="GeographicIdentifier">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:URIType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>   
-   <xsd:complexType name="DateOfDeathType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:DateType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="DateOfBirthType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:DateType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="GenderType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="TitleType">
@@ -151,39 +93,19 @@
          <xsd:extension base="dt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="ModifiedType">
+   <xsd:complexType name="MeasureType">
       <xsd:simpleContent>
-         <xsd:extension base="dt:DateTimeType"/>
+         <xsd:extension base="dt:MeasureType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="IssuedType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:DateTimeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-      <xsd:complexType name="NumericType">
+   <xsd:complexType name="NumericType">
       <xsd:simpleContent>
          <xsd:extension base="dt:NumericType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="CodeType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="DateTimeType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:DateTimeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DescriptionType">      
       <xsd:simpleContent>
          <xsd:restriction base="dt:TextType"/>         
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="DescriptionCodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DurationMeasureType">
@@ -196,6 +118,11 @@
          <xsd:restriction base="dt:DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="EndPointType">
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:URIType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="EndTimeType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:TimeType"/>
@@ -205,10 +132,15 @@
       <xsd:simpleContent>
          <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
-   </xsd:complexType> 
+   </xsd:complexType>
    <xsd:complexType name="IndicatorType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="IDReferenceType">
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="QuantityType">
@@ -224,11 +156,6 @@
    <xsd:complexType name="StartDateType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:DateType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="ReferenceIDType">
-      <xsd:simpleContent>
-         <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="StartTimeType">
@@ -251,5 +178,4 @@
          <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>   
-</xsd:schema>   
-
+</xsd:schema>  

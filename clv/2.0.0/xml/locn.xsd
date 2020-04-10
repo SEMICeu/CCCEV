@@ -4,10 +4,27 @@
            targetNamespace="http://www.w3.org/ns/locn#"
            elementFormDefault="qualified"> 
 
-<xs:element name="Address" type="AddressType"/>
-<xs:element name="Location" type="LocationType"/>
+    <!-- Data properties declarations-->
+    <xs:element name="poBox" type="xs:string"/>
+    <xs:element name="thoroughfare" type="xs:string"/>
+    <xs:element name="locatorDesignator" type="xs:string"/>
+    <xs:element name="locatorName" type="xs:string"/>
+    <xs:element name="addressArea" type="xs:string"/>
+    <xs:element name="postName" type="xs:string"/>
+    <xs:element name="adminUnitLevel1" type="xs:string"/>
+    <xs:element name="adminUnitLevel2" type="xs:string"/>
+    <xs:element name="postCode" type="xs:string"/>
+    <xs:element name="addressId" type="xs:string"/>
+
+    <!-- Object properties declarations-->
+    <xs:element name="address" type="AddressType"/>
+
+    <!-- Classes declarations-->
+    <xs:element name="Address" type="AddressType"/>
+    <xs:element name="Location" type="LocationType"/>
     
-<xs:complexType name="AddressType">
+    <!-- Class definition -->
+    <xs:complexType name="AddressType">
     <xs:sequence>
         <xs:element name="fullAddress" type="xs:string">
             <xs:annotation>
@@ -19,22 +36,24 @@
                 </xs:appinfo>
             </xs:annotation>
         </xs:element>
-        <xs:element name="poBox" type="xs:string" minOccurs="0"/>
-        <xs:element name="thoroughfare" type="xs:string"/>
-        <xs:element name="locatorDesignator" type="xs:string"/>
-        <xs:element name="locatorName" type="xs:string" minOccurs="0"/>
-        <xs:element name="addressArea" type="xs:string" minOccurs="0"/>
-        <xs:element name="postName" type="xs:string"/>
-        <xs:element name="adminUnitLevel1" type="xs:string" minOccurs="0"/>
-        <xs:element name="adminUnitLevel2" type="xs:string" minOccurs="0"/>
-        <xs:element name="postCode" type="xs:string"/>
-        <xs:element name="addressId" type="xs:string" minOccurs="0"/>
+        <xs:element ref="poBox" minOccurs="0"/>
+        <xs:element ref="thoroughfare" minOccurs="0"/>
+        <xs:element ref="locatorDesignator" minOccurs="0"/>
+        <xs:element ref="locatorName" minOccurs="0"/>
+        <xs:element ref="addressArea" minOccurs="0"/>
+        <xs:element ref="postName" minOccurs="0"/>
+        <xs:element ref="adminUnitLevel1" minOccurs="0"/>
+        <xs:element ref="adminUnitLevel2" minOccurs="0"/>
+        <xs:element ref="postCode" minOccurs="0"/>
+        <xs:element ref="addressId" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:anyURI" use="required"></xs:attribute>
 </xs:complexType>
     
 <xs:complexType name="LocationType">
-    <xs:sequence/>
+    <xs:sequence>
+        <xs:element ref="address" minOccurs="0"/>
+    </xs:sequence>
 </xs:complexType>
 
 </xs:schema>

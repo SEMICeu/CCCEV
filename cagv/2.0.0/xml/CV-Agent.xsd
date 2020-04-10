@@ -5,7 +5,7 @@
 	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:dct="http://purl.org/dc/terms/"
-	xmlns:foaf="http://xmlns.com/foaf/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:org="http://www.w3.org/ns/org#"
 	xmlns:rov="http://www.w3.org/ns/regorg#"
@@ -14,32 +14,53 @@
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
+	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
-	<xsd:import namespace="http://xmlns.com/foaf/" schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
 	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../common/2.0.0/xml/regorg.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"></xsd:import>
 	
 	
-	<!-- Element declaration -->
-	<xsd:element name="Address" type="cac:AddressType"/>
-	<xsd:element name="Agent" type="AgentType"/>
-	<xsd:element name="Alias" type="cbc:NameType"/>
-	<xsd:element name="AvailabilityRestriction" type="OpeningHoursSpecificationType"></xsd:element>
+	<!-- Data properties -->	
+	<xsd:element name="alias" type="cbc:NameType"/>
+	<xsd:element name="alternativeName" type="cbc:NameType"/>
+	<xsd:element name="birthFamilyName" type="cbc:NameType"/>
+	<xsd:element name="dateOfBirth" type="cbc:DateType"/>
+	<xsd:element name="dateOfDeath" type="cbc:DateType"/>
+	<xsd:element name="email" type="cbc:URIType"/>
+	<xsd:element name="familyName" type="cbc:NameType"/>
+	<xsd:element name="fax" type="cbc:TextType"/>
+	<xsd:element name="fullName" type="cbc:NameType"/>
+	<xsd:element name="gender" type="cbc:CodeType"/>
+	<xsd:element name="givenName" type="cbc:NameType"/>
+	<xsd:element name="hasPersonRole" type="cbc:IDReferenceType"/>
+	<xsd:element name="internetAddress" type="cbc:URIType"/>
+	<xsd:element name="isRoleOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="patronimicName" type="cbc:NameType"/>
+	<xsd:element name="telephone" type="cbc:TextType"/>
+
+	<!-- Object properties -->
+	<xsd:element name="address" type="AddressType"/>
+	<xsd:element name="hasAvailabilityRestriction" type="OpeningHoursSpecificationType"></xsd:element>
+	<xsd:element name="hasContactPoint" type="ContactPointType"/>
+	<xsd:element name="hasChannel" type="ChannelType"/>
+	<xsd:element name="hasCountryOfBirth" type="lcn:LocationType"/>
+	<xsd:element name="hasCountryOfDeath" type="lcn:LocationType"/>
+	<xsd:element name="hasInterval" type="cac:PeriodType"/>
+	<xsd:element name="hasLegalLocation" type="lcn:LocationType"/>
+	<xsd:element name="hasPlaceOfBirth" type="lcn:LocationType"/>
+	<xsd:element name="hasPlaceOfDeath" type="lcn:LocationType"/>
+	<xsd:element name="isRoleOfContactPerson" type="ContactPointType"/>
+	<xsd:element name="playsRole" type="RoleType"/>
+
+	<!-- Classes -->
+	<xsd:element name="Agent" type="AgentType"/>	
+	<xsd:element name="Channel" type="ChannelType"/>
 	<xsd:element name="ContactPoint" type="ContactPointType"/>
-	<xsd:element name="Description" type="cbc:DescriptionType"/>
-	<xsd:element name="Endpoint" type="cbc:URIType"/>
-	<xsd:element name="Email" type="cbc:URIType"/>
-	<xsd:element name="Fax" type="cbc:TextType"/>
-	<xsd:element name="ID" type="cbc:IDType"/>
-	<xsd:element name="InternetAddress" type="cbc:URIType"/>
-	<xsd:element name="IntervalPeriod" type="cac:PeriodType"/>
-	<xsd:element name="PlayedByAgentIDRef" type="cbc:ReferenceIDType"/>
+	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="Role" type="RoleType"/>
-	<xsd:element name="Telephone" type="cbc:TextType"/>
-	
 
 	<!--
 	<xsd:element name="Business" type="BusinessType"/>
@@ -59,21 +80,29 @@
 	
 	<xsd:group name="Agent">
 		<xsd:sequence>
-			<xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Alias" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Role" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="alias" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="playsRole" minOccurs="0" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="Role">
 		<xsd:sequence>
-			<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:Type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="PlayedByAgentIDRef" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="ContactPoint" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="isRoleOf" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasContactPoint" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:group>
+	
+	<xsd:complexType name="AddressType">
+		<xsd:complexContent>
+			<xsd:extension base="cac:AddressType">
+			
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
 	<xsd:complexType name="AgentType">
 		<xsd:complexContent>
 			<xsd:extension base="foaf:AgentType">
@@ -99,47 +128,48 @@
 		
 	<xsd:complexType name="ChannelType">
 		<xsd:sequence>
-			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Endpoint" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="AvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:endPoint" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="hasAvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>	
 	</xsd:complexType>
 	
 
 	<xsd:complexType name="ContactPointType">
 		<xsd:sequence>
-			<xsd:element ref="Email" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Fax" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Telephone" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="InternetAddress" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="Channel" minOccurs="0" maxOccurs="unbounded"/>	
-			<xsd:element name="AvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="email" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="fax" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="telephone" minOccurs="1" maxOccurs="1"/>
+			<xsd:element ref="internetAddress" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="hasChannel" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element name="hasPersonRole" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="hasAvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>		
 	</xsd:complexType>
 	
 	
 	<xsd:complexType name="OpeningHoursSpecificationType">
 		<xsd:sequence>
-			<xsd:element name="Description" type="cbc:DescriptionType"/>
-			<xsd:element ref="IntervalPeriod" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasInterval" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	
-	
+	<!--
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="org:OrganizationType">
 				<xsd:sequence>
 					<xsd:group ref="Agent"/>
-					<xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="lcn:Location"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	
+	-->
 	<!--
 	<xsd:complexType name="FormalOrganizationType">
 		<xsd:complexContent>
@@ -162,30 +192,32 @@
 		</xsd:complexContent>		
 	</xsd:complexType>
 	-->
-	<!--
+	
 	<xsd:complexType name="PersonType">
 		<xsd:complexContent>
 			<xsd:extension base="foaf:PersonType">
 				<xsd:sequence>
-					<xsd:element name="AlternativeName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="BirthFamilyName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="CountryOfBirth" type="lcn:LocationType"/>
-					<xsd:element name="CountryOfDeath" type="lcn:LocationType"/>
-					<xsd:element name="DateOfBirth" type="cbc:DateOfBirthType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="DateOfDeath" type="cbc:DateOfDeathType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="FamilyName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="FullName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="Gender" type="cbc:CodeType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="GivenName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="LegalLocation" type="lcn:LocationType"/>
-					<xsd:element name="PatronimicName" type="cbc:NameType"  minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="PlaceOfBirth" type="lcn:LocationType"/>
-					<xsd:element name="PlaceOfDeath" type="lcn:LocationType"/>
+					<xsd:element ref="fullName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="familyName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="givenName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="patronimicName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="alternativeName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="birthFamilyName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="gender" minOccurs="0"/>
+					<xsd:element ref="dateOfBirth" minOccurs="0"/>
+					<xsd:element ref="dateOfDeath" minOccurs="0"/>
+					<xsd:element ref="hasLegalLocation" minOccurs="0"/>
+					<xsd:element ref="hasCountryOfBirth" minOccurs="0"/>
+					<xsd:element ref="hasCountryOfDeath" minOccurs="0"/>
+					<xsd:element ref="hasPlaceOfBirth" minOccurs="0"/>
+					<xsd:element ref="hasPlaceOfDeath" minOccurs="0"/>
+					
+					
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
+	
 	<!--
 	<xsd:complexType name="PublicOrganizationType">
 		<xsd:complexContent>

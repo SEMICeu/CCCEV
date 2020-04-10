@@ -3,14 +3,13 @@
 <xsd:schema xmlns="http://www.w3.org/ns/org#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:org="http://www.w3.org/ns/org#"
-	xmlns:foaf="http://xmlns.com/foaf/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	targetNamespace="http://www.w3.org/ns/org#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	
 	<xsd:import
-		namespace="http://xmlns.com/foaf/"
-		schemaLocation="../xml/foaf.xsd"/>
+		namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../xml/foaf.xsd"/>
 	
 	<!-- Element declaration -->
 	

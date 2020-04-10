@@ -2,68 +2,72 @@
 <!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
 <xsd:schema xmlns="http://purl.org/dc/terms/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:foaf="http://xmlns.com/foaf/"
-	xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	
 	targetNamespace="http://purl.org/dc/terms/" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 
-	<xsd:import namespace="http://xmlns.com/foaf/" schemaLocation="../xml/foaf.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/common/dataTypes-2.0.0#" schemaLocation="./CV-DataTypes.xsd"/>
-	
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="./foaf.xsd"/>
 	
 	<!-- Element declaration -->
 	
 	<!-- The objective of this declaration is to state that the dct terms Agent is an equivalent class of foaf:Agent. We do not intend
 	to extend the dct Agents; this should be done by DCMI.-->
 	
-	<xsd:element name="Agent" type="foaf:AgentType"/>
-	<xsd:element name="creator" type="foaf:AgentType"/>
-	<xsd:element name="description" type="dt:TextType"/>
-	<xsd:element name="EndDate" type="dt:DateType"/>
-	<xsd:element name="Language" type="dt:CodeType"/>
-	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>
-	<xsd:element name="identifier" type="identifierType"/>
-	<xsd:element name="issued" type="dt:DateType"/>
-	<xsd:element name="modified" type="dt:DateTimeType"/>
-	<!-- check how DCMI defines MediaType...and update this...Can MediaType to mean MimeType? is so then the cbc:MimeTypeCodeType should extend MediaType -->
-	<xsd:element name="MediaType" type="dt:CodeType"/>
-	<xsd:element name="PeriodOfTime" type="PeriodOfTimeType"/>
+	<!-- Data properties --> 
+	<xsd:element name="description" type="xsd:string"/>
+	<xsd:element name="endDate" type="xsd:date"/>
+	<xsd:element name="identifier" type="xsd:normalizedString"/>
+	<xsd:element name="issued" type="xsd:dateTime"/>
+	<xsd:element name="modified" type="xsd:dateTime"/>
 	<xsd:element name="publisher" type="foaf:AgentType"/>
-	<xsd:element name="StartDate" type="dt:DateType"/>
-	<xsd:element name="title" type="dt:TextType"/>
-	<xsd:element name="type" type="dt:CodeType"/>
+	<xsd:element name="startDate" type="xsd:date"/>
+	<xsd:element name="title" type="xsd:string"/>
+	<xsd:element name="type" type="xsd:anyURI"/>
 	
-	<!-- If the need is to extend dct:Agent, then use the following structure below: -->
+	<!-- Object properties -->
+	<xsd:element name="creator" type="foaf:AgentType"/>
+	<xsd:element name="format" type="MediaType"/>
+	<xsd:element name="language" type="LinguisticSystemType"/>
+	<xsd:element name="acccessRights" type="RightStatementType"/>
+	<xsd:element name="relation" type="xsd:anyType"/>
+	<xsd:element name="temporal" type="PeriodOfTimeType"/>
 	
-		<xsd:complexType name="AgentType">
+	<!-- Class declaration -->
+	<xsd:element name="Code" type="CodeType"/>
+	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>
+	<xsd:element name="Media" type="MediaType"/>
+	<xsd:element name="RightStatement" type="RightStatementType"/>
+
+	<!-- Class definitions -->
+	<xsd:complexType name="CodeType">
 		<xsd:complexContent>
-			<xsd:extension base="foaf:AgentType">
-				<xsd:sequence>
-				</xsd:sequence>
-			</xsd:extension>		
+				<xsd:extension base="xsd:anyType"/>		
 		</xsd:complexContent>
 	</xsd:complexType>
-	
-	<xsd:complexType name="LinguisticSystemType">
-		<xsd:sequence>
-			<xsd:element ref="Language" minOccurs="0" maxOccurs="unbounded"/>
-			</xsd:sequence>	
-	</xsd:complexType>
-	
-	
-	<xsd:complexType name="identifierType">
+
+	<xsd:simpleType name="LinguisticSystemType">
+		<xsd:restriction base="xsd:anyURI"/>	
+	</xsd:simpleType>
+
+	<xsd:complexType name="MediaType">
 		<xsd:complexContent>
-			<xsd:extension base="dt:IdentifierType">
-				<xsd:sequence/>
-			</xsd:extension>
+				<xsd:extension base="xsd:anyType"/>		
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="PeriodOfTimeType">
 		<xsd:sequence>
-			<xsd:element ref="StartDate" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="EndDate" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="startDate" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="endDate" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>	
 	</xsd:complexType>
+
+	<xsd:complexType name="RightStatementType">
+		<xsd:complexContent>
+				<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
+	</xsd:complexType>
+	
 </xsd:schema>

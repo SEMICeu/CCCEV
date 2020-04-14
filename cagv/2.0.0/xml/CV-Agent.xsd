@@ -59,6 +59,7 @@
 	<xsd:element name="Agent" type="AgentType"/>	
 	<xsd:element name="Channel" type="ChannelType"/>
 	<xsd:element name="ContactPoint" type="ContactPointType"/>
+	<xsd:element name="Organization" type="OrganizationType"/>
 	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="Role" type="RoleType"/>
 
@@ -67,7 +68,7 @@
 	<xsd:element name="Channel" type="ChannelType"/>
 	<xsd:element name="ContactPoint" type="ContactPointType"/>
 	<xsd:element name="OpeningHoursSpecificationHours" type="OpeningHoursSpecificationType"/>
-	<xsd:element name="Organization" type="OrganizationType"/>
+	
 	<xsd:element name="OwnedByIDRef" type="cbc:IDRefType"/>
 	<xsd:element name="FormalOrganization" type="FormalOrganizationType"/>
 	<xsd:element name="Location" type="lcn:LocationType"/>
@@ -158,18 +159,17 @@
 		</xsd:sequence>
 	</xsd:complexType>
 	
-	<!--
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
-			<xsd:extension base="org:OrganizationType">
+			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:group ref="Agent"/>
-					<xsd:element ref="lcn:Location"/>
+					<xsd:element ref="lcn:Location"></xsd:element>
+					<xsd:element ref="cbc:name"/>					
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
+	
 	<!--
 	<xsd:complexType name="FormalOrganizationType">
 		<xsd:complexContent>

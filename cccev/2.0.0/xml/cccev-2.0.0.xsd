@@ -75,12 +75,11 @@
 	<xsd:element name="hasEvidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="hasEvidenceTypeCombinationList" type="EvidenceTypeListType"/>
 	<xsd:element name="hasImposedConstraint" type="ConstraintType"/>
+	<xsd:element name="hasProvider" type="cagv:AgentType"/>
 	<xsd:element name="hasQualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="hasRequirement" type="RequirementType"/>
-	<xsd:element name="hasValue" type="ValueType"/>
-	<xsd:element name="hasSupportingvidence" type="EvidenceType"/>
-	<xsd:element name="hasProvider" type="cagv:AgentType"/>
 	<xsd:element name="hasSupportingEvidence" type="EvidenceType"/>
+	<xsd:element name="hasValue" type="ValueType"/>
 	<xsd:element name="hasPeriodValue" type="cac:PeriodType"/>
 	<xsd:element name="hasValidityPeriod" type="cac:PeriodType"/>		
 	<xsd:element name="isRepresentedByEvidence" type="EvidenceType"/>
@@ -210,7 +209,9 @@
 	<xsd:complexType name="ReferenceFrameworkType">
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
-				<xsd:sequence/>
+				<xsd:sequence>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>

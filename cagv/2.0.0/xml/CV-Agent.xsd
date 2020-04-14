@@ -109,7 +109,7 @@
 			<xsd:extension base="foaf:AgentType">
 			<xsd:sequence>
 				<xsd:group ref="Agent"/>
-			<xsd:group ref="Role"/>
+			<xsd:element ref="Role" minOccurs="0" maxOccurs="unbounded"/>
 			</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -163,8 +163,8 @@
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:element ref="lcn:Location"></xsd:element>
-					<xsd:element ref="cbc:name"/>					
+					<xsd:element ref="lcn:Location" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+					<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded"/>					
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		

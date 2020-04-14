@@ -165,6 +165,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="cbc:title" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="confidentialityLevel" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="error" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="informationRequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
@@ -227,7 +230,7 @@
 			<xsd:element ref="hasRequirement" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="hasSupportingEvidence" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="supportsRequirement" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="isPartOfRequirement" minOccurs="0"/>
+			<xsd:element ref="isPartOfRequirement" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="hasQualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
 			
 			<xsd:element ref="derivesFromReferenceFramework" minOccurs="0" maxOccurs="unbounded"/>

@@ -14,7 +14,7 @@
  xmlns:ccts="urn:un:unece:uncefact:documentation:2"
  xmlns:ns0="http://example.org/"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://example.org/ file:/C:/Users/estaromi/everis/SEMIC%20-%20General/03%20GitHub/CCCEV/ndr/Requirement-Polymorphism-example.xsd">
+ xsi:schemaLocation="http://example.org/ file:/C:/Users/jrevenga/Documents/git/SEMIC/CoreVocabularies/CCCEV/ndr/Requirement-Polymorphism-example.xsd">
     <cccev:Requirement xsi:type="cccev:CriterionType">
         <cbc:id>id0</cbc:id>
         <cbc:id>id1</cbc:id>
@@ -1803,19 +1803,27 @@
                 <dct:endDate>2006-05-04</dct:endDate>
             </dct:temporal>
             <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+                
                 <dct:issued>2006-05-04T18:13:51.0</dct:issued>
                 <dct:title>title114</dct:title>
                 <dct:title>title115</dct:title>
+                
                 <dct:description>description114</dct:description>
                 <dct:description>description115</dct:description>
+                <dct:creator>
+                    
+                </dct:creator>
                 <dct:format>
                 </dct:format>
                 <dct:format>
                 </dct:format>
+                
                 <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
                 <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
+                <
                 <foaf:topic>ESPD Request for Procurement Procedure ES-5789-2020#132 about the procurement of secured printers for the Ministry of Home Affairs</foaf:topic>
-                <foaf:primaryTopic>ESPD Request</foaf:primaryTopic>                
+                <foaf:primaryTopic>ESPD Request</foaf:primaryTopic> 
+            
             </dcat-ap:distribution>
             <dcat-ap:distribution>
                 <dct:issued>2006-05-04T18:13:51.0</dct:issued>

@@ -56,6 +56,7 @@
   <xsd:element name="Error" type="ErrorType"/>
   <xsd:element name="ErrorCode" type="cbc:CodeType"/>
   <xsd:element name="ErrorIndicator" type="cbc:IndicatorType"/>
+  <xsd:element name="Evidence" type="cccev:EvidenceType"/>
   <xsd:element name="EvidenceRequest" type="EvidenceRequestType"/>
   <xsd:element name="EvidenceResponse" type="EvidenceResponseType"/>
   <xsd:element name="EvidenceType" type="cccev:EvidenceTypeType"/>
@@ -63,7 +64,7 @@
   <xsd:element name="FirstName" type="cbc:NameType"/>
   <xsd:element name="GenderCode" type="cbc:CodeType"/>
   <xsd:element name="ID" type="cbc:IDType"/>
-  <xsd:element name="InformationRequirement" type="cccev:InformationRequirementType"/>
+  <xsd:element name="Requirement" type="cccev:RequirementType"/>
   <xsd:element name="IssueDate" type="cbc:DateTimeType"/>
   <xsd:element name="IssuePlace" type="cbc:TextType"/>
   <xsd:element name="LegalAddress" type="cac:AddressType"/>
@@ -184,9 +185,7 @@
       <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="InformationRequirement" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -261,6 +260,7 @@
           <xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceResponse" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
           
           <!--  

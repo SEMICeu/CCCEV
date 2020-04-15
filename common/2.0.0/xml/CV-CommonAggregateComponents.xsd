@@ -24,7 +24,7 @@
    <xsd:element name="citySubdivisionName" type="cbc:TextType"/>
    <xsd:element name="countryCode" type="cbc:CodeType"/>
    <xsd:element name="countrySubentity" type="cbc:TextType"/>
-   <xsd:element name="countrySubentityCode" type="cbc:CodeType"/>
+   <xsd:element name="hasCountrySubentityCode" type="cbc:CodeType"/>
    <xsd:element name="department" type="cbc:TextType"/>
    <xsd:element name="description" type="cbc:DescriptionType"/>
    <xsd:element name="district" type="cbc:TextType"/>
@@ -74,7 +74,7 @@
                <xsd:element ref="cityName" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="postalZone" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="countrySubentity" minOccurs="0" maxOccurs="1"/>
-               <xsd:element ref="countrySubentityCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="hasCountrySubentityCode" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="region" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="district" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="timezoneOffset" minOccurs="0" maxOccurs="1"/>

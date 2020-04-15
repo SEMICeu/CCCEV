@@ -38,10 +38,15 @@
 	<xsd:element name="fullName" type="cbc:NameType"/>
 	<xsd:element name="gender" type="cbc:CodeType"/>
 	<xsd:element name="givenName" type="cbc:NameType"/>
+	<xsd:element name="hasCitizenship" type="cbc:CodeType"/>
+	<xsd:element name="hasLegalForm" type="cbc:CodeType"/>
 	<xsd:element name="hasPersonRole" type="cbc:IDReferenceType"/>
 	<xsd:element name="internetAddress" type="cbc:URIType"/>
+	<xsd:element name="isOwnedBy" type="cbc:IDReferenceType"/>
 	<xsd:element name="isRoleOf" type="cbc:IDReferenceType"/>
 	<xsd:element name="patronimicName" type="cbc:NameType"/>
+	<xsd:element name="size" type="cbc:CodeType"/>
+	<xsd:element name="taxIdentifier" type="cbc:IDType"/>
 	<xsd:element name="telephone" type="cbc:TextType"/>
 
 	<!-- Object properties -->
@@ -53,6 +58,9 @@
 	<xsd:element name="hasCountryOfDeath" type="lcn:LocationType"/>
 	<xsd:element name="hasInterval" type="cac:PeriodType"/>
 	<xsd:element name="hasLegalLocation" type="lcn:LocationType"/>
+	<xsd:element name="hasLocation" type="lcn:LocationType"/>
+	<xsd:element name="hasFormalLocation" type="lcn:LocationType"/>
+	<xsd:element name="hasRegisteredLocation" type="lcn:LocationType"/>
 	<xsd:element name="hasPlaceOfBirth" type="lcn:LocationType"/>
 	<xsd:element name="hasPlaceOfDeath" type="lcn:LocationType"/>
 	<xsd:element name="isRoleOfContactPerson" type="ContactPointType"/>
@@ -65,15 +73,16 @@
 	<xsd:element name="Organization" type="OrganizationType"/>
 	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="Role" type="RoleType"/>
+	<xsd:element name="System" type="SystemType"/>
 
 	<xsd:element name="OpeningHoursSpecificationHours" type="OpeningHoursSpecificationType"/>
 	
-	<xsd:element name="OwnedByIDRef" type="cbc:IDReferenceType"/>
+	
 	<xsd:element name="FormalOrganization" type="FormalOrganizationType"/>
 	<xsd:element name="Location" type="lcn:LocationType"/>
 	<xsd:element name="PublicOrganization" type="PublicOrganizationType"/>
 	<xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
-	<xsd:element name="System" type="SystemType"/>
+	
 
 	<!-- Element definition -->
 	
@@ -88,7 +97,7 @@
 		<xsd:sequence>
 			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:type" minOccurs="0"/>
 			<xsd:element ref="isRoleOf" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="hasContactPoint" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
@@ -96,9 +105,9 @@
 	
 	<xsd:complexType name="AddressType">
 		<xsd:complexContent>
-			<xsd:extension base="cac:AddressType">
+			<xsd:extension base="cac:AddressType"/>
 			
-			</xsd:extension>
+			
 		</xsd:complexContent>
 	</xsd:complexType>
 
@@ -108,6 +117,7 @@
 			<xsd:sequence>
 				<xsd:group ref="Agent"/>
 			<xsd:element ref="Role" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasLocation" minOccurs="0" maxOccurs="unbounded"/>
 			</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -118,7 +128,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="RegisteredOrganizationType">
 				<xsd:sequence>
-					<xsd:element name="Size" type="cbc:CodeType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="size" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -128,9 +138,9 @@
 	<xsd:complexType name="ChannelType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:type" minOccurs="0"/>
 			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:endPoint" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="cbc:endPoint" minOccurs="0"/>
 			<xsd:element ref="hasAvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>	
 	</xsd:complexType>
@@ -139,13 +149,13 @@
 	<xsd:complexType name="ContactPointType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="email" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="fax" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="telephone" minOccurs="1" maxOccurs="1"/>
-			<xsd:element ref="internetAddress" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="hasChannel" minOccurs="0" maxOccurs="unbounded"/>	
-			<xsd:element name="hasPersonRole" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="hasAvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element ref="email" minOccurs="0"/>
+			<xsd:element ref="fax" minOccurs="0"/>
+			<xsd:element ref="telephone" minOccurs="0"/>
+			<xsd:element ref="internetAddress" minOccurs="0"/>
+			<xsd:element ref="hasChannel" minOccurs="0" maxOccurs="unbounded"/>	
+			<xsd:element ref="hasPersonRole" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasAvailabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
 		</xsd:sequence>		
 	</xsd:complexType>
 	
@@ -157,18 +167,18 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:group name="OrganisationElements">
+	<xsd:group name="org_OrganizationElements">
 		<xsd:sequence>
 			<xsd:element ref="skos:prefLabel" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="skos:altLabel" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="lcn:Location" minOccurs="0" maxOccurs="unbounded"></xsd:element>			
+			<xsd:element ref="lcn:Location" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:group ref="OrganisationElements"/>
+					<xsd:group ref="org_OrganizationElements"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -176,10 +186,12 @@
 	
 	<xsd:complexType name="FormalOrganizationType">
 		<xsd:complexContent>
-			<xsd:extension base="AgentType">
+			<xsd:extension base="OrganizationType">
 				<xsd:sequence>
-					<xsd:group ref="OrganisationElements"/>
-					<xsd:element ref="formalName" minOccurs="0" maxOccurs="unbounded"/>
+					<!-- Org:FormalOrganization has no attributes. No need to include a group of org:FormalOrganization elements. -->
+					<xsd:element ref="taxIdentifier" minOccurs="0"/>
+					<xsd:element ref="formalName" minOccurs="0"/>
+					<xsd:element ref="hasFormalLocation" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -204,17 +216,18 @@
 					<xsd:element ref="fullName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="familyName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="givenName" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="patronimicName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="patronimicName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="alternativeName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="birthFamilyName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="gender" minOccurs="0"/>
 					<xsd:element ref="dateOfBirth" minOccurs="0"/>
 					<xsd:element ref="dateOfDeath" minOccurs="0"/>
 					<xsd:element ref="hasLegalLocation" minOccurs="0"/>
-					<xsd:element ref="hasCountryOfBirth" minOccurs="0"/>
-					<xsd:element ref="hasCountryOfDeath" minOccurs="0"/>
-					<xsd:element ref="hasPlaceOfBirth" minOccurs="0"/>
-					<xsd:element ref="hasPlaceOfDeath" minOccurs="0"/>					
+					<xsd:element ref="hasCitizenship" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="hasCountryOfBirth" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="hasCountryOfDeath" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="hasPlaceOfBirth" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="hasPlaceOfDeath" minOccurs="0" maxOccurs="unbounded"/>					
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -223,9 +236,7 @@
 	<xsd:complexType name="PublicOrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="FormalOrganizationType">
-				<xsd:sequence>
-					<xsd:element name="FormalLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
-				</xsd:sequence>
+				<xsd:sequence/>				
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
@@ -235,9 +246,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="OrganizationType">
 				<xsd:sequence>
-					<xsd:element name="LegalForm" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element name="RegisteredLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element name="TaxRegisteredID" type="cbc:IDReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="rov:LegalName" minOccurs="0"/>
+					<xsd:element ref="hasLegalForm" minOccurs="0"/>
+					<xsd:element ref="hasRegisteredLocation" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
@@ -253,7 +264,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:element name="OwnedByRefID"></xsd:element>
+					<xsd:element name="isOwnedBy"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>				

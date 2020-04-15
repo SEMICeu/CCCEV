@@ -4,12 +4,13 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:org="http://www.w3.org/ns/org#"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	targetNamespace="http://www.w3.org/ns/org#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	
-	<xsd:import
-		namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../xml/foaf.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../xml/foaf.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../xml/skos.xsd"/>
 	
 	<!-- Element declaration -->
 	
@@ -23,6 +24,8 @@
 		<xsd:complexContent>
 			<xsd:extension base="foaf:OrganizationType">
 				<xsd:sequence>
+					<xsd:element ref="skos:prefLabel" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="skos:altLabel" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>		
 		</xsd:complexContent>

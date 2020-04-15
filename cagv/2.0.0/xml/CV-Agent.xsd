@@ -9,6 +9,7 @@
 	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:org="http://www.w3.org/ns/org#"
 	xmlns:rov="http://www.w3.org/ns/regorg#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	targetNamespace="https://semic.org/sa/cv/cagv/agent-2.0.0#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
@@ -21,6 +22,7 @@
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
 	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../common/2.0.0/xml/regorg.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../xml/skos.xsd"/>
 	
 	
 	<!-- Data properties -->	
@@ -32,6 +34,7 @@
 	<xsd:element name="email" type="cbc:URIType"/>
 	<xsd:element name="familyName" type="cbc:NameType"/>
 	<xsd:element name="fax" type="cbc:TextType"/>
+	<xsd:element name="formalName" type="cbc:NameType"/>
 	<xsd:element name="fullName" type="cbc:NameType"/>
 	<xsd:element name="gender" type="cbc:CodeType"/>
 	<xsd:element name="givenName" type="cbc:NameType"/>
@@ -63,20 +66,15 @@
 	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="Role" type="RoleType"/>
 
-	<!--
-	<xsd:element name="Business" type="BusinessType"/>
-	<xsd:element name="Channel" type="ChannelType"/>
-	<xsd:element name="ContactPoint" type="ContactPointType"/>
 	<xsd:element name="OpeningHoursSpecificationHours" type="OpeningHoursSpecificationType"/>
 	
-	<xsd:element name="OwnedByIDRef" type="cbc:IDRefType"/>
+	<xsd:element name="OwnedByIDRef" type="cbc:IDReferenceType"/>
 	<xsd:element name="FormalOrganization" type="FormalOrganizationType"/>
 	<xsd:element name="Location" type="lcn:LocationType"/>
-	<xsd:element name="Person" type="PersonType"/>
 	<xsd:element name="PublicOrganization" type="PublicOrganizationType"/>
 	<xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
 	<xsd:element name="System" type="SystemType"/>
-	-->
+
 	<!-- Element definition -->
 	
 	<xsd:group name="Agent">
@@ -115,7 +113,7 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	
-	<!--
+	
 	<xsd:complexType name="BusinessType">
 		<xsd:complexContent>
 			<xsd:extension base="RegisteredOrganizationType">
@@ -125,7 +123,7 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
+	
 		
 	<xsd:complexType name="ChannelType">
 		<xsd:sequence>
@@ -158,30 +156,36 @@
 			<xsd:element ref="hasInterval" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
+	<xsd:group name="OrganisationElements">
+		<xsd:sequence>
+			<xsd:element ref="skos:prefLabel" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="skos:altLabel" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="lcn:Location" minOccurs="0" maxOccurs="unbounded"></xsd:element>			
+		</xsd:sequence>
+	</xsd:group>
 	<xsd:complexType name="OrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:element ref="lcn:Location" minOccurs="0" maxOccurs="unbounded"></xsd:element>
-					<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded"/>					
+					<xsd:group ref="OrganisationElements"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
 	
-	<!--
 	<xsd:complexType name="FormalOrganizationType">
 		<xsd:complexContent>
-			<xsd:extension base="org:FormalOrganizationType">
+			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:element name="FormalName" type="cbc:NameType" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:group ref="OrganisationElements"/>
+					<xsd:element ref="formalName" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
-	<!--
+	
+	
 	<xsd:complexType name="LocationType">
 		<xsd:complexContent>
 			<xsd:extension base="lcn:LocationType">
@@ -191,7 +195,7 @@
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
+	
 	
 	<xsd:complexType name="PersonType">
 		<xsd:complexContent>
@@ -210,45 +214,41 @@
 					<xsd:element ref="hasCountryOfBirth" minOccurs="0"/>
 					<xsd:element ref="hasCountryOfDeath" minOccurs="0"/>
 					<xsd:element ref="hasPlaceOfBirth" minOccurs="0"/>
-					<xsd:element ref="hasPlaceOfDeath" minOccurs="0"/>
-					
-					
+					<xsd:element ref="hasPlaceOfDeath" minOccurs="0"/>					
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
 	
-	<!--
 	<xsd:complexType name="PublicOrganizationType">
 		<xsd:complexContent>
 			<xsd:extension base="FormalOrganizationType">
 				<xsd:sequence>
-					<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="FormalLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
 	</xsd:complexType>
-	-->
 	
-<!--	<xsd:complexType name="RegisteredOrganizationType">
+	
+	<xsd:complexType name="RegisteredOrganizationType">
 		<xsd:complexContent>
-			<xsd:extension base="rov:RegisteredOrganizationType">
+			<xsd:extension base="OrganizationType">
 				<xsd:sequence>
 					<xsd:element name="LegalForm" type="cbc:CodeType" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element name="RegisteredLocation" type="lcn:LocationType" minOccurs="0" maxOccurs="1"/>
-				<!-\-	<xsd:element name="TaxRegisteredID" type="cbc:IDRefType" minOccurs="0" maxOccurs="unbounded"/>-\->
+					<xsd:element name="TaxRegisteredID" type="cbc:IDReferenceType" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>		
-	</xsd:complexType>-->
+	</xsd:complexType>
 	
 	<xsd:complexType name="RoleType">
 		<xsd:sequence>
 			<xsd:group ref="Role"/>
 		</xsd:sequence>				
 	</xsd:complexType>
-	<!--
+	
 	<xsd:complexType name="SystemType">
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
@@ -258,5 +258,5 @@
 			</xsd:extension>
 		</xsd:complexContent>				
 	</xsd:complexType>
-	-->		
+			
 </xsd:schema>

@@ -7,6 +7,12 @@
     attributeFormDefault="unqualified">
     
     <!-- Element declaration -->
+
+    <!-- Data properties -->
+
+    <xsd:element name="prefLabel" type="xsd:string"/>
+    <xsd:element name="altLabel" type="xsd:string"/>
+    
     <xsd:element name="Concept" type="ConceptType"/>
     <xsd:element name="Definition" type="DefinitionType"/>
 

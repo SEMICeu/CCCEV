@@ -39,13 +39,13 @@
 	<xsd:complexType name="DatasetType">
 		<xsd:sequence>
 			<xsd:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="dct:modified" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:type" minOccurs="0"/>
+			<xsd:element ref="dct:issued" minOccurs="0"/>
+			<xsd:element ref="dct:modified" minOccurs="0"/>
 			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:language" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:creator" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:creator" minOccurs="0"/>
 			<xsd:element ref="dct:publisher" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="distribution" minOccurs="0" maxOccurs="unbounded"/>
@@ -55,6 +55,7 @@
 
 	<xsd:complexType name="DataServiceType">
 		<xsd:sequence>
+			<xsd:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:title" minOccurs="1"/>
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:acccessRights" minOccurs="0" maxOccurs="1"/>

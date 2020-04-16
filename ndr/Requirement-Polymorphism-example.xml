@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:RequirementsCollection xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
- xmlns:dct="http://purl.org/dc/terms/"
- xmlns:foaf="http://xmlns.com/foaf/0.1/"
- xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
- xmlns:lcn="http://www.w3.org/ns/locn#"
- xmlns:org="http://www.w3.org/ns/org#"
- xmlns:dcat-ap="http://data.europa.eu/r5r/"
+<ns0:RequirementsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://example.org/ Requirement-Polymorphism-example.xsd"
+ xmlns:dcat-ap="http://data.europa.eu/r5r/" xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
  xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
- xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
- xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
- xmlns:rov="http://www.w3.org/ns/regorg#"
  xmlns:udt="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
- xmlns:ccts="urn:un:unece:uncefact:documentation:2"
- xmlns:ns0="http://example.org/"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://example.org/ file:/C:/Users/jrevenga/Documents/git/SEMIC/CoreVocabularies/CCCEV/ndr/Requirement-Polymorphism-example.xsd">
-    <cccev:Requirement xsi:type="cccev:CriterionType">
+ xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" xmlns:org="http://www.w3.org/ns/org#"
+ xmlns:ns0="http://example.org/" xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:lcn="http://www.w3.org/ns/locn#"
+ xmlns:rov="http://www.w3.org/ns/regorg#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <cccev:requirement xsi:type="cccev:CriterionType">
         <cbc:id>id0</cbc:id>
         <cbc:id>id1</cbc:id>
         <cbc:name>name0</cbc:name>
@@ -23,7 +17,7 @@
         <cbc:description>description0</cbc:description>
         <cbc:description>description1</cbc:description>
         <cbc:type>type0</cbc:type>
-        <cccev:referencesConcept xsi:type="cccev:ConceptType">
+        <cccev:concept xsi:type="cccev:ConceptType">
             <cbc:id>id2</cbc:id>
             <cbc:id>id3</cbc:id>
             <cbc:name>name2</cbc:name>
@@ -32,325 +26,7 @@
             <cbc:type>type1</cbc:type>
             <cbc:namespace>namespace0</cbc:namespace>
             <cbc:namespace>namespace1</cbc:namespace>
-            <cccev:isRepresentedByEvidence xsi:type="cccev:EvidenceType">
-                <dct:identifier>identifier0</dct:identifier>
-                <dct:identifier>identifier1</dct:identifier>
-                <dct:type>http://www.oxygenxml.com/</dct:type>
-                <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                <dct:modified>2006-05-04T18:13:51.0</dct:modified>
-                <dct:title>title0</dct:title>
-                <dct:title>title1</dct:title>
-                <dct:description>description0</dct:description>
-                <dct:description>description1</dct:description>
-                <dct:language>http://www.oxygenxml.com/</dct:language>
-                <dct:language>http://www.oxygenxml.com/</dct:language>
-                <dct:creator/>
-                <dct:publisher/>
-                <dct:publisher/>
-                <dct:temporal>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                </dct:temporal>
-                <dct:temporal>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                </dct:temporal>
-                <dcat-ap:distribution>
-                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                    <dct:title>title2</dct:title>
-                    <dct:title>title3</dct:title>
-                    <dct:description>description2</dct:description>
-                    <dct:description>description3</dct:description>
-                    <dct:format>
-                    </dct:format>
-                    <dct:format>
-                    </dct:format>
-                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
-                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
-                </dcat-ap:distribution>
-                <dcat-ap:distribution>
-                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                    <dct:title>title4</dct:title>
-                    <dct:title>title5</dct:title>
-                    <dct:description>description4</dct:description>
-                    <dct:description>description5</dct:description>
-                    <dct:format>
-                    </dct:format>
-                    <dct:format>
-                    </dct:format>
-                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
-                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
-                </dcat-ap:distribution>
-                <dcat-ap:qualifiedRelation>
-                    <dct:relation>
-                    </dct:relation>
-                    <dct:relation>
-                    </dct:relation>
-                    <dcat-ap:hadRole>hadRole0</dcat-ap:hadRole>
-                    <dcat-ap:hadRole>hadRole1</dcat-ap:hadRole>
-                </dcat-ap:qualifiedRelation>
-                <cccev:confidentialityLevel>confidentialityLevel0</cccev:confidentialityLevel>
-                <cccev:error>error0</cccev:error>
-                <cccev:error>error1</cccev:error>
-                <cccev:informationRequirementIDRef>informationRequirementIDRef0</cccev:informationRequirementIDRef>
-                <cccev:informationRequirementIDRef>informationRequirementIDRef1</cccev:informationRequirementIDRef>
-                <cccev:conformsToEvidenceType>conformsToEvidenceType0</cccev:conformsToEvidenceType>
-                <cccev:conformsToEvidenceType>conformsToEvidenceType1</cccev:conformsToEvidenceType>
-                <cccev:supportsRequirement>supportsRequirement0</cccev:supportsRequirement>
-                <cccev:supportsRequirement>supportsRequirement1</cccev:supportsRequirement>
-                <cccev:representsConcept>representsConcept0</cccev:representsConcept>
-                <cccev:representsConcept>representsConcept1</cccev:representsConcept>
-                <cccev:isInEvidenceTypeList>isInEvidenceTypeList0</cccev:isInEvidenceTypeList>
-                <cccev:isInEvidenceTypeList xsi:type="cbc:IDReferenceType">isInEvidenceTypeList1</cccev:isInEvidenceTypeList>
-                <cccev:hasCreator>
-                    <cbc:id>id4</cbc:id>
-                    <cbc:id>id5</cbc:id>
-                    <cagv:alias>alias0</cagv:alias>
-                    <cagv:alias>alias1</cagv:alias>
-                    <cagv:playsRole xsi:type="cagv:RoleType">
-                    </cagv:playsRole>
-                    <cbc:name>name3</cbc:name>
-                    <cbc:name>name4</cbc:name>
-                    <cbc:description>description4</cbc:description>
-                    <cbc:description>description5</cbc:description>
-                    <cbc:type>type2</cbc:type>
-                    <cagv:isRoleOf>isRoleOf0</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf1</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone0</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone1</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasCreator>
-                <cccev:hasCreator>
-                    <cbc:id>id6</cbc:id>
-                    <cbc:id>id7</cbc:id>
-                    <cagv:alias>alias2</cagv:alias>
-                    <cagv:alias>alias3</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name5</cbc:name>
-                    <cbc:name>name6</cbc:name>
-                    <cbc:description>description6</cbc:description>
-                    <cbc:description>description7</cbc:description>
-                    <cbc:type>type3</cbc:type>
-                    <cagv:isRoleOf>isRoleOf2</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf3</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone2</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone3</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasCreator>
-                <cccev:hasProvider xsi:type="cagv:AgentType">
-                    <cbc:id>id8</cbc:id>
-                    <cbc:id>id9</cbc:id>
-                    <cagv:alias>alias4</cagv:alias>
-                    <cagv:alias>alias5</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name7</cbc:name>
-                    <cbc:name>name8</cbc:name>
-                    <cbc:description>description8</cbc:description>
-                    <cbc:description>description9</cbc:description>
-                    <cbc:type>type4</cbc:type>
-                    <cagv:isRoleOf>isRoleOf4</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf5</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone4</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone5</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasProvider>
-                <cccev:hasProvider>
-                    <cbc:id>id10</cbc:id>
-                    <cbc:id>id11</cbc:id>
-                    <cagv:alias>alias6</cagv:alias>
-                    <cagv:alias>alias7</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name9</cbc:name>
-                    <cbc:name>name10</cbc:name>
-                    <cbc:description>description10</cbc:description>
-                    <cbc:description>description11</cbc:description>
-                    <cbc:type>type5</cbc:type>
-                    <cagv:isRoleOf>isRoleOf6</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf7</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone6</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone7</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasProvider>
-            </cccev:isRepresentedByEvidence>
-            <cccev:isRepresentedByEvidence>
-                <dct:identifier>identifier2</dct:identifier>
-                <dct:identifier>identifier3</dct:identifier>
-                <dct:type>http://www.oxygenxml.com/</dct:type>
-                <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                <dct:modified>2006-05-04T18:13:51.0</dct:modified>
-                <dct:title>title6</dct:title>
-                <dct:title>title7</dct:title>
-                <dct:description>description6</dct:description>
-                <dct:description>description7</dct:description>
-                <dct:language>http://www.oxygenxml.com/</dct:language>
-                <dct:language>http://www.oxygenxml.com/</dct:language>
-                <dct:creator/>
-                <dct:publisher/>
-                <dct:publisher/>
-                <dct:temporal>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                </dct:temporal>
-                <dct:temporal>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:startDate>2006-05-04</dct:startDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                    <dct:endDate>2006-05-04</dct:endDate>
-                </dct:temporal>
-                <dcat-ap:distribution>
-                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                    <dct:title>title8</dct:title>
-                    <dct:title>title9</dct:title>
-                    <dct:description>description8</dct:description>
-                    <dct:description>description9</dct:description>
-                    <dct:format>
-                    </dct:format>
-                    <dct:format>
-                    </dct:format>
-                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
-                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
-                </dcat-ap:distribution>
-                <dcat-ap:distribution>
-                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                    <dct:title>title10</dct:title>
-                    <dct:title>title11</dct:title>
-                    <dct:description>description10</dct:description>
-                    <dct:description>description11</dct:description>
-                    <dct:format>
-                    </dct:format>
-                    <dct:format>
-                    </dct:format>
-                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
-                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
-                </dcat-ap:distribution>
-                <dcat-ap:qualifiedRelation>
-                    <dct:relation>
-                    </dct:relation>
-                    <dct:relation>
-                    </dct:relation>
-                    <dcat-ap:hadRole>hadRole2</dcat-ap:hadRole>
-                    <dcat-ap:hadRole>hadRole3</dcat-ap:hadRole>
-                </dcat-ap:qualifiedRelation>
-                <cccev:confidentialityLevel>confidentialityLevel1</cccev:confidentialityLevel>
-                <cccev:error>error2</cccev:error>
-                <cccev:error>error3</cccev:error>
-                <cccev:informationRequirementIDRef>informationRequirementIDRef2</cccev:informationRequirementIDRef>
-                <cccev:informationRequirementIDRef>informationRequirementIDRef3</cccev:informationRequirementIDRef>
-                <cccev:conformsToEvidenceType>conformsToEvidenceType2</cccev:conformsToEvidenceType>
-                <cccev:conformsToEvidenceType>conformsToEvidenceType3</cccev:conformsToEvidenceType>
-                <cccev:supportsRequirement>supportsRequirement2</cccev:supportsRequirement>
-                <cccev:supportsRequirement>supportsRequirement3</cccev:supportsRequirement>
-                <cccev:representsConcept>representsConcept2</cccev:representsConcept>
-                <cccev:representsConcept>representsConcept3</cccev:representsConcept>
-                <cccev:isInEvidenceTypeList>isInEvidenceTypeList2</cccev:isInEvidenceTypeList>
-                <cccev:isInEvidenceTypeList>isInEvidenceTypeList3</cccev:isInEvidenceTypeList>
-                <cccev:hasCreator>
-                    <cbc:id>id12</cbc:id>
-                    <cbc:id>id13</cbc:id>
-                    <cagv:alias>alias8</cagv:alias>
-                    <cagv:alias>alias9</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name11</cbc:name>
-                    <cbc:name>name12</cbc:name>
-                    <cbc:description>description12</cbc:description>
-                    <cbc:description>description13</cbc:description>
-                    <cbc:type>type6</cbc:type>
-                    <cagv:isRoleOf>isRoleOf8</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf9</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone8</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone9</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasCreator>
-                <cccev:hasCreator>
-                    <cbc:id>id14</cbc:id>
-                    <cbc:id>id15</cbc:id>
-                    <cagv:alias>alias10</cagv:alias>
-                    <cagv:alias>alias11</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name13</cbc:name>
-                    <cbc:name>name14</cbc:name>
-                    <cbc:description>description14</cbc:description>
-                    <cbc:description>description15</cbc:description>
-                    <cbc:type>type7</cbc:type>
-                    <cagv:isRoleOf>isRoleOf10</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf11</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone10</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone11</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasCreator>
-                <cccev:hasProvider>
-                    <cbc:id>id16</cbc:id>
-                    <cbc:id>id17</cbc:id>
-                    <cagv:alias>alias12</cagv:alias>
-                    <cagv:alias>alias13</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name15</cbc:name>
-                    <cbc:name>name16</cbc:name>
-                    <cbc:description>description16</cbc:description>
-                    <cbc:description>description17</cbc:description>
-                    <cbc:type>type8</cbc:type>
-                    <cagv:isRoleOf>isRoleOf12</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf13</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone12</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone13</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasProvider>
-                <cccev:hasProvider>
-                    <cbc:id>id18</cbc:id>
-                    <cbc:id>id19</cbc:id>
-                    <cagv:alias>alias14</cagv:alias>
-                    <cagv:alias>alias15</cagv:alias>
-                    <cagv:playsRole>
-                    </cagv:playsRole>
-                    <cbc:name>name17</cbc:name>
-                    <cbc:name>name18</cbc:name>
-                    <cbc:description>description18</cbc:description>
-                    <cbc:description>description19</cbc:description>
-                    <cbc:type>type9</cbc:type>
-                    <cagv:isRoleOf>isRoleOf14</cagv:isRoleOf>
-                    <cagv:isRoleOf>isRoleOf15</cagv:isRoleOf>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone14</cagv:telephone>
-                    </cagv:hasContactPoint>
-                    <cagv:hasContactPoint>
-                        <cagv:telephone>telephone15</cagv:telephone>
-                    </cagv:hasContactPoint>
-                </cccev:hasProvider>
-            </cccev:isRepresentedByEvidence>
-            <cccev:hasImposedConstraint>
+            <cccev:constraint>
                 <cbc:id>id20</cbc:id>
                 <cbc:id>id21</cbc:id>
                 <cbc:name>name19</cbc:name>
@@ -358,134 +34,23 @@
                 <cbc:description>description20</cbc:description>
                 <cbc:description>description21</cbc:description>
                 <cbc:type>type10</cbc:type>
-                <cccev:hasEvidenceTypeCombinationList>
+                <cccev:evidenceTypeCombinationList>
                     <cbc:id>id22</cbc:id>
                     <cbc:id>id23</cbc:id>
-                    <cccev:hasEvidenceType>
+                    <cccev:evidenceType>
                         <dct:title>title12</dct:title>
                         <dct:title>title13</dct:title>
                         <dct:description>description12</dct:description>
                         <dct:description>description13</dct:description>
-                    </cccev:hasEvidenceType>
-                    <cccev:hasEvidenceType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
                         <dct:title>title14</dct:title>
                         <dct:title>title15</dct:title>
                         <dct:description>description14</dct:description>
                         <dct:description>description15</dct:description>
-                    </cccev:hasEvidenceType>
-                </cccev:hasEvidenceTypeCombinationList>
-                <cccev:hasEvidenceTypeCombinationList>
-                    <cbc:id>id24</cbc:id>
-                    <cbc:id>id25</cbc:id>
-                    <cccev:hasEvidenceType>
-                        <dct:title>title16</dct:title>
-                        <dct:title>title17</dct:title>
-                        <dct:description>description16</dct:description>
-                        <dct:description>description17</dct:description>
-                    </cccev:hasEvidenceType>
-                    <cccev:hasEvidenceType>
-                        <dct:title>title18</dct:title>
-                        <dct:title>title19</dct:title>
-                        <dct:description>description18</dct:description>
-                        <dct:description>description19</dct:description>
-                    </cccev:hasEvidenceType>
-                </cccev:hasEvidenceTypeCombinationList>
-                <cccev:hasSupportingEvidence>
-                    <dct:identifier>identifier4</dct:identifier>
-                    <dct:identifier>identifier5</dct:identifier>
-                    <dct:type>http://www.oxygenxml.com/</dct:type>
-                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                    <dct:modified>2006-05-04T18:13:51.0</dct:modified>
-                    <dct:title>title20</dct:title>
-                    <dct:title>title21</dct:title>
-                    <dct:description>description20</dct:description>
-                    <dct:description>description21</dct:description>
-                    <dct:language>http://www.oxygenxml.com/</dct:language>
-                    <dct:language>http://www.oxygenxml.com/</dct:language>
-                    <dct:creator/>
-                    <dct:publisher/>
-                    <dct:publisher/>
-                    <dct:temporal>
-                    </dct:temporal>
-                    <dct:temporal>
-                    </dct:temporal>
-                    <dcat-ap:distribution>
-                    </dcat-ap:distribution>
-                    <dcat-ap:distribution>
-                    </dcat-ap:distribution>
-                    <dcat-ap:qualifiedRelation>
-                    </dcat-ap:qualifiedRelation>
-                    <cccev:confidentialityLevel>confidentialityLevel2</cccev:confidentialityLevel>
-                    <cccev:error>error4</cccev:error>
-                    <cccev:error>error5</cccev:error>
-                    <cccev:informationRequirementIDRef>informationRequirementIDRef4</cccev:informationRequirementIDRef>
-                    <cccev:informationRequirementIDRef>informationRequirementIDRef5</cccev:informationRequirementIDRef>
-                    <cccev:conformsToEvidenceType>conformsToEvidenceType4</cccev:conformsToEvidenceType>
-                    <cccev:conformsToEvidenceType>conformsToEvidenceType5</cccev:conformsToEvidenceType>
-                    <cccev:supportsRequirement>supportsRequirement4</cccev:supportsRequirement>
-                    <cccev:supportsRequirement>supportsRequirement5</cccev:supportsRequirement>
-                    <cccev:representsConcept>representsConcept4</cccev:representsConcept>
-                    <cccev:representsConcept>representsConcept5</cccev:representsConcept>
-                    <cccev:isInEvidenceTypeList>isInEvidenceTypeList4</cccev:isInEvidenceTypeList>
-                    <cccev:isInEvidenceTypeList>isInEvidenceTypeList5</cccev:isInEvidenceTypeList>
-                    <cccev:hasCreator>
-                    </cccev:hasCreator>
-                    <cccev:hasCreator>
-                    </cccev:hasCreator>
-                    <cccev:hasProvider>
-                    </cccev:hasProvider>
-                    <cccev:hasProvider>
-                    </cccev:hasProvider>
-                </cccev:hasSupportingEvidence>
-                <cccev:hasSupportingEvidence>
-                    <dct:identifier>identifier6</dct:identifier>
-                    <dct:identifier>identifier7</dct:identifier>
-                    <dct:type>http://www.oxygenxml.com/</dct:type>
-                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-                    <dct:modified>2006-05-04T18:13:51.0</dct:modified>
-                    <dct:title>title22</dct:title>
-                    <dct:title>title23</dct:title>
-                    <dct:description>description22</dct:description>
-                    <dct:description>description23</dct:description>
-                    <dct:language>http://www.oxygenxml.com/</dct:language>
-                    <dct:language>http://www.oxygenxml.com/</dct:language>
-                    <dct:creator/>
-                    <dct:publisher/>
-                    <dct:publisher/>
-                    <dct:temporal>
-                    </dct:temporal>
-                    <dct:temporal>
-                    </dct:temporal>
-                    <dcat-ap:distribution>
-                    </dcat-ap:distribution>
-                    <dcat-ap:distribution>
-                    </dcat-ap:distribution>
-                    <dcat-ap:qualifiedRelation>
-                    </dcat-ap:qualifiedRelation>
-                    <cccev:confidentialityLevel>confidentialityLevel3</cccev:confidentialityLevel>
-                    <cccev:error>error6</cccev:error>
-                    <cccev:error>error7</cccev:error>
-                    <cccev:informationRequirementIDRef>informationRequirementIDRef6</cccev:informationRequirementIDRef>
-                    <cccev:informationRequirementIDRef>informationRequirementIDRef7</cccev:informationRequirementIDRef>
-                    <cccev:conformsToEvidenceType>conformsToEvidenceType6</cccev:conformsToEvidenceType>
-                    <cccev:conformsToEvidenceType>conformsToEvidenceType7</cccev:conformsToEvidenceType>
-                    <cccev:supportsRequirement>supportsRequirement6</cccev:supportsRequirement>
-                    <cccev:supportsRequirement>supportsRequirement7</cccev:supportsRequirement>
-                    <cccev:representsConcept>representsConcept6</cccev:representsConcept>
-                    <cccev:representsConcept>representsConcept7</cccev:representsConcept>
-                    <cccev:isInEvidenceTypeList>isInEvidenceTypeList6</cccev:isInEvidenceTypeList>
-                    <cccev:isInEvidenceTypeList>isInEvidenceTypeList7</cccev:isInEvidenceTypeList>
-                    <cccev:hasCreator>
-                    </cccev:hasCreator>
-                    <cccev:hasCreator>
-                    </cccev:hasCreator>
-                    <cccev:hasProvider>
-                    </cccev:hasProvider>
-                    <cccev:hasProvider>
-                    </cccev:hasProvider>
-                </cccev:hasSupportingEvidence>
-                <cccev:supportsRequirement>supportsRequirement8</cccev:supportsRequirement>
-                <cccev:supportsRequirement>supportsRequirement9</cccev:supportsRequirement>
+                    </cccev:evidenceType>
+                </cccev:evidenceTypeCombinationList>
+                <cccev:requirement>supportsRequirement9</cccev:requirement>
                 <cccev:isPartOfRequirement>isPartOfRequirement0</cccev:isPartOfRequirement>
                 <cccev:hasQualifiedRelation>
                     <dct:relation>
@@ -532,7 +97,7 @@
                                                         <dcat-ap:Dataset>
                                                             <dct:type>COVERAGE_AREA</dct:type>
                                                             <dct:title>EU</dct:title>
-                                                            <dct:description>European Legislation</dct:description>
+                                                            <dct:description>European Jurisdiction</dct:description>
                                                         </dcat-ap:Dataset>
                                                     </dct:relation>
                                                     <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</dcat-ap:hadRole>
@@ -549,7 +114,7 @@
                 </cccev:derivesFromReferenceFramework>
                 <cccev:isConstraintImposedOn>isConstraintImposedOn0</cccev:isConstraintImposedOn>
                 <cccev:isConstraintImposedOn>isConstraintImposedOn1</cccev:isConstraintImposedOn>
-            </cccev:hasImposedConstraint>
+            </cccev:constraint>
             <cccev:hasImposedConstraint>
                 <cbc:id>id26</cbc:id>
                 <cbc:id>id27</cbc:id>
@@ -758,7 +323,7 @@
                 <cccev:isConstraintImposedOn>isConstraintImposedOn2</cccev:isConstraintImposedOn>
                 <cccev:isConstraintImposedOn>isConstraintImposedOn3</cccev:isConstraintImposedOn>
             </cccev:hasImposedConstraint>
-        </cccev:referencesConcept>
+        </cccev:concept>
         <cccev:referencesConcept>
             <cbc:id>id32</cbc:id>
             <cbc:id>id33</cbc:id>
@@ -1820,7 +1385,6 @@
                 
                 <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
                 <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
-                <
                 <foaf:topic>ESPD Request for Procurement Procedure ES-5789-2020#132 about the procurement of secured printers for the Ministry of Home Affairs</foaf:topic>
                 <foaf:primaryTopic>ESPD Request</foaf:primaryTopic> 
             
@@ -2623,7 +2187,7 @@
             </dcat-ap:qualifiedRelation>
         </cccev:derivesFromReferenceFramework>
         <cccev:weight>10</cccev:weight>
-    </cccev:Requirement>
+    </cccev:requirement>
     <cccev:Requirement>
         <cbc:id>id82</cbc:id>
         <cbc:id>id83</cbc:id>
@@ -5284,4 +4848,322 @@
         </cccev:hasPeriodValue>
         <cccev:isValueOfConcept>isValueOfConcept1</cccev:isValueOfConcept>
     </cccev:Value>
+<cccev:evidence xsi:type="cccev:EvidenceType">
+                <dct:identifier>identifier0</dct:identifier>
+                <dct:identifier>identifier1</dct:identifier>
+                <dct:type>http://www.oxygenxml.com/</dct:type>
+                <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+                <dct:modified>2006-05-04T18:13:51.0</dct:modified>
+                <dct:title>title0</dct:title>
+                <dct:title>title1</dct:title>
+                <dct:description>description0</dct:description>
+                <dct:description>description1</dct:description>
+                <dct:language>http://www.oxygenxml.com/</dct:language>
+                <dct:language>http://www.oxygenxml.com/</dct:language>
+                <dct:creator/>
+                <dct:publisher/>
+                <dct:publisher/>
+                <dct:temporal>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                </dct:temporal>
+                <dct:temporal>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                </dct:temporal>
+                <dcat-ap:distribution>
+                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+                    <dct:title>title2</dct:title>
+                    <dct:title>title3</dct:title>
+                    <dct:description>description2</dct:description>
+                    <dct:description>description3</dct:description>
+                    <dct:format>
+                    </dct:format>
+                    <dct:format>
+                    </dct:format>
+                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
+                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
+                </dcat-ap:distribution>
+                <dcat-ap:distribution>
+                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+                    <dct:title>title4</dct:title>
+                    <dct:title>title5</dct:title>
+                    <dct:description>description4</dct:description>
+                    <dct:description>description5</dct:description>
+                    <dct:format>
+                    </dct:format>
+                    <dct:format>
+                    </dct:format>
+                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
+                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
+                </dcat-ap:distribution>
+                <dcat-ap:qualifiedRelation>
+                    <dct:relation>
+                    </dct:relation>
+                    <dct:relation>
+                    </dct:relation>
+                    <dcat-ap:hadRole>hadRole0</dcat-ap:hadRole>
+                    <dcat-ap:hadRole>hadRole1</dcat-ap:hadRole>
+                </dcat-ap:qualifiedRelation>
+                <cccev:confidentialityLevel>confidentialityLevel0</cccev:confidentialityLevel>
+                <cccev:error>error0</cccev:error>
+                <cccev:error>error1</cccev:error>
+                <cccev:informationRequirementIDRef>informationRequirementIDRef0</cccev:informationRequirementIDRef>
+                <cccev:informationRequirementIDRef>informationRequirementIDRef1</cccev:informationRequirementIDRef>
+                <cccev:conformsToEvidenceType>conformsToEvidenceType0</cccev:conformsToEvidenceType>
+                <cccev:conformsToEvidenceType>conformsToEvidenceType1</cccev:conformsToEvidenceType>
+                <cccev:supportsRequirement>supportsRequirement0</cccev:supportsRequirement>
+                <cccev:supportsRequirement>supportsRequirement1</cccev:supportsRequirement>
+                <cccev:representsConcept>representsConcept0</cccev:representsConcept>
+                <cccev:representsConcept>representsConcept1</cccev:representsConcept>
+                <cccev:isInEvidenceTypeList>isInEvidenceTypeList0</cccev:isInEvidenceTypeList>
+                <cccev:isInEvidenceTypeList xsi:type="cbc:IDReferenceType">isInEvidenceTypeList1</cccev:isInEvidenceTypeList>
+                <cccev:hasCreator>
+                    <cbc:id>id4</cbc:id>
+                    <cbc:id>id5</cbc:id>
+                    <cagv:alias>alias0</cagv:alias>
+                    <cagv:alias>alias1</cagv:alias>
+                    <cagv:playsRole xsi:type="cagv:RoleType">
+                    </cagv:playsRole>
+                    <cbc:name>name3</cbc:name>
+                    <cbc:name>name4</cbc:name>
+                    <cbc:description>description4</cbc:description>
+                    <cbc:description>description5</cbc:description>
+                    <cbc:type>type2</cbc:type>
+                    <cagv:isRoleOf>isRoleOf0</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf1</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone0</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone1</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasCreator>
+                <cccev:hasCreator>
+                    <cbc:id>id6</cbc:id>
+                    <cbc:id>id7</cbc:id>
+                    <cagv:alias>alias2</cagv:alias>
+                    <cagv:alias>alias3</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name5</cbc:name>
+                    <cbc:name>name6</cbc:name>
+                    <cbc:description>description6</cbc:description>
+                    <cbc:description>description7</cbc:description>
+                    <cbc:type>type3</cbc:type>
+                    <cagv:isRoleOf>isRoleOf2</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf3</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone2</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone3</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasCreator>
+                <cccev:hasProvider xsi:type="cagv:AgentType">
+                    <cbc:id>id8</cbc:id>
+                    <cbc:id>id9</cbc:id>
+                    <cagv:alias>alias4</cagv:alias>
+                    <cagv:alias>alias5</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name7</cbc:name>
+                    <cbc:name>name8</cbc:name>
+                    <cbc:description>description8</cbc:description>
+                    <cbc:description>description9</cbc:description>
+                    <cbc:type>type4</cbc:type>
+                    <cagv:isRoleOf>isRoleOf4</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf5</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone4</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone5</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasProvider>
+                <cccev:hasProvider>
+                    <cbc:id>id10</cbc:id>
+                    <cbc:id>id11</cbc:id>
+                    <cagv:alias>alias6</cagv:alias>
+                    <cagv:alias>alias7</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name9</cbc:name>
+                    <cbc:name>name10</cbc:name>
+                    <cbc:description>description10</cbc:description>
+                    <cbc:description>description11</cbc:description>
+                    <cbc:type>type5</cbc:type>
+                    <cagv:isRoleOf>isRoleOf6</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf7</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone6</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone7</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasProvider>
+            </cccev:evidence>
+            <cccev:isRepresentedByEvidence>
+                <dct:identifier>identifier2</dct:identifier>
+                <dct:identifier>identifier3</dct:identifier>
+                <dct:type>http://www.oxygenxml.com/</dct:type>
+                <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+                <dct:modified>2006-05-04T18:13:51.0</dct:modified>
+                <dct:title>title6</dct:title>
+                <dct:title>title7</dct:title>
+                <dct:description>description6</dct:description>
+                <dct:description>description7</dct:description>
+                <dct:language>http://www.oxygenxml.com/</dct:language>
+                <dct:language>http://www.oxygenxml.com/</dct:language>
+                <dct:creator/>
+                <dct:publisher/>
+                <dct:publisher/>
+                <dct:temporal>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                </dct:temporal>
+                <dct:temporal>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:startDate>2006-05-04</dct:startDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                    <dct:endDate>2006-05-04</dct:endDate>
+                </dct:temporal>
+                <dcat-ap:distribution>
+                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+                    <dct:title>title8</dct:title>
+                    <dct:title>title9</dct:title>
+                    <dct:description>description8</dct:description>
+                    <dct:description>description9</dct:description>
+                    <dct:format>
+                    </dct:format>
+                    <dct:format>
+                    </dct:format>
+                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
+                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
+                </dcat-ap:distribution>
+                <dcat-ap:distribution>
+                    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+                    <dct:title>title10</dct:title>
+                    <dct:title>title11</dct:title>
+                    <dct:description>description10</dct:description>
+                    <dct:description>description11</dct:description>
+                    <dct:format>
+                    </dct:format>
+                    <dct:format>
+                    </dct:format>
+                    <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
+                    <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
+                </dcat-ap:distribution>
+                <dcat-ap:qualifiedRelation>
+                    <dct:relation>
+                    </dct:relation>
+                    <dct:relation>
+                    </dct:relation>
+                    <dcat-ap:hadRole>hadRole2</dcat-ap:hadRole>
+                    <dcat-ap:hadRole>hadRole3</dcat-ap:hadRole>
+                </dcat-ap:qualifiedRelation>
+                <cccev:confidentialityLevel>confidentialityLevel1</cccev:confidentialityLevel>
+                <cccev:error>error2</cccev:error>
+                <cccev:error>error3</cccev:error>
+                <cccev:informationRequirementIDRef>informationRequirementIDRef2</cccev:informationRequirementIDRef>
+                <cccev:informationRequirementIDRef>informationRequirementIDRef3</cccev:informationRequirementIDRef>
+                <cccev:conformsToEvidenceType>conformsToEvidenceType2</cccev:conformsToEvidenceType>
+                <cccev:conformsToEvidenceType>conformsToEvidenceType3</cccev:conformsToEvidenceType>
+                <cccev:supportsRequirement>supportsRequirement2</cccev:supportsRequirement>
+                <cccev:supportsRequirement>supportsRequirement3</cccev:supportsRequirement>
+                <cccev:representsConcept>representsConcept2</cccev:representsConcept>
+                <cccev:representsConcept>representsConcept3</cccev:representsConcept>
+                <cccev:isInEvidenceTypeList>isInEvidenceTypeList2</cccev:isInEvidenceTypeList>
+                <cccev:isInEvidenceTypeList>isInEvidenceTypeList3</cccev:isInEvidenceTypeList>
+                <cccev:hasCreator>
+                    <cbc:id>id12</cbc:id>
+                    <cbc:id>id13</cbc:id>
+                    <cagv:alias>alias8</cagv:alias>
+                    <cagv:alias>alias9</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name11</cbc:name>
+                    <cbc:name>name12</cbc:name>
+                    <cbc:description>description12</cbc:description>
+                    <cbc:description>description13</cbc:description>
+                    <cbc:type>type6</cbc:type>
+                    <cagv:isRoleOf>isRoleOf8</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf9</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone8</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone9</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasCreator>
+                <cccev:hasCreator>
+                    <cbc:id>id14</cbc:id>
+                    <cbc:id>id15</cbc:id>
+                    <cagv:alias>alias10</cagv:alias>
+                    <cagv:alias>alias11</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name13</cbc:name>
+                    <cbc:name>name14</cbc:name>
+                    <cbc:description>description14</cbc:description>
+                    <cbc:description>description15</cbc:description>
+                    <cbc:type>type7</cbc:type>
+                    <cagv:isRoleOf>isRoleOf10</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf11</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone10</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone11</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasCreator>
+                <cccev:hasProvider>
+                    <cbc:id>id16</cbc:id>
+                    <cbc:id>id17</cbc:id>
+                    <cagv:alias>alias12</cagv:alias>
+                    <cagv:alias>alias13</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name15</cbc:name>
+                    <cbc:name>name16</cbc:name>
+                    <cbc:description>description16</cbc:description>
+                    <cbc:description>description17</cbc:description>
+                    <cbc:type>type8</cbc:type>
+                    <cagv:isRoleOf>isRoleOf12</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf13</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone12</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone13</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasProvider>
+                <cccev:hasProvider>
+                    <cbc:id>id18</cbc:id>
+                    <cbc:id>id19</cbc:id>
+                    <cagv:alias>alias14</cagv:alias>
+                    <cagv:alias>alias15</cagv:alias>
+                    <cagv:playsRole>
+                    </cagv:playsRole>
+                    <cbc:name>name17</cbc:name>
+                    <cbc:name>name18</cbc:name>
+                    <cbc:description>description18</cbc:description>
+                    <cbc:description>description19</cbc:description>
+                    <cbc:type>type9</cbc:type>
+                    <cagv:isRoleOf>isRoleOf14</cagv:isRoleOf>
+                    <cagv:isRoleOf>isRoleOf15</cagv:isRoleOf>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone14</cagv:telephone>
+                    </cagv:hasContactPoint>
+                    <cagv:hasContactPoint>
+                        <cagv:telephone>telephone15</cagv:telephone>
+                    </cagv:hasContactPoint>
+                </cccev:hasProvider>
+            </cccev:isRepresentedByEvidence>
 </ns0:RequirementsCollection>

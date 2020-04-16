@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Response xmlns:foaf="http://xmlns.com/foaf/0.1/"
- xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
- xmlns:lcn="http://www.w3.org/ns/locn#"
- xmlns:ccts="urn:un:unece:uncefact:documentation:2"
- xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
- xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
- xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
- xmlns:dct="http://purl.org/dc/terms/"
- xmlns:org="http://www.w3.org/ns/org#"
- xmlns:rov="http://www.w3.org/ns/regorg#"
+<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:eu:toop:ns:dataexchange-1p40" xmlns:dcat-ap="http://data.europa.eu/r5r/"
  xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
- xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
- xmlns:dcat-ap="http://data.europa.eu/r5r/"
- xmlns="urn:eu:toop:ns:dataexchange-1p40"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 file:/C:/Users/jrevenga/Documents/git/SEMIC/CoreVocabularies/CCCEV/use_cases/toop-cv/toop-cv.xsd">
+ xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+ xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" xmlns:org="http://www.w3.org/ns/org#"
+ xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+ xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+ xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:lcn="http://www.w3.org/ns/locn#"
+ xmlns:rov="http://www.w3.org/ns/regorg#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../toop-cv/toop-cv.xsd">
     <dct:identifier>identifier0</dct:identifier>
     <dct:type>http://www.oxygenxml.com/</dct:type>
     <dct:issued>2006-05-04T18:13:51.0</dct:issued>
@@ -128,440 +123,440 @@
         <LegalReference AssuranceLevelValue="High" languageID="en">Legislation title</LegalReference>
         <Name AssuranceLevelValue="High" languageID="en">Evidence response for participation in a criminal organisation conviction.</Name>
         <Remarks AssuranceLevelValue="High" languageID="en">A combination of different types of Evidences captured from e-Certis is used.</Remarks>
-        <Criterion>
+        <Requirement xsi:type="cccev:CriterionType">
             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
             <cbc:name AssuranceLevelValue="High" languageID="en">Participation in a criminal organisation</cbc:name>
             <cbc:description AssuranceLevelValue="High" languageID="en">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:description>
             <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
-            <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
                 <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
                 <cbc:name AssuranceLevelValue="High" languageID="en">Participation in a criminal organisation</cbc:name>
                 <cbc:description AssuranceLevelValue="High" languageID="en">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:description>
                 <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
-                <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
+                <cccev:requirement xsi:type="cccev:InformationRequirementType">
                     <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">3497e696-d32d-48b8-9c4f-5e198bf9b4e1</cbc:id>
-                    <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c637c0c-7703-4389-ba52-02997a055bd7</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Your answer</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 INDICATOR
                             </cbc:type>
-                            <cccev:hasConcept xsi:type="cccev:ConceptType">
+                            <cccev:concept xsi:type="cccev:ConceptType">
                                 <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
                                 <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                                <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e21fb902-6fb0-4586-9890-52d46ba9c4a3</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">Date of conviction?</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         DATE</cbc:type>
-                                    <cccev:isRepresentedByEvidence xsi:type="cccev:EvidenceType">
+                                    <!--<cccev:isRepresentedByEvidence xsi:type="cccev:EvidenceType">
                                         <dct:title>Certificate of conviction</dct:title>
                                         <dct:description>Certificate listing all past convictions for the last 10 years.</dct:description>
                                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</cbc:id>
                                         <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
-                                    </cccev:isRepresentedByEvidence>
-                                </cccev:hasConcept>
-                                <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                    </cccev:isRepresentedByEvidence>-->
+                                </cccev:concept>
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">411e5b92-bcb8-471a-b6d1-83940b161e36</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">Reason</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         DESCRIPTION</cbc:type>
-                                </cccev:hasConcept>
-                                <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                </cccev:concept>
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">311e8c5e-3522-4559-bb60-c05c6d091291</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">Who has been convicted?</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         DESCRIPTION</cbc:type>
-                                </cccev:hasConcept>
-                                <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                </cccev:concept>
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">a41073de-5811-4398-9285-2efedc8e32c9</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">Length of the period of exclusion?</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         DATE</cbc:type>
-                                </cccev:hasConcept>
-                                <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                </cccev:concept>
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">5f9f09f7-f701-432c-9fdc-c22c124a74c9</cbc:id>
                                     <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                    <cccev:concept xsi:type="cccev:ConceptType">
                                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">58d76ea3-0cf3-48b1-aeb7-fa4549477d32</cbc:id>
                                         <cbc:description AssuranceLevelValue="High" languageID="en">Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:description>
                                         <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                             INDICATOR</cbc:type>
                                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                        <cccev:concept xsi:type="cccev:ConceptType">
                                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">74e6c7b4-757b-4b40-ada6-fad6a997c310</cbc:id>
                                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                                 INDICATOR</cbc:type>
-                                            <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                            <cccev:concept xsi:type="cccev:ConceptType">
                                                 <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">00546905-1ad4-472a-a590-2a6633195af5</cbc:id>
                                                 <cbc:description AssuranceLevelValue="High" languageID="en">Please describe them?</cbc:description>
                                                 <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                                     DESCRIPTION</cbc:type>
-                                            </cccev:hasConcept>                                            
-                                        </cccev:hasConcept>
-                                        <cccev:hasValue xsi:type="cccev:ValueType">
+                                            </cccev:concept>                                            
+                                        </cccev:concept>
+                                        <cccev:value xsi:type="cccev:ValueType">
                                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">false</cccev:codeValue>
-                                        </cccev:hasValue>
-                                    </cccev:hasConcept>                            
-                                    <cccev:hasValue xsi:type="cccev:ValueType">
+                                        </cccev:value>
+                                    </cccev:concept>                            
+                                    <cccev:value xsi:type="cccev:ValueType">
                                         <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                                    </cccev:hasValue>
-                                </cccev:hasConcept>
-                                <cccev:hasValue>
+                                    </cccev:value>
+                                </cccev:concept>
+                                <cccev:value>
                                     <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ONTRUE</cccev:codeValue>
-                                </cccev:hasValue>
-                            </cccev:hasConcept>
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                                </cccev:value>
+                            </cccev:concept>
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:indicatorValue AssuranceLevelValue="High">false</cccev:indicatorValue>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:referencesConcept>
-                </cccev:hasRequirement>
-            </cccev:hasRequirement>
-        </Criterion>
-        <Criterion>
+                        </cccev:value>
+                    </cccev:concept>
+                </cccev:requirement>
+            </cccev:requirement>
+        </Requirement>
+        <Requirement xsi:type="cccev:CriterionType">
             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">b16cb9fc-6cb7-4585-9302-9533b415cf48</cbc:id>
             <cbc:name AssuranceLevelValue="High" languageID="en">Average yearly turnover</cbc:name>
             <cbc:description AssuranceLevelValue="High" languageID="en">Its average yearly turnover for the number of years required in the relevant notice, the procurement documents or the ESPD is as follows:.</cbc:description>
             <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY</cbc:type>
-            <cccev:hasRequirement xsi:type="cccev:CriterionType">
+            <cccev:requirement xsi:type="cccev:CriterionType">
                 <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">35aa0b5e-0bd1-42a8-b719-dda3cd8a20c4f</cbc:id>
                 <cbc:name AssuranceLevelValue="High" languageID="en">National Criterion 2</cbc:name>
                 <cbc:description AssuranceLevelValue="High" languageID="en">Subcriterions are used to specify National Criteria, which get their UUIDs from e-Certis.</cbc:description>
-                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                <cccev:concept xsi:type="cccev:ConceptType">
                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e6b21867-95b5-4549-8180-f4673219b179</cbc:id>
                     <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                    <cccev:hasConcept>
+                    <cccev:concept>
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">8c39b505-8abe-44fa-a3e0-f2d78b9d8224</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept>
+                        <cccev:concept>
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">6c47cd79-137c-4e6a-9a16-94b0efc0b88d</cbc:id>
                             <cbc:name AssuranceLevelValue="High" languageID="en">Research and Development Investment.</cbc:name>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Has the Economic Operator invested at least 2% of its revenues in Research and Development during the last 5 years?</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 INDICATOR</cbc:type>
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:indicatorValue AssuranceLevelValue="High">true</cccev:indicatorValue>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>       
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                            </cccev:value>
+                        </cccev:concept>       
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                    <cccev:hasValue xsi:type="cccev:ValueType">
+                        </cccev:value>
+                    </cccev:concept>
+                    <cccev:value xsi:type="cccev:ValueType">
                         <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                    </cccev:hasValue>
-                </cccev:referencesConcept>
-            </cccev:hasRequirement>
-            <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
+                    </cccev:value>
+                </cccev:concept>
+            </cccev:requirement>
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
                 <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">75bb972c-1e98-4b5a-b224-676d5f0af409</cbc:id>
-                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                <cccev:concept xsi:type="cccev:ConceptType">
                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">53882893-f4a8-40ae-99dc-cad7b0748790</cbc:id>
                     <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e1886054-ada4-473c-9afc-2fde82c24cf4</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">733447ba-8bf4-438f-996e-0daea0dd3fec</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Amount</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 AMOUNT
                             </cbc:type>
-                            <cccev:hasImposedConstraint xsi:type="cccev:ConstraintType">
+                            <cccev:constraint xsi:type="cccev:ConstraintType">
                                 <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">ea0d85ef-f07d-4e6f-8cef-aaa7224d1d03</cbc:id>
                                 <cbc:description AssuranceLevelValue="High" languageID="en">Number of fiscal years.</cbc:description>
-                                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">a283317c-6b17-4a08-8e11-5bcef85ae985</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">A non-negative integer representing a year. The unit has to be specified as YEAR.</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         QUANTITY_YEAR
                                     </cbc:type>
-                                    <cccev:hasValue xsi:type="cccev:ValueType">
+                                    <cccev:value xsi:type="cccev:ValueType">
                                         <cccev:amountValue AssuranceLevelValue="High">3</cccev:amountValue>
-                                    </cccev:hasValue>
-                                </cccev:referencesConcept>
-                            </cccev:hasImposedConstraint>  
-                            <cccev:hasImposedConstraint xsi:type="cccev:ConstraintType">
+                                    </cccev:value>
+                                </cccev:concept>
+                            </cccev:constraint>  
+                            <cccev:constraint xsi:type="cccev:ConstraintType">
                                 <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">f3046621-f1fd-45ab-9412-fdd62bc633f0</cbc:id>
                                 <cbc:description AssuranceLevelValue="High" languageID="en">Minimum requirement.</cbc:description>
-                                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">873acae6-ffe9-476c-b68e-20b007255746</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">An Amount, and currency, as defined in UN/CEFACT's CCTS.</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         AMOUNT
                                     </cbc:type>
-                                    <cccev:hasValue xsi:type="cccev:ValueType">
+                                    <cccev:value xsi:type="cccev:ValueType">
                                         <cccev:amountValue AssuranceLevelValue="High">120000</cccev:amountValue>
-                                    </cccev:hasValue>
-                                </cccev:referencesConcept>
-                            </cccev:hasImposedConstraint>  
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                                    </cccev:value>
+                                </cccev:concept>
+                            </cccev:constraint>  
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:amountValue AssuranceLevelValue="High">3000000</cccev:amountValue>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">c39cb14a-1602-4585-ae5b-937b590071e7</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Additional information</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 DESCRIPTION
                             </cbc:type>
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:textValue AssuranceLevelValue="High">The Economic Operator has also taken out a loan to have enough liquidity for the tender.</cccev:textValue>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        </cccev:value>
+                    </cccev:concept>
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7458d42a-e581-4640-9283-34ceb3ad4345</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">d81572b0-33a0-4af1-bd56-e76dc2415d72</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Is this information available online?</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 INDICATOR
                             </cbc:type>
-                            <!--                                   <cccev:hasConcept xsi:type="cccev:ConceptType">
+                            <!--                                   <cccev:concept xsi:type="cccev:ConceptType">
                                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cbc:id>
-                                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                        <cccev:concept xsi:type="cccev:ConceptType">
                                              <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">73dbb534-b3bd-46cb-bdf3-543097c4ac1d</cbc:id>
                                              <cbc:description AssuranceLevelValue="High" languageID="en">Evidence supplied.</cbc:description>
                                              <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                                   EVIDENCE_IDENTIFIER
                                              </cbc:type>
-                                        </cccev:hasConcept xsi:type="cccev:ConceptType">
+                                        </cccev:concept xsi:type="cccev:ConceptType">
                                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                                        <cccev:hasValue xsi:type="cccev:ValueType">
+                                        <cccev:value xsi:type="cccev:ValueType">
                                              <cccev:CodeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ONTRUE</cccev:CodeValue>
                                         </cccev:Value>
-                                   </cccev:hasConcept xsi:type="cccev:ConceptType">-->
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                                   </cccev:concept xsi:type="cccev:ConceptType">-->
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:indicatorValue AssuranceLevelValue="High">TRUE</cccev:indicatorValue>        
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                    <cccev:hasValue xsi:type="cccev:ValueType">
+                        </cccev:value>
+                    </cccev:concept>
+                    <cccev:value xsi:type="cccev:ValueType">
                         <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                    </cccev:hasValue>
-                </cccev:referencesConcept>
-                <cccev:hasEvidenceTypeCombinationList>
+                    </cccev:value>
+                </cccev:concept>
+                <cccev:evidenceTypeCombinationList>
                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">053cfa05-af43-443b-8e82-f1c979fae365</cbc:id>
-                    <cccev:hasEvidenceType>
+                    <cccev:evidenceType>
                         <dct:identifier>EVT01</dct:identifier>
                         <dct:title>EVIDENCE_TYPE_1</dct:title>
                         <dct:description>Tax certificate</dct:description>
-                    </cccev:hasEvidenceType>
-                    <cccev:hasEvidenceType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
                         <dct:identifier>EVT02</dct:identifier>
                         <dct:title>EVICENCE_TYPE_2</dct:title>
                         <dct:description>Gross revenue</dct:description>
-                    </cccev:hasEvidenceType>
-                    <cccev:hasEvidenceType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
                         <dct:identifier>EVT03</dct:identifier>
                         <dct:title>EVICENCE_TYPE_3</dct:title>
                         <dct:description>Taxation authority certificate</dct:description>
-                    </cccev:hasEvidenceType>
-                </cccev:hasEvidenceTypeCombinationList>
-            </cccev:hasRequirement>
-        </Criterion>
-        <Criterion>
+                    </cccev:evidenceType>
+                </cccev:evidenceTypeCombinationList>
+            </cccev:requirement>
+        </Requirement>
+        <Requirement xsi:type="cccev:CriterionType">
             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">499efc97-2ac1-4af2-9e84-323c2ca67747</cbc:id>
             <cbc:name AssuranceLevelValue="High" languageID="en">General yearly turnover</cbc:name>
             <cbc:description AssuranceLevelValue="High" languageID="en">Its general yearly turnover for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or the ESPD is as follows:</cbc:description>
             <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</cbc:type>
             <!-- Example of how to nest a National Sub-Criterion inside a parent Criterion.-->
-            <cccev:hasRequirement xsi:type="cccev:CriterionType">
+            <cccev:requirement xsi:type="cccev:CriterionType">
                 <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">98517748-512e-4aa2-b71f-90a9777b712f</cbc:id>
                 <cbc:name AssuranceLevelValue="High" languageID="en">National Criterion 1</cbc:name>
                 <cbc:description AssuranceLevelValue="High" languageID="en">Subcriterions are used to specify National Criteria, which get their UUIDs from e-Certis.</cbc:description>
-                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                <cccev:concept xsi:type="cccev:ConceptType">
                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">e6b21867-95b5-4549-8180-f4673219b179</cbc:id>
                     <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">8c39b505-8abe-44fa-a3e0-f2d78b9d8224</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">dda0836f-dbfd-40a9-8fbc-7456106dd40c</cbc:id>
                             <cbc:name AssuranceLevelValue="High" languageID="en">Catalan language requirement.</cbc:name>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Is the Economic Operator able to produce documentation in Catalan language?</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 INDICATOR</cbc:type>
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:indicatorValue AssuranceLevelValue="High">true</cccev:indicatorValue>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                    <cccev:hasValue xsi:type="cccev:ValueType">
+                        </cccev:value>
+                    </cccev:concept>
+                    <cccev:value xsi:type="cccev:ValueType">
                         <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                    </cccev:hasValue>
-                </cccev:referencesConcept>
-            </cccev:hasRequirement>
-            <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
+                    </cccev:value>
+                </cccev:concept>
+            </cccev:requirement>
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
                 <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">29c43816-c2ea-404f-86d6-0a10219257d2</cbc:id>
-                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                <cccev:concept xsi:type="cccev:ConceptType">
                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">5ca58d66-3ef1-4145-957c-45d5b18a837f</cbc:id>
                     <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">96d06c79-2a7f-4263-b2e7-8ff3dc36e293</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Amount</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 AMOUNT
                             </cbc:type>
-                            <cccev:hasImposedConstraint xsi:type="cccev:ConstraintType">
+                            <cccev:constraint xsi:type="cccev:ConstraintType">
                                 <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">b663c3ca-dfa3-4a79-91be-2558d19a74d2</cbc:id>
                                 <cbc:description AssuranceLevelValue="High" languageID="en">Minimum requirement.</cbc:description>
-                                <cccev:referencesConcept xsi:type="cccev:ConceptType">
+                                <cccev:concept xsi:type="cccev:ConceptType">
                                     <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">8f99b73a-2c1b-49e4-85ae-a408792905a2</cbc:id>
                                     <cbc:description AssuranceLevelValue="High" languageID="en">An Amount, and currency, as defined in UN/CEFACT's CCTS.</cbc:description>
                                     <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                         AMOUNT
                                     </cbc:type>
-                                    <cccev:hasValue xsi:type="cccev:ValueType">
+                                    <cccev:value xsi:type="cccev:ValueType">
                                         <cccev:amountValue AssuranceLevelValue="High">100000</cccev:amountValue>
-                                    </cccev:hasValue>
-                                </cccev:referencesConcept>
-                            </cccev:hasImposedConstraint>  
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                                    </cccev:value>
+                                </cccev:concept>
+                            </cccev:constraint>  
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:amountValue AssuranceLevelValue="High">1000001</cccev:amountValue>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">47119644-d77d-4606-87fe-2ee54f509988</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Start Date; End Date</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 DATE
                             </cbc:type>
-                            <cccev:hasValue xsi:type="cccev:ValueType">
-                                <cccev:hasValue>
+                            <cccev:value xsi:type="cccev:ValueType">
+                                <cccev:value>
                                     <cccev:dateValue AssuranceLevelValue="High">2016-01-01</cccev:dateValue>
-                                </cccev:hasValue>
-                                <cccev:hasValue>
+                                </cccev:value>
+                                <cccev:value>
                                     <cccev:dateValue AssuranceLevelValue="High">2017-01-01</cccev:dateValue>
-                                </cccev:hasValue>                                
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                                </cccev:value>                                
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        </cccev:value>
+                    </cccev:concept>
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7458d42a-e581-4640-9283-34ceb3ad4345</cbc:id>
                         <cbc:namespace>ESPD#ProcessingInstruction</cbc:namespace>
-                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                        <cccev:concept xsi:type="cccev:ConceptType">
                             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">d81572b0-33a0-4af1-bd56-e76dc2415d72</cbc:id>
                             <cbc:description AssuranceLevelValue="High" languageID="en">Is this information available online?</cbc:description>
                             <cbc:type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                 INDICATOR
                             </cbc:type>
-                            <!-- <cccev:hasConcept xsi:type="cccev:ConceptType">
+                            <!-- <cccev:concept xsi:type="cccev:ConceptType">
                                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cbc:id>
                                         <cccev:Namespace>ESPD#ProcessingInstruction</cccev:Namespace>
-                                        <cccev:hasConcept xsi:type="cccev:ConceptType">
+                                        <cccev:concept xsi:type="cccev:ConceptType">
                                              <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">73dbb534-b3bd-46cb-bdf3-543097c4ac1d</cbc:id>
                                              <cbc:description AssuranceLevelValue="High" languageID="en">Evidence supplied.</cbc:description>
                                              <cbc:Type AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">
                                                   EVIDENCE_IDENTIFIER
                                              </cbc:Type>
                                         </cccev:Concept>
-                                        <cccev:hasValue xsi:type="cccev:ValueType">
+                                        <cccev:value xsi:type="cccev:ValueType">
                                              <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ONTRUE</cccev:CodeValue>
                                         </cccev:Value>
                                    </cccev:Concept>-->
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:indicatorValue AssuranceLevelValue="High">TRUE</cccev:indicatorValue>
-                                <cccev:isValueOfConcept>41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cccev:isValueOfConcept>
-                            </cccev:hasValue>
-                        </cccev:hasConcept>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                                <cccev:valueOf>41dd2e9b-1bfd-44c7-93ee-56bd74a4334b</cccev:valueOf>
+                            </cccev:value>
+                        </cccev:concept>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                    <cccev:hasValue xsi:type="cccev:ValueType">
+                        </cccev:value>
+                    </cccev:concept>
+                    <cccev:value xsi:type="cccev:ValueType">
                         <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                    </cccev:hasValue>
-                </cccev:referencesConcept>
-                <cccev:hasEvidenceTypeCombinationList>
-                    <cccev:hasEvidenceType>
+                    </cccev:value>
+                </cccev:concept>
+                <cccev:evidenceTypeCombinationList>
+                    <cccev:evidenceType>
                         <dct:identifier>EVT04</dct:identifier>
                         <dct:title>EVIDENCE_TYPE_4</dct:title>
                         <dct:description>Tax declaration</dct:description>
-                    </cccev:hasEvidenceType>
-                    <cccev:hasEvidenceType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
                         <dct:identifier>EVT05</dct:identifier>
                         <dct:title>EVICENCE_TYPE_5</dct:title>
                         <dct:description>Income certificate</dct:description>
-                    </cccev:hasEvidenceType>
-                    <cccev:hasEvidenceType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
                         <dct:identifier>EVT06</dct:identifier>
                         <dct:title>EVICENCE_TYPE_6</dct:title>
                         <dct:description>Bank accound balance certificate</dct:description>
-                    </cccev:hasEvidenceType>
-                </cccev:hasEvidenceTypeCombinationList>
-            </cccev:hasRequirement>
-        </Criterion>
+                    </cccev:evidenceType>
+                </cccev:evidenceTypeCombinationList>
+            </cccev:requirement>
+        </Requirement>
     </EvidenceResponse>
     <Evidence>
         <dct:identifier>14dc8b6b-b7c1-4c3d-af6e-588932fd6729</dct:identifier>
         <dct:title>Gross revenue</dct:title>
         <dct:description>This certifies the gross revenue of the company during the chosen fiscal years..</dct:description>
         <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
-        <cccev:conformsToEvidenceType  AssuranceLevelValue="High">EVT02</cccev:conformsToEvidenceType>
-        <cccev:representsConcept>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:representsConcept>
+        <cccev:conformsTo  AssuranceLevelValue="High">EVT02</cccev:conformsTo>
+        <cccev:conceptIDRef>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:conceptIDRef>
     </Evidence>
     <Evidence>
         <dct:identifier>7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</dct:identifier>
         <dct:title>Taxation authority certificate</dct:title>
         <dct:description>This certificates that the holder has no debts with the taxation authorities</dct:description>
         <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
-        <cccev:conformsToEvidenceType  AssuranceLevelValue="High">EVT03</cccev:conformsToEvidenceType>
-        <cccev:representsConcept>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:representsConcept>
+        <cccev:conformsTo  AssuranceLevelValue="High">EVT03</cccev:conformsTo>
+        <cccev:conceptIDRef>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:conceptIDRef>
     </Evidence>
     <Evidence>
-        <dct:identifier AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">8d91ea18-9188-48b8-bfd8-f910b34e16cc1</dct:identifier>
-        <dct:title AssuranceLevelValue="High" languageID="en">Social security payments</dct:title>
-        <dct:description AssuranceLevelValue="High" languageID="en">This certificates the amount pay to the social security.</dct:description>
-        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT01</cccev:EvidenceTypeIDRef>
-        <cccev:ConceptIDRef>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:ConceptIDRef>
+        <dct:identifier>8d91ea18-9188-48b8-bfd8-f910b34e16cc1</dct:identifier>
+        <dct:title>Social security payments</dct:title>
+        <dct:description>This certificates the amount pay to the social security.</dct:description>
+        <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
+        <cccev:conformsTo AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT01</cccev:conformsTo>
+        <cccev:conceptIDRef>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:conceptIDRef>
     </Evidence>
     <Evidence>
-        <dct:identifier AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</dct:identifier>
-        <dct:title AssuranceLevelValue="High" languageID="en">Tax declaration</dct:title>
-        <dct:description AssuranceLevelValue="High" languageID="en">This certificates the tax payment to the authorities during the last five years.</dct:description>
-        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT04</cccev:EvidenceTypeIDRef>
-        <cccev:ConceptIDRef>53882893-f4a8-40ae-99dc-cad7b0748790</cccev:ConceptIDRef>
+        <dct:identifier>7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</dct:identifier>
+        <dct:title>Tax declaration</dct:title>
+        <dct:description>This certificates the tax payment to the authorities during the last five years.</dct:description>
+        <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
+        <cccev:conformsTo AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT04</cccev:conformsTo>
+        <cccev:conceptIDRef>53882893-f4a8-40ae-99dc-cad7b0748790</cccev:conceptIDRef>
     </Evidence>
     <Evidence>
-        <dct:identifier AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">1c696ec0-5832-40fd-b8b4-04f62141f5f8</dct:identifier>
-        <dct:title AssuranceLevelValue="High" languageID="en">Income certificate</dct:title>
-        <dct:description AssuranceLevelValue="High" languageID="en">This certificates the economic operator's revenues the last three years.</dct:description>
-        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT05</cccev:EvidenceTypeIDRef>
-        <cccev:ConceptIDRef>53882893-f4a8-40ae-99dc-cad7b0748790</cccev:ConceptIDRef>
+        <dct:identifier>1c696ec0-5832-40fd-b8b4-04f62141f5f8</dct:identifier>
+        <dct:title >Income certificate</dct:title>
+        <dct:description>This certificates the economic operator's revenues the last three years.</dct:description>
+        <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
+        <cccev:conformsTo AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT05</cccev:conformsTo>
+        <cccev:conceptIDRef>53882893-f4a8-40ae-99dc-cad7b0748790</cccev:conceptIDRef>
     </Evidence>
     <Evidence>
-        <dct:identifier AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">3a054acc-3e63-4247-b767-8fb11146427b</dct:identifier>
-        <dct:title AssuranceLevelValue="High" languageID="en">Bank accound balance certificate</dct:title>
-        <dct:description AssuranceLevelValue="High" languageID="en">This certificates the current balance of the Economic Operator's bank account.</dct:description>
-        <cccev:ConfidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:ConfidentialityLevel>
-        <cccev:EvidenceTypeIDRef AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT06</cccev:EvidenceTypeIDRef>
-        <cccev:ConceptIDRef>53882893-f4a8-40ae-99dc-cad7b0748790</cccev:ConceptIDRef>
+        <dct:identifier>3a054acc-3e63-4247-b767-8fb11146427b</dct:identifier>
+        <dct:title>Bank accound balance certificate</dct:title>
+        <dct:description>This certificates the current balance of the Economic Operator's bank account.</dct:description>
+        <cccev:confidentialityLevel AssuranceLevelValue="High" listID="ConfidentialityLevel" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/responsedatatype#">CONFIDENTIAL</cccev:confidentialityLevel>
+        <cccev:conformsTo AssuranceLevelValue="High" schemeID="ESPD" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">EVT06</cccev:conformsTo>
+        <cccev:conceptIDRef>53882893-f4a8-40ae-99dc-cad7b0748790</cccev:conceptIDRef>
     </Evidence>
 </Response>

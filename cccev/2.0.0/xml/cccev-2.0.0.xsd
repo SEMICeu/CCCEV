@@ -29,8 +29,8 @@
 	<xsd:element name="copyIndicator" type="cbc:IndicatorType"/>
 	<xsd:element name="confidentialityLevel" type="cbc:CodeType"/>
 	<xsd:element name="conformsTo" type="cbc:IDReferenceType"/>
-	<xsd:element name="constraintOn" type="cbc:IDReferenceType"/>
-	<xsd:element name="conceptIDRef" type="cbc:IDReferenceType"/>
+	<xsd:element name="isConstraintOn" type="cbc:IDReferenceType"/>
+	<xsd:element name="representsConcept" type="cbc:IDReferenceType"/>
 	<xsd:element name="customDataType" type="cbc:CodeType"/>
 	<xsd:element name="customFunction" type="cbc:IDType"/>
 	<xsd:element name="dataSetType" type="cbc:CodeType"/>
@@ -40,23 +40,19 @@
 	<xsd:element name="documentURI" type="cbc:IDType"/>
 	<xsd:element name="error" type="cbc:CodeType"/>
 	<xsd:element name="identifierValue" type="cbc:IDType"/>
-	<xsd:element name="informationRequirementIDRef" type="cbc:IDReferenceType"/>
 	<xsd:element name="indicatorValue" type="cbc:IndicatorType"/>
-	<xsd:element name="partOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="inEvidenceTypeList" type="cbc:IDReferenceType"/>
+	<xsd:element name="isPartOf" type="cbc:IDReferenceType"/>
 	<xsd:element name="issueDate" type="cbc:DateType"/>
 	<xsd:element name="issueTime" type="cbc:TimeType"/>
-	<xsd:element name="inEvidenceTypeList" type="cbc:IDReferenceType"/>
-	<xsd:element name="valueOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="isValueOf" type="cbc:IDReferenceType"/>
 	<xsd:element name="localeCode" type="cbc:CodeType"/>
-	<xsd:element name="measureValue" type="cbc:MeasureType"></xsd:element>
+	<xsd:element name="measureValue" type="cbc:MeasureType"/>
 	<xsd:element name="numericValue" type="cbc:NumericType"/>
-	<xsd:element name="parentCriterionRelationType" type="cbc:CodeType"/>
 	<xsd:element name="quantityValue" type="cbc:QuantityType"/>
-	<xsd:element name="referenceFrameworkIDRef" type="cbc:IDReferenceType"/>
-	<xsd:element name="representationType" type="cbc:CodeType"/>
-	<xsd:element name="requirementIDRef" type="cbc:IDReferenceType"/>
+	<xsd:element name="evidenceTypology" type="cbc:CodeType"/>
 	<xsd:element name="statusCode" type="cbc:CodeType"/>
-	<xsd:element name="evidenceOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="supports" type="cbc:IDReferenceType"/>
 	<xsd:element name="textValue" type="cbc:TextType"/>
 	<xsd:element name="timeValue" type="cbc:TimeType"/>
 	<xsd:element name="uriValue" type="cbc:URIType"/>
@@ -69,19 +65,19 @@
 
 	<!-- Object properties -->
 	
-	<xsd:element name="derivedFrom" type="ReferenceFrameworkType"/>
-	<xsd:element name="concept" type="ConceptType"/>
-	<xsd:element name="evidenceType" type="EvidenceTypeType"/>
+	<xsd:element name="derivesFrom" type="ReferenceFrameworkType"/>
+	<xsd:element name="hasConcept" type="ConceptType"/>
+	<xsd:element name="hasEvidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
-	<xsd:element name="constraint" type="ConstraintType"/>
-	<xsd:element name="provider" type="cagv:AgentType"/>
+	<xsd:element name="hasConstraint" type="ConstraintType"/>
+	<xsd:element name="isProvidedBy" type="cagv:AgentType"/>
 	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
-	<xsd:element name="requirement" type="RequirementType"/>
-	<xsd:element name="evidence" type="EvidenceType"/>
-	<xsd:element name="value" type="ValueType"/>
+	<xsd:element name="hasRequirement" type="RequirementType"/>
+	<xsd:element name="isSupportedBy" type="EvidenceType"/>
+	<xsd:element name="hasValue" type="ValueType"/>
 	<xsd:element name="periodValue" type="cac:PeriodType"/>
 	<xsd:element name="validityPeriod" type="cac:PeriodType"/>		
-	<xsd:element name="referencesConcept" type="ConceptType"/>
+	<xsd:element name="isSpecifiedIn" type="ConceptType"/>
 	
 	<!-- Class declarations -->
 	<xsd:element name="Concept" type="ConceptType"/>
@@ -104,10 +100,10 @@
 			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:namespace" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="cbc:qualifiedName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasConcept" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasConstraint" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasValue" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -115,7 +111,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
-					<xsd:element ref="constraintOn" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="isConstraintOn" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -165,12 +161,11 @@
 					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="confidentialityLevel" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="error" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="informationRequirementIDRef" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="conformsTo" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="evidenceOf" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="conceptIDRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="supports" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="representsConcept" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="inEvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="provider" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="isProvidedBy" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -179,7 +174,7 @@
 	<xsd:complexType name="EvidenceTypeListType">
 		<xsd:sequence>
 			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="evidenceType" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="hasEvidenceType" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -187,9 +182,9 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="representationType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="evidenceTypology" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="dataSetType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="inEvidenceTypeList" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="isSpecifiedIn" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -219,13 +214,13 @@
 			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:type" minOccurs="0"/>
-			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasConcept" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="evidenceTypeCombinationList" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="requirement" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="evidence" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="partOf" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hasRequirement" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="isSupportedBy" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="isPartOf" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="derivedFrom" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="derivesFrom" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -246,9 +241,8 @@
 			<xsd:element ref="customFunction" minOccurs="0"/>
 			<xsd:element ref="error" minOccurs="0"/>
 			<xsd:element ref="periodValue" minOccurs="0"/>
-			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="valueOf" minOccurs="0"/>
-			
+			<xsd:element ref="hasValue" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="isValueOf" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>

@@ -24,11 +24,11 @@
         <cccev:concept>
             <cbc:id>CONCEPT_1</cbc:id>
             <cbc:description>Natural Person declaring taxes</cbc:description>
-            <cbc:namespace>http:/foaf.org/Person</cbc:namespace>
+            <cbc:namespace>{http:/foaf.org}Person</cbc:namespace>
             <cccev:concept>
                 <cbc:id>CONCEPT_1.1</cbc:id>
                 <cbc:description>Given Name</cbc:description>
-                <cbc:qName>{http://foaf.org/Person}givenName</cbc:qName>
+                <cbc:QName>{http://foaf.org}givenName</cbc:QName>
                 <valueOF>
                     <cccev:concept>
                         <cbc:id>CONCEPT_1.2</cbc:id>

@@ -30,6 +30,8 @@
 	<!-- Object properties -->
 	
 	<xsd:element name="knows" type="PersonType"/>
+	<xsd:element name="page" type="DocumentType"/>
+	
 	
 	<!-- Class declarations -->
 	<xsd:element name="Agent" type="AgentType"/>

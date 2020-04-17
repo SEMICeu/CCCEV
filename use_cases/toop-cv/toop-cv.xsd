@@ -6,9 +6,12 @@
   xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
   xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
   xmlns:dcat-ap="http://data.europa.eu/r5r/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
   targetNamespace="urn:eu:toop:ns:dataexchange-1p40" version="specsVersion1.4.0"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
 
+  <xsd:import namespace="http://xmlns.com/foaf/0.1/"
+    schemaLocation="../../common/2.0.0/xml/foaf.xsd"/>
   <xsd:import namespace="http://data.europa.eu/r5r/"
     schemaLocation="../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
@@ -24,6 +27,7 @@
   <xsd:element name="Request" type="TOOPRequestType"/>
   <xsd:element name="Response" type="TOOPResponseType"/>
   <!--element declaration-->
+  <xsd:element name="AdditionalDocumentReference" type="cccev:DocumentReferenceType"/>
   <xsd:element name="AdministrativeUnit" type="cbc:TextType"/>
   <xsd:element name="AlternativeLegalPersonIdentifier" type="cbc:IDType"/>
   <xsd:element name="AlternativeNaturalPersonIdentifier" type="cbc:IDType"/>
@@ -242,6 +246,7 @@
           <xsd:element ref="DataRequestSubject"/>
           <xsd:element ref="EvidenceRequest" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="AdditionalDocumentReference"/>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -262,6 +267,7 @@
           <xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="AdditionalDocumentReference"/>
           
           <!--  
             For the XSD serialisation, a decision has to be made by TOOP on:

@@ -19,22 +19,6 @@
     <dct:language>http://www.oxygenxml.com/</dct:language>
     <dct:creator/>
     <dct:publisher/>
-    <dct:temporal>
-        <dct:startDate>2006-05-04</dct:startDate>
-        <dct:endDate>2006-05-04</dct:endDate>
-    </dct:temporal>
-    <dcat-ap:distribution>
-        <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-        <dct:title>title1</dct:title>
-        <dct:description>description1</dct:description>
-        <dct:format> </dct:format>
-        <dcat-ap:accessURL>http://www.oxygenxml.com/</dcat-ap:accessURL>
-        <dcat-ap:downloadURL>http://www.oxygenxml.com/</dcat-ap:downloadURL>
-    </dcat-ap:distribution>
-    <dcat-ap:qualifiedRelation>
-        <dct:relation> </dct:relation>
-        <dcat-ap:hadRole AssuranceLevelCodeListID="AssuranceLevelCodeListID1" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID1" AssuranceLevelValue="AssuranceLevelValue1" AssuranceLevelAgencyID="AssuranceLevelAgencyID1" AssuranceLevelAgencyName="AssuranceLevelAgencyName1" listID="listID1" listAgencyID="listAgencyID1" listAgencyName="listAgencyName1" listName="listName1" listVersionID="listVersionID1" name="name1" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">hadRole0</dcat-ap:hadRole>
-    </dcat-ap:qualifiedRelation>
     <RoutingInformation>
         <DocumentType AssuranceLevelCodeListID="AssuranceLevelCodeListID3" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID3" AssuranceLevelValue="AssuranceLevelValue3" AssuranceLevelAgencyID="AssuranceLevelAgencyID3" AssuranceLevelAgencyName="AssuranceLevelAgencyName3" schemeID="schemeID1" schemeName="schemeName1" schemeAgencyID="schemeAgencyID1" schemeAgencyName="schemeAgencyName1" schemeVersionID="schemeVersionID1" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DocumentType0</DocumentType>
         <Process AssuranceLevelCodeListID="AssuranceLevelCodeListID5" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID5" AssuranceLevelValue="AssuranceLevelValue5" AssuranceLevelAgencyID="AssuranceLevelAgencyID5" AssuranceLevelAgencyName="AssuranceLevelAgencyName5" schemeID="schemeID3" schemeName="schemeName3" schemeAgencyID="schemeAgencyID3" schemeAgencyName="schemeAgencyName3" schemeVersionID="schemeVersionID3" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Process0</Process>
@@ -48,12 +32,12 @@
             characterSetCode="characterSetCode1" uri="http://www.oxygenxml.com/"
             filename="filename1">ZGVmYXVsdA==</ConsentToken>
     </DataRequestAuthorisation>
-    <CopyIndicator AssuranceLevelCodeListID="AssuranceLevelCodeListID15" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID15" AssuranceLevelValue="AssuranceLevelValue15" AssuranceLevelAgencyID="AssuranceLevelAgencyID15" AssuranceLevelAgencyName="AssuranceLevelAgencyName15" format="format3">CopyIndicator0</CopyIndicator>
-    <Specification AssuranceLevelCodeListID="AssuranceLevelCodeListID17" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID17" AssuranceLevelValue="AssuranceLevelValue17" AssuranceLevelAgencyID="AssuranceLevelAgencyID17" AssuranceLevelAgencyName="AssuranceLevelAgencyName17" schemeID="schemeID9" schemeName="schemeName9" schemeAgencyID="schemeAgencyID9" schemeAgencyName="schemeAgencyName9" schemeVersionID="schemeVersionID9" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Specification0</Specification>
-    <DataConsumerDocument AssuranceLevelCodeListID="AssuranceLevelCodeListID19" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID19" AssuranceLevelValue="AssuranceLevelValue19" AssuranceLevelAgencyID="AssuranceLevelAgencyID19" AssuranceLevelAgencyName="AssuranceLevelAgencyName19" schemeID="schemeID11" schemeName="schemeName11" schemeAgencyID="schemeAgencyID11" schemeAgencyName="schemeAgencyName11" schemeVersionID="schemeVersionID11" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataConsumerDocument0</DataConsumerDocument>
-    <DataConsumerGlobalSession AssuranceLevelCodeListID="AssuranceLevelCodeListID21" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID21" AssuranceLevelValue="AssuranceLevelValue21" AssuranceLevelAgencyID="AssuranceLevelAgencyID21" AssuranceLevelAgencyName="AssuranceLevelAgencyName21" schemeID="schemeID13" schemeName="schemeName13" schemeAgencyID="schemeAgencyID13" schemeAgencyName="schemeAgencyName13" schemeVersionID="schemeVersionID13" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataConsumerGlobalSession0</DataConsumerGlobalSession>
-    <DataConsumerRequestPurpose AssuranceLevelCodeListID="AssuranceLevelCodeListID23" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID23" AssuranceLevelValue="AssuranceLevelValue23" AssuranceLevelAgencyID="AssuranceLevelAgencyID23" AssuranceLevelAgencyName="AssuranceLevelAgencyName23" languageID="en-US" languageLocaleID="languageLocaleID1">DataConsumerRequestPurpose0</DataConsumerRequestPurpose>
-    <DataRequest AssuranceLevelCodeListID="AssuranceLevelCodeListID25" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID25" AssuranceLevelValue="AssuranceLevelValue25" AssuranceLevelAgencyID="AssuranceLevelAgencyID25" AssuranceLevelAgencyName="AssuranceLevelAgencyName25" schemeID="schemeID15" schemeName="schemeName15" schemeAgencyID="schemeAgencyID15" schemeAgencyName="schemeAgencyName15" schemeVersionID="schemeVersionID15" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataRequest0</DataRequest>
+    <CopyIndicator/>
+    <Specification/>
+    <DataConsumerDocument/>
+    <DataConsumerGlobalSession/>
+    <DataConsumerRequestPurpose/>
+    <DataRequest/>
     <DataProvider xsi:type="cagv:PublicOrganizationType">
         <cbc:id AssuranceLevelValue="High">RNA</cbc:id>
         <cagv:defaultContactPoint xsi:type="cagv:ContactPointType">
@@ -63,23 +47,17 @@
         <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
         <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
         <cagv:formalLocation xsi:type="cagv:LocationType">
-            <cagv:Address id="f167174e-5190-42f2-b5be-2bf3a8b2d7b5" xsi:type="cac:AddressType">
+            <cagv:address id="f167174e-5190-42f2-b5be-2bf3a8b2d7b5" xsi:type="cac:AddressType">
                 <lcn:fullAddress>Viale America n.201 00144 Roma Italy</lcn:fullAddress>
-                <cac:streetName languageID="it">Viale America</cac:streetName>
+                <!-- Compulsory use of EU Vocabularies code lists: https://op.europa.eu/en/web/eu-vocabularies/at-concept-scheme/-/resource/authority/language/?target=Browse&uri=http://publications.europa.eu/resource/authority/language -->
+                <cac:streetName languageID="ITA">Viale America</cac:streetName>
                 <cac:buildingNumber>201</cac:buildingNumber>
                 <cac:cityName languageID="it">Roma</cac:cityName>
                 <cac:postalZone>00144</cac:postalZone>
                 <cac:countryCode listID="Country" listAgencyID="PUBL" listVersionID="20200318-0" listURI="http://publications.europa.eu/resource/dataset/country">ITA</cac:countryCode>
-            </cagv:Address>
+            </cagv:address>
         </cagv:formalLocation>
-    </DataProvider>
-    <Error>
-        <Category AssuranceLevelValue="High">Category0</Category>
-        <Code AssuranceLevelValue="High">UNKNOWN</Code>
-        <Origin AssuranceLevelValue="High">Origin0</Origin>
-        <DataProviderID AssuranceLevelValue="High">RNA</DataProviderID>
-        <Severity AssuranceLevelValue="High">Severity0</Severity>
-    </Error>
+    </DataProvider>    
     <EvidenceResponse>
         <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ERES1</ID>
         <ErrorCode AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN/INDICATOR</ErrorCode>
@@ -89,44 +67,60 @@
         <LegalReference AssuranceLevelValue="High" languageID="en">Legislation title</LegalReference>
         <Name AssuranceLevelValue="High" languageID="en">Evidence response for ESPD Request.</Name>
         <Remarks AssuranceLevelValue="High" languageID="en">A combination of different types of Evidences captured from e-Certis is used.</Remarks>
+        
+        <!-- Implementation reusing the CCCEV have the option of instantiating the Class Requirement or the property 'requirement', which is a 'surrogate' of the Class -->
+        <!-- In this example, TOOP decided to instantiate the class. However the rule in the CCCEV is that all the elements in a CCCEV class are either data properties or object properties, 
+             therefore the CCCEV Class invokes the object property 'requirement" inside its sequence (because that is the rule in CCCEV) --> 
         <Requirement xsi:type="cccev:CriterionType">
             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
             <cbc:name AssuranceLevelValue="High" languageID="en">Participation in a criminal organisation</cbc:name>
             <cbc:description AssuranceLevelValue="High" languageID="en">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:description>
             <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
-            <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
-                <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
-                <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
+                <cbc:id>7c637c0c-7703-4389-ba52-02997a055bd7</cbc:id>
+                <cccev:constraint></cccev:constraint>
+                <cccev:concept>
+                    <cbc:description>Your answer?</cbc:description>
+                    <cccev:value xsi:type="cccev:ValueType">
+                        <cccev:indicatorValue>FALSE</cccev:indicatorValue>
+                    </cccev:value>
+                </cccev:concept>
+                
+            </cccev:requirement>
+
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
                     <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">3497e696-d32d-48b8-9c4f-5e198bf9b4e1</cbc:id>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7c637c0c-7703-4389-ba52-02997a055bd7</cbc:id>
                         <cbc:qualifiedName>{http://semic.org/sa/espd/cl}ProcessingInstruction</cbc:qualifiedName>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:indicatorValue>FALSE</cccev:indicatorValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                </cccev:hasRequirement>
-                <cccev:hasRequirement xsi:type="cccev:InformationRequirementType">
+                        </cccev:value>
+                    </cccev:concept>
+                </cccev:requirement>
+
+
+                <cccev:requirement xsi:type="cccev:InformationRequirementType">
                     <cbc:id AssuranceLevelValue="High" schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1">b3853a86-eaad-485b-9ce4-dfb62ac3d79f</cbc:id>
-                    <cccev:hasConcept xsi:type="cccev:ConceptType">
+                    <cccev:concept xsi:type="cccev:ConceptType">
                         <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">7458d42a-e581-4640-9283-34ceb3ad4345</cbc:id>
                         <cbc:qualifiedName>{http://semic.org/sa/espd/cl}ProcessingInstruction</cbc:qualifiedName>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:indicatorValue AssuranceLevelValue="High">TRUE</cccev:indicatorValue>
-                            <cccev:hasValue xsi:type="cccev:ValueType">
+                            <cccev:value xsi:type="cccev:ValueType">
                                 <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ONTRUE</cccev:codeValue>
-                                <cccev:hasValue xsi:type="cccev:ValueType">
+                                <cccev:value xsi:type="cccev:ValueType">
                                     <cccev:identifierValue>7c262e5c-2ea7-430d-aab0-52ba9cc17ff1</cccev:identifierValue>
-                                </cccev:hasValue>
-                            </cccev:hasValue>
-                        </cccev:hasValue>
-                        <cccev:hasValue xsi:type="cccev:ValueType">
+                                </cccev:value>
+                            </cccev:value>
+                        </cccev:value>
+                        <cccev:value xsi:type="cccev:ValueType">
                             <cccev:codeValue AssuranceLevelValue="High" listID="ResponseDataType" listVersionID="2.1.1" listAgencyID="EU-COM-GROW" listURI="http://semic.org/sa/espd/cl/propertygrouptype#">ON*</cccev:codeValue>
-                        </cccev:hasValue>
-                    </cccev:hasConcept>
-                </cccev:hasRequirement>
-            </cccev:hasRequirement>
+                        </cccev:value>
+                    </cccev:concept>
+                </cccev:requirement>
         </Requirement>
+
         <Requirement xsi:type="cccev:CriterionType">
             <cbc:id AssuranceLevelValue="High" schemeID="ESPD" schemeVersionID="2.1.1">b16cb9fc-6cb7-4585-9302-9533b415cf48</cbc:id>
             <cbc:name AssuranceLevelValue="High" languageID="en">Average yearly turnover</cbc:name>

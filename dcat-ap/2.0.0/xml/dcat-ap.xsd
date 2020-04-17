@@ -28,6 +28,7 @@
 	<xsd:element name="distribution" type="DistributionType"/>
 	<xsd:element name="qualifiedRelation" type="RelationshipType"/>
 	<xsd:element name="servesDataset" type="DatasetType"/>
+	<xsd:element name="landingPage" type="foaf:DocumentType"/>	
 	
 	<!-- Classes -->
 	<xsd:element name="Dataset" type="DatasetType"/>
@@ -44,11 +45,13 @@
 			<xsd:element ref="dct:modified" minOccurs="0"/>
 			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="foaf:page" minOccurs="0"/>
+			<xsd:element ref="landingPage" minOccurs="0"/>
 			<xsd:element ref="dct:language" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:creator" minOccurs="0"/>
 			<xsd:element ref="dct:publisher" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="distribution" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="distribution" minOccurs="0" maxOccurs="unbounded"/>			
 			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -67,6 +70,7 @@
 
 	<xsd:complexType name="DistributionType">
 		<xsd:sequence>
+			<xsd:element ref="foaf:page" minOccurs="0"/>
 			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>

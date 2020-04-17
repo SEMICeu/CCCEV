@@ -42,18 +42,26 @@
    <xsd:element name="timezoneOffset" type="cbc:NumericType"/>
    
    <!-- Object elements -->
+   <!-- none -->
 
-   <!-- Classes -->
+   <!-- Classe declaration -->
    <xsd:element name="Address" type="AddressType"/>
    <xsd:element name="Period" type="PeriodType"/>
    
-   
+      
    <!-- ===== Type Definitions ===== -->
+
+   <!-- The TOP class "Thing", which for now has no elements, only attributes -->
+
+   <xsd:attributeGroup name="ThingAttributes">
+      <xsd:attribute name="versionId" type="xsd:normalizedString"/>
+   </xsd:attributeGroup>
+
    <xsd:complexType name="AddressType">
       <xsd:complexContent>
          <xsd:extension base="lcn:AddressType">
             <xsd:sequence>
-               <xsd:element ref="id" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="addressTypeCode" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="addressFormatCode" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="postbox" minOccurs="0" maxOccurs="1"/>
@@ -80,19 +88,23 @@
                <xsd:element ref="timezoneOffset" minOccurs="0" maxOccurs="1"/>
                <xsd:element ref="addressLine" minOccurs="0" maxOccurs="unbounded"/>
                <xsd:element ref="countryCode" minOccurs="0" maxOccurs="1"/>
-            </xsd:sequence>                     
+            </xsd:sequence>
+            <!-- Beware that the AddressType does not need the id attribute as it already inherits it from the lcn:AddressType -->                               
          </xsd:extension>
       </xsd:complexContent>
    </xsd:complexType>
    
    <xsd:complexType name="PeriodType">
-      <xsd:sequence>
-         <xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:startDate" minOccurs="0" maxOccurs="1"/>      
-         <xsd:element ref="cbc:startTime" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:endDate" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:endTime" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:durationMeasure" minOccurs="0" maxOccurs="1"/>
-      </xsd:sequence>
+            <xsd:sequence>
+               <xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="cbc:startDate" minOccurs="0" maxOccurs="1"/>      
+               <xsd:element ref="cbc:startTime" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:endDate" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:endTime" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:durationMeasure" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attributeGroup ref="ThingAttributes"/>
    </xsd:complexType>
+
 </xsd:schema>
+

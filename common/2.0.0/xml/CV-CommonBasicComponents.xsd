@@ -120,7 +120,7 @@
    </xsd:complexType>
    <xsd:complexType name="EndDateType">
       <xsd:simpleContent>
-         <xsd:restriction base="dt:DateType"/>
+         <xsd:extension base="DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="EndPointType">
@@ -165,7 +165,7 @@
    </xsd:complexType>
    <xsd:complexType name="StartDateType">
       <xsd:simpleContent>
-         <xsd:restriction base="dt:DateType"/>
+         <xsd:extension base="DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="StartTimeType">

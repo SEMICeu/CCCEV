@@ -59,9 +59,8 @@
 			<xsd:element ref="dct:title" minOccurs="1"/>
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:acccessRights" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="endpointDescription" minOccurs="0" maxOccurs="unbounded"/>
-			
+			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="servesDataset" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>

@@ -46,6 +46,7 @@
 	<xsd:element name="issueDate" type="cbc:DateType"/>
 	<xsd:element name="issueTime" type="cbc:TimeType"/>
 	<xsd:element name="isValueOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="languageID" type="cbc:IDType"/>
 	<xsd:element name="localeCode" type="cbc:CodeType"/>
 	<xsd:element name="measureValue" type="cbc:MeasureType"/>
 	<xsd:element name="numericValue" type="cbc:NumericType"/>
@@ -145,6 +146,7 @@
 					<xsd:element ref="documentType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="issueDate" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="issueTime" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="languageID" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="localeCode" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="versionID" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="xPath" minOccurs="0" maxOccurs="unbounded"/>		

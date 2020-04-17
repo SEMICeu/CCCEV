@@ -159,7 +159,7 @@
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Remarks" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="Criterion" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>

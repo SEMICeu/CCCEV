@@ -83,50 +83,43 @@
             <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
             <cccev:requirement xsi:type="cccev:InformationRequirementType">
                 <cbc:id>7c637c0c-7703-4389-ba52-02997a055bd7</cbc:id>
-                <!-- The absence of a processing instruction ON* implies that the next concept needs to be processed -->
-                <cccev:concept>
+                    <!-- The absence of a processing instruction ON* implies that the next concept needs to be processed -->
                     <!-- This concept represents a QUESTION addressed to the Economic Operator (EO). If the answer is "true" (Yes) it implies that the EO is in breach of the Law and, therefore all 
                          the questions inside this Concept need to be answered. Thus the constraining processing instruction (pi) ONTRUE -->
                     <!-- Optionally the ESPD Criteria Taxonomy tagging of groups and subgroups could be used to indicate that this concept is a group of questions and subgroups of questions --> 
-                    <cbc:type>QUESTION_GROUP</cbc:type>
                     <cccev:concept xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi" xmlns:espd-struct="http://semic.eu/sa/espd/struct">
-                            <cbc:description>Your answer?</cbc:description>                            
-                            <cbc:QName>espd-voc:questionGroup</cbc:QName>
+                            <cbc:id>a0322b12-dbb0-4763-8326-b5cd33da0291</cbc:id>       
+                            <cbc:description>Your answer?</cbc:description>                             
+                            <cbc:QName>espd-struct:questionGroup</cbc:QName>
                             <cccev:constraint>
                                 <cccev:concept>
                                 <cbc:id>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
                                 <cbc:description>Since the answer is affirmative, the group of questions below need to be answered, shown, processed, etc.</cbc:description>
                                 <cbc:QName>espd-pi:ONTRUE</cbc:QName>
                                 </cccev:concept>
-                            </cccev:constraint>
-                            <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>
+                            </cccev:constraint>                            
                             <cccev:concept>
                                 <cbc:id>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
                                 <cbc:QName>espd-struct:questionSubGroup</cbc:QName>
                                 <cccev:concept>
+                                    <cbc:id>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cbc:id>
                                     <cbc:description>Date of conviction</cbc:description>
-                                    <cbc:QName>espd-voc:dateOfConviction</cbc:QName>
-                                    <cccev:value><cccev:dateValue>2020-01-01</cccev:dateValue></cccev:value>
+                                    <cbc:QName>espd-voc:dateOfConviction</cbc:QName>                                    
                                 </cccev:concept>
                                 <cccev:concept>
+                                    <cbc:id>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cbc:id>
                                     <cbc:description>Reason</cbc:description>
                                     <cbc:QName>espd-voc:reason</cbc:QName>
-                                    <cccev:value><cccev:textValue>Participation in collusion.</cccev:textValue></cccev:value>
                                 </cccev:concept>
                                 <cccev:concept>
+                                    <cbc:id>31479ab2-6ff7-467c-80a4-841344222874</cbc:id>
                                     <cbc:description>Who has been convicted?</cbc:description>
                                     <cbc:QName>espd-voc:convicted</cbc:QName>
-                                    <cccev:value><cccev:textValue>Smith, John, legal representative</cccev:textValue></cccev:value>
                                 </cccev:concept>
                                 <cccev:concept>
+                                    <cbc:id>0b689697-cbc8-4e38-9fa3-1a776e116b00</cbc:id>
                                     <cbc:description>Length of the period of exclusion</cbc:description>
-                                    <cbc:QName>espd-voc:convictionPeriod</cbc:QName>
-                                    <cccev:value>
-                                            <cccev:periodValue> 
-                                                <cbc:startDate>2020-01-01</cbc:startDate>
-                                                <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
-                                            </cccev:periodValue>
-                                    </cccev:value>
+                                    <cbc:QName>espd-voc:convictionPeriod</cbc:QName>                                    
                                 </cccev:concept>
                                 <!-- The concept following below defines a decision point. If answered with "true" (Yes) an evidence specifically either aggregated or linked
                                        to this concept.  -->
@@ -134,6 +127,7 @@
                                         <cbc:id>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cbc:id>
                                         <cbc:QName>espd-struct:questionSubGroup</cbc:QName>
                                         <cccev:concept>
+                                            <cbc:id>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cbc:id>
                                             <cbc:description>Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:description>
                                             <cbc:QName>espd-voc:cleansingMeasures</cbc:QName>
                                             <cccev:constraint>
@@ -152,10 +146,29 @@
                                         </cccev:concept>    
                                     </cccev:concept>
                             </cccev:concept>                                                    
-                    </cccev:concept>
-                </cccev:concept>
+                        </cccev:concept>                                                                        
             </cccev:requirement>
-        </Requirement>
+        </Requirement>        
+        <Value>
+          <cccev:indicatorValue>true</cccev:indicatorValue>
+          <cccev:valueOf>a0322b12-dbb0-4763-8326-b5cd33da0291</cccev:valueOf>
+          <cccev:value><cccev:dateValue>2020-01-01</cccev:dateValue><cccev:valueOf>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cccev:valueOf></cccev:value>
+          <cccev:value><cccev:textValue>Participation in collusion.</cccev:textValue><cccev:valueOf>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cccev:valueOf></cccev:value>
+          <cccev:value><cccev:textValue>Smith, John, legal representative</cccev:textValue><cccev:valueOf>31479ab2-6ff7-467c-80a4-841344222874</cccev:valueOf></cccev:value>
+          <cccev:value>
+                <cccev:periodValue> 
+                    <cbc:startDate>2020-01-01</cbc:startDate>
+                    <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
+                </cccev:periodValue>
+                <cccev:valueOf>0b689697-cbc8-4e38-9fa3-1a776e116b00</cccev:valueOf>
+        </cccev:value>
+        <cccev:value>
+            <cccev:valueOf>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:valueOf>
+            <cccev:value>
+                <cccev:valueOf>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cccev:valueOf>
+            </cccev:value>
+        </cccev:value>                
+        </Value>
     </EvidenceResponse>
     <Evidence>
         <dct:title>John Smith 2020-01-01 Conviction</dct:title>

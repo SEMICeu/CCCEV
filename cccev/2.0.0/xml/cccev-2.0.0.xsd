@@ -53,7 +53,7 @@
 	<xsd:element name="quantityValue" type="cbc:QuantityType"/>
 	<xsd:element name="evidenceTypology" type="cbc:CodeType"/>
 	<xsd:element name="statusCode" type="cbc:CodeType"/>
-	<xsd:element name="supports" type="cbc:IDReferenceType"/>		
+	<xsd:element name="supportingEvidence" type="cbc:IDReferenceType"/>		
 	<xsd:element name="textValue" type="cbc:TextType"/>
 	<xsd:element name="timeValue" type="cbc:TimeType"/>
 	<xsd:element name="uriValue" type="cbc:URIType"/>
@@ -74,7 +74,7 @@
 	<xsd:element name="providedBy" type="cbc:IDReferenceType"/>
 	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="requirement" type="RequirementType"/>
-	<xsd:element name="supportingEvidence" type="EvidenceType"/>
+	<xsd:element name="supportiveEvidence" type="EvidenceType"/>
 	<xsd:element name="value" type="ValueType"/>
 	<xsd:element name="periodValue" type="cac:PeriodType"/>
 	<xsd:element name="validityPeriod" type="cac:PeriodType"/>		
@@ -103,8 +103,7 @@
 			<xsd:element ref="cbc:QName" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="supportingEvidence" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 		<xsd:attributeGroup ref="cac:ThingAttributes"/>
 	</xsd:complexType>

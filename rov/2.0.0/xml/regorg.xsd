@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
+<xsd:schema xmlns="http://www.w3.org/ns/regorg#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:org="http://www.w3.org/ns/org#"
+    xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"    
+    targetNamespace="http://www.w3.org/ns/regorg#" 
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified" version="2.0.0">
+    
+    <xsd:import
+        namespace="http://purl.org/dc/terms/"
+        schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
+    <xsd:import
+        namespace="http://www.w3.org/ns/org#"
+        schemaLocation="../../../org/2.0.0/xml/org.xsd"/>
+    <xsd:import
+        namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+        schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+    
+    <!-- Element declaration -->
+    
+    <xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
+    <xsd:element name="LegalName" type="cbc:NameType"/>
+    <!-- Element definition -->
+       
+    <xsd:complexType name="RegisteredOrganizationType">
+        <xsd:complexContent>
+            <xsd:extension base="org:FormalOrganizationType">
+                <xsd:sequence>
+                    <xsd:element ref="LegalName"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+        
+    </xsd:complexType>  
+</xsd:schema>

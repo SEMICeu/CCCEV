@@ -18,7 +18,7 @@
 	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
 		schemaLocation="../../../cagv/2.0.0/xml/CV-Agent.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
-		schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
+		schemaLocation="../../../foaf/xml/foaf.xsd"/>
 
 	<!-- Declaration of elements -->
 	

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
+<xsd:schema xmlns="http://www.w3.org/ns/adms#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	targetNamespace="http://www.w3.org/ns/adms#" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>	
+	<xsd:element name="identifier" type="IdentifierType"/>
+
+	<xsd:complexType name="IdentifierType">
+		<xsd:all>
+			<!-- According to the W3C ADMS specification, instances of the skos:notation should indicate the type of the element content. Use xsi:type for this. -->
+			<!-- See:https://www.w3.org/TR/vocab-adms/#dt_identifier -->  
+			<xsd:element ref="skos:notation"/>
+		</xsd:all>
+		<xsd:attribute name="schemeID" use="optional"/>
+		<xsd:attribute name="schemeAgencyID" use="optional"/>
+		<xsd:attribute name="schemeVersionID" use="optional"/>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Needs to be further developed...e.g. include ConceptScheme and other elements now missing. -->
+<xsd:schema xmlns="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.w3.org/2004/02/skos/core#"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    
+    <!-- Element declaration -->
+
+    <!-- Data properties -->
+
+    <xsd:element name="prefLabel" type="xsd:string"/>
+    <xsd:element name="altLabel" type="xsd:string"/>
+    <xsd:element name="notation" type="xsd:anySimpleType"/>
+    
+    <xsd:element name="Concept" type="ConceptType"/>
+    <xsd:element name="Definition" type="DefinitionType"/>
+
+    <!-- Element definition -->
+    <xsd:complexType name="ConceptType">
+        <xsd:sequence>
+            <xsd:element ref="Definition" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="DefinitionType">
+        <xsd:complexContent>
+            <xsd:extension base="xsd:anyType"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+</xsd:schema>

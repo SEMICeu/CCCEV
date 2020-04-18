@@ -11,7 +11,7 @@
   elementFormDefault="qualified" attributeFormDefault="unqualified">
 
   <xsd:import namespace="http://xmlns.com/foaf/0.1/"
-    schemaLocation="../../common/2.0.0/xml/foaf.xsd"/>
+    schemaLocation="../../foaf/2.0.0/xml/foaf.xsd"/>
   <xsd:import namespace="http://data.europa.eu/r5r/"
     schemaLocation="../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
@@ -180,10 +180,10 @@
 
   <xsd:complexType name="EvidenceResponseType">
     <xsd:sequence>
-      <xsd:element ref="ID"/>
+      <xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ErrorCode" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ErrorIndicator" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="IssueDate"/>
+      <xsd:element ref="IssueDate" minOccurs="0"/>
       <xsd:element ref="IssuePlace" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="LegalReference" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded"/>
@@ -257,18 +257,17 @@
       <xsd:extension base="EDMType">
         <xsd:sequence>
           <xsd:element ref="CopyIndicator" minOccurs="0" maxOccurs="1"/>          
-          <xsd:element ref="Specification"/>
+          <xsd:element ref="Specification" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="DataConsumerDocument" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataConsumerGlobalSession" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataConsumerRequestPurpose" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="DataRequest" minOccurs="0" maxOccurs="1"/>
           <xsd:element ref="DataProvider" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="Error" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element ref="EvidenceResponse" minOccurs="0" maxOccurs="unbounded"/>
-          
+          <xsd:element ref="EvidenceResponse" minOccurs="0" maxOccurs="unbounded"/>          
           <xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded"/>
           <xsd:element ref="EvidenceType" minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:element ref="AdditionalDocumentReference"/>
+          <xsd:element ref="AdditionalDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
           
           <!--  
             For the XSD serialisation, a decision has to be made by TOOP on:

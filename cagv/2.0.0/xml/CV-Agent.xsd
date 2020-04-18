@@ -17,12 +17,12 @@
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
 	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
-	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../common/2.0.0/xml/dcterms.xsd"/>
-	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../common/2.0.0/xml/foaf.xsd"/>
+	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
-	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../common/2.0.0/xml/org.xsd"/>	
-	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../common/2.0.0/xml/regorg.xsd"/>
-	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../xml/skos.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../org/2.0.0/xml/org.xsd"/>	
+	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../rov/2.0.0/xml/regorg.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
 	
 	
 	<!-- Data properties -->	
@@ -89,7 +89,7 @@
 			<xsd:element ref="hasContactPoint" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>		
 	</xsd:group>
-
+	<!--
 	<xsd:group name="foaf_PersonElements">
 		<xsd:sequence>
 			<xsd:element ref="foaf:currentProject" minOccurs="0" maxOccurs="unbounded"/>
@@ -108,7 +108,7 @@
 			<xsd:element ref="foaf:workInfoHomepage" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>		
 	</xsd:group>
-
+	-->
 	<xsd:group name="org_OrganizationElements">
 		<xsd:sequence>
 			<xsd:element ref="skos:prefLabel" minOccurs="0" maxOccurs="unbounded"/>
@@ -192,7 +192,7 @@
 				<xsd:sequence>
 					<!-- Org:FormalOrganization has no attributes. No need to include a group of org:FormalOrganization elements. -->
 					<xsd:element ref="taxIdentifier" minOccurs="0"/>
-					<xsd:element ref="formalName" minOccurs="0"/>
+					<xsd:element ref="formalName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="formalLocation" minOccurs="0"/>
 				</xsd:sequence>
 				<xsd:attributeGroup ref="cac:ThingAttributes"/>
@@ -216,10 +216,10 @@
 		<xsd:complexContent>
 			<xsd:extension base="AgentType">
 				<xsd:sequence>
-					<xsd:group ref="foaf_PersonElements"/>
+					<!-- xsd:group ref="foaf_PersonElements"/ -->
 					<xsd:element ref="fullName" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="familyName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="givenName" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="familyName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="patronimicName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="alternativeName" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="birthFamilyName" minOccurs="0" maxOccurs="unbounded"/>

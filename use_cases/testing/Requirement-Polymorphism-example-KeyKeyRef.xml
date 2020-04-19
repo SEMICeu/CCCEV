@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- Example: a collection of requirements and evidences, where evidences links to requirements and concepts are restricted (controlled) via key/keyRef pairs. Last update 20200419.
+
+    * See 'Requirement-Polymorphism-example-KeyKeyRef.xml' for an example of an instance.
+-->
+
+<ns0:RequirementsCollection xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:org="http://www.w3.org/ns/org#"
+ xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+ xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+ xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+ xmlns:adms="http://www.w3.org/ns/adms#"
+ xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+ xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+ xmlns:lcn="http://www.w3.org/ns/locn#"
+ xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+ xmlns:rov="http://www.w3.org/ns/regorg#"
+ xmlns:dcat-ap="http://data.europa.eu/r5r/"
+ xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+ xmlns:ns0="http://example.org/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://example.org/ ./Requirement-Polymorphism-example-keyKeyRef.xsd">
+    <cccev:requirement>
+        <cbc:id>req1</cbc:id>
+        <cbc:name>name0</cbc:name>
+        <cbc:description>description0</cbc:description>
+        <cbc:type>type0</cbc:type>
+        <cccev:requirement>
+            <cbc:id>req2</cbc:id>
+            <cccev:evidenceTypeCombinationList>
+                <cccev:evidenceType>
+                    <dct:identifier>e1</dct:identifier>
+                    <dct:title></dct:title>
+                    <dct:description></dct:description>
+                </cccev:evidenceType>
+                <cccev:evidenceType>
+                    <dct:identifier>e2</dct:identifier>
+                    <dct:title></dct:title>
+                    <dct:description></dct:description>
+                </cccev:evidenceType>
+            </cccev:evidenceTypeCombinationList>
+        </cccev:requirement>
+        <cccev:concept>
+            <cbc:id>c1</cbc:id>
+            <cccev:concept>
+                <cbc:id>c2</cbc:id>
+            </cccev:concept>
+        </cccev:concept>
+    </cccev:requirement>
+    <cccev:evidence>
+        <dct:identifier>identifier6</dct:identifier>
+        <dct:title>title9</dct:title>
+        <dct:description>description8</dct:description>        
+        <cccev:confidentialityLevel>confidentialityLevel1</cccev:confidentialityLevel>
+        <cccev:error>error1</cccev:error>
+        <cccev:conformsTo>e1</cccev:conformsTo>
+        <cccev:supportsRequirement>req1</cccev:supportsRequirement>
+        <cccev:supportsRequirement>req2</cccev:supportsRequirement>
+        <cccev:supportsConcept>c1</cccev:supportsConcept>
+        <cccev:supportsConcept>c2</cccev:supportsConcept>        
+        <cccev:providedBy>providedBy1</cccev:providedBy>
+    </cccev:evidence>
+</ns0:RequirementsCollection>

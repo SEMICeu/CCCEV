@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+    <!-- Example: a collection of requirements, values and evidences. Last update 20200419.
+
+        This is a very simple collection of Requirements that can be used for quick testing different implementations of Requirements.
+
+        * See XML instances provided jointly to this schema.
+        * See also the files 'Requirement-Polymorphism-example-KeyKeyRef.xsd' and 'Requirement-Polymorphism-example-KeyKeyRef.xml' for
+          examples on how to restrict the references to identifiers using key and keyRef.
+    -->
+
+<xsd:schema
+xmlns="http://example.org/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+xmlns:dct="http://purl.org/dc/terms/"
+elementFormDefault="qualified"
+targetNamespace="http://example.org/">
+    <!--imports -->
+    <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#" 
+        schemaLocation="../../cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
+    <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+    <xsd:import namespace="http://purl.org/dc/terms/"
+		schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
+	
+    <!-- element declarations -->
+    <xsd:element name="RequirementsCollection" type="RequirementsCollectionType"/>
+
+    <!-- element definitions -->
+    <xsd:complexType name="RequirementsCollectionType">
+        <xsd:sequence>
+            <xsd:element ref="cccev:requirement" minOccurs="1" maxOccurs="unbounded"/>                        
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

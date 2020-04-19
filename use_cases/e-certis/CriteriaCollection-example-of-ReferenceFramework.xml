@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example of a Conviction Criterion use to illustrate how to structure the e-Certis Reference Framework sub-model. Last update 20200419. -->
+<RequirementsCollection
+ xmlns="http://example.org/" 
+ xmlns:udt="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+ xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+ xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:adms="http://www.w3.org/ns/adms#"
+ xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+ xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+ xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+ xmlns:org="http://www.w3.org/ns/org#"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+ xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+ xmlns:lcn="http://www.w3.org/ns/locn#"
+ xmlns:rov="http://www.w3.org/ns/regorg#"
+ xmlns:dcat-ap="http://data.europa.eu/r5r/"
+ xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+ xmlns:ns0="http://example.org/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://example.org/ file:/C:/Users/estaromi/everis/SEMIC%20-%20General/03%20GitHub/CCCEV/use_cases/e-certis/CriteriaCollection-example-of-ReferenceFramework.xsd">
+<cccev:requirement xsi:type="cccev:CriterionType" xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi">
+        <cbc:id schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
+        <cbc:name languageID="eng">Participation in a criminal organisation</cbc:name>
+        <cbc:description languageID="eng">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:description>
+        <cbc:type listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
+    
+        <cccev:derivedFrom>
+            <dct:title>Article 57 of Directive 2014/24/EU</dct:title>
+            <dct:description>Exclusion Grounds</dct:description>
+            <dct:language>http://publications.europa.eu/resource/authority/language#ENG</dct:language>
+
+            <!-- COMPATIBILITY WITH E-CERTIS
+
+                The following nested structure mimics the e-Certis E/R model as follows:
+                    1. The "Division" is of type "Article"
+                    2. An "Article" belongs to a "Resource", in this case a "Directive"
+                    3. This Resource has a "Coverage_Area" of "EU"
+            -->
+            <dcat-ap:qualifiedRelation xsi:type="dcat-ap:RelationshipType">
+                    <dct:relation>
+                        <dcat-ap:Dataset>
+                            <dct:type>ARTICLE</dct:type>
+                            <dct:title>Article 57</dct:title>
+                            <dct:description>Exclusion grounds</dct:description>
+                            <dcat-ap:qualifiedRelation>
+                                <dct:relation>
+                                    <dcat-ap:Dataset>
+                                        <dct:type>RESOURCE</dct:type>
+                                        <dct:title>Directive 2014/24/EU</dct:title>
+                                        <dct:description>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC</dct:description>
+                                        <dcat-ap:qualifiedRelation>
+                                            <dct:relation>
+                                                <dcat-ap:Dataset>
+                                                    <dct:type>COVERAGE_AREA</dct:type>
+                                                    <dct:title>EU</dct:title>
+                                                    <dct:description>European Jurisdiction</dct:description>
+                                                </dcat-ap:Dataset>
+                                            </dct:relation>
+                                            <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</dcat-ap:hadRole>
+                                        </dcat-ap:qualifiedRelation>
+                                    </dcat-ap:Dataset>                                                                                        
+                                </dct:relation>
+                                <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/resource#DIRECTIVE</dcat-ap:hadRole>                                        
+                            </dcat-ap:qualifiedRelation>
+                        </dcat-ap:Dataset>
+                    </dct:relation>
+                    <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE</dcat-ap:hadRole>
+            </dcat-ap:qualifiedRelation>
+        </cccev:derivedFrom>  
+    </cccev:requirement>
+</RequirementsCollection>

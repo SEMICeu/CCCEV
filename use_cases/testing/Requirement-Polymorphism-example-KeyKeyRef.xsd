@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+xmlns="http://example.org/" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+xmlns:dct="http://purl.org/dc/terms/"
+elementFormDefault="qualified"
+targetNamespace="http://example.org/">
+    <!--imports -->
+    <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#" 
+        schemaLocation="../../cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
+    <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+    <xsd:import namespace="http://purl.org/dc/terms/"
+		schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
+	
+    <!-- element declarations -->
+    <xsd:element name="RequirementsCollection" type="RequirementsCollectionType">
+        
+        <xsd:key name="requirementId">
+            <xsd:selector xpath=".//cccev:requirement"/>
+            <xsd:field xpath="cbc:id"></xsd:field>
+        </xsd:key>        
+        <xsd:keyref refer="requirementId" name="evidenceSupportsRequirementIdRef">
+            <xsd:selector xpath="./cccev:evidence/cccev:supportsRequirement"/>
+            <xsd:field xpath="."/>
+        </xsd:keyref>
+        
+        <xsd:key name="ConceptId">
+            <xsd:selector xpath=".//cccev:concept"></xsd:selector>
+            <xsd:field xpath="cbc:id"/>
+        </xsd:key>   
+        <xsd:keyref refer="ConceptId" name="evidenceSupportsConceptIdRef">
+            <xsd:selector xpath="./cccev:evidence/cccev:supportsConcept"/>
+            <xsd:field xpath="."/>
+        </xsd:keyref>
+
+        <xsd:key name="EvidenceTypeId">
+            <xsd:selector xpath=".//cccev:evidenceType"/>
+            <xsd:field xpath="dct:identifier"/>
+        </xsd:key>        
+        <xsd:keyref refer="EvidenceTypeId" name="conformsToEvidenceTypeIdRef">
+            <xsd:selector xpath="./cccev:evidence"/>
+            <!-- Evidence SHOULD conform only to one type of evidence. 
+                 If conformance were needed for multiple types then append 'cccev:conformsTo' to './cccev:evidence' and use the context '.' in the xpath -->  
+            <xsd:field xpath="cccev:conformsTo"/>
+        </xsd:keyref>     
+    </xsd:element>
+    <!-- element definitions -->
+    <xsd:complexType name="RequirementsCollectionType">
+        <xsd:sequence>
+            <xsd:element ref="cccev:requirement" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element ref="cccev:value" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+            <xsd:element ref="cccev:evidence" minOccurs="0" maxOccurs="unbounded"></xsd:element>            
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

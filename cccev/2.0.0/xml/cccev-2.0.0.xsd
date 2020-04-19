@@ -53,7 +53,8 @@
 	<xsd:element name="quantityValue" type="cbc:QuantityType"/>
 	<xsd:element name="evidenceTypology" type="cbc:CodeType"/>
 	<xsd:element name="statusCode" type="cbc:CodeType"/>
-	<xsd:element name="supports" type="cbc:IDReferenceType"/>		
+	<xsd:element name="supportsRequirement" type="cbc:IDReferenceType"/>		
+	<xsd:element name="supportsConcept" type="cbc:IDReferenceType"/>
 	<xsd:element name="textValue" type="cbc:TextType"/>
 	<xsd:element name="timeValue" type="cbc:TimeType"/>
 	<xsd:element name="uriValue" type="cbc:URIType"/>
@@ -160,12 +161,11 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="confidentialityLevel" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="error" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="conformsTo" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="supports" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="representsConcept" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="supportsRequirement" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="supportsConcept" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="providedBy" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:attributeGroup ref="cac:ThingAttributes"/>

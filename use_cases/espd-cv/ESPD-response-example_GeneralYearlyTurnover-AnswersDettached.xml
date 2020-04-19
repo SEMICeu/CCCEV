@@ -7,15 +7,11 @@
         * This example illustates how to implement one ESPD Criterion of type General Yearly Turnover;
         * The example contains two 'Information Requirements', one requesting the EO to provide 'self-declared' data, the other requesting evidences to support these responses.
         * The Evidence provided by the EO conforms to one of the types specified in the combination of types of evidences, taken from e-Certis;         
-        * All groups and subgroups of questions, as well as the questions themselves have been structured using the class Concept; 
-        * The Economic Operator provides two evidences and an additional document, all of them are placed at the end of the Requirement, and are linked to the Concept
-          via the Concept id:
-            * An Evidence supporting all the data answered for the whole requirement;
-            * An Evidence supporting the cleansing measures taken to, despite the orginial conviction, still be able to participate in the procurement procedure;     
-            * An additional document reference, at the end of the Requirement, containing a declaration of oath by the convicted person.
+        * The response values are aggregated inside the Concepts. Since the cardinality of the values is multiple (three turnovers, one per each of the past three years), 
+          three instances of cccev:Concept are needed. Beware that each Concept has different/unique identifiers;     
+        * The Economic Operator provides three evidences, each one pointing to one specific fiscal year turnover;         
         * Notice that Evidences in this example use the adms:identifier object property.
         * See also how the instantiation of creators of evidences.
-        * In this example hte value responses have been aggregated inside the Concept(s).
         * The Qualified Name (QName) of the concepts are (can be) used to
             1) indicate the semantics of the concept via its namespace URI and element local name
             2) determine what data type the concept has in that namespace
@@ -136,15 +132,70 @@
                             <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>                            
+                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cccev:value><cccev:amountValue currencyID="eur">1000001</cccev:amountValue></cccev:value>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>                            
+                            <cbc:QName>espd-voc:period</cbc:QName>           
+                            <cccev:value>
+                                <cccev:periodValue>
+                                    <cbc:startDate>2017-01-01</cbc:startDate>
+                                    <cbc:endDate>2017-12-01</cbc:endDate>                                 
+                                </cccev:periodValue>
+                            </cccev:value>                 
                         </cccev:concept>
-                    </cccev:concept>                   
+                    </cccev:concept>
+                    <cccev:concept>
+                        <cbc:id>b93edd61-ceb9-4070-8353-7706ec08c687</cbc:id>
+                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cccev:concept>
+                            <cbc:id>d5af173f-1603-4120-9f09-89503c51ca1d</cbc:id>
+                            <cbc:description>Amount</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cccev:value><cccev:amountValue currencyID="eur">1000002</cccev:amountValue></cccev:value>                            
+                        </cccev:concept>
+                        <cccev:concept>
+                            <cbc:id>eca573aa-60eb-4e92-84b8-0fb888db5599</cbc:id>
+                            <cbc:description>Start-date and end-date</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:QName>espd-voc:period</cbc:QName>           
+                            <cccev:value>
+                                <cccev:periodValue>
+                                    <cbc:startDate>2018-01-01</cbc:startDate>
+                                    <cbc:endDate>2018-12-01</cbc:endDate>                                 
+                                </cccev:periodValue>
+                            </cccev:value>                 
+                        </cccev:concept>
+                    </cccev:concept>         
+                    <cccev:concept>
+                        <cbc:id>4fa92f3b-fe7a-4451-a5bd-a8ab21a07b2d</cbc:id>
+                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cccev:concept>
+                            <cbc:id>80c3038b-a46d-43ca-8f71-e50a940ae277</cbc:id>
+                            <cbc:description>Amount</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cccev:value><cccev:amountValue currencyID="eur">1000003</cccev:amountValue></cccev:value>                            
+                        </cccev:concept>
+                        <cccev:concept>
+                            <cbc:id>fe4b9b96-5cd3-4fbd-94b3-f3d257f36d5a</cbc:id>
+                            <cbc:description>Start-date and end-date</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:QName>espd-voc:period</cbc:QName>           
+                            <cccev:value>
+                                <cccev:periodValue>
+                                    <cbc:startDate>2019-01-01</cbc:startDate>
+                                    <cbc:endDate>2019-12-01</cbc:endDate>                                 
+                                </cccev:periodValue>
+                            </cccev:value>                 
+                        </cccev:concept>
+                    </cccev:concept>                
                 </cccev:concept>
             </cccev:requirement>
             <!-- A second requirement requesting a documentary evidence follow. Notice that: 
@@ -170,71 +221,7 @@
                     </cccev:evidenceType>                    
                 </cccev:evidenceTypeCombinationList>                
             </cccev:requirement>
-        </Requirement>
-        <!-- In this example the responses are dettached from inside the Concept. This simplifies the request to just one Concept instead of as many Concepts as years. -->          
-        <Value>           
-            <!-- Group espd-voc:generalYearlyTurnover -->    
-            <cccev:valueOf>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:valueOf>
-            <cccev:value>
-                <!-- Subgroup espd-voc:amountAndPeriod -->    
-                <cccev:valueOf>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cccev:valueOf>
-                <cccev:value>
-                    <!-- Question espd-voc:amount -->
-                    <cccev:amountValue currencyID="eur">1000001</cccev:amountValue>    
-                    <cccev:valueOf>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cccev:valueOf>
-                </cccev:value>
-                <cccev:value>
-                    <!-- Question espd-voc:period -->
-                    <cccev:periodValue>
-                        <cbc:startDate>2017-01-01</cbc:startDate>
-                        <cbc:endDate>2017-12-01</cbc:endDate>                                 
-                    </cccev:periodValue>    
-                    <cccev:valueOf>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cccev:valueOf>
-                </cccev:value>
-            </cccev:value>
-        </Value>
-        <Value>           
-            <!-- Group espd-voc:generalYearlyTurnover -->    
-            <cccev:valueOf>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:valueOf>
-            <cccev:value>
-                <!-- Subgroup espd-voc:amountAndPeriod -->    
-                <cccev:valueOf>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cccev:valueOf>
-                <cccev:value>
-                    <!-- Question espd-voc:amount -->
-                    <cccev:amountValue currencyID="eur">1000002</cccev:amountValue>    
-                    <cccev:valueOf>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cccev:valueOf>
-                </cccev:value>
-                <cccev:value>
-                    <!-- Question espd-voc:period -->
-                    <cccev:periodValue>
-                        <cbc:startDate>2018-01-01</cbc:startDate>
-                        <cbc:endDate>2018-12-01</cbc:endDate>                                 
-                    </cccev:periodValue>    
-                    <cccev:valueOf>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cccev:valueOf>
-                </cccev:value>
-            </cccev:value>
-        </Value>
-        <Value>           
-            <!-- Group espd-voc:generalYearlyTurnover -->    
-            <cccev:valueOf>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:valueOf>
-            <cccev:value>
-                <!-- Subgroup espd-voc:amountAndPeriod -->    
-                <cccev:valueOf>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cccev:valueOf>
-                <cccev:value>
-                    <!-- Question espd-voc:amount -->
-                    <cccev:amountValue currencyID="eur">1000003</cccev:amountValue>    
-                    <cccev:valueOf>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cccev:valueOf>
-                </cccev:value>
-                <cccev:value>
-                    <!-- Question espd-voc:period -->
-                    <cccev:periodValue>
-                        <cbc:startDate>2019-01-01</cbc:startDate>
-                        <cbc:endDate>2019-12-01</cbc:endDate>                                 
-                    </cccev:periodValue>    
-                    <cccev:valueOf>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cccev:valueOf>
-                </cccev:value>
-            </cccev:value>
-        </Value>      
+        </Requirement>        
     </EvidenceResponse>        
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -254,7 +241,8 @@
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
         <!-- you can both specify that the evidence supports the requirement and the concept -->
         <cccev:supports>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supports>
-        <cccev:supports>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supports>
+        <!-- Refers to Concept instance #3 (2017 Turnover) -->
+        <cccev:supports>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cccev:supports>
     </Evidence>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -272,7 +260,8 @@
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
         <!-- you can both specify that the evidence supports the requirement and the concept -->
         <cccev:supports>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supports>
-        <cccev:supports>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supports>
+        <!-- Refers to Concept instance #2 (2018 Turnover) -->            
+        <cccev:supports>b93edd61-ceb9-4070-8353-7706ec08c687</cccev:supports>
     </Evidence>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -294,6 +283,7 @@
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
         <!-- you can both specify that the evidence supports the requirement and the concept -->
         <cccev:supports>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supports>
-        <cccev:supports>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supports>
+        <!-- Refers to Concept instance #3 (2019 Turnover) -->
+        <cccev:supports>4fa92f3b-fe7a-4451-a5bd-a8ab21a07b2d</cccev:supports>
     </Evidence>
 </Response>

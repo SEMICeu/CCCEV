@@ -5,30 +5,27 @@
         Example of an ESPD Response - last update 20100418
 
         * In this example only one Criterion on convictions is used, to simplify the example.
-        * The Criterion contains only one 'Informationa Requirement' requesting daa from the Economic Operator:
+        * The Criterion contains only one 'Information Requirement' requesting data from the Economic Operator:
                 - The EO provides, though, Evidences to support the Requirement.
-                - No combination of lists with types of evidences expected is specified.  
+                - No combination of lists with expected types of evidences is specified.  
         * All groups and subgroups of questions, as well as the questions themselves have been structured using the class Concept; 
-        * The Economic Operator provides two evidences and an additional document, all of them are placed at the end of the Requirement, and are linked to the Concept
-          via the Concept id:
+        * The Economic Operator provides two evidences and an additional document, all of them are placed at the end of the XML document, 
+          and are linked to the Concept via the 'cccev:Concept/cbc:id' element:
             * An Evidence supporting all the data answered for the whole requirement;
             * An Evidence supporting the cleansing measures taken to, despite the orginial conviction, still be able to participate in the procurement procedure;     
-            * An additional document reference, at the end of the Requirement, containing a declaration of oath by the convicted person.
-        * Notice that Evidences in this example use the 'adms:identifier' object property.
-        * See also how the instantiation of creators of evidences.
-        * In this example hte value responses have been aggregated inside the Concept(s).
+            * An additional document reference, at the end of the Requirement, containing a declaration of oath by the convicted person;
+        * Notice that Evidences in this example use the 'adms:identifier' object property of the dcat-ap:Dataset class;
+        * See also how the creators of evidences have been instantiated;
+        * In this example the value responses have been separated from inside the Concept(s); 
         * The Qualified Name (QName) of the concepts are (can be) used to
             1) indicate the semantics of the concept via its namespace URI and element local name
-            2) determine what data type the concept has in that namespace
-          In the case of concepts used to group other concepts, the QName could be replaced with the Concept's cbc:type element.
+            2) determine what data type the concept has in that namespace          
         * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables          
 -->
  
 <Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="urn:eu:toop:ns:dataexchange-1p40"
+    xmlns="urn:eu:toop:ns:dataexchange-1p40" 
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:adms="http://www.w3.org/ns/adms#" 
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:dcat-ap="http://data.europa.eu/r5r/"
     xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
     xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
@@ -41,7 +38,9 @@
     xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" 
     xmlns:lcn="http://www.w3.org/ns/locn#"
     xmlns:rov="http://www.w3.org/ns/regorg#" 
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"    
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"  
+    xmlns:adms="http://www.w3.org/ns/adms#" 
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"  
     xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../toop-cv/toop-cv.xsd">
     <dct:identifier>identifier0</dct:identifier>
     <dct:type>http://www.oxygenxml.com/</dct:type>
@@ -109,105 +108,205 @@
         <!-- Notice that the namespaces espd-voc, espd-pi and espd-struct could be used at the level of each concept too. However by adding them as attributes of the Requirement (or even of the Criterion)
              they become 'global' (i.e. visible) to any concept used inside the Requirement. --> 
 
-        <Requirement xsi:type="cccev:CriterionType" xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi" xmlns:espd-struct="http://semic.eu/sa/espd/struct">
+        <Requirement xsi:type="cccev:CriterionType" xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi">
             <cbc:id schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
-            <cbc:name languageID="en">Participation in a criminal organisation</cbc:name>
+            <cbc:name languageID="eng">Participation in a criminal organisation</cbc:name>
             <cbc:description languageID="eng">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:description>
-            <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
+            <cbc:type listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
             <cccev:requirement xsi:type="cccev:InformationRequirementType">
                 <cbc:id>7c637c0c-7703-4389-ba52-02997a055bd7</cbc:id>
-                <cccev:concept>
+                    <cccev:concept>
                         <cbc:id>a0322b12-dbb0-4763-8326-b5cd33da0291</cbc:id>
-                     <!-- one may use two alternative ways to indicate that this Concept is acting as a group of questions:
-                            1. Use the cbc:type, as this '<cbc:type listAgencyID="SEMIC-CCCEV" listID="ESPD-STRUCT" listVersionID="2.0.0">QUESTION_GROUP</cbc:type>', or (disjointly)
-                            2. Use the QName , as this '<cbc:QName>espd-struct:questionGroup</cbc:QName>'
-                            This example uses the second one. -->                        
-                        <cbc:QName>espd-struct:questionGroup</cbc:QName>
+                        <cbc:type>QUESTION_GROUP</cbc:type>
+                        <cbc:QName>espd-voc:conviction</cbc:QName>
                     <!-- The absence of a processing instruction ON* implies that the next concept needs to be processed -->
                     <!-- This concept represents a QUESTION addressed to the Economic Operator (EO). If the answer is "true" (Yes) it implies that the EO is in breach of the Law and, therefore all 
                          the questions inside this Concept need to be answered. Thus the constraining processing instruction (pi) ONTRUE -->
                     <!-- Optionally the ESPD Criteria Taxonomy tagging of groups and subgroups could be used to indicate that this concept is a group of questions and subgroups of questions --> 
                     <cccev:concept>
-                            <cbc:id>a06350dc-c2f1-42bf-9c8b-3e92af1fb18b</cbc:id>
-                            <cbc:description>Your answer?</cbc:description>
+                            <cbc:id>a06350dc-c2f1-42bf-9c8b-3e92af1fb18b</cbc:id>       
+                            <cbc:description>Your answer?</cbc:description>    
+                            <cbc:type>QUESTION</cbc:type>                         
                             <cbc:QName>espd-voc:yourAnswer</cbc:QName>
                             <cccev:constraint>
-                                <!-- This constraint will never be referenced from a value, therefore there's no need 
-                                    for the Constraint nor the the Concept cbc:id -->
                                 <cccev:concept>
                                 <cbc:description>Since the answer is affirmative, the group of questions below need to be answered, shown, processed, etc.</cbc:description>
                                 <cbc:QName>espd-pi:ONTRUE</cbc:QName>
                                 </cccev:concept>
-                            </cccev:constraint>
-                            <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>                            
+                            </cccev:constraint>                            
                             <cccev:concept>
                                 <cbc:id>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
-                                <cbc:QName>espd-struct:questionSubGroup</cbc:QName>
+                                <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                                <cbc:QName>espd-voc:convictionDataSequence</cbc:QName>
                                 <cccev:concept>
                                     <cbc:id>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cbc:id>
                                     <cbc:description>Date of conviction</cbc:description>
-                                    <cbc:QName>espd-voc:dateOfConviction</cbc:QName>
-                                    <cccev:value><cccev:dateValue>2020-01-01</cccev:dateValue></cccev:value>                            
+                                    <cbc:type>QUESTION</cbc:type>
+                                    <cbc:QName>espd-voc:dateOfConviction</cbc:QName>                                    
                                 </cccev:concept>
                                 <cccev:concept>
                                     <cbc:id>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cbc:id>
                                     <cbc:description>Reason</cbc:description>
+                                    <cbc:type>QUESTION</cbc:type>
                                     <cbc:QName>espd-voc:reason</cbc:QName>
-                                    <cccev:value><cccev:textValue>Participation in collusion.</cccev:textValue></cccev:value>
                                 </cccev:concept>
                                 <cccev:concept>
                                     <cbc:id>31479ab2-6ff7-467c-80a4-841344222874</cbc:id>
                                     <cbc:description>Who has been convicted?</cbc:description>
+                                    <cbc:type>QUESTION</cbc:type>
                                     <cbc:QName>espd-voc:convicted</cbc:QName>
-                                    <cccev:value><cccev:textValue>Smith, John, legal representative</cccev:textValue></cccev:value>
                                 </cccev:concept>
                                 <cccev:concept>
                                     <cbc:id>0b689697-cbc8-4e38-9fa3-1a776e116b00</cbc:id>
                                     <cbc:description>Length of the period of exclusion</cbc:description>
-                                    <cbc:QName>espd-voc:convictionPeriod</cbc:QName>                                 
-                                    <cccev:value>
-                                     <cccev:periodValue> 
-                                         <cbc:startDate>2020-01-01</cbc:startDate>
-                                         <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
-                                     </cccev:periodValue>                                
-                                    </cccev:value>
+                                    <cbc:type>QUESTION</cbc:type>
+                                    <cbc:QName>espd-voc:convictionPeriod</cbc:QName>                                    
                                 </cccev:concept>
-                                <!-- The concept following below defines a new decision point. If answered with "true" (Yes) 
-                                     an evidence specifically either aggregated or linked to this concept.  -->
+                                <!-- The concept following below defines a decision point. If answered with "true" (Yes) an evidence specifically either aggregated or linked
+                                       to this concept.  -->
                                     <cccev:concept>
                                         <cbc:id>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cbc:id>
-                                        <cbc:QName>espd-struct:questionSubGroup</cbc:QName>
+                                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                                        <cbc:QName>espd-voc:cleansingDataSequence</cbc:QName>
                                         <cccev:concept>
                                             <cbc:id>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cbc:id>
                                             <cbc:description>Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:description>
+                                            <cbc:type>QUESTION</cbc:type>
                                             <cbc:QName>espd-voc:cleansingMeasures</cbc:QName>
                                             <cccev:constraint>
-                                                <!-- no need for ids within constraints -->
                                                 <cccev:concept>
+                                                <cbc:id>74e6c7b4-757b-4b40-ada6-fad6a997c310</cbc:id>
                                                 <cbc:description>If the value is "true"(yes) process the following sub-concepts, just below</cbc:description>
                                                 <cbc:QName>espd-pi:ONTRUE</cbc:QName>
                                                 </cccev:concept>
-                                            </cccev:constraint>
-                                            <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>
+                                            </cccev:constraint>                                            
                                             <cccev:concept>
                                                     <cbc:id>8ab9a401-8966-4ae3-8a51-c5a5e0b7191f</cbc:id>
                                                     <cbc:description>Please describe them</cbc:description>
-                                                    <cbc:QName>espd-voc:describe</cbc:QName>
-                                                    <cccev:value><cccev:textValue>The conviction was repealead and the Superior Court invalidated the previous non-final conviction. See attached certificate issued by the Superior Court.</cccev:textValue></cccev:value>                                                    
+                                                    <cbc:type>QUESTION</cbc:type>
+                                                    <cbc:QName>espd-voc:describe</cbc:QName>                                                                                                        
                                             </cccev:concept>                                           
                                         </cccev:concept>    
                                     </cccev:concept>
                             </cccev:concept>                                                    
-                        </cccev:concept>
-                </cccev:concept>
+                        </cccev:concept>    
+                </cccev:concept>  
             </cccev:requirement>
-        </Requirement>        
+            <!-- A second requirement requesting documentary evidences follow. Notice that: 
+                    * This requirement does not use any concept.
+                    * The evidences are supplied at the end of the XML document, separatedly from the requirement.
+                    * The requirement specifies a combination of lists of types of evidences. Each type of evidence specifies that the evidences need to be 'Documents'.  
+            -->
+            <!-- The ESPD-related namespaces could have been specified at the level of the Criterion, so they are not repeated twice. -->    
+            <cccev:requirement xsi:type="cccev:InformationRequirementType"  xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi" xmlns:espd-struct="http://semic.eu/sa/espd/struct">
+                <cbc:id>399a3111-0842-43fe-a499-8b3ab684e0d0</cbc:id>
+                <cbc:description>If this information is available electronically, please provide evidence(s) to supporting it.</cbc:description>
+                <!-- Combination of types of evidences as specified in e-Certis. The EO may provide either a certificate by a High Court or a certificate by a national Procurement Qualification System. -->
+                <cccev:evidenceTypeCombinationList>
+                    <cccev:evidenceType>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_1</skos:notation></adms:identifier>
+                        <dct:title>High Magistrature Convictions</dct:title>
+                        <dct:description>Electronic Certificates issued by a National or a European Superior Court.</dct:description>
+                        <foaf:page>
+                            <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
+                            <foaf:primaryTopic>High Magistrature Convictions</foaf:primaryTopic>
+                        </foaf:page>
+                        <!--  Preferred MIME types -->
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format></dcat-ap:distribution>
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format></dcat-ap:distribution>
+                        <cccev:dataSetType>DOCUMENT</cccev:dataSetType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
+                        <dct:title>High Magistrature Convictions</dct:title>
+                        <dct:description>Electronic Certificates issued by a National or a European Superior Court.</dct:description>
+                        <foaf:page>
+                            <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
+                            <foaf:primaryTopic>High Magistrature Convictions</foaf:primaryTopic>
+                        </foaf:page>
+                        <!--  Preferred MIME types -->
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format></dcat-ap:distribution>
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format></dcat-ap:distribution>
+                        <cccev:dataSetType>DOCUMENT</cccev:dataSetType>
+                    </cccev:evidenceType>
+                </cccev:evidenceTypeCombinationList>
+                <cccev:evidenceTypeCombinationList>
+                    <cccev:evidenceType>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_3</skos:notation></adms:identifier>
+                        <dct:title>National PQS certificate</dct:title>
+                        <dct:description>Electronic Certificates issued by a National Prequalification System</dct:description>
+                        <foaf:page>
+                            <foaf:topic>Electronic Certificates issued by a National Prequalification System</foaf:topic>
+                            <foaf:primaryTopic>Nations PQS certificate</foaf:primaryTopic>
+                        </foaf:page>
+                        <!--  Preferred MIME types -->
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format></dcat-ap:distribution>
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format></dcat-ap:distribution>
+                        <cccev:dataSetType>ANY_DOCUMENT</cccev:dataSetType>
+                    </cccev:evidenceType>
+                    <cccev:evidenceType>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
+                        <dct:title>High Magistrature Convictions</dct:title>
+                        <dct:description>Electronic Certificates issued by a National or a European Superior Court.</dct:description>
+                        <foaf:page>
+                            <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
+                            <foaf:primaryTopic>High Magistrature Convictions</foaf:primaryTopic>
+                        </foaf:page>
+                        <!--  Preferred MIME types -->
+                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#XML</dct:format></dcat-ap:distribution>
+                        <cccev:dataSetType>ECERTIS_EU_CLEANSING_XML_CERTIFICATE</cccev:dataSetType>                    
+                    </cccev:evidenceType>
+                </cccev:evidenceTypeCombinationList>
+            </cccev:requirement>            
+        </Requirement>
+      
+        <!-- RESPONSES DETTACHED FROM INSIDE THE CONCEPTS FOLLOW -->
+        <Value>
+             <cccev:valueOf>a0322b12-dbb0-4763-8326-b5cd33da0291</cccev:valueOf>
+              <cccev:value>
+                <cccev:indicatorValue>true</cccev:indicatorValue>
+                <cccev:valueOf>a06350dc-c2f1-42bf-9c8b-3e92af1fb18b</cccev:valueOf>
+              </cccev:value>  
+              <cccev:value>
+                  <cccev:valueOf>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cccev:valueOf>                
+                  <cccev:value>
+                          <cccev:dateValue>2020-01-01</cccev:dateValue>
+                          <cccev:valueOf>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cccev:valueOf>
+                  </cccev:value>
+                  <cccev:value>
+                          <cccev:textValue>Participation in collusion.</cccev:textValue>
+                          <cccev:valueOf>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cccev:valueOf>
+                   </cccev:value>
+                   <cccev:value>
+                          <cccev:textValue>Smith, John, legal representative</cccev:textValue>
+                          <cccev:valueOf>31479ab2-6ff7-467c-80a4-841344222874</cccev:valueOf></cccev:value>
+                   <cccev:value>
+                          <cccev:periodValue> 
+                              <cbc:startDate>2020-01-01</cbc:startDate>
+                              <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
+                          </cccev:periodValue>
+                          <cccev:valueOf>0b689697-cbc8-4e38-9fa3-1a776e116b00</cccev:valueOf>
+                     </cccev:value>
+                     <!-- Cleansing measures -->        
+                     <cccev:value>
+                          <cccev:valueOf>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:valueOf>
+                          <cccev:value>
+                              <cccev:indicatorValue>true</cccev:indicatorValue>
+                              <cccev:valueOf>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cccev:valueOf>
+                              <cccev:value>
+                                  <cccev:textValue>The conviction was repealead and the Superior Court invalidated the previous non-final conviction. See attached certificate issued by the Superior Court.</cccev:textValue>
+                                  <cccev:valueOf>8ab9a401-8966-4ae3-8a51-c5a5e0b7191f</cccev:valueOf>
+                              </cccev:value>
+                          </cccev:value>
+                     </cccev:value>
+              </cccev:value>                        
+          </Value>
     </EvidenceResponse>
-    <Evidence>        
+    <Evidence>
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier>
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier>        
         <dct:title>John Smith 2020-01-01 Conviction</dct:title>
-        <dct:description>ACME's Ltd. representative John Smith was convicted accused of 'Collusion'.</dct:description>    
+        <dct:description>ACME's Ltd. representative John Smith was convicted accused of 'Collusion'.</dct:description>
         <dct:creator xsi:type="cagv:PublicOrganizationType">
                <cagv:defaultContactPoint>
                     <cagv:email>info-magistratura@datos.gov.es</cagv:email>
@@ -222,28 +321,25 @@
             <dcat-ap:accessURL>https://acme.com/docs/2020101-JS-Collusion.hmtl</dcat-ap:accessURL>
             <dcat-ap:downloadURL>https://acme.com/docs/2020101-JS-Collusion.pdf</dcat-ap:downloadURL>
         </dcat-ap:distribution>    
-        <!-- The evidence supports everything stated in the Information Requirement id = 005eb9ed-1347-4ca3-bb29-9bc0db64e1ab, except for the Cleansing which has its own evidence. -->
-        <cccev:supports>005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cccev:supports>
+        <cccev:conformsTo>EVIDENCE_TYPE_1</cccev:conformsTo>
+        <!-- The evidence supports everything stated in the Information Requirement id = 7c637c0c-7703-4389-ba52-02997a055bd7, except for the Cleansing which has its own evidence. -->
+        <cccev:supports>7c637c0c-7703-4389-ba52-02997a055bd7</cccev:supports>
     </Evidence>
     <Evidence>
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
         <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>
-        <dct:title>Cleansing-Certificate</dct:title>
+                <dct:title>Cleansing-Certificate</dct:title>
         <dct:description>Please access the Superior Court page and use the document id '20200101-JS-Collusion"</dct:description>
         <dcat-ap:landingPage>
                 <foaf:topic>Superior Court Convictions</foaf:topic>
                 <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>
         </dcat-ap:landingPage>                                                       
-        <dct:creator xsi:type="cagv:PersonType">
-            <cagv:defaultContactPoint><cagv:email>johnsmith@acme.com</cagv:email></cagv:defaultContactPoint>
-            <cagv:givenName>John</cagv:givenName>
-            <cagv:familyName>Smith</cagv:familyName>                
-        </dct:creator>
         <dcat-ap:distribution><dcat-ap:accessURL>https://datos.gov.es/magistratura/sentencias/contratatacionpublica</dcat-ap:accessURL></dcat-ap:distribution>
+        <cccev:conformsTo>EVIDENCE_TYPE_2</cccev:conformsTo>            
         <!-- This evidence supports the concept id = 5f9f09f7-f701-432c-9fdc-c22c124a74c9 (Cleansing) --> 
         <cccev:supports>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:supports>           
     </Evidence>
-    <!-- Additional documents, that SHOULD not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
+    <!-- Additional Reference to other documents, that may not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
           John Smith was absolved. -->    
     <AdditionalDocumentReference>
         <dct:title>John Smith's Declaration of Oath</dct:title>

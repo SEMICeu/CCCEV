@@ -2,13 +2,65 @@
 
 <xsd:schema xmlns="https://semic.org/sa/cv/cccev-annotation-2.0.0#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
     targetNamespace="https://semic.org/sa/cv/cccev-annotation-2.0.0#" 
     elementFormDefault="qualified" 
     attributeFormDefault="unqualified" version="2.0.0">
     
-    <!-- Declaration of elements -->
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            <Class>
+                <ccts:ComponentType>Class</ccts:ComponentType>
+                <ccts:DictionaryEntryName>Class. Definition</ccts:DictionaryEntryName>
+                <ccts:Definition>
+                    <DefinitionSource>https://www.w3.org/TR/owl-ref/#Class</DefinitionSource>
+                    Classes provide an abstraction mechanism for grouping resources with similar characteristics. Every class is
+                    associated with a set of individuals, called the class extension. The individuals in the class extension are called the instances of the class.
+                    A class has an intensional meaning (the underlying concept) which is related but not equal to its class extension. Thus, two classes may have the
+                    same class extension, but still be different classes.
+                   </ccts:Definition>
+                <ccts:ObjectClass>Class</ccts:ObjectClass>
+                <PrimitiveClass></PrimitiveClass>
+            </Class>
+        </xsd:documentation>
+    </xsd:annotation>
     
-    <xsd:element name="ObjectProperty" type="xsd:anyType"/>
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            <ObjectProperty>
+                <ccts:ComponentType>Object property</ccts:ComponentType>
+                <ccts:DictionaryEntryName>Object property. Definition</ccts:DictionaryEntryName>
+                <ccts:Definition>Object properties link individuals to individuals. I.e., classes with classes. It is a sub-class of rdfs:Property.</ccts:Definition>
+                <ccts:ObjectClass>Object property</ccts:ObjectClass>
+                <Domain>Class</Domain>
+                <Range>Class</Range>
+                <Predicate>objectProperty</Predicate>
+                <Axiom>ClassA objectProperty ClassB</Axiom>
+            </ObjectProperty>
+        </xsd:documentation>
+    </xsd:annotation>
     
-    <!-- Element definition -->
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            <DataProperty>
+                <ccts:ComponentType>Data property</ccts:ComponentType>
+                <ccts:DictionaryEntryName>Data property. Definition</ccts:DictionaryEntryName>
+                <ccts:Definition>
+                    <DefinitionSource>https://www.w3.org/TR/owl2-syntax/#Data_Properties</DefinitionSource>
+                    Data properties connect individuals with literals. In some knowledge
+                    representation systems, functional data properties are called attributes.
+                </ccts:Definition>
+                <ccts:Cardinality>
+                    An indication of whether the property represents a not-applicable,
+                    optional, mandatory and/or repetitive characteristic of the object.
+                </ccts:Cardinality>
+                <ccts:ObjectClass>The Object Class represented by the artefact.</ccts:ObjectClass>
+                <ccts:PropertyTerm>The Property Term represented by the artefact.</ccts:PropertyTerm>
+                <ccts:RepresentationTerm>The Primary Representation Term represented by the artefact.</ccts:RepresentationTerm>
+                <ccts:DataType>A term(s) that qualifies the Data Type Term.</ccts:DataType>
+            </DataProperty>
+        </xsd:documentation>
+    </xsd:annotation>   
+    
+    
 </xsd:schema>

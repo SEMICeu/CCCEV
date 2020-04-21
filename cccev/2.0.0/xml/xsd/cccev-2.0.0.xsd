@@ -3,6 +3,8 @@
 	xmlns:dcat-ap="http://data.europa.eu/r5r/"
 	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+	xmlns:cccev-annotation="https://semic.org/sa/cv/cccev-annotation-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#" 
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -10,13 +12,15 @@
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
-		schemaLocation="../../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
+		schemaLocation="../../../../common/2.0.0/xml/xsd/CV-CommonAggregateComponents.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
-		schemaLocation="../../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+		schemaLocation="../../../../common/2.0.0/xml/xsd/CV-CommonBasicComponents.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+		schemaLocation="../../../../common/2.0.0/xml/xsd/CCTS_CCT_SchemaModule-2.3.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-		schemaLocation="../../../../cagv/2.0.0/xml/CV-Agent.xsd"/>
+		schemaLocation="../../../../cagv/2.0.0/xml/xsd/CV-Agent.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
 		schemaLocation="../../../../foaf/xml/foaf.xsd"/>
 
@@ -68,7 +72,23 @@
 	<!-- Object properties -->
 	
 	<xsd:element name="derivedFrom" type="ReferenceFrameworkType"/>
-	<xsd:element name="concept" type="ConceptType"/>
+	<xsd:element name="concept" type="ConceptType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<cccev-annotation:ObjectProperty>
+					<cccev-annotation:Domain>cccev:Requirement</cccev-annotation:Domain>
+					<cccev-annotation:Range></cccev-annotation:Range>
+					<cccev-annotation:Predicate>cccev:hasConcept</cccev-annotation:Predicate>
+					<cccev-annotation:Predicate>cccev:references</cccev-annotation:Predicate>
+					<cccev-annotation:Axiom>cccev:references</cccev-annotation:Axiom>
+					<ccts:ComponentType>Class</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Concept</ccts:DictionaryEntryName>
+					<ccts:Definition></ccts:Definition>
+					<ccts:ObjectClass>Concept</ccts:ObjectClass>
+				</cccev-annotation:ObjectProperty>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 	<xsd:element name="evidence" type="EvidenceType"/>
 	<xsd:element name="evidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
@@ -96,6 +116,16 @@
 	<!-- Element definition -->
 
 	<xsd:complexType name="ConceptType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>Class</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Concept</ccts:DictionaryEntryName>
+					<ccts:Definition></ccts:Definition>
+					<ccts:ObjectClass>Concept</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="1"/>

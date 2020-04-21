@@ -74,6 +74,7 @@
 	
 	<xsd:complexType name="StandardType">
 		<xsd:complexContent>
+<!--			TODO: anyURI-->
 			<xsd:extension base="xsd:anyType"/>		
 		</xsd:complexContent>
 	</xsd:complexType>

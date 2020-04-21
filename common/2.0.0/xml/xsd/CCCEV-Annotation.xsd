@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns="https://semic.org/sa/cv/cccev-annotation-2.0.0#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://semic.org/sa/cv/cccev-annotation-2.0.0#" 
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified" version="2.0.0">
+    
+    <!-- Declaration of elements -->
+    
+    <xsd:element name="ObjectProperty" type="xsd:anyType"/>
+    
+    <!-- Element definition -->
+</xsd:schema>

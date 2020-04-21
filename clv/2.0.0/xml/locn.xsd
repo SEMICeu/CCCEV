@@ -47,7 +47,6 @@
         <xs:element ref="postCode" minOccurs="0"/>
         <xs:element ref="addressId" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute name="id" type="xs:anyURI" use="required"></xs:attribute>
 </xs:complexType>
     
 <xs:complexType name="LocationType">

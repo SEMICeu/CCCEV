@@ -15,8 +15,8 @@
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
-	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#" schemaLocation="../../../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#" schemaLocation="../../../../common/2.0.0/xml/xsd/CV-CommonAggregateComponents.xsd"/>
+	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../../common/2.0.0/xml/xsd/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../../dcterms/2.0.0/xml/dcterms.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../../foaf/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../../clv/2.0.0/xml/locn.xsd"/>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CCCEV-related namespaces are temporary for the time being. They point to the GitHub where the development is being done. -->
+<xsd:schema xmlns="https://semic.org/sa/cv/common/cac-2.0.0#"
+   xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:lcn="http://www.w3.org/ns/locn#"
+	targetNamespace="https://semic.org/sa/cv/common/cac-2.0.0#" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
+   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="./CV-CommonBasicComponents.xsd"/>
+   <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../../clv/2.0.0/xml/locn.xsd"/>
+   <!-- ===== Element Declarations ===== -->
+   
+   <!-- Data elements -->
+   <xsd:element name="additionalStreetName" type="cbc:TextType"/>
+   <xsd:element name="addressFormatCode" type="cbc:CodeType"/>
+   <xsd:element name="addressLine" type="cbc:TextType"/>
+   <xsd:element name="addressTypeCode" type="cbc:CodeType"/>
+   <xsd:element name="blockName" type="cbc:TextType"/>
+   <xsd:element name="buildingName" type="cbc:TextType"/>
+   <xsd:element name="buildingNumber" type="cbc:TextType"/>
+   <xsd:element name="cityName" type="cbc:TextType"/>
+   <xsd:element name="citySubdivisionName" type="cbc:TextType"/>
+   <xsd:element name="countryCode" type="cbc:CodeType"/>
+   <xsd:element name="countrySubentity" type="cbc:TextType"/>
+   <xsd:element name="hasCountrySubentityCode" type="cbc:CodeType"/>
+   <xsd:element name="department" type="cbc:TextType"/>
+   <xsd:element name="description" type="cbc:DescriptionType"/>
+   <xsd:element name="district" type="cbc:TextType"/>
+   <xsd:element name="floor" type="cbc:TextType"/> 
+   <xsd:element name="id" type="cbc:IDType"/>
+   <xsd:element name="inhouseMail" type="cbc:TextType"/>
+   <xsd:element name="markAttention" type="cbc:TextType"/>
+   <xsd:element name="markCare" type="cbc:TextType"/>
+   <xsd:element name="plotIdentification" type="cbc:TextType"/>
+   <xsd:element name="postalZone" type="cbc:TextType"/>
+   <xsd:element name="postbox" type="cbc:TextType"/>
+   <xsd:element name="region" type="cbc:TextType"/>
+   <xsd:element name="room" type="cbc:TextType"/>
+   <xsd:element name="streetName" type="cbc:TextType"/>
+   <xsd:element name="timezoneOffset" type="cbc:NumericType"/>
+   
+   <!-- Object elements -->
+   <!-- none -->
+
+   <!-- Classe declaration -->
+   <xsd:element name="Address" type="AddressType"/>
+   <xsd:element name="Period" type="PeriodType"/>
+   
+      
+   <!-- ===== Type Definitions ===== -->
+
+   <!-- The TOP class "Thing", which for now has no elements, only attributes -->
+
+   <xsd:attributeGroup name="ThingAttributes">
+      <xsd:attribute name="versionId" type="xsd:normalizedString"/>
+   </xsd:attributeGroup>
+
+   <xsd:complexType name="AddressType">
+      <xsd:complexContent>
+         <xsd:extension base="lcn:AddressType">
+            <xsd:sequence>
+               <xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="addressTypeCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="addressFormatCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="postbox" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="floor" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="room" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="streetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="additionalStreetName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="blockName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="buildingName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="buildingNumber" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="description" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="inhouseMail" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="department" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="markAttention" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="markCare" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="plotIdentification" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="citySubdivisionName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cityName" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="postalZone" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="countrySubentity" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="hasCountrySubentityCode" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="region" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="district" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="timezoneOffset" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="addressLine" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="countryCode" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+            <!-- Beware that the AddressType does not need the id attribute as it already inherits it from the lcn:AddressType -->                               
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   
+   <xsd:complexType name="PeriodType">
+            <xsd:sequence>
+               <xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+               <xsd:element ref="cbc:startDate" minOccurs="0" maxOccurs="1"/>      
+               <xsd:element ref="cbc:startTime" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:endDate" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:endTime" minOccurs="0" maxOccurs="1"/>
+               <xsd:element ref="cbc:durationMeasure" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attributeGroup ref="ThingAttributes"/>
+   </xsd:complexType>
+
+</xsd:schema>
+

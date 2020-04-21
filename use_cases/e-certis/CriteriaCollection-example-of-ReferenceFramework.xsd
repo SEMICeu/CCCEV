@@ -20,11 +20,11 @@ elementFormDefault="qualified"
 targetNamespace="http://example.org/">
     <!--imports -->
     <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#" 
-        schemaLocation="../../cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
+        schemaLocation="../../cccev/2.0.0/xml/xsdrt/cccev-2.0.0.xsd"/>
     <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
-		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+		schemaLocation="../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
     <xsd:import namespace="http://purl.org/dc/terms/"
-		schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
+		schemaLocation="../../dcterms/2.0.0/xml/dcterms.xsd"/>
 	
     <!-- element declarations -->
     <xsd:element name="RequirementsCollection" type="RequirementsCollectionType"/>

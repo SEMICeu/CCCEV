@@ -367,8 +367,8 @@
             <dcat-ap:downloadURL>https://acme.com/docs/2020101-JS-Collusion.pdf</dcat-ap:downloadURL>
         </dcat-ap:distribution>    
         <cccev:conformsTo>EVIDENCE_TYPE_1</cccev:conformsTo>
-        <!-- The evidence supports everything stated in the Information Requirement id = 7c637c0c-7703-4389-ba52-02997a055bd7, except for the Cleansing which has its own evidence. -->
-        <cccev:supports>7c637c0c-7703-4389-ba52-02997a055bd7</cccev:supports>
+        <!-- The evidence supportsRequirement everything stated in the Information Requirement id = 7c637c0c-7703-4389-ba52-02997a055bd7, except for the Cleansing which has its own evidence. -->
+        <cccev:supportsRequirement>7c637c0c-7703-4389-ba52-02997a055bd7</cccev:supportsRequirement>
     </Evidence>
     <Evidence>
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -381,8 +381,8 @@
         </dcat-ap:landingPage>                                                       
         <dcat-ap:distribution><dcat-ap:accessURL>https://datos.gov.es/magistratura/sentencias/contratatacionpublica</dcat-ap:accessURL></dcat-ap:distribution>
         <cccev:conformsTo>EVIDENCE_TYPE_2</cccev:conformsTo>            
-        <!-- This evidence supports the concept id = 5f9f09f7-f701-432c-9fdc-c22c124a74c9 (Cleansing) --> 
-        <cccev:supports>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:supports>           
+        <!-- This evidence supportsRequirement the concept id = 5f9f09f7-f701-432c-9fdc-c22c124a74c9 (Cleansing) --> 
+        <cccev:supportsRequirement>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:supportsRequirement>           
     </Evidence>
     <!-- Additional Reference to other documents, that may not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
           John Smith was absolved. -->    

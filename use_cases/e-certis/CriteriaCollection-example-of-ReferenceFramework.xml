@@ -19,7 +19,7 @@
  xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
  xmlns:ns0="http://example.org/"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://example.org/ file:/C:/Users/estaromi/everis/SEMIC%20-%20General/03%20GitHub/CCCEV/use_cases/e-certis/CriteriaCollection-example-of-ReferenceFramework.xsd">
+ xsi:schemaLocation="CriteriaCollection-example-of-ReferenceFramework.xsd">
 <cccev:requirement xsi:type="cccev:CriterionType" xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi">
         <cbc:id schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
         <cbc:name languageID="eng">Participation in a criminal organisation</cbc:name>

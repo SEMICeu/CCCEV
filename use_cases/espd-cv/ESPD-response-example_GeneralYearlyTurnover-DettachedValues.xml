@@ -301,14 +301,14 @@
         </dct:creator>
         <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
             <foaf:page><foaf:primaryTopic>Annual Accounts 2017</foaf:primaryTopic></foaf:page>
-            <!-- The evidence supports concept id = 5ca58d66-3ef1-4145-957c-45d5b18a837f -->
+            <!-- The evidence supportsRequirement concept id = 5ca58d66-3ef1-4145-957c-45d5b18a837f -->
             <dct:format>http://publications.europa.eu/resource/authority/file-type#XBRL</dct:format>
             <dcat-ap:downloadURL>https://europa.eu/bris/doc?id=annacc-acme-2017</dcat-ap:downloadURL>                        
         </dcat-ap:distribution>
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
-        <!-- you can both specify that the evidence supports the requirement and the concept -->
-        <cccev:supports>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supports>
-        <cccev:supports>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supports>
+        <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
+        <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
+        <cccev:supportsRequirement>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supportsRequirement>
     </Evidence>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -324,9 +324,9 @@
             <dcat-ap:downloadURL>https://europa.eu/bris/doc?id=annacc-acme-2018</dcat-ap:downloadURL>            
         </dcat-ap:distribution>    
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
-        <!-- you can both specify that the evidence supports the requirement and the concept -->
-        <cccev:supports>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supports>
-        <cccev:supports>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supports>
+        <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
+        <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
+        <cccev:supportsRequirement>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supportsRequirement>
     </Evidence>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -346,8 +346,8 @@
             </dcat-ap:accessService>                
         </dcat-ap:distribution>    
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
-        <!-- you can both specify that the evidence supports the requirement and the concept -->
-        <cccev:supports>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supports>
-        <cccev:supports>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supports>
+        <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
+        <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
+        <cccev:supportsRequirement>5ca58d66-3ef1-4145-957c-45d5b18a837f</cccev:supportsRequirement>
     </Evidence>
 </Response>

@@ -27,6 +27,7 @@
 	<xsd:element name="type" type="xsd:anyURI"/>
 	
 	<!-- Object properties -->
+	<xsd:element name="conformsTo" type="StandardType"/>
 	<xsd:element name="creator" type="foaf:AgentType"/>
 	<xsd:element name="format" type="MediaType"/>
 	<xsd:element name="language" type="LinguisticSystemType"/>
@@ -39,6 +40,7 @@
 	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>
 	<xsd:element name="Media" type="MediaType"/>
 	<xsd:element name="RightStatement" type="RightStatementType"/>
+	<xsd:element name="Standard" type="StandardType"/>
 
 	<!-- Class definitions -->
 	<xsd:complexType name="CodeType">
@@ -67,6 +69,12 @@
 	<xsd:complexType name="RightStatementType">
 		<xsd:complexContent>
 				<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="StandardType">
+		<xsd:complexContent>
+			<xsd:extension base="xsd:anyType"/>		
 		</xsd:complexContent>
 	</xsd:complexType>
 	

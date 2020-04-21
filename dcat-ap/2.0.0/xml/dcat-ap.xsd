@@ -12,7 +12,7 @@
 	<xsd:import namespace="http://purl.org/dc/terms/"
 		schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
-		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+		schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
 		schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/adms#"
@@ -43,6 +43,7 @@
 
 	<xsd:complexType name="DatasetType">
 		<xsd:sequence>
+			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="adms:identifier" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:type" minOccurs="0"/>
@@ -76,6 +77,7 @@
 	<xsd:complexType name="DistributionType">
 		<xsd:sequence>
 			<xsd:element ref="foaf:page" minOccurs="0"/>
+			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>

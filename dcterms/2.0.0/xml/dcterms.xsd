@@ -3,12 +3,14 @@
 <xsd:schema xmlns="http://purl.org/dc/terms/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	
 	targetNamespace="http://purl.org/dc/terms/" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
 	
 	<!-- Element declaration -->
 	
@@ -33,6 +35,7 @@
 	<xsd:element name="language" type="LinguisticSystemType"/>
 	<xsd:element name="acccessRights" type="RightStatementType"/>
 	<xsd:element name="relation" type="xsd:anyType"/>
+	<xsd:element name="source" type="skos:ConceptType"/>
 	<xsd:element name="temporal" type="PeriodOfTimeType"/>
 	
 	<!-- Class declaration -->

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:dcat-ap="http://data.europa.eu/r5r/"
+<xsd:schema xmlns="https://semic.org/sa/cv/cccev-2.0.0#"
+	xmlns:dcat-ap="http://data.europa.eu/r5r/"
 	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-	xmlns:cccev-annotation="https://semic.org/sa/cv/cccev-annotation-2.0.0#"
+	xmlns:an="https://semic.org/sa/cv/common/semic-annot-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
 
@@ -89,16 +91,17 @@
 	<xsd:element name="evidence" type="EvidenceType">
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">
-				<ObjectProperty>
+				<an:ObjectProperty>
 					<ccts:ComponentType>Object property</ccts:ComponentType>
-					<ccts:DictionaryEntryName>cccev:evidence. Details</ccts:DictionaryEntryName>
+					<ccts:DictionaryEntryName>cccev:hasSupportive. Details</ccts:DictionaryEntryName>
 					<ccts:Definition></ccts:Definition>
 					<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
-					<Domain>cccev:Requirement</Domain>
-					<Range>cagv:Agent</Range>
-					<Range>cccev:Concept</Range>
-					<Range>cccev:EvidenceType</Range>
-				</ObjectProperty>
+					<an:Domain>cccev:Requirement</an:Domain>
+					<an:Range>cagv:Agent</an:Range>
+					<an:Range>cccev:Concept</an:Range>
+					<an:Range>cccev:EvidenceType</an:Range>
+					<an:Axiom>owl:inverseOf cccev:supports</an:Axiom>
+				</an:ObjectProperty>
 			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
@@ -130,21 +133,21 @@
 	<xsd:complexType name="ConceptType">
 		<xsd:annotation>
 			<xsd:documentation>
-				<cccev-annotation:Class>
+				<an:Class>
 					<ccts:ComponentType>Class</ccts:ComponentType>
 					<ccts:DictionaryEntryName>Concept. Details</ccts:DictionaryEntryName>
 					<ccts:Definition>
-						<DefinitionSource/>
 					</ccts:Definition>
+					<DefinitionSource/>
 					<ccts:ObjectClass>Concept</ccts:ObjectClass>
-				</cccev-annotation:Class>
+				</an:Class>
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">
-						<cccev-annotation:DataProperty>
+						<an:DataProperty>
 							<ccts:ComponentType>Data property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Concept. Identifier</ccts:DictionaryEntryName>
 							<ccts:Definition>
@@ -155,16 +158,16 @@
 							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
 							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
 							<ccts:DataType>ID. Type</ccts:DataType>
-						</cccev-annotation:DataProperty>
+						</an:DataProperty>
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">
-						<cccev-annotation:DataProperty>
+						<an:DataProperty>
 							<ccts:ComponentType>Data property</ccts:ComponentType>
-							<ccts:DictionaryEntryName>Concept. Text</ccts:DictionaryEntryName>
+							<ccts:DictionaryEntryName>Concept. Name</ccts:DictionaryEntryName>
 							<ccts:Definition>
 								<DefinitionSource/>
 							</ccts:Definition>
@@ -173,22 +176,92 @@
 							<ccts:PropertyTerm>Text</ccts:PropertyTerm>
 							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
 							<ccts:DataType>Name. Type</ccts:DataType>
-						</cccev-annotation:DataProperty>
+						</an:DataProperty>
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:QName" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Concept. Description</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								<DefinitionSource/>
+							</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Concept</ccts:ObjectClass>
+							<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Description. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Concept. Type</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								<DefinitionSource/>
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Concept</ccts:ObjectClass>
+							<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Type. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:QName" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Concept. QName</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								<DefinitionSource/>
+							</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Concept</ccts:ObjectClass>
+							<ccts:PropertyTerm>anySimpleType</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>anySimpleType</ccts:RepresentationTerm>
+							<ccts:DataType>QName. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded">
+				
+			</xsd:element>
+			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded">
+				
+			</xsd:element>
+			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded">
+				
+			</xsd:element>
 		</xsd:sequence>
 		<xsd:attributeGroup ref="cac:ThingAttributes"/>
 	</xsd:complexType>
 
 	<xsd:complexType name="ConstraintType">
 		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>Constraint. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							<DefinitionSource></DefinitionSource>
+						</ccts:Definition>
+						<ccts:ObjectClass>Constraint</ccts:ObjectClass>
+						<PrimitiveClass>RequirementType</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
 					<xsd:element ref="constraintOn" minOccurs="0" maxOccurs="unbounded"/>
@@ -200,13 +273,94 @@
 
 	<xsd:complexType name="CriterionType">
 		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:Criterion. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							<DefinitionSource></DefinitionSource>
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:Criterion</ccts:ObjectClass>
+						<PrimitiveClass>cccev:RequirementType</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
 			<xsd:extension base="RequirementType">
 				<xsd:sequence>
-					<xsd:element ref="weight" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="weight" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>Criterion. Weight</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource/>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>Criterion</ccts:ObjectClass>
+									<ccts:PropertyTerm>NumericType</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>NumericType</ccts:RepresentationTerm>
+									<ccts:DataType>Numeric. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element ref="weightingConsiderationDescription" minOccurs="0"
-						maxOccurs="unbounded"/>
-					<xsd:element ref="weightingType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="bias" minOccurs="0" maxOccurs="unbounded"/>
+						maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>Criterion. Weighting Consideration Description</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource/>
+									</ccts:Definition>
+									<ccts:Cardinality>0..n</ccts:Cardinality>
+									<ccts:ObjectClass>Criterion</ccts:ObjectClass>
+									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+									<ccts:DataType>Description. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="weightingType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>Concept. QName</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource/>
+									</ccts:Definition>
+									<ccts:Cardinality>0..n</ccts:Cardinality>
+									<ccts:ObjectClass>Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>anySimpleType</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>anySimpleType</ccts:RepresentationTerm>
+									<ccts:DataType>QName. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="bias" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>Concept. QName</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource/>
+									</ccts:Definition>
+									<ccts:Cardinality>0..n</ccts:Cardinality>
+									<ccts:ObjectClass>Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>anySimpleType</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>anySimpleType</ccts:RepresentationTerm>
+									<ccts:DataType>QName. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 				</xsd:sequence>
 				<xsd:attributeGroup ref="cac:ThingAttributes"/>
 			</xsd:extension>
@@ -277,7 +431,7 @@
 		<xsd:complexContent>
 			<xsd:annotation>
 				<xsd:documentation>
-					<cccev-annotation:Class>
+					<an:Class>
 						<ccts:ComponentType>Class</ccts:ComponentType>
 						<ccts:DictionaryEntryName>cccev:InformationRequirementType.
 							Details</ccts:DictionaryEntryName>
@@ -285,9 +439,9 @@
 							<DefinitionSource/>
 						</ccts:Definition>
 						<ccts:ObjectClass>cccev:InformationRequirementType</ccts:ObjectClass>
-						<cccev-annotation:PrimitiveClass> cccev:RequirementType
-						</cccev-annotation:PrimitiveClass>
-					</cccev-annotation:Class>
+						<an:PrimitiveClass> cccev:RequirementType
+						</an:PrimitiveClass>
+					</an:Class>
 				</xsd:documentation>
 			</xsd:annotation>
 			<xsd:extension base="RequirementType">

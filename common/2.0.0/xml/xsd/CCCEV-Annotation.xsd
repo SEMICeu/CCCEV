@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsd:schema xmlns="https://semic.org/sa/cv/cccev-annotation-2.0.0#"
+<xsd:schema xmlns="https://semic.org/sa/cv/semic-annot-2.0.0#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-    targetNamespace="https://semic.org/sa/cv/cccev-annotation-2.0.0#" 
+    targetNamespace="https://semic.org/sa/cv/cccev-annot-2.0.0#" 
     elementFormDefault="qualified" 
     attributeFormDefault="unqualified" version="2.0.0">
     
@@ -12,15 +12,17 @@
             <Class>
                 <ccts:ComponentType>Class</ccts:ComponentType>
                 <ccts:DictionaryEntryName>Class. Definition</ccts:DictionaryEntryName>
+                <ccts:Version>2.0.0</ccts:Version>
                 <ccts:Definition>
-                    <DefinitionSource>https://www.w3.org/TR/owl-ref/#Class</DefinitionSource>
                     Classes provide an abstraction mechanism for grouping resources with similar characteristics. Every class is
                     associated with a set of individuals, called the class extension. The individuals in the class extension are called the instances of the class.
                     A class has an intensional meaning (the underlying concept) which is related but not equal to its class extension. Thus, two classes may have the
                     same class extension, but still be different classes.
-                   </ccts:Definition>
+                </ccts:Definition>
+                <DefinitionSource>https://www.w3.org/TR/owl-ref/#Class</DefinitionSource>
                 <ccts:ObjectClass>Class</ccts:ObjectClass>
-                <PrimitiveClass></PrimitiveClass>
+                <BaseClass>rdfs:subClassOf ParentClass</BaseClass>
+                <ccts:Example></ccts:Example>
             </Class>
         </xsd:documentation>
     </xsd:annotation>
@@ -31,11 +33,12 @@
                 <ccts:ComponentType>Object property</ccts:ComponentType>
                 <ccts:DictionaryEntryName>Object property. Definition</ccts:DictionaryEntryName>
                 <ccts:Definition>Object properties link individuals to individuals. I.e., classes with classes. It is a sub-class of rdfs:Property.</ccts:Definition>
+                <DefinitionSource>https://www.w3.org/TR/owl2-syntax/#Object_Properties</DefinitionSource>
                 <ccts:ObjectClass>Object property</ccts:ObjectClass>
                 <Domain>Class</Domain>
                 <Range>Class</Range>
                 <Predicate>objectProperty</Predicate>
-                <Axiom>ClassA objectProperty ClassB</Axiom>
+                <Axiom>owl:disjointWith objectPropertyX</Axiom>
             </ObjectProperty>
         </xsd:documentation>
     </xsd:annotation>
@@ -46,10 +49,10 @@
                 <ccts:ComponentType>Data property</ccts:ComponentType>
                 <ccts:DictionaryEntryName>Data property. Definition</ccts:DictionaryEntryName>
                 <ccts:Definition>
-                    <DefinitionSource>https://www.w3.org/TR/owl2-syntax/#Data_Properties</DefinitionSource>
                     Data properties connect individuals with literals. In some knowledge
                     representation systems, functional data properties are called attributes.
                 </ccts:Definition>
+                <DefinitionSource>https://www.w3.org/TR/owl2-syntax/#Data_Properties</DefinitionSource>
                 <ccts:Cardinality>
                     An indication of whether the property represents a not-applicable,
                     optional, mandatory and/or repetitive characteristic of the object.

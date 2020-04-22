@@ -6,9 +6,15 @@
 	targetNamespace="http://www.w3.org/ns/adms#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
-	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>	
+	
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
+	
+	<!-- Class declarations -->
 	<xsd:element name="identifier" type="IdentifierType"/>
-
+	<xsd:element name="status" type="skos:ConceptType"/>
+	
+	<!-- Element definition -->
+	
 	<xsd:complexType name="IdentifierType">
 		<xsd:all>
 			<!-- According to the W3C ADMS specification, instances of the skos:notation should indicate the type of the element content. Use xsi:type for this. -->

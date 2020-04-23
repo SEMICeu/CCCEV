@@ -38,6 +38,7 @@
 	<xsd:element name="language" type="LinguisticSystemType"/>
 	<xsd:element name="acccessRights" type="RightStatementType"/>
 	<xsd:element name="relation" type="xsd:anyType"/>
+	<xsd:element name="rights" type="RightStatementType"/>
 	<xsd:element name="source" type="skos:ConceptType"/>
 	<xsd:element name="temporal" type="PeriodOfTimeType"/>
 	

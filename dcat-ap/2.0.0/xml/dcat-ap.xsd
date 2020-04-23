@@ -140,6 +140,7 @@
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:format" minOccurs="0"/>
 			<xsd:element ref="dct:modified" minOccurs="0"/>
+			<xsd:element ref="dct:rights" minOccurs="0"/>
 			<xsd:element ref="odrl:hasPolicy" minOccurs="0"/>
 			<xsd:element ref="spdx:checksum" minOccurs="0"/>
 			<xsd:element ref="accessService" minOccurs="0"/>

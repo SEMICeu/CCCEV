@@ -2,16 +2,23 @@
 <!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
 <xsd:schema xmlns="http://www.w3.org/ns/adms#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:dcat-ap="http://data.europa.eu/r5r/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	targetNamespace="http://www.w3.org/ns/adms#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	
+	<xsd:import namespace="http://data.europa.eu/r5r/" schemaLocation="../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
+	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="../../../rdf/2.0.0/xml/rdf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
 	
+	<!-- Object properties -->
+	<xsd:element name="sample" type="dcat-ap:DistributionType"/>
 	<!-- Class declarations -->
 	<xsd:element name="identifier" type="IdentifierType"/>
 	<xsd:element name="status" type="skos:ConceptType"/>
+	<xsd:element name="versionNotes" type="rdf:PlainLiteral"/>
 	
 	<!-- Element definition -->
 	

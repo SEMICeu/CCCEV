@@ -21,6 +21,7 @@
 
     <!-- Classes declarations-->
     <xs:element name="Address" type="AddressType"/>
+    <xs:element name="Geometry" type="GeometryType"/>
     <xs:element name="Location" type="LocationType"/>
     
     <!-- Class definition -->
@@ -48,6 +49,12 @@
         <xs:element ref="addressId" minOccurs="0"/>
     </xs:sequence>
 </xs:complexType>
+    
+    <xs:complexType name="GeometryType">
+        <xs:complexContent>
+            <xs:extension base="xs:anyType"/>
+        </xs:complexContent>
+    </xs:complexType>
     
 <xs:complexType name="LocationType">
     <xs:sequence>

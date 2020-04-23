@@ -3,6 +3,7 @@
 <xsd:schema xmlns="http://purl.org/dc/terms/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	
@@ -11,6 +12,7 @@
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
 	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="../../../rdf/2.0.0/xml/rdf.xsd"/>
 	
@@ -31,22 +33,31 @@
 	<xsd:element name="type" type="xsd:anyURI"/>
 	
 	<!-- Object properties -->
+	<xsd:element name="accessRights" type="RightStatementType"/>
+	<xsd:element name="accrualPeriodicity" type="FrequencyType"/>
 	<xsd:element name="conformsTo" type="StandardType"/>
 	<xsd:element name="creator" type="foaf:AgentType"/>
 	<xsd:element name="format" type="MediaType"/>
+	<xsd:element name="hasVersion" type="rdf:Resource"/>
+	<xsd:element name="isReferencedBy" type="rdf:Resource"/>
+	<xsd:element name="isVersionOf" type="rdf:Resource"/>
 	<xsd:element name="licence" type="LicenceDocumentType"/>
 	<xsd:element name="language" type="LinguisticSystemType"/>
-	<xsd:element name="acccessRights" type="RightStatementType"/>
+	<xsd:element name="provenance" type="ProvenanceStatementType"/>
 	<xsd:element name="relation" type="xsd:anyType"/>
 	<xsd:element name="rights" type="RightStatementType"/>
 	<xsd:element name="source" type="skos:ConceptType"/>
+	<xsd:element name="spatial" type="LocationType"/>
 	<xsd:element name="temporal" type="PeriodOfTimeType"/>
 	
 	<!-- Class declaration -->
 	<xsd:element name="Code" type="CodeType"/>
+	<xsd:element name="Frequency" type="FrequencyType"/>
 	<xsd:element name="LicenceDocument" type="LicenceDocumentType"/>
 	<xsd:element name="LinguisticSystem" type="LinguisticSystemType"/>
+	<xsd:element name="Location" type="LocationType"/>
 	<xsd:element name="Media" type="MediaType"/>
+	<xsd:element name="ProvenanceStatement" type="ProvenanceStatementType"/>
 	<xsd:element name="RightStatement" type="RightStatementType"/>
 	<xsd:element name="Standard" type="StandardType"/>
 
@@ -56,6 +67,10 @@
 				<xsd:extension base="xsd:anyType"/>		
 		</xsd:complexContent>
 	</xsd:complexType>
+	
+	<xsd:simpleType name="FrequencyType">
+		<xsd:restriction base="xsd:positiveInteger"/>	
+	</xsd:simpleType>
 	
 	<xsd:complexType name="LicenceDocumentType">
 		<xsd:complexContent>
@@ -67,6 +82,12 @@
 		<xsd:restriction base="xsd:anyURI"/>	
 	</xsd:simpleType>
 
+	<xsd:complexType name="LocationType">
+		<xsd:sequence>
+			<xsd:element ref="lcn:Geometry"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
 	<xsd:complexType name="MediaType">
 		<xsd:complexContent>
 				<xsd:extension base="xsd:anyType"/>		
@@ -78,6 +99,12 @@
 			<xsd:element ref="startDate" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="endDate" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>	
+	</xsd:complexType>
+	
+	<xsd:complexType name="ProvenanceStatementType">
+		<xsd:complexContent>
+			<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="RightStatementType">

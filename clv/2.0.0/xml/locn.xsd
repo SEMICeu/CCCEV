@@ -26,7 +26,7 @@
     <!-- Class definition -->
     <xs:complexType name="AddressType">
     <xs:sequence>
-        <xs:element name="fullAddress" type="xs:string">
+        <xs:element name="fullAddress" type="xs:string" minOccurs="0">
             <xs:annotation>
                 <xs:documentation>
                     The complete address written as a string, with or without formatting.  

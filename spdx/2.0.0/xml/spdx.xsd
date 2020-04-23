@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="spdx:xsd::1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="spdx:xsd::1.0"
+           version="1">
+    
+    <!--Object properties-->
+    <xs:element name="checksum" type="ChecksumType"/>
+    <!--Class declaration-->
+    <xs:element name="AlgorithmCode" type="AlgorithmCodeType"/>
+    <xs:element name="ChecksumAugmentationPoint" type="ChecksumAugmentationPointType"/>
+    <xs:element name="ChecksumValue" type="ChecksumValueType"/>
+    
+    <xs:complexType name="AlgorithmCodeType">
+        <xs:annotation>
+            <xs:documentation>A data type for Algorithm properties</xs:documentation>
+            <xs:appinfo>
+                <ComplexType name="Algorithm CodeSimpleType"
+                    rdf="http://spdx.org/rdf/terms#algorithm"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="AlgorithmCodeSimpleType"/>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="AlgorithmCodeSimpleType">
+        <xs:annotation>
+            <xs:documentation>A data type for Algorithm properties</xs:documentation>
+            <xs:appinfo>
+                <SimpleType name="AlgorithmCodeSimpleType"
+                    rdf="http://spdx.org/rdf/terms#algorithm"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Md5">
+                <xs:annotation>
+                    <xs:documentation>Indicates the algorithm used was MD5</xs:documentation>
+                    <xs:appinfo>
+                        <Enum rdf="http://spdx.org/rdf/terms#algorithm"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Sha1">
+                <xs:annotation>
+                    <xs:documentation>Indicates the algorithm used was SHA-1</xs:documentation>
+                    <xs:appinfo>
+                        <Enum rdf="http://spdx.org/rdf/terms#algorithm"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Sha256">
+                <xs:annotation>
+                    <xs:documentation>Indicates the algorithm used was SHA256</xs:documentation>
+                    <xs:appinfo>
+                        <Enum rdf="http://spdx.org/rdf/terms#algorithm"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="ChecksumAugmentationPointType" abstract="true">
+        <xs:annotation>
+            <xs:documentation>An augmentation point for Checksum</xs:documentation>
+            <xs:appinfo>
+                <Element name="Checksum Augmentation Point"/>
+            </xs:appinfo>
+        </xs:annotation>
+       
+    </xs:complexType>
+    
+    <xs:complexType name="ChecksumType">
+        <xs:annotation>
+            <xs:documentation>A data type for Checksum type</xs:documentation>
+            <xs:appinfo>
+                <ComplexType name="Checksum"
+                    xmlname="Checksum"
+                    comment="A Checksum is value that allows the contents of a file to be authenticated. Even small changes to the content of the file will change its checksum. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented."
+                    rdf="http://spdx.org/rdf/terms#Checksum"/>
+            </xs:appinfo>
+        </xs:annotation>
+                <xs:sequence>
+                    <xs:element ref="ChecksumValue" minOccurs="1" maxOccurs="1"/>
+                    <xs:element ref="AlgorithmCode"/>
+                    <xs:element ref="ChecksumAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ChecksumValueType">
+        <xs:annotation>
+            <xs:documentation>A data type for The checksumValue property provides a lower case hexidecimal encoded digest value produced using a specific algorithm.</xs:documentation>
+            <xs:appinfo>
+                <ComplexType name="checksumValue"
+                    xmlname="ChecksumValue"
+                    comment="The checksumValue property provides a lower case hexidecimal encoded digest value produced using a specific algorithm."
+                    rdf="http://spdx.org/rdf/terms#checksumValue"
+                    domain="Checksum"
+                    range="HexBinary"/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:hexBinary"/>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

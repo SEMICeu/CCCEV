@@ -94,8 +94,6 @@
 			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>			
 			<xsd:element ref="distribution" minOccurs="0" maxOccurs="unbounded"/>			
 			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="packageForms" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="mediaType" minOccurs="0" maxOccurs="1"/>		
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -117,15 +115,20 @@
 
 	<xsd:complexType name="DistributionType">
 		<xsd:sequence>
+			<!--Mandatory elements-->
+			<xsd:element ref="accessURL"/>
+			<!--Optional elements-->
 			<xsd:element ref="foaf:page" minOccurs="0"/>
 			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:format" minOccurs="0"/>
-			<xsd:element ref="accessURL" minOccurs="0"/>
 			<xsd:element ref="downloadURL" minOccurs="0"/>
-			<xsd:element ref="accessService" minOccurs="0" maxOccurs="1"/>			
+			<xsd:element ref="accessService" minOccurs="0" maxOccurs="1"/>
+			<!--Recommended elements-->
+			<xsd:element ref="packageForms" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="mediaType" minOccurs="0" maxOccurs="1"/>					
 		</xsd:sequence>
 	</xsd:complexType>
 

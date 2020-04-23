@@ -1,0 +1,129 @@
+<xsd:schema xmlns="http://www.w3.org/ns/odrl/2/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.1" targetNamespace="http://www.w3.org/ns/odrl/2/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xsd:annotation>
+        <xsd:documentation>
+            This is the XML Schema for ODRL Version 2.1 (Final Specification, 5 March 2015) Copyright © 2015 the Contributors to the Final Specification, published by the W3C ODRL Community Group (https://www.w3.org/community/odrl/) under the W3C Community Final Specification Agreement (http://www.w3.org/community/about/agreements/final/). A human-readable summary is available (http://www.w3.org/community/about/agreements/fsa-deed/).
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="hasPolicy" type="Policy"/>
+    
+    <xsd:element name="Policy" type="Policy"/>
+    
+    <xsd:complexType name="Policy">
+        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            <xsd:element ref="permission" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="prohibition" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="uid" type="URIQnameQcode" use="required"/>
+        <xsd:attribute name="type" type="URIQnameQcode" use="required"/>
+        <xsd:attribute name="conflict" type="ConflictTerm"/>
+        <xsd:attribute name="undefined" type="UndefinedTerm"/>
+        <xsd:attribute name="inheritAllowed" type="xsd:boolean"/>
+        <xsd:attribute name="inheritFrom" type="URIQnameQcode"/>
+        <xsd:attribute name="inheritRelation" type="URIQnameQcode"/>
+        <xsd:attribute name="profile" type="URIQnameQcode"/>
+        <xsd:anyAttribute namespace="##other" processContents="lax"/>
+    </xsd:complexType>
+    <xsd:element name="permission" type="Permission"/>
+    <xsd:complexType name="Permission">
+        <xsd:sequence>
+            <xsd:element ref="asset" maxOccurs="unbounded"/>
+            <xsd:element ref="action"/>
+            <xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="party" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="duty" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:element name="prohibition" type="Prohibition"/>
+    <xsd:complexType name="Prohibition">
+        <xsd:sequence>
+            <xsd:element ref="asset" maxOccurs="unbounded"/>
+            <xsd:element ref="action"/>
+            <xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="party" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:element name="duty" type="Duty"/>
+    <xsd:complexType name="Duty">
+        <xsd:sequence>
+            <xsd:element ref="action" minOccurs="0"/>
+            <!-- Required Element -->
+            <xsd:element ref="asset" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="party" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="uid" type="URIQnameQcode"/>
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:element name="asset" type="Asset"/>
+    <xsd:complexType name="Asset">
+        <xsd:attribute name="uid" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attribute name="relation" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:element name="party" type="Party"/>
+    <xsd:complexType name="Party">
+        <xsd:attribute name="uid" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attribute name="function" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attribute name="scope" type="URIQnameQcode"/>
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:element name="action" type="Action"/>
+    <xsd:complexType name="Action">
+        <xsd:attribute name="name" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:element name="constraint" type="Constraint"/>
+    <xsd:complexType name="Constraint">
+        <xsd:attribute name="name" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attribute name="operator" type="URIQnameQcode"/>
+        <!-- Required Attribute -->
+        <xsd:attribute name="rightOperand" type="listOfValues"/>
+        <!-- Required Attribute -->
+        <xsd:attribute name="dataType" type="URIQnameQcode"/>
+        <xsd:attribute name="unit" type="URIQnameQcode"/>
+        <xsd:attribute name="status" type="xsd:string"/>
+        <xsd:attributeGroup ref="idAttributes"/>
+    </xsd:complexType>
+    <xsd:simpleType name="listOfValues">
+        <xsd:list itemType="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="ConflictTerm">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="http://www.w3.org/ns/odrl/2/perm"/>
+            <xsd:enumeration value="http://www.w3.org/ns/odrl/2/prohibit"/>
+            <xsd:enumeration value="http://www.w3.org/ns/odrl/2/invalid"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="UndefinedTerm">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="http://www.w3.org/ns/odrl/2/support"/>
+            <xsd:enumeration value="http://www.w3.org/ns/odrl/2/ignore"/>
+            <xsd:enumeration value="http://www.w3.org/ns/odrl/2/invalid"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="URIQnameQcode">
+        <xsd:union memberTypes="xsd:anyURI xsd:QName QCode"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="QCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[^\s:]+:[^\s]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:attributeGroup name="idAttributes">
+        <xsd:attribute name="id" type="xsd:ID"/>
+        <xsd:attribute name="idref" type="xsd:IDREF"/>
+        <xsd:anyAttribute namespace="##other" processContents="lax"/>
+    </xsd:attributeGroup>
+</xsd:schema>

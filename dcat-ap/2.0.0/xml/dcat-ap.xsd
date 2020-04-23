@@ -6,6 +6,7 @@
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:adms="http://www.w3.org/ns/adms#"
+	xmlns:odrl="http://www.w3.org/ns/odrl/2/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:spdx="spdx:xsd::1.0"
@@ -20,6 +21,8 @@
 		schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/adms#"
 		schemaLocation="../../../adms/2.0.0/xml/adms.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/odrl/2/"
+		schemaLocation="../../../odrl/2.0.0/xml/odrl.xsd"/>
 	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 		schemaLocation="../../../rdf/2.0.0/xml/rdf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#"
@@ -137,6 +140,7 @@
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:format" minOccurs="0"/>
 			<xsd:element ref="dct:modified" minOccurs="0"/>
+			<xsd:element ref="odrl:hasPolicy" minOccurs="0"/>
 			<xsd:element ref="spdx:checksum" minOccurs="0"/>
 			<xsd:element ref="accessService" minOccurs="0"/>
 			<xsd:element ref="availability" minOccurs="0"/>

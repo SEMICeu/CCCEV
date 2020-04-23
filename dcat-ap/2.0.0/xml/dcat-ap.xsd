@@ -33,9 +33,12 @@
 	<!-- object properties -->
 	<xsd:element name="accessService" type="DataServiceType"/>
 	<xsd:element name="distribution" type="DistributionType"/>
+	<xsd:element name="landingPage" type="foaf:DocumentType"/>
+	<xsd:element name="mediaType" type="dct:MediaType"/>	
+	<xsd:element name="packageForms" type="dct:MediaType"/>	
 	<xsd:element name="qualifiedRelation" type="RelationshipType"/>
 	<xsd:element name="servesDataset" type="DatasetType"/>
-	<xsd:element name="landingPage" type="foaf:DocumentType"/>	
+	
 	
 	<!-- Classes -->
 	<xsd:element name="CatalogRecord" type="CatalogRecordType"/>
@@ -79,6 +82,7 @@
 			<xsd:element ref="adms:identifier" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:type" minOccurs="0"/>
 			<xsd:element ref="dct:issued" minOccurs="0"/>
+			<xsd:element ref="dct:format" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="dct:modified" minOccurs="0"/>
 			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
@@ -90,18 +94,23 @@
 			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>			
 			<xsd:element ref="distribution" minOccurs="0" maxOccurs="unbounded"/>			
 			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="packageForms" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="mediaType" minOccurs="0" maxOccurs="1"/>		
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="DataServiceType">
 		<xsd:sequence>
+			<!--Mandatory elements-->
 			<xsd:element ref="dct:identifier"/>
 			<xsd:element ref="dct:title"/>
+			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
+			<!--Optional elements-->
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:acccessRights" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="endpointDescription" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
+			<!--Recommended elements-->
 			<xsd:element ref="servesDataset" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>

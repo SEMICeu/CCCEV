@@ -16,6 +16,7 @@
 	<xsd:element name="family_name" type="xsd:string"/>
 	<xsd:element name="firstName" type="xsd:string"/>
 	<xsd:element name="geekcode" type="xsd:normalizedString"/>
+	<xsd:element name="homepage" type="DocumentType"/>
 	<xsd:element name="img" type="xsd:base64Binary"/>
 	<xsd:element name="myersBriggs" type="xsd:normalizedString"/>
 	<xsd:element name="pastProject" type="xsd:anyType"/>

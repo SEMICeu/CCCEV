@@ -34,6 +34,7 @@
 		schemaLocation="../../../vcard/2.0.0/xml/vcard.xsd"/>
 
 	<!-- Element declaration -->
+	
 	<!-- data properties -->
 	<!-- rdfs:Resource is mapped (considered equivalent) to xsd:anyURI --> 
 	<xsd:element name="accessURL" type="xsd:anyURI"/>
@@ -48,7 +49,13 @@
 	<!-- object properties -->
 	<xsd:element name="accessService" type="DataServiceType"/>
 	<xsd:element name="availability" type="skos:ConceptType"/>
+	<xsd:element name="catalog" type="CatalogType"/>
 	<xsd:element name="compressedFormat" type="dct:MediaType"/>
+	<xsd:element name="dataset" type="DatasetType"/>
+	<xsd:element name="record" type="CatalogRecordType"/>
+	<!--<xsd:element name="relation" type="CatalogType"/>--> <!--dct:relation-->
+	<xsd:element name="themeTaxonomy" type="skos:ConceptType"/> <!--skos:ConceptSchemeType-->
+	<xsd:element name="service" type="DataServiceType"/>
 	<!--VCard is still WIP-->
 	<xsd:element name="contactPoint" type="xsd:anyType"/>
 	<xsd:element name="distribution" type="DistributionType"/>
@@ -60,8 +67,8 @@
 	<xsd:element name="servesDataset" type="DatasetType"/>
 	<xsd:element name="theme" type="skos:ConceptType"/>
 	
-	
 	<!-- Classes -->
+	<xsd:element name="Catalog" type="CatalogType"/>
 	<xsd:element name="CatalogRecord" type="CatalogRecordType"/>
 	<xsd:element name="Dataset" type="DatasetType"/>
 	<xsd:element name="Distribution" type="DistributionType"/>
@@ -70,6 +77,31 @@
 	<xsd:element name="Role" type="RoleType"/>
 	
 	<!-- Element definition -->
+	
+	<xsd:complexType name="CatalogType"> <!--missing hasPart and isPartOf-->
+		<xsd:sequence>
+			<!--Mandatory elements-->
+			<xsd:element ref="dataset" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:publisher"/>
+			<!--Optional elements-->
+			<xsd:element ref="dct:creator" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="service" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="catalog" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="record" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:rights" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
+			<!--Recommended elements-->
+			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:modified" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:language" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="themeTaxonomy" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="foaf:homepage" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:spatial"  minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dct:licence" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
 	
 	<xsd:complexType name="CatalogRecordType">
 		<xsd:sequence>
@@ -143,7 +175,7 @@
 			<xsd:element ref="dct:identifier"/>
 			<xsd:element ref="dct:title"/>
 			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
-			<!--Optional elements-->
+			<!--Optional elements--> <!--dct:referencedBy-->
 			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:accessRights" minOccurs="0" maxOccurs="1"/>
@@ -183,11 +215,10 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-
 	<xsd:complexType name="RelationshipType">
 		<xsd:sequence>
 			<xsd:element ref="dct:relation" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="hadRole" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="hadRole" minOccurs="0" maxOccurs="unbounded"/> <!--dct:hadRole 1..* (I would leave it as it is, 0..*)-->
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -202,4 +233,6 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+	
+	
 </xsd:schema>

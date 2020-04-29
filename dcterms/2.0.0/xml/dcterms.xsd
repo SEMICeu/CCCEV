@@ -38,7 +38,7 @@
 	<xsd:element name="conformsTo" type="StandardType"/>
 	<xsd:element name="creator" type="foaf:AgentType"/>
 	<xsd:element name="format" type="MediaType"/>
-	<xsd:element name="hasVersion" type="hasVersionType"/>
+	<xsd:element name="hasVersion" type="rdf:Resource"/>
 	<xsd:element name="isReferencedBy" type="rdf:Resource"/>
 	<xsd:element name="isVersionOf" type="rdf:Resource"/>
 	<xsd:element name="licence" type="LicenceDocumentType"/>
@@ -70,13 +70,7 @@
 	
 	<xsd:simpleType name="FrequencyType">
 		<xsd:restriction base="xsd:positiveInteger"/>	
-	</xsd:simpleType>
-	
-	<xsd:complexType name="hasVersionType">
-		<xsd:complexContent>
-			<xsd:extension base="rdf:Resource"/>	
-		</xsd:complexContent>
-	</xsd:complexType>	
+	</xsd:simpleType>	
 	
 	<xsd:complexType name="LicenceDocumentType">
 		<xsd:complexContent>

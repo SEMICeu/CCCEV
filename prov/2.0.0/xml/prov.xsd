@@ -9,7 +9,7 @@
         schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
     
     <!-- Data properties declarations-->
-    <xsd:element name="poBox" type="xsd:string"/>
+
    
     
     <!-- Object properties declarations-->

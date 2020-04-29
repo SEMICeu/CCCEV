@@ -7,6 +7,7 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:adms="http://www.w3.org/ns/adms#"
 	xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+	xmlns:prov="http://www.w3.org/ns/prov#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:spdx="spdx:xsd::1.0"
@@ -24,6 +25,8 @@
 		schemaLocation="../../../adms/2.0.0/xml/adms.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/odrl/2/"
 		schemaLocation="../../../odrl/2.0.0/xml/odrl.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/prov#"
+		schemaLocation="../../../prov/2.0.0/xml/prov.xsd"/>
 	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 		schemaLocation="../../../rdf/2.0.0/xml/rdf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#"
@@ -59,10 +62,13 @@
 	<!--VCard is still WIP-->
 	<xsd:element name="contactPoint" type="xsd:anyType"/>
 	<xsd:element name="distribution" type="DistributionType"/>
+	<xsd:element name="hasVersion" type="hasVersionType"/>
 	<xsd:element name="keyword" type="rdf:PlainLiteral"/>
 	<xsd:element name="landingPage" type="foaf:DocumentType"/>
 	<xsd:element name="mediaType" type="dct:MediaType"/>	
-	<xsd:element name="packageFormat" type="dct:MediaType"/>	
+	<xsd:element name="packageFormat" type="dct:MediaType"/>
+	<!-- The property dcat:qualifiedRelation and association-class dcat:Relationship follow the pattern established in W3C [PROV-O]
+		For more information access: https://www.w3.org/TR/vocab-dcat-2/#qualified-relationship-->
 	<xsd:element name="qualifiedRelation" type="RelationshipType"/>
 	<xsd:element name="servesDataset" type="DatasetType"/>
 	<xsd:element name="theme" type="skos:ConceptType"/>
@@ -108,14 +114,14 @@
 			<xsd:element name="CatalogRecord" minOccurs="0" maxOccurs="1">
 				<xsd:complexType>
 					<xsd:sequence>
-						<!-- mandatory properties for dcat:CatalogRecord-->
+						<!-- Mandatory properties-->
 						<xsd:element ref="foaf:primaryTopic" minOccurs="1" maxOccurs="1"/>
 						<xsd:element ref="dct:modified" minOccurs="1" maxOccurs="1"/>
-						<!-- recommended properties for dcat:CatalogRecord-->
+						<!-- Recommended properties-->
 						<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="1"/>
 						<xsd:element ref="adms:status" minOccurs="0" maxOccurs="1"/>
 						<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
-						<!-- optional properties for dcat:CatalogRecord-->
+						<!-- Optional properties-->
 						<xsd:element ref="dct:description" minOccurs="0"/>
 						<xsd:element ref="dct:language" maxOccurs="unbounded"/>
 						<xsd:element ref="dct:source" maxOccurs="1"/>
@@ -162,6 +168,8 @@
 			<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:type" minOccurs="0"/>
 			<xsd:element ref="foaf:page" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="prov:qualifiedAttribution" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="prov:wasGeneratedBy" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="landingPage" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="spatialResolutionInMeters" minOccurs="0" maxOccurs="unbounded"/>
@@ -214,7 +222,9 @@
 			<xsd:element ref="packageFormat" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
-
+	
+	<!-- The property dcat:qualifiedRelation and association-class dcat:Relationship follow the pattern established in W3C [PROV-O]
+		For more information access: https://www.w3.org/TR/vocab-dcat-2/#qualified-relationship-->
 	<xsd:complexType name="RelationshipType">
 		<xsd:sequence>
 			<xsd:element ref="dct:relation" minOccurs="0" maxOccurs="unbounded"/>
@@ -234,5 +244,14 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	
+	<xsd:complexType name="hasVersionType">
+		<xsd:complexContent>
+			<xsd:extension base="dct:hasVersionType">
+				<xsd:choice>
+					<xsd:element ref="Dataset" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 	
 </xsd:schema>

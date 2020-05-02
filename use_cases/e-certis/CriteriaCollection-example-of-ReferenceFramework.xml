@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Example of a Conviction Criterion use to illustrate how to structure the e-Certis Reference Framework sub-model. Last update 20200419. -->
+<!-- Example of a Conviction Criterion used to illustrate how to structure the e-Certis Reference Framework sub-model. Last update 20200419. -->
 <RequirementsCollection
  xmlns="http://example.org/" 
  xmlns:udt="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"

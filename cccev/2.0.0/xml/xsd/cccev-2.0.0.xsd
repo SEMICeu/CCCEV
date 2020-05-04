@@ -4,6 +4,7 @@
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
 	xmlns:an="https://semic.org/sa/cv/common/semic-annot-2.0.0#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
@@ -19,6 +20,7 @@
 		schemaLocation="../../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
 		schemaLocation="../../../../cagv/2.0.0/xml/xsd/CV-Agent.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2002/07/owl#" schemaLocation="../../../../owl/2.0.0/xml/owl.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
 		schemaLocation="../../../../foaf/xml/foaf.xsd"/>
 
@@ -45,7 +47,7 @@
 	<xsd:element name="identifierValue" type="cbc:IDType"/>
 	<xsd:element name="indicatorValue" type="cbc:IndicatorType"/>
 	<xsd:element name="inEvidenceTypeList" type="cbc:IDReferenceType"/>
-	<xsd:element name="partOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="isRequirementOf" type="cbc:IDReferenceType"/>
 	<xsd:element name="issueDate" type="cbc:DateType"/>
 	<xsd:element name="issueTime" type="cbc:TimeType"/>
 	<xsd:element name="valueOf" type="cbc:IDReferenceType"/>
@@ -121,7 +123,7 @@
 							<ccts:ComponentType>Data property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Concept. identifier</ccts:DictionaryEntryName>
 							<ccts:Definition>
-								<DefinitionSource/>
+								A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
 							</ccts:Definition>
 							<ccts:Cardinality>0..*</ccts:Cardinality>
 							<ccts:ObjectClass>Concept</ccts:ObjectClass>
@@ -139,7 +141,7 @@
 							<ccts:ComponentType>Data property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Concept. name</ccts:DictionaryEntryName>
 							<ccts:Definition>
-								<DefinitionSource/>
+								The preferred label used to identify the instance of this class or of one of its subclasses.
 							</ccts:Definition>
 							<ccts:Cardinality>0..1</ccts:Cardinality>
 							<ccts:ObjectClass>Concept</ccts:ObjectClass>
@@ -157,7 +159,7 @@
 							<ccts:ComponentType>Data property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Concept. description</ccts:DictionaryEntryName>
 							<ccts:Definition>
-								<DefinitionSource/>
+								A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the concept being instantiated. 
 							</ccts:Definition>
 							<ccts:Cardinality>0..*</ccts:Cardinality>
 							<ccts:ObjectClass>Concept</ccts:ObjectClass>
@@ -175,7 +177,10 @@
 							<ccts:ComponentType>Data property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Concept. type</ccts:DictionaryEntryName>
 							<ccts:Definition>
-								<DefinitionSource/>
+								The identifier representing the division within a system of classification to which the instance of this class belongs.
+								Additional information
+								The classification system is normally a controlled vocabulary (e.g. a codelist or a taxonomy) the use of which is commonly agreed by a community of users in the context of a business or problem domain.
+								<DefinitionSource>based on sense #2 of the Merriam-Webster English dictionary.</DefinitionSource>
 							</ccts:Definition>
 							<ccts:Cardinality>0..1</ccts:Cardinality>
 							<ccts:ObjectClass>Concept</ccts:ObjectClass>
@@ -194,7 +199,6 @@
 							<ccts:DictionaryEntryName>Concept. QName</ccts:DictionaryEntryName>
 							<ccts:Definition>
 								Standing for ‘qualified name’. Mechanism used to identify concisely and unambiguously an entity, i.e. a class or a property.
-								
 								Additional information:
 								Qualified names are pairs of {namespace URI, entity local name} where the namespace URI is usually replaced by a ‘prefix’, as in cccev:Criterion, xsd:int, or dcat:Dataset.
 								<DefinitionSource>Based on the W3C definition of QNames for XML: https://www.w3.org/2001/tag/doc/qnameids.html#sec-qnames-other</DefinitionSource>
@@ -854,7 +858,10 @@
 					<ccts:ComponentType>Class</ccts:ComponentType>
 					<ccts:DictionaryEntryName>Requirement. Details</ccts:DictionaryEntryName>
 					<ccts:Definition>
-						<DefinitionSource/>
+						A condition demanded.
+						Additional Information:
+						Generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. The European Directive on services in the internal market  defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy [..]”.
+						<DefinitionSource>Based on the Collins English Dictionary, accessed through TheFreeDictionary.com hub.</DefinitionSource>
 					</ccts:Definition>
 					<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 				</an:Class>
@@ -939,7 +946,12 @@
 						<ObjectProperty>
 							<ccts:ComponentType>Object property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Requirement. requirement</ccts:DictionaryEntryName>
-							<ccts:Definition/>
+							<ccts:Definition>
+								A sub-requirement with more granular detail(s) or of different nature.
+								Additional Information
+								An example of granular sub-requirements can be a criterion defining more specific sub-criteria. Different examples can be found in different domains and situations. Thus, in the domain of e-Procurement EU exclusion criteria (a.k.a. ‘grounds for exclusion’), national criteria are implemented as sub-criteria ‘hierarchically descending’ from an EU parent criterion. Neural networks can also be implemented as criteria and sub-criteria linked via the property cccev:hasRequirement pointing to a requirement of type cccev:Criterion.
+								Examples of sub requirements of different nature can a criterion that defines different types of information requirements (e.g. evidences to support the responses to the criterion) and establishing constraints (e.g. input parameters, thresholds, or other types of restrictions).
+							</ccts:Definition>
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>Requirement</Range>
@@ -955,7 +967,7 @@
 						<ObjectProperty>
 							<ccts:ComponentType>Object property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Requirement. concept</ccts:DictionaryEntryName>
-							<ccts:Definition/>
+							<ccts:Definition>The concept(s) used to specify the data being required.</ccts:Definition>
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>Concept</Range>
@@ -970,7 +982,7 @@
 						<ObjectProperty>
 							<ccts:ComponentType>Object property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Requirement. evidence</ccts:DictionaryEntryName>
-							<ccts:Definition/>
+							<ccts:Definition>One or more evidences proving that the requirement is met or has been fulfilled.</ccts:Definition>
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>Evidence</Range>
@@ -986,7 +998,7 @@
 						<ObjectProperty>
 							<ccts:ComponentType>Object property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Requirement. evidence Type Combination List</ccts:DictionaryEntryName>
-							<ccts:Definition/>
+							<ccts:Definition>A collection, or a set of alternative collections, of references to types of evidences.</ccts:Definition>
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>EvidenceTypeList</Range>
@@ -995,17 +1007,17 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element ref="partOf" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="isRequirementOf" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">
 						<ObjectProperty>
 							<ccts:ComponentType>Object property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Requirement. part Of</ccts:DictionaryEntryName>
-							<ccts:Definition/>
+							<ccts:Definition>A collection, or a set of alternative collections, of references to types of evidences. </ccts:Definition>
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>Requirement</Range>
-							<Predicate>isPartOfRequirement</Predicate>
+							<Predicate>isRequirementOf</Predicate>
 							<Axiom>owl:inverseOf :hasRequirement</Axiom>
 						</ObjectProperty>
 					</xsd:documentation>
@@ -1017,7 +1029,7 @@
 						<ObjectProperty>
 							<ccts:ComponentType>Object property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Requirement. part Of</ccts:DictionaryEntryName>
-							<ccts:Definition/>
+							<ccts:Definition></ccts:Definition>
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>dcat-ap:Relationship</Range>

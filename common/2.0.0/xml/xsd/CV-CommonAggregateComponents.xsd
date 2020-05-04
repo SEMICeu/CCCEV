@@ -4,12 +4,14 @@
    xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	targetNamespace="https://semic.org/sa/cv/common/cac-2.0.0#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
    <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="./CV-CommonBasicComponents.xsd"/>
    <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../../clv/2.0.0/xml/locn.xsd"/>
+   <xsd:import namespace="http://www.w3.org/2002/07/owl#" schemaLocation="../../../../owl/2.0.0/xml/owl.xsd"/>
    <!-- ===== Element Declarations ===== -->
    
    <!-- Data elements -->
@@ -95,6 +97,8 @@
    </xsd:complexType>
    
    <xsd:complexType name="PeriodType">
+      <xsd:complexContent>
+         <xsd:extension base="owl:ThingType">
             <xsd:sequence>
                <xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
                <xsd:element ref="cbc:startDate" minOccurs="0" maxOccurs="1"/>      
@@ -104,6 +108,8 @@
                <xsd:element ref="cbc:durationMeasure" minOccurs="0" maxOccurs="1"/>
             </xsd:sequence>
             <xsd:attributeGroup ref="ThingAttributes"/>
+         </xsd:extension>
+      </xsd:complexContent>
    </xsd:complexType>
 
 </xsd:schema>

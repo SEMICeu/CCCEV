@@ -1,0 +1,16 @@
+<xsd:schema xmlns="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.w3.org/2002/07/owl#" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    
+    <xsd:element name="Thing" type="ThingType"/>
+    
+    <xsd:complexType name="ThingType">
+        <xsd:complexContent>
+            <xsd:restriction base="xsd:anyType"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

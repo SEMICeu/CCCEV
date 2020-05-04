@@ -38,16 +38,12 @@
    <xsd:element name="type" type="TypeType"/>
    <xsd:element name="uri" type="URIType"/>
    <xsd:element name="uuid" type="UUIDType"/>
-   <xsd:element name="versionInfo" type="VersionInfoType"/>
    
    <!-- ===== Entity Type Definitions ===== -->
    
    <xsd:complexType name="AliasType">
-      <xsd:complexContent>
-         <xsd:extension base="owl:Thing"></xsd:extension>
-      </xsd:complexContent>
       <xsd:simpleContent>
-         <xsd:extension base="dt:NameType"/>
+         <xsd:restriction base="dt:NameType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="AmountType">

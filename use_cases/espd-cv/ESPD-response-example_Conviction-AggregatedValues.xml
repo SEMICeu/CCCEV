@@ -19,7 +19,7 @@
         * Notice that Evidences in this example use the 'adms:identifier' object property of the dcat-ap:Dataset class;
         * See also how the creators of evidences have been instantiated;
         
-        * The Qualified Name (QName) of the concepts are (can be) used to
+        * The Qualified Name (qName) of the concepts are (can be) used to
             1) indicate the semantics of the concept via its namespace URI and element local name
             2) determine what data type the concept has in that namespace          
         * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables          
@@ -43,7 +43,7 @@
     xmlns:lcn="http://www.w3.org/ns/locn#"
     xmlns:rov="http://www.w3.org/ns/regorg#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"    
-    xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../toop-cv/toop-cv.xsd">
+    xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../toop-cv/toop-cv.xsd" xmlns:ns1="http://www.w3.org/1999/02/22-rdf-syntax-ns#" ns1:resource="">
     <dct:identifier>identifier0</dct:identifier>
     <dct:type>http://www.oxygenxml.com/</dct:type>
     <dct:issued>2006-05-04T18:13:51.0</dct:issued>
@@ -120,7 +120,7 @@
                 <cccev:concept>
                         <cbc:id>a0322b12-dbb0-4763-8326-b5cd33da0291</cbc:id>
                         <cbc:type>QUESTION_GROUP</cbc:type>
-                        <cbc:QName>espd-voc:conviction</cbc:QName>
+                        <cbc:qName>espd-voc:conviction</cbc:qName>
                     <!-- The absence of a processing instruction ON* implies that the next concept needs to be processed -->
                     <!-- This concept represents a QUESTION addressed to the Economic Operator (EO). If the answer is "true" (Yes) it implies that the EO is in breach of the Law and, therefore all 
                          the questions inside this Concept need to be answered. Thus the constraining processing instruction (pi) ONTRUE -->
@@ -129,46 +129,46 @@
                             <cbc:id>a06350dc-c2f1-42bf-9c8b-3e92af1fb18b</cbc:id>
                             <cbc:description>Your answer?</cbc:description>                        
                             <cbc:type>QUESTION</cbc:type> 
-                            <cbc:QName>espd-voc:yourAnswer</cbc:QName>
+                            <cbc:qName>espd-voc:yourAnswer</cbc:qName>
                             <cccev:constraint>
                                 <!-- This constraint will never be referenced from a value, therefore there's no need 
                                     for the Constraint nor the the Concept cbc:id -->
                                 <cccev:concept>
                                 <cbc:description>Since the answer is affirmative, the group of questions below need to be answered, shown, processed, etc.</cbc:description>
-                                <cbc:QName>espd-pi:ONTRUE</cbc:QName>
+                                <cbc:qName>espd-pi:ONTRUE</cbc:qName>
                                 </cccev:concept>
                             </cccev:constraint>
                             <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>                            
                             <cccev:concept>
                                 <cbc:id>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
                                 <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                                <cbc:QName>espd-voc:convictionDataSequence</cbc:QName>
+                                <cbc:qName>espd-voc:convictionDataSequence</cbc:qName>
                                 <cccev:concept>
                                     <cbc:id>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cbc:id>
                                     <cbc:description>Date of conviction</cbc:description>
                                     <cbc:type>QUESTION</cbc:type>
-                                    <cbc:QName>espd-voc:dateOfConviction</cbc:QName>
+                                    <cbc:qName>espd-voc:dateOfConviction</cbc:qName>
                                     <cccev:value><cccev:dateValue>2020-01-01</cccev:dateValue></cccev:value>                            
                                 </cccev:concept>
                                 <cccev:concept>
                                     <cbc:id>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cbc:id>
                                     <cbc:description>Reason</cbc:description>
                                     <cbc:type>QUESTION</cbc:type>
-                                    <cbc:QName>espd-voc:reason</cbc:QName>
+                                    <cbc:qName>espd-voc:reason</cbc:qName>
                                     <cccev:value><cccev:textValue>Participation in collusion.</cccev:textValue></cccev:value>
                                 </cccev:concept>
                                 <cccev:concept>
                                     <cbc:id>31479ab2-6ff7-467c-80a4-841344222874</cbc:id>
                                     <cbc:description>Who has been convicted?</cbc:description>
                                     <cbc:type>QUESTION</cbc:type>
-                                    <cbc:QName>espd-voc:convicted</cbc:QName>
+                                    <cbc:qName>espd-voc:convicted</cbc:qName>
                                     <cccev:value><cccev:textValue>Smith, John, legal representative</cccev:textValue></cccev:value>
                                 </cccev:concept>
                                 <cccev:concept>
                                     <cbc:id>0b689697-cbc8-4e38-9fa3-1a776e116b00</cbc:id>
                                     <cbc:description>Length of the period of exclusion</cbc:description>
                                     <cbc:type>QUESTION</cbc:type>
-                                    <cbc:QName>espd-voc:convictionPeriod</cbc:QName>                                 
+                                    <cbc:qName>espd-voc:convictionPeriod</cbc:qName>                                
                                     <cccev:value>
                                      <cccev:periodValue> 
                                          <cbc:startDate>2020-01-01</cbc:startDate>
@@ -181,17 +181,17 @@
                                     <cccev:concept>
                                         <cbc:id>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cbc:id>
                                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                                        <cbc:QName>espd-voc:cleansingDataSequence</cbc:QName>
+                                        <cbc:qName>espd-voc:cleansingDataSequence</cbc:qName>
                                         <cccev:concept>
                                             <cbc:id>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cbc:id>
                                             <cbc:description>Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:description>
                                             <cbc:type>QUESTION</cbc:type>
-                                            <cbc:QName>espd-voc:cleansingMeasures</cbc:QName>
+                                            <cbc:qName>espd-voc:cleansingMeasures</cbc:qName>
                                             <cccev:constraint>
                                                 <!-- no need for ids within constraints -->
                                                 <cccev:concept>
                                                 <cbc:description>If the value is "true"(yes) process the following sub-concepts, just below</cbc:description>
-                                                <cbc:QName>espd-pi:ONTRUE</cbc:QName>
+                                                <cbc:qName>espd-pi:ONTRUE</cbc:qName>
                                                 </cccev:concept>
                                             </cccev:constraint>
                                             <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>
@@ -199,7 +199,7 @@
                                                     <cbc:id>8ab9a401-8966-4ae3-8a51-c5a5e0b7191f</cbc:id>
                                                     <cbc:description>Please describe them</cbc:description>
                                                     <cbc:type>QUESTION</cbc:type>
-                                                    <cbc:QName>espd-voc:describe</cbc:QName>
+                                                    <cbc:qName>espd-voc:describe</cbc:qName>
                                                     <cccev:value><cccev:textValue>The conviction was repealead and the Superior Court invalidated the previous non-final conviction. See attached certificate issued by the Superior Court.</cccev:textValue></cccev:value>                                                    
                                             </cccev:concept>                                           
                                         </cccev:concept>    

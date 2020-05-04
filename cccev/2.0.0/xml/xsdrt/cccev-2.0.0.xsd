@@ -24,6 +24,7 @@
 	
 	<!-- Data properties declarations -->
 	<xsd:element name="amountValue" type="cbc:AmountType"/>
+	<xsd:element name="associatedRoleType" type="cbc:CodeType"/>
 	<xsd:element name="bias" type="cbc:NumericType"/>
 	<xsd:element name="codeValue" type="cbc:CodeType"/>
 	<xsd:element name="copyIndicator" type="cbc:IndicatorType"/>
@@ -32,7 +33,7 @@
 	<xsd:element name="constraintOn" type="cbc:IDReferenceType"/>
 	<xsd:element name="representsConcept" type="cbc:IDReferenceType"/>
 	<xsd:element name="customDataType" type="cbc:CodeType"/>
-	<xsd:element name="customFunction" type="cbc:IDType"/>
+	<xsd:element name="customFunction" type="cbc:TextType"/>
 	<xsd:element name="dataSetType" type="cbc:CodeType"/>
 	<xsd:element name="dateValue" type="cbc:DateType"/>
 	<xsd:element name="documentDescription" type="cbc:DescriptionType"/>
@@ -101,7 +102,7 @@
 			<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="1"/>
 			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="cbc:QName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:qName" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"/>			
@@ -138,18 +139,12 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DistributionType">
 				<xsd:sequence>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="cbc:uuid" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="cbc:binaryObject" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="associatedRoleType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="documentURI" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="documentDescription" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="copyIndicator" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="statusCode" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="documentType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="issueDate" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="issueTime" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="languageID" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="localeCode" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="versionID" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="xPath" minOccurs="0" maxOccurs="unbounded"/>		
 					<xsd:element ref="validityPeriod" minOccurs="0"/>			
 				</xsd:sequence>
 				<xsd:attributeGroup ref="cac:ThingAttributes"/>

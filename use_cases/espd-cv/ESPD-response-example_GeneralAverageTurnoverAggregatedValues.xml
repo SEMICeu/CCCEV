@@ -10,7 +10,7 @@
         * All groups and subgroups of questions, as well as the questions themselves have been structured using the class Concept; 
         * The Economic Operator provides no evidences, as the values are taken directly from an official authoritative DataProvider 
         * In this example the value responses have been aggregated inside the Concept(s).
-        * The Qualified Name (QName) of the concepts are (can be) used to
+        * The Qualified Name (qName) of the concepts are (can be) used to
             1) indicate the semantics of the concept via its namespace URI and element local name
             2) determine what data type the concept has in that namespace        
         * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables             
@@ -108,12 +108,12 @@
                 <cccev:concept>
                     <cbc:id>53882893-f4a8-40ae-99dc-cad7b0748790</cbc:id>
                     <cbc:type>REQUIREMENT_GROUP</cbc:type>
-                    <cbc:QName>espd-voc:generalAverageTurnover</cbc:QName>
+                    <cbc:qName>espd-voc:generalAverageTurnover</cbc:qName>
                     <cccev:constraint>
                         <cccev:concept>
                             <cbc:description>Number of fiscal years</cbc:description>
                             <cbc:type>REQUIREMENT</cbc:type>
-                            <cbc:QName>espd-voc:fiscalYearsNumber</cbc:QName>
+                            <cbc:qName>espd-voc:fiscalYearsNumber</cbc:qName>
                             <cccev:value><cccev:numericValue>3</cccev:numericValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
@@ -121,7 +121,7 @@
                         <cccev:concept>
                             <cbc:description>The turnover must be greater or equal than</cbc:description>
                             <cbc:type>REQUIREMENT</cbc:type>
-                            <cbc:QName>espd-voc:turnoverGTE</cbc:QName>
+                            <cbc:qName>espd-voc:turnoverGTE</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="EUR">1200000</cccev:amountValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
@@ -129,26 +129,26 @@
                         <cccev:concept xmlns:bris="ec.europa.eu/ejustice/bris/ontology#">
                             <cbc:description>The identification of the economic operator. This is an input parameter needed by the Data Provider.</cbc:description>
                             <cbc:type>PARAMETER</cbc:type>
-                            <cbc:QName>bris:euuid</cbc:QName>
+                            <cbc:qName>bris:euuid</cbc:qName>
                             <cccev:value><cccev:identifierValue schemeID="VAT-ES" schemeAgencyID="VIES">B20779081</cccev:identifierValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
                     <cccev:concept>
                         <cbc:id>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:averageAmount</cbc:QName>
+                        <cbc:qName>espd-voc:averageAmount</cbc:qName>
                         <cccev:concept>
                             <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
                             <cbc:description>Average for the required amount of years</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="eur">1200001</cccev:amountValue></cccev:value>
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
                             <cbc:description>Additional information</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:text</cbc:QName>
+                            <cbc:qName>espd-voc:text</cbc:qName>
                             <cccev:value><cccev:textValue languageID="eng">We pass!</cccev:textValue></cccev:value>                          
                         </cccev:concept>
                     </cccev:concept>                   

@@ -48,11 +48,11 @@
       level of assurance for identifier schemes on the OJEU (https://ec.europa.eu/cefdigital/wiki/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS),
       which are based on  the definitions provided in Article 8 of the eIDAS Regulation (https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG) -->
    <xsd:attributeGroup name="AssuranceLevelAttributes">
-      <xsd:attribute name="AssuranceLevelCodeListID" type="xsd:normalizedString"/>
-      <xsd:attribute name="AssuranceLevelCodeListVerionID" type="xsd:normalizedString"/>
-      <xsd:attribute name="AssuranceLevelValue" type="xsd:normalizedString"/>
-      <xsd:attribute name="AssuranceLevelAgencyID" type="xsd:normalizedString"/>
-      <xsd:attribute name="AssuranceLevelAgencyName" type="xsd:string"/>
+      <xsd:attribute name="assuranceLevelListID" type="xsd:normalizedString"/>
+      <xsd:attribute name="assuranceLevelListVerionID" type="xsd:normalizedString"/>
+      <xsd:attribute name="assuranceLevelCategory" type="xsd:normalizedString"/>
+      <xsd:attribute name="assuranceLevelAgencyID" type="xsd:normalizedString"/>
+      <xsd:attribute name="assuranceLevelAgencyName" type="xsd:string"/>
    </xsd:attributeGroup>
    <xsd:complexType name="CodeType">
       <xsd:simpleContent>

@@ -24,9 +24,8 @@
    <xsd:element name="endTime" type="EndTimeType"/>
    <xsd:element name="id" type="IDType"/>
    <xsd:element name="indicator" type="IndicatorType"/>
-   <xsd:element name="iri" type="IRIType"/>
    <xsd:element name="name" type="NameType"/>
-   <xsd:element name="QName" type="xsd:QName"/>
+   <xsd:element name="qName" type="xsd:QName"/>
    <xsd:element name="measure" type="MeasureType"/>
    <xsd:element name="numeric" type="NumericType"/>
    <xsd:element name="quantity" type="QuantityType"/>
@@ -44,6 +43,9 @@
    <!-- ===== Entity Type Definitions ===== -->
    
    <xsd:complexType name="AliasType">
+      <xsd:complexContent>
+         <xsd:extension base="owl:Thing"></xsd:extension>
+      </xsd:complexContent>
       <xsd:simpleContent>
          <xsd:extension base="dt:NameType"/>
       </xsd:simpleContent>
@@ -78,11 +80,6 @@
          <xsd:extension base="dt:DateType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="IRIType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:URIType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="TitleType">
       <xsd:simpleContent>
          <xsd:extension base="dt:TextType"/>
@@ -91,11 +88,6 @@
    <xsd:complexType name="TimeType">
       <xsd:simpleContent>
          <xsd:restriction base="dt:TimeType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="VersionInfoType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="MeasureType">

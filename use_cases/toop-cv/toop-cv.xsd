@@ -19,9 +19,9 @@
   <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#"
     schemaLocation="../../cccev/2.0.0/xml/xsdrt/cccev-2.0.0.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
-    schemaLocation="../../common/2.0.0/xml/CV-CommonAggregateComponents.xsd"/>
+    schemaLocation="../../common/2.0.0/xml/xsdrt/CV-CommonAggregateComponents.xsd"/>
   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
-    schemaLocation="../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+    schemaLocation="../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 
   <!--alternative ROOT elements-->
   <xsd:element name="Request" type="TOOPRequestType"/>

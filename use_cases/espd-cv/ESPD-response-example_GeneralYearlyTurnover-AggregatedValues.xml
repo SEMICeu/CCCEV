@@ -12,10 +12,10 @@
         * The Economic Operator provides three evidences, each one pointing to one specific fiscal year turnover;         
         * Notice that Evidences in this example use the adms:identifier object property.
         * See also how the instantiation of creators of evidences.
-        * The Qualified Name (QName) of the concepts are (can be) used to
+        * The Qualified Name (qName) of the concepts are (can be) used to
             1) indicate the semantics of the concept via its namespace URI and element local name
             2) determine what data type the concept has in that namespace
-          In the case of concepts used to group other concepts, the QName could be replaced with the Concept's cbc:type element.
+          In the case of concepts used to group other concepts, the qName could be replaced with the Concept's cbc:type element.
         * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables             
 -->
  
@@ -115,31 +115,31 @@
                 <cccev:concept>
                     <cbc:id>5ca58d66-3ef1-4145-957c-45d5b18a837f</cbc:id>
                     <cbc:type>REQUIREMENT_GROUP</cbc:type>
-                    <cbc:QName>espd-voc:generalYearlyTurnover</cbc:QName>
+                    <cbc:qName>espd-voc:generalYearlyTurnover</cbc:qName>
                     <cccev:constraint>
                         <cccev:concept xmlns:ops="https://matlab.org/operators">
                             <cbc:description>The turnover must be greater or equal than</cbc:description>
                             <cbc:type>REQUIREMENT</cbc:type>
-                            <cbc:QName>ops:gte</cbc:QName>
+                            <cbc:qName>ops:gte</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="EUR">1000000</cccev:amountValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
                     <cccev:concept>
                         <cbc:id>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
                         <cccev:concept>
                             <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="eur">1000001</cccev:amountValue></cccev:value>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>           
+                            <cbc:qName>espd-voc:period</cbc:qName>           
                             <cccev:value>
                                 <cccev:periodValue>
                                     <cbc:startDate>2017-01-01</cbc:startDate>
@@ -151,19 +151,19 @@
                     <cccev:concept>
                         <cbc:id>b93edd61-ceb9-4070-8353-7706ec08c687</cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
                         <cccev:concept>
                             <cbc:id>d5af173f-1603-4120-9f09-89503c51ca1d</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="eur">1000002</cccev:amountValue></cccev:value>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>eca573aa-60eb-4e92-84b8-0fb888db5599</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>           
+                            <cbc:qName>espd-voc:period</cbc:qName>           
                             <cccev:value>
                                 <cccev:periodValue>
                                     <cbc:startDate>2018-01-01</cbc:startDate>
@@ -175,19 +175,19 @@
                     <cccev:concept>
                         <cbc:id>4fa92f3b-fe7a-4451-a5bd-a8ab21a07b2d</cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
                         <cccev:concept>
                             <cbc:id>80c3038b-a46d-43ca-8f71-e50a940ae277</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="eur">1000003</cccev:amountValue></cccev:value>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>fe4b9b96-5cd3-4fbd-94b3-f3d257f36d5a</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>           
+                            <cbc:qName>espd-voc:period</cbc:qName>           
                             <cccev:value>
                                 <cccev:periodValue>
                                     <cbc:startDate>2019-01-01</cbc:startDate>

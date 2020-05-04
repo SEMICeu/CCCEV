@@ -10,10 +10,10 @@
         * All groups and subgroups of questions, as well as the questions themselves have been structured using the class Concept; 
         * Notice that Evidences in this example use the adms:identifier object property.
         * See also how the instantiation of creators of evidences.
-        * The Qualified Name (QName) of the concepts are (can be) used to
+        * The Qualified Name (qName) of the concepts are (can be) used to
             1) indicate the semantics of the concept via its namespace URI and element local name
             2) determine what data type the concept has in that namespace
-          In the case of concepts used to group other concepts, the QName could be replaced with the Concept's cbc:type element.
+          In the case of concepts used to group other concepts, the qName could be replaced with the Concept's cbc:type element.
         * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables             
 -->
  
@@ -36,12 +36,12 @@
     xmlns:rov="http://www.w3.org/ns/regorg#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"    
     xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../toop-cv/toop-cv.xsd">
+    <dct:description>description0</dct:description>
+    <dct:title>title0</dct:title>
     <dct:identifier>identifier0</dct:identifier>
     <dct:type>http://www.oxygenxml.com/</dct:type>
     <dct:issued>2006-05-04T18:13:51.0</dct:issued>
     <dct:modified>2006-05-04T18:13:51.0</dct:modified>
-    <dct:title>title0</dct:title>
-    <dct:description>description0</dct:description>
     <dct:language>http://www.oxygenxml.com/</dct:language>
     <dct:creator/>
     <dct:publisher/>
@@ -73,7 +73,7 @@
         <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
         <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
         <cagv:formalLocation xsi:type="cagv:LocationType">
-            <cagv:address id="f167174e-5190-42f2-b5be-2bf3a8b2d7b5" xsi:type="cac:AddressType">
+            <cagv:address xsi:type="cac:AddressType">
                 <lcn:fullAddress>Viale America n.201 00144 Roma Italy</lcn:fullAddress>
                 <!-- Compulsory use of EU Vocabularies code lists: https://op.europa.eu/en/web/eu-vocabularies/at-concept-scheme/-/resource/authority/language/?target=Browse&uri=http://publications.europa.eu/resource/authority/language -->
                 <cac:streetName languageID="ITA">Viale America</cac:streetName>
@@ -113,90 +113,90 @@
                 <cccev:concept>
                     <cbc:id>5ca58d66-3ef1-4145-957c-45d5b18a837f</cbc:id>
                     <cbc:type>REQUIREMENT_GROUP</cbc:type>
-                    <cbc:QName>espd-voc:generalYearlyTurnover</cbc:QName>
+                    <cbc:qName>espd-voc:generalYearlyTurnover</cbc:qName>
                     <cccev:constraint>
                         <cccev:concept xmlns:ops="https://matlab.org/operators">
                             <cbc:description>The turnover must be greater or equal than</cbc:description>
                             <cbc:type>REQUIREMENT</cbc:type>
-                            <cbc:QName>ops:gte</cbc:QName>
+                            <cbc:qName>ops:gte</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="EUR">1000000</cccev:amountValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
                     <cccev:concept>
                         <cbc:id>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
                         <cccev:concept>
                             <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>                            
+                            <cbc:qName>espd-voc:amount</cbc:qName>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>                            
+                            <cbc:qName>espd-voc:period</cbc:qName>                            
                         </cccev:concept>
                     </cccev:concept>                   
                 </cccev:concept>
                 <cccev:concept>
                     <cbc:id></cbc:id>
                     <cbc:type>REQUIREMENT_GROUP</cbc:type>
-                    <cbc:QName>espd-voc:generalYearlyTurnover</cbc:QName>
+                    <cbc:qName>espd-voc:generalYearlyTurnover</cbc:qName>
                     <cccev:constraint>
                         <cccev:concept xmlns:ops="https://matlab.org/operators">
                             <cbc:description>The turnover must be greater or equal than</cbc:description>
                             <cbc:type>REQUIREMENT</cbc:type>
-                            <cbc:QName>ops:gte</cbc:QName>
+                            <cbc:qName>ops:gte</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="EUR">1000000</cccev:amountValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
                     <cccev:concept>
                         <cbc:id></cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
                         <cccev:concept>
                             <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>                            
+                            <cbc:qName>espd-voc:amount</cbc:qName>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>                            
+                            <cbc:qName>espd-voc:period</cbc:qName>                            
                         </cccev:concept>
                     </cccev:concept>                   
                 </cccev:concept>
                 <cccev:concept>
                     <cbc:id></cbc:id>
                     <cbc:type>REQUIREMENT_GROUP</cbc:type>
-                    <cbc:QName>espd-voc:generalYearlyTurnover</cbc:QName>
+                    <cbc:qName>espd-voc:generalYearlyTurnover</cbc:qName>
                     <cccev:constraint>
                         <cccev:concept xmlns:ops="https://matlab.org/operators">
                             <cbc:description>The turnover must be greater or equal than</cbc:description>
                             <cbc:type>REQUIREMENT</cbc:type>
-                            <cbc:QName>ops:gte</cbc:QName>
+                            <cbc:qName>ops:gte</cbc:qName>
                             <cccev:value><cccev:amountValue currencyID="EUR">1000000</cccev:amountValue></cccev:value>
                         </cccev:concept>
                     </cccev:constraint>
                     <cccev:concept>
                         <cbc:id></cbc:id>
                         <cbc:type>QUESTION_SUBGROUP</cbc:type>
-                        <cbc:QName>espd-voc:amountAndPeriod</cbc:QName>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
                         <cccev:concept>
                             <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
                             <cbc:description>Amount</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:amount</cbc:QName>                            
+                            <cbc:qName>espd-voc:amount</cbc:qName>                            
                         </cccev:concept>
                         <cccev:concept>
                             <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
                             <cbc:description>Start-date and end-date</cbc:description>
                             <cbc:type>QUESTION</cbc:type>
-                            <cbc:QName>espd-voc:period</cbc:QName>                            
+                            <cbc:qName>espd-voc:period</cbc:qName>                            
                         </cccev:concept>
                     </cccev:concept>                   
                 </cccev:concept>
@@ -211,9 +211,9 @@
                 <!-- Combination of types of evidences as specified in e-Certis. The EO may provide XBRL compatible annual accounts provided through BRIS (European Business Registers Interconnection System -->
                 <cccev:evidenceTypeCombinationList>
                     <cccev:evidenceType>
-                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">ANNUAL_ACCOUNTS_XBRL</skos:notation></adms:identifier>
-                        <dct:title>XBRL Annual Account</dct:title>
                         <dct:description>Annual accounts provided through BRIS as an XBRL report</dct:description>
+                        <dct:title>XBRL Annual Account</dct:title>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">ANNUAL_ACCOUNTS_XBRL</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Annual accounts provided through BRIS as an XBRL report</foaf:topic>
                             <foaf:primaryTopic>XBRL Annual Account</foaf:primaryTopic>
@@ -292,9 +292,9 @@
     </EvidenceResponse>        
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
+        <dct:description>ACME's Ltd. Annual Accounts 2017</dct:description> 
         <dct:title>Annual Accounts 2017</dct:title>
-        <dct:description>ACME's Ltd. Annual Accounts 2017</dct:description>    
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
         <dct:creator xsi:type="cagv:PublicOrganizationType">
                <cagv:formalName languageID="esp">Registro Mercantil Central Español</cagv:formalName>               
                <cagv:formalName languageID="eng">Central Spanish Business Register</cagv:formalName>
@@ -312,9 +312,9 @@
     </Evidence>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
+        <dct:description>ACME's Ltd. Annual Accounts 2018</dct:description>  
         <dct:title>Annual Accounts 2018</dct:title>
-        <dct:description>ACME's Ltd. Annual Accounts 2018</dct:description>    
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
         <dct:creator xsi:type="cagv:PublicOrganizationType">
                <cagv:formalName languageID="esp">Registro Mercantil Central Español</cagv:formalName>               
                <cagv:formalName languageID="eng">Central Spanish Business Register</cagv:formalName>
@@ -330,14 +330,15 @@
     </Evidence>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
+        <dct:description>ACME's Ltd. Annual Accounts 2019</dct:description>
         <dct:title>Annual Accounts 2019</dct:title>
-        <dct:description>ACME's Ltd. Annual Accounts 2019</dct:description>    
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
         <dct:creator xsi:type="cagv:PublicOrganizationType">
                <cagv:formalName languageID="esp">Registro Oficial de Licitadores y Empresas Clasificadas (ROLECE)</cagv:formalName>               
                <cagv:formalName languageID="eng">Central Register of Tenderers and Prequalified Businesses</cagv:formalName>
         </dct:creator>
         <dcat-ap:distribution>
+            <dcat-ap:accessURL></dcat-ap:accessURL>
             <foaf:page><foaf:primaryTopic>Annual Accounts 2019</foaf:primaryTopic></foaf:page>
             <dcat-ap:accessService>
                 <dct:identifier>ROLECE-CERTIFICATES</dct:identifier>

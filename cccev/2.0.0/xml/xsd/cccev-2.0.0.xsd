@@ -26,6 +26,7 @@
 
 	<!-- Data properties declarations -->
 	<xsd:element name="amountValue" type="cbc:AmountType"/>
+	<xsd:element name="associatedRoleType" type="cbc:CodeType"/>
 	<xsd:element name="bias" type="cbc:NumericType"/>
 	<xsd:element name="codeValue" type="cbc:CodeType"/>
 	<xsd:element name="copyIndicator" type="cbc:IndicatorType"/>
@@ -34,7 +35,7 @@
 	<xsd:element name="constraintOn" type="cbc:IDReferenceType"/>
 	<xsd:element name="representsConcept" type="cbc:IDReferenceType"/>
 	<xsd:element name="customDataType" type="cbc:CodeType"/>
-	<xsd:element name="customFunction" type="cbc:IDType"/>
+	<xsd:element name="customFunction" type="cbc:TextType"/>
 	<xsd:element name="dataSetType" type="cbc:CodeType"/>
 	<xsd:element name="dateValue" type="cbc:DateType"/>
 	<xsd:element name="documentDescription" type="cbc:DescriptionType"/>
@@ -185,20 +186,24 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element ref="cbc:QName" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="cbc:qName" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">
 						<an:DataProperty>
 							<ccts:ComponentType>Data property</ccts:ComponentType>
 							<ccts:DictionaryEntryName>Concept. QName</ccts:DictionaryEntryName>
 							<ccts:Definition>
-								<DefinitionSource/>
+								Standing for ‘qualified name’. Mechanism used to identify concisely and unambiguously an entity, i.e. a class or a property.
+								
+								Additional information:
+								Qualified names are pairs of {namespace URI, entity local name} where the namespace URI is usually replaced by a ‘prefix’, as in cccev:Criterion, xsd:int, or dcat:Dataset.
+								<DefinitionSource>Based on the W3C definition of QNames for XML: https://www.w3.org/2001/tag/doc/qnameids.html#sec-qnames-other</DefinitionSource>
 							</ccts:Definition>
 							<ccts:Cardinality>0..*</ccts:Cardinality>
 							<ccts:ObjectClass>Concept</ccts:ObjectClass>
 							<ccts:PropertyTerm>anySimpleType</ccts:PropertyTerm>
 							<ccts:RepresentationTerm>anySimpleType</ccts:RepresentationTerm>
-							<ccts:DataType>QName. Type</ccts:DataType>
+							<ccts:DataType>qName. Type</ccts:DataType>
 						</an:DataProperty>
 					</xsd:documentation>
 				</xsd:annotation>
@@ -396,15 +401,32 @@
 					<an:Class>
 						<ccts:ComponentType>Class</ccts:ComponentType>
 						<ccts:DictionaryEntryName>DocumentReference. Details</ccts:DictionaryEntryName>
-						<ccts:Definition> </ccts:Definition>
-						<DefinitionSource/>
+						<ccts:Definition>A reference to a concrete manifestation of a document, or the content of the document itself.</ccts:Definition>
 						<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
 					</an:Class>
 				</xsd:documentation>
 			</xsd:annotation>
 			<xsd:extension base="dcat-ap:DistributionType">
 				<xsd:sequence>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="1">
+					<xsd:element ref="cbc:binaryObject" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>DocumentReference. binary Object</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource/>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
+									<ccts:PropertyTerm></ccts:PropertyTerm>
+									<ccts:RepresentationTerm>BinaryObject</ccts:RepresentationTerm>
+									<ccts:DataType>BinaryObject. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<an:DataProperty>
@@ -413,7 +435,7 @@
 									<ccts:Definition>
 										<DefinitionSource/>
 									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
 									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
 									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
 									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
@@ -422,20 +444,20 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="cbc:uuid" minOccurs="0" maxOccurs="1">
+					<xsd:element ref="associatedRoleType" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<an:DataProperty>
 									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. uuid</ccts:DictionaryEntryName>
+									<ccts:DictionaryEntryName>DocumentReference. associated role type</ccts:DictionaryEntryName>
 									<ccts:Definition>
 										<DefinitionSource/>
 									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
 									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-									<ccts:DataType>ID. Type</ccts:DataType>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
 								</an:DataProperty>
 							</xsd:documentation>
 						</xsd:annotation>
@@ -458,20 +480,20 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="documentDescription" minOccurs="0" maxOccurs="unbounded">
+					<xsd:element ref="copyIndicator" minOccurs="0" maxOccurs="1">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<an:DataProperty>
 									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. document Description</ccts:DictionaryEntryName>
+									<ccts:DictionaryEntryName>DocumentReference. copy Indicator</ccts:DictionaryEntryName>
 									<ccts:Definition>
 										<DefinitionSource/>
 									</ccts:Definition>
-									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
 									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>text</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>text</ccts:RepresentationTerm>
-									<ccts:DataType>Description. Type</ccts:DataType>
+									<ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
+									<ccts:DataType>Indicator. Type</ccts:DataType>
 								</an:DataProperty>
 							</xsd:documentation>
 						</xsd:annotation>
@@ -490,132 +512,6 @@
 									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
 									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
 									<ccts:DataType>Code. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="documentType" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. document URI</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-									<ccts:DataType>Text. Type</ccts:DataType> <!--or Name Type-->
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="issueDate" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. issue Date</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Date</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
-									<ccts:DataType>Date. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="issueTime" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. issue Time</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Time</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
-									<ccts:DataType>Time. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="languageID" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. language ID</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-									<ccts:DataType>ID. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="localeCode" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. locale Code</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-									<ccts:DataType>Code. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="versionID" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. version ID</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-									<ccts:DataType>ID. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="xPath" minOccurs="0" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>DocumentReference. xPath</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..*</ccts:Cardinality>
-									<ccts:ObjectClass>DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-									<ccts:DataType>Text. Type</ccts:DataType>
 								</an:DataProperty>
 							</xsd:documentation>
 						</xsd:annotation>
@@ -1053,7 +949,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"> <!--references-->
+			<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"> <!--isAbout-->
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">
 						<ObjectProperty>
@@ -1063,7 +959,7 @@
 							<ccts:ObjectClass>Requirement</ccts:ObjectClass>
 							<Domain>Requirement</Domain>
 							<Range>Concept</Range>
-							<Predicate>referencesConcept</Predicate>
+							<Predicate>isAbout</Predicate>
 						</ObjectProperty>
 					</xsd:documentation>
 				</xsd:annotation>

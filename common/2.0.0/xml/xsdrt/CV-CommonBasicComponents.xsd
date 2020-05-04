@@ -26,7 +26,7 @@
    <xsd:element name="indicator" type="IndicatorType"/>
    <xsd:element name="iri" type="IRIType"/>
    <xsd:element name="name" type="NameType"/>
-   <xsd:element name="QName" type="xsd:QName"/>
+   <xsd:element name="qName" type="xsd:QName"/>
    <xsd:element name="measure" type="MeasureType"/>
    <xsd:element name="numeric" type="NumericType"/>
    <xsd:element name="quantity" type="QuantityType"/>

@@ -44,15 +44,15 @@
     xmlns:rov="http://www.w3.org/ns/regorg#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"    
     xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../toop-cv/toop-cv.xsd" xmlns:ns1="http://www.w3.org/1999/02/22-rdf-syntax-ns#" ns1:resource="">
-    <dct:identifier>identifier0</dct:identifier>
-    <dct:type>http://www.oxygenxml.com/</dct:type>
-    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
-    <dct:modified>2006-05-04T18:13:51.0</dct:modified>
-    <dct:title>title0</dct:title>
     <dct:description>description0</dct:description>
-    <dct:language>http://www.oxygenxml.com/</dct:language>
+    <dct:title>title0</dct:title>
     <dct:creator/>
+    <dct:identifier>identifier0</dct:identifier>
+    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+    <dct:language>http://www.oxygenxml.com/</dct:language>
+    <dct:modified>2006-05-04T18:13:51.0</dct:modified>
     <dct:publisher/>
+    <dct:type>http://www.oxygenxml.com/</dct:type>
     <RoutingInformation>
         <DocumentType AssuranceLevelCodeListID="AssuranceLevelCodeListID3" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID3" AssuranceLevelValue="AssuranceLevelValue3" AssuranceLevelAgencyID="AssuranceLevelAgencyID3" AssuranceLevelAgencyName="AssuranceLevelAgencyName3" schemeID="schemeID1" schemeName="schemeName1" schemeAgencyID="schemeAgencyID1" schemeAgencyName="schemeAgencyName1" schemeVersionID="schemeVersionID1" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DocumentType0</DocumentType>
         <Process AssuranceLevelCodeListID="AssuranceLevelCodeListID5" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID5" AssuranceLevelValue="AssuranceLevelValue5" AssuranceLevelAgencyID="AssuranceLevelAgencyID5" AssuranceLevelAgencyName="AssuranceLevelAgencyName5" schemeID="schemeID3" schemeName="schemeName3" schemeAgencyID="schemeAgencyID3" schemeAgencyName="schemeAgencyName3" schemeVersionID="schemeVersionID3" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Process0</Process>
@@ -81,9 +81,10 @@
         <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
         <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
         <cagv:formalLocation xsi:type="cagv:LocationType">
-            <cagv:address id="f167174e-5190-42f2-b5be-2bf3a8b2d7b5" xsi:type="cac:AddressType">
+            <cagv:address xsi:type="cac:AddressType">
                 <lcn:fullAddress>Viale America n.201 00144 Roma Italy</lcn:fullAddress>
                 <!-- Compulsory use of EU Vocabularies code lists: https://op.europa.eu/en/web/eu-vocabularies/at-concept-scheme/-/resource/authority/language/?target=Browse&uri=http://publications.europa.eu/resource/authority/language -->
+                <cbc:id>f167174e-5190-42f2-b5be-2bf3a8b2d7b5</cbc:id>
                 <cac:streetName languageID="ITA">Viale America</cac:streetName>
                 <cac:buildingNumber>201</cac:buildingNumber>
                 <cac:cityName languageID="it">Roma</cac:cityName>
@@ -208,8 +209,8 @@
                         </cccev:concept>
                 </cccev:concept>
                 <cccev:derivedFrom>
-                    <dct:title>Article 57 of Directive 2014/24/EU</dct:title>
                     <dct:description>Exclusion Grounds</dct:description>
+                    <dct:title>Article 57 of Directive 2014/24/EU</dct:title>
                     <dct:language>http://publications.europa.eu/resource/authority/language#ENG</dct:language>
 
                     <!-- COMPATIBILITY WITH E-CERTIS
@@ -222,21 +223,21 @@
                     <dcat-ap:qualifiedRelation xsi:type="dcat-ap:RelationshipType">
                             <dct:relation>
                                 <dcat-ap:Dataset>
-                                    <dct:type>ARTICLE</dct:type>
-                                    <dct:title>Article 57</dct:title>
                                     <dct:description>Exclusion grounds</dct:description>
+                                    <dct:title>Article 57</dct:title>
+                                    <dct:type>ARTICLE</dct:type>
                                     <dcat-ap:qualifiedRelation>
                                         <dct:relation>
                                             <dcat-ap:Dataset>
-                                                <dct:type>RESOURCE</dct:type>
-                                                <dct:title>Directive 2014/24/EU</dct:title>
                                                 <dct:description>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC</dct:description>
+                                                <dct:title>Directive 2014/24/EU</dct:title>
+                                                <dct:type>RESOURCE</dct:type>
                                                 <dcat-ap:qualifiedRelation>
                                                     <dct:relation>
                                                         <dcat-ap:Dataset>
-                                                            <dct:type>COVERAGE_AREA</dct:type>
-                                                            <dct:title>EU</dct:title>
                                                             <dct:description>European Jurisdiction</dct:description>
+                                                            <dct:title>EU</dct:title>
+                                                            <dct:type>COVERAGE_AREA</dct:type>
                                                         </dcat-ap:Dataset>
                                                     </dct:relation>
                                                     <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</dcat-ap:hadRole>
@@ -256,49 +257,52 @@
     </EvidenceResponse>
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier>
+        <dct:description>ACME's Ltd. representative John Smith was convicted accused of 'Collusion'.</dct:description>
         <dct:title>John Smith 2020-01-01 Conviction</dct:title>
-        <dct:description>ACME's Ltd. representative John Smith was convicted accused of 'Collusion'.</dct:description>    
-        <dct:creator xsi:type="cagv:PublicOrganizationType">
-               <cagv:defaultContactPoint>
-                    <cagv:email>info-magistratura@datos.gov.es</cagv:email>
-                    <cagv:telephone>+34917231232</cagv:telephone>                    
-               </cagv:defaultContactPoint>
-               <cagv:formalName languageID="esp">Magistratura Superior Española</cagv:formalName>               
-        </dct:creator>
         <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+            <dcat-ap:accessURL>https://acme.com/docs/2020101-JS-Collusion.hmtl</dcat-ap:accessURL>
             <foaf:page>
                 <foaf:topic>John Smith's conviction</foaf:topic>
             </foaf:page>
-            <dcat-ap:accessURL>https://acme.com/docs/2020101-JS-Collusion.hmtl</dcat-ap:accessURL>
             <dcat-ap:downloadURL>https://acme.com/docs/2020101-JS-Collusion.pdf</dcat-ap:downloadURL>
-        </dcat-ap:distribution>    
+        </dcat-ap:distribution>
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier> 
+        <dct:creator xsi:type="cagv:PublicOrganizationType">
+            <cagv:defaultContactPoint>
+                <cagv:email>info-magistratura@datos.gov.es</cagv:email>
+                <cagv:telephone>+34917231232</cagv:telephone>                    
+            </cagv:defaultContactPoint>
+            <cagv:formalName languageID="esp">Magistratura Superior Española</cagv:formalName>               
+        </dct:creator>
         <!-- The evidence supportsRequirement everything stated in the Information Requirement id = 005eb9ed-1347-4ca3-bb29-9bc0db64e1ab, except for the Cleansing which has its own evidence. -->
         <cccev:supportsRequirement>005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cccev:supportsRequirement>
     </Evidence>
     <Evidence>
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>
-        <dct:title>Cleansing-Certificate</dct:title>
         <dct:description>Please access the Superior Court page and use the document id '20200101-JS-Collusion"</dct:description>
-        <dcat-ap:landingPage>
-                <foaf:topic>Superior Court Convictions</foaf:topic>
-                <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>
-        </dcat-ap:landingPage>                                                       
+        <dct:title>Cleansing-Certificate</dct:title>
+        <dcat-ap:distribution>
+            <dcat-ap:accessURL>https://datos.gov.es/magistratura/sentencias/contratatacionpublica</dcat-ap:accessURL>
+        </dcat-ap:distribution>
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>      
         <dct:creator xsi:type="cagv:PersonType">
             <cagv:defaultContactPoint><cagv:email>johnsmith@acme.com</cagv:email></cagv:defaultContactPoint>
             <cagv:givenName>John</cagv:givenName>
             <cagv:familyName>Smith</cagv:familyName>                
         </dct:creator>
-        <dcat-ap:distribution><dcat-ap:accessURL>https://datos.gov.es/magistratura/sentencias/contratatacionpublica</dcat-ap:accessURL></dcat-ap:distribution>
+        <dcat-ap:landingPage>
+                <foaf:topic>Superior Court Convictions</foaf:topic>
+                <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>
+        </dcat-ap:landingPage>    
         <!-- This evidence supportsRequirement the concept id = 5f9f09f7-f701-432c-9fdc-c22c124a74c9 (Cleansing) --> 
         <cccev:supportsRequirement>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:supportsRequirement>           
     </Evidence>
     <!-- Additional documents, that SHOULD not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
           John Smith was absolved. -->    
     <AdditionalDocumentReference>
+        <dcat-ap:accessURL>http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</dcat-ap:accessURL>
         <dct:title>John Smith's Declaration of Oath</dct:title>
-        <dct:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</dct:description>        
+        <dct:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</dct:description>
         <dcat-ap:downloadURL>http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</dcat-ap:downloadURL>
     </AdditionalDocumentReference>
 </Response>

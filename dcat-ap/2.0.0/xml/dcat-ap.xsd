@@ -215,7 +215,7 @@
 			<xsd:element ref="accessURL"/>
 			<!--Optional elements-->
 			<xsd:element ref="adms:status" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="foaf:page" minOccurs="0"/>
+			<xsd:element ref="foaf:page" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:issued" minOccurs="0"/>
 			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>

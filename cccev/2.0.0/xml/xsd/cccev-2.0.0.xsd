@@ -73,19 +73,20 @@
 
 	<!-- Object properties -->
 
-	<xsd:element name="derivedFrom" type="ReferenceFrameworkType"/>	
+	<xsd:element name="about" type="ConceptType"/>
 	<xsd:element name="concept" type="ConceptType"/>
-	<xsd:element name="evidence" type="EvidenceType"/>	
-	<xsd:element name="specifies" type="EvidenceTypeType"/>
-	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
 	<xsd:element name="constraint" type="ConstraintType"/>
-	<xsd:element name="providedBy" type="cbc:IDReferenceType"/>
+	<xsd:element name="derivedFrom" type="ReferenceFrameworkType"/>	
+	<xsd:element name="evidence" type="EvidenceType"/>
+	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
+	<xsd:element name="periodValue" type="cac:PeriodType"/>
+	<xsd:element name="providedBy" type="cbc:IDReferenceType"/>	
 	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="requirement" type="RequirementType"/>
-	<xsd:element name="value" type="ValueType"/>
-	<xsd:element name="periodValue" type="cac:PeriodType"/>
-	<xsd:element name="validityPeriod" type="cac:PeriodType"/>
+	<xsd:element name="specifies" type="EvidenceTypeType"/>
 	<xsd:element name="specifiedIn" type="ConceptType"/>
+	<xsd:element name="value" type="ValueType"/>
+	<xsd:element name="validityPeriod" type="cac:PeriodType"/>
 
 	<!-- Class declarations -->
 	
@@ -115,7 +116,7 @@
 								Additional information:
 								A concept defined in the context of a Requirement must be unambiguous so there is no possibility of misinterpretation. Hence the use of qualified names (a pair {namespace, local name} is strongly recommended for the identification of the entity being referred to.
 							</ccts:Definition>
-							<ccts:ObjectClass>cccev: Concept</ccts:ObjectClass>
+							<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
 							<PrimitiveClass>owl:ThingType</PrimitiveClass>
 						</an:Class>
 					</xsd:documentation>
@@ -1010,7 +1011,7 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"> <!--isAbout-->
+					<xsd:element ref="about" minOccurs="0" maxOccurs="unbounded"> <!--isAbout-->
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<ObjectProperty>

@@ -225,15 +225,23 @@
                                                             <dct:type>COVERAGE_AREA</dct:type>
                                                         </dcat-ap:Dataset>
                                                     </dct:relation>
-                                                    <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</dcat-ap:hadRole>
+                                                    <dcat-ap:hadRole>
+                                                        <skos:Definition>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</skos:Definition>
+                                                    </dcat-ap:hadRole>
                                                 </dcat-ap:qualifiedRelation>
                                             </dcat-ap:Dataset>                                                                                        
                                         </dct:relation>
-                                        <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/resource#DIRECTIVE</dcat-ap:hadRole>                                        
+                                        <dcat-ap:hadRole>
+                                            <skos:Definition>https://data.europa.eu/euodp/en/data/dataset/ecertis/resource#DIRECTIVE</skos:Definition>
+                                        </dcat-ap:hadRole>                                        
                                     </dcat-ap:qualifiedRelation>
                                 </dcat-ap:Dataset>
                             </dct:relation>
-                            <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE</dcat-ap:hadRole>
+                            <dcat-ap:hadRole>
+                                <skos:Definition>
+                                    https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE
+                                </skos:Definition>
+                            </dcat-ap:hadRole>
                     </dcat-ap:qualifiedRelation>                    
                     <cbc:id AssuranceLevelAgencyID="High">36c9d351-c908-4e81-9022-f2d52db7ffb4</cbc:id>
                 </cccev:derivedFrom>  
@@ -255,9 +263,11 @@
                         <dct:title>High Magistrature Convictions</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.pdf</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format>
                         </dcat-ap:distribution>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.html</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_1</skos:notation></adms:identifier>
@@ -272,9 +282,11 @@
                         <dct:title>High Magistrature Convictions</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.pdf</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format>
                         </dcat-ap:distribution>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.html</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
@@ -291,9 +303,11 @@
                         <dct:title>National PQS certificate</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://nationalqualification.gov/docs/2020101-qualification-certificate.pdf</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format>
                         </dcat-ap:distribution>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://nationalqualification.gov/docs/2020101-qualification-certificate.hmtl</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_3</skos:notation></adms:identifier>
@@ -307,7 +321,10 @@
                         <dct:description>Electronic Certificates issued by a National or a European Superior Court.</dct:description>
                         <dct:title>High Magistrature Convictions</dct:title>
                         <!--  Preferred MIME types -->
-                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#XML</dct:format></dcat-ap:distribution>
+                        <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.xml</dcat-ap:accessURL>
+                            <dct:format>http://publications.europa.eu/resource/authority/file-type#XML</dct:format>
+                        </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
@@ -402,6 +419,7 @@
     <!-- Additional Reference to other documents, that may not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
           John Smith was absolved. -->    
     <AdditionalDocumentReference>
+        <dcat-ap:accessURL>http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</dcat-ap:accessURL>
         <dct:title>John Smith's Declaration of Oath</dct:title>
         <dct:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</dct:description>        
         <dcat-ap:downloadURL>http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</dcat-ap:downloadURL>

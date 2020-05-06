@@ -20,9 +20,11 @@
 
     <!-- Element definition -->
     <xsd:complexType name="ConceptType">
-        <xsd:sequence>
-            <xsd:element ref="Definition" minOccurs="0" maxOccurs="unbounded"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="xsd:anyType">
+                <xsd:sequence/>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     
     <xsd:complexType name="ConceptSchemeType">

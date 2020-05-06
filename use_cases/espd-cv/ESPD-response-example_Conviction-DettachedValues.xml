@@ -255,9 +255,11 @@
                         <dct:title>High Magistrature Convictions</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.pdf</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format>
                         </dcat-ap:distribution>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.html</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_1</skos:notation></adms:identifier>
@@ -272,9 +274,11 @@
                         <dct:title>High Magistrature Convictions</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.pdf</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format>
                         </dcat-ap:distribution>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.html</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
@@ -291,9 +295,11 @@
                         <dct:title>National PQS certificate</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://nationalqualification.gov/docs/2020101-qualification-certificate.pdf</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#PDF</dct:format>
                         </dcat-ap:distribution>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://nationalqualification.gov/docs/2020101-qualification-certificate.hmtl</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_3</skos:notation></adms:identifier>
@@ -307,7 +313,10 @@
                         <dct:description>Electronic Certificates issued by a National or a European Superior Court.</dct:description>
                         <dct:title>High Magistrature Convictions</dct:title>
                         <!--  Preferred MIME types -->
-                        <dcat-ap:distribution><dct:format>http://publications.europa.eu/resource/authority/file-type#XML</dct:format></dcat-ap:distribution>
+                        <dcat-ap:distribution>
+                            <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.xml</dcat-ap:accessURL>
+                            <dct:format>http://publications.europa.eu/resource/authority/file-type#XML</dct:format>
+                        </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
@@ -320,45 +329,45 @@
         </Requirement>     
         <!-- RESPONSES DETTACHED FROM INSIDE THE CONCEPTS FOLLOW -->
         <Value>
-             <cccev:valueOf>a0322b12-dbb0-4763-8326-b5cd33da0291</cccev:valueOf>
-              <cccev:value>
+            <cccev:valueOf>a0322b12-dbb0-4763-8326-b5cd33da0291</cccev:valueOf>
+            <cccev:value>
                 <cccev:indicatorValue>true</cccev:indicatorValue>
                 <cccev:valueOf>a06350dc-c2f1-42bf-9c8b-3e92af1fb18b</cccev:valueOf>
-              </cccev:value>  
-              <cccev:value>
-                  <cccev:valueOf>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cccev:valueOf>                
-                  <cccev:value>
-                          <cccev:dateValue>2020-01-01</cccev:dateValue>
-                          <cccev:valueOf>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cccev:valueOf>
-                  </cccev:value>
-                  <cccev:value>
-                          <cccev:textValue>Participation in collusion.</cccev:textValue>
-                          <cccev:valueOf>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cccev:valueOf>
-                   </cccev:value>
-                   <cccev:value>
-                          <cccev:textValue>Smith, John, legal representative</cccev:textValue>
-                          <cccev:valueOf>31479ab2-6ff7-467c-80a4-841344222874</cccev:valueOf></cccev:value>
-                   <cccev:value>
-                          <cccev:periodValue> 
-                              <cbc:startDate>2020-01-01</cbc:startDate>
-                              <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
-                          </cccev:periodValue>
-                          <cccev:valueOf>0b689697-cbc8-4e38-9fa3-1a776e116b00</cccev:valueOf>
-                     </cccev:value>
-                     <!-- Cleansing measures -->        
-                     <cccev:value>
-                          <cccev:valueOf>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:valueOf>
-                          <cccev:value>
-                              <cccev:indicatorValue>true</cccev:indicatorValue>
-                              <cccev:valueOf>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cccev:valueOf>
-                              <cccev:value>
-                                  <cccev:textValue>The conviction was repealead and the Superior Court invalidated the previous non-final conviction. See attached certificate issued by the Superior Court.</cccev:textValue>
-                                  <cccev:valueOf>8ab9a401-8966-4ae3-8a51-c5a5e0b7191f</cccev:valueOf>
-                              </cccev:value>
-                          </cccev:value>
-                     </cccev:value>
-              </cccev:value>                        
-          </Value>
+            </cccev:value>  
+            <cccev:value>
+                <cccev:valueOf>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cccev:valueOf>                
+                <cccev:value>
+                    <cccev:dateValue>2020-01-01</cccev:dateValue>
+                    <cccev:valueOf>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cccev:valueOf>
+                </cccev:value>
+                <cccev:value>
+                    <cccev:textValue>Participation in collusion.</cccev:textValue>
+                    <cccev:valueOf>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cccev:valueOf>
+                </cccev:value>
+                <cccev:value>
+                    <cccev:textValue>Smith, John, legal representative</cccev:textValue>
+                    <cccev:valueOf>31479ab2-6ff7-467c-80a4-841344222874</cccev:valueOf></cccev:value>
+                <cccev:value>
+                    <cccev:periodValue> 
+                        <cbc:startDate>2020-01-01</cbc:startDate>
+                        <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
+                    </cccev:periodValue>
+                    <cccev:valueOf>0b689697-cbc8-4e38-9fa3-1a776e116b00</cccev:valueOf>
+                </cccev:value>
+                <!-- Cleansing measures -->        
+                <cccev:value>
+                    <cccev:valueOf>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:valueOf>
+                    <cccev:value>
+                        <cccev:indicatorValue>true</cccev:indicatorValue>
+                        <cccev:valueOf>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cccev:valueOf>
+                        <cccev:value>
+                            <cccev:textValue>The conviction was repealead and the Superior Court invalidated the previous non-final conviction. See attached certificate issued by the Superior Court.</cccev:textValue>
+                            <cccev:valueOf>8ab9a401-8966-4ae3-8a51-c5a5e0b7191f</cccev:valueOf>
+                        </cccev:value>
+                    </cccev:value>
+                </cccev:value>
+            </cccev:value>                        
+        </Value>
     </EvidenceResponse>
     <Evidence>
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
@@ -392,8 +401,8 @@
         </dcat-ap:distribution>
         <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>
         <dcat-ap:landingPage>
-                <foaf:topic>Superior Court Convictions</foaf:topic>
-                <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>
+            <foaf:topic>Superior Court Convictions</foaf:topic>
+            <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>
         </dcat-ap:landingPage>
         <cccev:conformsTo>EVIDENCE_TYPE_2</cccev:conformsTo>            
         <!-- This evidence supportsRequirement the concept id = 5f9f09f7-f701-432c-9fdc-c22c124a74c9 (Cleansing) --> 
@@ -402,6 +411,7 @@
     <!-- Additional Reference to other documents, that may not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
           John Smith was absolved. -->    
     <AdditionalDocumentReference>
+        <dcat-ap:accessURL>http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</dcat-ap:accessURL>
         <dct:title>John Smith's Declaration of Oath</dct:title>
         <dct:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</dct:description>        
         <dcat-ap:downloadURL>http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</dcat-ap:downloadURL>

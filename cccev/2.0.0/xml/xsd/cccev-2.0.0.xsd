@@ -73,7 +73,6 @@
 
 	<!-- Object properties -->
 
-	<xsd:element name="about" type="ConceptType"/>
 	<xsd:element name="concept" type="ConceptType"/>
 	<xsd:element name="constraint" type="ConstraintType"/>
 	<xsd:element name="derivedFrom" type="ReferenceFrameworkType"/>	
@@ -1011,7 +1010,7 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="about" minOccurs="0" maxOccurs="unbounded"> <!--isAbout-->
+					<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"> <!--isAbout-->
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<ObjectProperty>

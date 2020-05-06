@@ -240,21 +240,15 @@
                                                             <dct:type>COVERAGE_AREA</dct:type>
                                                         </dcat-ap:Dataset>
                                                     </dct:relation>
-                                                    <dcat-ap:hadRole>
-                                                        <skos:Definition>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</skos:Definition>
-                                                    </dcat-ap:hadRole>
+                                                    <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</dcat-ap:hadRole>
                                                 </dcat-ap:qualifiedRelation>
                                             </dcat-ap:Dataset>                                                                                        
                                         </dct:relation>
-                                        <dcat-ap:hadRole>
-                                            <skos:Definition>https://data.europa.eu/euodp/en/data/dataset/ecertis/resource#DIRECTIVE</skos:Definition>
-                                        </dcat-ap:hadRole>                                    
+                                        <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/resource#DIRECTIVE</dcat-ap:hadRole>                                        
                                     </dcat-ap:qualifiedRelation>
                                 </dcat-ap:Dataset>
                             </dct:relation>
-                        <dcat-ap:hadRole>
-                            <skos:Definition>https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE</skos:Definition>
-                        </dcat-ap:hadRole>
+                            <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE</dcat-ap:hadRole>
                     </dcat-ap:qualifiedRelation>                    
                     <cbc:id AssuranceLevelAgencyID="High">36c9d351-c908-4e81-9022-f2d52db7ffb4</cbc:id>
                 </cccev:derivedFrom>

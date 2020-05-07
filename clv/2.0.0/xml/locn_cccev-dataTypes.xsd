@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/ns/locn#" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+           targetNamespace="http://www.w3.org/ns/locn#"
+           elementFormDefault="qualified"> 
+    
+    <xs:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+
+    <!-- Data properties declarations-->
+    <xs:element name="poBox" type="cbc:TextType"/>
+    <xs:element name="thoroughfare" type="cbc:TextType"/>
+    <xs:element name="locatorDesignator" type="cbc:TextType"/>
+    <xs:element name="locatorName" type="cbc:TextType"/>
+    <xs:element name="addressArea" type="cbc:TextType"/>
+    <xs:element name="postName" type="cbc:TextType"/>
+    <xs:element name="adminUnitLevel1" type="cbc:TextType"/>
+    <xs:element name="adminUnitLevel2" type="cbc:TextType"/>
+    <xs:element name="postCode" type="cbc:TextType"/>
+    <xs:element name="addressId" type="cbc:TextType"/>
+
+    <!-- Object properties declarations-->
+    <xs:element name="address" type="AddressType"/>
+
+    <!-- Classes declarations-->
+    <xs:element name="Address" type="AddressType"/>
+    <xs:element name="Geometry" type="GeometryType"/>
+    <xs:element name="Location" type="LocationType"/>
+    
+    <!-- Class definition -->
+    <xs:complexType name="AddressType">
+    <xs:sequence>
+        <xs:element name="fullAddress" type="cbc:TextType" minOccurs="0">
+            <xs:annotation>
+                <xs:documentation>
+                    The complete address written as a string, with or without formatting.  
+                </xs:documentation>
+                <xs:appinfo>
+                    The domain of locn:fullAddress is locn:Address.
+                </xs:appinfo>
+            </xs:annotation>
+        </xs:element>
+        <xs:element ref="poBox" minOccurs="0"/>
+        <xs:element ref="thoroughfare" minOccurs="0"/>
+        <xs:element ref="locatorDesignator" minOccurs="0"/>
+        <xs:element ref="locatorName" minOccurs="0"/>
+        <xs:element ref="addressArea" minOccurs="0"/>
+        <xs:element ref="postName" minOccurs="0"/>
+        <xs:element ref="adminUnitLevel1" minOccurs="0"/>
+        <xs:element ref="adminUnitLevel2" minOccurs="0"/>
+        <xs:element ref="postCode" minOccurs="0"/>
+        <xs:element ref="addressId" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
+    
+    <xs:complexType name="GeometryType">
+        <xs:complexContent>
+            <xs:extension base="xs:anyType"/>
+        </xs:complexContent>
+    </xs:complexType>
+    
+<xs:complexType name="LocationType">
+    <xs:sequence>
+        <xs:element ref="address" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>
+

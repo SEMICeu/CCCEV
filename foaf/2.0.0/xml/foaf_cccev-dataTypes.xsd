@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
+<xsd:schema xmlns="http://xmlns.com/foaf/0.1/"
+	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xmlns.com/foaf/0.1/" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.0">
+	
+	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+	<!-- Element declaration -->
+	
+	<!-- Data properties -->
+	
+	<xsd:element name="currentProject" type="xsd:anyType"/>
+	<xsd:element name="lastName" type="cbc:TextType"/>
+	<xsd:element name="familyName" type="cbc:NameType"/>
+	<xsd:element name="family_name" type="cbc:NameType"/>
+	<xsd:element name="firstName" type="cbc:NameType"/>
+	<xsd:element name="geekcode" type="cbc:IDType"/>
+	<xsd:element name="homepage" type="DocumentType"/>
+	<xsd:element name="img" type="cbc:BinaryObjectType"/>
+	<xsd:element name="myersBriggs" type="cbc:IDType"/>
+	<xsd:element name="pastProject" type="xsd:anyType"/>
+	<xsd:element name="primaryTopic" type="xsd:anySimpleType"/>
+	<xsd:element name="publications" type="DocumentType"/>
+	<xsd:element name="sha1" type="cbc:HexBinaryType"/>
+	<xsd:element name="schoolInfoHomepage" type="DocumentType"/>
+	<xsd:element name="surname" type="cbc:NameType"/>
+	<xsd:element name="topic" type="xsd:anySimpleType"/>	
+	<xsd:element name="workInfoHomepage" type="DocumentType"/>
+	
+	<!-- Object properties -->
+	
+	<xsd:element name="knows" type="PersonType"/>
+	<xsd:element name="page" type="DocumentType"/>
+	
+	
+	<!-- Class declarations -->
+	<xsd:element name="Agent" type="AgentType"/>
+	<xsd:element name="Document" type="DocumentType"/>
+	<xsd:element name="Organization" type="OrganizationType"/>
+	<xsd:element name="Person" type="PersonType"/>
+		
+	<!-- Element definition -->
+
+	<xsd:complexType name="AgentType">
+		<xsd:sequence/>		
+	</xsd:complexType>
+	
+	<xsd:complexType name="DocumentType">
+		<xsd:sequence>
+			<xsd:element ref="topic" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="primaryTopic" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="sha1" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PersonType">
+		<xsd:sequence>
+			<xsd:element ref="currentProject" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="lastName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="familyName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="family_name" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="firstName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="geekcode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="img" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="myersBriggs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="pastProject" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="primaryTopic" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="publications" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="schoolInfoHomepage" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="surname" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="workInfoHomepage" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>		
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrganizationType">
+		<xsd:sequence/>		
+	</xsd:complexType>
+	
+</xsd:schema>

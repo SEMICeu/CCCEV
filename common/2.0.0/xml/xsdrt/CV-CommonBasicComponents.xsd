@@ -17,11 +17,14 @@
    <xsd:element name="code" type="CodeType"/>
    <xsd:element name="date" type="DateType"/>
    <xsd:element name="dateTime" type="DateTimeType"/>
+   <xsd:element name="decimal" type="DecimalType"/>
    <xsd:element name="description" type="DescriptionType"/>
+   <xsd:element name="duration" type="DurationType"/>
    <xsd:element name="durationMeasure" type="DurationMeasureType"/>
    <xsd:element name="endDate" type="EndDateType"/>
    <xsd:element name="endPoint" type="EndPointType"/>
    <xsd:element name="endTime" type="EndTimeType"/>
+   <xsd:element name="hexBinary" type="HexBinaryType"/>
    <xsd:element name="id" type="IDType"/>
    <xsd:element name="indicator" type="IndicatorType"/>
    <xsd:element name="iri" type="IRIType"/>
@@ -108,9 +111,19 @@
          <xsd:extension base="dt:NumericType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="DecimalType">      
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:DecimalType"/>         
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="DescriptionType">      
       <xsd:simpleContent>
          <xsd:restriction base="dt:TextType"/>         
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="DurationType">      
+      <xsd:simpleContent>
+         <xsd:restriction base="dt:DurationType"/>         
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="DurationMeasureType">
@@ -137,6 +150,11 @@
       <xsd:simpleContent>
          <xsd:restriction base="dt:IdentifierType"/>
       </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="HexBinaryType">
+      <xsd:complexContent>
+         <xsd:extension base="dt:HexBinaryType"/>
+      </xsd:complexContent>
    </xsd:complexType>   
    <xsd:complexType name="IDType">
       <xsd:simpleContent>
@@ -180,12 +198,12 @@
    </xsd:complexType>
    <xsd:complexType name="TypeType">
       <xsd:simpleContent>
-         <xsd:extension base="dt:CodeType"/>
+         <xsd:restriction base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="URIType">
       <xsd:simpleContent>
-         <xsd:restriction base="dt:IdentifierType"/>
+         <xsd:restriction base="dt:IdentifierType"></xsd:restriction>
       </xsd:simpleContent>
    </xsd:complexType>
 </xsd:schema>  

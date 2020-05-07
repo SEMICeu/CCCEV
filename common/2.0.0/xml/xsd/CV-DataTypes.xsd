@@ -13,12 +13,17 @@
    
    <!-- ==== Element Declaration ==== -->
    <xsd:element name="Amount" type="AmountType"/>
+   <xsd:element name="AnyURI" type="AnyURIType"/>
+   <xsd:element name="BinaryObject" type="BinaryObjectType"/>
    <xsd:element name="Code" type="CodeType"/>
    <xsd:element name="Date" type="DateType"/>
-   <xsd:element name="DateTime" type="DateTimeType"/>   
+   <xsd:element name="DateTime" type="DateTimeType"/>
+   <xsd:element name="Decimal" type="DecimalType"/>
+   <xsd:element name="Duration" type="DurationType"/>   
    <xsd:element name="ID" type="IdentifierType"/> <!-- identifies a class instance, i.e. it's an object identifier -->
    <xsd:element name="Identifier" type="IdentifierType"/> <!-- a value that 'is' an identifier, used exclusively in the class "cac:Value", where mutually exclusive (disjoint) types of values -->
    <xsd:element name="Indicator" type="IndicatorType"/>
+   <xsd:element name="HexBinary" type="HexBinaryType"/>
    <xsd:element name="Name" type="NameType"/>
    <xsd:element name="Measure" type="MeasureType"/>
    <xsd:element name="PositiveInteger" type="PositiveIntegerType"/>
@@ -27,19 +32,20 @@
    <xsd:element name="Time" type="TimeType"/>
    <xsd:element name="Type" type="TypeType"/>
    <xsd:element name="URI" type="URIType"/>
-   <xsd:element name="BinaryObject" type="BinaryObjectType"/>
 
 <!-- ===== Entity Type Definitions ===== -->
-   <xsd:complexType name="BinaryObjectType">
-      <xsd:simpleContent>
-         <xsd:extension base="udt:BinaryObjectType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="AmountType">
       <xsd:simpleContent>
          <xsd:extension base="udt:AmountType">
             <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
          </xsd:extension>         
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="AnyURIType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:anyURI">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
    <!-- Each DataType needs to extend the base udt: components with the group of attributes allowing to identify the values of a codelist indicating what is the assurance
@@ -48,12 +54,19 @@
       level of assurance for identifier schemes on the OJEU (https://ec.europa.eu/cefdigital/wiki/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS),
       which are based on  the definitions provided in Article 8 of the eIDAS Regulation (https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG) -->
    <xsd:attributeGroup name="AssuranceLevelAttributes">
-      <xsd:attribute name="assuranceLevelListID" type="xsd:normalizedString"/>
-      <xsd:attribute name="assuranceLevelListVerionID" type="xsd:normalizedString"/>
-      <xsd:attribute name="assuranceLevelCategory" type="xsd:normalizedString"/>
-      <xsd:attribute name="assuranceLevelAgencyID" type="xsd:normalizedString"/>
-      <xsd:attribute name="assuranceLevelAgencyName" type="xsd:string"/>
+      <xsd:attribute name="AssuranceLevelCodeListID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelCodeListVerionID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelValue" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelAgencyID" type="xsd:normalizedString"/>
+      <xsd:attribute name="AssuranceLevelAgencyName" type="xsd:string"/>
    </xsd:attributeGroup>
+   <xsd:complexType name="BinaryObjectType">
+      <xsd:simpleContent>
+         <xsd:extension base="udt:BinaryObjectType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="CodeType">
       <xsd:simpleContent>
          <xsd:extension base="udt:CodeType">
@@ -71,6 +84,27 @@
    <xsd:complexType name="DateTimeType">
       <xsd:simpleContent>
          <xsd:extension base="udt:DateTimeType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="DecimalType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="DurationType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:duration">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="HexBinaryType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:hexBinary">
             <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
          </xsd:extension>
       </xsd:simpleContent>
@@ -124,7 +158,7 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType> 
-   <xsd:complexType name="TextType">
+   <xsd:complexType name="TextType" mixed="true">
       <xsd:simpleContent>
          <xsd:extension base="udt:TextType">
             <xsd:attributeGroup ref="AssuranceLevelAttributes"/>

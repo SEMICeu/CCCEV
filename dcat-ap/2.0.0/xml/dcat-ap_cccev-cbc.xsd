@@ -16,11 +16,11 @@
 	attributeFormDefault="unqualified" version="2.0.0">
 
 	<xsd:import namespace="http://purl.org/dc/terms/"
-		schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>
+		schemaLocation="../../../dcterms/2.0.0/xml/dcterms_cccev-dataTypes.xsd"/>
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
 		schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
-		schemaLocation="../../../foaf/2.0.0/xml/foaf.xsd"/>
+		schemaLocation="../../../foaf/2.0.0/xml/foaf_cccev-dataTypes.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/adms#"
 		schemaLocation="../../../adms/2.0.0/xml/adms.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/odrl/2/"
@@ -28,7 +28,7 @@
 	<xsd:import namespace="http://www.w3.org/ns/prov#"
 		schemaLocation="../../../prov/2.0.0/xml/prov.xsd"/>
 	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-		schemaLocation="../../../rdf/2.0.0/xml/rdf.xsd"/>
+		schemaLocation="../../../rdf/2.0.0/xml/rdf_cccev-dataTypes.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#"
 		schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
 	<xsd:import namespace="spdx:xsd::1.0"
@@ -39,15 +39,14 @@
 	<!-- Element declaration -->
 	
 	<!-- data properties -->
-	<!-- rdfs:Resource is mapped (considered equivalent) to xsd:anyURI --> 
-	<xsd:element name="accessURL" type="xsd:anyURI"/>
-	<xsd:element name="byteSize" type="xsd:decimal"/>
-	<xsd:element name="downloadURL" type="xsd:anyURI"/>
-	<xsd:element name="endpointURL" type="xsd:anyURI"/>
-	<xsd:element name="endpointDescription" type="xsd:string"/>
+	<xsd:element name="accessURL" type="rdf:Resource"/>
+	<xsd:element name="byteSize" type="cbc:DecimalType"/>
+	<xsd:element name="downloadURL" type="rdf:Resource"/>
+	<xsd:element name="endpointURL" type="rdf:Resource"/>
+	<xsd:element name="endpointDescription" type="cbc:DescriptionType"/>
 	<xsd:element name="hadRole" type="RoleType"/>
-	<xsd:element name="spatialResolutionInMeters" type="xsd:decimal"/>
-	<xsd:element name="temporalResolution" type="xsd:duration"/>
+	<xsd:element name="spatialResolutionInMeters" type="cbc:DecimalType"/>
+	<xsd:element name="temporalResolution" type="cbc:DurationType"/>
 
 	<!-- object properties -->
 	<xsd:element name="accessService" type="DataServiceType"/>
@@ -96,12 +95,12 @@
 	<xsd:complexType name="CatalogType">
 		<xsd:sequence>
 			<!--Mandatory elements-->
-			<xsd:element ref="dataset" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="dataset"  maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:description"  maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:title"  maxOccurs="unbounded"/>
 			<xsd:element ref="dct:publisher"/>
 			<!--Optional elements-->
-			<xsd:element ref="dct:creator" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:creator" minOccurs="0" />
 			<xsd:element ref="service" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="catalog" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="hasPart" minOccurs="0" maxOccurs="unbounded"/>
@@ -110,36 +109,36 @@
 			<xsd:element ref="dct:rights" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded"/>
 			<!--Recommended elements-->
-			<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
-			<xsd:element ref="dct:modified" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:issued" minOccurs="0"/>
+			<xsd:element ref="dct:modified" minOccurs="0"/>
 			<xsd:element ref="dct:language" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="themeTaxonomy" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="foaf:homepage" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="foaf:homepage" minOccurs="0"/>
 			<xsd:element ref="dct:spatial"  minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:licence" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:licence" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	
 	<xsd:complexType name="CatalogRecordType">
 		<xsd:sequence>
-			<xsd:element name="CatalogRecord" minOccurs="0" maxOccurs="1">
+			<xsd:element name="CatalogRecord" minOccurs="0">
 				<xsd:complexType>
 					<xsd:sequence>
 						<!-- Mandatory properties-->
-						<xsd:element ref="foaf:primaryTopic" minOccurs="1" maxOccurs="1"/>
-						<xsd:element ref="dct:modified" minOccurs="1" maxOccurs="1"/>
+						<xsd:element ref="foaf:primaryTopic"/>
+						<xsd:element ref="dct:modified"/>
 						<!-- Recommended properties-->
-						<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="1"/>
-						<xsd:element ref="adms:status" minOccurs="0" maxOccurs="1"/>
-						<xsd:element ref="dct:issued" minOccurs="0" maxOccurs="1"/>
+						<xsd:element ref="dct:conformsTo" minOccurs="0"/>
+						<xsd:element ref="adms:status" minOccurs="0"/>
+						<xsd:element ref="dct:issued" minOccurs="0"/>
 						<!-- Optional properties-->
-						<xsd:element ref="dct:description" minOccurs="0"/>
+						<xsd:element ref="cbc:description" minOccurs="0"/>
 						<xsd:element ref="dct:language" maxOccurs="unbounded"/>
-						<xsd:element ref="dct:source" maxOccurs="1"/>
-						<xsd:element ref="dct:title" minOccurs="0" maxOccurs="1"/>
+						<xsd:element ref="dct:source"/>
+						<xsd:element ref="cbc:title" minOccurs="0"/>
+						<xsd:element ref="rdf:about" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="rdf:nodeID" minOccurs="0" maxOccurs="unbounded"/>
 					</xsd:sequence>
-					<xsd:attribute ref="rdf:about"/>
-					<xsd:attribute ref="rdf:nodeID"/>
 				</xsd:complexType>
 			</xsd:element>
 		</xsd:sequence>
@@ -150,8 +149,8 @@
 			<xsd:extension base="rdf:Resource">
 				<xsd:sequence>
 					<!--Mandatory elements-->
-					<xsd:element ref="dct:description" minOccurs="1" maxOccurs="unbounded"/>
-					<xsd:element ref="dct:title" minOccurs="1" maxOccurs="unbounded"/>
+					<xsd:element ref="cbc:description"  maxOccurs="unbounded"/>
+					<xsd:element ref="cbc:title"  maxOccurs="unbounded"/>
 					<xsd:element ref="dct:spatial" minOccurs="0" maxOccurs="unbounded"/>
 					<!--Recommended elements-->
 					<xsd:element ref="contactPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -159,16 +158,15 @@
 					<xsd:element ref="keyword" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="theme" minOccurs="0" maxOccurs="unbounded"/>
 					<!--Optional elements-->
-					<xsd:element ref="adms:identifier" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="adms:sample" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="adms:versionNotes" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dct:accessRights" minOccurs="0"/>
 					<xsd:element ref="dct:accrualPeriodicity" minOccurs="0"/>
 					<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dct:creator" minOccurs="0"/>
-					<xsd:element ref="dct:format" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="dct:format" minOccurs="0" />
 					<xsd:element ref="dct:hasVersion" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dct:isReferencedBy" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dct:issued" minOccurs="0"/>
 					<xsd:element ref="dct:language" minOccurs="0" maxOccurs="unbounded"/>
@@ -178,7 +176,7 @@
 					<xsd:element ref="dct:relation" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dct:source" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="dct:temporal" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="dct:type" minOccurs="0"/>
+					<xsd:element ref="cbc:type" minOccurs="0"/>
 					<xsd:element ref="foaf:page" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="prov:qualifiedAttribution" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="prov:wasGeneratedBy" minOccurs="0" maxOccurs="unbounded"/>
@@ -196,13 +194,13 @@
 	<xsd:complexType name="DataServiceType">
 		<xsd:sequence>
 			<!--Mandatory elements-->
-			<xsd:element ref="dct:identifier"/>
-			<xsd:element ref="dct:title"/>
-			<xsd:element ref="endpointURL" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:id"/>
+			<xsd:element ref="cbc:title"/>
+			<xsd:element ref="endpointURL" maxOccurs="unbounded"/>
 			<!--Optional elements--> <!--dct:referencedBy-->
-			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:accessRights" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="dct:accessRights" minOccurs="0"/>
 			<xsd:element ref="endpointDescription" minOccurs="0" maxOccurs="unbounded"/>
 			<!--Recommended elements-->
 			<xsd:element ref="servesDataset" minOccurs="0" maxOccurs="unbounded"/>
@@ -218,8 +216,8 @@
 			<xsd:element ref="foaf:page" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:issued" minOccurs="0"/>
-			<xsd:element ref="dct:title" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="dct:description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:title" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="dct:format" minOccurs="0"/>
 			<xsd:element ref="dct:modified" minOccurs="0"/>
 			<xsd:element ref="dct:rights" minOccurs="0"/>

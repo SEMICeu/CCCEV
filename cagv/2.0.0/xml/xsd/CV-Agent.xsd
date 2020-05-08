@@ -8,6 +8,7 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rov="http://www.w3.org/ns/regorg#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	targetNamespace="https://semic.org/sa/cv/cagv/agent-2.0.0#" 
@@ -20,7 +21,8 @@
 	<xsd:import namespace="http://purl.org/dc/terms/" schemaLocation="../../../../dcterms/2.0.0/xml/dcterms.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../../foaf/2.0.0/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../../clv/2.0.0/xml/locn.xsd"/>
-	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../../org/2.0.0/xml/org.xsd"/>	
+	<xsd:import namespace="http://www.w3.org/ns/org#" schemaLocation="../../../../org/2.0.0/xml/org.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2002/07/owl#" schemaLocation="../../../../owl/2.0.0/xml/owl.xsd"/>	
 	<xsd:import namespace="http://www.w3.org/ns/regorg#" schemaLocation="../../../../rov/2.0.0/xml/regorg.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../../skos/2.0.0/xml/skos.xsd"/>
 	
@@ -144,35 +146,46 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="ChannelType">
-		<xsd:sequence>
-			<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>			
-			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="cbc:endPoint" minOccurs="0"/>
-			<xsd:element ref="cbc:type" minOccurs="0"/>
-			<xsd:element ref="availabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
-		</xsd:sequence>	
-		<xsd:attributeGroup ref="cac:ThingAttributes"/>
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:sequence>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>			
+					<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="cbc:endPoint" minOccurs="0"/>
+					<xsd:element ref="cbc:type" minOccurs="0"/>
+					<xsd:element ref="availabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+		
 	</xsd:complexType>
 	<xsd:complexType name="ContactPointType">
-		<xsd:sequence>
-			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="email" minOccurs="0"/>
-			<xsd:element ref="fax" minOccurs="0"/>
-			<xsd:element ref="telephone" minOccurs="0"/>
-			<xsd:element ref="internetAddress" minOccurs="0"/>
-			<xsd:element ref="availabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
-			<xsd:element ref="channel" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="location" minOccurs="0" maxOccurs="unbounded"/>			
-		</xsd:sequence>
-		<xsd:attributeGroup ref="cac:ThingAttributes"/>		
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:sequence>
+					<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="email" minOccurs="0"/>
+					<xsd:element ref="fax" minOccurs="0"/>
+					<xsd:element ref="telephone" minOccurs="0"/>
+					<xsd:element ref="internetAddress" minOccurs="0"/>
+					<xsd:element ref="availabilityRestriction" minOccurs="0" maxOccurs="unbounded"/>	
+					<xsd:element ref="channel" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="location" minOccurs="0" maxOccurs="unbounded"/>			
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="OpeningHoursSpecificationType">
-		<xsd:sequence>
-			<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="interval" minOccurs="0" maxOccurs="unbounded"/>
-		</xsd:sequence>
-		<xsd:attributeGroup ref="cac:ThingAttributes"/>
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:sequence>
+					<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="interval" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attributeGroup ref="cac:ThingAttributes"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="OrganizationType">
@@ -260,10 +273,14 @@
 	</xsd:complexType>
 	
 	<xsd:complexType name="RoleType">
-		<xsd:sequence>
-			<xsd:group ref="cagv_RoleElements"/>
-		</xsd:sequence>				
-		<xsd:attributeGroup ref="cac:ThingAttributes"/>
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:sequence>
+					<xsd:group ref="cagv_RoleElements"/>
+				</xsd:sequence>				
+				<xsd:attributeGroup ref="cac:ThingAttributes"/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	
 	<xsd:complexType name="SystemType">

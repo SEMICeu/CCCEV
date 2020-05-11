@@ -66,11 +66,6 @@
          <xsd:extension base="dt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="CopyIndicatorType">
-      <xsd:simpleContent>
-         <xsd:extension base="dt:IndicatorType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="DateTimeType">
       <xsd:simpleContent>
          <xsd:extension base="dt:DateTimeType"/>

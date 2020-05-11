@@ -30,8 +30,7 @@
 	<xsd:element name="associatedRoleType" type="cbc:CodeType"/>
 	<xsd:element name="bias" type="cbc:NumericType"/>
 	<xsd:element name="codeValue" type="cbc:CodeType"/>
-	<xsd:element name="copyIndicator" type="cbc:IndicatorType"/>
-	<xsd:element name="confidentialityLevel" type="cbc:CodeType"/>
+	<xsd:element name="confidentialityLevelType" type="cbc:CodeType"/>
 	<xsd:element name="conformsTo" type="cbc:IDReferenceType"/>
 	<xsd:element name="constraintOn" type="cbc:IDReferenceType"/>
 	<xsd:element name="representsConcept" type="cbc:IDReferenceType"/>
@@ -55,7 +54,7 @@
 	<xsd:element name="measureValue" type="cbc:MeasureType"/>
 	<xsd:element name="numericValue" type="cbc:NumericType"/>
 	<xsd:element name="quantityValue" type="cbc:QuantityType"/>
-	<xsd:element name="evidenceTypology" type="cbc:CodeType"/>
+	<xsd:element name="evidenceTypeClassification" type="cbc:CodeType"/>
 	<xsd:element name="statusCode" type="cbc:CodeType"/>
 	<xsd:element name="supportsRequirement" type="cbc:IDReferenceType"/>		
 	<xsd:element name="supportsConcept" type="cbc:IDReferenceType"/>
@@ -147,7 +146,6 @@
 					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="associatedRoleType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="documentURI" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="copyIndicator" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="statusCode" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="validityPeriod" minOccurs="0"/>			
 				</xsd:sequence>
@@ -159,7 +157,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="confidentialityLevel" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="confidentialityLevelType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="error" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="supportsRequirement" minOccurs="0" maxOccurs="unbounded"/>
@@ -186,7 +184,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="evidenceTypology" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="evidenceTypeClassification" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="dataSetType" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="specifiedIn" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>

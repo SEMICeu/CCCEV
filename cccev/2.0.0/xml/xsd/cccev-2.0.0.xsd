@@ -32,8 +32,7 @@
 	<xsd:element name="associatedRoleType" type="cbc:CodeType"/>
 	<xsd:element name="bias" type="cbc:NumericType"/>
 	<xsd:element name="codeValue" type="cbc:CodeType"/>
-	<xsd:element name="copyIndicator" type="cbc:IndicatorType"/>
-	<xsd:element name="confidentialityLevel" type="cbc:CodeType"/>
+	<xsd:element name="confidentialityLevelType" type="cbc:CodeType"/>
 	<xsd:element name="conformantTo" type="cbc:IDReferenceType"/>
 	<xsd:element name="constraintOn" type="cbc:IDReferenceType"/>
 	<xsd:element name="representsConcept" type="cbc:IDReferenceType"/>
@@ -57,7 +56,7 @@
 	<xsd:element name="measureValue" type="cbc:MeasureType"/>
 	<xsd:element name="numericValue" type="cbc:NumericType"/>
 	<xsd:element name="quantityValue" type="cbc:QuantityType"/>
-	<xsd:element name="evidenceTypology" type="cbc:CodeType"/>
+	<xsd:element name="evidenceTypeClassification" type="cbc:CodeType"/>
 	<xsd:element name="statusCode" type="cbc:CodeType"/>
 	<xsd:element name="supportsRequirement" type="cbc:IDReferenceType"/>
 	<xsd:element name="supportsConcept" type="cbc:IDReferenceType"/>
@@ -82,7 +81,7 @@
 	<xsd:element name="providedBy" type="cbc:IDReferenceType"/>	
 	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="requirement" type="RequirementType"/>
-	<xsd:element name="specifies" type="EvidenceTypeType"/>
+	<xsd:element name="specifiesEvidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="specifiedIn" type="ConceptType"/>
 	<xsd:element name="value" type="ValueType"/>
 	<xsd:element name="validityPeriod" type="cac:PeriodType"/>
@@ -223,7 +222,7 @@
 								<ObjectProperty>
 									<ccts:ComponentType>Object property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:Concept. constraint</ccts:DictionaryEntryName>
-									<ccts:Definition/>
+									<ccts:Definition>A reference to a limitation applied to a requirement or to a concept the requirement is about.</ccts:Definition>
 									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
 									<Domain>cccev:Concept</Domain>
 									<Range>cccev:Constraint</Range>
@@ -239,7 +238,12 @@
 								<ObjectProperty>
 									<ccts:ComponentType>Object property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:Concept. value</ccts:DictionaryEntryName>
-									<ccts:Definition/>
+									<ccts:Definition>
+										A datum. 
+										Additional information:
+										In the CCCEV the datum is always associated (or referred) to a concept defined in a specific namespace. The namespace is expected to be de-referenceable
+										and to provide the definition and type of the datum.
+									</ccts:Definition>
 									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
 									<Domain>cccev:Concept</Domain>
 									<Range>Value</Range>
@@ -255,7 +259,11 @@
 								<ObjectProperty>
 									<ccts:ComponentType>Object property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:Concept. concept</ccts:DictionaryEntryName>
-									<ccts:Definition/>
+									<ccts:Definition>
+										A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.
+										Additional information:
+										Used mainly to specify data being required.
+									</ccts:Definition>
 									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
 									<Domain>cccev:Concept</Domain>
 									<Range>cccev:Concept</Range>
@@ -444,7 +452,7 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:DocumentReference. identifier</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
 									</ccts:Definition>
 									<ccts:Cardinality>0..*</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
@@ -462,7 +470,7 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:DocumentReference. associated role type</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										A code used to identify the role played by this document.
 									</ccts:Definition>
 									<ccts:Cardinality>0..*</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
@@ -480,31 +488,13 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:DocumentReference. document URI</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										Unambiguous and unique identification of a document based on a URI scheme.
 									</ccts:Definition>
 									<ccts:Cardinality>0..*</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
 									<ccts:PropertyTerm>anyURI</ccts:PropertyTerm>
 									<ccts:RepresentationTerm>anyURI</ccts:RepresentationTerm>
 									<ccts:DataType>URI. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="copyIndicator" minOccurs="0" maxOccurs="1">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>cccev:DocumentReference. copy Indicator</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										<DefinitionSource/>
-									</ccts:Definition>
-									<ccts:Cardinality>0..1</ccts:Cardinality>
-									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
-									<ccts:DataType>Indicator. Type</ccts:DataType>
 								</an:DataProperty>
 							</xsd:documentation>
 						</xsd:annotation>
@@ -516,7 +506,7 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:DocumentReference. status Code</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										The status of a document content.
 									</ccts:Definition>
 									<ccts:Cardinality>0..1</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
@@ -533,7 +523,9 @@
 								<ObjectProperty>
 									<ccts:ComponentType>Object property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:DocumentReference. validity Period</ccts:DictionaryEntryName> 
-									<ccts:Definition/>
+									<ccts:Definition>
+										The lapse of time during which something is claimed to be valid.
+									</ccts:Definition>
 									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
 									<Domain>cccev:DocumentReference</Domain>
 									<Range>Period</Range>
@@ -571,14 +563,16 @@
 			</xsd:annotation>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="confidentialityLevel" minOccurs="0" maxOccurs="1">
+					<xsd:element ref="confidentialityLevelType" minOccurs="0" maxOccurs="1">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<an:DataProperty>
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:Evidence. confidentiality Level</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										<DefinitionSource>
+											The security classification assigned to an Evidence or, in general, to a content.
+										</DefinitionSource>
 									</ccts:Definition>
 									<ccts:Cardinality>0..1</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
@@ -614,8 +608,8 @@
 									<ccts:ComponentType>Object property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:Evidence. conformant To</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										A reference to one or more types of evidence where the content and, possibly, the layout or
-										configuration of the evidence is specified.
+										A reference to one or more types of evidence where the content and, possibly, the layout or configuration of the
+										evidence is specified.
 										Additional information:
 										Evidence types can be seen as ‘templates’ that actual evidences need to use to express the data that constitutes the proof.
 									</ccts:Definition>
@@ -692,8 +686,12 @@
 							<ccts:ComponentType>Class</ccts:ComponentType>
 							<ccts:DictionaryEntryName>cccev:EvidenceTypeList. Details</ccts:DictionaryEntryName>
 							<ccts:Definition>
-								
-								<DefinitionSource/>
+								<DefinitionSource>
+									A collection of types of evidences.
+									Additional information
+									The respondent of a Requirement for which one or more types of evidences have been specified in an EvidenceTypeList
+									is expected to provide Evidence(s) conformant to that type of evidence.
+								</DefinitionSource>
 							</ccts:Definition>
 							<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
 							<PrimitiveClass>owl:ThingType</PrimitiveClass>
@@ -708,7 +706,9 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:EvidenceTypeList. identifier</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										<DefinitionSource>
+											A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
+										</DefinitionSource>
 									</ccts:Definition>
 									<ccts:Cardinality>0..*</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:EvidenceTypeList</ccts:ObjectClass>
@@ -719,13 +719,13 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="specifies" minOccurs="0" maxOccurs="unbounded">
+					<xsd:element ref="specifiesEvidenceType" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<ObjectProperty>
 									<ccts:ComponentType>Object property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:EvidenceTypeList. specifies</ccts:DictionaryEntryName>
-									<ccts:Definition/>
+									<ccts:Definition>Indicates one type of evidence included in a list of evidence types.</ccts:Definition>
 									<ccts:ObjectClass>cccev:EvidenceTypeList</ccts:ObjectClass>
 									<Domain>cccev:EvidenceTypeList</Domain>
 									<Range>cccev:EvidenceType</Range>
@@ -748,7 +748,7 @@
 						<ccts:ComponentType>Class</ccts:ComponentType>
 						<ccts:DictionaryEntryName>cccev:EvidenceType. Details</ccts:DictionaryEntryName>
 						<ccts:Definition>
-							<DefinitionSource/>
+							Information about the characteristics of an expected evidence, such as the desired content, format, source, etc.
 						</ccts:Definition>
 						<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
 						<PrimitiveClass>dcat-ap:Dataset</PrimitiveClass>
@@ -757,14 +757,14 @@
 			</xsd:annotation>
 			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
-					<xsd:element ref="evidenceTypology" minOccurs="0" maxOccurs="1">
+					<xsd:element ref="evidenceTypeClassification" minOccurs="0" maxOccurs="1">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<an:DataProperty>
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:EvidenceType. evidence Typology</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										A classification code to specify the layout and content expected for an evidence.
 									</ccts:Definition>
 									<ccts:Cardinality>0..1</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
@@ -782,7 +782,9 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:EvidenceType. dataset Type</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										A classification code use to specify the machine-readability of a content.
+										Additional information
+										In the CCCEV this is used to indicate whether the types of evidences required will contain structured data or not.
 									</ccts:Definition>
 									<ccts:Cardinality>0..1</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
@@ -824,11 +826,10 @@
 						<ccts:Definition>
 							A request for data that is proof of evidence or can be taken as such.
 							Additional Information:
-							The response to an information requirement is an evidence when the issuer of the response is an
-							authoritative source (a.k.a. ‘source of truth’, e.g. a Civil Registry providing data about a natural
-							person for the provision of public service through the Single Digital Gateway). In other cases the
-							responses might not be issued by an authoritative source but the issuer supports the responses with
-							evidences (or commits to support them timely, e.g. a self-declaration or a declaration of oath).
+							The response to an information requirement is an evidence when the issuer of the response is an authoritative source
+							(a.k.a. ‘source of truth’, e.g. a Civil Registry providing data about a natural person for the provision of public service
+							through the Single Digital Gateway). In other cases the responses might not be issued by an authoritative source but the
+							issuer supports the responses with evidences (or commits to support them timely, e.g. a self-declaration or a declaration of oath).
 						</ccts:Definition>
 						<ccts:ObjectClass>cccev:InformationRequirement</ccts:ObjectClass>
 						<an:PrimitiveClass>cccev:RequirementType </an:PrimitiveClass>
@@ -850,8 +851,7 @@
 						<ccts:DictionaryEntryName>cccev:ReferenceFramework. Details</ccts:DictionaryEntryName>
 						<ccts:Definition>
 							A source from where requirements are identified and drawn.
-							
-							Additional Information
+							Additional Information:
 							Usual reference frameworks are legal and non-legal specifications. Examples of reference frameworks
 							can be, the ELI Legal Resources used for the BREG catalogue of datasets, the basis for the ISA2 CAMSS
 							Scenarios such as the Regulation (EU) 1025/2012 or the EIF Framework, the European Directives used in
@@ -997,9 +997,16 @@
 									<ccts:DictionaryEntryName>cccev:Requirement. requirement</ccts:DictionaryEntryName>
 									<ccts:Definition>
 										A sub-requirement with more granular detail(s) or of different nature.
-										Additional Information
-										An example of granular sub-requirements can be a criterion defining more specific sub-criteria. Different examples can be found in different domains and situations. Thus, in the domain of e-Procurement EU exclusion criteria (a.k.a. ‘grounds for exclusion’), national criteria are implemented as sub-criteria ‘hierarchically descending’ from an EU parent criterion. Neural networks can also be implemented as criteria and sub-criteria linked via the property cccev:hasRequirement pointing to a requirement of type cccev:Criterion.
-										Examples of sub requirements of different nature can a criterion that defines different types of information requirements (e.g. evidences to support the responses to the criterion) and establishing constraints (e.g. input parameters, thresholds, or other types of restrictions).
+										Additional Information:
+										An example of granular sub-requirements can be a criterion defining more specific sub-criteria. Different examples
+										can be found in different domains and situations. Thus, in the domain of e-Procurement EU exclusion criteria
+										(a.k.a. ‘grounds for exclusion’), national criteria are implemented as sub-criteria ‘hierarchically descending’ from
+										an EU parent criterion. Neural networks can also be implemented as criteria and sub-criteria linked via the property
+										cccev:hasRequirement pointing to a requirement of type cccev:Criterion.
+										
+										Examples of sub requirements of different nature can a criterion that defines different types of information requirements
+										(e.g. evidences to support the responses to the criterion) and establishing constraints (e.g. input parameters, thresholds,
+										or other types of restrictions).
 									</ccts:Definition>
 									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
 									<Domain>cccev:Requirement</Domain>
@@ -1119,8 +1126,10 @@
 					<ccts:ComponentType>Class</ccts:ComponentType>
 					<ccts:DictionaryEntryName>cccev:Value. Details</ccts:DictionaryEntryName>
 					<ccts:Definition>
-						
-						<DefinitionSource/>
+						A datum.
+						Additional information
+						In the CCCEV the datum is always associated (or referred) to a concept defined in a specific namespace. The namespace
+						is expected to de-referenceable and to provide the definition and type of the datum.
 					</ccts:Definition>
 					<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
 					<PrimitiveClass>owl:ThingType</PrimitiveClass>

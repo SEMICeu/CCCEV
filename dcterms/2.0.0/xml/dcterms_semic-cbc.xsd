@@ -13,10 +13,10 @@
 	attributeFormDefault="unqualified" version="2.0.0">
 	
 	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
-	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.0/xml/foaf_cccev-dataTypes.xsd"/>
-	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn_cccev-dataTypes.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.0/xml/foaf_semic-cbc.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn_semic-cbc.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>
-	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="../../../rdf/2.0.0/xml/rdf_cccev-dataTypes.xsd"/>
+	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="../../../rdf/2.0.0/xml/rdf_semic-cbc.xsd"/>
 	
 	<!-- Element declaration -->
 	

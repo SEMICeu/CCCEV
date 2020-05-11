@@ -34,7 +34,7 @@
 	<xsd:import namespace="spdx:xsd::1.0"
 		schemaLocation="../../../spdx/2.0.0/xml/spdx.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2001/vcard-rdf/3.0#"
-		schemaLocation="../../../vcard/2.0.0/xml/vcard.xsd"/>
+		schemaLocation="../../../vcard/2.0.0/xml/vcard_semic-cbc.xsd"/>
 
 	<!-- Element declaration -->
 	

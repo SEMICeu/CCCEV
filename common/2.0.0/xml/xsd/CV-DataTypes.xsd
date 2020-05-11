@@ -15,6 +15,7 @@
    <xsd:element name="Amount" type="AmountType"/>
    <xsd:element name="AnyURI" type="AnyURIType"/>
    <xsd:element name="BinaryObject" type="BinaryObjectType"/>
+   <xsd:element name="Boolean" type="BooleanType"/>
    <xsd:element name="Code" type="CodeType"/>
    <xsd:element name="Date" type="DateType"/>
    <xsd:element name="DateTime" type="DateTimeType"/>
@@ -63,6 +64,13 @@
    <xsd:complexType name="BinaryObjectType">
       <xsd:simpleContent>
          <xsd:extension base="udt:BinaryObjectType">
+            <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="BooleanType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:boolean">
             <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
          </xsd:extension>
       </xsd:simpleContent>

@@ -14,6 +14,7 @@
    <xsd:element name="alias" type="NameType"/>
    <xsd:element name="amount" type="AmountType"/>
    <xsd:element name="binaryObject" type="BinaryObjectType"/>
+   <xsd:element name="boolean" type="BooleanType"/>
    <xsd:element name="code" type="CodeType"/>
    <xsd:element name="date" type="DateType"/>
    <xsd:element name="dateTime" type="DateTimeType"/>
@@ -54,6 +55,11 @@
    <xsd:complexType name="AmountType">
       <xsd:simpleContent>
          <xsd:extension base="dt:AmountType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="BooleanType">
+      <xsd:simpleContent>
+         <xsd:extension base="dt:BooleanType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="BinaryObjectType">

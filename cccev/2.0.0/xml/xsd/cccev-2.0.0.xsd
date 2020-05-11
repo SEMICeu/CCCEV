@@ -434,7 +434,7 @@
 									<ccts:ComponentType>Data property</ccts:ComponentType>
 									<ccts:DictionaryEntryName>cccev:DocumentReference. binary Object</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										<DefinitionSource/>
+										The document's content embedded as binary object (Base64).
 									</ccts:Definition>
 									<ccts:Cardinality>0..1</ccts:Cardinality>
 									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>

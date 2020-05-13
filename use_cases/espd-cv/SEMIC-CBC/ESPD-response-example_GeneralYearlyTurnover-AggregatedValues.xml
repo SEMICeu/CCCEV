@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+        Example of an ESPD Response - last update 20100418
+
+        * This example illustates how to implement one ESPD Criterion of type General Yearly Turnover;
+        * The example contains two 'Information Requirements', one requesting the EO to provide 'self-declared' data, the other requesting evidences to support these responses.
+        * The Evidence provided by the EO conforms to one of the types specified in the combination of types of evidences, taken from e-Certis;         
+        * The response values are aggregated inside the Concepts. Since the cardinality of the values is multiple (three turnovers, one per each of the past three years), 
+          three instances of cccev:Concept are needed. Beware that each Concept has different/unique identifiers;     
+        * The Economic Operator provides three evidences, each one pointing to one specific fiscal year turnover;         
+        * Notice that Evidences in this example use the cbc:id object property.
+        * See also how the instantiation of creators of evidences.
+        * The Qualified Name (qName) of the concepts are (can be) used to
+            1) indicate the semantics of the concept via its namespace URI and element local name
+            2) determine what data type the concept has in that namespace
+          In the case of concepts used to group other concepts, the qName could be replaced with the Concept's cbc:type element.
+        * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables             
+-->
+ 
+<Response xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="urn:eu:toop:ns:dataexchange-1p40"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:adms="http://www.w3.org/ns/adms#" 
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcat-ap="http://data.europa.eu/r5r/"
+    xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+    xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+    xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+    xmlns:org="http://www.w3.org/ns/org#"
+    xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+    xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" 
+    xmlns:lcn="http://www.w3.org/ns/locn#"
+    xmlns:rov="http://www.w3.org/ns/regorg#" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"     
+    xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../../toop-cv/toop-cv-semic-cbc.xsd">
+    <cbc:description>description0</cbc:description>
+    <cbc:title>title0</cbc:title>
+    <cbc:id>identifier0</cbc:id>
+    <dct:creator/>
+    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+    <dct:language>http://www.oxygenxml.com/</dct:language>
+    <dct:modified>2006-05-04T18:13:51.0</dct:modified>
+    <dct:publisher/>
+    <cbc:type>http://www.oxygenxml.com/</cbc:type>
+    <RoutingInformation>
+        <DocumentType AssuranceLevelCodeListID="AssuranceLevelCodeListID3" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID3" AssuranceLevelValue="AssuranceLevelValue3" AssuranceLevelAgencyID="AssuranceLevelAgencyID3" AssuranceLevelAgencyName="AssuranceLevelAgencyName3" schemeID="schemeID1" schemeName="schemeName1" schemeAgencyID="schemeAgencyID1" schemeAgencyName="schemeAgencyName1" schemeVersionID="schemeVersionID1" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DocumentType0</DocumentType>
+        <Process AssuranceLevelCodeListID="AssuranceLevelCodeListID5" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID5" AssuranceLevelValue="AssuranceLevelValue5" AssuranceLevelAgencyID="AssuranceLevelAgencyID5" AssuranceLevelAgencyName="AssuranceLevelAgencyName5" schemeID="schemeID3" schemeName="schemeName3" schemeAgencyID="schemeAgencyID3" schemeAgencyName="schemeAgencyName3" schemeVersionID="schemeVersionID3" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Process0</Process>
+        <DataConsumerElectronicAddress AssuranceLevelCodeListID="AssuranceLevelCodeListID7" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID7" AssuranceLevelValue="AssuranceLevelValue7" AssuranceLevelAgencyID="AssuranceLevelAgencyID7" AssuranceLevelAgencyName="AssuranceLevelAgencyName7" schemeID="schemeID5" schemeName="schemeName5" schemeAgencyID="schemeAgencyID5" schemeAgencyName="schemeAgencyName5" schemeVersionID="schemeVersionID5" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataConsumerElectronicAddress0</DataConsumerElectronicAddress>
+        <DataConsumerCountry AssuranceLevelCodeListID="AssuranceLevelCodeListID9" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID9" AssuranceLevelValue="AssuranceLevelValue9" AssuranceLevelAgencyID="AssuranceLevelAgencyID9" AssuranceLevelAgencyName="AssuranceLevelAgencyName9" listID="listID3" listAgencyID="listAgencyID3" listAgencyName="listAgencyName3" listName="listName3" listVersionID="listVersionID3" name="name3" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">DataConsumerCountry0</DataConsumerCountry>
+        <DataProviderElectronicAddress AssuranceLevelCodeListID="AssuranceLevelCodeListID11" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID11" AssuranceLevelValue="AssuranceLevelValue11" AssuranceLevelAgencyID="AssuranceLevelAgencyID11" AssuranceLevelAgencyName="AssuranceLevelAgencyName11" schemeID="schemeID7" schemeName="schemeName7" schemeAgencyID="schemeAgencyID7" schemeAgencyName="schemeAgencyName7" schemeVersionID="schemeVersionID7" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataProviderElectronicAddress0</DataProviderElectronicAddress>
+        <DataProviderCountry AssuranceLevelCodeListID="AssuranceLevelCodeListID13" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID13" AssuranceLevelValue="AssuranceLevelValue13" AssuranceLevelAgencyID="AssuranceLevelAgencyID13" AssuranceLevelAgencyName="AssuranceLevelAgencyName13" listID="listID5" listAgencyID="listAgencyID5" listAgencyName="listAgencyName5" listName="listName5" listVersionID="listVersionID5" name="name5" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">DataProviderCountry0</DataProviderCountry>
+    </RoutingInformation>
+    <DataRequestAuthorisation>
+        <ConsentToken format="format1" mimeCode="mimeCode1" encodingCode="encodingCode1"
+            characterSetCode="characterSetCode1" uri="http://www.oxygenxml.com/"
+            filename="filename1">ZGVmYXVsdA==</ConsentToken>
+    </DataRequestAuthorisation>
+    <CopyIndicator/>
+    <Specification/>
+    <DataConsumerDocument/>
+    <DataConsumerGlobalSession/>
+    <DataConsumerRequestPurpose/>
+    <DataRequest/>
+    <DataProvider xsi:type="cagv:PublicOrganizationType">
+        <cbc:id AssuranceLevelValue="High">RNA</cbc:id>
+        <cagv:defaultContactPoint xsi:type="cagv:ContactPointType">
+            <cagv:email>rna.supporto@mise.gov.it</cagv:email>
+            <cagv:internetAddress>https://www.rna.gov.it/sites/PortaleRNA/it_IT/home</cagv:internetAddress>
+        </cagv:defaultContactPoint>
+        <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
+        <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
+        <cagv:formalLocation xsi:type="cagv:LocationType">
+            <cagv:address xsi:type="cac:AddressType">
+                <lcn:fullAddress>Viale America n.201 00144 Roma Italy</lcn:fullAddress>
+                <!-- Compulsory use of EU Vocabularies code lists: https://op.europa.eu/en/web/eu-vocabularies/at-concept-scheme/-/resource/authority/language/?target=Browse&uri=http://publications.europa.eu/resource/authority/language -->
+                <cbc:id>f167174e-5190-42f2-b5be-2bf3a8b2d7b5</cbc:id>
+                <cac:streetName languageID="ITA">Viale America</cac:streetName>
+                <cac:buildingNumber>201</cac:buildingNumber>
+                <cac:cityName languageID="it">Roma</cac:cityName>
+                <cac:postalZone>00144</cac:postalZone>
+                <cac:countryCode listID="Country" listAgencyID="PUBL" listVersionID="20200318-0" listURI="http://publications.europa.eu/resource/dataset/country">ITA</cac:countryCode>
+            </cagv:address>
+        </cagv:formalLocation>
+    </DataProvider>    
+    <EvidenceResponse>
+        <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ERES1</ID>
+        <ErrorCode AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN/INDICATOR</ErrorCode>
+        <ErrorIndicator AssuranceLevelValue="High">true</ErrorIndicator>
+        <IssueDate AssuranceLevelValue="High">2020-06-09+12:00Z</IssueDate>
+        <IssuePlace AssuranceLevelValue="High" languageID="en">Brussels</IssuePlace>
+        <LegalReference AssuranceLevelValue="High" languageID="en">Legislation title</LegalReference>
+        <Name AssuranceLevelValue="High" languageID="en">Evidence response for ESPD Request.</Name>
+        <Remarks AssuranceLevelValue="High" languageID="en">A combination of different types of Evidences captured from e-Certis is used.</Remarks>
+        
+        <!-- This TOOP implementation reuses the CCCEV the Class Requirement, but it could also have used the 'property' requirement. The Requirement Class, in turn, has to use the property 'requirement', which is a 'surrogate' of the Class -->
+
+        <!-- In this example, TOOP decided to instantiate the class. However the rule in the CCCEV is that all the elements in a CCCEV class are either data properties or object properties, 
+             therefore the CCCEV Class invokes the object property 'requirement" inside its sequence (because that is the rule in CCCEV) -->
+ 
+        <!-- Notice that the namespaces espd-voc, espd-pi and espd-struct could be used at the level of each concept too. However by adding them as attributes of the Requirement (or even of the Criterion)
+             they become 'global' (i.e. visible) to any concept used inside the Requirement. --> 
+
+        <Requirement xsi:type="cccev:CriterionType" xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi" xmlns:espd-struct="http://semic.eu/sa/espd/struct">
+            <cbc:id schemeID="ESPD" schemeVersionID="2.1.1">499efc97-2ac1-4af2-9e84-323c2ca67747</cbc:id>
+            <cbc:name languageID="eng">General yearly turnover</cbc:name>
+            <cbc:description languageID="eng">Its general yearly turnover for the number of financial years required in the relevant notice, the in the ESPD, the relevant notice or the ESPD is as follows:</cbc:description>
+            <cbc:type listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</cbc:type>
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
+                <cbc:id>59ccd37a-a7fe-482c-a36d-dc1a73f3910a</cbc:id>
+                <cbc:description>Please provide the general turnover for the past three years</cbc:description>
+                <cccev:concept>
+                    <cbc:id>5ca58d66-3ef1-4145-957c-45d5b18a837f</cbc:id>
+                    <cbc:type>REQUIREMENT_GROUP</cbc:type>
+                    <cbc:qName>espd-voc:generalYearlyTurnover</cbc:qName>
+                    <cccev:constraint>
+                        <cccev:concept xmlns:ops="https://matlab.org/operators">
+                            <cbc:description>The turnover must be greater or equal than</cbc:description>
+                            <cbc:type>REQUIREMENT</cbc:type>
+                            <cbc:qName>ops:gte</cbc:qName>
+                            <cccev:value><cccev:amountValue currencyID="EUR">1000000</cccev:amountValue></cccev:value>
+                        </cccev:concept>
+                    </cccev:constraint>
+                    <cccev:concept>
+                        <cbc:id>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cbc:id>
+                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
+                        <cccev:concept>
+                            <cbc:id>d876f0b0-dd0a-4200-87f8-f5560943e2a8</cbc:id>
+                            <cbc:description>Amount</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
+                            <cccev:value><cccev:amountValue currencyID="eur">1000001</cccev:amountValue></cccev:value>                            
+                        </cccev:concept>
+                        <cccev:concept>
+                            <cbc:id>c8aa3e57-9a86-4bf8-9208-ab0c35d659e3</cbc:id>
+                            <cbc:description>Start-date and end-date</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:qName>espd-voc:period</cbc:qName>           
+                            <cccev:value>
+                                <cccev:periodValue>
+                                    <cbc:startDate>2017-01-01</cbc:startDate>
+                                    <cbc:endDate>2017-12-01</cbc:endDate>                                 
+                                </cccev:periodValue>
+                            </cccev:value>                 
+                        </cccev:concept>
+                    </cccev:concept>
+                    <cccev:concept>
+                        <cbc:id>b93edd61-ceb9-4070-8353-7706ec08c687</cbc:id>
+                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
+                        <cccev:concept>
+                            <cbc:id>d5af173f-1603-4120-9f09-89503c51ca1d</cbc:id>
+                            <cbc:description>Amount</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
+                            <cccev:value><cccev:amountValue currencyID="eur">1000002</cccev:amountValue></cccev:value>                            
+                        </cccev:concept>
+                        <cccev:concept>
+                            <cbc:id>eca573aa-60eb-4e92-84b8-0fb888db5599</cbc:id>
+                            <cbc:description>Start-date and end-date</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:qName>espd-voc:period</cbc:qName>           
+                            <cccev:value>
+                                <cccev:periodValue>
+                                    <cbc:startDate>2018-01-01</cbc:startDate>
+                                    <cbc:endDate>2018-12-01</cbc:endDate>                                 
+                                </cccev:periodValue>
+                            </cccev:value>                 
+                        </cccev:concept>
+                    </cccev:concept>         
+                    <cccev:concept>
+                        <cbc:id>4fa92f3b-fe7a-4451-a5bd-a8ab21a07b2d</cbc:id>
+                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                        <cbc:qName>espd-voc:amountAndPeriod</cbc:qName>
+                        <cccev:concept>
+                            <cbc:id>80c3038b-a46d-43ca-8f71-e50a940ae277</cbc:id>
+                            <cbc:description>Amount</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:qName>espd-voc:amount</cbc:qName>
+                            <cccev:value><cccev:amountValue currencyID="eur">1000003</cccev:amountValue></cccev:value>                            
+                        </cccev:concept>
+                        <cccev:concept>
+                            <cbc:id>fe4b9b96-5cd3-4fbd-94b3-f3d257f36d5a</cbc:id>
+                            <cbc:description>Start-date and end-date</cbc:description>
+                            <cbc:type>QUESTION</cbc:type>
+                            <cbc:qName>espd-voc:period</cbc:qName>           
+                            <cccev:value>
+                                <cccev:periodValue>
+                                    <cbc:startDate>2019-01-01</cbc:startDate>
+                                    <cbc:endDate>2019-12-01</cbc:endDate>                                 
+                                </cccev:periodValue>
+                            </cccev:value>                 
+                        </cccev:concept>
+                    </cccev:concept>                
+                </cccev:concept>
+            </cccev:requirement>
+            <!-- A second requirement requesting a documentary evidence follow. Notice that: 
+                    * This requirement does not use any concept.
+                    * The evidence is supplied at the end of this XML document, separatedly from the requirement.                      
+            -->
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
+                <cbc:id>399a3111-0842-43fe-a499-8b3ab684e0d0</cbc:id>
+                <cbc:description>If this information is available electronically, please provide evidence(s) to supporting it.</cbc:description>
+                <!-- Combination of types of evidences as specified in e-Certis. The EO may provide XBRL compatible annual accounts provided through BRIS (European Business Registers Interconnection System -->
+                <cccev:evidenceTypeCombinationList>
+                    <cccev:evidenceType>
+                        <cbc:description>Annual accounts provided through BRIS as an XBRL report</cbc:description>
+                        <cbc:title>XBRL Annual Account</cbc:title>
+                        <!--  Preferred MIME types -->
+                        <dcat-ap:distribution>
+                            <dcat-ap:accessURL>
+                                <rdf:resource xsi:type="cbc:URIType">https://acme.com/transparency/annualAccounting/2019</rdf:resource>
+                            </dcat-ap:accessURL>
+                            <dct:format>http://publications.europa.eu/resource/authority/file-type#XBRL</dct:format>
+                        </dcat-ap:distribution>
+                        <cbc:id schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0">ANNUAL_ACCOUNTS_XBRL</cbc:id>
+                        <foaf:page>
+                            <foaf:topic>Annual accounts provided through BRIS as an XBRL report</foaf:topic>
+                            <foaf:primaryTopic>XBRL Annual Account</foaf:primaryTopic>
+                        </foaf:page>
+                        <cccev:dataSetType>DOCUMENT</cccev:dataSetType>
+                    </cccev:evidenceType>                    
+                </cccev:evidenceTypeCombinationList>                
+            </cccev:requirement>
+        </Requirement>        
+    </EvidenceResponse>        
+    <Evidence>        
+        <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
+        <cbc:description>ACME's Ltd. Annual Accounts 2017</cbc:description>
+        <cbc:title>Annual Accounts 2017</cbc:title>
+        <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+            <dcat-ap:accessURL>
+                <rdf:resource xsi:type="cbc:URIType">https://acme.com/transparency/annualAccounting/2017</rdf:resource>
+            </dcat-ap:accessURL>
+            <foaf:page>
+                <foaf:primaryTopic>Annual Accounts 2017</foaf:primaryTopic>
+            </foaf:page>
+            <!-- The evidence supportsRequirement concept id = 5ca58d66-3ef1-4145-957c-45d5b18a837f -->
+            <dct:format>http://publications.europa.eu/resource/authority/file-type#XBRL</dct:format>
+            <dcat-ap:downloadURL>
+                <rdf:resource xsi:type="cbc:URIType">https://europa.eu/bris/doc?id=annacc-acme-2017</rdf:resource>
+            </dcat-ap:downloadURL>                        
+        </dcat-ap:distribution>
+        <cbc:id schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0">BRIS-XBRL-ANACC-2017</cbc:id>
+        <dct:creator xsi:type="cagv:PublicOrganizationType">
+            <cagv:formalName languageID="esp">Registro Mercantil Central Español</cagv:formalName>               
+            <cagv:formalName languageID="eng">Central Spanish Business Register</cagv:formalName>
+        </dct:creator>
+        <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
+        <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
+        <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
+        <!-- Refers to Concept instance #3 (2017 Turnover) -->
+        <cccev:supportsRequirement>c0cd9c1c-e90a-4ff9-bce3-ac0fe31abf16</cccev:supportsRequirement>
+    </Evidence>
+    <Evidence>        
+        <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
+        <cbc:description>ACME's Ltd. Annual Accounts 2018</cbc:description>
+        <cbc:title>Annual Accounts 2018</cbc:title><dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+            <dcat-ap:accessURL>
+                <rdf:resource xsi:type="cbc:URIType">https://acme.com/transparency/annualAccounting/2018</rdf:resource>
+            </dcat-ap:accessURL>
+            <foaf:page><foaf:primaryTopic>Annual Accounts 2018</foaf:primaryTopic></foaf:page>
+            <dcat-ap:downloadURL>
+                <rdf:resource xsi:type="cbc:URIType">https://europa.eu/bris/doc?id=annacc-acme-2018</rdf:resource>
+            </dcat-ap:downloadURL>            
+        </dcat-ap:distribution>
+        <cbc:id schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0">BRIS-XBRL-ANACC-2017</cbc:id>
+        <dct:creator xsi:type="cagv:PublicOrganizationType">
+            <cagv:formalName languageID="esp">Registro Mercantil Central Español</cagv:formalName>               
+            <cagv:formalName languageID="eng">Central Spanish Business Register</cagv:formalName>
+        </dct:creator>
+        <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
+        <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
+        <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
+        <!-- Refers to Concept instance #2 (2018 Turnover) -->            
+        <cccev:supportsRequirement>b93edd61-ceb9-4070-8353-7706ec08c687</cccev:supportsRequirement>
+    </Evidence>
+    <Evidence>        
+        <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
+        <cbc:description>ACME's Ltd. Annual Accounts 2019</cbc:description>    
+        <cbc:title>Annual Accounts 2019</cbc:title>
+        <dcat-ap:distribution>
+            <dcat-ap:accessURL>
+                <rdf:resource xsi:type="cbc:URIType">https://acme.com/transparency/annualAccounting/2019</rdf:resource>
+            </dcat-ap:accessURL>
+            <foaf:page>
+                <foaf:primaryTopic>Annual Accounts 2019</foaf:primaryTopic>
+            </foaf:page>
+            <dcat-ap:accessService>
+                <cbc:id>ROLECE-CERTIFICATES</cbc:id>
+                <cbc:title>Servicio de generación de certificados del Registro Oficial de Licitadores y empresas clasificads</cbc:title>
+                <dcat-ap:endpointURL>
+                    <rdf:resource xsi:type="cbc:URIType">http://datos.gov.es/rolece/cert?id=annacc-acme-2019</rdf:resource>
+                </dcat-ap:endpointURL>
+            </dcat-ap:accessService>                
+        </dcat-ap:distribution>
+        <cbc:id schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0">BRIS-XBRL-ANACC-2017</cbc:id> 
+        <dct:creator xsi:type="cagv:PublicOrganizationType">
+            <cagv:formalName languageID="esp">Registro Oficial de Licitadores y Empresas Clasificadas (ROLECE)</cagv:formalName>               
+            <cagv:formalName languageID="eng">Central Register of Tenderers and Prequalified Businesses</cagv:formalName>
+        </dct:creator>
+        <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
+        <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
+        <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
+        <!-- Refers to Concept instance #3 (2019 Turnover) -->
+        <cccev:supportsRequirement>4fa92f3b-fe7a-4451-a5bd-a8ab21a07b2d</cccev:supportsRequirement>
+    </Evidence>
+</Response>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+        Example of an ESPD Response - last update 20100418
+
+        * In this example only one Criterion on convictions is used, to simplify the example.
+        * The value responses have been aggregated inside the Concept(s); 
+        * The Criterion contains only one 'Information Requirement' requesting data from the Economic Operator:
+                - The EO provides, though, Evidences to support the Requirement.
+                - No combination of lists with expected types of evidences is specified.  
+        * All groups and subgroups of questions, as well as the questions themselves have been structured using the class Concept; 
+        * The Economic Operator provides two evidences and an additional document, all of them are placed at the end of the XML document, 
+          and are linked to the Concept via the 'cccev:Concept/cbc:id' element:
+            * An Evidence supporting all the data answered for the whole requirement;
+            * An Evidence supporting the cleansing measures taken to, despite the orginial conviction, still be able to participate in the procurement procedure;     
+            * An additional document reference, at the end of the Requirement, containing a declaration of oath by the convicted person;
+        * The ReferenceFramework form which the Criterion is derived is the Directive 2014/24/EU. The structure of the ReferenceFramework mimics the e-Certis data model.
+        * Notice that Evidences in this example use the 'adms:identifier' object property of the dcat-ap:Dataset class;
+        * See also how the creators of evidences have been instantiated;
+        
+        * The Qualified Name (qName) of the concepts are (can be) used to
+            1) indicate the semantics of the concept via its namespace URI and element local name
+            2) determine what data type the concept has in that namespace          
+        * The preferred codelists are the ones published by the Publications Office of the European Union (EU Vocabularies: https://op.europa.eu/en/web/eu-vocabularies/authority-tables          
+-->
+ 
+<Response xmlns="urn:eu:toop:ns:dataexchange-1p40"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:adms="http://www.w3.org/ns/adms#" 
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcat-ap="http://data.europa.eu/r5r/"
+    xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
+    xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
+    xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+    xmlns:org="http://www.w3.org/ns/org#"
+    xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+    xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" 
+    xmlns:lcn="http://www.w3.org/ns/locn#"
+    xmlns:rov="http://www.w3.org/ns/regorg#" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 ../../toop-cv/toop-cv-semic-cbc.xsd">
+    <cbc:description>description0</cbc:description>
+    <cbc:title>title0</cbc:title>
+    <cbc:id>identifier0</cbc:id>
+    <dct:creator/>
+    <dct:issued>2006-05-04T18:13:51.0</dct:issued>
+    <dct:language>http://www.oxygenxml.com/</dct:language>
+    <dct:modified>2006-05-04T18:13:51.0</dct:modified>
+    <dct:publisher/>
+    <cbc:type>http://www.oxygenxml.com/</cbc:type>
+    <RoutingInformation>
+        <DocumentType AssuranceLevelCodeListID="AssuranceLevelCodeListID3" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID3" AssuranceLevelValue="AssuranceLevelValue3" AssuranceLevelAgencyID="AssuranceLevelAgencyID3" AssuranceLevelAgencyName="AssuranceLevelAgencyName3" schemeID="schemeID1" schemeName="schemeName1" schemeAgencyID="schemeAgencyID1" schemeAgencyName="schemeAgencyName1" schemeVersionID="schemeVersionID1" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DocumentType0</DocumentType>
+        <Process AssuranceLevelCodeListID="AssuranceLevelCodeListID5" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID5" AssuranceLevelValue="AssuranceLevelValue5" AssuranceLevelAgencyID="AssuranceLevelAgencyID5" AssuranceLevelAgencyName="AssuranceLevelAgencyName5" schemeID="schemeID3" schemeName="schemeName3" schemeAgencyID="schemeAgencyID3" schemeAgencyName="schemeAgencyName3" schemeVersionID="schemeVersionID3" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Process0</Process>
+        <DataConsumerElectronicAddress AssuranceLevelCodeListID="AssuranceLevelCodeListID7" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID7" AssuranceLevelValue="AssuranceLevelValue7" AssuranceLevelAgencyID="AssuranceLevelAgencyID7" AssuranceLevelAgencyName="AssuranceLevelAgencyName7" schemeID="schemeID5" schemeName="schemeName5" schemeAgencyID="schemeAgencyID5" schemeAgencyName="schemeAgencyName5" schemeVersionID="schemeVersionID5" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataConsumerElectronicAddress0</DataConsumerElectronicAddress>
+        <DataConsumerCountry AssuranceLevelCodeListID="AssuranceLevelCodeListID9" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID9" AssuranceLevelValue="AssuranceLevelValue9" AssuranceLevelAgencyID="AssuranceLevelAgencyID9" AssuranceLevelAgencyName="AssuranceLevelAgencyName9" listID="listID3" listAgencyID="listAgencyID3" listAgencyName="listAgencyName3" listName="listName3" listVersionID="listVersionID3" name="name3" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">DataConsumerCountry0</DataConsumerCountry>
+        <DataProviderElectronicAddress AssuranceLevelCodeListID="AssuranceLevelCodeListID11" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID11" AssuranceLevelValue="AssuranceLevelValue11" AssuranceLevelAgencyID="AssuranceLevelAgencyID11" AssuranceLevelAgencyName="AssuranceLevelAgencyName11" schemeID="schemeID7" schemeName="schemeName7" schemeAgencyID="schemeAgencyID7" schemeAgencyName="schemeAgencyName7" schemeVersionID="schemeVersionID7" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataProviderElectronicAddress0</DataProviderElectronicAddress>
+        <DataProviderCountry AssuranceLevelCodeListID="AssuranceLevelCodeListID13" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID13" AssuranceLevelValue="AssuranceLevelValue13" AssuranceLevelAgencyID="AssuranceLevelAgencyID13" AssuranceLevelAgencyName="AssuranceLevelAgencyName13" listID="listID5" listAgencyID="listAgencyID5" listAgencyName="listAgencyName5" listName="listName5" listVersionID="listVersionID5" name="name5" languageID="en-US" listURI="http://www.oxygenxml.com/" listSchemeURI="http://www.oxygenxml.com/">DataProviderCountry0</DataProviderCountry>
+    </RoutingInformation>
+    <DataRequestAuthorisation>
+        <ConsentToken format="format1" mimeCode="mimeCode1" encodingCode="encodingCode1"
+            characterSetCode="characterSetCode1" uri="http://www.oxygenxml.com/"
+            filename="filename1">ZGVmYXVsdA==</ConsentToken>
+    </DataRequestAuthorisation>
+    <CopyIndicator/>
+    <Specification/>
+    <DataConsumerDocument/>
+    <DataConsumerGlobalSession/>
+    <DataConsumerRequestPurpose/>
+    <DataRequest/>
+    <DataProvider xsi:type="cagv:PublicOrganizationType">
+        <cbc:id AssuranceLevelValue="High">RNA</cbc:id>
+        <cagv:defaultContactPoint xsi:type="cagv:ContactPointType">
+            <cagv:email>rna.supporto@mise.gov.it</cagv:email>
+            <cagv:internetAddress>https://www.rna.gov.it/sites/PortaleRNA/it_IT/home</cagv:internetAddress>
+        </cagv:defaultContactPoint>
+        <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
+        <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
+        <cagv:formalLocation xsi:type="cagv:LocationType">
+            <cagv:address xsi:type="cac:AddressType">
+                <lcn:fullAddress>Viale America n.201 00144 Roma Italy</lcn:fullAddress>
+                <!-- Compulsory use of EU Vocabularies code lists: https://op.europa.eu/en/web/eu-vocabularies/at-concept-scheme/-/resource/authority/language/?target=Browse&uri=http://publications.europa.eu/resource/authority/language -->
+                <cbc:id>f167174e-5190-42f2-b5be-2bf3a8b2d7b5</cbc:id>
+                <cac:streetName languageID="ITA">Viale America</cac:streetName>
+                <cac:buildingNumber>201</cac:buildingNumber>
+                <cac:cityName languageID="it">Roma</cac:cityName>
+                <cac:postalZone>00144</cac:postalZone>
+                <cac:countryCode listID="Country" listAgencyID="PUBL" listVersionID="20200318-0" listURI="http://publications.europa.eu/resource/dataset/country">ITA</cac:countryCode>
+            </cagv:address>
+        </cagv:formalLocation>
+    </DataProvider>    
+    <EvidenceResponse>
+        <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ERES1</ID>
+        <ErrorCode AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN/INDICATOR</ErrorCode>
+        <ErrorIndicator AssuranceLevelValue="High">true</ErrorIndicator>
+        <IssueDate AssuranceLevelValue="High">2020-06-09+12:00Z</IssueDate>
+        <IssuePlace AssuranceLevelValue="High" languageID="en">Brussels</IssuePlace>
+        <LegalReference AssuranceLevelValue="High" languageID="en">Legislation title</LegalReference>
+        <Name AssuranceLevelValue="High" languageID="en">Evidence response for ESPD Request.</Name>
+        <Remarks AssuranceLevelValue="High" languageID="en">A combination of different types of Evidences captured from e-Certis is used.</Remarks>
+        
+        <!-- This TOOP implementation reuses the CCCEV the Class Requirement, but it could also have used the 'property' requirement. The Requirement Class, in turn, has to use the property 'requirement', which is a 'surrogate' of the Class -->
+
+        <!-- In this example, TOOP decided to instantiate the class. However the rule in the CCCEV is that all the elements in a CCCEV class are either data properties or object properties, 
+             therefore the CCCEV Class invokes the object property 'requirement" inside its sequence (because that is the rule in CCCEV) -->
+ 
+        <!-- Notice that the namespaces espd-voc, espd-pi and espd-struct could be used at the level of each concept too. However by adding them as attributes of the Requirement (or even of the Criterion)
+             they become 'global' (i.e. visible) to any concept used inside the Requirement. --> 
+
+        <Requirement xsi:type="cccev:CriterionType" xmlns:espd-voc="http://semic.eu/sa/espd/voc#" xmlns:espd-pi="http://semic.eu/sa/espd/pi">
+            <cbc:id schemeID="ESPD" schemeVersionID="2.1.1">005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cbc:id>
+            <cbc:name languageID="en">Participation in a criminal organisation</cbc:name>
+            <cbc:description languageID="eng">Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).</cbc:description>
+            <cbc:type AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</cbc:type>
+            <cccev:requirement xsi:type="cccev:InformationRequirementType">
+                <cbc:id>7c637c0c-7703-4389-ba52-02997a055bd7</cbc:id>
+                <cccev:concept>
+                        <cbc:id>a0322b12-dbb0-4763-8326-b5cd33da0291</cbc:id>
+                        <cbc:type>QUESTION_GROUP</cbc:type>
+                        <cbc:qName>espd-voc:conviction</cbc:qName>
+                    <!-- The absence of a processing instruction ON* implies that the next concept needs to be processed -->
+                    <!-- This concept represents a QUESTION addressed to the Economic Operator (EO). If the answer is "true" (Yes) it implies that the EO is in breach of the Law and, therefore all 
+                         the questions inside this Concept need to be answered. Thus the constraining processing instruction (pi) ONTRUE -->
+                    <!-- Optionally the ESPD Criteria Taxonomy tagging of groups and subgroups could be used to indicate that this concept is a group of questions and subgroups of questions --> 
+                    <cccev:concept>
+                            <cbc:id>a06350dc-c2f1-42bf-9c8b-3e92af1fb18b</cbc:id>
+                            <cbc:description>Your answer?</cbc:description>                        
+                            <cbc:type>QUESTION</cbc:type> 
+                            <cbc:qName>espd-voc:yourAnswer</cbc:qName>
+                            <cccev:constraint>
+                                <!-- This constraint will never be referenced from a value, therefore there's no need 
+                                    for the Constraint nor the the Concept cbc:id -->
+                                <cccev:concept>
+                                <cbc:description>Since the answer is affirmative, the group of questions below need to be answered, shown, processed, etc.</cbc:description>
+                                <cbc:qName>espd-pi:ONTRUE</cbc:qName>
+                                </cccev:concept>
+                            </cccev:constraint>
+                            <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>                            
+                            <cccev:concept>
+                                <cbc:id>f5276600-a2b6-4ff6-a90e-b31fe19dae41</cbc:id>
+                                <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                                <cbc:qName>espd-voc:convictionDataSequence</cbc:qName>
+                                <cccev:concept>
+                                    <cbc:id>9efdb0ba-2b1a-4e88-9239-0f75f0f1dcba</cbc:id>
+                                    <cbc:description>Date of conviction</cbc:description>
+                                    <cbc:type>QUESTION</cbc:type>
+                                    <cbc:qName>espd-voc:dateOfConviction</cbc:qName>
+                                    <cccev:value><cccev:dateValue>2020-01-01</cccev:dateValue></cccev:value>                            
+                                </cccev:concept>
+                                <cccev:concept>
+                                    <cbc:id>80d7a381-8198-4b93-b2cc-2b01e2537a7e</cbc:id>
+                                    <cbc:description>Reason</cbc:description>
+                                    <cbc:type>QUESTION</cbc:type>
+                                    <cbc:qName>espd-voc:reason</cbc:qName>
+                                    <cccev:value><cccev:textValue>Participation in collusion.</cccev:textValue></cccev:value>
+                                </cccev:concept>
+                                <cccev:concept>
+                                    <cbc:id>31479ab2-6ff7-467c-80a4-841344222874</cbc:id>
+                                    <cbc:description>Who has been convicted?</cbc:description>
+                                    <cbc:type>QUESTION</cbc:type>
+                                    <cbc:qName>espd-voc:convicted</cbc:qName>
+                                    <cccev:value><cccev:textValue>Smith, John, legal representative</cccev:textValue></cccev:value>
+                                </cccev:concept>
+                                <cccev:concept>
+                                    <cbc:id>0b689697-cbc8-4e38-9fa3-1a776e116b00</cbc:id>
+                                    <cbc:description>Length of the period of exclusion</cbc:description>
+                                    <cbc:type>QUESTION</cbc:type>
+                                    <cbc:qName>espd-voc:convictionPeriod</cbc:qName>                                
+                                    <cccev:value>
+                                     <cccev:periodValue> 
+                                         <cbc:startDate>2020-01-01</cbc:startDate>
+                                         <cbc:durationMeasure unitCode="MONTH">12</cbc:durationMeasure>
+                                     </cccev:periodValue>                                
+                                    </cccev:value>
+                                </cccev:concept>
+                                <!-- The concept following below defines a new decision point. If answered with "true" (Yes) 
+                                     an evidence specifically either aggregated or linked to this concept.  -->
+                                    <cccev:concept>
+                                        <cbc:id>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cbc:id>
+                                        <cbc:type>QUESTION_SUBGROUP</cbc:type>
+                                        <cbc:qName>espd-voc:cleansingDataSequence</cbc:qName>
+                                        <cccev:concept>
+                                            <cbc:id>9b4e6b5a-c57d-4dc5-8f32-eeac62d3e423</cbc:id>
+                                            <cbc:description>Have you taken measures to demonstrate your reliability (Self-Cleaning)?</cbc:description>
+                                            <cbc:type>QUESTION</cbc:type>
+                                            <cbc:qName>espd-voc:cleansingMeasures</cbc:qName>
+                                            <cccev:constraint>
+                                                <!-- no need for ids within constraints -->
+                                                <cccev:concept>
+                                                <cbc:description>If the value is "true"(yes) process the following sub-concepts, just below</cbc:description>
+                                                <cbc:qName>espd-pi:ONTRUE</cbc:qName>
+                                                </cccev:concept>
+                                            </cccev:constraint>
+                                            <cccev:value><cccev:indicatorValue>true</cccev:indicatorValue></cccev:value>
+                                            <cccev:concept>
+                                                    <cbc:id>8ab9a401-8966-4ae3-8a51-c5a5e0b7191f</cbc:id>
+                                                    <cbc:description>Please describe them</cbc:description>
+                                                    <cbc:type>QUESTION</cbc:type>
+                                                    <cbc:qName>espd-voc:describe</cbc:qName>
+                                                    <cccev:value><cccev:textValue>The conviction was repealead and the Superior Court invalidated the previous non-final conviction. See attached certificate issued by the Superior Court.</cccev:textValue></cccev:value>                                                    
+                                            </cccev:concept>                                           
+                                        </cccev:concept>    
+                                    </cccev:concept>
+                            </cccev:concept>                                                    
+                        </cccev:concept>
+                </cccev:concept>
+                <cccev:derivedFrom xsi:type="cccev:ReferenceFrameworkType">
+                    <cbc:description>Exclusion Grounds</cbc:description>
+                    <cbc:title>Article 57 of Directive 2014/24/EU</cbc:title>
+                    <cbc:id AssuranceLevelAgencyID="High">36c9d351-c908-4e81-9022-f2d52db7ffb4</cbc:id>
+                    <dct:language>http://publications.europa.eu/resource/authority/language#ENG</dct:language>
+
+                    <!-- COMPATIBILITY WITH E-CERTIS
+ 
+                        The following nested structure mimics the e-Certis E/R model as follows:
+                            1. The "Division" is of type "Article"
+                            2. An "Article" belongs to a "Resource", in this case a "Directive"
+                            3. This Resource has a "Coverage_Area" of "EU"
+                    -->
+                    <dcat-ap:qualifiedRelation xsi:type="dcat-ap:RelationshipType">
+                            <dct:relation>
+                                <dcat-ap:Dataset>
+                                    <rdf:resource></rdf:resource>
+                                    <cbc:description>Exclusion grounds</cbc:description>
+                                    <cbc:title>Article 57</cbc:title>
+                                    <cbc:type>ARTICLE</cbc:type>
+                                    <dcat-ap:qualifiedRelation>
+                                        <dct:relation>
+                                            <dcat-ap:Dataset>
+                                                <rdf:resource></rdf:resource>
+                                                <cbc:description>DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC</cbc:description>
+                                                <cbc:title>Directive 2014/24/EU</cbc:title>
+                                                <cbc:type>RESOURCE</cbc:type>
+                                                <dcat-ap:qualifiedRelation>
+                                                    <dct:relation>
+                                                        <dcat-ap:Dataset>
+                                                            <rdf:resource></rdf:resource>
+                                                            <cbc:description>European Jurisdiction</cbc:description>
+                                                            <cbc:title>EU</cbc:title>
+                                                            <cbc:type>COVERAGE_AREA</cbc:type>
+                                                        </dcat-ap:Dataset>
+                                                    </dct:relation>
+                                                    <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/coverage_area#EU</dcat-ap:hadRole>
+                                                </dcat-ap:qualifiedRelation>
+                                            </dcat-ap:Dataset>                                                                                        
+                                        </dct:relation>
+                                        <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/resource#DIRECTIVE</dcat-ap:hadRole>                                        
+                                    </dcat-ap:qualifiedRelation>
+                                </dcat-ap:Dataset>
+                            </dct:relation>
+                            <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE</dcat-ap:hadRole>
+                    </dcat-ap:qualifiedRelation>                    
+                </cccev:derivedFrom>
+            </cccev:requirement>
+        </Requirement>        
+    </EvidenceResponse>
+    <Evidence>        
+        <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
+        <cbc:description>ACME's Ltd. representative John Smith was convicted accused of 'Collusion'.</cbc:description>
+        <cbc:title>John Smith 2020-01-01 Conviction</cbc:title>
+        <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+            <dcat-ap:accessURL>
+                <rdf:resource xsi:type="cbc:URIType">https://acme.com/docs/2020101-JS-Collusion.html</rdf:resource>
+                </dcat-ap:accessURL>
+            <foaf:page>
+                <foaf:topic>John Smith's conviction</foaf:topic>
+            </foaf:page>
+            <dcat-ap:downloadURL>
+                <rdf:resource xsi:type="cbc:URIType">https://acme.com/docs/2020101-JS-Collusion.pdf</rdf:resource>
+            </dcat-ap:downloadURL>
+        </dcat-ap:distribution>
+        <cbc:id schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0">EVIDENCE_1</cbc:id> 
+        <dct:creator xsi:type="cagv:PublicOrganizationType">
+            <cagv:defaultContactPoint>
+                <cagv:email>info-magistratura@datos.gov.es</cagv:email>
+                <cagv:telephone>+34917231232</cagv:telephone>                    
+            </cagv:defaultContactPoint>
+            <cagv:formalName languageID="esp">Magistratura Superior Española</cagv:formalName>               
+        </dct:creator>
+        <!-- The evidence supportsRequirement everything stated in the Information Requirement id = 005eb9ed-1347-4ca3-bb29-9bc0db64e1ab, except for the Cleansing which has its own evidence. -->
+        <cccev:supportsRequirement>005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cccev:supportsRequirement>
+    </Evidence>
+    <Evidence>
+        <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
+        <rdf:resource></rdf:resource>
+        <cbc:description>Please access the Superior Court page and use the document id '20200101-JS-Collusion"</cbc:description>
+        <cbc:title>Cleansing-Certificate</cbc:title>
+        <dcat-ap:distribution>
+            <dcat-ap:accessURL>
+                <rdf:resource xsi:type="cbc:URIType">https://datos.gov.es/magistratura/sentencias/contratatacionpublica</rdf:resource>
+            </dcat-ap:accessURL>
+        </dcat-ap:distribution>
+        <cbc:id schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0">EVIDENCE_2</cbc:id>      
+        <dct:creator xsi:type="cagv:PersonType">
+            <cagv:defaultContactPoint><cagv:email>johnsmith@acme.com</cagv:email></cagv:defaultContactPoint>
+            <cagv:givenName>John</cagv:givenName>
+            <cagv:familyName>Smith</cagv:familyName>                
+        </dct:creator>
+        <dcat-ap:landingPage>
+                <foaf:topic>Superior Court Convictions</foaf:topic>
+                <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>
+        </dcat-ap:landingPage>    
+        <!-- This evidence supportsRequirement the concept id = 5f9f09f7-f701-432c-9fdc-c22c124a74c9 (Cleansing) --> 
+        <cccev:supportsRequirement>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:supportsRequirement>           
+    </Evidence>
+    <!-- Additional documents, that SHOULD not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
+          John Smith was absolved. -->    
+    <AdditionalDocumentReference>
+        <dcat-ap:accessURL>
+            <rdf:resource xsi:type="cbc:URIType">http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</rdf:resource>
+        </dcat-ap:accessURL>
+        <cbc:title>John Smith's Declaration of Oath</cbc:title>
+        <cbc:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</cbc:description>
+        <dcat-ap:downloadURL>
+            <rdf:resource xsi:type="cbc:URIType">http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</rdf:resource>
+        </dcat-ap:downloadURL>
+    </AdditionalDocumentReference>
+</Response>

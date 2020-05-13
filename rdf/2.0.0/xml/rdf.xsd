@@ -102,7 +102,7 @@
   </xsd:complexType>
   <!-- Resource-->
   <xsd:complexType name="Resource">
-    <xsd:attribute ref="resource"/>
+    <xsd:attribute ref="resource" use="optional"/>
   </xsd:complexType>
   <!-- CatalogRoot -->
   <!--<xsd:complexType name="CatalogRoot">

@@ -203,9 +203,7 @@
 	<xsd:complexType name="ReferenceFrameworkType">
 		<xsd:complexContent>
 			<xsd:extension base="dcat-ap:DatasetType">
-				<xsd:sequence>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
+				<xsd:sequence/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>

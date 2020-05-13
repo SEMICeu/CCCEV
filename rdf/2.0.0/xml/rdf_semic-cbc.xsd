@@ -111,7 +111,7 @@
   <!-- Resource-->
   <xsd:complexType name="Resource">
     <xsd:sequence>
-      <xsd:element ref="resource"/>
+      <xsd:element ref="resource" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
   <!-- CatalogRoot -->

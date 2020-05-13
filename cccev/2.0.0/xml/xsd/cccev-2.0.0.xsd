@@ -864,26 +864,7 @@
 				</xsd:documentation>
 			</xsd:annotation>
 			<xsd:extension base="dcat-ap:DatasetType">
-				<xsd:sequence>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>cccev:ReferenceFramework. Identifier</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
-									</ccts:Definition>
-									<ccts:Cardinality>0..*</ccts:Cardinality>
-									<ccts:ObjectClass>cccev:ReferenceFramework</ccts:ObjectClass>
-									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-									<ccts:DataType>ID. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-				</xsd:sequence>
+				<xsd:sequence/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>

@@ -156,10 +156,11 @@
                         <dct:description>A concept requesting the value representing the average turnover of the past three years for a specific EO. The response is served by an authoritative business register via the BRIS platform.</dct:description>
                         <dct:title>General Average Turnover Value</dct:title>
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>http://gov.data.es/plataformadecontratacion/rolece/infoeo/concept?id=53882893-f4a8-40ae-99dc-cad7b0748790</dcat-ap:accessURL>
                             <dcat-ap:accessService>
                                 <dct:identifier>ROLECE</dct:identifier>
                                 <dct:title>Register of Tenderers. Spain. Central PQS.</dct:title>
-                                <dcat-ap:endpointURL>http://gov.data.es/plataformadecontratacion/rolece/infoeo/concept?id=53882893-f4a8-40ae-99dc-cad7b0748790</dcat-ap:endpointURL>
+                                <dcat-ap:endpointURL>http://gov.data.es/plataformadecontratacion/rolece/infoeo/</dcat-ap:endpointURL>
                             </dcat-ap:accessService>
                         </dcat-ap:distribution>
                         <cccev:dataSetType>STRUCTURED</cccev:dataSetType>

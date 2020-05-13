@@ -215,6 +215,7 @@
                         <dct:title>XBRL Annual Account</dct:title>
                         <!--  Preferred MIME types -->
                         <dcat-ap:distribution>
+                            <dcat-ap:accessURL>htttp://acme.com/transparency/annualAccounting/2019</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#XBRL</dct:format>
                         </dcat-ap:distribution>
                         <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">ANNUAL_ACCOUNTS_XBRL</skos:notation></adms:identifier>
@@ -297,6 +298,7 @@
         <dct:description>ACME's Ltd. Annual Accounts 2017</dct:description> 
         <dct:title>Annual Accounts 2017</dct:title>
         <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+            <dcat-ap:accessURL>htttp://acme.com/transparency/annualAccounting/2017</dcat-ap:accessURL>
             <foaf:page>
                 <foaf:primaryTopic>Annual Accounts 2017</foaf:primaryTopic>
             </foaf:page>
@@ -319,6 +321,7 @@
         <dct:description>ACME's Ltd. Annual Accounts 2018</dct:description>  
         <dct:title>Annual Accounts 2018</dct:title>
         <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+            <dcat-ap:accessURL>https://europa.eu/bris/doc?id=annacc-acme-2018</dcat-ap:accessURL>
             <foaf:page><foaf:primaryTopic>Annual Accounts 2018</foaf:primaryTopic></foaf:page>
             <dcat-ap:downloadURL>https://europa.eu/bris/doc?id=annacc-acme-2018</dcat-ap:downloadURL>            
         </dcat-ap:distribution>

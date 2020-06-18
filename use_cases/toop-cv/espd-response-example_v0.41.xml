@@ -15,7 +15,7 @@
  xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
  xmlns:ns0="urn:eu:toop:ns:dataexchange-1p40"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 file:/C:/GIT/Semic/use_cases/toop-cv/toop-cv.xsd">
+ xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 file:./toop-cv.xsd">
     <dct:Title AssuranceLevelCodeListID="AssuranceLevelCodeListID0" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID0"
          AssuranceLevelValue="AssuranceLevelValue0" AssuranceLevelAgencyID="AssuranceLevelAgencyID0"
          AssuranceLevelAgencyName="AssuranceLevelAgencyName0" languageID="en-US" languageLocaleID="languageLocaleID0">Title0</dct:Title>

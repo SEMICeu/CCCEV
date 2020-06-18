@@ -73,6 +73,7 @@
     <DataRequest/>
     <DataProvider xsi:type="cagv:PublicOrganizationType">
         <cbc:id AssuranceLevelValue="High">RNA</cbc:id>
+        <cbc:type listID="AgentTypes" listAgencyID="PUBL" listVersionID="20200618-0" listURI="http://publications.europa.eu/resource/dataset/agentTypes">PORG</cbc:type>
         <cagv:defaultContactPoint xsi:type="cagv:ContactPointType">
             <cagv:email>rna.supporto@mise.gov.it</cagv:email>
             <cagv:internetAddress>https://www.rna.gov.it/sites/PortaleRNA/it_IT/home</cagv:internetAddress>
@@ -210,6 +211,9 @@
                                 <dcat-ap:Dataset>
                                     <dct:description>Exclusion grounds</dct:description>
                                     <dct:title>Article 57</dct:title>
+                                    <adms:identifier>
+                                        <skos:notation>36c9d351-c908-4e81-9022-f2d52db7ffb4</skos:notation>
+                                    </adms:identifier>
                                     <dct:type>ARTICLE</dct:type>
                                     <dcat-ap:qualifiedRelation>
                                         <dct:relation>
@@ -235,7 +239,7 @@
                             </dct:relation>
                             <dcat-ap:hadRole>https://data.europa.eu/euodp/en/data/dataset/ecertis/division_type#ARTICLE</dcat-ap:hadRole>
                     </dcat-ap:qualifiedRelation>                    
-                    <cbc:id AssuranceLevelAgencyID="High">36c9d351-c908-4e81-9022-f2d52db7ffb4</cbc:id>
+            
                 </cccev:derivedFrom>  
             </cccev:requirement>
 

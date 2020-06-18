@@ -123,6 +123,7 @@
 			<xsd:sequence>
 				<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
 				<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="unbounded"/>
 				<xsd:element ref="alias" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="defaultContactPoint" minOccurs="0" maxOccurs="1"/>
 				<xsd:element ref="roleOf" minOccurs="0" maxOccurs="unbounded"/>

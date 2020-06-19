@@ -112,7 +112,14 @@
 	<xsd:group name="org_OrganizationElements">
 		<xsd:sequence>
 			<xsd:element ref="skos:prefLabel" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="skos:altLabel" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element ref="skos:altLabel" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:classification" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:purpose" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:hasUnit" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:hasSubOrganization" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:linkedTo" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:subOrganizationOf" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="org:transitiveSubOrganizationOf" minOccurs="0" maxOccurs="unbounded"/>			
 		</xsd:sequence>
 	</xsd:group>
 

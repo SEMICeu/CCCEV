@@ -70,6 +70,11 @@
             <cagv:email>rna.supporto@mise.gov.it</cagv:email>
             <cagv:internetAddress>https://www.rna.gov.it/sites/PortaleRNA/it_IT/home</cagv:internetAddress>
         </cagv:defaultContactPoint>
+        <org:classification>
+            <cbc:code listID="OrganizationType" listAgencyID="PUBL" listVersionID="20170920-0" listURI="http://publications.europa.eu/resource/authority/organization-type">
+                OFFICE
+            </cbc:code>
+        </org:classification>
         <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
         <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
         <cagv:formalLocation xsi:type="cagv:LocationType">

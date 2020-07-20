@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="spdx:xsd::1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+           xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" 
            attributeFormDefault="unqualified"
            elementFormDefault="qualified"
            targetNamespace="spdx:xsd::1.0"
            version="1">
     
     
-    <xs:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+    <xs:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
         schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
     
     <!--Object properties-->

@@ -10,6 +10,7 @@
 	
 	<!-- Data properties -->
 	
+	<xsd:element name="account" type="xsd:anyType"/>
 	<xsd:element name="currentProject" type="xsd:anyType"/>
 	<xsd:element name="lastName" type="xsd:string"/>
 	<xsd:element name="familyName" type="xsd:string"/>
@@ -37,7 +38,9 @@
 	<!-- Element definition -->
 
 	<xsd:complexType name="AgentType">
-		<xsd:sequence/>		
+		<xsd:sequence>
+			<xsd:element ref="account" minOccurs="0" maxOccurs="0"></xsd:element>
+		</xsd:sequence>		
 	</xsd:complexType>
 	
 	<xsd:complexType name="DocumentType">

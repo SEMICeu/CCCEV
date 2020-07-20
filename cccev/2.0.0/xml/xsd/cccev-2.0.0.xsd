@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="https://semic.org/sa/cv/cccev-2.0.0#" xmlns:dcat-ap="http://data.europa.eu/r5r/"
-	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
-	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+<xsd:schema xmlns="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#"
+	xmlns:dcat-ap="http://data.europa.eu/r5r/"
+	xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+	xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 	xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-	xmlns:an="https://semic.org/sa/cv/common/semic-annot-2.0.0#"
+	xmlns:an="https://data.europe.eu/semanticassets/ns/cv/common/semic-annot-2.0.0#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	targetNamespace="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
 
-	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
+	<xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
 		schemaLocation="../../../../common/2.0.0/xml/xsd/CV-CommonAggregateComponents.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	<xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 		schemaLocation="../../../../common/2.0.0/xml/xsd/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
 		schemaLocation="../../../../common/2.0.0/xml/xsd/CCTS_CCT_SchemaModule-2.3.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-		schemaLocation="../../../../cagv/2.0.0/xml/xsd/CV-Agent.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2002/07/owl#"
 		schemaLocation="../../../../owl/2.0.0/xml/owl.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"

@@ -1,6 +1,6 @@
 <xsd:schema xmlns="http://www.w3.org/ns/odrl/2/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+    xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" 
     version="2.1"
     targetNamespace="http://www.w3.org/ns/odrl/2/"
     elementFormDefault="qualified"
@@ -10,7 +10,7 @@
             This is the XML Schema for ODRL Version 2.1 (Final Specification, 5 March 2015) Copyright © 2015 the Contributors to the Final Specification, published by the W3C ODRL Community Group (https://www.w3.org/community/odrl/) under the W3C Community Final Specification Agreement (http://www.w3.org/community/about/agreements/final/). A human-readable summary is available (http://www.w3.org/community/about/agreements/fsa-deed/).
         </xsd:documentation>
     </xsd:annotation>
-    <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+    <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
         schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
     
     <xsd:element name="hasPolicy" type="Policy"/>

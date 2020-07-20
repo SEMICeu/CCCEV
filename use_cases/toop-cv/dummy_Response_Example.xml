@@ -2,12 +2,11 @@
 <toop:Response xmlns:foaf="http://xmlns.com/foaf/"
  xmlns:org="http://www.w3.org/ns/org#"
  xmlns:dct="http://purl.org/dc/terms/"
- xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
- xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
- xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
- xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
+ xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
+ xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+ xmlns:cccev="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#"
  xmlns:dcat-ap="http://data.europa.eu/r5r/"
- xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+ xmlns:dt="https://data.europe.eu/semanticassets/ns/cv/common/dataTypes-2.0.0#"
  xmlns:lcn="http://www.w3.org/ns/locn#"
  xmlns:rov="http://www.w3.org/ns/regorg#"
  xmlns:ccts="urn:un:unece:uncefact:documentation:2"
@@ -15,8 +14,8 @@
  xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
  xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 file:./toop-cv.xsd">
-    <dct:Description AssuranceLevelCodeListID="AssuranceLevelCodeListID0" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID0"
+ xsi:schemaLocation="urn:eu:toop:ns:dataexchange-1p40 file:./toop-cv-semic-cbc.xsd">
+     <dct:Description AssuranceLevelCodeListID="AssuranceLevelCodeListID0" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID0"
          AssuranceLevelAgencyID="AssuranceLevelAgencyID0" AssuranceLevelAgencyName="AssuranceLevelAgencyName0"
          languageID="en-US" languageLocaleID="languageLocaleID0">Description0</dct:Description>
     <dcat-ap:Distribution>
@@ -102,144 +101,7 @@
          AssuranceLevelAgencyID="AssuranceLevelAgencyID19" AssuranceLevelAgencyName="AssuranceLevelAgencyName19"
          schemeID="schemeID10" schemeName="schemeName10" schemeAgencyID="schemeAgencyID10" schemeAgencyName="schemeAgencyName10"
          schemeVersionID="schemeVersionID10" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">DataRequest0</toop:DataRequest>
-    <toop:DataProvider>
-        <toop:AdministrativeUnit AssuranceLevelCodeListID="AssuranceLevelCodeListID20" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID20"
-             AssuranceLevelAgencyID="AssuranceLevelAgencyID20" AssuranceLevelAgencyName="AssuranceLevelAgencyName20"
-             languageID="en-US" languageLocaleID="languageLocaleID5">AdministrativeUnit0</toop:AdministrativeUnit>
-        <toop:ContactDetails>
-            <cagv:Email AssuranceLevelCodeListID="AssuranceLevelCodeListID21" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID21"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID21" AssuranceLevelAgencyName="AssuranceLevelAgencyName21"
-                 schemeID="schemeID11" schemeName="schemeName11" schemeAgencyID="schemeAgencyID11" schemeAgencyName="schemeAgencyName11"
-                 schemeVersionID="schemeVersionID11" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">Email0</cagv:Email>
-            <cagv:Fax AssuranceLevelCodeListID="AssuranceLevelCodeListID22" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID22"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID22" AssuranceLevelAgencyName="AssuranceLevelAgencyName22"
-                 languageID="en-US" languageLocaleID="languageLocaleID6">Fax0</cagv:Fax>
-            <cagv:Telephone AssuranceLevelCodeListID="AssuranceLevelCodeListID23" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID23"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID23" AssuranceLevelAgencyName="AssuranceLevelAgencyName23"
-                 languageID="en-US" languageLocaleID="languageLocaleID7">Telephone0</cagv:Telephone>
-            <cagv:InternetAddress AssuranceLevelCodeListID="AssuranceLevelCodeListID24" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID24"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID24" AssuranceLevelAgencyName="AssuranceLevelAgencyName24"
-                 schemeID="schemeID12" schemeName="schemeName12" schemeAgencyID="schemeAgencyID12" schemeAgencyName="schemeAgencyName12"
-                 schemeVersionID="schemeVersionID12" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">InternetAddress0</cagv:InternetAddress>
-            <cagv:Description AssuranceLevelCodeListID="AssuranceLevelCodeListID25" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID25"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID25" AssuranceLevelAgencyName="AssuranceLevelAgencyName25"
-                 languageID="en-US" languageLocaleID="languageLocaleID8">Description0</cagv:Description>
-            <cagv:Channel>
-            </cagv:Channel>
-            <cagv:AvailabilityRestriction>
-            </cagv:AvailabilityRestriction>
-        </toop:ContactDetails>
-        <cbc:Name AssuranceLevelCodeListID="AssuranceLevelCodeListID26" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID26"
-             AssuranceLevelAgencyID="AssuranceLevelAgencyID26" AssuranceLevelAgencyName="AssuranceLevelAgencyName26"
-             languageID="en-US" languageLocaleID="languageLocaleID9">Name0</cbc:Name>
-        <toop:LegalAddress id="http://www.oxygenxml.com/">
-            <lcn:fullAddress>fullAddress0</lcn:fullAddress>
-            <lcn:poBox>poBox0</lcn:poBox>
-            <lcn:thoroughfare>thoroughfare0</lcn:thoroughfare>
-            <lcn:locatorDesignator>locatorDesignator0</lcn:locatorDesignator>
-            <lcn:locatorName>locatorName0</lcn:locatorName>
-            <lcn:addressArea>addressArea0</lcn:addressArea>
-            <lcn:postName>postName0</lcn:postName>
-            <lcn:adminUnitLevel1>adminUnitLevel10</lcn:adminUnitLevel1>
-            <lcn:adminUnitLevel2>adminUnitLevel20</lcn:adminUnitLevel2>
-            <lcn:postCode>postCode0</lcn:postCode>
-            <lcn:addressId>addressId0</lcn:addressId>
-            <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID27" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID27"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID27" AssuranceLevelAgencyName="AssuranceLevelAgencyName27"
-                 schemeID="schemeID13" schemeName="schemeName13" schemeAgencyID="schemeAgencyID13" schemeAgencyName="schemeAgencyName13"
-                 schemeVersionID="schemeVersionID13" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID0</cbc:ID>
-            <cbc:AddressTypeCode AssuranceLevelCodeListID="AssuranceLevelCodeListID28" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID28"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID28" AssuranceLevelAgencyName="AssuranceLevelAgencyName28"
-                 listID="listID2" listAgencyID="listAgencyID2" listAgencyName="listAgencyName2" listName="listName2"
-                 listVersionID="listVersionID2" name="name2" languageID="en-US" listURI="http://www.oxygenxml.com/"
-                 listSchemeURI="http://www.oxygenxml.com/">AddressTypeCode0</cbc:AddressTypeCode>
-            <cbc:AddressFormatCode AssuranceLevelCodeListID="AssuranceLevelCodeListID29" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID29"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID29" AssuranceLevelAgencyName="AssuranceLevelAgencyName29"
-                 listID="listID3" listAgencyID="listAgencyID3" listAgencyName="listAgencyName3" listName="listName3"
-                 listVersionID="listVersionID3" name="name3" languageID="en-US" listURI="http://www.oxygenxml.com/"
-                 listSchemeURI="http://www.oxygenxml.com/">AddressFormatCode0</cbc:AddressFormatCode>
-            <cbc:PostBox AssuranceLevelCodeListID="AssuranceLevelCodeListID30" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID30"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID30" AssuranceLevelAgencyName="AssuranceLevelAgencyName30"
-                 languageID="en-US" languageLocaleID="languageLocaleID10">PostBox0</cbc:PostBox>
-            <cbc:Floor AssuranceLevelCodeListID="AssuranceLevelCodeListID31" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID31"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID31" AssuranceLevelAgencyName="AssuranceLevelAgencyName31"
-                 languageID="en-US" languageLocaleID="languageLocaleID11">Floor0</cbc:Floor>
-            <cbc:Room AssuranceLevelCodeListID="AssuranceLevelCodeListID32" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID32"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID32" AssuranceLevelAgencyName="AssuranceLevelAgencyName32"
-                 languageID="en-US" languageLocaleID="languageLocaleID12">Room0</cbc:Room>
-            <cbc:StreetName AssuranceLevelCodeListID="AssuranceLevelCodeListID33" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID33"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID33" AssuranceLevelAgencyName="AssuranceLevelAgencyName33"
-                 languageID="en-US" languageLocaleID="languageLocaleID13">StreetName0</cbc:StreetName>
-            <cbc:AdditionalStreetName AssuranceLevelCodeListID="AssuranceLevelCodeListID34" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID34"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID34" AssuranceLevelAgencyName="AssuranceLevelAgencyName34"
-                 languageID="en-US" languageLocaleID="languageLocaleID14">AdditionalStreetName0</cbc:AdditionalStreetName>
-            <cbc:BlockName AssuranceLevelCodeListID="AssuranceLevelCodeListID35" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID35"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID35" AssuranceLevelAgencyName="AssuranceLevelAgencyName35"
-                 languageID="en-US" languageLocaleID="languageLocaleID15">BlockName0</cbc:BlockName>
-            <cbc:BuildingName AssuranceLevelCodeListID="AssuranceLevelCodeListID36" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID36"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID36" AssuranceLevelAgencyName="AssuranceLevelAgencyName36"
-                 languageID="en-US" languageLocaleID="languageLocaleID16">BuildingName0</cbc:BuildingName>
-            <cbc:BuildingNumber AssuranceLevelCodeListID="AssuranceLevelCodeListID37" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID37"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID37" AssuranceLevelAgencyName="AssuranceLevelAgencyName37"
-                 languageID="en-US" languageLocaleID="languageLocaleID17">BuildingNumber0</cbc:BuildingNumber>
-            <cbc:Description AssuranceLevelCodeListID="AssuranceLevelCodeListID38" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID38"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID38" AssuranceLevelAgencyName="AssuranceLevelAgencyName38"
-                 languageID="en-US" languageLocaleID="languageLocaleID18">Description0</cbc:Description>
-            <cbc:InhouseMail AssuranceLevelCodeListID="AssuranceLevelCodeListID39" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID39"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID39" AssuranceLevelAgencyName="AssuranceLevelAgencyName39"
-                 languageID="en-US" languageLocaleID="languageLocaleID19">InhouseMail0</cbc:InhouseMail>
-            <cbc:Department AssuranceLevelCodeListID="AssuranceLevelCodeListID40" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID40"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID40" AssuranceLevelAgencyName="AssuranceLevelAgencyName40"
-                 languageID="en-US" languageLocaleID="languageLocaleID20">Department0</cbc:Department>
-            <cbc:MarkAttention AssuranceLevelCodeListID="AssuranceLevelCodeListID41" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID41"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID41" AssuranceLevelAgencyName="AssuranceLevelAgencyName41"
-                 languageID="en-US" languageLocaleID="languageLocaleID21">MarkAttention0</cbc:MarkAttention>
-            <cbc:MarkCare AssuranceLevelCodeListID="AssuranceLevelCodeListID42" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID42"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID42" AssuranceLevelAgencyName="AssuranceLevelAgencyName42"
-                 languageID="en-US" languageLocaleID="languageLocaleID22">MarkCare0</cbc:MarkCare>
-            <cbc:PlotIdentification AssuranceLevelCodeListID="AssuranceLevelCodeListID43" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID43"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID43" AssuranceLevelAgencyName="AssuranceLevelAgencyName43"
-                 languageID="en-US" languageLocaleID="languageLocaleID23">PlotIdentification0</cbc:PlotIdentification>
-            <cbc:CitySubdivisionName AssuranceLevelCodeListID="AssuranceLevelCodeListID44" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID44"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID44" AssuranceLevelAgencyName="AssuranceLevelAgencyName44"
-                 languageID="en-US" languageLocaleID="languageLocaleID24">CitySubdivisionName0</cbc:CitySubdivisionName>
-            <cbc:CityName AssuranceLevelCodeListID="AssuranceLevelCodeListID45" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID45"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID45" AssuranceLevelAgencyName="AssuranceLevelAgencyName45"
-                 languageID="en-US" languageLocaleID="languageLocaleID25">CityName0</cbc:CityName>
-            <cbc:PostalZone AssuranceLevelCodeListID="AssuranceLevelCodeListID46" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID46"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID46" AssuranceLevelAgencyName="AssuranceLevelAgencyName46"
-                 languageID="en-US" languageLocaleID="languageLocaleID26">PostalZone0</cbc:PostalZone>
-            <cbc:CountrySubentity AssuranceLevelCodeListID="AssuranceLevelCodeListID47" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID47"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID47" AssuranceLevelAgencyName="AssuranceLevelAgencyName47"
-                 languageID="en-US" languageLocaleID="languageLocaleID27">CountrySubentity0</cbc:CountrySubentity>
-            <cbc:CountrySubentityCode AssuranceLevelCodeListID="AssuranceLevelCodeListID48" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID48"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID48" AssuranceLevelAgencyName="AssuranceLevelAgencyName48"
-                 listID="listID4" listAgencyID="listAgencyID4" listAgencyName="listAgencyName4" listName="listName4"
-                 listVersionID="listVersionID4" name="name4" languageID="en-US" listURI="http://www.oxygenxml.com/"
-                 listSchemeURI="http://www.oxygenxml.com/">CountrySubentityCode0</cbc:CountrySubentityCode>
-            <cbc:Region AssuranceLevelCodeListID="AssuranceLevelCodeListID49" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID49"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID49" AssuranceLevelAgencyName="AssuranceLevelAgencyName49"
-                 languageID="en-US" languageLocaleID="languageLocaleID28">Region0</cbc:Region>
-            <cbc:District AssuranceLevelCodeListID="AssuranceLevelCodeListID50" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID50"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID50" AssuranceLevelAgencyName="AssuranceLevelAgencyName50"
-                 languageID="en-US" languageLocaleID="languageLocaleID29">District0</cbc:District>
-            <cbc:TimezoneOffset AssuranceLevelCodeListID="AssuranceLevelCodeListID51" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID51"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID51" AssuranceLevelAgencyName="AssuranceLevelAgencyName51"
-                 languageID="en-US" languageLocaleID="languageLocaleID30">TimezoneOffset0</cbc:TimezoneOffset>
-            <cbc:AddressLine AssuranceLevelCodeListID="AssuranceLevelCodeListID52" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID52"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID52" AssuranceLevelAgencyName="AssuranceLevelAgencyName52"
-                 languageID="en-US" languageLocaleID="languageLocaleID31">AddressLine0</cbc:AddressLine>
-            <cbc:CountryCode AssuranceLevelCodeListID="AssuranceLevelCodeListID53" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID53"
-                 AssuranceLevelAgencyID="AssuranceLevelAgencyID53" AssuranceLevelAgencyName="AssuranceLevelAgencyName53"
-                 listID="listID5" listAgencyID="listAgencyID5" listAgencyName="listAgencyName5" listName="listName5"
-                 listVersionID="listVersionID5" name="name5" languageID="en-US" listURI="http://www.oxygenxml.com/"
-                 listSchemeURI="http://www.oxygenxml.com/">CountryCode0</cbc:CountryCode>
-        </toop:LegalAddress>
-        <cbc:ID AssuranceLevelCodeListID="AssuranceLevelCodeListID54" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID54"
-             AssuranceLevelAgencyID="AssuranceLevelAgencyID54" AssuranceLevelAgencyName="AssuranceLevelAgencyName54"
-             schemeID="schemeID14" schemeName="schemeName14" schemeAgencyID="schemeAgencyID14" schemeAgencyName="schemeAgencyName14"
-             schemeVersionID="schemeVersionID14" schemeDataURI="http://www.oxygenxml.com/" schemeURI="http://www.oxygenxml.com/">ID1</cbc:ID>
-    </toop:DataProvider>
+    <toop:DataProvider/>
     <toop:Error>
         <toop:Category AssuranceLevelCodeListID="AssuranceLevelCodeListID55" AssuranceLevelCodeListVerionID="AssuranceLevelCodeListVerionID55"
              AssuranceLevelAgencyID="AssuranceLevelAgencyID55" AssuranceLevelAgencyName="AssuranceLevelAgencyName55"

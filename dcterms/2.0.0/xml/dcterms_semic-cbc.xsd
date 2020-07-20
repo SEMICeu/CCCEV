@@ -2,7 +2,7 @@
 <!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
 <xsd:schema xmlns="http://purl.org/dc/terms/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -12,7 +12,7 @@
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	
-	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+	<xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.0/xml/foaf_semic-cbc.xsd"/>
 	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.0/xml/locn_semic-cbc.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.0/xml/skos.xsd"/>

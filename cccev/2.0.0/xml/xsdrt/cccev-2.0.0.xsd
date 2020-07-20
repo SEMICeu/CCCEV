@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="https://semic.org/sa/cv/cccev-2.0.0#" 
+<xsd:schema xmlns="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" 
 	xmlns:dcat-ap="http://data.europa.eu/r5r/"
-	xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
-	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+	xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
+	targetNamespace="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
 
-	<xsd:import namespace="https://semic.org/sa/cv/common/cac-2.0.0#"
+	<xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
 		schemaLocation="../../../../common/2.0.0/xml/xsdrt/CV-CommonAggregateComponents.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+	<xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 		schemaLocation="../../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+  xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
   xmlns:dcat="http://www.w3.org/ns/dcat#"
   
   targetNamespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   elementFormDefault="qualified" attributeFormDefault="qualified">
   
-  <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+  <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
   
   
   <xsd:annotation>

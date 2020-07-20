@@ -25,15 +25,14 @@
     xmlns:adms="http://www.w3.org/ns/adms#" 
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:dcat-ap="http://data.europa.eu/r5r/"
-    xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-    xmlns:cac="https://semic.org/sa/cv/common/cac-2.0.0#"
-    xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+    xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+    xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" 
     xmlns:org="http://www.w3.org/ns/org#"
-    xmlns:dt="https://semic.org/sa/cv/common/dataTypes-2.0.0#"
+    xmlns:dt="https://data.europe.eu/semanticassets/ns/cv/common/dataTypes-2.0.0#"
     xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-    xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#" 
+    xmlns:cccev="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" 
     xmlns:lcn="http://www.w3.org/ns/locn#"
     xmlns:rov="http://www.w3.org/ns/regorg#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"    
@@ -66,33 +65,7 @@
     <DataConsumerGlobalSession/>
     <DataConsumerRequestPurpose/>
     <DataRequest/>
-    <DataProvider xsi:type="cagv:PublicOrganizationType">
-        <cbc:id AssuranceLevelValue="High">RNA</cbc:id>
-        <cbc:type listID="AgentTypes" listAgencyID="PUBL" listVersionID="20200618-0" listURI="http://publications.europa.eu/resource/dataset/agentTypes">PORG</cbc:type>
-        <cagv:defaultContactPoint xsi:type="cagv:ContactPointType">
-            <cagv:email>rna.supporto@mise.gov.it</cagv:email>
-            <cagv:internetAddress>https://www.rna.gov.it/sites/PortaleRNA/it_IT/home</cagv:internetAddress>
-        </cagv:defaultContactPoint>
-        <org:classification>
-            <cbc:code listID="OrganizationType" listAgencyID="PUBL" listVersionID="20170920-0" listURI="http://publications.europa.eu/resource/authority/organization-type">
-                OFFICE
-            </cbc:code>
-        </org:classification>
-        <cagv:taxIdentifier>80230390587</cagv:taxIdentifier>
-        <cagv:formalName>Registro Nazionale degli Aiuti di Stato</cagv:formalName>
-        <cagv:formalLocation xsi:type="cagv:LocationType">
-            <cagv:address xsi:type="cac:AddressType">
-                <lcn:fullAddress>Viale America n.201 00144 Roma Italy</lcn:fullAddress>
-                <!-- Compulsory use of EU Vocabularies code lists: https://op.europa.eu/en/web/eu-vocabularies/at-concept-scheme/-/resource/authority/language/?target=Browse&uri=http://publications.europa.eu/resource/authority/language -->
-                <cbc:id>f167174e-5190-42f2-b5be-2bf3a8b2d7b5</cbc:id>
-                <cac:streetName languageID="ITA">Viale America</cac:streetName>
-                <cac:buildingNumber>201</cac:buildingNumber>
-                <cac:cityName languageID="it">Roma</cac:cityName>
-                <cac:postalZone>00144</cac:postalZone>
-                <cac:countryCode listID="Country" listAgencyID="PUBL" listVersionID="20200318-0" listURI="http://publications.europa.eu/resource/dataset/country">ITA</cac:countryCode>
-            </cagv:address>
-        </cagv:formalLocation>
-    </DataProvider>    
+    <DataProvider/>
     <EvidenceResponse>
         <ID AssuranceLevelValue="High" schemeID="toop" schemeVersionID="1p40">ERES1</ID>
         <ErrorCode AssuranceLevelValue="High" listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1">NOT-KNOWN/INDICATOR</ErrorCode>
@@ -247,10 +220,7 @@
             <dcat-ap:downloadURL>https://europa.eu/bris/doc?id=annacc-acme-2017</dcat-ap:downloadURL>                        
         </dcat-ap:distribution>
         <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
-        <dct:creator xsi:type="cagv:PublicOrganizationType">
-            <cagv:formalName languageID="esp">Registro Mercantil Central Español</cagv:formalName>               
-            <cagv:formalName languageID="eng">Central Spanish Business Register</cagv:formalName>
-        </dct:creator>
+        <dct:creator/>
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
         <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
         <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
@@ -267,10 +237,7 @@
             <dcat-ap:downloadURL>https://europa.eu/bris/doc?id=annacc-acme-2018</dcat-ap:downloadURL>            
         </dcat-ap:distribution>
         <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier>
-        <dct:creator xsi:type="cagv:PublicOrganizationType">
-            <cagv:formalName languageID="esp">Registro Mercantil Central Español</cagv:formalName>               
-            <cagv:formalName languageID="eng">Central Spanish Business Register</cagv:formalName>
-        </dct:creator>
+        <dct:creator/>
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
         <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
         <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>
@@ -293,10 +260,7 @@
             </dcat-ap:accessService>                
         </dcat-ap:distribution>
         <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">BRIS-XBRL-ANACC-2017</skos:notation></adms:identifier> 
-        <dct:creator xsi:type="cagv:PublicOrganizationType">
-            <cagv:formalName languageID="esp">Registro Oficial de Licitadores y Empresas Clasificadas (ROLECE)</cagv:formalName>               
-            <cagv:formalName languageID="eng">Central Register of Tenderers and Prequalified Businesses</cagv:formalName>
-        </dct:creator>
+        <dct:creator/>
         <cccev:conformsTo>ANNUAL_ACCOUNTS_XBRL</cccev:conformsTo>
         <!-- you can both specify that the evidence supportsRequirement the requirement and the concept -->
         <cccev:supportsRequirement>399a3111-0842-43fe-a499-8b3ab684e0d0</cccev:supportsRequirement>

@@ -13,15 +13,15 @@
 <xsd:schema
 xmlns="http://example.org/" 
 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-xmlns:cccev="https://semic.org/sa/cv/cccev-2.0.0#"
-xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+xmlns:cccev="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#"
+xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 xmlns:dct="http://purl.org/dc/terms/"
 elementFormDefault="qualified"
 targetNamespace="http://example.org/">
     <!--imports -->
-    <xsd:import namespace="https://semic.org/sa/cv/cccev-2.0.0#" 
+    <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" 
         schemaLocation="../../cccev/2.0.0/xml/cccev-2.0.0.xsd"/>
-    <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+    <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 		schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
     <xsd:import namespace="http://purl.org/dc/terms/"
 		schemaLocation="../../../dcterms/2.0.0/xml/dcterms.xsd"/>

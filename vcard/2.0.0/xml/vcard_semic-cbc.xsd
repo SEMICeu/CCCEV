@@ -3,7 +3,7 @@
   elementFormDefault="qualified"
   targetNamespace="http://www.w3.org/2001/vcard-rdf/3.0#"
   xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#" 
+  xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" 
   xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:xml="http://www.w3.org/XML/1998/namespace">
@@ -27,7 +27,7 @@
   <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
   
-  <import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
+  <import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
     schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
   
   <element name="VCard" type="vCard:VCARDType"/>

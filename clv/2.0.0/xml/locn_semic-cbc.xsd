@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.w3.org/ns/locn#" 
            xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+           xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
            targetNamespace="http://www.w3.org/ns/locn#"
            elementFormDefault="qualified"> 
     
-    <xs:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+    <xs:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 
     <!-- Data properties declarations-->
     <xs:element name="poBox" type="cbc:TextType"/>

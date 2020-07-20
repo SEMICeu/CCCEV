@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- CCCEV-related namespaces are temporary for the time being. They point to the GitHub where the development is being done. -->
-<xsd:schema xmlns="https://semic.org/sa/cv/common/cac-2.0.0#"
-   xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
+<xsd:schema xmlns="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+   xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:lcn="http://www.w3.org/ns/locn#"
-	targetNamespace="https://semic.org/sa/cv/common/cac-2.0.0#" 
+	targetNamespace="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#" 
 	elementFormDefault="qualified" 
 	attributeFormDefault="unqualified" version="2.0.0">
 	<!-- For the imports, the paths are relative to the folder structure used in the development GitHub. This faciliates the packaging into a volume aimed to distribution of any vocabulary release. -->
-   <xsd:import namespace="https://semic.org/sa/cv/common/cbc-2.0.0#" schemaLocation="./CV-CommonBasicComponents.xsd"/>
+   <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" schemaLocation="./CV-CommonBasicComponents.xsd"/>
    <xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../../clv/2.0.0/xml/locn.xsd"/>
    <!-- ===== Element Declarations ===== -->
    

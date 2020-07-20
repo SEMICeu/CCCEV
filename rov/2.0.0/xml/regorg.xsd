@@ -17,7 +17,7 @@
         schemaLocation="../../../org/2.0.0/xml/org.xsd"/>
     <xsd:import
         namespace="https://semic.org/sa/cv/common/cbc-2.0.0#"
-        schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+        schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
     
     <!-- Element declaration -->
     

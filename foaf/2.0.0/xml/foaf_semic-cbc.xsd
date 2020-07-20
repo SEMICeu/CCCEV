@@ -34,13 +34,6 @@
 	
 	<xsd:element name="knows" type="PersonType"/>
 	<xsd:element name="page" type="DocumentType"/>
-	
-	
-	<!-- Class declarations -->
-	<xsd:element name="Agent" type="AgentType"/>
-	<xsd:element name="Document" type="DocumentType"/>
-	<xsd:element name="Organization" type="OrganizationType"/>
-	<xsd:element name="Person" type="PersonType"/>
 		
 	<!-- Element definition -->
 

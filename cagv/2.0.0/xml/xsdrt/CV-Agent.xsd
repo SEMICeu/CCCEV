@@ -65,20 +65,6 @@
 	<xsd:element name="role" type="RoleType"/>
 	<xsd:element name="registeredLocation" type="LocationType"/>
 	
-	<!-- Classe declarations  -->
-	<xsd:element name="Agent" type="AgentType"/>	
-	<xsd:element name="Channel" type="ChannelType"/>
-	<xsd:element name="ContactPoint" type="ContactPointType"/>
-	<xsd:element name="FormalOrganization" type="FormalOrganizationType"/>
-	<xsd:element name="Location" type="LocationType"/>
-	<xsd:element name="OpeningHoursSpecificationHours" type="OpeningHoursSpecificationType"/>	
-	<xsd:element name="Organization" type="OrganizationType"/>
-	<xsd:element name="Person" type="PersonType"/>
-	<xsd:element name="PublicOrganization" type="PublicOrganizationType"/>
-	<xsd:element name="RegisteredOrganization" type="RegisteredOrganizationType"/>
-	<xsd:element name="Role" type="RoleType"/>
-	<xsd:element name="System" type="SystemType"/>
-	
 	<!-- Group definitions -->
 	<xsd:group name="cagv_RoleElements">
 		<xsd:sequence>

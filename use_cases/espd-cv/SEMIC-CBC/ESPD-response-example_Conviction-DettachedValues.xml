@@ -402,7 +402,7 @@
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
         <cbc:description>ACME's Ltd. representative John Smith was convicted accused of 'Collusion'.</cbc:description>
         <cbc:title>John Smith 2020-01-01 Conviction</cbc:title>
-        <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+        <dcat-ap:distribution>
             <dcat-ap:accessURL>
                 <rdf:resource xsi:type="cbc:URIType">
                     https://acme.com/docs/2020101-JS-Collusion.hmtl
@@ -450,19 +450,13 @@
         <cccev:supportsRequirement>5f9f09f7-f701-432c-9fdc-c22c124a74c9</cccev:supportsRequirement>           
     </Evidence>
     <!-- Additional Reference to other documents, that may not be treated as evidences can be attached. Thus, the following AdditionalDocumentReference below is a declaration of oath by the EO stating that 
-          John Smith was absolved. -->    
-    <AdditionalDocumentReference>
-        <dcat-ap:accessURL>
-            <rdf:resource xsi:type="cbc:URIType">
-                http://github.com/acme-jsmith/convictions/20200101-collusion.pdf
-            </rdf:resource>
-        </dcat-ap:accessURL>
+          John Smith was absolved. --> 
+    <AdditionalDocumentReference xsi:type="cccev:DocumentReferenceType">
+        <cbc:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</cbc:description>
         <cbc:title>John Smith's Declaration of Oath</cbc:title>
-        <cbc:description>ACME's Ltd. representative John Smith swears that he was absolved of the conviction 20200101 Collusion, and commits to provide the requested proof timely, if requested.</cbc:description>        
-        <dcat-ap:downloadURL>
-            <rdf:resource xsi:type="cbc:URIType">
-                http://github.com/acme-jsmith/convictions/20200101-collusion.pdf
-            </rdf:resource>
-        </dcat-ap:downloadURL>
+        <dcat-ap:distribution>
+            <dcat-ap:accessURL><rdf:resource xsi:type="cbc:URIType">http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</rdf:resource></dcat-ap:accessURL>
+            <dcat-ap:downloadURL><rdf:resource xsi:type="cbc:URIType">http://github.com/acme-jsmith/convictions/20200101-collusion.pdf</rdf:resource></dcat-ap:downloadURL>
+        </dcat-ap:distribution>
     </AdditionalDocumentReference>
 </Response>

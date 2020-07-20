@@ -78,26 +78,13 @@
 	<xsd:element name="evidence" type="EvidenceType"/>
 	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
 	<xsd:element name="periodValue" type="cac:PeriodType"/>
-	<xsd:element name="providedBy" type="cbc:IDReferenceType"/>	
+	<xsd:element name="about" type="cbc:IDReferenceType"/>	
 	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="requirement" type="RequirementType"/>
 	<xsd:element name="specifiesEvidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="specifiedIn" type="ConceptType"/>
 	<xsd:element name="value" type="ValueType"/>
 	<xsd:element name="validityPeriod" type="cac:PeriodType"/>
-
-	<!-- Class declarations -->
-	
-	<xsd:element name="Concept" type="ConceptType"/>
-	<xsd:element name="Constraint" type="ConstraintType"/>
-	<xsd:element name="Criterion" type="CriterionType"/>
-	<xsd:element name="DocumentReference" type="DocumentReferenceType"/>
-	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
-	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
-	<xsd:element name="PeriodValue" type="cac:PeriodType"/>
-	<xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
-	<xsd:element name="Requirement" type="RequirementType"/>
-	<xsd:element name="Value" type="ValueType"/>
 
 	<!-- Element definition -->
 
@@ -445,24 +432,6 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>cccev:DocumentReference. identifier</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
-									</ccts:Definition>
-									<ccts:Cardinality>0..*</ccts:Cardinality>
-									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-									<ccts:DataType>ID. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
 					<xsd:element ref="associatedRoleType" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
@@ -477,24 +446,6 @@
 									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
 									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
 									<ccts:DataType>Code. Type</ccts:DataType>
-								</an:DataProperty>
-							</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="documentURI" minOccurs="0" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation xml:lang="en">
-								<an:DataProperty>
-									<ccts:ComponentType>Data property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>cccev:DocumentReference. document URI</ccts:DictionaryEntryName>
-									<ccts:Definition>
-										Unambiguous and unique identification of a document based on a URI scheme.
-									</ccts:Definition>
-									<ccts:Cardinality>0..*</ccts:Cardinality>
-									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
-									<ccts:PropertyTerm>anyURI</ccts:PropertyTerm>
-									<ccts:RepresentationTerm>anyURI</ccts:RepresentationTerm>
-									<ccts:DataType>URI. Type</ccts:DataType>
 								</an:DataProperty>
 							</xsd:documentation>
 						</xsd:annotation>
@@ -652,22 +603,19 @@
 							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="providedBy" minOccurs="0" maxOccurs="unbounded"> <!--UML 0..1-->
+					<xsd:element ref="about" minOccurs="0" maxOccurs="unbounded"> <!--UML 0..1-->
 						<xsd:annotation>
 							<xsd:documentation xml:lang="en">
 								<ObjectProperty>
 									<ccts:ComponentType>Object property</ccts:ComponentType>
-									<ccts:DictionaryEntryName>cccev:Evidence. provided By</ccts:DictionaryEntryName>
+									<ccts:DictionaryEntryName>cccev:Evidence. about</ccts:DictionaryEntryName>
 									<ccts:Definition>
-										A reference to the agent that provides the evidence.
-										Additional Information:
-										The agent providing evidence are expected to be authoritative sources, e.g. official database,
-										registries, court magistrates, or any other type of public authorities.
+										A reference to the Agent that the evidence is about.
 									</ccts:Definition>
 									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
 									<Domain>cccev:Evidence</Domain>
-									<Range>cccev:Agent</Range>
-									<Predicate>cccev:isProvidedBy</Predicate> 
+									<Range>foaf:Agent</Range>
+									<Predicate>cccev:about</Predicate> 
 								</ObjectProperty>
 							</xsd:documentation>
 						</xsd:annotation>

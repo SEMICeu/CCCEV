@@ -12,11 +12,11 @@
         schemaLocation="../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
     
     <!--Object properties-->
+ 
+    <xs:element name="algorithmCode" type="AlgorithmCodeType"/>
     <xs:element name="checksum" type="ChecksumType"/>
-    <!--Class declaration-->
-    <xs:element name="AlgorithmCode" type="AlgorithmCodeType"/>
-    <xs:element name="ChecksumAugmentationPoint" type="ChecksumAugmentationPointType"/>
-    <xs:element name="ChecksumValue" type="ChecksumValueType"/>
+    <xs:element name="checksumAugmentationPoint" type="ChecksumAugmentationPointType"/>
+    <xs:element name="checksumValue" type="ChecksumValueType"/>
     
     <xs:complexType name="AlgorithmCodeType">
         <xs:annotation>
@@ -88,9 +88,9 @@
             </xs:appinfo>
         </xs:annotation>
                 <xs:sequence>
-                    <xs:element ref="ChecksumValue" minOccurs="1" maxOccurs="1"/>
-                    <xs:element ref="AlgorithmCode"/>
-                    <xs:element ref="ChecksumAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="algorithmCode"/>
+                    <xs:element ref="checksumAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="checksumValue" minOccurs="1" maxOccurs="1"/>
                 </xs:sequence>
     </xs:complexType>
     

@@ -81,15 +81,6 @@
 	<xsd:element name="source" type="CatalogRecordType"/>
 	<xsd:element name="theme" type="skos:ConceptType"/>
 	
-	<!-- Classes -->
-	<xsd:element name="Catalog" type="CatalogType"/>
-	<xsd:element name="CatalogRecord" type="CatalogRecordType"/>
-	<xsd:element name="Dataset" type="DatasetType"/>
-	<xsd:element name="Distribution" type="DistributionType"/>
-	<xsd:element name="DatasetService" type="DataServiceType"/>
-	<xsd:element name="Relationship" type="RelationshipType"/>
-	<xsd:element name="Role" type="RoleType"/>
-	
 	<!-- Element definition -->
 	
 	<xsd:complexType name="CatalogType">

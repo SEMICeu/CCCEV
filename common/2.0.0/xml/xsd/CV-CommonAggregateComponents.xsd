@@ -45,12 +45,7 @@
    
    <!-- Object elements -->
    <!-- none -->
-
-   <!-- Classe declaration -->
-   <xsd:element name="Address" type="AddressType"/>
-   <xsd:element name="Period" type="PeriodType"/>
-   
-      
+     
    <!-- ===== Type Definitions ===== -->
 
    <!-- The TOP class "Thing", which for now has no elements, only attributes -->

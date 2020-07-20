@@ -5,7 +5,6 @@
 	xmlns:cbc="https://semic.org/sa/cv/common/cbc-2.0.0#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:cagv="https://semic.org/sa/cv/cagv/agent-2.0.0#" 
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	targetNamespace="https://semic.org/sa/cv/cccev-2.0.0#" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.0.0">
@@ -16,8 +15,6 @@
 		schemaLocation="../../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 	<xsd:import namespace="http://data.europa.eu/r5r/"
 		schemaLocation="../../../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
-	<xsd:import namespace="https://semic.org/sa/cv/cagv/agent-2.0.0#"
-		schemaLocation="../../../../cagv/2.0.0/xml/xsdrt/CV-Agent.xsd"/>
 	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
 		schemaLocation="../../../../foaf/xml/foaf.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2002/07/owl#"
@@ -76,25 +73,13 @@
 	<xsd:element name="evidenceType" type="EvidenceTypeType"/>
 	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
 	<xsd:element name="constraint" type="ConstraintType"/>
-	<xsd:element name="providedBy" type="cbc:IDReferenceType"/>
+	<xsd:element name="about" type="cbc:IDReferenceType"/>
 	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
 	<xsd:element name="requirement" type="RequirementType"/>	
 	<xsd:element name="value" type="ValueType"/>
 	<xsd:element name="periodValue" type="cac:PeriodType"/>
 	<xsd:element name="validityPeriod" type="cac:PeriodType"/>		
 	<xsd:element name="specifiedIn" type="ConceptType"/>
-	
-	<!-- Class declarations -->
-	<xsd:element name="Concept" type="ConceptType"/>
-	<xsd:element name="Constraint" type="ConstraintType"/>
-	<xsd:element name="Criterion" type="CriterionType"/>
-	<xsd:element name="DocumentReference" type="DocumentReferenceType"/>
-	<xsd:element name="EvidenceTypeList" type="EvidenceTypeListType"/>
-	<xsd:element name="InformationRequirement" type="InformationRequirementType"/>
-	<xsd:element name="PeriodValue" type="cac:PeriodType"/>	
-	<xsd:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
-	<xsd:element name="Requirement" type="RequirementType"/>
-	<xsd:element name="Value" type="ValueType"/>
 
 	<!-- Element definition -->
 
@@ -140,12 +125,10 @@
 
 	<xsd:complexType name="DocumentReferenceType">
 		<xsd:complexContent>
-			<xsd:extension base="dcat-ap:DistributionType">
+			<xsd:extension base="dcat-ap:DatasetType">
 				<xsd:sequence>
 					<xsd:element ref="cbc:binaryObject" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="associatedRoleType" minOccurs="0" maxOccurs="1"/>
-					<xsd:element ref="documentURI" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="statusCode" minOccurs="0" maxOccurs="1"/>
 					<xsd:element ref="validityPeriod" minOccurs="0"/>			
 				</xsd:sequence>
@@ -162,7 +145,7 @@
 					<xsd:element ref="conformsTo" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="supportsRequirement" minOccurs="0" maxOccurs="unbounded"/>
 					<xsd:element ref="supportsConcept" minOccurs="0" maxOccurs="unbounded"/>
-					<xsd:element ref="providedBy" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="about" minOccurs="0" maxOccurs="unbounded"/>
 				</xsd:sequence>
 				<xsd:attributeGroup ref="cac:ThingAttributes"/>
 			</xsd:extension>

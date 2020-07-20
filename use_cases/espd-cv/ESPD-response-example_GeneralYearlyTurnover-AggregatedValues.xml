@@ -237,7 +237,7 @@
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
         <dct:description>ACME's Ltd. Annual Accounts 2017</dct:description>
         <dct:title>Annual Accounts 2017</dct:title>
-        <dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+        <dcat-ap:distribution>
             <dcat-ap:accessURL>https://acme.com/transparency/annualAccounting/2017</dcat-ap:accessURL>
             <foaf:page>
                 <foaf:primaryTopic>Annual Accounts 2017</foaf:primaryTopic>
@@ -260,7 +260,8 @@
     <Evidence>        
         <!-- Use of the adms identifier, inherited from dcat-ap:Dataset. Needs the skos:notation to include the value of the identifier. See ADMS specificationn, section 5.2.6 Identifier: https://www.w3.org/TR/vocab-adms/ -->
         <dct:description>ACME's Ltd. Annual Accounts 2018</dct:description>
-        <dct:title>Annual Accounts 2018</dct:title><dcat-ap:distribution xsi:type="cccev:DocumentReferenceType">
+        <dct:title>Annual Accounts 2018</dct:title>
+        <dcat-ap:distribution>
             <dcat-ap:accessURL>https://acme.com/transparency/annualAccounting/2018</dcat-ap:accessURL>
             <foaf:page><foaf:primaryTopic>Annual Accounts 2018</foaf:primaryTopic></foaf:page>
             <dcat-ap:downloadURL>https://europa.eu/bris/doc?id=annacc-acme-2018</dcat-ap:downloadURL>            

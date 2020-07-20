@@ -15,7 +15,6 @@
 	
 	<!-- Object properties -->
 	<xsd:element name="sample" type="dcat-ap:DistributionType"/>
-	<!-- Class declarations -->
 	<xsd:element name="identifier" type="IdentifierType"/>
 	<xsd:element name="status" type="skos:ConceptType"/>
 	<xsd:element name="versionNotes" type="rdf:PlainLiteral"/>

@@ -42,12 +42,7 @@
    <xsd:element name="timezoneOffset" type="cbc:NumericType"/>
    
    <!-- Object elements -->
-   <!-- none -->
-
-   <!-- Classe declaration -->
-   <xsd:element name="Address" type="AddressType"/>
-   <xsd:element name="Period" type="PeriodType"/>
-   
+   <!-- none -->  
       
    <!-- ===== Type Definitions ===== -->
 

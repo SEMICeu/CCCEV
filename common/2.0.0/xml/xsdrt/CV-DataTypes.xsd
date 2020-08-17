@@ -121,6 +121,8 @@
       <xsd:simpleContent>
          <xsd:extension base="udt:IdentifierType">
             <xsd:attributeGroup ref="AssuranceLevelAttributes"/>
+           <!-- Used to map CBV's cbc:dateOfIssue -->
+            <xsd:attribute name="dateOfIssue" type="xsd:dateTime" use="optional"/>
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>

@@ -54,6 +54,8 @@
 	<xsd:element name="catalog" type="CatalogType"/>
 	<xsd:element name="compressedFormat" type="dct:MediaType"/>
 	<xsd:element name="dataset" type="DatasetType"/>
+	
+	
 	<!--This is a dct:hasPart-->
 	<xsd:element name="hasPart" type="CatalogType"/>
 	<!--This is a dct:hasVersion-->

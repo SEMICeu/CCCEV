@@ -71,7 +71,11 @@
 	</xsd:complexType>
 	
 	<xsd:complexType name="OrganizationType">
-		<xsd:sequence/>		
+		<xsd:complexContent>
+			<xsd:extension base="AgentType">
+				<xsd:sequence/>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	
 </xsd:schema>

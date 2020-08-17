@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="https://data.europe.eu/semanticassets/ns/cv/cbv_v1.0.0#" 
+    xmlns:dcat-ap="http://data.europa.eu/r5r/"
+    xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+    xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:org="http://www.w3.org/ns/org#"
+    targetNamespace="https://data.europe.eu/semanticassets/ns/cv/cbv_v1.0.0#" elementFormDefault="qualified"
+    attributeFormDefault="unqualified" version="1.0.0">
+    
+    <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
+        schemaLocation="./../../../common/2.0.0/xml/xsdrt/CV-CommonAggregateComponents.xsd"/>
+    <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
+        schemaLocation="./../../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+    <xsd:import namespace="http://data.europa.eu/r5r/"
+        schemaLocation="./../../../dcat-ap/2.0.0/xml/dcat-ap_semic-cbc.xsd"/>
+    <xsd:import namespace="http://xmlns.com/foaf/0.1/"
+        schemaLocation="./../../../foaf/2.0.0/xml/foaf_semic-cbc.xsd"/>
+    <xsd:import namespace="http://www.w3.org/ns/org#"
+        schemaLocation="./../../../org/2.0.0/xml/org.xsd"/>
+    
+    <!-- Declaration of elements -->
+    
+    <!-- Data properties declarations -->
+    <xsd:element name="alternativeName" type="cbc:NameType"/>
+    <xsd:element name="identifier" type="cbc:IDType"/>
+    <xsd:element name="legalName" type="cbc:NameType"/>
+    <xsd:element name="legalIdentifier" type="cbc:IDType"/>
+ 
+    
+    <!-- Object properties -->
+    
+    <xsd:element name="companyActivity" type="cbc:CodeType"/>
+    <xsd:element name="companyStatus" type="cbc:CodeType"/>
+    <xsd:element name="companyType" type="cbc:CodeType"/>
+    <xsd:element name="registeredAddress" type="cac:AddressType"/>
+ 
+    
+    <!-- Element definition -->
+    
+    <xsd:complexType name="LegalEntityType">
+        <xsd:complexContent>
+            <xsd:extension base="org:OrganizationType">
+                <xsd:sequence>
+                    <xsd:element ref="identifier" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="alternativeName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="legalIdentifier" minOccurs="1" maxOccurs="1"/>
+                    <xsd:element ref="legalName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="companyType" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element ref="companyStatus" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element ref="companyActivity" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="registeredAddress" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>
+

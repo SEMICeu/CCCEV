@@ -1,0 +1,138 @@
+
+ {
+ "$id": "https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CoreCriterionAndCoreEvidenceVocabulary",
+  "type": "object",
+  "properties": {
+    "requirement": {
+      "type": "object",
+      "description": "A condition demanded",
+      "properties": {
+          "id":{
+              "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/id"
+          },
+          "name":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/name"
+          },
+          "description":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/description"
+          },
+          "type":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/type"
+          },
+          "hasQualifiedRelation":{
+            "$ref":"#definitions/requirement"
+          },
+          "hasRequirement":{
+            "$ref":"#definitions/requirement"
+          },
+          "isRequirementOf":{
+            "$ref":"#definitions/requirement"
+          },
+          "hasConcept":{
+            "$ref":"#definitions/concept"
+          },
+          "hasSupportingEvidence":{
+            "$ref":"#definitions/evidence"
+          },
+          "hasEvidenceTypeCombinationList":{
+            "$ref":"#definitions/evidenceTypeList"
+          },
+          "isDerivedFrom":{
+            "$ref":"#definitions/referenceFramework"
+          }
+
+      }
+    },
+    "concept":{
+        "type": "object",
+        "description":"A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.",
+        "properties": {
+            "id":{
+                "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/id"
+            },
+            "type":{
+                "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/type"
+            },
+            "name":{
+              "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/name"
+            },
+            "description":{
+              "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/description"
+            },
+            "qName":{
+                "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/qName"
+            },
+            "hasConcept":{
+                "$ref":"#definitions/concept"
+            },
+            "hasConstraint":{
+                "$ref": "#definitions/constraint"
+            },
+            "hasValue":{
+                "$ref": "#definitions/value"
+            }
+        }
+    },
+    "value": {
+      "type": "object",
+      "description": "A datum.",
+      "properties": {
+        "amountValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/amount"
+        },
+        "codeValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/code"
+        },
+        "dateValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/date"
+        },
+        "identifierValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/id"
+        },
+        "indicatorValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/indicator"
+        },
+        "measureValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/measure"
+        },
+        "numericValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/numeric"
+        },
+        "quantityValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/quantity"
+        },
+        "textValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/text"
+        },
+        "timeValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/time"
+        },
+        "uriValue":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/uri"
+        },
+        "customDataType":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/code"
+        },
+        "customFunction":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/text"
+        },
+        "error":{
+            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/code"
+        },
+        "hasValue":{
+            "$ref": "#definitions/value"
+        },
+        "hasPeriodValue":{
+            "$ref": "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#definitions/period"
+        }
+      }
+    },
+    "evidence": {
+      "description": "Age in years which must be equal to or greater than zero.",
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

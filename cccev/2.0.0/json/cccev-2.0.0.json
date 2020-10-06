@@ -1,138 +1,145 @@
+{
+    "@context": {
+      "cccev":"https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#",
+      "cbc": "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0",
+      "cac": "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0",
+      "dcat-ap": "http://data.europa.eu/r5r/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema" : "http://schema.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+    {
+      "requirement": {
+        "@id": "cccev:requirement",
+        "@type": "rdf:Class",
+        "rdfs:comment": "A condition demanded",
+        "rdfs:label": "Requirement",
+        "id": "cbc:id",
+        "name": "cbc:name",
+        "description": "cbc:description",
+        "type": "cbc:type",
+        "qualifiedRelation": "cccev:requirement",
+        "requirement": "cccev:requirement",
+        "requirementOf": "cccev:requirement",
+        "concept": "cccev:concept",
+        "supportingEvidence": "cccev:evidence",
+        "evidenceTypeCombinationList": "cccev:evidenceTypeCombinationList",
+        "derivedFrom": "cccev:referenceFramework"
+      },
+      "criterion": {
+        "@id": "cccev:criterion",
+        "@type": "rdf:Class",
+        "rdfs:comment": "A condition for evaluation or assessment.",
+        "rdfs:label": "Criterion",
+        "rdfs:subClassOf": {"@id": "cccev:requirement"},
+        "weight": "cbc:numeric",
+        "weightingConsiderationDescription": "cbc:text",
+        "weightingType": "cbc:type",
+        "bias": "cbc:numeric"
 
- {
- "$id": "https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#",
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CoreCriterionAndCoreEvidenceVocabulary",
-  "type": "object",
-  "properties": {
-    "requirement": {
-      "type": "object",
-      "description": "A condition demanded",
-      "properties": {
-          "id":{
-              "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/id"
-          },
-          "name":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/name"
-          },
-          "description":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/description"
-          },
-          "type":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/type"
-          },
-          "hasQualifiedRelation":{
-            "$ref":"#definitions/requirement"
-          },
-          "hasRequirement":{
-            "$ref":"#definitions/requirement"
-          },
-          "isRequirementOf":{
-            "$ref":"#definitions/requirement"
-          },
-          "hasConcept":{
-            "$ref":"#definitions/concept"
-          },
-          "hasSupportingEvidence":{
-            "$ref":"#definitions/evidence"
-          },
-          "hasEvidenceTypeCombinationList":{
-            "$ref":"#definitions/evidenceTypeList"
-          },
-          "isDerivedFrom":{
-            "$ref":"#definitions/referenceFramework"
-          }
-
+      },
+      "informationRequirement": {
+        "@id": "cccev:informationRequirement",
+        "@type": "rdf:Class",
+        "rdfs:comment": "A request for data that is proof of evidence or leads to the source of such a proof.",
+        "rdfs:label": "InformationRequirement",
+        "rdfs:subClassOf": {"@id": "cccev:requirement"}
+      },
+      "constraint": {
+        "@id": "cccev:constraint",
+        "@type": "rdf:Class",
+        "rdfs:comment": "Limitation applied to requirement(s) or to the concept(s) the requirement is about.",
+        "rdfs:label": "Constraint",
+        "rdfs:subClassOf": {"@id": "cccev:requirement"}
+      },
+      "concept": {
+          "@id": "cccev:concept",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.",
+          "rdfs:label": "Concept",
+          "id": "cbc:id",
+          "type": "cbc:type",
+          "name":"cbc:name",
+          "description": "cbc:description",
+          "qName": "qName",
+          "concept": "cccev:concept",
+          "constraint": "cccev:constraint",
+          "value": "cccev:value"
+      },
+      "value": {
+          "@id": "cccev:value",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A datum.",
+          "rdfs:label": "Value",
+          "amountValue": "cbc:amount",
+          "codeValue": "cbc:code",
+          "dateValue": "cbc:date",
+          "identifierValue": "cbc:id",
+          "indicatorValue": "cbc:indicator",
+          "measureValue": "cbc:measure",
+          "numericValue": "cbc:numeric",
+          "quantityValue": "cbc:quantity",
+          "textValue": "cbc:text",
+          "timeValue": "cbc:time",
+          "uriValue": "cbc:uri",
+          "customDataType": "cbc:code",
+          "customFunction": "cbc:text",
+          "error": "cbc:code",
+          "value": "cccev:value",
+          "periodValue": "cac:period"
+      },
+      "evidence": {
+          "@id": "cccev:evidence",
+          "@type": "rdf:Class",
+          "rdfs:comment": "The data proving that a requirement is met or has been fulfilled.",
+          "rdfs:label": "Evidence",
+          "rdfs:subClassOf": {"@id": "dcat-ap:dataset"},
+          "confidentialityLevelType": "cbc:code",
+          "error": "cbc:code",
+          "conformantTo": "cccev:evidenceType",
+          "supportsRequirement": "cccev:requirement",
+          "supportsConcept": "cccev:concept",
+          "about": "foaf:agent"
+      },
+      "referenceFramework": {
+          "@id": "cccev:referenceFramework",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A source from where requirements are identified and drawn.",
+          "rdfs:label": "ReferenceFramework",
+          "rdfs:subClassOf": {"@id": "dcat-ap:dataset"}
+      },
+      "documentReference": {
+          "@id": "cccev:documentReference",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A reference to a concrete manifestation of a document, or the content of the document itself.",
+          "rdfs:label": "DocumentReference",
+          "rdfs:subClassOf": {"@id": "dcat-ap:dataset"},
+          "associatedRoleType": "cbc:code",
+          "binaryObject": "cbc:binaryObject",
+          "statusCode": "cbc:code"
+      },
+      "evidenceType": {
+          "@id": "cccev:evidenceType",
+          "@type": "rdf:Class",
+          "rdfs:comment": "Information about the characteristics of an expected evidence, such as the desired content, format, source, etc.",
+          "rdfs:label": "EvidenceType",
+          "rdfs:subClassOf": {"@id": "dcat-ap:dataset"},
+          "evidenceTypeClassification": "cbc:code",
+          "datasetType": "cbc:code",
+          "evidenceTypology": "cbc:code",
+          "specifiedIn": "cccev:evidenceTypeList"
+      },
+      "evidenceTypeList": {
+          "@id": "cccev:evidenceTypeList",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A collection of types of evidences.",
+          "rdfs:label": "EvidenceTypeList",
+          "id": "cbc:id",
+          "name": "cbc:name",
+          "description": "cbc:description"
       }
-    },
-    "concept":{
-        "type": "object",
-        "description":"A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.",
-        "properties": {
-            "id":{
-                "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/id"
-            },
-            "type":{
-                "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/type"
-            },
-            "name":{
-              "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/name"
-            },
-            "description":{
-              "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/description"
-            },
-            "qName":{
-                "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/qName"
-            },
-            "hasConcept":{
-                "$ref":"#definitions/concept"
-            },
-            "hasConstraint":{
-                "$ref": "#definitions/constraint"
-            },
-            "hasValue":{
-                "$ref": "#definitions/value"
-            }
-        }
-    },
-    "value": {
-      "type": "object",
-      "description": "A datum.",
-      "properties": {
-        "amountValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/amount"
-        },
-        "codeValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/code"
-        },
-        "dateValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/date"
-        },
-        "identifierValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/id"
-        },
-        "indicatorValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/indicator"
-        },
-        "measureValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/measure"
-        },
-        "numericValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/numeric"
-        },
-        "quantityValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/quantity"
-        },
-        "textValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/text"
-        },
-        "timeValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/time"
-        },
-        "uriValue":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/uri"
-        },
-        "customDataType":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/code"
-        },
-        "customFunction":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/text"
-        },
-        "error":{
-            "$ref":"https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#definitions/code"
-        },
-        "hasValue":{
-            "$ref": "#definitions/value"
-        },
-        "hasPeriodValue":{
-            "$ref": "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#definitions/period"
-        }
-      }
-    },
-    "evidence": {
-      "description": "Age in years which must be equal to or greater than zero.",
-      "type": "integer",
-      "minimum": 0
-    }
-  }
+    }]
 }

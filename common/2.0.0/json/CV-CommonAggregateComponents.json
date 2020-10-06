@@ -1,0 +1,32 @@
+{
+    "@context": {
+      "cac": "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0",
+      "cbc": "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0",
+      "dt": "https://data.europe.eu/semanticassets/ns/cv/common/dataTypes-2.0.0#",
+      "lcn": "http://www.w3.org/ns/locn#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      
+    },
+    "@graph": [
+    {
+      "address": {
+        "@id": "cbc:address",
+        "@type": "rdf:Class",
+        "rdfs:comment": "",
+        "rdfs:label": "Address",
+        "rdfs:subClassOf": {"@id": "lcn:AddressType"},
+        "id": "cbc:id",
+        "addressTypeCode": "cbc:code",
+        "addressFormatCode": "cbc:code",
+        "postBox": "cbc:text",
+        "floor": "cbc:text",
+        "room": "cbc:text",
+        "streetName": "cbc:text",
+        "additionalStreetName": "cbc:text"
+
+
+      }
+    }]
+}

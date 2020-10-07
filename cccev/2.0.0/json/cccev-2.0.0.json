@@ -20,8 +20,8 @@
         "id": "cbc:id",
         "name": "cbc:name",
         "description": "cbc:description",
-        "type": "cbc:type",
-        "qualifiedRelation": "cccev:requirement",
+        "type": {"@type": "cbc:type", "owl:maxCardinality": "1"},
+        "qualifiedRelation": "dcat-ap:relationship",
         "requirement": "cccev:requirement",
         "requirementOf": "cccev:requirement",
         "concept": "cccev:concept",
@@ -35,9 +35,9 @@
         "rdfs:comment": "A condition for evaluation or assessment.",
         "rdfs:label": "Criterion",
         "rdfs:subClassOf": {"@id": "cccev:requirement"},
-        "weight": "cbc:numeric",
+        "weight": {"@type": "cbc:numeric", "owl:maxCardinality": "1"},
         "weightingConsiderationDescription": "cbc:text",
-        "weightingType": "cbc:type",
+        "weightingType": {"@type": "cbc:type", "owl:maxCardinality": "1"},
         "bias": "cbc:numeric"
 
       },
@@ -61,10 +61,10 @@
           "rdfs:comment": "A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.",
           "rdfs:label": "Concept",
           "id": "cbc:id",
-          "type": "cbc:type",
+          "type": {"@type": "cbc:type", "owl:maxCardinality": "1"},
           "name":"cbc:name",
           "description": "cbc:description",
-          "qName": "qName",
+          "qName": {"@type": "cbc:qName", "owl:maxCardinality": "1"},
           "concept": "cccev:concept",
           "constraint": "cccev:constraint",
           "value": "cccev:value"
@@ -74,22 +74,23 @@
           "@type": "rdf:Class",
           "rdfs:comment": "A datum.",
           "rdfs:label": "Value",
-          "amountValue": "cbc:amount",
-          "codeValue": "cbc:code",
-          "dateValue": "cbc:date",
-          "identifierValue": "cbc:id",
-          "indicatorValue": "cbc:indicator",
-          "measureValue": "cbc:measure",
-          "numericValue": "cbc:numeric",
-          "quantityValue": "cbc:quantity",
-          "textValue": "cbc:text",
-          "timeValue": "cbc:time",
-          "uriValue": "cbc:uri",
-          "customDataType": "cbc:code",
-          "customFunction": "cbc:text",
-          "error": "cbc:code",
+          "amountValue": {"@type": "cbc:amount", "owl:maxCardinality": "1"},
+          "codeValue": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "dateValue": {"@type": "cbc:date", "owl:maxCardinality": "1"},
+          "identifierValue": {"@type": "cbc:id", "owl:maxCardinality": "1"},
+          "indicatorValue": {"@type": "cbc:indicator", "owl:maxCardinality": "1"},
+          "measureValue": {"@type": "cbc:measure", "owl:maxCardinality": "1"},
+          "numericValue": {"@type": "cbc:numeric", "owl:maxCardinality": "1"},
+          "quantityValue": {"@type": "cbc:quantity", "owl:maxCardinality": "1"},
+          "textValue": {"@type": "cbc:text"},
+          "timeValue": {"@type": "cbc:time", "owl:maxCardinality": "1"},
+          "uriValue": {"@type": "cbc:uri", "owl:maxCardinality": "1"},
+          "customDataType": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "customFunction": {"@type": "cbc:text"},
+          "error": {"@type": "cbc:code", "owl:maxCardinality": "1"},
           "value": "cccev:value",
-          "periodValue": "cac:period"
+          "valueOf": {"@type": "cccev:concept", "owl:maxCardinality": "1"},
+          "periodValue": {"@type": "cac:period", "owl:maxCardinality": "1"}
       },
       "evidence": {
           "@id": "cccev:evidence",
@@ -97,7 +98,7 @@
           "rdfs:comment": "The data proving that a requirement is met or has been fulfilled.",
           "rdfs:label": "Evidence",
           "rdfs:subClassOf": {"@id": "dcat-ap:dataset"},
-          "confidentialityLevelType": "cbc:code",
+          "confidentialityLevelType": {"@type": "cbc:code", "owl:maxCardinality": "1"},
           "error": "cbc:code",
           "conformantTo": "cccev:evidenceType",
           "supportsRequirement": "cccev:requirement",
@@ -117,9 +118,9 @@
           "rdfs:comment": "A reference to a concrete manifestation of a document, or the content of the document itself.",
           "rdfs:label": "DocumentReference",
           "rdfs:subClassOf": {"@id": "dcat-ap:dataset"},
-          "associatedRoleType": "cbc:code",
-          "binaryObject": "cbc:binaryObject",
-          "statusCode": "cbc:code"
+          "associatedRoleType": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "binaryObject": {"@type": "cbc:binaryObject", "owl:maxCardinality": "1"},
+          "statusCode": {"@type": "cbc:code", "owl:maxCardinality": "1"}
       },
       "evidenceType": {
           "@id": "cccev:evidenceType",
@@ -127,19 +128,20 @@
           "rdfs:comment": "Information about the characteristics of an expected evidence, such as the desired content, format, source, etc.",
           "rdfs:label": "EvidenceType",
           "rdfs:subClassOf": {"@id": "dcat-ap:dataset"},
-          "evidenceTypeClassification": "cbc:code",
-          "datasetType": "cbc:code",
-          "evidenceTypology": "cbc:code",
-          "specifiedIn": "cccev:evidenceTypeList"
+          "evidenceTypeClassification":{"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "datasetType": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "evidenceTypology": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "specifiedIn": {"@type": "cccev:evidenceTypeList", "owl:minCardinality": "1"}
       },
       "evidenceTypeList": {
           "@id": "cccev:evidenceTypeList",
           "@type": "rdf:Class",
           "rdfs:comment": "A collection of types of evidences.",
           "rdfs:label": "EvidenceTypeList",
-          "id": "cbc:id",
+          "id": {"@type": "cbc:id", "owl:maxCardinality": "1"},
           "name": "cbc:name",
-          "description": "cbc:description"
+          "description": "cbc:description",
+          "specifies": "cccev:evidenceType"
       }
     }]
 }

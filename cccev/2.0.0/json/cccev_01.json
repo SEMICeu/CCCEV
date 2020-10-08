@@ -1,0 +1,85 @@
+{
+    "@context" : {
+      "cccev" :"https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" ,
+      "cbc" : "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0" ,
+      "cac" : "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0" ,
+      "dcat-ap" : "http://data.europa.eu/r5r/" ,
+      "foaf" : "http://xmlns.com/foaf/0.1/" ,
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ,
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#" ,
+      "schema" : "http://schema.org/" ,
+      "xsd" : "http://www.w3.org/2001/XMLSchema#"
+    } ,
+    "@graph" : [
+
+      //CLASSES
+        
+        { 
+          "@id" : "cccev:Concept" ,
+          "@type" : "rdf:Class" ,
+          "rdfs:comment" : "A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary." ,
+          "rdfs:label" : "Concept" ,
+          "id" : "cbc:id" ,
+          "type" : {"@type" : "cbc:type" , "owl:maxCardinality" : "1"} ,
+          "name" :"cbc:name" ,
+          "description" : "cbc:description" ,
+          "qName" : {"@type" : "cbc:qName" , "owl:maxCardinality" : "1"} ,
+         } ,
+      
+        { "@id" : "cccev:Evidence" ,
+          "@type" : "rdf:Class" ,
+          "rdfs:comment" : "The data proving that a requirement is met or has been fulfilled." ,
+          "rdfs:label" : "Evidence" ,
+          "rdfs:subClassOf" : {"@id" : "dcat-ap:Dataset"} ,
+          "confidentialityLevelType" : {"@id" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "error" : {"@id" : "cbc:code"} ,
+        } ,
+
+        {
+          "@id" : "cccev:EvidenceType" ,
+          "@type" : "rdf:Class" ,
+          "rdfs:comment" : "Information about the characteristics of an expected evidence, such as the desired content, format, source, etc." ,
+          "rdfs:label" : "EvidenceType" ,
+          "rdfs:subClassOf" : {"@id" : "dcat-ap:Dataset"} ,
+          "evidenceTypeClassification" :{"@id" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "datasetType" : {"@id" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "rdfs:subClassOf" : {
+                              "@type" : "owl:Restriction" , 
+                              "owl:onProperty" : {"@id" : "cccev:specifiedIn"} ,
+                              "owl:minQualifiedCardinality" : "1" ,
+                              "owl:onClass" : {"@id" : "cccev:EvidenceTypeList"} ,
+                              } ,
+        } ,
+
+      //OBJECT PROPERTIES
+
+       {
+          "@id" : "cccev:conformantTo" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
+          "rdfs:range" : {"@id" : "cccev:EvidenceType"} ,
+       } ,
+
+       {
+          "@id" : "cccev:supports" ,
+          "@type" : "rdf:Property" ,
+          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
+          "rdfs:range" : {"@id" : "cccev:Concept"} ,
+        } ,
+
+        {
+          "@id" : "cccev:value" ,
+          "@type" : "rdf:Property" ,
+          "rdfs:domain" : {"@id" : "cccev:Concept"} ,
+          "rdfs:range" : {"@id" : "cccev:Value"} ,
+        } ,
+
+        {
+          "@id" : "cccev:specifiedIn" ,
+          "@type" : "rdf:Property" ,
+          "rdfs:domain" : {"@id" : "cccev:EvidenceType"} ,
+          "rdfs:range" : {"@id" : "cccev:EvidenceTypeList"} ,
+        } ,
+ 
+    ]
+}

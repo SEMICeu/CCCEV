@@ -1,10 +1,11 @@
 {
     "@context" : {
       "cccev" :"https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" ,
-      "cbc" : "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0" ,
-      "cac" : "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0" ,
+      "cbc" : "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" ,
+      "cac" : "https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#" ,
       "dcat-ap" : "http://data.europa.eu/r5r/" ,
       "foaf" : "http://xmlns.com/foaf/0.1/" ,
+      "owl": "http://www.w3.org/2002/07/owl#",
       "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ,
       "rdfs" : "http://www.w3.org/2000/01/rdf-schema#" ,
       "schema" : "http://schema.org/" ,
@@ -15,24 +16,79 @@
       //CLASSES
         
         { 
+          "@id" : "cccev:Requirement" ,
+          "@type" : "rdf:Class" ,
+          "rdfs:comment" : "A condition demanded." ,
+          "rdfs:label" : "Requirement" ,
+          "id" : {"@type" : "cbc:id"},
+          "type" : {"@type" : "cbc:type" , "owl:maxCardinality" : "1"} ,
+          "name" : {"@type" : "cbc:name"} ,
+          "description" : {"@type" : "cbc:description"}
+        } ,
+
+        { 
+          "@id": "cccev:criterion",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A condition for evaluation or assessment.",
+          "rdfs:label": "Criterion",
+          "weight" : {"@type" : "cbc:numeric", "owl:maxCardinality" : "1"},
+          "weightingConsiderationDescription" : {"@type" : "cbc:text"} ,
+          "weightingType" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "bias" : {"@type" : "cbc:numeric"},
+          "rdfs:subClassOf" : {"@type" : "cccev:Requirement"}
+        } ,
+
+        { 
+          "@id": "cccev:informationRequirement",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A request for data that is proof of evidence or leads to the source of such a proof.",
+          "rdfs:label": "InformationRequirement",
+          "rdfs:subClassOf" : {"@type" : "cccev:Requirement"}
+        } ,
+
+        { 
+          "@id": "cccev:constraint",
+          "@type": "rdf:Class",
+          "rdfs:comment": "Limitation applied to requirement(s) or to the concept(s) the requirement is about.",
+          "rdfs:label": "Constraint",
+          "rdfs:subClassOf" : {"@type" : "cccev:Requirement"}
+        } ,
+        
+        { 
           "@id" : "cccev:Concept" ,
           "@type" : "rdf:Class" ,
           "rdfs:comment" : "A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary." ,
           "rdfs:label" : "Concept" ,
-          "id" : "cbc:id" ,
+          "id" : {"@type" : "cbc:id"},
           "type" : {"@type" : "cbc:type" , "owl:maxCardinality" : "1"} ,
-          "name" :"cbc:name" ,
-          "description" : "cbc:description" ,
-          "qName" : {"@type" : "cbc:qName" , "owl:maxCardinality" : "1"} ,
+          "name" : {"@type" : "cbc:name"} ,
+          "description" : {"@type" : "cbc:description"} ,
+          "qName" : {"@type" : "cbc:qName" , "owl:maxCardinality" : "1"}
          } ,
+        {
+          "@id": "cccev:DocumentReference",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A reference to a concrete manifestation of a document, or the content of the document itself.",
+          "rdfs:label": "DocumentReference",
+          "rdfs:subClassOf": [{"@type": "dcat-ap:dataset"},
+                              {
+                                "@type" : "owl:Restriction" , 
+                                "owl:onProperty" : {"@type" : "cccev:hasValidityPeriod"} ,
+                                "owl:minQualifiedCardinality" : "1" ,
+                                "owl:onClass" : {"@type" : "cccev:Value"}
+                                }],
+          "associatedRoleType": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "binaryObject": {"@type": "cbc:binaryObject", "owl:maxCardinality": "1"},
+          "statusCode": {"@type": "cbc:code", "owl:maxCardinality": "1"}
+        },
       
         { "@id" : "cccev:Evidence" ,
           "@type" : "rdf:Class" ,
           "rdfs:comment" : "The data proving that a requirement is met or has been fulfilled." ,
           "rdfs:label" : "Evidence" ,
-          "rdfs:subClassOf" : {"@id" : "dcat-ap:Dataset"} ,
-          "confidentialityLevelType" : {"@id" : "cbc:code" , "owl:maxCardinality" : "1"} ,
-          "error" : {"@id" : "cbc:code"} ,
+          "rdfs:subClassOf" : {"@type" : "dcat-ap:Dataset"} ,
+          "confidentialityLevelType" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "error" : {"@type" : "cbc:code"}
         } ,
 
         {
@@ -40,46 +96,159 @@
           "@type" : "rdf:Class" ,
           "rdfs:comment" : "Information about the characteristics of an expected evidence, such as the desired content, format, source, etc." ,
           "rdfs:label" : "EvidenceType" ,
-          "rdfs:subClassOf" : {"@id" : "dcat-ap:Dataset"} ,
-          "evidenceTypeClassification" :{"@id" : "cbc:code" , "owl:maxCardinality" : "1"} ,
-          "datasetType" : {"@id" : "cbc:code" , "owl:maxCardinality" : "1"} ,
-          "rdfs:subClassOf" : {
+          "evidenceTypeClassification" :{"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "datasetType" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
+          "rdfs:subClassOf" : [
+                              {"@type" : "dcat-ap:Dataset"}, 
+                              {
                               "@type" : "owl:Restriction" , 
-                              "owl:onProperty" : {"@id" : "cccev:specifiedIn"} ,
+                              "owl:onProperty" : {"@type" : "cccev:specifiedIn"} ,
                               "owl:minQualifiedCardinality" : "1" ,
-                              "owl:onClass" : {"@id" : "cccev:EvidenceTypeList"} ,
-                              } ,
+                              "owl:onClass" : {"@type" : "cccev:EvidenceTypeList"}
+                              }]
+        } ,
+
+        {
+          "@id": "cccev:evidenceTypeList",
+          "@type": "rdf:Class",
+          "rdfs:comment": "A collection of types of evidences.",
+          "rdfs:label": "EvidenceTypeList",
+          "id": {"@type": "cbc:id", "owl:maxCardinality": "1"},
+          "name": {"@type": "cbc:name"},
+          "description": {"@type": "cbc:description"}
+      },
+
+        {
+          "@id" : "cccev:Value" ,
+          "@type" : "rdf:Class" ,
+          "rdfs:comment" : "A datum." ,
+          "rdfs:label" : "Value" ,
+          "amountValue": {"@type": "cbc:amount", "owl:maxCardinality": "1"},
+          "codeValue": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "dateValue": {"@type": "cbc:date", "owl:maxCardinality": "1"},
+          "identifierValue": {"@type": "cbc:id", "owl:maxCardinality": "1"},
+          "indicatorValue": {"@type": "cbc:indicator", "owl:maxCardinality": "1"},
+          "measureValue": {"@type": "cbc:measure", "owl:maxCardinality": "1"},
+          "numericValue": {"@type": "cbc:numeric", "owl:maxCardinality": "1"},
+          "quantityValue": {"@type": "cbc:quantity", "owl:maxCardinality": "1"},
+          "textValue": {"@type": "cbc:text"},
+          "timeValue": {"@type": "cbc:time", "owl:maxCardinality": "1"},
+          "uriValue": {"@type": "cbc:uri", "owl:maxCardinality": "1"},
+          "customDataType": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "customFunction": {"@type": "cbc:text"},
+          "error": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+          "rdfs:subClassOf" : [
+                              {"@type" : "dcat-ap:Dataset"}, 
+                              {
+                              "@type" : "owl:Restriction" , 
+                              "owl:onProperty" : {"@type" : "cccev:hasPeriodValue"} ,
+                              "owl:minQualifiedCardinality" : "1" ,
+                              "owl:onClass" : {"@type" : "cac:Period"}
+                              }]
         } ,
 
       //OBJECT PROPERTIES
 
-       {
-          "@id" : "cccev:conformantTo" ,
+        {
+          "@id" : "cccev:hasRequirement" ,
           "@type" : "owl:ObjectProperty" ,
-          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
-          "rdfs:range" : {"@id" : "cccev:EvidenceType"} ,
-       } ,
-
-       {
-          "@id" : "cccev:supports" ,
-          "@type" : "rdf:Property" ,
-          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
-          "rdfs:range" : {"@id" : "cccev:Concept"} ,
+          "rdfs:domain" : {"@id" : "cccev:Requirement"} ,
+          "rdfs:range" : {"@id" : "cccev:Requirement"}
         } ,
 
         {
-          "@id" : "cccev:value" ,
+          "@id" : "cccev:hasQualifiedRelation" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Requirement"} ,
+          "rdfs:range" : {"@id" : "dcat-ap:Relationship"}
+        } ,
+
+        {
+          "@id" : "cccev:hasPeriodValue" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Value"} ,
+          "rdfs:range" : {"@id" : "cac:Period"}
+        } ,
+
+        {
+          "@id" : "cccev:isRequirementOf" ,
           "@type" : "rdf:Property" ,
+          "rdfs:domain" : {"@id" : "cccev:Requirement"} ,
+          "rdfs:range" : {"@id" : "cccev:Requirement"}
+        } ,      
+        {
+          "@id" : "cccev:hasSupportingEvidence" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Requirement"} ,
+          "rdfs:range" : {"@id" : "cccev:Evidence"}
+        } ,
+        {
+          "@id" : "cccev:isDerivedFrom" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Requirement"} ,
+          "rdfs:range" : {"@id" : "cccev:ReferenceFramework"}
+        } ,
+        {
+          "@id" : "cccev:hasEvidenceTypeCombinationList" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Requirement"} ,
+          "rdfs:range" : {"@id" : "cccev:EvidenceTypeList"}
+        } ,                                    
+        {
+            "@id" : "cccev:conformantTo" ,
+            "@type" : "owl:ObjectProperty" ,
+            "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
+            "rdfs:range" : {"@id" : "cccev:EvidenceType"}
+        } ,
+
+        {
+          "@id" : "cccev:hasConstraint" ,
+          "@type" : "owl:ObjectProperty" ,
           "rdfs:domain" : {"@id" : "cccev:Concept"} ,
-          "rdfs:range" : {"@id" : "cccev:Value"} ,
+          "rdfs:range" : {"@id" : "cccev:Constraint"}
+        } ,
+
+       {
+          "@id" : "cccev:supportsConcept" ,
+          "@type" : "rdf:Property" ,
+          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
+          "rdfs:range" : {"@id" : "cccev:Concept"}
+        } ,
+
+        {
+          "@id" : "cccev:supportsRequirement" ,
+          "@type" : "rdf:Property" ,
+          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
+          "rdfs:range" : {"@id" : "cccev:Requirement"}
+        } ,
+
+        {
+          "@id" : "cccev:hasValue" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Concept"} ,
+          "rdfs:range" : {"@id" : "cccev:Value"}
+        } ,
+
+        {
+          "@id" : "cccev:isAbout" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Evidence"} ,
+          "rdfs:range" : {"@id" : "foaf:agent"}
         } ,
 
         {
           "@id" : "cccev:specifiedIn" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:EvidenceTypeList"} ,
+          "rdfs:range" : {"@id" : "cccev:EvidenceType"}
+        },
+
+        {
+          "@id" : "cccev:specifies" ,
           "@type" : "rdf:Property" ,
           "rdfs:domain" : {"@id" : "cccev:EvidenceType"} ,
-          "rdfs:range" : {"@id" : "cccev:EvidenceTypeList"} ,
-        } ,
+          "rdfs:range" : {"@id" : "cccev:EvidenceTypeList"}
+        }
  
     ]
 }

@@ -9,8 +9,8 @@
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
-    {
-      "address": {
+      
+      {
         "@id": "cac:address",
         "@type": "rdf:Class",
         "rdfs:comment": "",
@@ -43,7 +43,7 @@
         "addressLine": {"@type": "cbc:text"},
         "countryCode": {"@type": "cbc:code", "owl:maxCardinality": "1"}
       },
-      "period": {
+      {
         "@id": "cac:period",
         "@type": "rdf:Class",
         "rdfs:comment": "A lapse or interval of time.",
@@ -56,5 +56,5 @@
         "endTime": {"@type": "cbc:endTime", "owl:maxCardinality": "1"},
         "durationMeasure": {"@type": "cbc:durationMeasure", "owl:maxCardinality": "1"}
       }
-    }]
+    ]
 }

@@ -1,236 +1,235 @@
 {
     "@context": {
-      "cbc": "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0",
+      "cbc": "https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#",
       "dt": "https://data.europe.eu/semanticassets/ns/cv/common/dataTypes-2.0.0#",
       "owl": "http://www.w3.org/2002/07/owl#",
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
-    {
-      "alias": {
+      {
         "@id": "cbc:alias",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "Alias",
-        "rdfs:subClassOf": {"@id": "cbc:name"}
+        "rdfs:subClassOf": {"@type": "cbc:name"}
       },
-      "amount": {
+      {
         "@id": "cbc:amount",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "AmountType",
-        "rdfs:subClassOf": {"@id": "dt:amount"}
+        "rdfs:subClassOf": {"@type": "dt:amount"}
       },
-      "boolean": {
+      {
         "@id": "cbc:boolean",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "BooleanType",
-        "rdfs:subClassOf": {"@id": "dt:boolean"}
+        "rdfs:subClassOf": {"@type": "dt:boolean"}
       },
-      "binaryObject": {
+      {
         "@id": "cbc:binaryObject",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "BinaryObjectType",
-        "rdfs:subClassOf": {"@id": "dt:binaryObject"}
+        "rdfs:subClassOf": {"@type": "dt:binaryObject"}
       },
-      "code": {
+      {
         "@id": "cbc:code",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "CodeType",
-        "rdfs:subClassOf": {"@id": "dt:code"}
+        "rdfs:subClassOf": {"@type": "dt:code"}
       },
-      "dateTime": {
+      {
         "@id": "cbc:dateTime",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DateTimeType",
-        "rdfs:subClassOf": {"@id": "dt:dateTime"}
+        "rdfs:subClassOf": {"@type": "dt:dateTime"}
       },
-      "date": {
+      {
         "@id": "cbc:date",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DateType",
-        "rdfs:subClassOf": {"@id": "dt:date"}
+        "rdfs:subClassOf": {"@type": "dt:date"}
       },
-      "iri": {
+      {
         "@id": "cbc:iri",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "IRIType",
-        "rdfs:subClassOf": {"@id": "dt:uri"}
+        "rdfs:subClassOf": {"@type": "dt:uri"}
       },
-      "title": {
+      {
         "@id": "cbc:title",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TitleType",
-        "rdfs:subClassOf": {"@id": "cbc:text"}
+        "rdfs:subClassOf": {"@type": "cbc:text"}
       },
-      "time": {
+      {
         "@id": "cbc:time",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TimeType",
-        "rdfs:subClassOf": {"@id": "dt:time"}
+        "rdfs:subClassOf": {"@type": "dt:time"}
       },
-      "version": {
+      {
         "@id": "cbc:version",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "VersionType",
-        "rdfs:subClassOf": {"@id": "cbc:text"}
+        "rdfs:subClassOf": {"@type": "cbc:text"}
       },
-      "measure": {
+      {
         "@id": "cbc:measure",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "MeasureType",
-        "rdfs:subClassOf": {"@id": "dt:measure"}
+        "rdfs:subClassOf": {"@type": "dt:measure"}
       },
-      "numeric": {
+      {
         "@id": "cbc:numeric",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "NumericType",
-        "rdfs:subClassOf": {"@id": "dt:numeric"}
+        "rdfs:subClassOf": {"@type": "dt:numeric"}
       },
-      "decimal": {
+      {
         "@id": "cbc:decimal",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DecimalType",
-        "rdfs:subClassOf": {"@id": "dt:decimal"}
+        "rdfs:subClassOf": {"@type": "dt:decimal"}
       },
-      "description": {
+      {
         "@id": "cbc:description",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DescriptionType",
-        "rdfs:subClassOf": {"@id": "cbc:text"}
+        "rdfs:subClassOf": {"@type": "cbc:text"}
       },
-      "duration": {
+      {
         "@id": "cbc:duration",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DurationlType",
-        "rdfs:subClassOf": {"@id": "dt:duration"}
+        "rdfs:subClassOf": {"@type": "dt:duration"}
       },
-      "durationMeasure": {
+      {
         "@id": "cbc:durationMeasure",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "durationMeasureType",
-        "rdfs:subClassOf": {"@id": "cbc:measure"}
+        "rdfs:subClassOf": {"@type": "cbc:measure"}
       },
-      "endDate": {
+      {
         "@id": "cbc:endDate",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "EndDateType",
-        "rdfs:subClassOf": {"@id": "cbc:date"}
+        "rdfs:subClassOf": {"@type": "cbc:date"}
       },
-      "endPoint": {
+      {
         "@id": "cbc:endPoint",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "EndPointType",
-        "rdfs:subClassOf": {"@id": "dt:uri"}
+        "rdfs:subClassOf": {"@type": "dt:uri"}
       },
-      "endTime": {
+      {
         "@id": "cbc:endTime",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "EndTimeType",
-        "rdfs:subClassOf": {"@id": "dt:time"}
+        "rdfs:subClassOf": {"@type": "dt:time"}
       },
-      "uuid": {
+      {
         "@id": "cbc:uuid",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "UUIDType",
-        "rdfs:subClassOf": {"@id": "dt:identifier"}
+        "rdfs:subClassOf": {"@type": "dt:identifier"}
       },
-      "hexBinary": {
+      {
         "@id": "cbc:hexBinary",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "HexBinaryType",
-        "rdfs:subClassOf": {"@id": "dt:hexBinary"}
+        "rdfs:subClassOf": {"@type": "dt:hexBinary"}
       },
-      "id": {
+      {
         "@id": "cbc:id",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "IDType",
-        "rdfs:subClassOf": {"@id": "dt:identifier"}
+        "rdfs:subClassOf": {"@type": "dt:identifier"}
       },
-      "indicator": {
+      {
         "@id": "cbc:indicator",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "IndicatorType",
-        "rdfs:subClassOf": {"@id": "dt:indicator"}
+        "rdfs:subClassOf": {"@type": "dt:indicator"}
       },
-      "idReference": {
+      {
         "@id": "cbc:idReference",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "IDReferenceType",
-        "rdfs:subClassOf": {"@id": "dt:identifier"}
+        "rdfs:subClassOf": {"@type": "dt:identifier"}
       },
-      "quantity": {
+      {
         "@id": "cbc:quantity",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "QuantityType",
-        "rdfs:subClassOf": {"@id": "dt:quantity"}
+        "rdfs:subClassOf": {"@type": "dt:quantity"}
       },
-      "name": {
+      {
         "@id": "cbc:name",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "NameType",
-        "rdfs:subClassOf": {"@id": "cbc:text"}
+        "rdfs:subClassOf": {"@type": "cbc:text"}
       },
-      "startDate": {
+      {
         "@id": "cbc:startDate",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "StartDateType",
-        "rdfs:subClassOf": {"@id": "cbc:date"}
+        "rdfs:subClassOf": {"@type": "cbc:date"}
       },
-      "startTime": {
+      {
         "@id": "cbc:startTime",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "StartTimeType",
-        "rdfs:subClassOf": {"@id": "cbc:time"}
+        "rdfs:subClassOf": {"@type": "cbc:time"}
       },
-      "text": {
+      {
         "@id": "cbc:text",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TextType",
-        "rdfs:subClassOf": {"@id": "dt:text"}
+        "rdfs:subClassOf": {"@type": "dt:text"}
       },
-      "type": {
+      {
         "@id": "cbc:type",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TypeType",
-        "rdfs:subClassOf": {"@id": "dt:code"}
+        "rdfs:subClassOf": {"@type": "dt:code"}
       },
-      "uri": {
+      {
         "@id": "cbc:uri",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "URIType",
-        "rdfs:subClassOf": {"@id": "dt:identifier"}
-      },
-    }]
+        "rdfs:subClassOf": {"@type": "dt:identifier"}
+      }
+    ]
 }

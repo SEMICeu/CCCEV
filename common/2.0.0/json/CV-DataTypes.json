@@ -8,8 +8,8 @@
       "xsd": "http://www.w3.org/2001/XMLSchema"
     },
     "@graph": [
-    {
-      "assuranceLevel": {
+
+        {
         "@id":"dt:assuranceLevel",
         "@type":"rdf:Class",
         "rdfs:comment": "The AssuranceLevelType attributes mimic CCTS-CCT attributes for the CodeType. Each EU Member State has the obligation of pre-notifying, and finally publishing their level of assurance for identifier schemes on the OJEU (https://ec.europa.eu/cefdigital/wiki/display/EIDCOMMUNITY/Overview+of+pre-notified+and+notified+eID+schemes+under+eIDAS), which are based on  the definitions provided in Article 8 of the eIDAS Regulation (https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG)",
@@ -20,165 +20,165 @@
         "assuranceLevelAgencyID": "xsd:normalizedString",
         "assuranceLevelAgencyName": "xsd:normalizedString"
         },
-      "amount": {
+        {
         "@id": "dt:amount",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "AmountType",
         "rdfs:subClassOf": {"@id": "udt:AmountType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "anyUri": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:anyUri",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "AnyURIType",
         "rdfs:subClassOf": {"@id": "xsd:anyURI"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "binaryObject": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:binaryObject",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "BinaryObjectType",
         "rdfs:subClassOf": {"@id": "udt:BinaryObjectType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "boolean": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:boolean",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "BooleanType",
         "rdfs:subClassOf": {"@id": "xsd:boolean"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "code": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:code",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "CodeType",
         "rdfs:subClassOf": {"@id": "udt:CodeType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "date": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:date",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DateType",
         "rdfs:subClassOf": {"@id": "xsd:date"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "dateTime": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:dateTime",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DateTimeType",
         "rdfs:subClassOf": {"@id": "udt:DateTimeType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "decimal": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:decimal",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DecimalType",
         "rdfs:subClassOf": {"@id": "xsd:decimal"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "duration": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:duration",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "DurationType",
         "rdfs:subClassOf": {"@id": "xsd:duration"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "hexBinary": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:hexBinary",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "HexBinaryType",
         "rdfs:subClassOf": {"@id": "xsd:hexBinary"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "identifier": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:identifier",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "IdentifierType",
         "rdfs:subClassOf": {"@id": "udt:IdentifierType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "indicator": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:indicator",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "IndicatorType",
         "rdfs:subClassOf": {"@id": "udt:IndicatorType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "measure": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:measure",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "MeasureType",
         "rdfs:subClassOf": {"@id": "udt:MeasureType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "numeric": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:numeric",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "NumericType",
         "rdfs:subClassOf": {"@id": "udt:NumericType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "positiveInteger": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:positiveInteger",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "positiveIntegerType",
         "rdfs:subClassOf": {"@id": "xsd:positiveInteger"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "quantity": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:quantity",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "QuantityType",
         "rdfs:subClassOf": {"@id": "udt:QuantityType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "text": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:text",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TextType",
         "rdfs:subClassOf": {"@id": "udt:TextType"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "time": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:time",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TimeType",
         "rdfs:subClassOf": {"@id": "xsd:time"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "type": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:type",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "TypeType",
         "rdfs:subClassOf": {"@id": "dt:code"},
-        "assuranceLevel": "dt:assuranceLevel"
-      },
-      "uri": {
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
+        },
+        {
         "@id": "dt:uri",
         "@type": "rdf:Class",
         "rdfs:comment": "",
         "rdfs:label": "URIType",
         "rdfs:subClassOf": {"@id": "udt:IdentifierType"},
-        "assuranceLevel": "dt:assuranceLevel"
+        "assuranceLevel": {"@type": "dt:assuranceLevel"}
       }
-    }]
+    ]
 }

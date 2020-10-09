@@ -51,7 +51,7 @@
           "@type" : "rdf:Class" ,
           "rdfs:comment" : "Limitation applied to requirement(s) or to the concept(s) the requirement is about." ,
           "rdfs:label" : "Constraint" ,
-          "rdfs:subClassOf" : {"@type" : "cccev:Requirement"}
+          "rdfs:subClassOf" : {"@id" : "cccev:Requirement"}
         } ,
         
         { 
@@ -73,13 +73,13 @@
           "associatedRoleType" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
           "binaryObject" : {"@type" : "cbc:binaryObject" , "owl:maxCardinality" : "1"} ,
           "statusCode" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
-          "rdfs:subClassOf" : [{"@type" : "dcat-ap:dataset"} ,
+          "rdfs:subClassOf" : [{"@id" : "dcat-ap:dataset"} ,
                               {
-                                "@type" : "owl:Restriction" , 
+                                "@id" : "owl:Restriction" , 
                                 "owl:onProperty" : {"@type" : "cccev:hasValidityPeriod"} ,
                                 "owl:minQualifiedCardinality" : "1" ,
                                 "owl:onClass" : {"@type" : "cccev:Value"}
-                                }] ,
+                                }]
         } ,
       
         { "@id" : "cccev:Evidence" ,
@@ -99,9 +99,9 @@
           "evidenceTypeClassification" :{"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
           "datasetType" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
           "rdfs:subClassOf" : [
-                              {"@type" : "dcat-ap:Dataset"} , 
+                              {"@id" : "dcat-ap:Dataset"} , 
                               {
-                              "@type" : "owl:Restriction" , 
+                              "@id" : "owl:Restriction" , 
                               "owl:onProperty" : {"@type" : "cccev:specifiedIn"} ,
                               "owl:minQualifiedCardinality" : "1" ,
                               "owl:onClass" : {"@type" : "cccev:EvidenceTypeList"}
@@ -138,9 +138,9 @@
           "customFunction" : {"@type" : "cbc:text"} ,
           "error" : {"@type" : "cbc:code" , "owl:maxCardinality" : "1"} ,
           "rdfs:subClassOf" : [
-                              {"@type" : "dcat-ap:Dataset"} , 
+                              {"@id" : "dcat-ap:Dataset"} , 
                               {
-                              "@type" : "owl:Restriction" , 
+                              "@id" : "owl:Restriction" , 
                               "owl:onProperty" : {"@type" : "cccev:hasPeriodValue"} ,
                               "owl:minQualifiedCardinality" : "1" ,
                               "owl:onClass" : {"@type" : "cac:Period"}

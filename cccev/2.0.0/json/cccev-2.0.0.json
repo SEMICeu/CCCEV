@@ -202,6 +202,13 @@
         } ,
 
         {
+          "@id" : "cccev:hasConcept" ,
+          "@type" : "owl:ObjectProperty" ,
+          "rdfs:domain" : {"@id" : "cccev:Concept"} ,
+          "rdfs:range" : {"@id" : "cccev:Conceptt"}
+        } ,
+
+        {
           "@id" : "cccev:hasConstraint" ,
           "@type" : "owl:ObjectProperty" ,
           "rdfs:domain" : {"@id" : "cccev:Concept"} ,

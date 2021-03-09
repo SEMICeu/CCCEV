@@ -2,7 +2,7 @@
 
 This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed (version 2.0.0). The list of changes results in the new version to be considered as a major release.
 
-The motivation of these adaptations is not described in this document. The changes only reflect the modifications and differences between the two versions: what is retained, added, removed or incorporated in a different way. The changes are described first from the perspective of the classes and then from the perspective of the relationships between them. Since the models are very different, an overview of the individual attributes is not provided.
+The motivation for these adaptations is not described in this document. The changes only reflect the modifications and differences between the two versions: what is retained, added, removed or incorporated in a different way. The changes are described first from the perspective of the classes and then from the perspective of the relationships between them. Since the models are very different, an overview of the individual attributes is not provided.
 
 # Changes
 
@@ -25,7 +25,7 @@ The table below gives an overview of the classes (and their definitions) within 
 | C13 | **Evidence Type:** Information about the characteristics of an expected Evidence. | | No match |
 | C14 | **Document Reference**: A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response. | | No match |
 
-From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below:
+From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as <em>**no issue**</em> (new version covers entirely the semantic need), <em>**minor issue**</em> (the new version makes it possible to model this semantic need but this is not directly included in the model), <em>**important difference**</em> (the new version proposes a major change in intentional semantics). If a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way, we described it as <em>**important difference, but covered**</em>.
 
 | Nr | Assessment |
 | --- | --- |
@@ -37,7 +37,7 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | C6 | No issue, because new class. |
 | C7 | No issue, because new class. |
 | C8 | Validity intervals are not explicitly included in CCCEV 2.0.0. |
-| C9 | **Important difference but covered**. Version 2.0.0 offers two mechanisms to express a Requirements to be fulfilled. The set of Requirements that must be fulfilled is now captured by the class Requirement itself via the self-relationship _has Requirement. Consequently,_ a Requirement can be divided in several more detailed Requirements. In addition, the Requirement can express the expected values of the response via the Evidence Type Lists. |
+| C9 | **Important difference but covered**. Version 2.0.0 offers two mechanisms to express a Requirements to be fulfilled. The set of Requirements that must be fulfilled is now captured by the class Requirement itself via the self-relationship _has Requirement_. Consequently, a Requirement can be divided in several more detailed Requirements. In addition, the Requirement can express the expected values of the response via the Evidence Type Lists. |
 | C10 | **Important difference but covered.** The notion of a response (envelope) has not been explicitly included. However since an Evidence is a **subclass of dcat:Dataset,** the envelope (namely describing the data that has been provided as response to a Requirement) is equivalent with the notion of Evidence. |
 | C11 | **Minor issue**, as both notions still refer to the data that supports the response to a Requirement. Note that the Evidence in version 2.0.0 covers any data that proves a requirement. It does not have to be an official certificate signed by a public government. |
 | C12 | No issue, because new class. |
@@ -61,6 +61,7 @@ The following assessment applies to the relationships in CCCEV mentioned in vers
 | R11 | Evidence <em>**issued by**</em> Organisation | | No match |
 | R12 | Evidence <em>**is supported by**</em> Document Reference | | No match |
 
+One can observe that, for the key notions of Requirement and Evidence, version 2.0.0 covers the equivalent notions expressed in version 1.0.0 but often with a broader semantic match. Open discussions remain regarding the harmonisation of the role(s) an Agent can play and the temporal information. This proposition of considering Evidence as a subclass of dcat:Dataset opens this space for discussion. The expressed roles in version 1.0.0 can be covered by the roles expressed in DCAT in various ways. Similar arguments hold for temporal information. To tackle these aspects, a community consultation is appropriate.
 From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below:
 
 | Nr | Assessment |
@@ -68,11 +69,11 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | R1 | No issue. |
 | R2 | No issue, as Requirements can be grouped together into larger units. |
 | R3 | No issue, as Requirements can be grouped together into larger units. |
-| R4 | Applicability period has not been retained in version 2.0.0. |
+| R4 | **Important difference.** Applicability period has not been retained in version 2.0.0. |
 | R5 | No issue, <em>**has Supporting Evidence**</em> covers all kinds of Requirements, including Criteria. |
 | R6 | **Important difference.** There is no statement about an Agent that satisfies the Criteria. Not that this is not necessarily equivalent with the Agent for whom the evidence is about. |
-| R7 | **Important difference but covered.** The Agent which provides the response can be the publisher of the Evidence. To be decided if this is equivalent and if dct:publisher can be used for that role. |
-| R8 | **Important difference.** The application period of the response is not covered. |
+| R7 | **Important difference but covered.** Evidence is a subclass of dcat:dataset. The Agent which provides the response can be considered the publisher of the Evidence. To be decided if this is equivalent and if dct:publisher can be used for that role. |
+| R8 | **Important difference.** The application period of the response is not covered. Note that dcat:Dataset has several temporal notions that could be used to express equivalent notions like temporal coverage (the period that the Dataset, i.e. Evidence is covering) or issue date (the time one which the Dataset, i.e. Evidence has been issued). |
 | R9 | No issue, as Evidence (subclass of dcat:Dataset) corresponds to the Requirement Response notion. |
 | R10 | No issue. |
 | R11 | **Minor issue,** as Evidence (via subclass of dcat:Dataset) supports several interaction roles with Agents. It can be a dct:publisher, a dct:creator or another qualified role. |

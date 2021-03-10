@@ -1,30 +1,30 @@
-# Introduction
+## Introduction
 
 This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed (version 2.0.0). The list of changes results in the new version to be considered as a major release.
 
 We first describe the new high-level design choices which have led to a number of structural changes to the data model of CCCEV. Next, we describe the changes between the two versions in more detail: what is retained, added, removed or incorporated in a different way. The detailed changes are described from the perspective of the classes and the relationships between them. Since the two models are very different, an overview of the individual attributes is not provided.
 
-# High-level overview of structural design changes
+## High-level overview of structural design changes
 
-## Creating a more granular view of requirements
+### Creating a more granular view of requirements
 
-## Making requirements machine-readable
+### Making requirements machine-readable
 By introducing the classes Information Concept and Supported Value, Requirements can be made machine-readable, as opposed to only a textual description and some minor numeric values, as was the case in CCCEV 1.0.0. In addition, the Evidence class is also linked to the Information Concept and Supported Value class in CCCEV 2.0.0, in order to make it possible to automate reasoning on Requirements and on the Evidences that do or do not support that Requirement. 
 
-## From requirement response to supported value
+### From requirement response to supported value
 
-## Shifting the description of the different possible ways to fulfill a (criterion)requirement from the requirement side to the evidence side
+### Shifting the description of the different possible ways to fulfill a (criterion)requirement from the requirement side to the evidence side
 In version 1.0.0, the different ways in which a Criterion could be fulfilled were expressed via the class RequirementGroup, the different instances of which could have been seen as having a logic OR relationship among them, i.e. you can fulfil a certain Criterion via RequirementGroup 1 OR via RequirementGroup 2. Additionally, a RequirementGroup consisted of (atomic) CriterionRequirements, the different instances of which could have been seen as having a logic AND relationship among them, i.e. in order to fulfil this RequirementGroup you need to fulfil all related CriterionRequirements. 
 
 In version 2.0.0, a different approach is proposed based on Evidence. The core class Requirement can be fulfilled by one or more EvidenceTypeLists ("a collection of types of evidences"), the different instances of which have a logic OR relationship among them. An EvidenceTypeList consists of multiple EvidenceTypes, the different instances of which have a logic AND relationship among them, i.e. in order to fulfil this Requirement, you need to provide Evidence A AND B from EvidenceTypeList 1, OR you need to provide Evidence C AND D from EvidenceTypeList 2. 
 
 As can be seen from the above explanation, this second approach puts the emphasis on expressing the different types of Evidences than can be provided in order to fulfil the same Requirement in the end, as opposed to version 1.0.0 where this logical structure was found in the Criterion/Requirement part. Because of this change in “fulfilment mechanism”, the class RequirementGroup and the overarching Criterion class in its original meaning are no longer needed in version 2.0.0. However, the class cccev:Criterion is still used in version 2.0.0, but the semantics have changed, which is, in our opinion, worthy of a discussion.
 
-## Making Evidence a subclass of dcat:Dataset
+### Making Evidence a subclass of dcat:Dataset
 
-## Expanding formal framework into reference framework
+### Expanding formal framework into reference framework
 
-# Detailed changes
+## Detailed changes
 
 The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned and given a SKOS-mapping value.
 

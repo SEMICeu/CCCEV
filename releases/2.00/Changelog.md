@@ -21,8 +21,8 @@ The table below gives an overview of the classes (and their definitions) within 
 | C9 | **Requirement Group**: The set of requirements that must be fulfilled together to validate a criterion. | | No match |
 | C10 | **Requirement Response** : An assertion that responds to a criterion requirement. | | No match |
 | C11 | **Evidence**: Evidence is any resource that can document or support a Requirement response. | **Evidence:** The data proving that a requirement is met or has been fulfilled. | Narrow match |
-| C12 | **Evidence Type List:** A combination of Evidence Types for each of which a conforming Evidence must be provided. | | No match |
-| C13 | **Evidence Type:** Information about the characteristics of an expected Evidence. | | No match |
+| C12 | |**Evidence Type List:** A combination of Evidence Types for each of which a conforming Evidence must be provided.| No match |
+| C13 | |**Evidence Type:** Information about the characteristics of an expected Evidence. | No match |
 | C14 | **Document Reference**: A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response. | | No match |
 
 From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as <em>**no issue**</em> (new version covers entirely the semantic need), <em>**minor issue**</em> (the new version makes it possible to model this semantic need but this is not directly included in the model), <em>**important difference**</em> (the new version proposes a major change in intentional semantics). If a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way, we described it as <em>**important difference, but covered**</em>.

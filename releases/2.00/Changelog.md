@@ -13,10 +13,10 @@ The table below gives an overview of the classes (and their definitions) within 
 | C1 | **Formal Framework**: Legislation, policy, or policies lying behind the rules that govern a criterion. | **Reference Framework:** A source from where Requirements are identified and derived. | Broad match |
 | C2 | **Criterion Requirement**: An atomic requirement. | **Requirement:** A condition or prerequisite that someone requests and someone else has to meet. | Broad match |
 | C3 | **Criterion**: The rule or principle used to judge, evaluate or assess something. | **Criterion:** A condition for evaluation or assessment. | Close match |
-| C4 | **Information Requirement:** A request for data that is proof of Evidence or that leads to the source of such a proof. | | No match |
-| C5 | **Constraint:** Limitation applied to requirement(s) or to the concept(s) the requirement is about. | | No match |
-| C6 | **Information Concept:** A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified. | | No match |
-| C7 | **Supported Value:** A value for an Information Concept that is supported by an Evidence. | | No match |
+| C4 | | **Information Requirement:** A request for data that is proof of Evidence or that leads to the source of such a proof.| No match |
+| C5 | | **Constraint:** Limitation applied to requirement(s) or to the concept(s) the requirement is about. | No match |
+| C6 | | **Information Concept:** A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified. | No match |
+| C7 | | **Supported Value:** A value for an Information Concept that is supported by an Evidence. | No match |
 | C8 | **Period of time**: An interval of time that is named or defined by its start and end times. | | No match |
 | C9 | **Requirement Group**: The set of requirements that must be fulfilled together to validate a criterion. | | No match |
 | C10 | **Requirement Response** : An assertion that responds to a criterion requirement. | | No match |

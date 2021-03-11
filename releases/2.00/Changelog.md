@@ -1,10 +1,41 @@
-# Introduction
+# CCCEV v2.0.0 versus v1.0.0
 
-This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed (version 2.0.0). The list of changes results in the new version to be considered as a major release.
+## Introduction
 
-The changes reflect the modifications and differences between the two versions: what is retained, added, removed or incorporated in a different way. The changes are described first from the perspective of the classes and then from the perspective of the relationships between them. Since the models are very different, an overview of the individual attributes is not provided.
+This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed ([version 2.0.0](https://semiceu.github.io/CCCEV/releases/2.00/)). The list of changes results in the new version to be considered as a major release.
 
-# Changes
+We first describe the new high-level design choices which have led to a number of structural changes to the data model of CCCEV. Next, we describe the changes between the two versions in more detail: what is retained, added, removed or incorporated in a different way. The detailed changes are described from the perspective of the classes and the relationships between them. Since the two models are very different, an overview of the individual attributes is not provided.
+
+## High-level overview of fundamental modelling changes
+
+### Creating more semantically enriched Requirements
+Whereas v1.0.0 used the Criterion Requirement class to describe atomic requirements, v2.0.0 sees the Requirement class as a broad, abstract class, that can be linked to related Requirements and sub-Requirements via a self-association. v2.0.0 recommends to use one of the proposed subclasses of Requirement (Criterion, Information Requirement or Constraint), or, if those classes do not support the implementor's needs, to create your own subclass of Requirement. This enables implementors to define their own domain-specific Requirements and corresponding properties, leading ultimately to more semantically enriched Requirements, enhancing the understandability for the end user.
+
+### Making Requirements machine-readable
+By introducing the classes Information Concept and Supported Value, Requirements can be made machine-readable, as opposed to only a textual description and some minor numeric values, as was the case in CCCEV v1.0.0. In addition, the Evidence class is also linked to the Information Concept and Supported Value class in CCCEV 2.0.0, in order to make it possible to automate reasoning on Requirements and on the Evidences that do or do not support that Requirement. 
+
+### Supporting multiple request-response patterns
+While in v1.0.0, it was the respondent who was making a claim or assertion (Requirement Response) that was proven by Evidence; in the more generic v2.0.0 of CCCEV, multiple request-response patterns are supported. An Evidence can [1] verify a claim (i.e. is it true that John is 25, yes/no), [2] prove a condition (i.e. is John 18+, yes/no), or [3] simply provide data (i.e. the age of a person, namely 25). Implementors will have to design their own request-response pattern, as CCCEV v2.0.0 does not take a stance on this.
+
+### Shifting the description of the different possible ways to fulfill a (Criterion)Requirement from the Requirement side to the Evidence side
+In version 1.0.0, the different ways in which a Criterion could be fulfilled were expressed via the class RequirementGroup, the different instances of which could have been seen as having a logic OR relationship among them, i.e. you can fulfil a certain Criterion via RequirementGroup 1 OR via RequirementGroup 2. Additionally, a RequirementGroup consisted of (atomic) CriterionRequirements, the different instances of which could have been seen as having a logic AND relationship among them, i.e. in order to fulfil this RequirementGroup you need to fulfil all related CriterionRequirements. 
+
+In version 2.0.0, a different approach is proposed based on Evidence. The core class Requirement can be fulfilled by one or more EvidenceTypeLists ("a collection of types of evidences"), the different instances of which have a logic OR relationship among them. An EvidenceTypeList consists of multiple EvidenceTypes, the different instances of which have a logic AND relationship among them, i.e. in order to fulfil this Requirement, you need to provide Evidence A AND B from EvidenceTypeList 1, OR you need to provide Evidence C AND D from EvidenceTypeList 2. 
+
+As can be seen from the above explanation, this second approach puts the emphasis on expressing the different Types of Evidences than can be provided in order to fulfil the same Requirement in the end, as opposed to version 1.0.0 where this logical structure was found in the Criterion/Requirement part. Because of this change in “fulfilment mechanism”, the class RequirementGroup and the overarching Criterion class in its original meaning are no longer needed in version 2.0.0.
+
+### Making Evidence a subclass of dcat:Dataset
+In v2.0.0, CCCEV relies on DCAT, a vocabulary for cataloging datasets and services, to share metadata about an Evidence. This dependence is made explicit by subclassing Evidence from dcat:Dataset. This is justified by the fact that a lot of the information needed for describing Evidences is described in DCAT, such as the issue date, creator, title, etc. Furthermore, other useful parts from DCAT can be reused, such as the Distribution class.
+
+Note that CCCEV v2.0.0 does not enforce the information carried in an Evidence to be directly accessible, i.e. contained within the payload of the response. However, it does offer several ways to implement these aspects: (1) via subclassing of the Evidence class, (2) via sharing it as a dcat:Distribution or (3) via the class Supported Value. These are three distinguishable approaches, which can be used independently from each other, or in combination.
+
+## Detailed changes
+
+The structure of this section is the following:
+* Mapping of the classes from CCCEV 1.0.0 to CCCEV 2.0.0 with their descriptions.
+*	Assessment of the previous mapping, reflecting on the intended usage of the classes in v2.0.0 compared to v1.0.0.
+*	Mapping of the relationships from CCCEV 1.0.0 to CCCEV 2.0.0 with their descriptions.
+*	Assessment of the previous mapping, reflecting on the intended usage of the relationships in v2.0.0 compared to v1.0.0.
 
 The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned and given a SKOS-mapping value.
 
@@ -27,7 +58,11 @@ The table below gives an overview of the classes (and their definitions) within 
 | C15 | **Agent**: An Organisation or Natural person providing a Requirement response that satisfies a Criterion. The Agent class is a generalisation of the Person and Organisation classes defined in the Core Person Vocabulary and the Organisation Ontology respectively. | **Agent**: Any entity that is able to carry out actions. | Broad match |
 | C16 | |**Dataset**: A collection of data. | No match |
 
-From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as <em>**no issue**</em> (new version covers entirely the semantic need), <em>**minor issue**</em> (the new version makes it possible to model this semantic need but this is not directly included in the model), <em>**important difference**</em> (the new version proposes a major change in intentional semantics). If a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way, we described it as <em>**important difference, but covered**</em>.
+From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as: 
+* <em>**No issue**</em>: new version covers entirely the semantic need, 
+* <em>**Minor issue**</em>: the new version makes it possible to model this semantic need but this is not directly included in the model, 
+* <em>**Important difference**</em>: the new version proposes a major change in intentional semantics, 
+* <em>**Important difference but covered**</em>: if a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way.
 
 | Nr | Assessment |
 | --- | --- |
@@ -70,9 +105,9 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 
 | Nr | Assessment |
 | --- | --- |
-| R1 | No issue. |
-| R2 | No issue, as Requirements can be grouped together into larger units. |
-| R3 | No issue, as Requirements can be grouped together into larger units. |
+| R1 | No issue.|
+| R2 | No issue, as Requirements can be grouped together into larger groups. |
+| R3 | No issue, as Requirements can be grouped together into larger groups. |
 | R4 | **Important difference.** Applicability period has not been retained in version 2.0.0. |
 | R5 | No issue, <em>**has Supporting Evidence**</em> covers all kinds of Requirements, including Criteria. |
 | R6 | **Important difference.** There is no statement about an Agent that satisfies the Criteria. Not that this is not necessarily equivalent with the Agent for whom the evidence is about. |

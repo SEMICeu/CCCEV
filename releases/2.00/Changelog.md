@@ -9,7 +9,7 @@ We first describe the new high-level design choices which have led to a number o
 ## High-level overview of fundamental modelling changes
 
 ### Creating more semantically enriched Requirements
-Whereas v1.0.0 used the Criterion Requirement class to describe atomic requirements, v2.0.0 sees the Requirement class as a broad, abstract class, that can be linked to related Requirements and sub-Requirements via a self-association. v2.0.0 recommends to use one of the proposed subclasses of Requirement (Criterion, Information Requirement or Constraint), or, if those classes do not support the implementor's needs, to create your own subclass of Requirement. This enables implementors to define their own domain-specific Requirements and corresponding properties, leading ultimately to more semantically enriched Requirements, enhancing the understandability for the end user.
+Whereas v1.0.0 used the Criterion Requirement class to describe atomic requirements, v2.0.0 sees the Requirement class as a broad, abstract class, that can be linked to related Requirements and sub-Requirements via a self-association. V2.0.0 recommends to use one of the proposed subclasses of Requirement (Criterion, Information Requirement or Constraint), or, if those classes do not support the implementor's needs, to create your own subclass of Requirement. This enables implementors to define their own domain-specific Requirements and corresponding properties, leading ultimately to more semantically enriched Requirements, enhancing the understandability for the end user.
 
 ### Making Requirements machine-readable
 By introducing the classes Information Concept and Supported Value, Requirements can be made machine-readable, as opposed to only a textual description and some minor numeric values, as was the case in CCCEV v1.0.0. In addition, the Evidence class is also linked to the Information Concept and Supported Value class in CCCEV 2.0.0, in order to make it possible to automate reasoning on Requirements and on the Evidences that do or do not support that Requirement. 
@@ -44,8 +44,8 @@ The table below gives an overview of the classes (and their definitions) within 
 | C1 | **Formal Framework**: Legislation, policy, or policies lying behind the rules that govern a criterion. | **Reference Framework:** A source from where Requirements are identified and derived. | Broad match |
 | C2 | **Criterion Requirement**: An atomic requirement. | **Requirement:** A condition or prerequisite that someone requests and someone else has to meet. | Broad match |
 | C3 | **Criterion**: The rule or principle used to judge, evaluate or assess something. | **Criterion:** A condition for evaluation or assessment. | Close match |
-| C4 | | **Information Requirement:** A request for data that is proof of Evidence or that leads to the source of such a proof.| No match |
-| C5 | | **Constraint:** Limitation applied to requirement(s) or to the concept(s) the requirement is about. | No match |
+| C4 | **Criterion Requirement**: An atomic requirement. | **Information Requirement:** A request for data that is proof of Evidence or that leads to the source of such a proof.| Close match |
+| C5 | **Criterion Requirement**: An atomic requirement.| **Constraint:** Limitation applied to requirement(s) or to the concept(s) the requirement is about. | Close match |
 | C6 | | **Information Concept:** A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified. | No match |
 | C7 | | **Supported Value:** A value for an Information Concept that is supported by an Evidence. | No match |
 | C8 | **Period of time**: An interval of time that is named or defined by its start and end times. | | No match |
@@ -67,12 +67,12 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | Nr | Assessment |
 | --- | --- |
 | C1 | No issue, as CCCEV 2.0.0 broadens the definition. |
-| C2 | **Minor issue,** as CCCEV 2.0.0 broadens the definition. A requirement does not have to be atomic anymore. It is now up to the user of CCCEV to define where the atomicity level for requirements is. If there is a need for an atomic requirement then the user can reintroduce it or specify further one of the subclasses of Requirement. |
-| C3 | **Minor issue,** as CCCEV 2.0.0 considers Criterion to be a Requirement for the purpose of evaluation or assessment. |
-| C4 | No issue, since CCCEV 2.0.0 proposes a new class. |
-| C5 | No issue, since CCCEV 2.0.0 proposes a new class. |
-| C6 | No issue, since CCCEV 2.0.0 proposes a new class. |
-| C7 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C2 | **Minor issue,** as CCCEV 2.0.0 broadens the definition. A requirement does not have to be atomic anymore. Instead of the combination of Criterion and Criterion Requirement from v1.0.0, v2.0.0 gathers both terms under the Requirement class and its subclasses (Criterion, Information Requirement, Constraint). It is now up to the user of CCCEV to define where the atomicity level for requirements is. If there is a need for an atomic requirement then the user can reintroduce it or specify further one of the subclasses of Requirement. |
+| C3 | **Minor issue,** as CCCEV 2.0.0 considers Criterion to be a Requirement for the purpose of evaluation or assessment. In practice, the usage of the class Criterion can be very similar between v1.0.0 and v2.0.0. |
+| C4 | **Minor issue,** in addition to the assessment in C2, Information Requirement doesn't need to be an atomic requirement but is a specific type of requirement.|
+| C5 | **Minor issue,** in addition to the assessment in C2, Constraint doesn't need to be an atomic requirement but is a specific type of requirement.|
+| C6 | No issue, since CCCEV 2.0.0 proposes a new class. For a detailed motivation, please see the [Fundamental changes](https://github.com/SEMICeu/CCCEV/blob/80114908669b9258113c6858453b545cefb93646/releases/2.00/Changelog.md#making-requirements-machine-readable). |
+| C7 | No issue, since CCCEV 2.0.0 proposes a new class. For a detailed motivation, please see the [Fundamental changes](https://github.com/SEMICeu/CCCEV/blob/80114908669b9258113c6858453b545cefb93646/releases/2.00/Changelog.md#making-requirements-machine-readable). |
 | C8 | **Important difference**. Validity intervals are not explicitly included in CCCEV 2.0.0. |
 | C9 | **Important difference but covered**. Version 2.0.0 offers two mechanisms to express a Requirements to be fulfilled. The set of Requirements that must be fulfilled is now captured by the class Requirement itself via the self-relationship _has Requirement_. Consequently, a Requirement can be divided in several more detailed Requirements. In addition, the Requirement can express the expected values of the response via the Evidence Type Lists. |
 | C10 | **Important difference but covered.** The notion of a response (envelope) has not been explicitly included. However since an Evidence is a **subclass of dcat:Dataset,** the envelope (namely describing the data that has been provided as response to a Requirement) is equivalent with the notion of Evidence. |
@@ -106,11 +106,11 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | Nr | Assessment |
 | --- | --- |
 | R1 | No issue.|
-| R2 | No issue, as Requirements can be grouped together into larger groups. |
-| R3 | No issue, as Requirements can be grouped together into larger groups. |
+| R2 | No issue, as Requirements can be grouped together into larger groups, similarly to CCCEV v1.0.0. |
+| R3 | No issue, as Requirements can be grouped together into larger groups, similarly to CCCEV v1.0.0. |
 | R4 | **Important difference.** Applicability period has not been retained in version 2.0.0. |
 | R5 | No issue, <em>**has Supporting Evidence**</em> covers all kinds of Requirements, including Criteria. |
-| R6 | **Important difference.** There is no statement about an Agent that satisfies the Criteria. Not that this is not necessarily equivalent with the Agent for whom the evidence is about. |
+| R6 | **Important difference.** There is no statement in v2.0.0 about an Agent that satisfies the Criteria since v2.0.0 only emphasis the roles of the Agent related to evidences (Evidence is About Agent) and requirements (a Requirement issued By Agent). |
 | R7 | **Important difference but covered.** Evidence is a subclass of dcat:dataset. The Agent which provides the response can be considered the publisher of the Evidence. To be decided if this is equivalent and if dct:publisher can be used for that role. |
 | R8 | **Important difference.** The application period of the response is not covered. Note that dcat:Dataset has several temporal notions that could be used to express equivalent notions like temporal coverage (the period that the Dataset, i.e. Evidence is covering) or issue date (the time one which the Dataset, i.e. Evidence has been issued). |
 | R9 | No issue, as Evidence (subclass of dcat:Dataset) corresponds to the Requirement Response notion. |

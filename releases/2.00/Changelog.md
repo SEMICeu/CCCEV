@@ -9,7 +9,7 @@ We first describe the new high-level design choices which have led to a number o
 ## High-level overview of fundamental modelling changes
 
 ### Creating more semantically enriched Requirements
-Whereas v1.0.0 used the Criterion Requirement class to describe atomic requirements, v2.0.0 sees the Requirement class as a broad, abstract class, that can be linked to related Requirements and sub-Requirements via a self-association. V2.0.0 recommends to use one of the proposed subclasses of Requirement (Criterion, Information Requirement or Constraint), or, if those classes do not support the implementor's needs, to create your own subclass of Requirement. This enables implementors to define their own domain-specific Requirements and corresponding properties, leading ultimately to more semantically enriched Requirements, enhancing the understandability for the end user.
+Whereas v1.0.0 used the Criterion Requirement class to describe atomic requirements, v2.0.0 sees the Requirement class as a broad, abstract class, that can be linked to related Requirements and sub-Requirements via a self-association. v2.0.0 recommends to use one of the proposed subclasses of Requirement (Criterion, Information Requirement or Constraint), or, if those classes do not support the implementor's needs, to create your own subclass of Requirement. This enables implementors to define their own domain-specific Requirements and corresponding properties, leading ultimately to more semantically enriched Requirements, enhancing the understandability for the end user.
 
 ### Making Requirements machine-readable
 By introducing the classes Information Concept and Supported Value, Requirements can be made machine-readable, as opposed to only a textual description and some minor numeric values, as was the case in CCCEV v1.0.0. In addition, the Evidence class is also linked to the Information Concept and Supported Value class in CCCEV 2.0.0, in order to make it possible to automate reasoning on Requirements and on the Evidences that do or do not support that Requirement. 
@@ -31,6 +31,12 @@ Note that CCCEV v2.0.0 does not enforce the information carried in an Evidence t
 
 ## Detailed changes
 
+The structure of this section is the following:
+* Mapping of the classes from CCCEV 1.0.0 to CCCEV 2.0.0 with their descriptions.
+*	Assessment of the previous mapping, reflecting on the intended usage of the classes in v2.0.0 compared to v1.0.0.
+*	Mapping of the relationships from CCCEV 1.0.0 to CCCEV 2.0.0 with their descriptions.
+*	Assessment of the previous mapping, reflecting on the intended usage of the relationships in v2.0.0 compared to v1.0.0.
+
 The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned and given a SKOS-mapping value.
 
 | Nr | CCCEV 1.0.0 class | CCCEV 2.0.0 class | SKOS-mapping |
@@ -49,18 +55,24 @@ The table below gives an overview of the classes (and their definitions) within 
 | C12 | |**Evidence Type List:** A combination of Evidence Types for each of which a conforming Evidence must be provided.| No match |
 | C13 | |**Evidence Type:** Information about the characteristics of an expected Evidence. | No match |
 | C14 | **Document Reference**: A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response. | | No match |
+| C15 | **Agent**: An Organisation or Natural person providing a Requirement response that satisfies a Criterion. The Agent class is a generalisation of the Person and Organisation classes defined in the Core Person Vocabulary and the Organisation Ontology respectively. | **Agent**: Any entity that is able to carry out actions. | Broad match |
+| C16 | |**Dataset**: A collection of data. | No match |
 
-From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as <em>**no issue**</em> (new version covers entirely the semantic need), <em>**minor issue**</em> (the new version makes it possible to model this semantic need but this is not directly included in the model), <em>**important difference**</em> (the new version proposes a major change in intentional semantics). If a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way, we described it as <em>**important difference, but covered**</em>.
+From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as: 
+* <em>**No issue**</em>: new version covers entirely the semantic need, 
+* <em>**Minor issue**</em>: the new version makes it possible to model this semantic need but this is not directly included in the model, 
+* <em>**Important difference**</em>: the new version proposes a major change in intentional semantics, 
+* <em>**Important difference but covered**</em>: if a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way.
 
 | Nr | Assessment |
 | --- | --- |
 | C1 | No issue, as CCCEV 2.0.0 broadens the definition. |
 | C2 | **Minor issue,** as CCCEV 2.0.0 broadens the definition. A requirement does not have to be atomic anymore. It is now up to the user of CCCEV to define where the atomicity level for requirements is. If there is a need for an atomic requirement then the user can reintroduce it or specify further one of the subclasses of Requirement. |
 | C3 | **Minor issue,** as CCCEV 2.0.0 considers Criterion to be a Requirement for the purpose of evaluation or assessment. |
-| C4 | No issue, because new class. |
-| C5 | No issue, because new class. |
-| C6 | No issue, because new class. |
-| C7 | No issue, because new class. |
+| C4 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C5 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C6 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C7 | No issue, since CCCEV 2.0.0 proposes a new class. |
 | C8 | Validity intervals are not explicitly included in CCCEV 2.0.0. |
 | C9 | **Important difference but covered**. Version 2.0.0 offers two mechanisms to express a Requirements to be fulfilled. The set of Requirements that must be fulfilled is now captured by the class Requirement itself via the self-relationship _has Requirement_. Consequently, a Requirement can be divided in several more detailed Requirements. In addition, the Requirement can express the expected values of the response via the Evidence Type Lists. |
 | C10 | **Important difference but covered.** The notion of a response (envelope) has not been explicitly included. However since an Evidence is a **subclass of dcat:Dataset,** the envelope (namely describing the data that has been provided as response to a Requirement) is equivalent with the notion of Evidence. |
@@ -68,6 +80,8 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | C12 | No issue, because new class. |
 | C13 | No issue, because new class. |
 | C14 | **Important difference but covered.** Instead of introducing a new class to describe the form, the serialization, etc. in which the Evidence is being supplied, CCCEV 2.0.0 relies on Evidence being the subclass of dcat:Dataset. As such a dcat:Dataset has a dcat:Distribution, which exactly covers this notion of a Document Reference. It even broadens the notion so that machine-readable distributions are also covered in CCCEV 2.0.0. |
+| C15 | No issue, as CCCEV 2.0.0 broadens the definition. |
+| C16 | No issue, since CCCEV 2.0.0 proposes a new class. |
 
 The following assessment applies to the relationships in CCCEV mentioned in version 1.0.0 and their counterparts in version 2.0.0.
 
@@ -91,9 +105,9 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 
 | Nr | Assessment |
 | --- | --- |
-| R1 | No issue. |
-| R2 | No issue, as Requirements can be grouped together into larger units. |
-| R3 | No issue, as Requirements can be grouped together into larger units. |
+| R1 | No issue.|
+| R2 | No issue, as Requirements can be grouped together into larger groups. |
+| R3 | No issue, as Requirements can be grouped together into larger groups. |
 | R4 | **Important difference.** Applicability period has not been retained in version 2.0.0. |
 | R5 | No issue, <em>**has Supporting Evidence**</em> covers all kinds of Requirements, including Criteria. |
 | R6 | **Important difference.** There is no statement about an Agent that satisfies the Criteria. Not that this is not necessarily equivalent with the Agent for whom the evidence is about. |

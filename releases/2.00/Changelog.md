@@ -2,7 +2,7 @@
 
 This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed (version 2.0.0). The list of changes results in the new version to be considered as a major release.
 
-The motivation for these adaptations is not described in this document. The changes only reflect the modifications and differences between the two versions: what is retained, added, removed or incorporated in a different way. The changes are described first from the perspective of the classes and then from the perspective of the relationships between them. Since the models are very different, an overview of the individual attributes is not provided.
+The changes reflect the modifications and differences between the two versions: what is retained, added, removed or incorporated in a different way. The changes are described first from the perspective of the classes and then from the perspective of the relationships between them. Since the models are very different, an overview of the individual attributes is not provided.
 
 # Changes
 
@@ -24,6 +24,8 @@ The table below gives an overview of the classes (and their definitions) within 
 | C12 | |**Evidence Type List:** A combination of Evidence Types for each of which a conforming Evidence must be provided.| No match |
 | C13 | |**Evidence Type:** Information about the characteristics of an expected Evidence. | No match |
 | C14 | **Document Reference**: A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response. | | No match |
+| C15 | **Agent**: An Organisation or Natural person providing a Requirement response that satisfies a Criterion. The Agent class is a generalisation of the Person and Organisation classes defined in the Core Person Vocabulary and the Organisation Ontology respectively. | **Agent**: Any entity that is able to carry out actions. | Broad match |
+| C16 | |**Dataset**: A collection of data. | No match |
 
 From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as <em>**no issue**</em> (new version covers entirely the semantic need), <em>**minor issue**</em> (the new version makes it possible to model this semantic need but this is not directly included in the model), <em>**important difference**</em> (the new version proposes a major change in intentional semantics). If a major change has been recorded, but that this change still covers the notion from CCCEV v1.0.0 in a very different way, we described it as <em>**important difference, but covered**</em>.
 
@@ -32,17 +34,19 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | C1 | No issue, as CCCEV 2.0.0 broadens the definition. |
 | C2 | **Minor issue,** as CCCEV 2.0.0 broadens the definition. A requirement does not have to be atomic anymore. It is now up to the user of CCCEV to define where the atomicity level for requirements is. If there is a need for an atomic requirement then the user can reintroduce it or specify further one of the subclasses of Requirement. |
 | C3 | **Minor issue,** as CCCEV 2.0.0 considers Criterion to be a Requirement for the purpose of evaluation or assessment. |
-| C4 | No issue, because new class. |
-| C5 | No issue, because new class. |
-| C6 | No issue, because new class. |
-| C7 | No issue, because new class. |
-| C8 | Validity intervals are not explicitly included in CCCEV 2.0.0. |
+| C4 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C5 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C6 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C7 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C8 | **Important difference**. Validity intervals are not explicitly included in CCCEV 2.0.0. |
 | C9 | **Important difference but covered**. Version 2.0.0 offers two mechanisms to express a Requirements to be fulfilled. The set of Requirements that must be fulfilled is now captured by the class Requirement itself via the self-relationship _has Requirement_. Consequently, a Requirement can be divided in several more detailed Requirements. In addition, the Requirement can express the expected values of the response via the Evidence Type Lists. |
 | C10 | **Important difference but covered.** The notion of a response (envelope) has not been explicitly included. However since an Evidence is a **subclass of dcat:Dataset,** the envelope (namely describing the data that has been provided as response to a Requirement) is equivalent with the notion of Evidence. |
 | C11 | **Minor issue**, as both notions still refer to the data that supports the response to a Requirement. Note that the Evidence in version 2.0.0 covers any data that proves a requirement. It does not have to be an official certificate signed by a public government. |
-| C12 | No issue, because new class. |
-| C13 | No issue, because new class. |
+| C12 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C13 | No issue, since CCCEV 2.0.0 proposes a new class. |
 | C14 | **Important difference but covered.** Instead of introducing a new class to describe the form, the serialization, etc. in which the Evidence is being supplied, CCCEV 2.0.0 relies on Evidence being the subclass of dcat:Dataset. As such a dcat:Dataset has a dcat:Distribution, which exactly covers this notion of a Document Reference. It even broadens the notion so that machine-readable distributions are also covered in CCCEV 2.0.0. |
+| C15 | No issue, as CCCEV 2.0.0 broadens the definition. |
+| C16 | No issue, since CCCEV 2.0.0 proposes a new class. |
 
 The following assessment applies to the relationships in CCCEV mentioned in version 1.0.0 and their counterparts in version 2.0.0.
 

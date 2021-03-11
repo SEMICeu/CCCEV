@@ -73,12 +73,12 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 | C5 | No issue, since CCCEV 2.0.0 proposes a new class. |
 | C6 | No issue, since CCCEV 2.0.0 proposes a new class. |
 | C7 | No issue, since CCCEV 2.0.0 proposes a new class. |
-| C8 | Validity intervals are not explicitly included in CCCEV 2.0.0. |
+| C8 | **Important difference**. Validity intervals are not explicitly included in CCCEV 2.0.0. |
 | C9 | **Important difference but covered**. Version 2.0.0 offers two mechanisms to express a Requirements to be fulfilled. The set of Requirements that must be fulfilled is now captured by the class Requirement itself via the self-relationship _has Requirement_. Consequently, a Requirement can be divided in several more detailed Requirements. In addition, the Requirement can express the expected values of the response via the Evidence Type Lists. |
 | C10 | **Important difference but covered.** The notion of a response (envelope) has not been explicitly included. However since an Evidence is a **subclass of dcat:Dataset,** the envelope (namely describing the data that has been provided as response to a Requirement) is equivalent with the notion of Evidence. |
 | C11 | **Minor issue**, as both notions still refer to the data that supports the response to a Requirement. Note that the Evidence in version 2.0.0 covers any data that proves a requirement. It does not have to be an official certificate signed by a public government. |
-| C12 | No issue, because new class. |
-| C13 | No issue, because new class. |
+| C12 | No issue, since CCCEV 2.0.0 proposes a new class. |
+| C13 | No issue, since CCCEV 2.0.0 proposes a new class. |
 | C14 | **Important difference but covered.** Instead of introducing a new class to describe the form, the serialization, etc. in which the Evidence is being supplied, CCCEV 2.0.0 relies on Evidence being the subclass of dcat:Dataset. As such a dcat:Dataset has a dcat:Distribution, which exactly covers this notion of a Document Reference. It even broadens the notion so that machine-readable distributions are also covered in CCCEV 2.0.0. |
 | C15 | No issue, as CCCEV 2.0.0 broadens the definition. |
 | C16 | No issue, since CCCEV 2.0.0 proposes a new class. |

@@ -37,7 +37,7 @@ The structure of this section is the following:
 *	Mapping of the relationships from CCCEV 1.0.0 to CCCEV 2.0.0 with their descriptions.
 *	Assessment of the previous mapping, reflecting on the intended usage of the relationships in v2.0.0 compared to v1.0.0.
 
-The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned and given a SKOS-mapping value.
+The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned.
 
 | Nr | CCCEV 1.0.0 class | CCCEV 2.0.0 class |
 | --- | --- | --- | 

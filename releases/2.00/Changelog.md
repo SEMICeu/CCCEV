@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed ([version 2.0.0](https://semiceu.github.io/CCCEV/releases/2.00/)). The list of changes results in the new version to be considered as a major release.
+This document describes the (major) changes to [the current version 1.0.0](https://joinup.ec.europa.eu/solution/core-criterion-and-core-evidence-vocabulary/releases) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) for which a new version is being proposed ([version 2.0.0](https://semiceu.github.io/CCCEV/releases/2.00/)). The list of changes results in the new version to be considered as a major release. 
 
 We first describe the new high-level design choices which have led to a number of structural changes to the data model of CCCEV. Next, we describe the changes between the two versions in more detail: what is retained, added, removed or incorporated in a different way. The detailed changes are described from the perspective of the classes and the relationships between them. Since the two models are very different, an overview of the individual attributes is not provided.
 

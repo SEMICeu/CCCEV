@@ -7,9 +7,9 @@ The version 2.00 of the Core Criterion and Core Evidence Vocabulary (CCCEV) is a
 *    [HTML as specification](https://semiceu.github.io/CCCEV/releases/2.00/)
 *    [EAP as UML diagram](https://github.com/SEMICeu/CCCEV/raw/master/releases/2.00/cccev.eap)
 
-# How to tackle CCCEV?
+# New to CCCEV?
 
-If you are new to CCCEV, in semantic modelling or simply wonder how to tackle the reading of CCCEV, we would advise you the following default order:
+If you are new to CCCEV, we would advise you to go through these materials in the following order:
 
 1. [CCCEV Explanatory example](https://github.com/SEMICeu/CCCEV/raw/master/releases/2.00/html/CCCEV_AnExplanatoryExample.pdf) presenting the current version 2.00.
 2. [Changelog from CCCEV 1.00 to this version 2.00](https://github.com/SEMICeu/CCCEV/blob/master/releases/2.00/Changelog.md) with the motivations which led to the current version as well as a comparison between v1.00 and v2.00.

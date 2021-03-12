@@ -2,7 +2,7 @@
 
 # Core Criterion and Core Evidence Vocabulary (CCCEV) - Version 2.00
 
-The version 2.00 of the Core Criterion and Core Evidence Vocabulary (CCCEV) is available as:
+The version 2.00 of the Core Criterion and Core Evidence Vocabulary (CCCEV) is available as: 
 
 *    [HTML as specification](https://semiceu.github.io/CCCEV/releases/2.00/)
 *    [EAP as UML diagram](https://github.com/SEMICeu/CCCEV/raw/master/releases/2.00/cccev.eap)

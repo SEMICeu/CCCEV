@@ -219,9 +219,9 @@
 <p>
 	Although CCCEV shapes a general framework around these core concepts, implementations have to make decisions on how the framework is actually used by further elaborating the Core Vocabulary to make it applicable in their specific context. 
 </p>
-<p>
+<!--<p>
 	An explanatory example that helps the reader to better understand this specification can be found <a href="./CCCEV_AnExplanatoryExample.pdf">here</a>.
-</p>
+</p>-->
 
             </div>
 
@@ -670,12 +670,16 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                   <dl>
                     <dt>Description</dt><dd>Information about the characteristics of an expected Evidence.</dd>
                     
-                    <dt>Usage</dt><dd>These are not concrete individual responses to a Requirement (Evidences), but descriptions about the desired form, content, source, etc. that an actual response should have and provide. Such information can be described as part of specific models, e.g. a birth certificate model.
+                    <dt>Usage</dt><dd>Examples of Evidence Types include birth certificates, marriage evidences, university diploma's, etc. These are not concrete individual responses to a Requirement (Evidences), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide.
 
-Evidence Types express conditions for an acceptable response at two levels: the concrete information that is being requested, and the metadata about how this concrete information is being obtained. For a specific Requirement, the requester can define the List of Evidence Types which would be accepted and, for each Evidence Type in this list, the specific information and form that should be part of the Evidence actually provided in order to answer the Requirement. 
+                          For a specific Requirement, the requester can define the List of Evidence Types which would be accepted and, for each Evidence Type in this list, the specific information and form that should be part of the Evidence actually provided in order to answer the Requirement.
 
-Examples of Evidence Types include birth certificates, marriage evidences, university diploma's, etc. The Evidence Type can also capture specific characteristics such as a specific format or source of the Evidence as such characteristics may be strictly required depending on the Requirement.
-</dd>
+                          Evidence Types can express conditions for an acceptable response at two levels: the concrete information that is being requested, and the metadata about how this concrete information is being obtained.
+			  
+			  This way, the Evidence Type can capture specific characteristics such as a specific format or source of the Evidence, as such characteristics may be strictly required depending on the Requirement.
+			  
+			  Implementations are free, however, to set the level of detail (i.e. number of characteristics) they want to specify for Evidence Types.
+		    </dd>
                     
 		    
                     <dt>Properties</dt>

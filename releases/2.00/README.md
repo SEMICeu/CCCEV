@@ -11,7 +11,7 @@ The version 2.00 of the Core Criterion and Core Evidence Vocabulary (CCCEV) is a
 
 If you are new to CCCEV, we would advise you to go through these materials in the following order:
 
-1. [CCCEV Explanatory example](https://github.com/SEMICeu/CCCEV/raw/master/releases/2.00/html/CCCEV_AnExplanatoryExample.pdf) presenting the current version 2.00.
+1. [CCCEV Explanatory example](https://github.com/SEMICeu/CCCEV/blob/master/releases/2.00/CCCEV_AnExplanatoryExample.pdf) presenting the current version 2.00.
 2. [Changelog from CCCEV 1.00 to this version 2.00](https://github.com/SEMICeu/CCCEV/blob/master/releases/2.00/Changelog.md) with the motivations which led to the current version as well as a comparison between v1.00 and v2.00.
 3. The full [HTML specification of CCCEV 2.00](https://semiceu.github.io/CCCEV/releases/2.00/) describing in detail the version 2.00 with usage notes.
 

@@ -39,24 +39,24 @@ The structure of this section is the following:
 
 The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned and given a SKOS-mapping value.
 
-| Nr | CCCEV 1.0.0 class | CCCEV 2.0.0 class | SKOS-mapping |
-| --- | --- | --- | --- |
-| C1 | **Formal Framework**: Legislation, policy, or policies lying behind the rules that govern a criterion. | **Reference Framework:** A source from where Requirements are identified and derived. | Broad match |
-| C2 | **Criterion Requirement**: An atomic requirement. | **Requirement:** A condition or prerequisite that someone requests and someone else has to meet. | Broad match |
-| C3 | **Criterion**: The rule or principle used to judge, evaluate or assess something. | **Criterion:** A condition for evaluation or assessment. | Close match |
-| C4 | **Criterion Requirement**: An atomic requirement. | **Information Requirement:** A request for data that is proof of Evidence or that leads to the source of such a proof.| Close match |
+| Nr | CCCEV 1.0.0 class | CCCEV 2.0.0 class |
+| --- | --- | --- | 
+| C1 | **Formal Framework**: Legislation, policy, or policies lying behind the rules that govern a criterion. | **Reference Framework:** A source from where Requirements are identified and derived. | 
+| C2 | **Criterion Requirement**: An atomic requirement. | **Requirement:** A condition or prerequisite that someone requests and someone else has to meet. | 
+| C3 | **Criterion**: The rule or principle used to judge, evaluate or assess something. | **Criterion:** A condition for evaluation or assessment. |
+| C4 | **Criterion Requirement**: An atomic requirement. | **Information Requirement:** A request for data that is proof of Evidence or that leads to the source of such a proof.|
 | C5 | **Criterion Requirement**: An atomic requirement.| **Constraint:** Limitation applied to requirement(s) or to the concept(s) the requirement is about. | Close match |
-| C6 | | **Information Concept:** A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified. | No match |
-| C7 | | **Supported Value:** A value for an Information Concept that is supported by an Evidence. | No match |
-| C8 | **Period of time**: An interval of time that is named or defined by its start and end times. | | No match |
-| C9 | **Requirement Group**: The set of requirements that must be fulfilled together to validate a criterion. | | No match |
-| C10 | **Requirement Response** : An assertion that responds to a criterion requirement. | | No match |
-| C11 | **Evidence**: Evidence is any resource that can document or support a Requirement response. | **Evidence:** The data proving that a requirement is met or has been fulfilled. | Narrow match |
-| C12 | |**Evidence Type List:** A combination of Evidence Types for each of which a conforming Evidence must be provided.| No match |
-| C13 | |**Evidence Type:** Information about the characteristics of an expected Evidence. | No match |
-| C14 | **Document Reference**: A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response. | | No match |
-| C15 | **Agent**: An Organisation or Natural person providing a Requirement response that satisfies a Criterion. The Agent class is a generalisation of the Person and Organisation classes defined in the Core Person Vocabulary and the Organisation Ontology respectively. | **Agent**: Any entity that is able to carry out actions. | Broad match |
-| C16 | |**Dataset**: A collection of data. | No match |
+| C6 | | **Information Concept:** A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified. |
+| C7 | | **Supported Value:** A value for an Information Concept that is supported by an Evidence. |
+| C8 | **Period of time**: An interval of time that is named or defined by its start and end times. | |
+| C9 | **Requirement Group**: The set of requirements that must be fulfilled together to validate a criterion. | |
+| C10 | **Requirement Response** : An assertion that responds to a criterion requirement. | |
+| C11 | **Evidence**: Evidence is any resource that can document or support a Requirement response. | **Evidence:** The data proving that a requirement is met or has been fulfilled. |
+| C12 | |**Evidence Type List:** A combination of Evidence Types for each of which a conforming Evidence must be provided.|
+| C13 | |**Evidence Type:** Information about the characteristics of an expected Evidence. |
+| C14 | **Document Reference**: A reference to the document, attestation or data, usually provided by a party different from the one providing the response, that proves the response. |
+| C15 | **Agent**: An Organisation or Natural person providing a Requirement response that satisfies a Criterion. The Agent class is a generalisation of the Person and Organisation classes defined in the Core Person Vocabulary and the Organisation Ontology respectively. | **Agent**: Any entity that is able to carry out actions. |
+| C16 | |**Dataset**: A collection of data. |
 
 From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below. The issues are categorized as: 
 * <em>**No issue**</em>: new version covers entirely the semantic need, 
@@ -85,20 +85,20 @@ From this mapping, several changes can be distinguished between CCCEV 1.0.0 and 
 
 The following assessment applies to the relationships in CCCEV mentioned in version 1.0.0 and their counterparts in version 2.0.0.
 
-| Nr | CCCEV 1.0.0 relationship | CCCEV 2.0.0 relationship | SKOS-mapping |
-| --- | --- | --- | --- |
-| R1 | Criterion <em>**is defined in**</em> Formal Framework | Requirement <em>**is Derived From**</em> Reference Framework | Exact match |
-| R2 | Criterion <em>**fulfilled by**</em> Requirement Group | Requirement <em>**is Requirement Of**</em> Requirement | Close match |
-| R3 | Requirement Group <em>**has**</em> Criterion Requirement | Requirement <em>**has Requirement**</em> Requirement | Close match |
-| R4 | Criterion Requirement <em>**applicable in**</em> Period of Time | | No match |
-| R5 | Criterion Requirement <em>**met by**</em> Evidence | Requirement <em>**has Supporting Evidence**</em> Evidence | Close match |
-| R6 | Agent <em>**satisfies**</em> Criterion | | No match |
-| R7 | Agent <em>**provides**</em> Requirement Response | | No match |
-| R8 | Requirement Response <em>**applies to**</em> Period of Time | | No match |
-| R9 | Requirement Response <em>**proven by**</em> Evidence | Requirement <em>**has Supporting Evidence**</em> Evidence | Close match |
-| R10 | Evidence <em>**belongs to**</em> Agent | Evidence <em>**is About**</em> Agent | Exact match |
-| R11 | Evidence <em>**issued by**</em> Organisation | | No match |
-| R12 | Evidence <em>**is supported by**</em> Document Reference | | No match |
+| Nr | CCCEV 1.0.0 relationship | CCCEV 2.0.0 relationship |
+| --- | --- | --- |
+| R1 | Criterion <em>**is defined in**</em> Formal Framework | Requirement <em>**is Derived From**</em> Reference Framework |
+| R2 | Criterion <em>**fulfilled by**</em> Requirement Group | Requirement <em>**is Requirement Of**</em> Requirement |
+| R3 | Requirement Group <em>**has**</em> Criterion Requirement | Requirement <em>**has Requirement**</em> Requirement |
+| R4 | Criterion Requirement <em>**applicable in**</em> Period of Time | |
+| R5 | Criterion Requirement <em>**met by**</em> Evidence | Requirement <em>**has Supporting Evidence**</em> Evidence |
+| R6 | Agent <em>**satisfies**</em> Criterion | |
+| R7 | Agent <em>**provides**</em> Requirement Response | |
+| R8 | Requirement Response <em>**applies to**</em> Period of Time | |
+| R9 | Requirement Response <em>**proven by**</em> Evidence | Requirement <em>**has Supporting Evidence**</em> Evidence |
+| R10 | Evidence <em>**belongs to**</em> Agent | Evidence <em>**is About**</em> Agent |
+| R11 | Evidence <em>**issued by**</em> Organisation | |
+| R12 | Evidence <em>**is supported by**</em> Document Reference | |
 
 One can observe that, for the key notions of Requirement and Evidence, version 2.0.0 covers the equivalent notions expressed in version 1.0.0 but often with a broader semantic match. Open discussions remain regarding the harmonisation of the role(s) an Agent can play and the temporal information. This proposition of considering Evidence as a subclass of dcat:Dataset opens this space for discussion. The expressed roles in version 1.0.0 can be covered by the roles expressed in DCAT in various ways. Similar arguments hold for temporal information. To tackle these aspects, a community consultation is appropriate.
 From this mapping, several changes can be distinguished between CCCEV 1.0.0 and CCCEV 2.0.0. The discovered changes and how they are addressed in version 2.0.0 are described below:

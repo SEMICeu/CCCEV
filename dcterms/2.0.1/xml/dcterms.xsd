@@ -1,0 +1,111 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- the default and target namespaces are temporary until a final (P)URI policy is defined and adopted. -->
+<xsd:schema xmlns="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:lcn="http://www.w3.org/ns/locn#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	
+	targetNamespace="http://purl.org/dc/terms/" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified" version="2.0.1">
+
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/" schemaLocation="../../../foaf/2.0.1/xml/foaf.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/locn#" schemaLocation="../../../clv/2.0.1/xml/locn.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="../../../skos/2.0.1/xml/skos.xsd"/>
+	<xsd:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="../../../rdf/2.0.1/xml/rdf.xsd"/>
+	
+	<!-- Element declaration -->
+	
+	<!-- The objective of this declaration is to state that the dct terms Agent is an equivalent class of foaf:Agent. We do not intend
+	to extend the dct Agents; this should be done by DCMI.-->
+	
+	<!-- Data properties --> 
+	<xsd:element name="description" type="xsd:string"/>
+	<xsd:element name="endDate" type="xsd:date"/>
+	<xsd:element name="identifier" type="xsd:normalizedString"/>
+	<xsd:element name="issued" type="xsd:dateTime"/>
+	<xsd:element name="modified" type="xsd:dateTime"/>
+	<xsd:element name="publisher" type="foaf:AgentType"/>
+	<xsd:element name="startDate" type="xsd:date"/>
+	<xsd:element name="title" type="xsd:string"/>
+	<xsd:element name="type" type="xsd:anyURI"/>
+	
+	<!-- Object properties -->
+	<xsd:element name="accessRights" type="RightStatementType"/>
+	<xsd:element name="accrualPeriodicity" type="FrequencyType"/>
+	<xsd:element name="conformsTo" type="StandardType"/>
+	<xsd:element name="creator" type="foaf:AgentType"/>
+	<xsd:element name="format" type="MediaType"/>
+	<xsd:element name="hasVersion" type="rdf:Resource"/>
+	<xsd:element name="isReferencedBy" type="rdf:Resource"/>
+	<xsd:element name="isVersionOf" type="rdf:Resource"/>
+	<xsd:element name="licence" type="LicenceDocumentType"/>
+	<xsd:element name="language" type="LinguisticSystemType"/>
+	<xsd:element name="provenance" type="ProvenanceStatementType"/>
+	<xsd:element name="relation" type="xsd:anyType"/>
+	<xsd:element name="rights" type="RightStatementType"/>
+	<xsd:element name="source" type="skos:ConceptType"/>
+	<xsd:element name="spatial" type="LocationType"/>
+	<xsd:element name="temporal" type="PeriodOfTimeType"/>
+
+	<!-- Class definitions -->
+	<xsd:complexType name="CodeType">
+		<xsd:complexContent>
+				<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="FrequencyType">
+		<xsd:restriction base="xsd:positiveInteger"/>	
+	</xsd:simpleType>	
+	
+	<xsd:complexType name="LicenceDocumentType">
+		<xsd:complexContent>
+			<xsd:extension base="rdf:Resource"/>	
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="LinguisticSystemType">
+		<xsd:restriction base="xsd:anyURI"/>	
+	</xsd:simpleType>
+
+	<xsd:complexType name="LocationType">
+		<xsd:sequence>
+			<xsd:element ref="lcn:Geometry"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:complexType name="MediaType" mixed="true">
+		<xsd:complexContent>
+				<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="PeriodOfTimeType">
+		<xsd:sequence>
+			<xsd:element ref="startDate" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="endDate" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>	
+	</xsd:complexType>
+	
+	<xsd:complexType name="ProvenanceStatementType">
+		<xsd:complexContent>
+			<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="RightStatementType">
+		<xsd:complexContent>
+				<xsd:extension base="xsd:anyType"/>		
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="StandardType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI"/>		
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+</xsd:schema>

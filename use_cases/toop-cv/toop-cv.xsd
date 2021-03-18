@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsd:schema xmlns="urn:eu:toop:ns:dataexchange-1p40"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
-  xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
-  xmlns:cccev="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#"
+  xmlns:cac="https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#"
+  xmlns:cbc="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#"
+  xmlns:cccev="https://data.europa.eu/semanticassets/ns/cv/cccev_v2.0.1#"
   xmlns:dcat-ap="http://data.europa.eu/r5r/"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   targetNamespace="urn:eu:toop:ns:dataexchange-1p40" version="specsVersion1.4.0"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
 
   <xsd:import namespace="http://xmlns.com/foaf/0.1/"
-    schemaLocation="../../foaf/2.0.0/xml/foaf.xsd"/>
+    schemaLocation="../../foaf/2.0.1/xml/foaf.xsd"/>
   <xsd:import namespace="http://data.europa.eu/r5r/"
-    schemaLocation="../../dcat-ap/2.0.0/xml/dcat-ap.xsd"/>
-  <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#"
-    schemaLocation="../../cccev/2.0.0/xml/xsdrt/cccev-2.0.0.xsd"/>
-  <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
-    schemaLocation="../../common/2.0.0/xml/xsdrt/CV-CommonAggregateComponents.xsd"/>
-  <xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
-    schemaLocation="../../common/2.0.0/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+    schemaLocation="../../dcat-ap/2.0.1/xml/dcat-ap.xsd"/>
+  <xsd:import namespace="https://data.europa.eu/semanticassets/ns/cv/cccev_v2.0.1#"
+    schemaLocation="../../cccev/2.0.1/xml/xsdrt/cccev-2.0.1.xsd"/>
+  <xsd:import namespace="https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#"
+    schemaLocation="../../common/2.0.1/xml/xsdrt/CV-CommonAggregateComponents.xsd"/>
+  <xsd:import namespace="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#"
+    schemaLocation="../../common/2.0.1/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
 
   <!--alternative ROOT elements-->
   <xsd:element name="Request" type="TOOPRequestType"/>

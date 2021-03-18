@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- the CAV namespace has not been created yet, hence the same node number for the cccev and the cav, for the time being -->
-<xsd:schema xmlns="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#"
-	xmlns:cac="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#"
-	xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#"
+<xsd:schema xmlns="https://github.com/everis-semic/cccev/2.0.1/xml/CCCEV-AggregateComponents#"
+	xmlns:cac="https://github.com/everis-semic/common/2.0.1/xml/CommonAggregateComponents#"
+	xmlns:cbc="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="https://github.com/everis-semic/cccev/2.0.0/xml/CCCEV-AggregateComponents#" 
+	targetNamespace="https://github.com/everis-semic/cccev/2.0.1/xml/CCCEV-AggregateComponents#" 
 	elementFormDefault="qualified" 
-	attributeFormDefault="unqualified" version="2.0.0">
-	<xsd:import namespace="https://github.com/everis-semic/common/2.0.0/xml/CommonAggregateComponents#" schemaLocation="../../../common/2.0.0/xml/CommonAggregateComponents.xsd"/>
-	<xsd:import namespace="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" schemaLocation="../../../common/2.0.0/xml/CV-CommonBasicComponents.xsd"/>
+	attributeFormDefault="unqualified" version="2.0.1">
+	<xsd:import namespace="https://github.com/everis-semic/common/2.0.1/xml/CommonAggregateComponents#" schemaLocation="../../../common/2.0.1/xml/CommonAggregateComponents.xsd"/>
+	<xsd:import namespace="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#" schemaLocation="../../../common/2.0.1/xml/CV-CommonBasicComponents.xsd"/>
 	<!-- Element declaration -->
 	<xsd:element name="Criterion" type="CriterionType"/>
 	<xsd:element name="CriterionConstraintProperty" type="PropertyType"/>

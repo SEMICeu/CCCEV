@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.w3.org/ns/prov#"    
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    targetNamespace="http://www.w3.org/ns/prov#"
+    elementFormDefault="qualified"> 
+    
+    <xsd:import namespace="http://xmlns.com/foaf/0.1/"
+        schemaLocation="../../../foaf/2.0.1/xml/foaf.xsd"/>
+    
+    <!-- Data properties declarations-->
+
+   
+    
+    <!-- Object properties declarations-->
+    <xsd:element name="actedOnBehalfOf" type="AgentType"/>
+    <xsd:element name="activity" type="ActivityType"/>
+    <xsd:element name="agent" type="AgentType"/>
+    <xsd:element name="atLocation" type="xsd:anyType"/>
+    <xsd:element name="entity" type="xsd:anyType"/>
+    <xsd:element name="hadActivity" type="ActivityType"/>
+    <xsd:element name="hadPlan" type="xsd:anyType"/>
+    <xsd:element name="hadRole" type="xsd:anyType"/>
+    <xsd:element name="qualifiedAttribution" type="AttributionType"/>
+    <xsd:element name="qualifiedAssotiation" type="AssotiationType"/>
+    <xsd:element name="qualifiedInfluence" type="InfluenceType"/>
+    <xsd:element name="wasInfluencedBy" type="AgentType"/>
+    <xsd:element name="wasGeneratedBy" type="ActivityType"/>
+    
+    <!-- Classes declarations-->
+
+
+    
+    
+    <!-- Class definition -->
+    
+    <xsd:complexType name="ActivityType">
+        <xsd:complexContent>
+            <xsd:extension base="xsd:anyType">
+                <xsd:sequence/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="AgentType">
+        <xsd:complexContent>
+            <xsd:extension base="foaf:AgentType">
+                <xsd:sequence>
+                    <xsd:element ref="actedOnBehalfOf" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="atLocation" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="qualifiedInfluence" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="wasInfluencedBy" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+  
+    <xsd:complexType name="AttributionType">
+        <xsd:sequence>
+            <xsd:element ref="agent" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="AssotiationType">
+        <xsd:sequence>
+            <xsd:element ref="agent" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="hadPlan" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="hadRole" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="InfluenceType">
+        <xsd:sequence>
+            <xsd:element ref="hadActivity" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="hadRole" minOccurs="0" maxOccurs="unbounded"/>
+            <!-- This implements the property prov:influencer-->
+            <xsd:choice>
+                <xsd:element ref="agent" minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element ref="activity" minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element ref="entity" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>

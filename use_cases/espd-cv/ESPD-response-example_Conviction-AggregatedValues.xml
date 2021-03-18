@@ -31,14 +31,14 @@
     xmlns:adms="http://www.w3.org/ns/adms#" 
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:dcat-ap="http://data.europa.eu/r5r/"
-    xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
-    xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" 
+    xmlns:cac="https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#"
+    xmlns:cbc="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#" 
     xmlns:org="http://www.w3.org/ns/org#"
-    xmlns:dt="https://data.europe.eu/semanticassets/ns/cv/common/dataTypes-2.0.0#"
+    xmlns:dt="https://data.europa.eu/semanticassets/ns/cv/common/dataTypes-2.0.1#"
     xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-    xmlns:cccev="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" 
+    xmlns:cccev="https://data.europa.eu/semanticassets/ns/cv/cccev_v2.0.1#" 
     xmlns:lcn="http://www.w3.org/ns/locn#"
     xmlns:rov="http://www.w3.org/ns/regorg#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"    
@@ -247,7 +247,7 @@
             </foaf:page>
             <dcat-ap:downloadURL>https://acme.com/docs/2020101-JS-Collusion.pdf</dcat-ap:downloadURL>
         </dcat-ap:distribution>
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier> 
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier> 
         <dct:creator/>
         <!-- The evidence supportsRequirement everything stated in the Information Requirement id = 005eb9ed-1347-4ca3-bb29-9bc0db64e1ab, except for the Cleansing which has its own evidence. -->
         <cccev:supportsRequirement>005eb9ed-1347-4ca3-bb29-9bc0db64e1ab</cccev:supportsRequirement>
@@ -259,7 +259,7 @@
         <dcat-ap:distribution>
             <dcat-ap:accessURL>https://datos.gov.es/magistratura/sentencias/contratatacionpublica</dcat-ap:accessURL>
         </dcat-ap:distribution>
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>      
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>      
         <dct:creator/>
         <dcat-ap:landingPage>
                 <foaf:topic>Superior Court Convictions</foaf:topic>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="qualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://www.w3.org/2001/vcard-rdf/3.0#"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:cbc="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#" 
+  xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace">
+  <annotation>
+    <documentation xml:lang="en">
+      vCard XML Schema
+      
+      Created by Tom Habing, thabing@uiuc.edu
+      
+      XML Schema for representing vCards in XML
+      
+      This schema is based on the Representing vCard Objects in RDF/XML at the W3C http://www.w3.org/TR/vcard-rdf
+    </documentation>
+    <appinfo xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:title>vCard XML Schema</dc:title>
+      <dc:creator>Tom Habing, thabing@uiuc.edu</dc:creator>
+      <dc:relation>http://www.w3.org/TR/vcard-rdf</dc:relation>
+      <dc:relation>ftp://ftp.isi.edu/in-notes/rfc2426.txt</dc:relation>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+  <import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+  
+  <import namespace="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#"
+    schemaLocation="../../../common/2.0.1/xml/xsdrt/CV-CommonBasicComponents.xsd"/>
+  
+  <element name="VCard" type="vCard:VCARDType"/>
+  
+  <complexType name="VCARDType">
+    <sequence>
+      <element name="VCARD">
+        <complexType>
+          <sequence>
+            <any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace"/>
+          </sequence>
+          <attribute ref="xml:lang" use="optional"/>
+        </complexType>
+      </element>
+      <element name="FN" type="vCard:simpleElement"/>
+      <element name="NICKNAME" type="vCard:simpleElement"/>
+      <element name="BDAY" type="vCard:simpleElement"/>
+      <element name="MAILER" type="vCard:simpleElement"/>
+      <element name="GEO" type="vCard:simpleElement"/>
+      <element name="TITLE" type="vCard:simpleElement"/>
+      <element name="ROLE" type="vCard:simpleElement"/>
+      <element name="CATEGORIES" type="vCard:simpleElement"/>
+      <element name="NAME" type="vCard:simpleElement"/>
+      <element name="SOURCE" type="vCard:simpleElement"/>
+      <element name="NOTE" type="vCard:simpleElement"/>
+      <element name="PRODID" type="vCard:simpleElement"/>
+      <element name="REV" type="vCard:simpleElement"/>
+      <element name="SORT-STRING" type="vCard:simpleElement"/>
+      <element name="CLASS" type="vCard:simpleElement"/>
+      <element name="TEL">
+        <complexType>
+          <simpleContent>
+            <extension base="cbc:TextType">
+              <attribute default="voice" name="TYPE">
+                <simpleType>
+                  <list>
+                    <simpleType>
+                      <restriction base="string">
+                        <enumeration value="home"/>
+                        <enumeration value="msg"/>
+                        <enumeration value="work"/>
+                        <enumeration value="pref"/>
+                        <enumeration value="voice"/>
+                        <enumeration value="fax"/>
+                        <enumeration value="cell"/>
+                        <enumeration value="video"/>
+                        <enumeration value="pager"/>
+                        <enumeration value="bbs"/>
+                        <enumeration value="modem"/>
+                        <enumeration value="car"/>
+                        <enumeration value="isdn"/>
+                        <enumeration value="pcs"/>
+                      </restriction>
+                    </simpleType>
+                  </list>
+                </simpleType>
+              </attribute>
+              <attribute ref="xml:lang" use="optional"/>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+      <element name="EMAIL">
+        <complexType>
+          <simpleContent>
+            <extension base="cbc:TextType">
+              <attribute default="internet" name="TYPE">
+                <simpleType>
+                  <list>
+                    <simpleType>
+                      <restriction base="string">
+                        <enumeration value="internet"/>
+                        <enumeration value="x400"/>
+                        <enumeration value="pref"/>
+                      </restriction>
+                    </simpleType>
+                  </list>
+                </simpleType>
+              </attribute>
+              <attribute name="OTHERTYPE" type="string"/>
+              <attribute ref="xml:lang" use="optional"/>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+      <element name="ADR">
+        <complexType>
+          <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="Pobox" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Extadd" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Street" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Locality" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Region" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Pcode" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Country" type="vCard:simpleElement"/>
+          </sequence>
+          <attribute default="intl postal parcel work" name="TYPE">
+            <simpleType>
+              <list>
+                <simpleType>
+                  <restriction base="string">
+                    <enumeration value="dom"/>
+                    <enumeration value="intl"/>
+                    <enumeration value="postal"/>
+                    <enumeration value="parcel"/>
+                    <enumeration value="home"/>
+                    <enumeration value="work"/>
+                    <enumeration value="pref"/>
+                  </restriction>
+                </simpleType>
+              </list>
+            </simpleType>
+          </attribute>
+          <attribute ref="xml:lang" use="optional"/>
+        </complexType>
+      </element>
+      <element name="ORG">
+        <complexType>
+          <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="Orgname" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Orgunit" type="vCard:simpleElement"/>
+          </sequence>
+          <attribute ref="xml:lang" use="optional"/>
+        </complexType>
+      </element>
+      <element name="N">
+        <complexType>
+          <sequence>
+            <element maxOccurs="unbounded" minOccurs="0" name="Family" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Given" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Other" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Prefix" type="vCard:simpleElement"/>
+            <element maxOccurs="unbounded" minOccurs="0" name="Suffix" type="vCard:simpleElement"/>
+          </sequence>
+          <attribute ref="xml:lang" use="optional"/>
+        </complexType>
+      </element>
+      <element name="LABEL">
+        <complexType>
+          <complexContent mixed="true">
+            <restriction base="anyType">
+              <sequence>
+                <any maxOccurs="0" minOccurs="0" processContents="lax"/>
+              </sequence>
+              <attribute default="intl postal parcel work" name="TYPE">
+                <simpleType>
+                  <list>
+                    <simpleType>
+                      <restriction base="string">
+                        <enumeration value="dom"/>
+                        <enumeration value="intl"/>
+                        <enumeration value="postal"/>
+                        <enumeration value="parcel"/>
+                        <enumeration value="home"/>
+                        <enumeration value="work"/>
+                        <enumeration value="pref"/>
+                      </restriction>
+                    </simpleType>
+                  </list>
+                </simpleType>
+              </attribute>
+              <attribute ref="xml:lang" use="optional"/>
+            </restriction>
+          </complexContent>
+        </complexType>
+      </element>
+      <element name="TZ">
+        <complexType>
+          <simpleContent>
+            <extension base="cbc:TextType">
+              <attribute name="TYPE">
+                <simpleType>
+                  <list>
+                    <simpleType>
+                      <restriction base="string">
+                        <enumeration value="text"/>
+                      </restriction>
+                    </simpleType>
+                  </list>
+                </simpleType>
+              </attribute>
+              <attribute ref="xml:lang" use="optional"/>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+      <element name="UID">
+        <complexType>
+          <simpleContent>
+            <extension base="cbc:TextType">
+              <attribute name="TYPE" type="string"/>
+              <attribute ref="xml:lang" use="optional"/>
+            </extension>
+          </simpleContent>
+        </complexType>
+      </element>
+      <element name="PHOTO" type="vCard:binaryElement"/>
+      <element name="LOGO" type="vCard:binaryElement"/>
+      <element name="SOUND" type="vCard:binaryElement"/>
+      <element name="KEY" type="vCard:binaryElement"/>
+      <element name="AGENT">
+        <complexType>
+          <sequence>
+            <any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace"/>
+          </sequence>
+          <attribute ref="xml:lang" use="optional"/>
+        </complexType>
+      </element>
+      <element name="GROUP">
+        <complexType>
+          <sequence>
+            <any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace"/>
+          </sequence>
+          <attribute ref="xml:lang" use="optional"/>
+        </complexType>
+      </element>
+      <element name="URL">
+        <complexType>
+          <attributeGroup ref="xlink:simpleAttrs"/>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+   <complexType name="simpleElement">
+    <simpleContent>
+      <extension base="cbc:TextType">
+        <attribute ref="xml:lang" use="optional"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="binaryElement">
+    <simpleContent>
+      <extension base="cbc:BinaryObjectType">
+        <attribute default="b" name="ENCODING">
+          <simpleType>
+            <list>
+              <simpleType>
+                <restriction base="string">
+                  <enumeration value="b"/>
+                  <enumeration value=""/>
+                </restriction>
+              </simpleType>
+            </list>
+          </simpleType>
+        </attribute>
+        <attribute name="TYPE" type="string"/>
+        <attribute ref="xml:lang" use="optional"/>
+        <attributeGroup ref="xlink:simpleAttrs"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+</schema>

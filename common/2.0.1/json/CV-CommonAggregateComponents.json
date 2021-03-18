@@ -1,0 +1,59 @@
+{
+    "@context": {
+      "cac": "https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#",
+      "cbc": "https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#",
+      "lcn": "http://www.w3.org/ns/locn#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+      
+      {
+        "@id": "cac:address",
+        "@type": "rdf:Class",
+        "rdfs:comment": "",
+        "rdfs:label": "Address",
+        "rdfs:subClassOf": [{"@id": "lcn:AddressType"}, {"@id": "owl:Thing"}],
+        "id": {"@type": "cbc:id", "owl:maxCardinality": "1"},
+        "additionalStreetName": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "addressTypeCode": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+        "addressFormatCode": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+        "postBox": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "floor": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "room": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "streetName": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "blockName": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "buildingName": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "description": {"@type": "cbc:description"},
+        "inhouseMail": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "deparment": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "markAttention": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "markCare": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "plotIdentification": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "citySubDivisionName": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "cityName": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "postalZone": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "countrySubentity": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "countrySubentityCode": {"@type": "cbc:code", "owl:maxCardinality": "1"},
+        "region": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "district": {"@type": "cbc:text", "owl:maxCardinality": "1"},
+        "timeZoneOffset": {"@type": "cbc:numeric", "owl:maxCardinality": "1"},
+        "addressLine": {"@type": "cbc:text"},
+        "countryCode": {"@type": "cbc:code", "owl:maxCardinality": "1"}
+      },
+      {
+        "@id": "cac:period",
+        "@type": "rdf:Class",
+        "rdfs:comment": "A lapse or interval of time.",
+        "rdfs:label": "Period",
+        "rdfs:subClassOf": {"@id": "owl:Thing"},
+        "description": {"@type": "cbc:description"},
+        "startDate": {"@type": "cbc:startDate", "owl:maxCardinality": "1"},
+        "starTime": {"@type": "cbc:starTime", "owl:maxCardinality": "1"},
+        "endDate": {"@type": "cbc:endDate", "owl:maxCardinality": "1"},
+        "endTime": {"@type": "cbc:endTime", "owl:maxCardinality": "1"},
+        "durationMeasure": {"@type": "cbc:durationMeasure", "owl:maxCardinality": "1"}
+      }
+    ]
+}

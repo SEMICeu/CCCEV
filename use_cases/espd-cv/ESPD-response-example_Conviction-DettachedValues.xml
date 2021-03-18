@@ -28,14 +28,14 @@
     xmlns="urn:eu:toop:ns:dataexchange-1p40" 
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:dcat-ap="http://data.europa.eu/r5r/"
-    xmlns:cac="https://data.europe.eu/semanticassets/ns/cv/common/cac_v2.0.0#"
-    xmlns:cbc="https://data.europe.eu/semanticassets/ns/cv/common/cbc_v2.0.0#" 
+    xmlns:cac="https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#"
+    xmlns:cbc="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#" 
     xmlns:org="http://www.w3.org/ns/org#"
-    xmlns:dt="https://data.europe.eu/semanticassets/ns/cv/common/dataTypes-2.0.0#"
+    xmlns:dt="https://data.europa.eu/semanticassets/ns/cv/common/dataTypes-2.0.1#"
     xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
     xmlns:dct="http://purl.org/dc/terms/"
     xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
-    xmlns:cccev="https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#" 
+    xmlns:cccev="https://data.europa.eu/semanticassets/ns/cv/cccev_v2.0.1#" 
     xmlns:lcn="http://www.w3.org/ns/locn#"
     xmlns:rov="http://www.w3.org/ns/regorg#" 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"  
@@ -244,7 +244,7 @@
                             <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.html</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
-                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_1</skos:notation></adms:identifier>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_1</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
                             <foaf:primaryTopic>High Magistrature Convictions</foaf:primaryTopic>
@@ -263,7 +263,7 @@
                             <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.html</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
-                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
                             <foaf:primaryTopic>High Magistrature Convictions</foaf:primaryTopic>
@@ -284,7 +284,7 @@
                             <dcat-ap:accessURL>https://nationalqualification.gov/docs/2020101-qualification-certificate.hmtl</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#HTML</dct:format>
                         </dcat-ap:distribution>
-                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_3</skos:notation></adms:identifier>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_3</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Electronic Certificates issued by a National Prequalification System</foaf:topic>
                             <foaf:primaryTopic>Nations PQS certificate</foaf:primaryTopic>
@@ -299,7 +299,7 @@
                             <dcat-ap:accessURL>https://sede.mjusticia.gob.es/cs/Satellite/Sede/en/tramites/certificado-antecedentes.xml</dcat-ap:accessURL>
                             <dct:format>http://publications.europa.eu/resource/authority/file-type#XML</dct:format>
                         </dcat-ap:distribution>
-                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
+                        <adms:identifier schemeID="EVIDENCE-ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_TYPE_2</skos:notation></adms:identifier>
                         <foaf:page>
                             <foaf:topic>Electronic Certificates issued by a National or a European Superior Court.</foaf:topic>
                             <foaf:primaryTopic>High Magistrature Convictions</foaf:primaryTopic>
@@ -362,7 +362,7 @@
             </foaf:page>
             <dcat-ap:downloadURL>https://acme.com/docs/2020101-JS-Collusion.pdf</dcat-ap:downloadURL>
         </dcat-ap:distribution>
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier>          
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_1</skos:notation></adms:identifier>          
         <dct:creator/>
         <cccev:conformsTo>EVIDENCE_TYPE_1</cccev:conformsTo>
         <!-- The evidence supportsRequirement everything stated in the Information Requirement id = 7c637c0c-7703-4389-ba52-02997a055bd7, except for the Cleansing which has its own evidence. -->
@@ -375,7 +375,7 @@
         <dcat-ap:distribution>
             <dcat-ap:accessURL>https://datos.gov.es/magistratura/sentencias/contratatacionpublica</dcat-ap:accessURL>
         </dcat-ap:distribution>
-        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.0"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>
+        <adms:identifier schemeID="EVIDENCE_ID" schemeAgencyID="SEMIC-CCCEV" schemeVersionID="2.0.1"><skos:notation xsi:type="xsd:normalizedString">EVIDENCE_2</skos:notation></adms:identifier>
         <dcat-ap:landingPage>
             <foaf:topic>Superior Court Convictions</foaf:topic>
             <foaf:primaryTopic>Public Procurement-related Convictions</foaf:primaryTopic>

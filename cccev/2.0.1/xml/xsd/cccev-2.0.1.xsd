@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="https://data.europa.eu/semanticassets/ns/cv/cccev_v2.0.1#"
+	xmlns:dcat-ap="http://data.europa.eu/r5r/"
+	xmlns:cac="https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#"
+	xmlns:cbc="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#"
+	xmlns:ccts="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+	xmlns:an="https://data.europa.eu/semanticassets/ns/cv/common/semic-annot-2.0.1#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	targetNamespace="https://data.europa.eu/semanticassets/ns/cv/cccev_v2.0.1#" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="2.0.1">
+
+	<xsd:import namespace="https://data.europa.eu/semanticassets/ns/cv/common/cac_v2.0.1#"
+		schemaLocation="../../../../common/2.0.1/xml/xsd/CV-CommonAggregateComponents.xsd"/>
+	<xsd:import namespace="https://data.europa.eu/semanticassets/ns/cv/common/cbc_v2.0.1#"
+		schemaLocation="../../../../common/2.0.1/xml/xsd/CV-CommonBasicComponents.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+		schemaLocation="../../../../common/2.0.1/xml/xsd/CCTS_CCT_SchemaModule-2.3.xsd"/>
+	<xsd:import namespace="http://data.europa.eu/r5r/"
+		schemaLocation="../../../../dcat-ap/2.0.1/xml/dcat-ap.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2002/07/owl#"
+		schemaLocation="../../../../owl/2.0.1/xml/owl.xsd"/>
+	<xsd:import namespace="http://xmlns.com/foaf/0.1/"
+		schemaLocation="../../../../foaf/xml/foaf.xsd"/>
+
+	<!-- Declaration of elements -->
+
+	<!-- Data properties declarations -->
+	<xsd:element name="amountValue" type="cbc:AmountType"/>
+	<xsd:element name="associatedRoleType" type="cbc:CodeType"/>
+	<xsd:element name="bias" type="cbc:NumericType"/>
+	<xsd:element name="codeValue" type="cbc:CodeType"/>
+	<xsd:element name="confidentialityLevelType" type="cbc:CodeType"/>
+	<xsd:element name="conformantTo" type="cbc:IDReferenceType"/>
+	<xsd:element name="constraintOn" type="cbc:IDReferenceType"/>
+	<xsd:element name="representsConcept" type="cbc:IDReferenceType"/>
+	<xsd:element name="customDataType" type="cbc:CodeType"/>
+	<xsd:element name="customFunction" type="cbc:TextType"/>
+	<xsd:element name="dataSetType" type="cbc:CodeType"/>
+	<xsd:element name="dateValue" type="cbc:DateType"/>
+	<xsd:element name="documentDescription" type="cbc:DescriptionType"/>
+	<xsd:element name="documentType" type="cbc:TextType"/>
+	<xsd:element name="documentURI" type="cbc:IDType"/>
+	<xsd:element name="error" type="cbc:CodeType"/>
+	<xsd:element name="identifierValue" type="cbc:IDType"/>
+	<xsd:element name="indicatorValue" type="cbc:IndicatorType"/>
+	<xsd:element name="inEvidenceTypeList" type="cbc:IDReferenceType"/>
+	<xsd:element name="isRequirementOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="issueDate" type="cbc:DateType"/>
+	<xsd:element name="issueTime" type="cbc:TimeType"/>
+	<xsd:element name="valueOf" type="cbc:IDReferenceType"/>
+	<xsd:element name="languageID" type="cbc:IDType"/>
+	<xsd:element name="localeCode" type="cbc:CodeType"/>
+	<xsd:element name="measureValue" type="cbc:MeasureType"/>
+	<xsd:element name="numericValue" type="cbc:NumericType"/>
+	<xsd:element name="quantityValue" type="cbc:QuantityType"/>
+	<xsd:element name="evidenceTypeClassification" type="cbc:CodeType"/>
+	<xsd:element name="statusCode" type="cbc:CodeType"/>
+	<xsd:element name="supportsRequirement" type="cbc:IDReferenceType"/>
+	<xsd:element name="supportsConcept" type="cbc:IDReferenceType"/>
+	<xsd:element name="textValue" type="cbc:TextType"/>
+	<xsd:element name="timeValue" type="cbc:TimeType"/>
+	<xsd:element name="uriValue" type="cbc:URIType"/>
+	<xsd:element name="valueIDRef" type="cbc:IDType"/>
+	<xsd:element name="versionID" type="cbc:IDType"/>
+	<xsd:element name="weight" type="cbc:NumericType"/>
+	<xsd:element name="weightingConsiderationDescription" type="cbc:DescriptionType"/>
+	<xsd:element name="weightingType" type="cbc:CodeType"/>
+	<xsd:element name="xPath" type="cbc:TextType"/>
+
+	<!-- Object properties -->
+
+	<xsd:element name="concept" type="ConceptType"/>
+	<xsd:element name="constraint" type="ConstraintType"/>
+	<xsd:element name="derivedFrom" type="ReferenceFrameworkType"/>	
+	<xsd:element name="evidence" type="EvidenceType"/>
+	<xsd:element name="evidenceTypeCombinationList" type="EvidenceTypeListType"/>
+	<xsd:element name="periodValue" type="cac:PeriodType"/>
+	<xsd:element name="about" type="cbc:IDReferenceType"/>	
+	<xsd:element name="qualifiedRelation" type="dcat-ap:RelationshipType"/>
+	<xsd:element name="requirement" type="RequirementType"/>
+	<xsd:element name="specifiesEvidenceType" type="EvidenceTypeType"/>
+	<xsd:element name="specifiedIn" type="ConceptType"/>
+	<xsd:element name="value" type="ValueType"/>
+	<xsd:element name="validityPeriod" type="cac:PeriodType"/>
+
+	<!-- Element definition -->
+
+	<xsd:complexType name="ConceptType">
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<an:Class>
+							<ccts:ComponentType>Class</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Concept. Details</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.
+								Additional information:
+								A concept defined in the context of a Requirement must be unambiguous so there is no possibility of misinterpretation. Hence the use of qualified names (a pair {namespace, local name} is strongly recommended for the identification of the entity being referred to.
+							</ccts:Definition>
+							<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+							<PrimitiveClass>owl:ThingType</PrimitiveClass>
+						</an:Class>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. identifier</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>	<!--indicate prefix in the datatypes? dfference with representation term?-->
+									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+									<ccts:DataType>ID. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. name</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										The preferred label used to identify the instance of this class or of one of its subclasses.
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+									<ccts:DataType>Name. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. description</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the concept being instantiated. 
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+									<ccts:DataType>Description. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. type</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										The identifier representing the division within a system of classification to which the instance of this class belongs.
+										Additional information
+										The classification system is normally a controlled vocabulary (e.g. a codelist or a taxonomy) the use of which is commonly agreed by a community of users in the context of a business or problem domain.
+										<DefinitionSource>based on sense #2 of the Merriam-Webster English dictionary.</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Type. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:qName" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. QName</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										Standing for ‘qualified name’. Mechanism used to identify concisely and unambiguously an entity, i.e. a class or a property.
+										Additional information:
+										Qualified names are pairs of {namespace URI, entity local name} where the namespace URI is usually replaced by a ‘prefix’, as in cccev:Criterion, xsd:int, or dcat:Dataset.
+										<DefinitionSource>Based on the W3C definition of QNames for XML: https://www.w3.org/2001/tag/doc/qnameids.html#sec-qnames-other</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>anySimpleType</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>anySimpleType</ccts:RepresentationTerm>
+									<ccts:DataType>qName. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="constraint" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. constraint</ccts:DictionaryEntryName>
+									<ccts:Definition>A reference to a limitation applied to a requirement or to a concept the requirement is about.</ccts:Definition>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<Domain>cccev:Concept</Domain>
+									<Range>cccev:Constraint</Range>
+									<Predicate>cccev:hasConstraint</Predicate>
+									<Axiom>owl:inverseOf :isConstraintOn</Axiom>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"> <!--we have two predicates that are the same with different domain/range-->
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. value</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A datum. 
+										Additional information:
+										In the CCCEV the datum is always associated (or referred) to a concept defined in a specific namespace. The namespace is expected to be de-referenceable
+										and to provide the definition and type of the datum.
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<Domain>cccev:Concept</Domain>
+									<Range>Value</Range>
+									<Predicate>cccev:hasValue</Predicate>
+									<Axiom>owl:inverseOf :isValueOf</Axiom>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Concept. concept</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A reference to an entity, i.e. a class or a property, which is defined in a known ontology or vocabulary.
+										Additional information:
+										Used mainly to specify data being required.
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<Domain>cccev:Concept</Domain>
+									<Range>cccev:Concept</Range>
+									<Predicate>cccev:hasConcept</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ConstraintType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:Constraint. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							Limitation applied to requirement(s) or to the concept(s) the requirement is about.
+							Additional Information:
+							An example in eProcurement, a threshold: the minimum Turnover required by the buyer to select the candidates.
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:Constraint</ccts:ObjectClass>
+						<PrimitiveClass>cccev:RequirementType</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="RequirementType">
+				<xsd:sequence/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="CriterionType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:Criterion. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							A condition for evaluation or assessment.
+							Additional Information:
+							In general, criteria are used for comparison, filtering and selection. Criteria usually set minimum constraints (e.g. limits, intervals, thresholds, etc.)
+							that need to be met in order to pass the required conditions or to fulfil them in a certain degree or quality. The evaluation of the fulfilment is usually
+							supported with the provision of evidences.
+							<DefinitionSource>Based on the definition and practices from ESPD and e-Certis , ePO  and CAV8.</DefinitionSource>
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:Criterion</ccts:ObjectClass>
+						<PrimitiveClass>cccev:RequirementType</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="RequirementType">
+				<xsd:sequence>
+					<xsd:element ref="weight" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Criterion. weight</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										Relative importance assigned to a given criterion.
+										<DefinitionSource>ePO</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Criterion</ccts:ObjectClass>
+									<ccts:PropertyTerm>Numeric</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+									<ccts:DataType>Numeric. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="weightingConsiderationDescription" minOccurs="0"
+						maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Criterion. weighting Consideration Description</ccts:DictionaryEntryName> <!-- with spaces or without? I would say weightingConsiderationDescription-->
+									<ccts:Definition>
+										The explanation of how the weighting of a Criterion is to be used at evaluation time.
+										Additional Information:
+										Normally used for transparency matters.
+										<DefinitionSource>ESPD and ePO</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Criterion</ccts:ObjectClass>
+									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+									<ccts:DataType>Description. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="weightingType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Criterion. weighting Type</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										The numeric form used to weight.
+										Additional Information:
+										Typically these forms are decimal or percentage. However some business domains provide
+										long lists of other types of weighing. See for example the codelist ‘number-weight’ used in eForms .
+										<DefinitionSource>Bbased on ESPD and EU Vocabularies.</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Criterion</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="bias" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Criterion. bias</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										Additional parameter used to adjust the evaluation of the criterion composed of multiple sub-criteria.
+										Additional Information:
+										In neural networks, the bias is equivalent to an intercept added in a linear equation used to shift the
+										activation function to either right or left. It can be also used to manually adjust the pass/fail calculation
+										of a weighted criterion.
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Concept</ccts:ObjectClass>
+									<ccts:PropertyTerm>NumericType</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>NumericType</ccts:RepresentationTerm>
+									<ccts:DataType>Numeric. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="DocumentReferenceType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation>
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:DocumentReference. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>A reference to a concrete manifestation of a document, or the content of the document itself.</ccts:Definition>
+						<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
+						<PrimitiveClass>dcat-ap:DistributionType</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="dcat-ap:DistributionType">
+				<xsd:sequence>
+					<xsd:element ref="cbc:binaryObject" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:DocumentReference. binary Object</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										The document's content embedded as binary object (Base64).
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
+									<ccts:PropertyTerm>BinaryObject</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>BinaryObject</ccts:RepresentationTerm>
+									<ccts:DataType>BinaryObject. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="associatedRoleType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:DocumentReference. associated role type</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A code used to identify the role played by this document.
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="statusCode" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:DocumentReference. status Code</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										The status of a document content.
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="validityPeriod" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:DocumentReference. validity Period</ccts:DictionaryEntryName> 
+									<ccts:Definition>
+										The lapse of time during which something is claimed to be valid.
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:DocumentReference</ccts:ObjectClass>
+									<Domain>cccev:DocumentReference</Domain>
+									<Range>Period</Range>
+									<Predicate>hasValidityPeriod</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="EvidenceType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:Evidence. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							The data proving that a requirement is met or has been fulfilled. 
+							Additional Information: 
+							Evidences are usually references to a record, or the record content itself, used to prove the veracity of a requirement fulfilment.
+							The concept of 'record' herein is to be understood as it used for records management: a digital object that is considered final
+							e.g. not a working document) and cannot be altered.
+							Examples of evidences can be a stream of data value or values provided by a base registry, a structured official e-certificate issued
+							by a public authority, an unstructured document (e.g. a PDF) provided by an authorised service provider acting on behalf of an authority, other.
+							<DefinitionSource>Based on the ePO definition of Evidence.</DefinitionSource>
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+						<PrimitiveClass>dcat-ap:Dataset</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="dcat-ap:DatasetType">
+				<xsd:sequence>
+					<xsd:element ref="confidentialityLevelType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Evidence. confidentiality Level</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource>
+											The security classification assigned to an Evidence or, in general, to a content.
+										</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="error" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Evidence. error</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A code identifying an exception when trying to provide an evidence (e.g. from a Data Service).
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="conformantTo" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Evidence. conformant To</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A reference to one or more types of evidence where the content and, possibly, the layout or configuration of the
+										evidence is specified.
+										Additional information:
+										Evidence types can be seen as ‘templates’ that actual evidences need to use to express the data that constitutes the proof.
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+									<Domain>Ecccev:vidence</Domain>
+									<Range>cccev:EvidenceType</Range>
+									<Predicate>cccev:isConformantTo</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="supportsRequirement" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Evidence. supports Requirement</ccts:DictionaryEntryName>
+									<ccts:Definition/>
+									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+									<Domain>cccev:Evidence</Domain>
+									<Range>cccev:Requirement</Range>
+									<Predicate>cccev:supportsRequirement</Predicate> <!--or: supports-->
+									<Axiom>owl:inverseOf :hasSupportingEvidence</Axiom>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="supportsConcept" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Evidence. supports Concept</ccts:DictionaryEntryName>
+									<ccts:Definition/>
+									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+									<Domain>cccev:Evidence</Domain>
+									<Range>cccev:Concept</Range>
+									<Predicate>cccev:supportsConcept</Predicate> <!--supports-->
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="about" minOccurs="0" maxOccurs="unbounded"> <!--UML 0..1-->
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Evidence. about</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A reference to the Agent that the evidence is about.
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:Evidence</ccts:ObjectClass>
+									<Domain>cccev:Evidence</Domain>
+									<Range>foaf:Agent</Range>
+									<Predicate>cccev:about</Predicate> 
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="EvidenceTypeListType">
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:Class>
+							<ccts:ComponentType>Class</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:EvidenceTypeList. Details</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								<DefinitionSource>
+									A collection of types of evidences.
+									Additional information
+									The respondent of a Requirement for which one or more types of evidences have been specified in an EvidenceTypeList
+									is expected to provide Evidence(s) conformant to that type of evidence.
+								</DefinitionSource>
+							</ccts:Definition>
+							<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
+							<PrimitiveClass>owl:ThingType</PrimitiveClass>
+						</an:Class>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:EvidenceTypeList. identifier</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										<DefinitionSource>
+											A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
+										</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:EvidenceTypeList</ccts:ObjectClass>
+									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+									<ccts:DataType>ID. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="specifiesEvidenceType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:EvidenceTypeList. specifies</ccts:DictionaryEntryName>
+									<ccts:Definition>Indicates one type of evidence included in a list of evidence types.</ccts:Definition>
+									<ccts:ObjectClass>cccev:EvidenceTypeList</ccts:ObjectClass>
+									<Domain>cccev:EvidenceTypeList</Domain>
+									<Range>cccev:EvidenceType</Range>
+									<Predicate>cccev:specifiesEvidenceType</Predicate>
+									<Axiom>owl:inverseOf :isSpecifiedIn</Axiom>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="EvidenceTypeType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:EvidenceType. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							Information about the characteristics of an expected evidence, such as the desired content, format, source, etc.
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
+						<PrimitiveClass>dcat-ap:Dataset</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="dcat-ap:DatasetType">
+				<xsd:sequence>
+					<xsd:element ref="evidenceTypeClassification" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:EvidenceType. evidence Typology</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A classification code to specify the layout and content expected for an evidence.
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="dataSetType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:EvidenceType. dataset Type</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A classification code use to specify the machine-readability of a content.
+										Additional information
+										In the CCCEV this is used to indicate whether the types of evidences required will contain structured data or not.
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="specifiedIn" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:EvidenceType. specified In</ccts:DictionaryEntryName>
+									<ccts:Definition/>
+									<ccts:ObjectClass>cccev:EvidenceType</ccts:ObjectClass>
+									<Domain>cccev:EvidenceType</Domain>
+									<Range>cccev:EvidenceTypeList</Range>
+									<Predicate>cccev:isSpecifiedIn</Predicate>
+									<Axiom>owl:inverseOf :specifiesEvidenceType</Axiom>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="InformationRequirementType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation>
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:InformationRequirement. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							A request for data that is proof of evidence or can be taken as such.
+							Additional Information:
+							The response to an information requirement is an evidence when the issuer of the response is an authoritative source
+							(a.k.a. ‘source of truth’, e.g. a Civil Registry providing data about a natural person for the provision of public service
+							through the Single Digital Gateway). In other cases the responses might not be issued by an authoritative source but the
+							issuer supports the responses with evidences (or commits to support them timely, e.g. a self-declaration or a declaration of oath).
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:InformationRequirement</ccts:ObjectClass>
+						<an:PrimitiveClass>cccev:RequirementType </an:PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="RequirementType">
+				<xsd:sequence/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ReferenceFrameworkType">
+		<xsd:complexContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">
+					<an:Class>
+						<ccts:ComponentType>Class</ccts:ComponentType>
+						<ccts:DictionaryEntryName>cccev:ReferenceFramework. Details</ccts:DictionaryEntryName>
+						<ccts:Definition>
+							A source from where requirements are identified and drawn.
+							Additional Information:
+							Usual reference frameworks are legal and non-legal specifications. Examples of reference frameworks
+							can be, the ELI Legal Resources used for the BREG catalogue of datasets, the basis for the ISA2 CAMSS
+							Scenarios such as the Regulation (EU) 1025/2012 or the EIF Framework, the European Directives used in
+							e-Certis and the ESPD Implementing Regulation for the identification of exclusion grounds and selection
+							criteria, a standard, a technical specification, etc. 
+						</ccts:Definition>
+						<ccts:ObjectClass>cccev:ReferenceFramework</ccts:ObjectClass>
+						<PrimitiveClass>dcat-ap:Dataset</PrimitiveClass>
+					</an:Class>
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="dcat-ap:DatasetType">
+				<xsd:sequence/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="RequirementType" abstract="false">
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:Class>
+							<ccts:ComponentType>Class</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Requirement. Details</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A condition demanded.
+								Additional Information:
+								Generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation.
+								The European Directive on services in the internal market  defines requirement as any obligation, prohibition,
+								condition or limit provided for in the laws, regulations or administrative provisions of the Member States or
+								in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules
+								of professional associations or other professional organisations, adopted in the exercise of their legal autonomy [..]”.
+								<DefinitionSource>Based on the Collins English Dictionary, accessed through TheFreeDictionary.com hub.</DefinitionSource>
+							</ccts:Definition>
+							<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+						</an:Class>
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element ref="cbc:id" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>Requirement. Identifier</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A unique value, in the context of use, assigned to the instance of this property or to one of its subproperties.
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+									<ccts:DataType>ID. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:name" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. name</ccts:DictionaryEntryName> <!--uppercase or lowercase-->
+									<ccts:Definition>
+										The preferred label used to identify the instance of this class or of one of its subclasses.
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+									<ccts:DataType>Name. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:description" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. description</ccts:DictionaryEntryName> 
+									<ccts:Definition>
+										A short explanation about the nature, attributes, uses or any other additional information
+										that helps clarify the understanding of the concept being instantiated. 
+									</ccts:Definition>
+									<ccts:Cardinality>0..*</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+									<ccts:DataType>Description. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cbc:type" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<an:DataProperty>
+									<ccts:ComponentType>Data property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. type</ccts:DictionaryEntryName> 
+									<ccts:Definition>
+										The identifier representing the division within a system of classification to which the instance of this class belongs.
+										
+										Additional information
+										The classification system is normally a controlled vocabulary (e.g. a codelist or a taxonomy) the use of which is commonly
+										agreed by a community of users in the context of a business or problem domain.
+										<DefinitionSource>Based on sense #2 of the Merriam-Webster English dictionary.</DefinitionSource>
+									</ccts:Definition>
+									<ccts:Cardinality>0..1</ccts:Cardinality>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+									<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+									<ccts:DataType>Code. Type</ccts:DataType>
+								</an:DataProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="requirement" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. requirement</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A sub-requirement with more granular detail(s) or of different nature.
+										Additional Information:
+										An example of granular sub-requirements can be a criterion defining more specific sub-criteria. Different examples
+										can be found in different domains and situations. Thus, in the domain of e-Procurement EU exclusion criteria
+										(a.k.a. ‘grounds for exclusion’), national criteria are implemented as sub-criteria ‘hierarchically descending’ from
+										an EU parent criterion. Neural networks can also be implemented as criteria and sub-criteria linked via the property
+										cccev:hasRequirement pointing to a requirement of type cccev:Criterion.
+										
+										Examples of sub requirements of different nature can a criterion that defines different types of information requirements
+										(e.g. evidences to support the responses to the criterion) and establishing constraints (e.g. input parameters, thresholds,
+										or other types of restrictions).
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>cccev:Requirement</Domain>
+									<Range>cccev:Requirement</Range>
+									<Predicate>hasRequirement</Predicate>
+									<Axiom>owl:inverseOf :isPartOfRequirement</Axiom> <!--isPartOF-->
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="concept" minOccurs="0" maxOccurs="unbounded"> <!--isAbout-->
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. concept</ccts:DictionaryEntryName>
+									<ccts:Definition>The concept(s) used to specify the data being required.</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>Requirement</Domain>
+									<Range>cccev:Concept</Range>
+									<Predicate>cccev:isAbout</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="evidence" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. evidence</ccts:DictionaryEntryName>
+									<ccts:Definition>One or more evidences proving that the requirement is met or has been fulfilled.</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>cccev:Requirement</Domain>
+									<Range>cccev:Evidence</Range>
+									<Predicate>cccev:hasSupportingEvidence</Predicate>
+									<Axiom>owl:inverseOf :supportsRequirement</Axiom> <!--supports-->
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="evidenceTypeCombinationList" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. evidence Type Combination List</ccts:DictionaryEntryName>
+									<ccts:Definition>
+										A collection, or a set of alternative collections, of references to types of evidences.
+										<DefinitionSource>Based on the e-Certis multi-domain mode.</DefinitionSource>
+									</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>cccev:Requirement</Domain>
+									<Range>cccev:EvidenceTypeList</Range>
+									<Predicate>cccev:hasEvidenceTypeCombinationList</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="isRequirementOf" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. part Of</ccts:DictionaryEntryName>
+									<ccts:Definition>A reference to the parent requirement a sub-requirement is part of.</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>cccev:Requirement</Domain>
+									<Range>cccev:Requirement</Range>
+									<Predicate>cccev:isRequirementOf</Predicate>
+									<Axiom>owl:inverseOf :hasRequirement</Axiom>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="qualifiedRelation" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. part Of</ccts:DictionaryEntryName>
+									<ccts:Definition>A described and/or categorised relation to the instance of another Requirement class or subclass.</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>cccev:Requirement</Domain>
+									<Range>dcat-ap:Relationship</Range>
+									<Predicate>cccev:hasQualifiedRelation</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="derivedFrom" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								<ObjectProperty>
+									<ccts:ComponentType>Object property</ccts:ComponentType>
+									<ccts:DictionaryEntryName>cccev:Requirement. derivedFrom</ccts:DictionaryEntryName>
+									<ccts:Definition>A reference to the reference framework(s) a requirement is drawn from.</ccts:Definition>
+									<ccts:ObjectClass>cccev:Requirement</ccts:ObjectClass>
+									<Domain>cccev:Requirement</Domain>
+									<Range>cccev:ReferenceFramework</Range>
+									<Predicate>cccev:isDerivedFrom</Predicate>
+								</ObjectProperty>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ValueType">
+		<xsd:complexContent>
+			<xsd:extension base="owl:ThingType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<an:Class>
+					<ccts:ComponentType>Class</ccts:ComponentType>
+					<ccts:DictionaryEntryName>cccev:Value. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>
+						A datum.
+						Additional information
+						In the CCCEV the datum is always associated (or referred) to a concept defined in a specific namespace. The namespace
+						is expected to de-referenceable and to provide the definition and type of the datum.
+					</ccts:Definition>
+					<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+					<PrimitiveClass>owl:ThingType</PrimitiveClass>
+				</an:Class>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="amountValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. amount Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A monetary value, with the indication of the currency, provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Amount</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
+							<ccts:DataType>Amount. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="codeValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. code Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A code identifier provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="dateValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. date Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A date provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="identifierValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. identifier Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								An identifier provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>ID. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="indicatorValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. indicator Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A Boolean value (true or false) provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
+							<ccts:DataType>Indicator. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="measureValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. measure Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A measure, and the unit of the measure, provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Measure</ccts:PropertyTerm> 
+							<ccts:RepresentationTerm>Measure</ccts:RepresentationTerm>
+							<ccts:DataType>Measure. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="numericValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. numeric Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A decimal number provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Numeric</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+							<ccts:DataType>Numeric. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="quantityValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. quantity Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A number of items provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Quantity</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm>
+							<ccts:DataType>Quantity. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="textValue" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. text Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A text provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..*</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Text</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+							<ccts:DataType>Text. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="timeValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. time Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								The time (hh:mm:ss) provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Time</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
+							<ccts:DataType>Time. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="uriValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. uri Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A Uniform Resource Identifier provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>anyURI</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>anyURI</ccts:RepresentationTerm>
+							<ccts:DataType>URI. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="customDataType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. custom Data Type Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A code used to identify a user-defined data type.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="customFunction" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. custom Function Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A text with the signature of a method (e.g. a Java function, or an endpoint call) provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>ID. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="error" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<an:DataProperty>
+							<ccts:ComponentType>Data property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. code Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A code identifying an exception when trying to provide an answer to a required concept.
+							</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<ccts:PropertyTerm>Code</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+							<ccts:DataType>Code. Type</ccts:DataType>
+						</an:DataProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="periodValue" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ObjectProperty>
+							<ccts:ComponentType>Object property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. period Value</ccts:DictionaryEntryName>
+							<ccts:Definition>
+								A lapse of time provided as the response to a required concept.
+							</ccts:Definition>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<Domain>cccev:Value</Domain>
+							<Range>cac:Period</Range>
+							<Predicate>cccev:hasPeriodValue</Predicate>
+						</ObjectProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="valueOf" minOccurs="0" maxOccurs="unbounded">  <!--UML is 0..1-->
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ObjectProperty>
+							<ccts:ComponentType>Object property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. value Of</ccts:DictionaryEntryName>
+							<ccts:Definition/>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<Domain>cccev:Value</Domain>
+							<Range>cccev:Concep</Range>
+							<Predicate>cccev:isValueOf</Predicate>
+							<Axiom>owl:inverseOf :hasValue</Axiom>
+						</ObjectProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ObjectProperty>
+							<ccts:ComponentType>Object property</ccts:ComponentType>
+							<ccts:DictionaryEntryName>cccev:Value. value</ccts:DictionaryEntryName>
+							<ccts:Definition/>
+							<ccts:ObjectClass>cccev:Value</ccts:ObjectClass>
+							<Domain>cccev:Value</Domain>
+							<Range>cccev:Value</Range>
+							<Predicate>cccev:hasValue</Predicate>
+						</ObjectProperty>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

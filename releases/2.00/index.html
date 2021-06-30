@@ -290,8 +290,8 @@
             </div>
 
             <div class="region region--no-space-top">
-              <a href="./html/overview.jpg" target="_blank">
-                 <img src="./html/overview.jpg" />
+              <a href="./Overview.jpg" target="_blank">
+                 <img src="./Overview.jpg" />
               </a>
             </div>
             <div class="region region--no-space-top">
@@ -1739,7 +1739,28 @@ As described in the Evidence class, CCCEV does not impose how the actual informa
             </div>
 	    
 	    -->
-	    
+
+
+	   <div class="region region--no-space-top" id="implementation-note">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Implementation note</h2>
+                (non-normative)
+                
+</br>
+</br>
+<p>
+  CCCEV as a Core Vocabulary is implementation-neutral. CCCEV does not impose any choices regarding <i>how</i> the data is being exchanged. Furthermore, CCCEV does not enforce the information carried in an Evidence to be directly accessible i.e. contained within the payload of the response. However, CCCEV does offer several ways to implement these aspects: (1) via subclassing of the Evidence class, (2) via sharing it as a dcat:Distribution or (3) via the class Supported Value. These are three distinguishable approaches, which can be used independently from each other, or in combination.
+</p>
+</br>
+<p>
+  CCCEV provides a framework for the implementers to define the actual information models and metadata models an Evidence should comply to. For example, a Birth Certificate model could be defined as a particular Evidence Type to which the Evidence shared by the competent authority should conform to. This information model would make use of existing metadata models. The implementer can define one or several domain specific models for defining the information acceptable or required within an Evidence.
+</p>
+</br>
+<p>
+  In practice, an Evidence (from the perspective of being a document) often provides more information than is required for the decision making process. Despite that it might be possible to express all these information pieces as Information Concepts, this remains a choice for the implementer. It is not the intent of CCCEV to provide a full-fledged data modeling framework with the notion of Information Concept and Supported Value. Usages such as creating Information Concepts independent from Requirements or providing Values for Information Concepts that are not requested by a Requirement should be considered as unintended usages, beyond the scope of CCCEV.
+</p>
+
+            </div> 
+
 	    <div class="region region--no-space-top" id="changelog">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog w.r.t. previous version</h2>
                 (non-normative)
@@ -1750,13 +1771,15 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
 
             </div>
 	    
-            <div class="region region--no-space-top" id="jsonld">
+<!--
+	    <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 (non-normative)
                 
 		<p>A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/doc/core-vocabulary/cccev/context/cccev-ap_en.jsonld" target="_blank">/doc/core-vocabulary/cccev/context/cccev-ap_en.jsonld</a></p>
                 
             </div>
+-->
 	    <!--
             <div class="region region--no-space-top" id="shacl">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">SHACL template</h2>
@@ -1799,11 +1822,16 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
                                   <a href="#examples">Examples</a>
 			      -->
 			      <li class="side-navigation__item">
+                                  <a href="#implementation-note">Implementation Note</a>
+                              </li>
+			      <li class="side-navigation__item">
                                   <a href="#changelog">Changelog</a>
                               </li>
+			      <!--
                               <li class="side-navigation__item">
                                   <a href="#jsonld">JSON-LD Context</a>
                               </li>
+			      -->
 			      <!--
                               <li class="side-navigation__item">
                                   <a href="#shacl">SHACL template</a>

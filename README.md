@@ -15,7 +15,9 @@ Using these basic core concepts, CCCEV provides a generic setting to define Crit
 
 The latest specification is CCCEV 2.0.0 can be found at [https://semiceu.github.io/CCCEV/releases/2.00/](https://semiceu.github.io/CCCEV/releases/2.00/). 
 CCCEV is part of the [ISA Core Vocabularies](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/e-government-core-vocabularies) managed by SEMIC. 
-  
+
+Discussions about the version 2.0.0 of CCCEV took place during the webinar of the 30th of March 2021[https://www.youtube.com/watch?v=h4-DqkZ81MQ] as well as on the 27th of April [https://www.youtube.com/watch?v=47mhNBkveC0]
+
 The activities the SEMIC community organises around this specification are published on [Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary). 
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Criterion and Core Evidence Vocabulary repository on [GitHub](https://github.com/SEMICeu/CCCEV/issues). A short guideline for submitting issues can be found at [https://github.com/SEMICeu/CCCEV/wiki](https://github.com/SEMICeu/CCCEV/wiki).

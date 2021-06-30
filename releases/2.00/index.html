@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
 
@@ -14,11 +14,6 @@
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
 
-  <link rel="icon" sizes="192x192" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/cms/icons/DUETLogo.jpg" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/cms/icons/DUETLogo.jpg" />
 
   <meta name="msapplication-square70x70logo" content="/cms/icons/DUETLogo.jpg" />
   <meta name="msapplication-square150x150logo" content="/cms/icons/DUETLogo.jpg" />
@@ -28,6 +23,18 @@
 </head>
 
 <body>
+
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
+
   <div style="min-height:44px;;" id="duet-header" class="header">
     <!-- insert your global header here -->
     <title>SEMIC</title>
@@ -51,9 +58,9 @@
 
               <div class="head" role="status" id="status">
               <dl>
-              <dt>Status</dt><dd>Working Draft</dd>
-              <dt>Published at</dt><dd>2021-03-08</dd>
-              <dt>This version</dt><dd><a href="https://semiceu.github.io/CCCEV/releases/2.00">https://semiceu.github.io/CCCEV/releases/2.00</a></dd>
+              <dt>Status</dt><dd>SEMIC Recommendation</dd>
+              <dt>Published at</dt><dd>2021-06-30</dd>
+              <dt>This version</dt><dd><a href="https://semiceu.github.io/CCCEV/releases/2.00/">https://semiceu.github.io/CCCEV/releases/2.00/</a></dd>
               
               
               </dl>
@@ -89,7 +96,7 @@
                               <span class="p-name fn" property="foaf:lastName">Barthelemy</span>,
                               <span class="p-name fn" property="foaf:firstName">Florian</span>
                               
-                                 - <span class="p-org org h-org h-card">PwC</span>
+                                 - <span class="p-org org h-org h-card">PwC EU Services</span>
                               
                 							
                 							</span>
@@ -100,7 +107,7 @@
                               <span class="p-name fn" property="foaf:lastName">De Keyzer</span>,
                               <span class="p-name fn" property="foaf:firstName">Michiel</span>
                               
-                                 - <span class="p-org org h-org h-card">PwC</span>
+                                 - <span class="p-org org h-org h-card">PwC EU Services</span>
                               
                 							
                 							</span>
@@ -166,8 +173,8 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Source</dt><dd><a href="https://github.com/SEMICeu/CCCEV/tree/master/releases/2.00">https://github.com/SEMICeu/CCCEV/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="https://github.com/bertvannuffelen/semiceuthema/blob/a8062d79983b6b37feef0a307b0220b7b4546cd6/CHANGELOG">https://github.com/bertvannuffelen/semiceuthema/blob/a8062d79983b6b37feef0a307b0220b7b4546cd6/CHANGELOG</a></dd>-->
+              <dt>Source</dt><dd><a href="https://github.com/SEMICeu/TODO/tree/master/releases/2.00">https://github.com/SEMICeu/TODO/tree/master/releases/2.00</a></dd>
+              <!--<dt>Changelog</dt><dd><a href="https://github.com/bertvannuffelen/semiceuthema/blob/c97333a75047fe0c433d0832184c93f7b74f4ad7/CHANGELOG">https://github.com/bertvannuffelen/semiceuthema/blob/c97333a75047fe0c433d0832184c93f7b74f4ad7/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CCCEV/issues">https://github.com/SEMICeu/CCCEV/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -217,11 +224,11 @@
         Using these basic core concepts, CCCEV provides a generic setting to define Criteria, i.e. Requirements with an assessment or evaluation objective in mind. This is a key motivation for the existence of CCCEV. 
 </p>
 <p>
-	Although CCCEV shapes a general framework around these core concepts, implementations have to make decisions on how the framework is actually used by further elaborating the Core Vocabulary to make it applicable in their specific context. 
+	Although CCCEV shapes a general framework around these core concepts, implementers have to make decisions on how the framework is actually used by further elaborating the Core Vocabulary to make it applicable in their specific context. 
 </p>
-<!--<p>
+<p>
 	An explanatory example that helps the reader to better understand this specification can be found <a href="./CCCEV_AnExplanatoryExample.pdf">here</a>.
-</p>-->
+</p>
 
             </div>
 
@@ -230,7 +237,7 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This Core Vocabulary has the status of Working Draft published at 2021-03-08.
+                  This Core Vocabulary has the status of SEMIC Recommendation published on 2021-06-30.
 	        </p>
                 
               </section>
@@ -243,12 +250,14 @@
 
             </div>
 	    -->
+	    <!--
             <div class="region region--no-space-top typography" id="conformance">
               <h2 class="h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
               
               <p>TBD</p>
               
             </div>
+	    -->
             <div class="region region--no-space-top" id="overview">
               <h2 class="h2">Overview</h2>
               <div class="grid">
@@ -267,6 +276,8 @@
                       <a href="#Evidence Type List">Evidence Type List</a> |
                       <a href="#Information Concept">Information Concept</a> |
                       <a href="#Information Requirement">Information Requirement</a> |
+                      <a href="#Location">Location</a> |
+                      <a href="#Period of Time">Period of Time</a> |
                       <a href="#Reference Framework">Reference Framework</a> |
                       <a href="#Requirement">Requirement</a> |
                       <a href="#Supported Value">Supported Value</a> |
@@ -279,8 +290,8 @@
             </div>
 
             <div class="region region--no-space-top">
-              <a href="./Overview.jpg" target="_blank">
-                 <img src="./Overview.jpg" />
+              <a href="./html/overview.jpg" target="_blank">
+                 <img src="./html/overview.jpg" />
               </a>
             </div>
             <div class="region region--no-space-top">
@@ -306,7 +317,7 @@
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Constraint"><a href="#Constraint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#Constraint" data-placement="right">Constraint</a></h3>
+              <h3 class="h3" id="Constraint"><a href="http://data.europa.eu/m8g/Constraint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Constraint" data-placement="right">Constraint</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A limitation applied to Requirement(s) or to the Information Concept(s) the Requirement is about.</dd>
@@ -348,7 +359,7 @@ Note that CCCEV does not provide any specific guidance on when which kind of Req
                       <tr id="Constraint%3Aconstrains" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#constrains">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#constrains" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#constrains" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/cccev#constrains" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#constrains" data-placement="right">
                             constrains</a>
                           </code>
                         </td>
@@ -371,7 +382,7 @@ Note that CCCEV does not provide any specific guidance on when which kind of Req
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Criterion"><a href="#Criterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#Criterion" data-placement="right">Criterion</a></h3>
+              <h3 class="h3" id="Criterion"><a href="http://data.europa.eu/m8g/Criterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Criterion" data-placement="right">Criterion</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A condition for evaluation or assessment.</dd>
@@ -411,40 +422,48 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
 
                     <tbody class="supertype">
                     
-                      <tr id="Criterion%3Abias" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#bias">
+                      <tr id="Criterion%3Abias" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/bias">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#bias" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#bias" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/bias" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/bias" data-placement="right">
                             bias</a>
                           </code>
                         </td>
                         <td>
-                           <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">Decimal</a>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">Decimal</a>
+                            
+                          
                         </td>
                         <td property="rdfs:comment">Additional parameter(s) used to adjust the evaluation of the Criterion composed of multiple sub-Criteria and their respective weights.</td>
                         <td property="skos:scopeNote">In neural networks, the bias is equivalent to an intercept added in a linear equation used to shift the activation function to either right or left. It can be also used to manually adjust the pass/fail calculation of a weighted criterion.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Criterion%3Aweight" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#weight">
+                      <tr id="Criterion%3Aweight" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/weight">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#weight" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#weight" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/weight" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/weight" data-placement="right">
                             weight</a>
                           </code>
                         </td>
                         <td>
-                          <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">Decimal</a>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#decimal" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#decimal" data-placement="right">Decimal</a>
+                            
+                          
                         </td>
                         <td property="rdfs:comment">Relative importance assigned to a given Criterion.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Criterion%3Aweighting%20consideration%20description" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#weightingConsiderationDescription">
+                      <tr id="Criterion%3Aweighting%20consideration%20description" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/weightingConsiderationDescription">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#weightingConsiderationDescription" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#weightingConsiderationDescription" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/weightingConsiderationDescription" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/weightingConsiderationDescription" data-placement="right">
                             weighting consideration description</a>
                           </code>
                         </td>
@@ -460,10 +479,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Criterion%3Aweighting%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#weightingType">
+                      <tr id="Criterion%3Aweighting%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/weightingType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#weightingType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#weightingType" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/weightingType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/weightingType" data-placement="right">
                             weighting type</a>
                           </code>
                         </td>
@@ -495,16 +514,54 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                     
 		    
                     <dt>Properties</dt>
-		    
-                    <dd>No properties have been defined for this entity.</dd>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Dataset%3Aidentifier">identifier</a>.</dd>
                     
                   </dl>
                 </div>
-		
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Dataset%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                            identifier</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">An unambiguous reference to a Dataset.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Evidence"><a href="#Evidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#Evidence" data-placement="right">Evidence</a></h3>
+              <h3 class="h3" id="Evidence"><a href="http://data.europa.eu/m8g/Evidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Evidence" data-placement="right">Evidence</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>The data proving that a Requirement is met or has been fulfilled.</dd>
@@ -523,9 +580,12 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                       <a href="#Evidence%3Aconfidentiality%20level%20type">confidentiality level type</a>, 
                       <a href="#Evidence%3Ais%20about">is about</a>, 
                       <a href="#Evidence%3Ais%20conformant%20to">is conformant to</a>, 
+                      <a href="#Evidence%3Ais%20created%20by">is created by</a>, 
+                      <a href="#Evidence%3Ais%20issued%20by">is issued by</a>, 
                       <a href="#Evidence%3Asupports%20concept">supports concept</a>, 
                       <a href="#Evidence%3Asupports%20requirement">supports requirement</a>, 
-                      <a href="#Evidence%3Asupports%20value">supports value</a>.</dd>
+                      <a href="#Evidence%3Asupports%20value">supports value</a>, 
+                      <a href="#Evidence%3Avalidity%20period">validity period</a>.</dd>
                     
                   </dl>
                 </div>
@@ -544,10 +604,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
 
                     <tbody class="supertype">
                     
-                      <tr id="Evidence%3Aconfidentiality%20level%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#confidentionalityLevelType">
+                      <tr id="Evidence%3Aconfidentiality%20level%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/confidentialityLevelType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#confidentionalityLevelType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#confidentionalityLevelType" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/confidentialityLevelType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/confidentialityLevelType" data-placement="right">
                             confidentiality level type</a>
                           </code>
                         </td>
@@ -563,10 +623,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Evidence%3Ais%20about" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#isAbout">
+                      <tr id="Evidence%3Ais%20about" typeof="rdfs:Property" resource="http://purl.org/dc/terms/subject">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#isAbout" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#isAbout" data-placement="right">
+                            <a href="http://purl.org/dc/terms/subject" data-toggle="tooltip" data-content="http://purl.org/dc/terms/subject" data-placement="right">
                             is about</a>
                           </code>
                         </td>
@@ -582,10 +642,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Evidence%3Ais%20conformant%20to" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#isConformantTo">
+                      <tr id="Evidence%3Ais%20conformant%20to" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#isConformantTo" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#isConformantTo" data-placement="right">
+                            <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip" data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
                             is conformant to</a>
                           </code>
                         </td>
@@ -597,14 +657,52 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                           
                         </td>
                         <td property="rdfs:comment">A reference to one or more types of Evidence where the content and, possibly, the layout or configuration of the Evidence is specified.</td>
-                        <td property="skos:scopeNote">This property can be fulfilled with the dcat property dct:conformsTo. The definition should reflect the need for another property and the usage note should make the distinction clear.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Evidence%3Ais%20created%20by" typeof="rdfs:Property" resource="http://purl.org/dc/terms/creator">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/creator" data-toggle="tooltip" data-content="http://purl.org/dc/terms/creator" data-placement="right">
+                            is created by</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Agent" data-placement="right">Agent</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">The Agent that produces the Evidence.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Evidence%3Ais%20issued%20by" typeof="rdfs:Property" resource="http://purl.org/dc/terms/publisher">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/publisher" data-toggle="tooltip" data-content="http://purl.org/dc/terms/publisher" data-placement="right">
+                            is issued by</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Agent" data-placement="right">Agent</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">The legal authority responsible for an Evidence.</td>
+                        <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
                     
                       <tr id="Evidence%3Asupports%20concept" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#supportsConcept">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#supportsConcept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#supportsConcept" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/cccev#supportsConcept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#supportsConcept" data-placement="right">
                             supports concept</a>
                           </code>
                         </td>
@@ -620,10 +718,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Evidence%3Asupports%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#supportsRequirement">
+                      <tr id="Evidence%3Asupports%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/supportsRequirement">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#supportsRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#supportsRequirement" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/supportsRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/supportsRequirement" data-placement="right">
                             supports requirement</a>
                           </code>
                         </td>
@@ -639,10 +737,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Evidence%3Asupports%20value" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#supportsValue">
+                      <tr id="Evidence%3Asupports%20value" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/supportsValue">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#supportsValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#supportsValue" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/supportsValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/supportsValue" data-placement="right">
                             supports value</a>
                           </code>
                         </td>
@@ -653,7 +751,26 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
 			    
                           
                         </td>
-                        <td property="rdfs:comment">	The Supported Value for which an Evidence holds information.</td>
+                        <td property="rdfs:comment">The Supported Value for which an Evidence holds information.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Evidence%3Avalidity%20period" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/validityPeriod">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/validityPeriod" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/validityPeriod" data-placement="right">
+                            validity period</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Period of Time" data-placement="right">Period of Time</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">Indicates the validity period of the Evidence.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -665,28 +782,22 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Evidence Type"><a href="#Evidence Type" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#EvidenceType" data-placement="right">Evidence Type</a></h3>
+              <h3 class="h3" id="Evidence Type"><a href="http://data.europa.eu/m8g/EvidenceType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/EvidenceType" data-placement="right">Evidence Type</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>Information about the characteristics of an expected Evidence.</dd>
                     
-                    <dt>Usage</dt><dd>Examples of Evidence Types include birth certificates, marriage evidences, university diploma's, etc. These are not concrete individual responses to a Requirement (Evidences), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide.
-
-                          For a specific Requirement, the requester can define the List of Evidence Types which would be accepted and, for each Evidence Type in this list, the specific information and form that should be part of the Evidence actually provided in order to answer the Requirement.
-
-                          Evidence Types can express conditions for an acceptable response at two levels: the concrete information that is being requested, and the metadata about how this concrete information is being obtained.
-			  
-			  This way, the Evidence Type can capture specific characteristics such as a specific format or source of the Evidence, as such characteristics may be strictly required depending on the Requirement.
-			  
-			  Implementations are free, however, to set the level of detail (i.e. number of characteristics) they want to specify for Evidence Types.
-		    </dd>
+                    <dt>Usage</dt><dd>Examples of Evidence Types include birth certificates, marriage evidences, university diploma's, etc. These are not concrete individual responses to a Requirement (Evidences), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide. For a specific Requirement, the requester can define the List of Evidence Types which would be accepted and, for each Evidence Type in this list, the specific information and form that should be part of the Evidence actually provided in order to answer the Requirement. Evidence Types can express conditions for an acceptable response at two levels: the concrete information that is being requested, and the metadata about how this concrete information is being obtained. This way, the Evidence Type can capture specific characteristics such as a specific format or source of the Evidence, as such characteristics may be strictly required depending on the Requirement. Implementations are free, however, to set the level of detail (i.e. number of characteristics) they want to specify for Evidence Types.
+</dd>
                     
 		    
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Evidence%20Type%3Aevidence%20type%20classification">evidence type classification</a>, 
-                      <a href="#Evidence%20Type%3Ais%20specified%20in">is specified in</a>.</dd>
+                      <a href="#Evidence%20Type%3Aidentifier">identifier</a>, 
+                      <a href="#Evidence%20Type%3Ais%20specified%20in">is specified in</a>, 
+                      <a href="#Evidence%20Type%3Avalidity%20period%20constraint">validity period constraint</a>.</dd>
                     
                   </dl>
                 </div>
@@ -705,10 +816,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
 
                     <tbody class="supertype">
                     
-                      <tr id="Evidence%20Type%3Aevidence%20type%20classification" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#evidenceTypeClassification">
+                      <tr id="Evidence%20Type%3Aevidence%20type%20classification" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/evidenceTypeClassification">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#evidenceTypeClassification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#evidenceTypeClassification" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/evidenceTypeClassification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/evidenceTypeClassification" data-placement="right">
                             evidence type classification</a>
                           </code>
                         </td>
@@ -724,10 +835,29 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Evidence%20Type%3Ais%20specified%20in" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#isSpecifiedIn">
+                      <tr id="Evidence%20Type%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#isSpecifiedIn" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#isSpecifiedIn" data-placement="right">
+                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                            identifier</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">An unambiguous reference to an Evidence Type.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Evidence%20Type%3Ais%20specified%20in" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/isSpecifiedIn">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/isSpecifiedIn" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/isSpecifiedIn" data-placement="right">
                             is specified in</a>
                           </code>
                         </td>
@@ -743,6 +873,26 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
+                      <tr id="Evidence%20Type%3Avalidity%20period%20constraint" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/validityPeriodConstraint">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/validityPeriodConstraint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/validityPeriodConstraint" data-placement="right">
+                            validity period constraint</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Period of Time" data-placement="right">Period of Time</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">Indicates a temporal constraint on the validity period of the Evidence Type.</td>
+                        <td property="skos:scopeNote">E.g. A Belgian birth evidence is valid for X months after emission. To express constraints on the validity period that must hold when assessing the evidence (e.g. the certificate of good conduct cannot be issued more than 3 months ago), we refer to the Constraint class.
+</td>
+                        <td></td>
+                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
@@ -750,7 +900,7 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Evidence Type List"><a href="#Evidence Type List" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#EvidenceTypeList" data-placement="right">Evidence Type List</a></h3>
+              <h3 class="h3" id="Evidence Type List"><a href="http://data.europa.eu/m8g/EvidenceTypeList" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/EvidenceTypeList" data-placement="right">Evidence Type List</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A combination of Evidence Types for each of which a conforming Evidence must be provided.</dd>
@@ -841,10 +991,10 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         <td></td>
                       </tr>
                     
-                      <tr id="Evidence%20Type%20List%3Aspecifies%20evidence%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#specifiesEvidenceType">
+                      <tr id="Evidence%20Type%20List%3Aspecifies%20evidence%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/specifiesEvidenceType">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#specifiesEvidenceType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#specifiesEvidenceType" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/specifiesEvidenceType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/specifiesEvidenceType" data-placement="right">
                             specifies evidence type</a>
                           </code>
                         </td>
@@ -867,7 +1017,7 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Information Concept"><a href="#Information Concept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#InformationConcept" data-placement="right">Information Concept</a></h3>
+              <h3 class="h3" id="Information Concept"><a href="http://data.europa.eu/m8g/InformationConcept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/InformationConcept" data-placement="right">Information Concept</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified.</dd>
@@ -879,6 +1029,7 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Information%20Concept%3Adescription">description</a>, 
+                      <a href="#Information%20Concept%3Aexpression%20of%20expected%20value">expression of expected value</a>, 
                       <a href="#Information%20Concept%3Aidentifier">identifier</a>, 
                       <a href="#Information%20Concept%3Aname">name</a>, 
                       <a href="#Information%20Concept%3Atype">type</a>.</dd>
@@ -916,6 +1067,25 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
                         </td>
                         <td property="rdfs:comment">A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Information Concept being instantiated.</td>
                         <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Information%20Concept%3Aexpression%20of%20expected%20value" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/expressionOfExpectedValue">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/expressionOfExpectedValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/expressionOfExpectedValue" data-placement="right">
+                            expression of expected value</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">An expression (function) of the value that the Requirement expects.</td>
+                        <td property="skos:scopeNote">Common example languages include XPath, Object Constraint Language (OCL), JavaScript and Rule Interchange Format (RIF). Using a Literal datatype, it is possible to annotate the expression language used, e.g. "today.getDate() - birthDate.getDate()"^^ex:JavaScript".</td>
                         <td></td>
                       </tr>
                     
@@ -983,13 +1153,13 @@ A concrete example of a Criterion is 'participation in a criminal organisation' 
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Information Requirement"><a href="#Information Requirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#InformationRequirement" data-placement="right">Information Requirement</a></h3>
+              <h3 class="h3" id="Information Requirement"><a href="http://data.europa.eu/m8g/InformationRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/InformationRequirement" data-placement="right">Information Requirement</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A request for data that is proof of Evidence or that leads to the source of such a proof.</dd>
                     
                     <dt>Usage</dt><dd>Information Requirements are the most neutral kind of Requirements. They aim to request information in any form, e.g. a person's date of birth or a company's turnover.
-They represent requests for data that proves one or more facts of the real world in a formal manner, or that leads to the source of such a proof. They can be understood as 'requests for Evidences'. 
+They represent requests for data that prove one or more facts of the real world in a formal manner, or that leads to the source of such a proof. They can be understood as 'requests for Evidences'. 
 
 The response to an Information Requirement is an Evidence when the issuer of the response is an authoritative source (e.g. a Civil Registry providing data about a natural person for the provision of public service through the Single Digital Gateway). In other cases, the responses might not be issued by an authoritative source, but the issuer supports the responses with Evidences (or commits to support them timely, e.g. a self-declaration or a declaration of oath). 
 
@@ -1011,12 +1181,10 @@ The Information Requirement can require structured data or documents of any form
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Reference Framework"><a href="#Reference Framework" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#ReferenceFramework" data-placement="right">Reference Framework</a></h3>
+              <h3 class="h3" id="Location"><a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A source from where Requirements are identified and derived.</dd>
-                    
-                    <dt>Usage</dt><dd>Usual Reference Frameworks are legal and non-legal specifications. Examples include procedures, tendering legislation, etc.</dd>
+                    <dt>Description</dt><dd>An identifiable geographic place or named place.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1029,14 +1197,164 @@ The Information Requirement can require structured data or documents of any form
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Requirement"><a href="#Requirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#Requirement" data-placement="right">Requirement</a></h3>
+              <h3 class="h3" id="Period of Time"><a href="http://www.w3.org/2006/time#ProperInterval" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#ProperInterval" data-placement="right">Period of Time</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Period%20of%20Time%3Aduration">duration</a>, 
+                      <a href="#Period%20of%20Time%3Aendtime">endtime</a>, 
+                      <a href="#Period%20of%20Time%3Astarttime">starttime</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Period%20of%20Time%3Aduration" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasXSDDuration">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/2006/time#hasXSDDuration" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#hasXSDDuration" data-placement="right">
+                            duration</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#duration" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#duration" data-placement="right">Duration</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">Extent of the Period of Time.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Period%20of%20Time%3Aendtime" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasEnd">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/2006/time#hasEnd" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#hasEnd" data-placement="right">
+                            endtime</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">Date and time information indicating the end of the Period.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Period%20of%20Time%3Astarttime" typeof="rdfs:Property" resource="http://www.w3.org/2006/time#hasBeginning">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/2006/time#hasBeginning" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#hasBeginning" data-placement="right">
+                            starttime</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">Date and time information indicating the beginning of the Period.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Reference Framework"><a href="http://data.europa.eu/m8g/ReferenceFramework" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ReferenceFramework" data-placement="right">Reference Framework</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Description</dt><dd>A source from where Requirements are identified and derived.</dd>
+                    
+                    <dt>Usage</dt><dd>Usual Reference Frameworks are legal and non-legal specifications. Examples include procedures, tendering legislation, etc.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Reference%20Framework%3Aidentifier">identifier</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Reference%20Framework%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
+                            identifier</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">An unambiguous reference to a Reference Framework.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Requirement"><a href="http://data.europa.eu/m8g/Requirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Requirement" data-placement="right">Requirement</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A condition or prerequisite that someone requests and someone else has to meet.</dd>
                     
                     <dt>Usage</dt><dd>Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. 
 
-CCCEV recommends to not use the Requirement class directly, but rather a more semanticall-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.</dd>
+CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1094,7 +1412,7 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                       <tr id="Requirement%3Ahas%20concept" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#hasConcept">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#hasConcept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasConcept" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/cccev#hasConcept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasConcept" data-placement="right">
                             has concept</a>
                           </code>
                         </td>
@@ -1113,7 +1431,7 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                       <tr id="Requirement%3Ahas%20evidence%20type%20list" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#hasEvidenceTypeList">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#hasEvidenceTypeList" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasEvidenceTypeList" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/cccev#hasEvidenceTypeList" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasEvidenceTypeList" data-placement="right">
                             has evidence type list</a>
                           </code>
                         </td>
@@ -1129,10 +1447,10 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                         <td></td>
                       </tr>
                     
-                      <tr id="Requirement%3Ahas%20qualified%20relation" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#hasQualifiedRelation">
+                      <tr id="Requirement%3Ahas%20qualified%20relation" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasQualifiedRelation">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#hasQualifiedRelation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasQualifiedRelation" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/hasQualifiedRelation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasQualifiedRelation" data-placement="right">
                             has qualified relation</a>
                           </code>
                         </td>
@@ -1148,10 +1466,10 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                         <td></td>
                       </tr>
                     
-                      <tr id="Requirement%3Ahas%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#hasRequirement">
+                      <tr id="Requirement%3Ahas%20requirement" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasRequirement">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#hasRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasRequirement" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/hasRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasRequirement" data-placement="right">
                             has requirement</a>
                           </code>
                         </td>
@@ -1170,7 +1488,7 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                       <tr id="Requirement%3Ahas%20supporting%20evidence" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#hasSupportingEvidence">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#hasSupportingEvidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasSupportingEvidence" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/cccev#hasSupportingEvidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#hasSupportingEvidence" data-placement="right">
                             has supporting evidence</a>
                           </code>
                         </td>
@@ -1208,7 +1526,7 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                       <tr id="Requirement%3Ais%20derived%20from" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#isDerivedFrom">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#isDerivedFrom" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#isDerivedFrom" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/cccev#isDerivedFrom" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#isDerivedFrom" data-placement="right">
                             is derived from</a>
                           </code>
                         </td>
@@ -1224,10 +1542,10 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                         <td></td>
                       </tr>
                     
-                      <tr id="Requirement%3Ais%20requirement%20of" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#isRequirementOf">
+                      <tr id="Requirement%3Ais%20requirement%20of" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/isRequirementOf">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#isRequirementOf" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#isRequirementOf" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/isRequirementOf" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/isRequirementOf" data-placement="right">
                             is requirement of</a>
                           </code>
                         </td>
@@ -1243,10 +1561,10 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
                         <td></td>
                       </tr>
                     
-                      <tr id="Requirement%3Aissued%20by" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#issuedBy">
+                      <tr id="Requirement%3Aissued%20by" typeof="rdfs:Property" resource="http://purl.org/dc/terms/publisher">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#issuedBy" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#issuedBy" data-placement="right">
+                            <a href="http://purl.org/dc/terms/publisher" data-toggle="tooltip" data-content="http://purl.org/dc/terms/publisher" data-placement="right">
                             issued by</a>
                           </code>
                         </td>
@@ -1257,7 +1575,7 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
 			    
                           
                         </td>
-                        <td property="rdfs:comment">The Agent that has issued the Requirement.</td>
+                        <td property="rdfs:comment">The Agent that has published the Requirement.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -1307,7 +1625,7 @@ CCCEV recommends to not use the Requirement class directly, but rather a more se
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Supported Value"><a href="#Supported Value" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#SupportedValue" data-placement="right">Supported Value</a></h3>
+              <h3 class="h3" id="Supported Value"><a href="http://data.europa.eu/m8g/SupportedValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/SupportedValue" data-placement="right">Supported Value</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A value for an Information Concept that is supported by an Evidence.</dd>
@@ -1343,10 +1661,10 @@ As described in the Evidence class, CCCEV does not impose how the actual informa
 
                     <tbody class="supertype">
                     
-                      <tr id="Supported%20Value%3Aprovides%20value%20for" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#providesValueFor">
+                      <tr id="Supported%20Value%3Aprovides%20value%20for" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/providesValueFor">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#providesValueFor" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#providesValueFor" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/providesValueFor" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/providesValueFor" data-placement="right">
                             provides value for</a>
                           </code>
                         </td>
@@ -1362,10 +1680,10 @@ As described in the Evidence class, CCCEV does not impose how the actual informa
                         <td></td>
                       </tr>
                     
-                      <tr id="Supported%20Value%3Aquery" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#query">
+                      <tr id="Supported%20Value%3Aquery" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/query">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#query" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#query" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/query" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/query" data-placement="right">
                             query</a>
                           </code>
                         </td>
@@ -1381,10 +1699,10 @@ As described in the Evidence class, CCCEV does not impose how the actual informa
                         <td></td>
                       </tr>
                     
-                      <tr id="Supported%20Value%3Avalue" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/cccev#value">
+                      <tr id="Supported%20Value%3Avalue" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/value">
                         <td>
                           <code property="rdfs:label">
-                            <a href="#value" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/cccev#value" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/value" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/value" data-placement="right">
                             value</a>
                           </code>
                         </td>
@@ -1408,295 +1726,30 @@ As described in the Evidence class, CCCEV does not impose how the actual informa
             
 
             
-	    <div class="region region--no-space-top" id="implementation-note">
-                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Implementation note</h2>
+	    
+	    <!--
+	    
+	    <div class="region region--no-space-top" id="examples">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Examples</h2>
                 (non-normative)
                 
-</br>
-</br>
-<p>
-  CCCEV as a Core Vocabulary is implementation-neutral. CCCEV does not impose any choices regarding <i>how</i> the data is being exchanged. Furthermore, CCCEV does not enforce the information carried in an Evidence to be directly accessible i.e. contained within the payload of the response. However, CCCEV does offer several ways to implement these aspects: (1) via subclassing of the Evidence class, (2) via sharing it as a dcat:Distribution or (3) via the class Supported Value. These are three distinguishable approaches, which can be used independently from each other, or in combination.
-</p>
-</br>
-<p>
-  CCCEV provides a framework for the implementers to define the actual information models and metadata models an Evidence should comply to. For example, a Birth Certificate model could be defined as a particular Evidence Type to which the Evidence shared by the competent authority should conform to. This information model would make use of existing metadata models. The implementer can define one or several domain specific models for defining the information acceptable or required within an Evidence.
-</p>
-</br>
-<p>
-  In practice, an Evidence (from the perspective of being a document) often provides more information than is required for the decision making process. Despite that it might be possible to express all these information pieces as Information Concepts, this remains a choice for the implementer. It is not the intent of CCCEV to provide a full-fledged data modeling framework with the notion of Information Concept and Supported Value. Usages such as creating Information Concepts independent from Requirements or providing Values for Information Concepts that are not requested by a Requirement should be considered as unintended usages, beyond the scope of CCCEV.
-</p>
-
+		</br>
+		<p>placeholder</p>
+                
             </div>
+	    
+	    -->
+	    
 	    <div class="region region--no-space-top" id="changelog">
-                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog w.r.t. latest version</h2>
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog w.r.t. previous version</h2>
                 (non-normative)
                 
 </br>
 </br>
 A changelog describing the (major) changes to the previous version (1.0.0) of the Core Criterion and Core Evidence Vocabulary (released in December 2016) and the new version that is here being proposed (2.0.0), can be found <a href="https://github.com/SEMICeu/CCCEV/blob/master/releases/2.00/Changelog.md">here</a>.
-<!--
-</br>
-</br>
-<p>
-  In this section, we list the major changes of this version of CCCEV compared to the <a href="https://github.com/SEMICeu/CCCEV/tree/CV-2.0.0/cccev/2.0.0">previous proposal (v2.0.0)</a> that was published on GitHub.
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Decouple CCCEV from other vocabularies, in particular DCAT-AP
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-<ul>
-  <li>
-   Coupling entities to existing vocabularies (e.g. by subclassing) is enforcing the superclass view on the entities.
-    Often this coupling did not contribute to clarify the intended semantics of the CCCEV entities. The impact
-    was more restrictive than necessary.
-  </li>
-</ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    Mostly a removal of dependencies of DCAT(-AP) except for Evidence.
-  </li>
-  <li>
-    Such dependencies are now part of discussions at the level of implementations.
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Align CCCEV with other Core Vocabularies
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-  <ul>
-    The SEMIC Core Vocabularies are built around a few external vocabularies. In particular for metadata aspects
-    dcterms is the base reference.
-  </ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    Replacement of URI mapping from cbc to dcterms. 
-  </li>
-  <li>
-    This additionally reduces the mapping ambiguity that would arise from subclassing from dcat:Dataset.
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Semantical clarifications
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-  <ul>
-    Many of the entities in the proposal did not had a formal definition, nor even an informal motivation for their
-    appearance in the CCCEV data model.
-  </ul>  
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    Ensure that every term has a label/definition/mapped to an URI.
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Disentangling the semantics from (XML) serialization needs
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-<ul>
-  <li>
-    Part of the modeling and URI mappings were heavily inspired from the perspective of the best practices for
-    XML payload creation that are applied by the parties around the table.
-  </li>
-  <li>
-    Despite that usable XML payloads for the parties around the table was probably the main objective, this
-    creates a data model were payload technicalities are mixed with a high-level context. This conflicts with the
-    objective of a Core Vocabulary which is as much as possible implementation neutral. 
-  </li>
-</ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    The whole structure around concept and value has been severely reduced to minimal aspects to capture the semantics.
-  </li>
-  <li>
-    Value has been renamed to Supported Value and is now a response to a request instead of a dangling entity.
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Removal of non-motivated entities such as cccev:DocumentReference
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-<ul>
-  <li>
-    No clear semantics were provided. On the extended view of the proposal many explicit properties of DCAT are
-    listed. Probably they result from discussions on describing discussed information items that the parties around
-    the table would like to have covered. By listing them explicitly, the proof has given that the CCCEV model is
-    capable to capture the required notions. To introduce them in the CCCEV context, the definitions and
-    terminology of those properties should be contextualized to the CCCEV setting. Note that this contextualization
-    is anyhow a non-trivial process, as DCAT is an application profile for cataloguing entities. So the catalog is a key
-    context setting for a dcat:Dataset while CCCEV is not about cataloging. 
-  </li>
-  <li>
-    However, none of the properties have been motivated or explained how they form an integral part of CCCEV.
-    Lacking this motivation means that it is non-critical information that must be part of the Core Vocabulary level. It
-    however means that those properties will arise during implementation discussions.
-  </li>
-  <li>
-    Note that by subclassing Evidence to dcat:Dataset all the removed aspects are implicitly included. This implicit
-    approach essentially creates a lot of freedom, which makes CCCEV not usuable out-of-the-box. 
-  </li>
-</ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    Removing all non-motivated properties. This has mostly as consequence that all dcat properties have disappeared.
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Changes in the preferred directionality of the relationships
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-<ul>
-  <li>
-    Some relationships had a counter-intuitive preferred relationship. 
-  </li>
-</ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    cccev:hasConstraint -> cccev:constrains
-  </li>
-  <li>
-    cccev:isValueOf -> cccev :providesValueFor (name change + maintain only one direction)
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Added properties
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-<ul>
-  <li>
-    New properties that enhance the application of CCCEV.
-  </li>
-</ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    cccev:issuedBy: Requirement -> Agent
-  </li>
-  <li>
-    cccev:supportsValue: Evidence -> SupportedValue 
-  </li>
-</ul>
-</p>
-</br>
-</br>
-
-<h3 class="h3" aria-level="1" role="heading">
-  Renaming
-</h3>
-<h4 class="h4" aria-level="1" role="heading">
-  Motivation
-</h4>
-<p>
-<ul>
-  <li>
-    Some entities or relationships do not use labels that immediately guide a reader into the desired semantics.
-    Some even create confusion.
-  </li>
-</ul>
-</p>
-<h4 class="h4" aria-level="1" role="heading">
-  Activities
-</h4>
-<p>
-<ul>
-  <li>
-    Concept: confusion with skos:Concept. Better to use Information Concept.
-  </li>
-  <li>
-    Value: reads as if it is something very generic. Changed to SupportedValue.
-  </li>
-  <li>
-    EvidenceTypeList: it is not a list, but actually an AND-condition that should be fulfilled. (TODO: ongoing search for an improved name).
-  </li>
-</ul>
-</p>
-</br>
-</br>
--->
 
             </div>
-	    <!--
+	    
             <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 (non-normative)
@@ -1704,6 +1757,7 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
 		<p>A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/doc/core-vocabulary/cccev/context/cccev-ap_en.jsonld" target="_blank">/doc/core-vocabulary/cccev/context/cccev-ap_en.jsonld</a></p>
                 
             </div>
+	    <!--
             <div class="region region--no-space-top" id="shacl">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">SHACL template</h2>
                 (non-normative)
@@ -1732,22 +1786,25 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
                                   <a href="#license">License</a>
                               </li>
 			      -->
+			      <!--
                               <li class="side-navigation__item">
                                   <a href="#conformance">Conformance</a>
                               </li>
+			      -->
                               <li class="side-navigation__item">
                                   <a href="#overview">Overview</a>
                               </li>
+			      <!--
 			      <li class="side-navigation__item">
-                                  <a href="#implementation-note">Implementation note</a>
-                              </li>
+                                  <a href="#examples">Examples</a>
+			      -->
 			      <li class="side-navigation__item">
                                   <a href="#changelog">Changelog</a>
                               </li>
-			      <!--
                               <li class="side-navigation__item">
                                   <a href="#jsonld">JSON-LD Context</a>
                               </li>
+			      <!--
                               <li class="side-navigation__item">
                                   <a href="#shacl">SHACL template</a>
                               </li>
@@ -1764,6 +1821,16 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
   </div>
 
   <script src="https://dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+  <script type="text/javascript">
+      function iframeLoaded() {
+         var iFrameID = document.getElementById('exampleiframe');
+          if(iFrameID) {
+                // here you can make the height, I delete it first, then I make it again
+                iFrameID.height = "";
+                iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+          }   
+      }
+  </script> 
 
   <style>
     @media screen {  /* hide from IE3 */
@@ -1796,7 +1863,6 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
       font-size: 1.4rem;
       color: #000;
       background-clip: padding-box;
-      visibility: hidden;
     }
     .logo {
       content: url("html/semic-icon.png");

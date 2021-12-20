@@ -67,8 +67,6 @@
           "sh:definition": {
             "en": "Parameter used to adjust the evaluation of the Criterion."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "bias"
           },
@@ -79,8 +77,6 @@
           "sh:definition": {
             "en": "Relative importance of the Criterion."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "weight"
           },
@@ -91,8 +87,6 @@
           "sh:definition": {
             "en": "Explanation of how the weighting of a Criterion is to be used."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "weighting consideration description"
           },
@@ -103,8 +97,6 @@
           "sh:definition": {
             "en": "Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "weighting type"
           },
@@ -123,8 +115,6 @@
           "sh:definition": {
             "en": "Security classification assigned to an Evidence e.g. classified, sensitive, public."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "confidentiality level type"
           },
@@ -223,8 +213,6 @@
           "sh:definition": {
             "en": "Category to which the Evidence Type belongs."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "evidence type classification"
           },
@@ -235,8 +223,6 @@
           "sh:definition": {
             "en": "Unambiguous reference to the Evidence Type."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },
@@ -285,8 +271,6 @@
           "sh:definition": {
             "en": "Short explanation supporting the understanding of the Evidence Type List."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "description"
           },
@@ -297,8 +281,6 @@
           "sh:definition": {
             "en": "Unambiguous reference to the Evidence Type List."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },
@@ -309,8 +291,6 @@
           "sh:definition": {
             "en": "Name of the Evidence Type List."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "name"
           },
@@ -339,8 +319,6 @@
           "sh:definition": {
             "en": "Short explanation supporting the understanding of the Information Concept."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "description"
           },
@@ -351,8 +329,6 @@
           "sh:definition": {
             "en": "Formulation in a formal language of the expected value(s) for the Information Concept which is aligned with the concepts from the Requirements defined and must be respected by the supplied Supported Values ."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "expression of expected value"
           },
@@ -363,8 +339,6 @@
           "sh:definition": {
             "en": "Unambiguous reference to the Information Concept."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },
@@ -375,8 +349,6 @@
           "sh:definition": {
             "en": "Name of the Information Concept."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "name"
           },
@@ -387,8 +359,6 @@
           "sh:definition": {
             "en": "Category to which the Information Concept belongs."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "type"
           },
@@ -414,8 +384,6 @@
           "sh:definition": {
             "en": "An unambiguous reference to a Reference Framework."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },
@@ -434,8 +402,6 @@
           "sh:definition": {
             "en": "A short explanation supporting the understanding of the Requirement."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "description"
           },
@@ -496,8 +462,6 @@
           "sh:definition": {
             "en": "Unambiguous reference to a Requirement."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },
@@ -538,8 +502,6 @@
           "sh:definition": {
             "en": "Name of the Requirement."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "name"
           },
@@ -550,8 +512,6 @@
           "sh:definition": {
             "en": "Category to which the Requirement belongs."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "type"
           },
@@ -580,8 +540,6 @@
           "sh:definition": {
             "en": "Search statement that allows the value for the Information Concept to be retrieved from the Evidence data."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "query"
           },
@@ -592,8 +550,6 @@
           "sh:definition": {
             "en": "Value for the Information Concept that the Evidence supports."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "value"
           },
@@ -619,8 +575,6 @@
           "sh:definition": {
             "en": "Extent of the Period of Time."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "duration"
           },
@@ -631,8 +585,6 @@
           "sh:definition": {
             "en": "Time instant at which the Period was terminated."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "endtime"
           },
@@ -643,8 +595,6 @@
           "sh:definition": {
             "en": "Time instant at which the Period was initiated."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "starttime"
           },
@@ -663,8 +613,6 @@
           "sh:definition": {
             "en": "Unambiguous reference to the Dataset."
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },

@@ -1,9 +1,0 @@
-{
-  "@context": {
-    "EnterYourTranslationHere": "http://xmlns.com/foaf/0.1/Agent",
-    "EnterYourTranslationHere.enterYourTranslationHere": {
-      "@id": "http://www.w3.org/2006/time#hasXSDDuration",
-      "@type": "http://www.w3.org/2001/XMLSchema#duration"
-    }
-  }
-}

@@ -41,29 +41,21 @@
   shacl:property [
     shacl:class xsd:decimal;
     shacl:definition "Relative importance of the Criterion."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "weight"@en;
     shacl:path <http://data.europa.eu/m8g/weight>
   ], [
     shacl:datatype xsd:string;
     shacl:definition "Explanation of how the weighting of a Criterion is to be used."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "weighting consideration description"@en;
     shacl:path <http://data.europa.eu/m8g/weightingConsiderationDescription>
   ], [
     shacl:class skos:Concept;
     shacl:definition "Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "weighting type"@en;
     shacl:path <http://data.europa.eu/m8g/weightingType>
   ], [
     shacl:class xsd:decimal;
     shacl:definition "Parameter used to adjust the evaluation of the Criterion."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "bias"@en;
     shacl:path <http://data.europa.eu/m8g/bias>
   ];
@@ -74,8 +66,6 @@
   shacl:property [
     shacl:datatype rdfs:Literal;
     shacl:definition "Unambiguous reference to the Dataset."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ];
@@ -101,8 +91,6 @@
   ], [
     shacl:class skos:Concept;
     shacl:definition "Security classification assigned to an Evidence e.g. classified, sensitive, public."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "confidentiality level type"@en;
     shacl:path <http://data.europa.eu/m8g/confidentialityLevelType>
   ], [
@@ -143,22 +131,16 @@
   ], [
     shacl:datatype xsd:string;
     shacl:definition "Short explanation supporting the understanding of the Evidence Type List."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype rdfs:Literal;
     shacl:definition "Unambiguous reference to the Evidence Type List."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype xsd:string;
     shacl:definition "Name of the Evidence Type List."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path skos:prefLabel
   ];
@@ -174,8 +156,6 @@
   ], [
     shacl:class skos:Concept;
     shacl:definition "Category to which the Evidence Type belongs."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "evidence type classification"@en;
     shacl:path <http://data.europa.eu/m8g/evidenceTypeClassification>
   ], [
@@ -191,8 +171,6 @@
   ], [
     shacl:datatype rdfs:Literal;
     shacl:definition "Unambiguous reference to the Evidence Type."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ];
@@ -203,36 +181,26 @@
   shacl:property [
     shacl:datatype xsd:string;
     shacl:definition "Short explanation supporting the understanding of the Information Concept."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:class skos:Concept;
     shacl:definition "Category to which the Information Concept belongs."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type"@en;
     shacl:path dc:type
   ], [
     shacl:datatype xsd:string;
     shacl:definition "Name of the Information Concept."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path skos:prefLabel
   ], [
     shacl:datatype rdfs:Literal;
     shacl:definition "Unambiguous reference to the Information Concept."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdfs:Literal;
     shacl:definition "Formulation in a formal language of the expected value(s) for the Information Concept which is aligned with the concepts from the Requirements defined and must be respected by the supplied Supported Values ."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "expression of expected value"@en;
     shacl:path <http://data.europa.eu/m8g/expressionOfExpectedValue>
   ];
@@ -251,22 +219,16 @@
   shacl:property [
     shacl:datatype xsd:dateTime;
     shacl:definition "Time instant at which the Period was initiated."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "starttime"@en;
     shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ], [
     shacl:datatype xsd:duration;
     shacl:definition "Extent of the Period of Time."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "duration"@en;
     shacl:path <http://www.w3.org/2006/time#hasXSDDuration>
   ], [
     shacl:datatype xsd:dateTime;
     shacl:definition "Time instant at which the Period was terminated."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "endtime"@en;
     shacl:path <http://www.w3.org/2006/time#hasEnd>
   ];
@@ -277,8 +239,6 @@
   shacl:property [
     shacl:datatype rdfs:Literal;
     shacl:definition "An unambiguous reference to a Reference Framework."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ];
@@ -324,8 +284,6 @@
   ], [
     shacl:datatype rdfs:Literal;
     shacl:definition "Unambiguous reference to a Requirement."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identifier"@en;
     shacl:path dc:identifier
   ], [
@@ -336,22 +294,16 @@
   ], [
     shacl:class skos:Concept;
     shacl:definition "Category to which the Requirement belongs."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type"@en;
     shacl:path dc:type
   ], [
     shacl:datatype xsd:string;
     shacl:definition "A short explanation supporting the understanding of the Requirement."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [
     shacl:datatype xsd:string;
     shacl:definition "Name of the Requirement."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "name"@en;
     shacl:path skos:prefLabel
   ];
@@ -362,15 +314,11 @@
   shacl:property [
     shacl:datatype rdfs:Literal;
     shacl:definition "Value for the Information Concept that the Evidence supports."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "value"@en;
     shacl:path <http://data.europa.eu/m8g/value>
   ], [
     shacl:datatype rdfs:Literal;
     shacl:definition "Search statement that allows the value for the Information Concept to be retrieved from the Evidence data."@en;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "query"@en;
     shacl:path <http://data.europa.eu/m8g/query>
   ], [

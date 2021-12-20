@@ -4,7 +4,7 @@
     "Constraint": "http://data.europa.eu/m8g/Constraint",
     "Constraint.constrains": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/cccev#constrains",
+      "@id": "http://data.europa.eu/m8g/constrains",
       "@type": "@id"
     },
     "Criterion": "http://data.europa.eu/m8g/Criterion",
@@ -26,7 +26,7 @@
     },
     "Dataset": "http://www.w3.org/ns/dcat#Dataset",
     "Dataset.identifier": {
-      "@id": "http://fixme.com#identifier",
+      "@id": "http://purl.org/dc/terms/identifier",
       "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Evidence": "http://data.europa.eu/m8g/Evidence",
@@ -56,7 +56,7 @@
     },
     "Evidence.supportsConcept": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/cccev#supportsConcept",
+      "@id": "http://data.europa.eu/m8g/supportsConcept",
       "@type": "@id"
     },
     "Evidence.supportsRequirement": {
@@ -86,6 +86,11 @@
     "EvidenceType.isSpecifiedIn": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/isSpecifiedIn",
+      "@type": "@id"
+    },
+    "EvidenceType.issuingPlace": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/issuingPlace",
       "@type": "@id"
     },
     "EvidenceType.validityPeriodConstraint": {
@@ -159,12 +164,12 @@
     },
     "Requirement.hasConcept": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/cccev#hasConcept",
+      "@id": "http://data.europa.eu/m8g/hasConcept",
       "@type": "@id"
     },
     "Requirement.hasEvidenceTypeList": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/cccev#hasEvidenceTypeList",
+      "@id": "http://data.europa.eu/m8g/hasEvidenceTypeList",
       "@type": "@id"
     },
     "Requirement.hasQualifiedRelation": {
@@ -179,7 +184,7 @@
     },
     "Requirement.hasSupportingEvidence": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/cccev#hasSupportingEvidence",
+      "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
       "@type": "@id"
     },
     "Requirement.identifier": {
@@ -188,7 +193,7 @@
     },
     "Requirement.isDerivedFrom": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/cccev#isDerivedFrom",
+      "@id": "http://data.europa.eu/m8g/isDerivedFrom",
       "@type": "@id"
     },
     "Requirement.isRequirementOf": {

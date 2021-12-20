@@ -47,12 +47,12 @@
         {
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:definition": {
-            "en": "The Information Concept about which a Constraint expresses a limitation."
+            "en": "Information Concept about which a Constraint expresses a limitation."
           },
           "sh:name": {
             "en": "constrains"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#constrains"
+          "sh:path": "http://data.europa.eu/m8g/constrains"
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Constraint"
@@ -65,7 +65,7 @@
         {
           "sh:class": "http://www.w3.org/2001/XMLSchema#decimal",
           "sh:definition": {
-            "en": "Additional parameter(s) used to adjust the evaluation of the Criterion composed of multiple sub-Criteria and their respective weights."
+            "en": "Parameter used to adjust the evaluation of the Criterion."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -77,7 +77,7 @@
         {
           "sh:class": "http://www.w3.org/2001/XMLSchema#decimal",
           "sh:definition": {
-            "en": "Relative importance assigned to a given Criterion."
+            "en": "Relative importance of the Criterion."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -89,7 +89,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "The explanation of how the weighting of a Criterion is to be used at evaluation time."
+            "en": "Explanation of how the weighting of a Criterion is to be used."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -101,7 +101,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:definition": {
-            "en": "The numeric form used to weight."
+            "en": "Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -121,7 +121,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:definition": {
-            "en": "The security classification assigned to an Evidence or, in general, to a content."
+            "en": "Security classification assigned to an Evidence e.g. classified, sensitive, public."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -133,7 +133,7 @@
         {
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:definition": {
-            "en": "The Agent that is the main actor in the provided Evidence."
+            "en": "Agent that is the subject in the provided Evidence."
           },
           "sh:name": {
             "en": "is about"
@@ -143,7 +143,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/EvidenceType",
           "sh:definition": {
-            "en": "A reference to one or more types of Evidence where the content and, possibly, the layout or configuration of the Evidence is specified."
+            "en": "Evidence Type that specifies characteristics of the Evidence."
           },
           "sh:name": {
             "en": "is conformant to"
@@ -153,7 +153,7 @@
         {
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:definition": {
-            "en": "The Agent that produces the Evidence."
+            "en": "Agent that produces the Evidence."
           },
           "sh:name": {
             "en": "is created by"
@@ -163,7 +163,7 @@
         {
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:definition": {
-            "en": "The legal authority responsible for an Evidence."
+            "en": "Agent legally responsible for the Evidence, e.g. a legal authority."
           },
           "sh:name": {
             "en": "is issued by"
@@ -173,17 +173,17 @@
         {
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:definition": {
-            "en": "The Information Concept that is supported by the Evidence."
+            "en": "Information Concept providing facts found/inferred from the Evidence."
           },
           "sh:name": {
             "en": "supports concept"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#supportsConcept"
+          "sh:path": "http://data.europa.eu/m8g/supportsConcept"
         },
         {
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:definition": {
-            "en": "The Requirement for which the Evidence provides information (proof, support)."
+            "en": "Requirement for which the Evidence provides proof."
           },
           "sh:name": {
             "en": "supports requirement"
@@ -193,7 +193,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/SupportedValue",
           "sh:definition": {
-            "en": "The Supported Value for which an Evidence holds information."
+            "en": "Supported Value that the Evidence contains."
           },
           "sh:name": {
             "en": "supports value"
@@ -203,7 +203,7 @@
         {
           "sh:class": "http://www.w3.org/2006/time#ProperInterval",
           "sh:definition": {
-            "en": "Indicates the validity period of the Evidence."
+            "en": "Period of Time during which the Evidence holds true or has force."
           },
           "sh:name": {
             "en": "validity period"
@@ -221,7 +221,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:definition": {
-            "en": "A classification code to specify the layout and content expected for an Evidence."
+            "en": "Category to which the Evidence Type belongs."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -233,7 +233,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "An unambiguous reference to an Evidence Type."
+            "en": "Unambiguous reference to the Evidence Type."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -245,7 +245,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/EvidenceTypeList",
           "sh:definition": {
-            "en": "Refers to an Evidence Type List in which the Evidence Type is included."
+            "en": "Evidence Type List in which the Evidence Type is included."
           },
           "sh:name": {
             "en": "is specified in"
@@ -253,9 +253,19 @@
           "sh:path": "http://data.europa.eu/m8g/isSpecifiedIn"
         },
         {
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:definition": {
+            "en": "Refers to the Location where an Evidence Type is issued."
+          },
+          "sh:name": {
+            "en": "issuing place"
+          },
+          "sh:path": "http://data.europa.eu/m8g/issuingPlace"
+        },
+        {
           "sh:class": "http://www.w3.org/2006/time#ProperInterval",
           "sh:definition": {
-            "en": "Indicates a temporal constraint on the validity period of the Evidence Type."
+            "en": "Temporal condition on the validity period of the Evidence Type."
           },
           "sh:name": {
             "en": "validity period constraint"
@@ -273,7 +283,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Evidence Type being instantiated."
+            "en": "Short explanation supporting the understanding of the Evidence Type List."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -285,7 +295,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "An unambiguous reference to an Evidence Type List."
+            "en": "Unambiguous reference to the Evidence Type List."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -297,7 +307,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "The name of  the Evidence Type List."
+            "en": "Name of the Evidence Type List."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -309,7 +319,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/EvidenceType",
           "sh:definition": {
-            "en": "Indicates one Type of Evidence included in a List of Evidence Types."
+            "en": "Evidence Type included in this Evidence Type List."
           },
           "sh:name": {
             "en": "specifies evidence type"
@@ -327,7 +337,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Information Concept being instantiated."
+            "en": "Short explanation supporting the understanding of the Information Concept."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -339,7 +349,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "An expression (function) of the value that the Requirement expects."
+            "en": "Formulation in a formal language of the expected value(s) for the Information Concept which is aligned with the concepts from the Requirements defined and must be respected by the supplied Supported Values ."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -351,7 +361,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "An unambiguous reference to the Information Concept."
+            "en": "Unambiguous reference to the Information Concept."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -363,7 +373,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "A name of the Information Concept."
+            "en": "Name of the Information Concept."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -375,7 +385,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:definition": {
-            "en": "A classification of the Information Concept."
+            "en": "Category to which the Information Concept belongs."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -422,7 +432,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated."
+            "en": "A short explanation supporting the understanding of the Requirement."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -434,27 +444,27 @@
         {
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:definition": {
-            "en": "The Information Concept for which the Requirement expects a support in the supporting Evidence."
+            "en": "Information Concept for which a value is expected by the Requirement."
           },
           "sh:name": {
             "en": "has concept"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#hasConcept"
+          "sh:path": "http://data.europa.eu/m8g/hasConcept"
         },
         {
           "sh:class": "http://data.europa.eu/m8g/EvidenceTypeList",
           "sh:definition": {
-            "en": "The single or various combinations of Evidence Types for supporting a Requirement. Out of the different Lists, one of them must be satisfied by the response to the Requirement."
+            "en": "Evidence Type List that specifies the Evidence Types that are needed to meet the Requirement."
           },
           "sh:name": {
             "en": "has evidence type list"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#hasEvidenceTypeList"
+          "sh:path": "http://data.europa.eu/m8g/hasEvidenceTypeList"
         },
         {
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:definition": {
-            "en": "A described and/or categorised relation to the instance of another Requirement class or subclass."
+            "en": "Described and/or categorised relation to another Requirement."
           },
           "sh:name": {
             "en": "has qualified relation"
@@ -464,7 +474,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:definition": {
-            "en": "A sub-Requirement."
+            "en": "A more specific Requirement that is part of the Requirement."
           },
           "sh:name": {
             "en": "has requirement"
@@ -474,17 +484,17 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:definition": {
-            "en": "The Evidence that supplies information (proof, support) for this Requirement."
+            "en": "Evidence that supplies information, proof or support for the Requirement."
           },
           "sh:name": {
             "en": "has supporting evidence"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#hasSupportingEvidence"
+          "sh:path": "http://data.europa.eu/m8g/hasSupportingEvidence"
         },
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "An unambiguous reference to a Requirement."
+            "en": "Unambiguous reference to a Requirement."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -496,17 +506,17 @@
         {
           "sh:class": "http://data.europa.eu/m8g/ReferenceFramework",
           "sh:definition": {
-            "en": "The Reference Framework that is responsible for the creation/initiation of the Requirement."
+            "en": "Reference Framework on which the Requirement is based, such as a law or regulation."
           },
           "sh:name": {
             "en": "is derived from"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#isDerivedFrom"
+          "sh:path": "http://data.europa.eu/m8g/isDerivedFrom"
         },
         {
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:definition": {
-            "en": "The Agent that has published the Requirement."
+            "en": "Agent that has published the Requirement."
           },
           "sh:name": {
             "en": "issued by"
@@ -516,7 +526,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:definition": {
-            "en": "A reference between a sub-Requirement and its parent, more general, Requirement."
+            "en": "A reference between a sub-Requirement and its parent Requirement."
           },
           "sh:name": {
             "en": "is requirement of"
@@ -526,7 +536,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:definition": {
-            "en": "A name to identify in common language the Requirement."
+            "en": "Name of the Requirement."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -538,7 +548,7 @@
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:definition": {
-            "en": "The category or type to which the requirement belongs."
+            "en": "Category to which the Requirement belongs."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -558,7 +568,7 @@
         {
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:definition": {
-            "en": "The Information Concept for which the Supported Value is providing a value."
+            "en": "Information Concept for which the Supported Value provides a value."
           },
           "sh:name": {
             "en": "provides value for"
@@ -568,7 +578,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "The query via which the value for the Information Concept can be retrieved. The query must be executed on the business data provided by the supporting Evidence."
+            "en": "Search statement that allows the value for the Information Concept to be retrieved from the Evidence data."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -580,7 +590,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "The value for the Information Concept that the Evidence is supporting."
+            "en": "Value for the Information Concept that the Evidence supports."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -619,7 +629,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
           "sh:definition": {
-            "en": "Date and time information indicating the end of the Period."
+            "en": "Time instant at which the Period was terminated."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -631,7 +641,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
           "sh:definition": {
-            "en": "Date and time information indicating the beginning of the Period."
+            "en": "Time instant at which the Period was initiated."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -651,14 +661,14 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:definition": {
-            "en": "An unambiguous reference to a Dataset."
+            "en": "Unambiguous reference to the Dataset."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": {
             "en": "identifier"
           },
-          "sh:path": "http://fixme.com#identifier"
+          "sh:path": "http://purl.org/dc/terms/identifier"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"

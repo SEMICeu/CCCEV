@@ -29,6 +29,9 @@ In v2.0.0, CCCEV relies on DCAT, a vocabulary for cataloging datasets and servic
 
 Note that CCCEV v2.0.0 does not enforce the information carried in an Evidence to be directly accessible, i.e. contained within the payload of the response. However, it does offer several ways to implement these aspects: (1) via subclassing of the Evidence class, (2) via sharing it as a dcat:Distribution or (3) via the class Supported Value. These are three distinguishable approaches, which can be used independently from each other, or in combination.
 
+### Conforming the definitions to the proposed principles.
+During the public review, requests were made to align and harmonise the definitions and usage notes. In the (Open Guidelines)[https://github.com/SEMICeu/OpenGuidelines] guidelines with principles for good definitions have been published. This release applies to the best extend the principles.
+
 ## Detailed changes
 
 The structure of this section is the following:

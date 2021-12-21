@@ -10,11 +10,11 @@
     "Criterion": "http://data.europa.eu/m8g/Criterion",
     "Criterion.bias": {
       "@id": "http://data.europa.eu/m8g/bias",
-      "@type": "@id"
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
     "Criterion.weight": {
       "@id": "http://data.europa.eu/m8g/weight",
-      "@type": "@id"
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
     "Criterion.weightingConsiderationDescription": {
       "@id": "http://data.europa.eu/m8g/weightingConsiderationDescription",

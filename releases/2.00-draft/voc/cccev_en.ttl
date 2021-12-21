@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -221,7 +222,7 @@ Example see: https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSec
     "cccev"@en;
   dc:contributor [
     a foaf:Person;
-    schema:affiliation [foaf:name "European Commission"];
+    org:memberOf [foaf:name "European Commission"];
     foaf:firstName "Seth";
     foaf:lastName "van Hooland"
   ];
@@ -263,32 +264,32 @@ Example see: https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSec
     <http://data.europa.eu/m8g/hasRequirement>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
-    schema:affiliation [foaf:name "PwC EU Services"];
+    org:memberOf [foaf:name "PwC EU Services"];
     foaf:firstName "Florian";
     foaf:lastName "Barthelemy"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "European Commission"];
+    org:memberOf [foaf:name "European Commission"];
     foaf:firstName "Pavlina";
     foaf:lastName "Fragkou"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "PwC EU Services"];
+    org:memberOf [foaf:name "PwC EU Services"];
     foaf:firstName "Emidio";
     foaf:lastName "Stani"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "TenForce"];
+    org:memberOf [foaf:name "TenForce"];
     foaf:firstName "Bert";
     foaf:lastName "Van Nuffelen"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "PwC EU Services"];
+    org:memberOf [foaf:name "PwC EU Services"];
     foaf:firstName "Michiel";
     foaf:lastName "De Keyzer"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "PwC EU Services"];
+    org:memberOf [foaf:name "PwC EU Services"];
     foaf:firstName "Dimitri";
     foaf:lastName "Schepers"
   ];

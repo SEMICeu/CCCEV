@@ -425,7 +425,7 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                           
                         </td>
                         <td property="rdfs:comment">Parameter used to adjust the evaluation of the Criterion.</td>
-                        <td property="skos:scopeNote">The bias parameter tries to correct a systematic error. For example in procurement, a home bias corresponds to the "presence of local preferences distorting international specialisation and resource allocation". [https://trade.ec.europa.eu/doclib/docs/2018/september/tradoc_157319.pdf]
+			<td property="skos:scopeNote">The bias parameter tries to correct a systematic error. For example in procurement, a home bias corresponds to the <a href="https://trade.ec.europa.eu/doclib/docs/2018/september/tradoc_157319.pdf">"presence of local preferences distorting international specialisation and resource allocation"</a>. 
 When quantified, this systematic error can be removed.</td>
                         <td></td>
                       </tr>
@@ -483,8 +483,7 @@ When quantified, this systematic error can be removed.</td>
                           
                         </td>
                         <td property="rdfs:comment">Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression.</td>
-                        <td property="skos:scopeNote">An existing codelist http://publications.europa.eu/resource/authority/number-weight
-Example see: https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSection</td>
+			<td property="skos:scopeNote">An existing codelist <a href="http://publications.europa.eu/resource/authority/number-weight">Number weight</a>. An example of its use is shown <a href="https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSection">here</a></td>
                         <td></td>
                       </tr>
                     
@@ -1099,13 +1098,10 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                         <td property="skos:scopeNote">The property encapsulates all kind of expectations on the required and provided values one could have. 
 This may range from representational expectations such as the type (e.g. the value is expected to be a xsd:decimal) to expectations that reduce the allowed value range. Commonly this is done using min or max bounderary expressions (e.g. the maximum value is 1 Million Euro).
 Other usage could be to harmonise the supplied values (e.g. rounding, turning to percentages) to facilitate further processing.
-
+<br/>
 Implementers are free to use their own approach for defining the expected values in more details. For instance, this can be by defining their own datatypes extending or encapsulating common xsd datatypes. But also by using more complex languages such as XPath, Object Constraint Language (OCL), JavaScript and Rule Interchange Format (RIF).
+<br/>
 Because of this freedom, implementers are recommended to well-document their usage of this property (and related information). 
-
-
-  
-
 </td>
                         <td></td>
                       </tr>
@@ -1369,7 +1365,9 @@ Because of this freedom, implementers are recommended to well-document their usa
                   <dl>
                     <dt>Description</dt><dd>Condition or prerequisite that is to be proven by Evidence.</dd>
                     
-                    <dt>Usage</dt><dd>Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.   The European Directive on services in the internal market  defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy [..].</dd>
+	    <dt>Usage</dt><dd>Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.   
+	    <br/>
+	    The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32006L0123">European Directive on services in the internal market</a> defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy.</dd>
                     
 		    
                     <dt>Properties</dt>

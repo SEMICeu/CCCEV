@@ -62,7 +62,7 @@ The Evidence Type List describes thus an AND condition on the different Evidence
 <http://data.europa.eu/m8g/Requirement> a owl:Class,
     rdfs:Class;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  skos:scopeNote "Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.   The European Directive on services in the internal market  defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy [..]."@en .
+  skos:scopeNote "Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.   The European Directive on services in the internal market  defines requirement as any obligation, prohibition, condition or limit provided for in the laws, regulations or administrative provisions of the Member States or in consequence of case-law, administrative practice, the rules of professional bodies, or the collective rules of professional associations or other professional organisations, adopted in the exercise of their legal autonomy."@en .
 
 <http://data.europa.eu/m8g/SupportedValue> a owl:Class,
     rdfs:Class;
@@ -110,11 +110,8 @@ This may range from representational expectations such as the type (e.g. the val
 Other usage could be to harmonise the supplied values (e.g. rounding, turning to percentages) to facilitate further processing.
 
 Implementers are free to use their own approach for defining the expected values in more details. For instance, this can be by defining their own datatypes extending or encapsulating common xsd datatypes. But also by using more complex languages such as XPath, Object Constraint Language (OCL), JavaScript and Rule Interchange Format (RIF).
+
 Because of this freedom, implementers are recommended to well-document their usage of this property (and related information). 
-
-
-  
-
 """@en .
 
 <http://data.europa.eu/m8g/hasQualifiedRelation> a owl:ObjectProperty,
@@ -129,6 +126,13 @@ Because of this freedom, implementers are recommended to well-document their usa
   rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range [] .
+
+<http://data.europa.eu/m8g/isProvidedBy> a owl:ObjectProperty,
+    rdf:Property;
+  rdfs:domain [];
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:range [];
+  skos:scopeNote """Agents transmitting Evidence are usually the Agents requesting the Evidence or service providers acting on behalf of the requesting Agents such as software developer companies."""@en .
 
 <http://data.europa.eu/m8g/isRequirementOf> a owl:ObjectProperty,
     rdf:Property;

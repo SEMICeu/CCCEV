@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
+@prefix schema: <https://schema.org/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -80,31 +80,23 @@ Implementers are free to choose their language. It is recommended to document th
 
 <http://data.europa.eu/m8g/bias> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote """The bias parameter tries to correct a systematic error. For example in procurement, a home bias corresponds to the \"presence of local preferences distorting international specialisation and resource allocation\". [https://trade.ec.europa.eu/doclib/docs/2018/september/tradoc_157319.pdf]
 When quantified, this systematic error can be removed."""@en .
 
 <http://data.europa.eu/m8g/confidentialityLevelType> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "Classifications should be defined by an organisation/country as an outcome of a security assessment."@en .
 
 <http://data.europa.eu/m8g/evidenceTypeClassification> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "The categories agreed are left open but could for example specify the layout and content expected for an Evidence."@en .
 
 <http://data.europa.eu/m8g/expressionOfExpectedValue> a rdf:Property,
     owl:DatatypeProperty;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote """The property encapsulates all kind of expectations on the required and provided values one could have. 
 This may range from representational expectations such as the type (e.g. the value is expected to be a xsd:decimal) to expectations that reduce the allowed value range. Commonly this is done using min or max bounderary expressions (e.g. the maximum value is 1 Million Euro).
 Other usage could be to harmonise the supplied values (e.g. rounding, turning to percentages) to facilitate further processing.
@@ -116,114 +108,81 @@ Because of this freedom, implementers are recommended to well-document their usa
 
 <http://data.europa.eu/m8g/hasQualifiedRelation> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "This property leaves the possiblity to define a qualified relation from Requirement to Information Requirement or Constraint as well as a qualified relation from Requirement to Requirement.  A use case would be to specialize an EU requirement in Member States' specific requirements."@en .
 
 <http://data.europa.eu/m8g/hasRequirement> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/isProvidedBy> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote """Agents transmitting Evidence are usually the Agents requesting the Evidence or service providers acting on behalf of the requesting Agents such as software developer companies."""@en .
 
 <http://data.europa.eu/m8g/isRequirementOf> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote """The relation between a parent Requirement and a sub-Requirement can be complex. Therefore, qualified relations (see hasQualifiedRelation) can be used to represent this relationship on its own and qualify it with additional information such as a date, a place. This is left to implementers.
 
 In the case where the purpose is to link the two Requirements without additional information, the simple relationship as proposed here can be directly used."""@en .
 
 <http://data.europa.eu/m8g/isSpecifiedIn> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/providesValueFor> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/query> a rdf:Property,
     owl:DatatypeProperty;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "The query must be executed on the business data provided by the supporting Evidence. In order to be able to evaluate the query on the provided data, the format of the provided data must be aligned with the query expression. For instance if the provided data is XML, a query in XPath could be expected. This alignment is part of the implementation agreements that implementors must make."@en .
 
 <http://data.europa.eu/m8g/specifiesEvidenceType> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/supportsRequirement> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/supportsValue> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/validityPeriod> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/validityPeriodConstraint> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "E.g. A Belgian birth evidence is valid for X months after emission. To express constraints on the validity period that must hold when assessing the evidence (e.g. the certificate of good conduct cannot be issued more than 3 months ago), we refer to the Constraint class."@en .
 
 <http://data.europa.eu/m8g/value> a rdf:Property,
     owl:DatatypeProperty;
-  rdfs:domain [];
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [] .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>.
 
 <http://data.europa.eu/m8g/weight> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "The weight must be between 0 and 1. Usually, all Criteria can be integrated within a weighted sum equal to 1."@en .
 
 <http://data.europa.eu/m8g/weightingConsiderationDescription> a rdf:Property,
     owl:DatatypeProperty;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote "This description gives the view of the creator of the Criterion weights on how to interpret and use them during the evaluation process."@en .
 
 <http://data.europa.eu/m8g/weightingType> a owl:ObjectProperty,
     rdf:Property;
-  rdfs:domain [];
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range [];
   skos:scopeNote """An existing codelist http://publications.europa.eu/resource/authority/number-weight
 Example see: https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSection"""@en .
 
 <http://data.europa.eu/m8g> a owl:Ontology;
-  rdfs:label "cccev"@nl,
-    "cccev"@en;
+  rdfs:label "cccev"@en;
   dc:contributor [
     a foaf:Person;
     org:memberOf [foaf:name "European Commission"];
@@ -231,42 +190,12 @@ Example see: https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSec
     foaf:lastName "van Hooland"
   ];
   dc:issued "2021-12-20";
-  dc:license <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic>,
-    "https://creativecommons.org/licenses/by/4.0/";
+  dc:license <https://creativecommons.org/licenses/by/4.0/>;
   dc:mediator [
     foaf:homepage <https://semic.eu>;
     foaf:name "Semantic Interoperability Community (SEMIC)"
   ];
-  rdfs:seeAlso <http://data.europa.eu/m8g/supportsRequirement>,
-    <http://data.europa.eu/m8g/EvidenceTypeList>,
-    <http://data.europa.eu/m8g/confidentialityLevelType>,
-    <http://data.europa.eu/m8g/providesValueFor>,
-    <http://data.europa.eu/m8g/expressionOfExpectedValue>,
-    <http://data.europa.eu/m8g/Criterion>,
-    <http://data.europa.eu/m8g/InformationRequirement>,
-    <http://data.europa.eu/m8g/Evidence>,
-    <http://data.europa.eu/m8g/query>,
-    <http://data.europa.eu/m8g/weight>,
-    <http://data.europa.eu/m8g/ReferenceFramework>,
-    <http://data.europa.eu/m8g/bias>,
-    <http://data.europa.eu/m8g/Constraint>,
-    <http://data.europa.eu/m8g/weightingType>,
-    <http://data.europa.eu/m8g/isRequirementOf>,
-    <http://data.europa.eu/m8g/weightingConsiderationDescription>,
-    <http://data.europa.eu/m8g/EvidenceType>,
-    <http://data.europa.eu/m8g/SupportedValue>,
-    <http://data.europa.eu/m8g/evidenceTypeClassification>,
-    <http://data.europa.eu/m8g/Requirement>,
-    <http://data.europa.eu/m8g/specifiesEvidenceType>,
-    <http://data.europa.eu/m8g/value>,
-    <http://data.europa.eu/m8g/hasQualifiedRelation>,
-    <http://data.europa.eu/m8g/supportsValue>,
-    <http://data.europa.eu/m8g/InformationConcept>,
-    <http://data.europa.eu/m8g/validityPeriod>,
-    <http://data.europa.eu/m8g/validityPeriodConstraint>,
-    <http://data.europa.eu/m8g/isSpecifiedIn>,
-    <http://data.europa.eu/m8g/hasRequirement>;
-  <http://www.w3.org/2001/02pd/rec54#editor> [
+  <http://purl.org/ontology/bibo/editor> [
     a foaf:Person;
     org:memberOf [foaf:name "PwC EU Services"];
     foaf:firstName "Florian";

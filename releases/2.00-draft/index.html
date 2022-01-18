@@ -43,7 +43,7 @@
               <div class="head" role="status" id="status">
               <dl>
               <dt>Status</dt><dd>Semic Recommendation</dd>
-              <dt>Published at</dt><dd>2021-12-20</dd>
+              <dt>Published at</dt><dd>2022-01-20</dd>
               <dt>This version</dt><dd><a href="https://semiceu.github.io/CCCEV/releases/2.00">https://semiceu.github.io/CCCEV/releases/2.00</a></dd>
               
               
@@ -169,7 +169,6 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/CCCEV/tree/master/releases/2.00">https://github.com/SEMICeu/CCCEV/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="https://github.com/bertvannuffelen/semiceuthema/blob/f31dee68027c421e70c548eb1543308a02c8ae20/CHANGELOG">https://github.com/bertvannuffelen/semiceuthema/blob/f31dee68027c421e70c548eb1543308a02c8ae20/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CCCEV/issues">https://github.com/SEMICeu/CCCEV/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="TODO">TODO</a></dd>-->
 
@@ -297,7 +296,7 @@
               <h3 class="h3" id="Agent"><a href="http://xmlns.com/foaf/0.1/Agent" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Agent" data-placement="right">Agent</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Entity that is able to carry out action</dd>
+                    <dt>Definition</dt><dd>Entity that is able to carry out action</dd>
                     
                     <dt>Usage</dt><dd>In compliance with the description from FOAF, an Agent is considered as any entity that is able to carry out actions. The Agent class acts as a generic element which can be further specified by implementers for their usages, for example by defining the Person class from the Core Person Vocabulary or Organization from W3C's Organization Ontology as subclasses of Agent. This Person or Organization can then issue a certain Requirement or be concerned by an Evidence provided.</dd>
                     
@@ -315,7 +314,7 @@
               <h3 class="h3" id="Constraint"><a href="http://data.europa.eu/m8g/Constraint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Constraint" data-placement="right">Constraint</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Limitation applied to an Information Concept.</dd>
+                    <dt>Definition</dt><dd>Limitation applied to an Information Concept.</dd>
                     
                     <dt>Usage</dt><dd>Constraints are requirements in themselves, since they impose prerequisites which influence the definition, use and/or fulfilment of the requirement. They represent hard conditions such as minimum or maximum expressions which can be used to evaluate pieces of information, the required age, income, involvement in activities, etc. An example from the eProcurement domain is a threshold as the minimum turnover required by the buying organisation to select the candidates. Note that CCCEV does not provide any specific guidance on when which kind of Requirement should be used. Users of this vocabulary should make decisions on this topic in their specific context.</dd>
                     
@@ -338,7 +337,7 @@
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -375,7 +374,7 @@
               <h3 class="h3" id="Criterion"><a href="http://data.europa.eu/m8g/Criterion" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Criterion" data-placement="right">Criterion</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Condition for evaluation or assessment.</dd>
+                    <dt>Definition</dt><dd>Condition for evaluation or assessment.</dd>
                     
                     <dt>Usage</dt><dd>In general, Criteria are used for comparison, filtering or selection purposes. Criteria usually set minimum conditions (e.g. limits, intervals, thresholds, etc.) that need to be met in order to pass the requirements or to fulfil them to a certain degree or quality. The concept of Criteria is broader than the concept of Constraint since it covers more usages. The evaluation of the fulfilment is usually supported by the provision of Evidence. 
 For example in the eProcurement domain, the eProcurement Ontology defines different subclasses of Criterion such as exclusion grounds, selection criteria or award criteria. A concrete example of a Criterion is 'participation in a criminal organisation' which could also be considered as an exclusion ground criterion in the procurement domain or for requiring a public service.</dd>
@@ -402,7 +401,7 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -425,7 +424,7 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                           
                         </td>
                         <td property="rdfs:comment">Parameter used to adjust the evaluation of the Criterion.</td>
-			<td property="skos:scopeNote">The bias parameter tries to correct a systematic error. For example in procurement, a home bias corresponds to the <a href="https://trade.ec.europa.eu/doclib/docs/2018/september/tradoc_157319.pdf">"presence of local preferences distorting international specialisation and resource allocation"</a>. 
+			<td property="skos:scopeNote">The bias parameter tries to correct a systematic error. For example in procurement, a home bias corresponds to the <a href="https://trade.ec.europa.eu/doclib/docs/2018/september/tradoc_157319.pdf">"presence of local preferences distorting international specialisation and resource allocation"</a>.
 When quantified, this systematic error can be removed.</td>
                         <td></td>
                       </tr>
@@ -483,7 +482,7 @@ When quantified, this systematic error can be removed.</td>
                           
                         </td>
                         <td property="rdfs:comment">Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression.</td>
-			<td property="skos:scopeNote">An existing codelist <a href="http://publications.europa.eu/resource/authority/number-weight">Number weight</a>. An example of its use is shown <a href="https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSection">here</a></td>
+			 <td property="skos:scopeNote">An existing codelist <a href="http://publications.europa.eu/resource/authority/number-weight">Number weight</a>. An example of its use is shown <a href="https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSection">here</a></td>
                         <td></td>
                       </tr>
                     
@@ -497,7 +496,7 @@ When quantified, this systematic error can be removed.</td>
               <h3 class="h3" id="Dataset"><a href="http://www.w3.org/ns/dcat#Dataset" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Dataset" data-placement="right">Dataset</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Collection of data.</dd>
+                    <dt>Definition</dt><dd>Collection of data.</dd>
                     
                     <dt>Usage</dt><dd>In v2.0.0, CCCEV relies on DCAT, a vocabulary for cataloging datasets and services, to share metadata about an Evidence. This dependence is made explicit by subclassing Evidence from dcat:Dataset. This is justified by the fact that a lot of the information needed for describing Evidences is described in DCAT, such as the issue date, creator, title, etc. Furthermore, other useful parts from DCAT can be reused, such as the Distribution class.</dd>
                     
@@ -516,7 +515,7 @@ When quantified, this systematic error can be removed.</td>
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -553,7 +552,7 @@ When quantified, this systematic error can be removed.</td>
               <h3 class="h3" id="Evidence"><a href="http://data.europa.eu/m8g/Evidence" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Evidence" data-placement="right">Evidence</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Proof that a Requirement is met.</dd>
+                    <dt>Definition</dt><dd>Proof that a Requirement is met.</dd>
                     
                     <dt>Usage</dt><dd>The class Evidence provides the means to support responses to Criteria or to a concrete Information Requirement or to an Information Concept inside an Information Requirement. 
 
@@ -588,7 +587,7 @@ The proof can be given through documents or extracts of base registries, indepen
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -796,7 +795,7 @@ The proof can be given through documents or extracts of base registries, indepen
               <h3 class="h3" id="Evidence Type"><a href="http://data.europa.eu/m8g/EvidenceType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/EvidenceType" data-placement="right">Evidence Type</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Information about the characteristics of an Evidence.</dd>
+                    <dt>Definition</dt><dd>Information about the characteristics of an Evidence.</dd>
                     
                     <dt>Usage</dt><dd>The Evidence Type and the characteristics it describes are not concrete individual responses to a Requirement (i.e. Evidence), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide (e.g. membership of a class of Evidences).</dd>
                     
@@ -819,7 +818,7 @@ The proof can be given through documents or extracts of base registries, indepen
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -932,7 +931,7 @@ The proof can be given through documents or extracts of base registries, indepen
               <h3 class="h3" id="Evidence Type List"><a href="http://data.europa.eu/m8g/EvidenceTypeList" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/EvidenceTypeList" data-placement="right">Evidence Type List</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Group of Evidence Types for conforming to a Requirement.</dd>
+                    <dt>Definition</dt><dd>Group of Evidence Types for conforming to a Requirement.</dd>
                     
                     <dt>Usage</dt><dd>An Evidence Type List is satisfied, if and only if, for all included Evidence Types in this List, corresponding conformant Evidence(s) are supporting the Requirement having this List. 
 
@@ -956,7 +955,7 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1050,7 +1049,7 @@ The Evidence Type List describes thus an AND condition on the different Evidence
               <h3 class="h3" id="Information Concept"><a href="http://data.europa.eu/m8g/InformationConcept" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/InformationConcept" data-placement="right">Information Concept</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Piece of information that the Evidence provides or the Requirement needs.</dd>
+                    <dt>Definition</dt><dd>Piece of information that the Evidence provides or the Requirement needs.</dd>
                     
                     <dt>Usage</dt><dd>The Information Concept class offers the ability to describe conceptually the Requirements and provided facts in Evidences. In complementarity with the Supported Value class, this is a (first) step towards facilitating the assessment of the requirements in an automated way based on the Evidence provided.</dd>
                     
@@ -1073,7 +1072,7 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1179,7 +1178,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                           
                         </td>
                         <td property="rdfs:comment">Category to which the Information Concept belongs.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="skos:scopeNote">In addition to the expression of the expected value, the type classification can be used to express the kind of value the information concept is processing. This can be primitive tupes such as a date or a string, but also more business domain terminology such as age or number of employees. It is recommended to well-document the usage of the property. </td>
                         <td></td>
                       </tr>
                     
@@ -1193,7 +1192,7 @@ Because of this freedom, implementers are recommended to well-document their usa
               <h3 class="h3" id="Information Requirement"><a href="http://data.europa.eu/m8g/InformationRequirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/InformationRequirement" data-placement="right">Information Requirement</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Requested data that is to be proven by Evidence.</dd>
+                    <dt>Definition</dt><dd>Requested data that is to be proven by Evidence.</dd>
                     
                     <dt>Usage</dt><dd>Information Requirements are the most neutral kind of Requirements. They aim to request information in any form, e.g. a person's date of birth or a company's turnover. They represent requests for data that prove one or more facts of the real world in a formal manner, or that leads to the source of such a proof. They can be understood as 'requests for Evidences'. The response to an Information Requirement is an Evidence when the issuer of the response is an authoritative source (e.g. a Civil Registry providing data about a natural person for the provision of public service through the Single Digital Gateway). In other cases, the responses might not be issued by an authoritative source, but the issuer supports the responses with Evidences (or commits to support them timely, e.g. a self-declaration or a declaration of oath). The Information Requirement can require structured data or documents of any form. For structured data, the Requirement can use 'Concepts' to specify the structure and type of the data expected in the response. For both structured and unstructured data, the Information Requirement can indicate the expected Type of Evidence, its format, source, and other properties related to the Evidence.</dd>
                     
@@ -1215,7 +1214,7 @@ Because of this freedom, implementers are recommended to well-document their usa
               <h3 class="h3" id="Location"><a href="http://purl.org/dc/terms/Location" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Location" data-placement="right">Location</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Identifiable geographic place or named place.</dd>
+                    <dt>Definition</dt><dd>Identifiable geographic place or named place.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -1231,7 +1230,7 @@ Because of this freedom, implementers are recommended to well-document their usa
               <h3 class="h3" id="Period of Time"><a href="http://www.w3.org/2006/time#ProperInterval" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#ProperInterval" data-placement="right">Period of Time</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A temporal entity with non-zero extent or duration.</dd>
+                    <dt>Definition</dt><dd>A temporal entity with non-zero extent or duration.</dd>
                     
                     <dt>Usage</dt><dd>The value of the start time and end time properties should be different, and/or a duration should be given.</dd>
                     
@@ -1252,7 +1251,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1327,7 +1326,7 @@ Because of this freedom, implementers are recommended to well-document their usa
               <h3 class="h3" id="Reference Framework"><a href="http://data.europa.eu/m8g/ReferenceFramework" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ReferenceFramework" data-placement="right">Reference Framework</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Legislation or official policy from which Requirements are derived.</dd>
+                    <dt>Definition</dt><dd>Legislation or official policy from which Requirements are derived.</dd>
                     
                     <dt>Usage</dt><dd>Usual Reference Frameworks are legal and non-legal specifications. Examples include procedures, tendering legislation, etc.</dd>
                     
@@ -1346,7 +1345,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1383,7 +1382,7 @@ Because of this freedom, implementers are recommended to well-document their usa
               <h3 class="h3" id="Requirement"><a href="http://data.europa.eu/m8g/Requirement" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Requirement" data-placement="right">Requirement</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Condition or prerequisite that is to be proven by Evidence.</dd>
+                    <dt>Definition</dt><dd>Condition or prerequisite that is to be proven by Evidence.</dd>
                     
 	    <dt>Usage</dt><dd>Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.   
 	    <br/>
@@ -1415,7 +1414,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>
@@ -1663,7 +1662,7 @@ In the case where the purpose is to link the two Requirements without additional
               <h3 class="h3" id="Supported Value"><a href="http://data.europa.eu/m8g/SupportedValue" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/SupportedValue" data-placement="right">Supported Value</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>Value for an Information Concept that is provided by an Evidence.</dd>
+                    <dt>Definition</dt><dd>Value for an Information Concept that is provided by an Evidence.</dd>
                     
                     <dt>Usage</dt><dd>The notion of Supported Value is closely related to actual data exchange between two parties: 
 (a) the Requirement processor, i.e. the Agent setting out Requirements for an objective and processing the supplied Evidences in the context of the Requirements, and 
@@ -1693,7 +1692,7 @@ Implementers are free to choose their language. It is recommended to document th
                       <tr class="data-table__header">
                         <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
                         <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Description</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
                         <th class="data-table__header-title--sortable">Usage</th>
                         <th class="data-table__header-title--sortable">Codelist</th>
                       </tr>

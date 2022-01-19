@@ -1,0 +1,330 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en> <https://semiceu.github.io/shacl/cccev-ap_enshapes> <https://semiceu.github.io/shacl/cccev-ap_en#LocationShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#DatasetShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#InformationRequirementShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#InformationConceptShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#RequirementShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#EvidenceShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#CriterionShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#EvidenceTypeListShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#PeriodOfTimeShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#ConstraintShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#AgentShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#EvidenceTypeShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#SupportedValueShape>,
+    <https://semiceu.github.io/shacl/cccev-ap_en#ReferenceFrameworkShape> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass foaf:Agent .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#ConstraintShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://data.europa.eu/m8g/InformationConcept>;
+    shacl:definition "Information Concept about which a Constraint expresses a limitation."@en;
+    shacl:name "constrains"@en;
+    shacl:path <http://data.europa.eu/m8g/constrains>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Constraint> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#CriterionShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class xsd:decimal;
+    shacl:definition "Relative importance of the Criterion."@en;
+    shacl:name "weight"@en;
+    shacl:path <http://data.europa.eu/m8g/weight>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:definition "Explanation of how the weighting of a Criterion is to be used."@en;
+    shacl:name "weighting consideration description"@en;
+    shacl:path <http://data.europa.eu/m8g/weightingConsiderationDescription>
+  ], [
+    shacl:class skos:Concept;
+    shacl:definition "Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression."@en;
+    shacl:name "weighting type"@en;
+    shacl:path <http://data.europa.eu/m8g/weightingType>
+  ], [
+    shacl:class xsd:decimal;
+    shacl:definition "Parameter used to adjust the evaluation of the Criterion."@en;
+    shacl:name "bias"@en;
+    shacl:path <http://data.europa.eu/m8g/bias>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Criterion> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#DatasetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Unambiguous reference to the Dataset."@en;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ];
+  shacl:targetClass dcat:Dataset .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#EvidenceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class foaf:Agent;
+    shacl:definition "Agent that produces the Evidence."@en;
+    shacl:name "is created by"@en;
+    shacl:path dc:creator
+  ], [
+    shacl:class <http://data.europa.eu/m8g/InformationConcept>;
+    shacl:definition "Information Concept providing facts found/inferred from the Evidence."@en;
+    shacl:name "supports concept"@en;
+    shacl:path <http://data.europa.eu/m8g/supportsConcept>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:definition "Requirement for which the Evidence provides proof."@en;
+    shacl:name "supports requirement"@en;
+    shacl:path <http://data.europa.eu/m8g/supportsRequirement>
+  ], [
+    shacl:class skos:Concept;
+    shacl:definition "Security classification assigned to an Evidence e.g. classified, sensitive, public."@en;
+    shacl:name "confidentiality level type"@en;
+    shacl:path <http://data.europa.eu/m8g/confidentialityLevelType>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/EvidenceType>;
+    shacl:definition "Evidence Type that specifies characteristics of the Evidence."@en;
+    shacl:name "is conformant to"@en;
+    shacl:path dc:conformsTo
+  ], [
+    shacl:class <http://data.europa.eu/m8g/SupportedValue>;
+    shacl:definition "Supported Value that the Evidence contains."@en;
+    shacl:name "supports value"@en;
+    shacl:path <http://data.europa.eu/m8g/supportsValue>
+  ], [
+    shacl:class foaf:Agent;
+    shacl:definition "Agent legally responsible for the Evidence, e.g. a legal authority."@en;
+    shacl:name "is issued by"@en;
+    shacl:path dc:publisher
+  ], [
+    shacl:class <http://www.w3.org/2006/time#ProperInterval>;
+    shacl:definition "Period of Time during which the Evidence holds true or has force."@en;
+    shacl:name "validity period"@en;
+    shacl:path <http://data.europa.eu/m8g/validityPeriod>
+  ], [
+    shacl:class foaf:Agent;
+    shacl:definition "Agent that is the subject in the provided Evidence."@en;
+    shacl:name "is about"@en;
+    shacl:path dc:subject
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#EvidenceTypeListShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://data.europa.eu/m8g/EvidenceType>;
+    shacl:definition "Evidence Type included in this Evidence Type List."@en;
+    shacl:name "specifies evidence type"@en;
+    shacl:path <http://data.europa.eu/m8g/specifiesEvidenceType>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:definition "Short explanation supporting the understanding of the Evidence Type List."@en;
+    shacl:name "description"@en;
+    shacl:path dc:description
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Unambiguous reference to the Evidence Type List."@en;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype xsd:string;
+    shacl:definition "Name of the Evidence Type List."@en;
+    shacl:name "name"@en;
+    shacl:path skos:prefLabel
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/EvidenceTypeList> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#EvidenceTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class dc:Location;
+    shacl:definition "Refers to the Location where an Evidence Type is issued."@en;
+    shacl:name "issuing place"@en;
+    shacl:path <http://data.europa.eu/m8g/issuingPlace>
+  ], [
+    shacl:class skos:Concept;
+    shacl:definition "Category to which the Evidence Type belongs."@en;
+    shacl:name "evidence type classification"@en;
+    shacl:path <http://data.europa.eu/m8g/evidenceTypeClassification>
+  ], [
+    shacl:class <http://www.w3.org/2006/time#ProperInterval>;
+    shacl:definition "Temporal condition on the validity period of the Evidence Type."@en;
+    shacl:name "validity period constraint"@en;
+    shacl:path <http://data.europa.eu/m8g/validityPeriodConstraint>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/EvidenceTypeList>;
+    shacl:definition "Evidence Type List in which the Evidence Type is included."@en;
+    shacl:name "is specified in"@en;
+    shacl:path <http://data.europa.eu/m8g/isSpecifiedIn>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Unambiguous reference to the Evidence Type."@en;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/EvidenceType> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#InformationConceptShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:definition "Short explanation supporting the understanding of the Information Concept."@en;
+    shacl:name "description"@en;
+    shacl:path dc:description
+  ], [
+    shacl:class skos:Concept;
+    shacl:definition "Category to which the Information Concept belongs."@en;
+    shacl:name "type"@en;
+    shacl:path dc:type
+  ], [
+    shacl:datatype xsd:string;
+    shacl:definition "Name of the Information Concept."@en;
+    shacl:name "name"@en;
+    shacl:path skos:prefLabel
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Unambiguous reference to the Information Concept."@en;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Formulation in a formal language of the expected value(s) for the Information Concept which is aligned with the concepts from the Requirements defined and must be respected by the supplied Supported Values ."@en;
+    shacl:name "expression of expected value"@en;
+    shacl:path <http://data.europa.eu/m8g/expressionOfExpectedValue>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/InformationConcept> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#InformationRequirementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/InformationRequirement> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#LocationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Location .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#PeriodOfTimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:dateTime;
+    shacl:definition "Time instant at which the Period was initiated."@en;
+    shacl:name "starttime"@en;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
+  ], [
+    shacl:datatype xsd:duration;
+    shacl:definition "Extent of the Period of Time."@en;
+    shacl:name "duration"@en;
+    shacl:path <http://www.w3.org/2006/time#hasXSDDuration>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:definition "Time instant at which the Period was terminated."@en;
+    shacl:name "endtime"@en;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
+  ];
+  shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#ReferenceFrameworkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "An unambiguous reference to a Reference Framework."@en;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/ReferenceFramework> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#RequirementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://data.europa.eu/m8g/Evidence>;
+    shacl:definition "Evidence that supplies information, proof or support for the Requirement."@en;
+    shacl:name "has supporting evidence"@en;
+    shacl:path <http://data.europa.eu/m8g/hasSupportingEvidence>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:definition "Described and/or categorised relation to another Requirement."@en;
+    shacl:name "has qualified relation"@en;
+    shacl:path <http://data.europa.eu/m8g/hasQualifiedRelation>
+  ], [
+    shacl:class foaf:Agent;
+    shacl:definition "Agent that has published the Requirement."@en;
+    shacl:name "issued by"@en;
+    shacl:path dc:publisher
+  ], [
+    shacl:class <http://data.europa.eu/m8g/ReferenceFramework>;
+    shacl:definition "Reference Framework on which the Requirement is based, such as a law or regulation."@en;
+    shacl:name "is derived from"@en;
+    shacl:path <http://data.europa.eu/m8g/isDerivedFrom>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:definition "A more specific Requirement that is part of the Requirement."@en;
+    shacl:name "has requirement"@en;
+    shacl:path <http://data.europa.eu/m8g/hasRequirement>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/EvidenceTypeList>;
+    shacl:definition "Evidence Type List that specifies the Evidence Types that are needed to meet the Requirement."@en;
+    shacl:name "has evidence type list"@en;
+    shacl:path <http://data.europa.eu/m8g/hasEvidenceTypeList>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/InformationConcept>;
+    shacl:definition "Information Concept for which a value is expected by the Requirement."@en;
+    shacl:name "has concept"@en;
+    shacl:path <http://data.europa.eu/m8g/hasConcept>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Unambiguous reference to a Requirement."@en;
+    shacl:name "identifier"@en;
+    shacl:path dc:identifier
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:definition "A reference between a sub-Requirement and its parent Requirement."@en;
+    shacl:name "is requirement of"@en;
+    shacl:path <http://data.europa.eu/m8g/isRequirementOf>
+  ], [
+    shacl:class skos:Concept;
+    shacl:definition "Category to which the Requirement belongs."@en;
+    shacl:name "type"@en;
+    shacl:path dc:type
+  ], [
+    shacl:datatype xsd:string;
+    shacl:definition "A short explanation supporting the understanding of the Requirement."@en;
+    shacl:name "description"@en;
+    shacl:path dc:description
+  ], [
+    shacl:datatype xsd:string;
+    shacl:definition "Name of the Requirement."@en;
+    shacl:name "name"@en;
+    shacl:path skos:prefLabel
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Requirement> .
+
+<https://semiceu.github.io/shacl/cccev-ap_en#SupportedValueShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Value for the Information Concept that the Evidence supports."@en;
+    shacl:name "value"@en;
+    shacl:path <http://data.europa.eu/m8g/value>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:definition "Search statement that allows the value for the Information Concept to be retrieved from the Evidence data."@en;
+    shacl:name "query"@en;
+    shacl:path <http://data.europa.eu/m8g/query>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/InformationConcept>;
+    shacl:definition "Information Concept for which the Supported Value provides a value."@en;
+    shacl:name "provides value for"@en;
+    shacl:path <http://data.europa.eu/m8g/providesValueFor>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/SupportedValue> .

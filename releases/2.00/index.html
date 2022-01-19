@@ -226,12 +226,12 @@
 
             </div>
 
-            <div class="region region--no-space-top typography" id="status">
+            <div class="region region--no-space-top typography" id="docstatus">
               <section class="introductory" id="sotd" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This Core Vocabulary has the status of Semic Recommendation published at 2021-12-20.
+                  This Core Vocabulary has the status of Semic Recommendation published at 2022-01-20.
 	        </p>
                 
               </section>
@@ -296,7 +296,7 @@
               <h3 class="h3" id="Agent"><a href="http://xmlns.com/foaf/0.1/Agent" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Agent" data-placement="right">Agent</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>Entity that is able to carry out action</dd>
+                    <dt>Definition</dt><dd>Entity that is able to carry out action.</dd>
                     
 		    <dt>Usage</dt><dd>In compliance with the description from FOAF, an Agent is considered as any entity that is able to carry out actions. The Agent class acts as a generic element which can be further specified by implementers for their usages, for example by defining the Person class from the <a href="https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00">Core Person Vocabulary</a> or Organization from <a href="https://www.w3.org/TR/vocab-org/">W3C's Organization Ontology</a> as subclasses of Agent. This Person or Organization can then issue a certain Requirement or be concerned by an Evidence provided.</dd>
                     
@@ -482,7 +482,7 @@ When quantified, this systematic error can be removed.</td>
                           
                         </td>
                         <td property="rdfs:comment">Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression.</td>
-			 <td property="skos:scopeNote">An existing codelist <a href="http://publications.europa.eu/resource/authority/number-weight">Number weight</a>. An example of its use is shown <a href="https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSection">here</a></td>
+			 <td property="skos:scopeNote">An existing codelist <a href="http://publications.europa.eu/resource/authority/number-weight">Number weight</a>. An example of its use is shown <a href="https://docs.ted.europa.eu/eforms/0.3.1/index.html#awardCriteriaSection">here</a></td>
                         <td></td>
                       </tr>
                     
@@ -1178,7 +1178,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                           
                         </td>
                         <td property="rdfs:comment">Category to which the Information Concept belongs.</td>
-                        <td property="skos:scopeNote">In addition to the expression of the expected value, the type classification can be used to express the kind of value the information concept is processing. This can be primitive tupes such as a date or a string, but also more business domain terminology such as age or number of employees. It is recommended to well-document the usage of the property. </td>
+                        <td property="skos:scopeNote">In addition to the expression of the expected value, the type classification can be used to express the kind of value the information concept is processing. This can be primitive types such as a date or a string, but also more business domain terminology such as age or number of employees. It is recommended to well-document the usage of the property. </td>
                         <td></td>
                       </tr>
                     
@@ -1608,7 +1608,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                           
                         </td>
                         <td property="rdfs:comment">A reference between a sub-Requirement and its parent Requirement.</td>
-                        <td property="skos:scopeNote">The relation between a parent Requirement and a sub-Requirement can be complex. Therefore, qualified relations (see hasQualifiedRelation) can be used to represent this relationship on its own and qualify it with additional information such as a date, a place. This is left to implementers.
+			<td property="skos:scopeNote">The relation between a parent Requirement and a sub-Requirement can be complex. Therefore, qualified relations (see <a href="#Requirement%3Ahas%20qualified%20relation">hasQualifiedRelation</a>) can be used to represent this relationship on its own and qualify it with additional information such as a date, a place. This is left to implementers.
 
 In the case where the purpose is to link the two Requirements without additional information, the simple relationship as proposed here can be directly used.</td>
                         <td></td>
@@ -1839,7 +1839,7 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
                                   <a href="#summary">Summary</a>
                               </li>
                               <li class="side-navigation__item">
-                                  <a href="#status">Status of this document</a>
+                                  <a href="#docstatus">Status of this document</a>
                               </li>
                               <!--
 			      <li class="side-navigation__item">
@@ -1869,7 +1869,7 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
                               </li>
 			      
                               <li class="side-navigation__item">
-                                  <a href="#jsonld">JSON-LD Context</a>
+                                  <a href="#jsonld">JSON-LD context</a>
                               </li>
                               <li class="side-navigation__item">
                                   <a href="#shacl">SHACL template</a>

@@ -21,6 +21,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Criterion.weightingType": {
+      "@container": "@set",
       "@id": "http://data.europa.eu/m8g/weightingType",
       "@type": "@id"
     },
@@ -76,6 +77,7 @@
     },
     "EvidenceType": "http://data.europa.eu/m8g/EvidenceType",
     "EvidenceType.evidenceTypeClassification": {
+      "@container": "@set",
       "@id": "http://data.europa.eu/m8g/evidenceTypeClassification",
       "@type": "@id"
     },
@@ -134,6 +136,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "InformationConcept.type": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },
@@ -211,6 +214,7 @@
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Requirement.type": {
+      "@container": "@set",
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },

@@ -210,7 +210,8 @@
 
 <http://data.europa.eu/m8g/PeriodOfTime> a rdfs:Class ;
   rdfs:label "Period of time"@en ;
-  rdfs:comment "An interval of time that is named or defined by its start and end times."@en .
+  rdfs:comment "An interval of time that is named or defined by its start and end times."@en ;
+  dct:isReplacedBy <http://www.w3.org/2006/time#ProperInterval> .
 
 #-- Properties definition -->
 

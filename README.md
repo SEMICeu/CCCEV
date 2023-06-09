@@ -1,4 +1,4 @@
-![SEMIC Core Vocabulary](/images/semic-icon-small1.png)
+![SEMIC Core Vocabulary](/images/semic-icon-small.png)
 
 # Core Criterion and Core Evidence Vocabulary (CCCEV)
 

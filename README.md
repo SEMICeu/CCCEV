@@ -24,4 +24,4 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 
 
-Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the ADMS repository on GitHub.
+Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CCCEV repository on GitHub.

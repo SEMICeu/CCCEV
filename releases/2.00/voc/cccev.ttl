@@ -300,3 +300,45 @@ Example see: https://docs.ted.europa.eu/eforms/0.3.0/index.html#awardCriteriaSec
     rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
     rdfs:label "weighting type"@en .
 
+<http://data.europa.eu/m8g/isDerivedFrom>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Reference Framework on which the Requirement is based, such as a law or regulation."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "is derived from"@en .
+	
+<http://data.europa.eu/m8g/isProvidedBy>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Agent that transmits the Evidence."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "is provided by"@en .	
+	
+<http://data.europa.eu/m8g/hasEvidenceTypeList>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Evidence Type List that specifies the Evidence Types that are needed to meet the Requirement."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "has evidence type list"@en .
+	
+<http://data.europa.eu/m8g/issuingPlace>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Refers to the Location where an Evidence Type is issued."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "issuing place"@en .
+	
+<http://data.europa.eu/m8g/hasConcept>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Information Concept for which a value is expected by the Requirement."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "has concept"@en .
+	
+<http://data.europa.eu/m8g/supportsConcept>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Information Concept providing facts found/inferred from the Evidence."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "supports concept"@en .	
+
+<http://data.europa.eu/m8g/hasSupportingEvidence>
+    a rdf:Property, owl:ObjectProperty ;
+	rdfs:comment "Evidence that supplies information, proof or support for the Requirement."@en ;
+	rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+	rdfs:label "has supporting evidence"@en .
+

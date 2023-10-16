@@ -189,12 +189,7 @@ This may range from representational expectations such as the type (e.g. the val
 Other usage could be to harmonise the supplied values (e.g. rounding, turning to percentages) to facilitate further processing.
 
 Implementers are free to use their own approach for defining the expected values in more details. For instance, this can be by defining their own datatypes extending or encapsulating common xsd datatypes. But also by using more complex languages such as XPath, Object Constraint Language (OCL), JavaScript and Rule Interchange Format (RIF).
-Because of this freedom, implementers are recommended to well-document their usage of this property (and related information). 
-
-
-  
-
-"""@en ;
+Because of this freedom, implementers are recommended to well-document their usage of this property (and related information)."""@en ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Formulation in a formal language of the expected value(s) for the Information Concept which is aligned with the concepts from the Requirements defined and must be respected by the supplied Supported Values ."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> ;

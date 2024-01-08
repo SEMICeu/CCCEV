@@ -1,4 +1,4 @@
-# Core Criterion and Core Evidences Vocabulary
+# Core Criterion and Core Evidences Vocabulary Changelog
 
 ## Introduction
 

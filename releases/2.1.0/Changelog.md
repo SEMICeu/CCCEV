@@ -19,7 +19,7 @@ The table below gives an overview of the classes (and their definitions) within 
 
 | Nr | CCCEV v2.0.0 | CCCEV v2.1.0 | Rationale | GitHub / Change |
 | -- | ------------ | ------------ | --------- | --------------- |
-| P1  | PeriodOfTime:endtime - xsd:dateTime | PeriodOfTime:endtime - time:Instant | The URIs from W3C are used but they have the wrong range for endTime. | [#52](https://github.com/SEMICeu/CCCEV/issues/52) |
-| P2  | PeriodOfTime:starttime - xsd:dateTime | PeriodOfTime:starttime - time:Instant | The URIs from W3C are used but they have the wrong range for startTime. | [#52](https://github.com/SEMICeu/CCCEV/issues/52) |
-| P3  | Evidence:isProvidedBy | Evidence:isProvidedBy | Phrasing of the usage note of isPorividedBy should be the other way around. | [#47](https://github.com/SEMICeu/CCCEV/issues/47) |
+| D1  | PeriodOfTime:endtime - xsd:dateTime | PeriodOfTime:endtime - time:Instant | The URIs from W3C are used but they have the wrong range for endTime. | [#52](https://github.com/SEMICeu/CCCEV/issues/52) |
+| D2  | PeriodOfTime:starttime - xsd:dateTime | PeriodOfTime:starttime - time:Instant | The URIs from W3C are used but they have the wrong range for startTime. | [#52](https://github.com/SEMICeu/CCCEV/issues/52) |
+| P1  | Evidence:isProvidedBy | Evidence:isProvidedBy | Phrasing of the usage note of isPorividedBy should be the other way around. | [#47](https://github.com/SEMICeu/CCCEV/issues/47) |
 | C1  | CCCEV:Evidence - dcat:Dataset | CCCEV:Evidence | CCCEV:Evidence should not be a DCAT:Dataset. | [#46](https://github.com/SEMICeu/CCCEV/issues/46) |

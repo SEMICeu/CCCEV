@@ -19,6 +19,7 @@ The table below gives an overview of the classes (and their definitions) within 
 
 | Nr | CCCEV v2.0.0 | CCCEV v2.1.0 | Rationale | GitHub / Change |
 | -- | ------------ | ------------ | --------- | --------------- |
+| - | - | ReSpec Styling has been applied to the specification.| - | - |
 | D1  | PeriodOfTime:endtime - xsd:dateTime | PeriodOfTime:endtime - time:Instant | The URIs from W3C are used but they have the wrong range for endTime. | [#52](https://github.com/SEMICeu/CCCEV/issues/52) |
 | D2  | PeriodOfTime:starttime - xsd:dateTime | PeriodOfTime:starttime - time:Instant | The URIs from W3C are used but they have the wrong range for startTime. | [#52](https://github.com/SEMICeu/CCCEV/issues/52) |
 | P1  | Evidence:isProvidedBy | Evidence:isProvidedBy | Phrasing of the usage note of isPorividedBy should be the other way around. | [#47](https://github.com/SEMICeu/CCCEV/issues/47) |

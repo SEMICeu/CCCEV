@@ -1,0 +1,155 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/CCCEV/releases/2.1.0/context/cccev-ap.jsonld",
+   {
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "ejustice": "https://www.ejustice.just.fgov.be/eli/loi/1804/03/21/1804032150/justel#",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "org": "http://www.w3.org/ns/org#",
+    "person": "http://www.w3.org/ns/person#", 
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:criterion",
+      "@type": "Criterion",
+      "dct:description" : "Entitlement to marry.",
+      "cv:hasRequirement" : {
+        "@id" : "ex:informationRequirement" 
+      },
+      "cv:isDerivedFrom" : {
+        "@id" : "ejustice:Art.144" 
+      },
+      "dct:publisher" : {
+        "@id" : "ex:organisation" 
+      }
+    },
+    {
+      "@id": "ex:informationRequirement",
+      "@type": "InformationRequirement",
+      "dct:description" : "The age of the applicant.",
+      "cv:hasRequirement" : {
+        "@id" : "ex:constraint" 
+      },
+      "cv:isDerivedFrom" : {
+        "@id" : "ejustice:Art.144" 
+      },
+      "dct:publisher" : {
+        "@id" : "ex:organisation" 
+      },
+      "cv:hasEvidenceTypeList" : [
+        {"@id" : "ex:evidenceTypeList1" }, 
+        {"@id" : "ex:evidenceTypeList2" } 
+      ],
+      "cv:hasConcept" : {
+        "@id" : "ex:informationConcept" 
+      }
+    },
+    {
+      "@id": "ex:organisation",
+      "@type": ["Agent", "org:Organization"],
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Federal Public Service Justice"
+      }
+    },
+    {
+      "@id": "ejustice:Art.144",
+      "@type": "ReferenceFramework"
+    },
+    {
+      "@id": "ex:constraint",
+      "@type": "Constraint",
+      "dct:description" : "The applicant must be at least 18 years of age.",
+      "cv:isDerivedFrom" : {
+        "@id" : "ejustice:Art.144" 
+      },
+      "dct:publisher" : {
+        "@id" : "ex:organisation" 
+      },
+      "cv:constrains" : {
+        "@id" : "ex:informationConcept" 
+      }
+    },
+    {
+      "@id": "ex:evidenceTypeList1",
+      "@type": "EvidenceTypeList",
+      "cv:specifiesEvidenceType" : {
+        "@id" : "ex:evidenceType1" 
+      }
+    },
+    {
+      "@id": "ex:evidenceTypeList2",
+      "@type": "EvidenceTypeList",
+      "cv:specifiesEvidenceType" : {
+        "@id" : "ex:evidenceType2" 
+      }
+    },
+    {
+      "@id": "ex:evidenceType1",
+      "@type": "EvidenceType",
+      "cv:evidenceTypeClassification" : {
+        "@id" : "ex:BirthCertificate" 
+      }
+    },
+    {
+      "@id": "ex:evidenceType2",
+      "@type": "EvidenceType",
+      "cv:evidenceTypeClassification" : {
+        "@id" : "ex:IDcard" 
+      }
+    },
+    {
+      "@id": "ex:informationConcept",
+      "@type": "InformationConcept",
+      "skos:prefLabel" : "age" 
+    },
+    {
+      "@id": "ex:evidence",
+      "@type": "Evidence",
+      "dct:conformsTo" : {
+        "@id" :"ex:evidenceType2"
+      },
+      "cv:supportsRequirement" : [
+        {"@id" :"ex:informationRequirement"},
+        {"@id" :"ex:constraint"}
+      ],
+      "cv:supportsValue" : {
+        "@id" :"ex:supportedValue"
+      },
+      "dct:subject" : {
+        "@id" :"ex:person"
+      },
+      "dct:issued" : {
+        "@type": "xsd:date",
+        "@value": "2018-09-07"
+      },
+      "dct:type" : {
+        "@id" : "ex:idcard"
+      },
+      "dct:identifier" : "592-1983273-93",
+      "dct:title" : "ID card of John Doe"
+    },
+    {
+      "@id": "ex:supportedValue",
+      "@type": "SupportedValue",
+      "cv:value" : {
+        "@type": "xsd:integer",
+        "@value": "25"
+      },
+      "cv:providesValueFor" : {
+        "@id" : "ex:informationConcept"
+      }
+    },
+    {
+      "@id": "ex:person",
+      "@type": ["person:Person","Agent"],
+      "foaf:familyName" : "Doe",
+      "foaf:givenName" : "John"
+    }
+  ]
+}

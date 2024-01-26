@@ -1,0 +1,46 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix org-type: <http://publications.europa.eu/resource/authority/organization-type/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ir a cv:InformationRequirement ;
+  dct:description "Request to provide certificate about childcare costs"@en ;
+  dct:type ex:federalreduction ;
+  dct:publisher ex:po ;
+  cv:hasSupportingEvidence ex:evidence .
+
+ex:po a foaf:Agent ;
+  locn:address ex:ad ;
+  org:classification org-type:GOV, org-type:AGENCY ;
+  cv:contactPoint ex:cp ;
+  foaf:homepage <https://finances.belgium.be/>, <https://financien.belgium.be>, <https://finance.belgium.be/>, <https://finanzen.belgium.be/> ;
+  skos:prefLabel "Service Public Fédéral FINANCES"@fr, "Federale Overheidsdiesnt FINANCIEN"@nl, "Federal Public Service FINANCE"@en, "Foderaler Offentlicher Dienst FINANZEN"@de ;
+  dct:spatial <http://publications.europa.eu/resource/authority/atu/BEL> .
+
+ex:evidence a cv:Evidence ;
+  dct:description "Attestation en matière de frais de garde d'enfants"@fr ;
+  dct:creator ex:creche ;
+  cv:isProvidedBy ex:person ;
+  cv:validityPeriod ex:period ;
+  dct:conformsTo ex:evidencetype .
+
+ex:period a time:ProperInterval ;
+  dct:description "Attestation valable pour la période du 01.01.2020 au 31.12.2020"@fr ;
+  time:hasBeginning [
+    time:inXSDDate "2020-01-01"^^xsd:date ;
+    rdf:type time:Instant ;
+  ] ;
+  time:hasEnd [
+    time:inXSDDate "2020-12-31"^^xsd:date ;
+    rdf:type time:Instant ;
+  ] .
+
+ex:evidencetype a cv:EvidenceType ;
+  cv:evidenceTypeClassification ex:certicate .

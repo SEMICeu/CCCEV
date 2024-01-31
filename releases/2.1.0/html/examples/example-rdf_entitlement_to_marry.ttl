@@ -1,0 +1,68 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ejustice: <https://www.ejustice.just.fgov.be/eli/loi/1804/03/21/1804032150/justel#> .
+@prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:criterion a cv:Criterion ;
+	dct:description "Entitlement to marry." ;
+	cv:hasRequirement ex:informationRequirement ;
+	cv:isDerivedFrom ejustice:Art.144 ;
+	dct:publisher ex:organisation .
+
+ex:informationRequirement a cv:InformationRequirement ;
+	dct:description "The age of the applicant." ;
+	cv:hasRequirement ex:constraint ;
+	cv:isDerivedFrom ejustice:Art.144 ;
+	dct:publisher ex:organisation ;
+	cv:hasEvidenceTypeList ex:evidenceTypeList1, ex:evidenceTypeList2 ;
+	cv:hasConcept ex:informationConcept .
+
+ex:organisation a foaf:Agent, org:Organization ;
+	skos:prefLabel "Federal Public Service Justice"@en .
+
+ejustice:Art.144 a cv:ReferenceFramework .
+
+ex:constraint a cv:Constraint ;
+	dct:description "The applicant must be at least 18 years of age." ;
+	cv:isDerivedFrom ejustice:Art.144 ;
+	dct:publisher ex:organisation ;
+	cv:constrains ex:informationConcept .
+
+ex:evidenceTypeList1 a cv:EvidenceTypeList ;
+	cv:specifiesEvidenceType ex:evidenceType1 .
+
+ex:evidenceTypeList2 a cv:EvidenceTypeList ;
+	cv:specifiesEvidenceType ex:evidenceType2 .
+
+ex:evidenceType1 a cv:EvidenceType ;
+	cv:evidenceTypeClassification ex:BirthCertificate .
+
+ex:evidenceType2 a cv:EvidenceType ;
+	cv:evidenceTypeClassification ex:IDcard .
+
+ex:informationConcept a cv:InformationConcept ;
+	skos:prefLabel "age" .
+
+ex:evidence a cv:Evidence ;
+	dct:conformsTo ex:evidenceType2 ;
+	cv:supportsRequirement ex:informationRequirement, ex:constraint ;
+	cv:supportsValue ex:supportedValue ;
+	dct:subject ex:person ;
+	dct:issued "2018-09-07"^^xsd:date ;
+	dct:type ex:idcard ;
+	dct:identifier "592-1983273-93" ;
+	dct:title "ID card of John Doe" .
+
+ex:supportedValue a cv:SupportedValue ;
+	cv:value 25 ;
+	cv:providesValueFor ex:informationConcept .
+
+ex:person a person:Person, foaf:Agent ;
+	foaf:familyName "Doe" ;
+	foaf:givenName "John" .

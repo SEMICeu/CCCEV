@@ -139,7 +139,7 @@
       "@id": "ex:evidencetype",
       "@type": "EvidenceType",
       "cv:evidenceTypeClassification" : {
-        "@id" : "ex:certicate"
+        "@id" : "ex:certificate"
       }
     }
   ]

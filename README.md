@@ -18,7 +18,7 @@ CCCEV is part of the [eGovernement Core Vocabularies](https://joinup.ec.europa.e
 
 
 
-Discussions about the version 2.1.0 of CCCEV took place during the webinar of the 27th of October 2021[available here](https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies).
+Discussions about the version 2.1.0 of CCCEV took place during the webinar of the 27th of October 2021 [available here](https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies).
 
 The activities the SEMIC community organises around this specification are published on [Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary). 
 

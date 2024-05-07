@@ -13,10 +13,10 @@ CCCEV contains two basic and complementary core concepts:
 Using these basic core concepts, CCCEV provides a generic setting to define Criteria, i.e. Requirements with an assessment or evaluation objective in mind. This is a key motivation for CCCEV. 
 
 
-The latest specification is CCCEV 2.0.0 can be found at [https://semiceu.github.io/CCCEV/releases/2.00/](https://semiceu.github.io/CCCEV/releases/2.00/). 
-CCCEV is part of the [ISA Core Vocabularies](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/e-government-core-vocabularies) managed by SEMIC. 
+The Latest specification is CCCEV 2.1.0 and can be found [here](https://semiceu.github.io/CCCEV/releases/2.1.0/) 
+CCCEV is part of the [eGovernement Core Vocabularies](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/e-government-core-vocabularies) managed by SEMIC. 
 
-The Latest editor draft is CCCEV 2.1.0 and can be found at [here](https://semiceu.github.io/CCCEV/releases/2.1.0/)
+
 
 Discussions about the version 2.1.0 of CCCEV took place during the webinar of the 27th of October 2021[available here](https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies).
 

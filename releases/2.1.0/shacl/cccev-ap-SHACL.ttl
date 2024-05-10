@@ -6,377 +6,377 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0> rdfs:member <https://semiceu.github.io/CCCEV/releases/2.1.0#ConstraintShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#InformationRequirementShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#ReferenceFrameworkShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValueShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#LocationShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#LiteralShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#DecimalShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#DurationShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#CodeShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#AgentShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#StringShape>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#InstantShape> .
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl> rdfs:member <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ConstraintShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationRequirementShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ReferenceFrameworkShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#SupportedValueShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#LocationShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#LiteralShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#DecimalShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#DurationShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CodeShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#AgentShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#StringShape>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InstantShape> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#AgentShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#AgentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass foaf:Agent .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#CodeShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#ConstraintShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ConstraintShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#ConstraintShape/1ebd615995cc8d6efae5e595f05efaa45b018640>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ConstraintShape/1ebd615995cc8d6efae5e595f05efaa45b018640>;
   shacl:targetClass <http://data.europa.eu/m8g/Constraint> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#ConstraintShape/1ebd615995cc8d6efae5e595f05efaa45b018640> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Constraint.constrains";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ConstraintShape/1ebd615995cc8d6efae5e595f05efaa45b018640> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Constraint.constrains";
   shacl:class <http://data.europa.eu/m8g/InformationConcept>;
   shacl:description "Information Concept about which a Constraint expresses a limitation."@en;
   shacl:name "constrains"@en;
   shacl:path <http://data.europa.eu/m8g/constrains> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/4805424744cd79b539cafb4741eb3631ce49e962>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/728aa856cdb38130565c42839577efcf74087b68>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/987d7fd8445de8de84afa9c154b108747f500fbb>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/dda4c17473c77aeab8defa3fcab9934fdf87406b>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/4805424744cd79b539cafb4741eb3631ce49e962>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/728aa856cdb38130565c42839577efcf74087b68>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/987d7fd8445de8de84afa9c154b108747f500fbb>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/dda4c17473c77aeab8defa3fcab9934fdf87406b>;
   shacl:targetClass <http://data.europa.eu/m8g/Criterion> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/4805424744cd79b539cafb4741eb3631ce49e962> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weight";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/4805424744cd79b539cafb4741eb3631ce49e962> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weight";
   shacl:datatype xsd:decimal;
   shacl:description "Relative importance of the Criterion."@en;
   shacl:name "weight"@en;
   shacl:path <http://data.europa.eu/m8g/weight> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/728aa856cdb38130565c42839577efcf74087b68> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weightingtype";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/728aa856cdb38130565c42839577efcf74087b68> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weightingtype";
   shacl:class skos:Concept;
   shacl:description "Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression."@en;
   shacl:name "weighting type"@en;
   shacl:path <http://data.europa.eu/m8g/weightingType> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/987d7fd8445de8de84afa9c154b108747f500fbb> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.bias";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/987d7fd8445de8de84afa9c154b108747f500fbb> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.bias";
   shacl:datatype xsd:decimal;
   shacl:description "Parameter used to adjust the evaluation of the Criterion."@en;
   shacl:name "bias"@en;
   shacl:path <http://data.europa.eu/m8g/bias> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/dda4c17473c77aeab8defa3fcab9934fdf87406b> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weightingconsiderationdescription";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/dda4c17473c77aeab8defa3fcab9934fdf87406b> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weightingconsiderationdescription";
   shacl:datatype xsd:string;
   shacl:description "Explanation of how the weighting of a Criterion is to be used."@en;
   shacl:name "weighting consideration description"@en;
   shacl:path <http://data.europa.eu/m8g/weightingConsiderationDescription> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#DecimalShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#DecimalShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:decimal .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#DurationShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#DurationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:duration .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/3334b176f0a4ba1d86fe3a0aff455c370eb90527>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/638f266e7e267bc1b2c6d5e8c5e89908986ea907>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/7315333028a1dc0fb37c05c84b2c1aa1662bb4ca>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/a9b8757349b14040c1aa937600de45e63869114c>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/cc777682573a004d626d370ac367517195f0ad87>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/3334b176f0a4ba1d86fe3a0aff455c370eb90527>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/638f266e7e267bc1b2c6d5e8c5e89908986ea907>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/7315333028a1dc0fb37c05c84b2c1aa1662bb4ca>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/a9b8757349b14040c1aa937600de45e63869114c>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/cc777682573a004d626d370ac367517195f0ad87>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c>;
   shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isconformantto";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isconformantto";
   shacl:class <http://data.europa.eu/m8g/EvidenceType>;
   shacl:description "Evidence Type that specifies characteristics of the Evidence."@en;
   shacl:name "is conformant to"@en;
   shacl:path dc:conformsTo .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/3334b176f0a4ba1d86fe3a0aff455c370eb90527> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.confidentialityleveltype";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/3334b176f0a4ba1d86fe3a0aff455c370eb90527> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.confidentialityleveltype";
   shacl:class skos:Concept;
   shacl:description "Security classification assigned to an Evidence e.g. classified, sensitive, public."@en;
   shacl:name "confidentiality level type"@en;
   shacl:path <http://data.europa.eu/m8g/confidentialityLevelType> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsrequirement";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsrequirement";
   shacl:class <http://data.europa.eu/m8g/Requirement>;
   shacl:description "Requirement for which the Evidence provides proof."@en;
   shacl:name "supports requirement"@en;
   shacl:path <http://data.europa.eu/m8g/supportsRequirement> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/638f266e7e267bc1b2c6d5e8c5e89908986ea907> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsvalue";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/638f266e7e267bc1b2c6d5e8c5e89908986ea907> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsvalue";
   shacl:class <http://data.europa.eu/m8g/SupportedValue>;
   shacl:description "Supported Value that the Evidence contains."@en;
   shacl:name "supports value"@en;
   shacl:path <http://data.europa.eu/m8g/supportsValue> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/7315333028a1dc0fb37c05c84b2c1aa1662bb4ca> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsconcept";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/7315333028a1dc0fb37c05c84b2c1aa1662bb4ca> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsconcept";
   shacl:class <http://data.europa.eu/m8g/InformationConcept>;
   shacl:description "Information Concept providing facts found/inferred from the Evidence."@en;
   shacl:name "supports concept"@en;
   shacl:path <http://data.europa.eu/m8g/supportsConcept> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.validityperiod";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.validityperiod";
   shacl:class <http://www.w3.org/2006/time#ProperInterval>;
   shacl:description "Period of Time during which the Evidence holds true or has force."@en;
   shacl:name "validity period"@en;
   shacl:path <http://data.europa.eu/m8g/validityPeriod> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isprovidedby";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isprovidedby";
   shacl:class foaf:Agent;
   shacl:description "Agent that transmits the Evidence."@en;
   shacl:name "is provided by"@en;
   shacl:path <http://data.europa.eu/m8g/isProvidedBy> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/a9b8757349b14040c1aa937600de45e63869114c> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.iscreatedby";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/a9b8757349b14040c1aa937600de45e63869114c> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.iscreatedby";
   shacl:class foaf:Agent;
   shacl:description "Agent that produces the Evidence."@en;
   shacl:name "is created by"@en;
   shacl:path dc:creator .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/cc777682573a004d626d370ac367517195f0ad87> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isissuedby";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/cc777682573a004d626d370ac367517195f0ad87> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isissuedby";
   shacl:class foaf:Agent;
   shacl:description "Agent legally responsible for the Evidence, e.g. a legal authority."@en;
   shacl:name "is issued by"@en;
   shacl:path dc:publisher .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isabout";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isabout";
   shacl:class foaf:Agent;
   shacl:description "Agent that is the subject in the provided Evidence."@en;
   shacl:name "is about"@en;
   shacl:path dc:subject .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/fe9c81f3affed5a8636b9b4bf71bf264c0ba1d43>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/fe9c81f3affed5a8636b9b4bf71bf264c0ba1d43>;
   shacl:targetClass <http://data.europa.eu/m8g/EvidenceTypeList> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.name";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.name";
   shacl:datatype xsd:string;
   shacl:description "Name of the Evidence Type List."@en;
   shacl:name "name"@en;
   shacl:path skos:prefLabel .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.description";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.description";
   shacl:datatype xsd:string;
   shacl:description "Short explanation supporting the understanding of the Evidence Type List."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/fe9c81f3affed5a8636b9b4bf71bf264c0ba1d43> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.specifiesevidencetype";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/fe9c81f3affed5a8636b9b4bf71bf264c0ba1d43> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.specifiesevidencetype";
   shacl:class <http://data.europa.eu/m8g/EvidenceType>;
   shacl:description "Evidence Type included in this Evidence Type List."@en;
   shacl:name "specifies evidence type"@en;
   shacl:path <http://data.europa.eu/m8g/specifiesEvidenceType> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/46a94d1fb38b3f704d43acb2f844f69ec39f9e96>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/53b9b5f073a0d85022939ba837605864a80672be>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/8e4773f1a27b20ce83bdfe48b5e492017be04923>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/46a94d1fb38b3f704d43acb2f844f69ec39f9e96>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/53b9b5f073a0d85022939ba837605864a80672be>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/8e4773f1a27b20ce83bdfe48b5e492017be04923>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10>;
   shacl:targetClass <http://data.europa.eu/m8g/EvidenceType> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/46a94d1fb38b3f704d43acb2f844f69ec39f9e96> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.validityperiodconstraint";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/46a94d1fb38b3f704d43acb2f844f69ec39f9e96> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.validityperiodconstraint";
   shacl:class <http://www.w3.org/2006/time#ProperInterval>;
   shacl:description "Temporal condition on the validity period of the Evidence Type."@en;
   shacl:name "validity period constraint"@en;
   shacl:path <http://data.europa.eu/m8g/validityPeriodConstraint> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/53b9b5f073a0d85022939ba837605864a80672be> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.isspecifiedin";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/53b9b5f073a0d85022939ba837605864a80672be> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.isspecifiedin";
   shacl:class <http://data.europa.eu/m8g/EvidenceTypeList>;
   shacl:description "Evidence Type List in which the Evidence Type is included."@en;
   shacl:name "is specified in"@en;
   shacl:path <http://data.europa.eu/m8g/isSpecifiedIn> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/8e4773f1a27b20ce83bdfe48b5e492017be04923> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.issuingplace";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/8e4773f1a27b20ce83bdfe48b5e492017be04923> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.issuingplace";
   shacl:class dc:Location;
   shacl:description "Refers to the Location where an Evidence Type is issued."@en;
   shacl:name "issuing place"@en;
   shacl:path <http://data.europa.eu/m8g/issuingPlace> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.evidencetypeclassification";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.evidencetypeclassification";
   shacl:class skos:Concept;
   shacl:description "Category to which the Evidence Type belongs."@en;
   shacl:name "evidence type classification"@en;
   shacl:path <http://data.europa.eu/m8g/evidenceTypeClassification> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/322371a77364a50f049d46180f6192532eea26dc>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
   shacl:targetClass <http://data.europa.eu/m8g/InformationConcept> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.name";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.name";
   shacl:datatype xsd:string;
   shacl:description "Name of the Information Concept."@en;
   shacl:name "name"@en;
   shacl:path skos:prefLabel .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.type";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.type";
   shacl:class skos:Concept;
   shacl:description "Category to which the Information Concept belongs."@en;
   shacl:name "type"@en;
   shacl:path dc:type .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.description";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.description";
   shacl:datatype xsd:string;
   shacl:description "Short explanation supporting the understanding of the Information Concept."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#InformationRequirementShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationRequirementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/InformationRequirement> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#InstantShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InstantShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://www.w3.org/2006/time#Instant> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#LiteralShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#LiteralShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#LocationShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#LocationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass dc:Location .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/75b2dab0d7828cc05b3b173439e32a443fecd4e8>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/a550fb3c0fe1c0f6837a66965404c6a36220cb1a>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/f26773a2b00df0b2bc11a71a0009143ddc3936cf>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/75b2dab0d7828cc05b3b173439e32a443fecd4e8>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/a550fb3c0fe1c0f6837a66965404c6a36220cb1a>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/f26773a2b00df0b2bc11a71a0009143ddc3936cf>;
   shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/75b2dab0d7828cc05b3b173439e32a443fecd4e8> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.endtime";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/75b2dab0d7828cc05b3b173439e32a443fecd4e8> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.endtime";
   shacl:class <https://www.w3.org/2006/time#Instant>;
   shacl:description "Time instant at which the Period was terminated."@en;
   shacl:name "endtime"@en;
   shacl:path <http://www.w3.org/2006/time#hasEnd> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/a550fb3c0fe1c0f6837a66965404c6a36220cb1a> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.starttime";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/a550fb3c0fe1c0f6837a66965404c6a36220cb1a> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.starttime";
   shacl:class <https://www.w3.org/2006/time#Instant>;
   shacl:description "Time instant at which the Period was initiated."@en;
   shacl:name "starttime"@en;
   shacl:path <http://www.w3.org/2006/time#hasBeginning> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/f26773a2b00df0b2bc11a71a0009143ddc3936cf> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.duration";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/f26773a2b00df0b2bc11a71a0009143ddc3936cf> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.duration";
   shacl:datatype xsd:duration;
   shacl:description "Extent of the Period of Time."@en;
   shacl:name "duration"@en;
   shacl:path <http://www.w3.org/2006/time#hasXSDDuration> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#ReferenceFrameworkShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ReferenceFrameworkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/ReferenceFramework> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/10bc9fa2322d7d6dac49673dd0ebf811ce6ecb63>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/1eb607c764a4eb8cc68d1c41a727c0333f9b9971>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/1fdc437c963fbce0cfed5049cd1ce85d53de3764>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/322371a77364a50f049d46180f6192532eea26dc>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/4abd76af0c029201fac2248581d41d19b76083fe>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/be4eff784ceb6eb28ba22fc3bbb0143e964f40bd>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/cc777682573a004d626d370ac367517195f0ad87>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
-    <https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/fab3d501b50e093ce24561acd8d2301fc8b11525>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/10bc9fa2322d7d6dac49673dd0ebf811ce6ecb63>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/1eb607c764a4eb8cc68d1c41a727c0333f9b9971>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/1fdc437c963fbce0cfed5049cd1ce85d53de3764>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/4abd76af0c029201fac2248581d41d19b76083fe>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/be4eff784ceb6eb28ba22fc3bbb0143e964f40bd>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/cc777682573a004d626d370ac367517195f0ad87>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
+    <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/fab3d501b50e093ce24561acd8d2301fc8b11525>;
   shacl:targetClass <http://data.europa.eu/m8g/Requirement> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/10bc9fa2322d7d6dac49673dd0ebf811ce6ecb63> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isderivedfrom";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/10bc9fa2322d7d6dac49673dd0ebf811ce6ecb63> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isderivedfrom";
   shacl:class <http://data.europa.eu/m8g/ReferenceFramework>;
   shacl:description "Reference Framework on which the Requirement is based, such as a law or regulation."@en;
   shacl:name "is derived from"@en;
   shacl:path <http://data.europa.eu/m8g/isDerivedFrom> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/1eb607c764a4eb8cc68d1c41a727c0333f9b9971> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasrequirement";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/1eb607c764a4eb8cc68d1c41a727c0333f9b9971> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasrequirement";
   shacl:class <http://data.europa.eu/m8g/Requirement>;
   shacl:description "A more specific Requirement that is part of the Requirement."@en;
   shacl:name "has requirement"@en;
   shacl:path <http://data.europa.eu/m8g/hasRequirement> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/1fdc437c963fbce0cfed5049cd1ce85d53de3764> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasevidencetypelist";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/1fdc437c963fbce0cfed5049cd1ce85d53de3764> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasevidencetypelist";
   shacl:class <http://data.europa.eu/m8g/EvidenceTypeList>;
   shacl:description "Evidence Type List that specifies the Evidence Types that are needed to meet the Requirement."@en;
   shacl:name "has evidence type list"@en;
   shacl:path <http://data.europa.eu/m8g/hasEvidenceTypeList> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.name";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.name";
   shacl:datatype xsd:string;
   shacl:description "Name of the Requirement."@en;
   shacl:name "name"@en;
   shacl:path skos:prefLabel .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.type";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.type";
   shacl:class skos:Concept;
   shacl:description "Category to which the Requirement belongs."@en;
   shacl:name "type"@en;
   shacl:path dc:type .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/4abd76af0c029201fac2248581d41d19b76083fe> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasconcept";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/4abd76af0c029201fac2248581d41d19b76083fe> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasconcept";
   shacl:class <http://data.europa.eu/m8g/InformationConcept>;
   shacl:description "Information Concept for which a value is expected by the Requirement."@en;
   shacl:name "has concept"@en;
   shacl:path <http://data.europa.eu/m8g/hasConcept> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hassupportingevidence";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hassupportingevidence";
   shacl:class <http://data.europa.eu/m8g/Evidence>;
   shacl:description "Evidence that supplies information, proof or support for the Requirement."@en;
   shacl:name "has supporting evidence"@en;
   shacl:path <http://data.europa.eu/m8g/hasSupportingEvidence> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/be4eff784ceb6eb28ba22fc3bbb0143e964f40bd> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isrequirementof";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/be4eff784ceb6eb28ba22fc3bbb0143e964f40bd> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isrequirementof";
   shacl:class <http://data.europa.eu/m8g/Requirement>;
   shacl:description "A reference between a sub-Requirement and its parent Requirement."@en;
   shacl:name "is requirement of"@en;
   shacl:path <http://data.europa.eu/m8g/isRequirementOf> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/cc777682573a004d626d370ac367517195f0ad87> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isissuedby";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/cc777682573a004d626d370ac367517195f0ad87> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isissuedby";
   shacl:class foaf:Agent;
   shacl:description "Agent that has published the Requirement."@en;
   shacl:name "is issued by"@en;
   shacl:path dc:publisher .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.description";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.description";
   shacl:datatype xsd:string;
   shacl:description "A short explanation supporting the understanding of the Requirement."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/fab3d501b50e093ce24561acd8d2301fc8b11525> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasqualifiedrelation";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/fab3d501b50e093ce24561acd8d2301fc8b11525> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasqualifiedrelation";
   shacl:class <http://data.europa.eu/m8g/Requirement>;
   shacl:description "Described and/or categorised relation to another Requirement."@en;
   shacl:name "has qualified relation"@en;
   shacl:path <http://data.europa.eu/m8g/hasQualifiedRelation> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#StringShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#StringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://www.w3.org/2001/XMLSchema#string> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValueShape> a shacl:NodeShape;
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#SupportedValueShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValueShape/ff93442fd1743995294e724ecfb37d2dfe088254>;
+  shacl:property <https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#SupportedValueShape/ff93442fd1743995294e724ecfb37d2dfe088254>;
   shacl:targetClass <http://data.europa.eu/m8g/SupportedValue> .
 
-<https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValueShape/ff93442fd1743995294e724ecfb37d2dfe088254> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValue.providesvaluefor";
+<https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#SupportedValueShape/ff93442fd1743995294e724ecfb37d2dfe088254> rdfs:seeAlso "https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValue.providesvaluefor";
   shacl:class <http://data.europa.eu/m8g/InformationConcept>;
   shacl:description "Information Concept for which the Supported Value provides a value."@en;
   shacl:name "provides value for"@en;

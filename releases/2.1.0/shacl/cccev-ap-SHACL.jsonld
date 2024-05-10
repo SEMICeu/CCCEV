@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://semiceu.github.io/CCCEV/releases/2.1.0",
+    "@vocab": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl",
     "qb": "http://purl.org/linked-data/cube#",
     "qb:codeList": {
       "@id": "qb:codeList",
@@ -100,15 +100,15 @@
       "@id": "vl:message"
     }
   },
-  "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0",
+  "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl",
   "shapes": [
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#ConstraintShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ConstraintShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#ConstraintShape/1ebd615995cc8d6efae5e595f05efaa45b018640",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ConstraintShape/1ebd615995cc8d6efae5e595f05efaa45b018640",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Constraint.constrains",
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:description": {
@@ -123,12 +123,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Constraint"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/4805424744cd79b539cafb4741eb3631ce49e962",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/4805424744cd79b539cafb4741eb3631ce49e962",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weight",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#decimal",
           "sh:description": {
@@ -140,7 +140,7 @@
           "sh:path": "http://data.europa.eu/m8g/weight"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/728aa856cdb38130565c42839577efcf74087b68",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/728aa856cdb38130565c42839577efcf74087b68",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weightingtype",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -152,7 +152,7 @@
           "sh:path": "http://data.europa.eu/m8g/weightingType"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/987d7fd8445de8de84afa9c154b108747f500fbb",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/987d7fd8445de8de84afa9c154b108747f500fbb",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.bias",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#decimal",
           "sh:description": {
@@ -164,7 +164,7 @@
           "sh:path": "http://data.europa.eu/m8g/bias"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#CriterionShape/dda4c17473c77aeab8defa3fcab9934fdf87406b",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CriterionShape/dda4c17473c77aeab8defa3fcab9934fdf87406b",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Criterion.weightingconsiderationdescription",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -179,12 +179,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Criterion"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/0bdc7cdc6d685ba6ac1793d71d06d45d70827722",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isconformantto",
           "sh:class": "http://data.europa.eu/m8g/EvidenceType",
           "sh:description": {
@@ -196,7 +196,7 @@
           "sh:path": "http://purl.org/dc/terms/conformsTo"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/3334b176f0a4ba1d86fe3a0aff455c370eb90527",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/3334b176f0a4ba1d86fe3a0aff455c370eb90527",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.confidentialityleveltype",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -208,7 +208,7 @@
           "sh:path": "http://data.europa.eu/m8g/confidentialityLevelType"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/59a48c376f2acf1dda92deebf511fadf488c03d3",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsrequirement",
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
@@ -220,7 +220,7 @@
           "sh:path": "http://data.europa.eu/m8g/supportsRequirement"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/638f266e7e267bc1b2c6d5e8c5e89908986ea907",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/638f266e7e267bc1b2c6d5e8c5e89908986ea907",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsvalue",
           "sh:class": "http://data.europa.eu/m8g/SupportedValue",
           "sh:description": {
@@ -232,7 +232,7 @@
           "sh:path": "http://data.europa.eu/m8g/supportsValue"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/7315333028a1dc0fb37c05c84b2c1aa1662bb4ca",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/7315333028a1dc0fb37c05c84b2c1aa1662bb4ca",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.supportsconcept",
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:description": {
@@ -244,7 +244,7 @@
           "sh:path": "http://data.europa.eu/m8g/supportsConcept"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.validityperiod",
           "sh:class": "http://www.w3.org/2006/time#ProperInterval",
           "sh:description": {
@@ -256,7 +256,7 @@
           "sh:path": "http://data.europa.eu/m8g/validityPeriod"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/7a09f593c7b7a14dc1dadb43a2a1dd4648fc73ed",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isprovidedby",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -268,7 +268,7 @@
           "sh:path": "http://data.europa.eu/m8g/isProvidedBy"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/a9b8757349b14040c1aa937600de45e63869114c",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/a9b8757349b14040c1aa937600de45e63869114c",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.iscreatedby",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -280,7 +280,7 @@
           "sh:path": "http://purl.org/dc/terms/creator"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/cc777682573a004d626d370ac367517195f0ad87",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/cc777682573a004d626d370ac367517195f0ad87",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isissuedby",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -292,7 +292,7 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Evidence.isabout",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -307,12 +307,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/46a94d1fb38b3f704d43acb2f844f69ec39f9e96",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/46a94d1fb38b3f704d43acb2f844f69ec39f9e96",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.validityperiodconstraint",
           "sh:class": "http://www.w3.org/2006/time#ProperInterval",
           "sh:description": {
@@ -324,7 +324,7 @@
           "sh:path": "http://data.europa.eu/m8g/validityPeriodConstraint"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/53b9b5f073a0d85022939ba837605864a80672be",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/53b9b5f073a0d85022939ba837605864a80672be",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.isspecifiedin",
           "sh:class": "http://data.europa.eu/m8g/EvidenceTypeList",
           "sh:description": {
@@ -336,7 +336,7 @@
           "sh:path": "http://data.europa.eu/m8g/isSpecifiedIn"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/8e4773f1a27b20ce83bdfe48b5e492017be04923",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/8e4773f1a27b20ce83bdfe48b5e492017be04923",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.issuingplace",
           "sh:class": "http://purl.org/dc/terms/Location",
           "sh:description": {
@@ -348,7 +348,7 @@
           "sh:path": "http://data.europa.eu/m8g/issuingPlace"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeShape/ce8a015e331e05a0d34d3c69ba9e382387ddae10",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceType.evidencetypeclassification",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -363,12 +363,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/EvidenceType"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.name",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -380,7 +380,7 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.description",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -392,7 +392,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeListShape/fe9c81f3affed5a8636b9b4bf71bf264c0ba1d43",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#EvidenceTypeListShape/fe9c81f3affed5a8636b9b4bf71bf264c0ba1d43",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#EvidenceTypeList.specifiesevidencetype",
           "sh:class": "http://data.europa.eu/m8g/EvidenceType",
           "sh:description": {
@@ -407,12 +407,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/EvidenceTypeList"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.name",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -424,7 +424,7 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -436,7 +436,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConceptShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationConceptShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationConcept.description",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -451,26 +451,26 @@
       "sh:targetClass": "http://data.europa.eu/m8g/InformationConcept"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#InformationRequirementShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InformationRequirementShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://data.europa.eu/m8g/InformationRequirement"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#ReferenceFrameworkShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#ReferenceFrameworkShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://data.europa.eu/m8g/ReferenceFramework"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/10bc9fa2322d7d6dac49673dd0ebf811ce6ecb63",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/10bc9fa2322d7d6dac49673dd0ebf811ce6ecb63",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isderivedfrom",
           "sh:class": "http://data.europa.eu/m8g/ReferenceFramework",
           "sh:description": {
@@ -482,7 +482,7 @@
           "sh:path": "http://data.europa.eu/m8g/isDerivedFrom"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/1eb607c764a4eb8cc68d1c41a727c0333f9b9971",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/1eb607c764a4eb8cc68d1c41a727c0333f9b9971",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasrequirement",
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
@@ -494,7 +494,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasRequirement"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/1fdc437c963fbce0cfed5049cd1ce85d53de3764",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/1fdc437c963fbce0cfed5049cd1ce85d53de3764",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasevidencetypelist",
           "sh:class": "http://data.europa.eu/m8g/EvidenceTypeList",
           "sh:description": {
@@ -506,7 +506,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasEvidenceTypeList"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.name",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -518,7 +518,7 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -530,7 +530,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/4abd76af0c029201fac2248581d41d19b76083fe",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/4abd76af0c029201fac2248581d41d19b76083fe",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasconcept",
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:description": {
@@ -542,7 +542,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasConcept"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/9938c4563a6e10ae21851f0c2ced64b31ffcc3b4",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hassupportingevidence",
           "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
@@ -554,7 +554,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasSupportingEvidence"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/be4eff784ceb6eb28ba22fc3bbb0143e964f40bd",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/be4eff784ceb6eb28ba22fc3bbb0143e964f40bd",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isrequirementof",
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
@@ -566,7 +566,7 @@
           "sh:path": "http://data.europa.eu/m8g/isRequirementOf"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/cc777682573a004d626d370ac367517195f0ad87",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/cc777682573a004d626d370ac367517195f0ad87",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.isissuedby",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
@@ -578,7 +578,7 @@
           "sh:path": "http://purl.org/dc/terms/publisher"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.description",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -590,7 +590,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#RequirementShape/fab3d501b50e093ce24561acd8d2301fc8b11525",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#RequirementShape/fab3d501b50e093ce24561acd8d2301fc8b11525",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#Requirement.hasqualifiedrelation",
           "sh:class": "http://data.europa.eu/m8g/Requirement",
           "sh:description": {
@@ -605,12 +605,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/Requirement"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValueShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#SupportedValueShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValueShape/ff93442fd1743995294e724ecfb37d2dfe088254",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#SupportedValueShape/ff93442fd1743995294e724ecfb37d2dfe088254",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#SupportedValue.providesvaluefor",
           "sh:class": "http://data.europa.eu/m8g/InformationConcept",
           "sh:description": {
@@ -625,47 +625,47 @@
       "sh:targetClass": "http://data.europa.eu/m8g/SupportedValue"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#LocationShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#LocationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://purl.org/dc/terms/Location"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#LiteralShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#LiteralShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#DecimalShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#DecimalShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#decimal"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#DurationShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#DurationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#duration"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#CodeShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#CodeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/75b2dab0d7828cc05b3b173439e32a443fecd4e8",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/75b2dab0d7828cc05b3b173439e32a443fecd4e8",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.endtime",
           "sh:class": "https://www.w3.org/2006/time#Instant",
           "sh:description": {
@@ -677,7 +677,7 @@
           "sh:path": "http://www.w3.org/2006/time#hasEnd"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/a550fb3c0fe1c0f6837a66965404c6a36220cb1a",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/a550fb3c0fe1c0f6837a66965404c6a36220cb1a",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.starttime",
           "sh:class": "https://www.w3.org/2006/time#Instant",
           "sh:description": {
@@ -689,7 +689,7 @@
           "sh:path": "http://www.w3.org/2006/time#hasBeginning"
         },
         {
-          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodOfTimeShape/f26773a2b00df0b2bc11a71a0009143ddc3936cf",
+          "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#PeriodOfTimeShape/f26773a2b00df0b2bc11a71a0009143ddc3936cf",
           "rdfs:seeAlso": "https://semiceu.github.io/CCCEV/releases/2.1.0#PeriodofTime.duration",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
           "sh:description": {
@@ -704,21 +704,21 @@
       "sh:targetClass": "http://www.w3.org/2006/time#ProperInterval"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#AgentShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#AgentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Agent"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#StringShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#StringShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://www.w3.org/2001/XMLSchema#string"
     },
     {
-      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0#InstantShape",
+      "@id": "https://semiceu.github.io/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl#InstantShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],

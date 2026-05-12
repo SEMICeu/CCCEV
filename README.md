@@ -21,7 +21,7 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 /releases: Core Criterion and Core Evidence releases (1.00, 2.00 etc), each release might have different distributions.
 
 ## License
-Copyright © 2024 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CCCEV repository on GitHub.
+Copyright © 2026 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CCCEV repository on GitHub.
 
 
 </table>  

@@ -21,16 +21,6 @@
 	    
 		
 		   {
-		    name: "Florian Barthelemy",
-		      
-		      
-		    company: "PwC EU Services",
-		      
-		      
-		    }
-		, 
-		
-		   {
 		    name: "Jitse De Cock",
 		      
 		      
@@ -44,24 +34,14 @@
 		    name: "Emiel Dhondt",
 		      
 		      
-		    company: "PwC EU Services",
+		    company: "Digital Flanders",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Pavlina Fragkou",
-		      
-		      
-		    company: "European Commission",
-		      
-		      
-		    }
-		, 
-		
-		   {
-		    name: "Arthur Schiltz",
+		    name: "Faruk Karabulut",
 		      
 		      
 		    company: "PwC EU Services",
@@ -74,7 +54,7 @@
 		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "Trasys International",
+		    company: "European Commission",
 		      
 		      
 		    }
@@ -93,6 +73,8 @@
 		   {
 		    name: "Bert Van Nuffelen",
 		      
+		      
+		    company: "Digital Flanders",
 		      
 		      
 		    }
@@ -126,17 +108,26 @@
 		
 	function quickreference() {
 		$('#table-quickoverview').DataTable();
-	};
-	var shaclfilepath = "./shacl/cccev-ap-SHACL.ttl" ;
+    };
+	var shaclfilepath = "shacl/cccev-ap-SHACL.ttl" ;
+	var folder = "./html/examples/";
+	var model = "any" ;
+	var version_list = [
+		{
+		"type": "Core Vocabularies",
+		"description": "Core Vocabularies"
+		},
+	] ;
+	var linkinfo = "https://semiceu.github.io/CCCEV/releases/2.2.0" + "#validation" ;
 
    
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://semiceu.github.io/CCCEV/releases/2.1.0",
-      latestVersion: "https://semiceu.github.io/CCCEV/releases/2.00/",
+      edDraftURI: "https://semiceu.github.io/CCCEV/releases/2.2.0",
+      latestVersion: "https://semiceu.github.io/CCCEV/releases/2.2.0/",
       specStatus: "LD",
-      publishDate: "2024-01-31",
+      publishDate: "2026-05-12",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/CCCEV",
@@ -216,6 +207,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#7ED956" />
+    
+    
 </head>
 <body>
     
@@ -227,7 +220,7 @@
 
 <section id="abstract">
     <h2>Abstract</h2>
-The Core Criterion an Core Evidence Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of criterion and Evidence.
+The Core Criterion and Core Evidence Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of criterion and Evidence.
 </section>
 
 
@@ -269,10 +262,10 @@ The Core Criterion an Core Evidence Vocabulary is a simplified, reusable and ext
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2024-01-31.
+            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2026-05-12.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/CCCEV/blob/master/releases/2.1.0/Changelog.md">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification can be found at the <a href="https://github.com/SEMICeu/CCCEV/blob/master/releases/2.2.0/Changelog.md">Changelog</a>.
         </p>
 </section>
 
@@ -293,14 +286,14 @@ The Core Criterion an Core Evidence Vocabulary is a simplified, reusable and ext
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2024 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2026 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     
 </section>
 
 
 
-<section id="conformance" class="informative">
+<section id="conformance">
 </section>
 
 
@@ -314,16 +307,17 @@ The Core Criterion an Core Evidence Vocabulary is a simplified, reusable and ext
             A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
             More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
         </p>
+    <h3>Used Prefixes</h3>
         
-This specification uses the following prefixes to shorten the URIs for readibility.
+This specification uses the following prefixes to shorten the URIs for readability.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
             <tbody>
+            <tr><td><code>adms</code></td><td><code>http://www.w3.org/ns/adms#</code></td></tr>
             <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
             <tr><td><code>foaf</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td></tr>
-            <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
             <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
@@ -362,6 +356,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                             <br />
                             |
 			      <a href="#Agent">Agent</a> |
+			      <a href="#Asset">Asset</a> |
 			      <a href="#Location">Location</a> |
 			      <a href="#PeriodofTime">Period of Time</a> |
 			      <a href="#SupportedValue">Supported Value</a> |
@@ -376,9 +371,9 @@ This specification uses the following prefixes to shorten the URIs for readibili
                 
     </div>
     <div>
-        <a href="https://semiceu.github.io/CCCEV/releases/2.1.0/html/overview.jpg"
+        <a href="https://semiceu.github.io/CCCEV/releases/2.2.0/html/overview.jpg"
            target="_blank">
-            <img src="https://semiceu.github.io/CCCEV/releases/2.1.0/html/overview.jpg"/>
+            <img src="https://semiceu.github.io/CCCEV/releases/2.2.0/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -393,6 +388,8 @@ This specification uses the following prefixes to shorten the URIs for readibili
    Main Entities
 </h2>
 The main entities are those that form the core of the Core Vocabulary.
+
+
 
 
 
@@ -483,11 +480,11 @@ The main entities are those that form the core of the Core Vocabulary.
                     <tbody class="supertype">
                         
                             <tr id="Constraint.constrains"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/constrains"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20constrains%20in%20Constraint&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Constraint.constrains" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20constrains%20in%20Constraint&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Constraint.constrains" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -625,11 +622,11 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                     <tbody class="supertype">
                         
                             <tr id="Criterion.bias"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/bias"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20bias%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Criterion.bias" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20bias%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.bias" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -668,11 +665,11 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                             </tr>
                         
                             <tr id="Criterion.weight"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/weight"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weight%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Criterion.weight" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weight%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.weight" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -711,11 +708,11 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                             </tr>
                         
                             <tr id="Criterion.weightingconsiderationdescription"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/weightingConsiderationDescription"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weighting consideration description%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Criterion.weightingconsiderationdescription" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weighting consideration description%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.weightingconsiderationdescription" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -754,11 +751,11 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                             </tr>
                         
                             <tr id="Criterion.weightingtype"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/weightingType"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weighting type%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Criterion.weightingtype" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weighting type%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.weightingtype" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -784,7 +781,7 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
                                     Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    An existing codelist which can be used is <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/number-weight" >OP's Number weigth controlled vocabulary</a>
+                                    An existing codelist which can be used is <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/number-weight" >OP's Number weight controlled vocabulary</a>
                                 </td>
 				<!--
                                 <td>
@@ -848,11 +845,13 @@ The proof can be given through documents or extracts of base registries, indepen
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Evidence.confidentialityleveltype">confidentiality level type</a>
+                            , <a href="#Evidence.description">description</a>
                             , <a href="#Evidence.isabout">is about</a>
                             , <a href="#Evidence.isconformantto">is conformant to</a>
                             , <a href="#Evidence.iscreatedby">is created by</a>
                             , <a href="#Evidence.isissuedby">is issued by</a>
                             , <a href="#Evidence.isprovidedby">is provided by</a>
+                            , <a href="#Evidence.name">name</a>
                             , <a href="#Evidence.supportsconcept">supports concept</a>
                             , <a href="#Evidence.supportsrequirement">supports requirement</a>
                             , <a href="#Evidence.supportsvalue">supports value</a>
@@ -897,11 +896,11 @@ The proof can be given through documents or extracts of base registries, indepen
                     <tbody class="supertype">
                         
                             <tr id="Evidence.confidentialityleveltype"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/confidentialityLevelType"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20confidentiality level type%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.confidentialityleveltype" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20confidentiality level type%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.confidentialityleveltype" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -939,12 +938,55 @@ The proof can be given through documents or extracts of base registries, indepen
                                 </td>
                             </tr>
                         
+                            <tr id="Evidence.description"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        description</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Short explanation supporting the understanding of the Evidence.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The explanation can include information about the nature, attributes, uses or any other additional information about the Evidence.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Evidence.isabout"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/subject"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is about%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.isabout" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is about%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isabout" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -983,11 +1025,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.isconformantto"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/conformsTo"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is conformant to%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.isconformantto" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is conformant to%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isconformantto" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1026,11 +1068,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.iscreatedby"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/creator"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is created by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.iscreatedby" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is created by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.iscreatedby" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1069,11 +1111,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.isissuedby"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/publisher"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is issued by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.isissuedby" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is issued by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isissuedby" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1112,11 +1154,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.isprovidedby"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/isProvidedBy"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is provided by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.isprovidedby" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is provided by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isprovidedby" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1154,12 +1196,55 @@ The proof can be given through documents or extracts of base registries, indepen
                                 </td>
                             </tr>
                         
+                            <tr id="Evidence.name"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.name" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Name of the Evidence.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Evidence.supportsconcept"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/supportsConcept"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports concept%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.supportsconcept" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports concept%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.supportsconcept" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1185,7 +1270,7 @@ The proof can be given through documents or extracts of base registries, indepen
                                     Information Concept providing facts found/inferred from the Evidence.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Examples of Information Concepts are values found explictly in the evidence such as a birth date or information derived from the Evidence such as "I am older that 18 years".
+                                    Examples of Information Concepts are values found explicitly in the evidence such as a birth date or information derived from the Evidence such as "I am older that 18 years".
                                 </td>
 				<!--
                                 <td>
@@ -1198,11 +1283,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.supportsrequirement"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/supportsRequirement"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports requirement%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.supportsrequirement" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports requirement%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.supportsrequirement" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1241,11 +1326,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.supportsvalue"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/supportsValue"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports value%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.supportsvalue" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports value%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.supportsvalue" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1284,11 +1369,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="Evidence.validityperiod"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/validityPeriod"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20validity period%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Evidence.validityperiod" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20validity period%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.validityperiod" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1374,10 +1459,13 @@ The proof can be given through documents or extracts of base registries, indepen
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#EvidenceType.evidencetypeclassification">evidence type classification</a>
+                            For this entity the following properties are defined: <a href="#EvidenceType.description">description</a>
+                            , <a href="#EvidenceType.evidencetypeclassification">evidence type classification</a>
                             , <a href="#EvidenceType.identifier">identifier</a>
                             , <a href="#EvidenceType.isspecifiedin">is specified in</a>
                             , <a href="#EvidenceType.issuingplace">issuing place</a>
+                            , <a href="#EvidenceType.name">name</a>
+                            , <a href="#EvidenceType.sample">sample</a>
                             , <a href="#EvidenceType.validityperiodconstraint">validity period constraint</a>
                             .
                     </dd>
@@ -1418,12 +1506,55 @@ The proof can be given through documents or extracts of base registries, indepen
                     </thead>
                     <tbody class="supertype">
                         
+                            <tr id="EvidenceType.description"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        description</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Short explanation supporting the understanding of the Evidence Type.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The explanation can include information about the nature, attributes, uses or any other additional information about the Evidence Type.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="EvidenceType.evidencetypeclassification"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/evidenceTypeClassification"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20evidence type classification%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceType.evidencetypeclassification" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20evidence type classification%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.evidencetypeclassification" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1462,11 +1593,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="EvidenceType.identifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceType.identifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.identifier" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1505,11 +1636,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="EvidenceType.isspecifiedin"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/isSpecifiedIn"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is specified in%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceType.isspecifiedin" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is specified in%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.isspecifiedin" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1548,11 +1679,11 @@ The proof can be given through documents or extracts of base registries, indepen
                             </tr>
                         
                             <tr id="EvidenceType.issuingplace"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/issuingPlace"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20issuing place%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceType.issuingplace" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20issuing place%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.issuingplace" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1590,12 +1721,99 @@ The proof can be given through documents or extracts of base registries, indepen
                                 </td>
                             </tr>
                         
+                            <tr id="EvidenceType.name"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.name" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Name of the Evidence Type.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="EvidenceType.sample"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/ns/adms#sample"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20sample%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.sample" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/adms#sample"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/adms#sample"
+                                           data-placement="right">
+                                        sample</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Asset" data-placement="right">Asset</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Links to a sample of an Asset (which is itself an Asset).
+
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="EvidenceType.validityperiodconstraint"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/validityPeriodConstraint"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20validity period constraint%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceType.validityperiodconstraint" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20validity period constraint%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.validityperiodconstraint" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1727,11 +1945,11 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                     <tbody class="supertype">
                         
                             <tr id="EvidenceTypeList.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceTypeList.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1770,11 +1988,11 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                             </tr>
                         
                             <tr id="EvidenceTypeList.identifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceTypeList.identifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.identifier" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1813,19 +2031,19 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                             </tr>
                         
                             <tr id="EvidenceTypeList.name"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceTypeList.name" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.name" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
                                            data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
                                            data-placement="right">
                                         name</a>
                                 </td>
@@ -1856,11 +2074,11 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                             </tr>
                         
                             <tr id="EvidenceTypeList.specifiesevidencetype"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/specifiesEvidenceType"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20specifies evidence type%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23EvidenceTypeList.specifiesevidencetype" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20specifies evidence type%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.specifiesevidencetype" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1991,11 +2209,11 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                     <tbody class="supertype">
                         
                             <tr id="InformationConcept.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23InformationConcept.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2034,11 +2252,11 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                             </tr>
                         
                             <tr id="InformationConcept.expressionofexpectedvalue"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/expressionOfExpectedValue"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20expression of expected value%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23InformationConcept.expressionofexpectedvalue" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20expression of expected value%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.expressionofexpectedvalue" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2065,7 +2283,7 @@ The Evidence Type List describes thus an AND condition on the different Evidence
                                 </td>
                                 <td property="skos:scopeNote">
                                     The property encapsulates all kind of expectations on the required and provided values one could have. 
-This may range from representational expectations such as the type (e.g. the value is expected to be a xsd:decimal) to expectations that reduce the allowed value range. Commonly this is done using min or max bounderary expressions (e.g. the maximum value is 1 Million Euro).
+This may range from representational expectations such as the type (e.g. the value is expected to be a xsd:decimal) to expectations that reduce the allowed value range. Commonly this is done using min or max boundary expressions (e.g. the maximum value is 1 Million Euro).
 Other usage could be to harmonise the supplied values (e.g. rounding, turning to percentages) to facilitate further processing.
 
 Implementers are free to use their own approach for defining the expected values in more details. For instance, this can be by defining their own datatypes extending or encapsulating common xsd datatypes. But also by using more complex languages such as <a href="https://www.w3.org/TR/xpath-31/">XPath</a>, <a href="https://www.omg.org/spec/OCL/">Object Constraint Language</a> (OCL), <a href="https://www.javascript.com/">JavaScript</a> and <a href="https://www.w3.org/TR/rif-overview/">Rule Interchange Format</a> (RIF).
@@ -2087,11 +2305,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="InformationConcept.identifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23InformationConcept.identifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.identifier" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2130,19 +2348,19 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="InformationConcept.name"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23InformationConcept.name" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.name" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
                                            data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
                                            data-placement="right">
                                         name</a>
                                 </td>
@@ -2173,11 +2391,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="InformationConcept.type"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20type%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23InformationConcept.type" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20type%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.type" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2203,7 +2421,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                                     Category to which the Information Concept belongs.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    In addition to the expression of the expected value, the type classification can be used to express the kind of value the information concept is processing. This can be primitive tupes such as a date or a string, but also more business domain terminology such as age or number of employees. It is recommended to well-document the usage of the property. 
+                                    In addition to the expression of the expected value, the type classification can be used to express the kind of value the information concept is processing. This can be a primitive type such as a date or a string, but also more business domain terminology such as age or number of employees. It is recommended to well-document the usage of the property. 
                                 </td>
 				<!--
                                 <td>
@@ -2324,7 +2542,9 @@ Because of this freedom, implementers are recommended to well-document their usa
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#ReferenceFramework.identifier">identifier</a>
+                            For this entity the following properties are defined: <a href="#ReferenceFramework.description">description</a>
+                            , <a href="#ReferenceFramework.identifier">identifier</a>
+                            , <a href="#ReferenceFramework.name">name</a>
                             .
                     </dd>
                 
@@ -2364,12 +2584,55 @@ Because of this freedom, implementers are recommended to well-document their usa
                     </thead>
                     <tbody class="supertype">
                         
+                            <tr id="ReferenceFramework.description"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23ReferenceFramework.description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        description</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Short explanation supporting the understanding of the Reference Framework.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The explanation can include information about the nature, attributes, uses or any other additional information about the Reference Framework.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="ReferenceFramework.identifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23ReferenceFramework.identifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23ReferenceFramework.identifier" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2393,6 +2656,49 @@ Because of this freedom, implementers are recommended to well-document their usa
                                 </td>
                                 <td property="rdfs:comment">
                                     An unambiguous reference to a Reference Framework.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ReferenceFramework.name"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23ReferenceFramework.name" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Name of the Reference Framework.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2507,11 +2813,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                     <tbody class="supertype">
                         
                             <tr id="Requirement.description"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/description"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.description" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.description" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2550,11 +2856,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.hasconcept"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/hasConcept"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has concept%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.hasconcept" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has concept%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasconcept" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2593,11 +2899,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.hasevidencetypelist"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/hasEvidenceTypeList"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has evidence type list%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.hasevidencetypelist" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has evidence type list%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasevidencetypelist" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2636,11 +2942,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.hasqualifiedrelation"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/hasQualifiedRelation"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has qualified relation%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.hasqualifiedrelation" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has qualified relation%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasqualifiedrelation" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2666,7 +2972,7 @@ Because of this freedom, implementers are recommended to well-document their usa
                                     Described and/or categorised relation to another Requirement.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property leaves the possiblity to define a qualified relation from Requirement to Information Requirement or Constraint as well as a qualified relation from Requirement to Requirement.  A use case would be to specialize an EU requirement in Member States' specific requirements.
+                                    This property leaves the possibility to define a qualified relation from Requirement to Information Requirement or Constraint as well as a qualified relation from Requirement to Requirement.  A use case would be to specialize an EU requirement in Member States' specific requirements.
                                 </td>
 				<!--
                                 <td>
@@ -2679,11 +2985,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.hasrequirement"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/hasRequirement"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has requirement%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.hasrequirement" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has requirement%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasrequirement" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2722,11 +3028,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.hassupportingevidence"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/hasSupportingEvidence"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has supporting evidence%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.hassupportingevidence" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has supporting evidence%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hassupportingevidence" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2765,11 +3071,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.identifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.identifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.identifier" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2808,11 +3114,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.isderivedfrom"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/isDerivedFrom"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is derived from%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.isderivedfrom" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is derived from%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.isderivedfrom" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2851,11 +3157,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.isissuedby"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/publisher"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is issued by%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.isissuedby" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is issued by%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.isissuedby" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2894,11 +3200,11 @@ Because of this freedom, implementers are recommended to well-document their usa
                             </tr>
                         
                             <tr id="Requirement.isrequirementof"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/isRequirementOf"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is requirement of%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.isrequirementof" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is requirement of%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.isrequirementof" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2939,19 +3245,19 @@ In the case where the purpose is to link the two Requirements without additional
                             </tr>
                         
                             <tr id="Requirement.name"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.name" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.name" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
                                            data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
                                            data-placement="right">
                                         name</a>
                                 </td>
@@ -2982,11 +3288,11 @@ In the case where the purpose is to link the two Requirements without additional
                             </tr>
                         
                             <tr id="Requirement.type"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/type"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20type%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23Requirement.type" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20type%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.type" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3078,6 +3384,49 @@ They are included in the Core Vocabulary because they form the range of properti
                     <dd>
                         In compliance with the description from <a href="http://xmlns.com/foaf/spec/">FOAF</a>, an Agent is considered as any entity that is able to carry out actions. The Agent class acts as a generic element which can be further specified by implementers for their usages, for example by defining the Person class from the Core Person Vocabulary or Organization from W3C's Organization Ontology as subclasses of Agent. This Person or Organization can then issue a certain Requirement or be concerned by an Evidence provided.
                     </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Asset">
+                <a href="http://www.w3.org/ns/adms#Asset"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/ns/adms#Asset"
+                   data-placement="right">Asset</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Asset&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    An Asset is an abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. 
+                </dd>
+                
                 
                 
                     <dt>
@@ -3235,11 +3584,11 @@ They are included in the Core Vocabulary because they form the range of properti
                     <tbody class="supertype">
                         
                             <tr id="PeriodofTime.duration"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2006/time#hasXSDDuration"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20duration%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23PeriodofTime.duration" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20duration%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23PeriodofTime.duration" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3278,11 +3627,11 @@ They are included in the Core Vocabulary because they form the range of properti
                             </tr>
                         
                             <tr id="PeriodofTime.endtime"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2006/time#hasEnd"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20endtime%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23PeriodofTime.endtime" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20endtime%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23PeriodofTime.endtime" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3321,11 +3670,11 @@ They are included in the Core Vocabulary because they form the range of properti
                             </tr>
                         
                             <tr id="PeriodofTime.starttime"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2006/time#hasBeginning"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20starttime%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23PeriodofTime.starttime" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20starttime%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23PeriodofTime.starttime" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3410,7 +3759,7 @@ They are included in the Core Vocabulary because they form the range of properti
 (a) the Requirement processor, i.e. the Agent setting out Requirements for an objective and processing the supplied Evidences in the context of the Requirements, and 
 (b) the Evidence provider, i.e. the Agent supplying information to an information request expressed as Requirements.
 
-The Requirement processor has expressed its expectations (both business as technical) for the information it wants to recieve as an Information Concept. The Evidence provider is able to supply information for that Information Concept, but its native data representation might not be coherent with the expectations set by the Requirement processor. The Supported Value is bridging both. 
+The Requirement processor has expressed its expectations (both business as technical) for the information it wants to receive as an Information Concept. The Evidence provider is able to supply information for that Information Concept, but its native data representation might not be coherent with the expectations set by the Requirement processor. The Supported Value is bridging both. 
 
 The Evidence provider can either provide a derived value (fact) from its native data representation that complies with the Information Concept expectations. Or it can provide a query in an agreed language between Evidence provider and Requirement processor that allows the Requirement processor to retrieve the value from the native data representation.
 
@@ -3467,11 +3816,11 @@ Implementers are free to choose their language. It is recommended to document th
                     <tbody class="supertype">
                         
                             <tr id="SupportedValue.providesvaluefor"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/providesValueFor"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20provides value for%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23SupportedValue.providesvaluefor" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20provides value for%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23SupportedValue.providesvaluefor" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3510,11 +3859,11 @@ Implementers are free to choose their language. It is recommended to document th
                             </tr>
                         
                             <tr id="SupportedValue.query"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/query"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20query%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23SupportedValue.query" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20query%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23SupportedValue.query" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3553,11 +3902,11 @@ Implementers are free to choose their language. It is recommended to document th
                             </tr>
                         
                             <tr id="SupportedValue.value"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/value"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20value%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.1.0%23SupportedValue.value" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20value%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23SupportedValue.value" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -3660,7 +4009,7 @@ Implementers are free to choose their language. It is recommended to document th
                     </div>
                 
 		</td><td>
-                    Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value space· of decimal is the set of numbers that can be obtained by dividing an integer by a non-negative power of ten, i.e., expressible as i / 10n wher
+                    Decimal represents a subset of the real numbers, which can be represented by decimal numerals. The ·value space· of decimal is the set of numbers that can be obtained by multiplying an integer by a non-positive power of ten, i.e., expressible as i × 10^-n where i and n are integers and n &gt;= 0.
 		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Duration&body=Explain%20your%20issue"}}>
@@ -3685,9 +4034,9 @@ Implementers are free to choose their language. It is recommended to document th
 		</td><td>
                 
                     <div id="Instant">
-                        <a href="https://www.w3.org/2006/time#Instant"
+                        <a href="http://www.w3.org/2006/time#Instant"
                            data-toggle="tooltip"
-                           data-content="https://www.w3.org/2006/time#Instant"
+                           data-content="http://www.w3.org/2006/time#Instant"
                            data-placement="right">Instant</a>
                     </div>
                 
@@ -3717,9 +4066,9 @@ Implementers are free to choose their language. It is recommended to document th
 		</td><td>
                 
                     <div id="String">
-                        <a href="https://www.w3.org/2001/XMLSchema#string"
+                        <a href="http://www.w3.org/2001/XMLSchema#string"
                            data-toggle="tooltip"
-                           data-content="https://www.w3.org/2001/XMLSchema#string"
+                           data-content="http://www.w3.org/2001/XMLSchema#string"
                            data-placement="right">String</a>
                     </div>
                 
@@ -3741,8 +4090,8 @@ Implementers are free to choose their language. It is recommended to document th
          (non normative)
         
             <p>
-                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/CCCEV/releases/2.1.0/context/cccev-ap.jsonld"
-    target="_blank">/CCCEV/releases/2.1.0/context/cccev-ap.jsonld</a>
+                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/CCCEV/releases/2.2.0/context/cccev-ap.jsonld"
+    target="_blank">/CCCEV/releases/2.2.0/context/cccev-ap.jsonld</a>
             </p>
         
     </div>
@@ -3755,8 +4104,8 @@ Implementers are free to choose their language. It is recommended to document th
          (non normative)
         
             <p>
-                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl"
-    target="_blank">/CCCEV/releases/2.1.0/shacl/cccev-ap-SHACL.ttl</a>
+                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/CCCEV/releases/2.2.0/shacl/cccev-ap-SHACL.ttl"
+    target="_blank">/CCCEV/releases/2.2.0/shacl/cccev-ap-SHACL.ttl</a>
             </p>
         
     </div>
@@ -3766,11 +4115,11 @@ Implementers are free to choose their language. It is recommended to document th
 <section class="informative">
     <h2> Examples </h2>
         
-<div class="h3 examples" id="example-rdf_entitlement_to_marry">Entitlement to marry</div>
+<h3 class="h3 examples" id="example-rdf_entitlement_to_marry">Entitlement to marry</h3>
 <p>
 	The above example is illustrated in the <a href="./CCCEV_AnExplanatoryExample.pdf">following documentation</a>.
 </p>
-<div class="h3 examples" id="example-rdf_childcare_cost">Childcare cost</div>
+<h3 class="h3 examples" id="example-rdf_childcare_cost">Childcare cost</h3>
 
 
 </section>
@@ -3789,19 +4138,19 @@ The following section provides support for implementing the Core Criterion and C
 <h3>JSON-LD context file</h3>
 
 One common technical question is the format in which the data is being exchanged. 
-For conformance with the Core Criterion and Core Evidence Vocabulary, it is not mandatory that this happens in a RDF serialisation, but the exhanged format SHOULD be unambiguously be transformable into RDF.
+For conformance with the Core Criterion and Core Evidence Vocabulary, it is not mandatory that this happens in an RDF serialisation, but the exchanged format SHOULD be unambiguously transformable into RDF.
 For the format JSON, a popular format to exchange data between systems, SEMIC provides a <a href="./context/cccev-ap.jsonld">JSON-LD context file</a>. 
 JSON-LD is a W3C Recommendation [[[json-ld11]]] that provided a standard approach to interpret JSON structures as RDF.
 The provided JSON-LD context file can be used by implementers.
 This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed.
 <p/>
-The JSON-LD context file downloadable <a href="./context/cccev-ap.jsonld">here</a>.
+The JSON-LD context file is downloadable <a href="./context/cccev-ap.jsonld">here</a>.
 <p/>
 
 <h3>Validation</h3>
 
 To verify if the data is (technically) conformant to the Core Criterion and Core Evidence Vocabulary, the exchanged data can be validated using the provided SHACL shapes. 
-SHACL is a W3C Recommendation to express constraints on a RDF knowledge graph. 
+SHACL is a W3C Recommendation to express constraints on an RDF knowledge graph. 
 <p/>
 To support the check whether or not a catalogue satisfies the expressed constraints in this Core Vocabulary, the constraints in this specification are expressed using SHACL [[shacl]].
 Each constraint in this specification that could be converted into a SHACL expression has been included.
@@ -3811,6 +4160,12 @@ It is up to the implementers to define the validation they expect.
 Each implementation happens within a context, and that context is beyond the SHACL expressions here.
 <p/>
 The shapes can be found <a href="./shacl/cccev-ap-SHACL.ttl">here</a>.
+
+<h3>RDF representation</h3>
+The RDF representation of the Core Criterion and Core Evidence Vocabulary is available <a href="./voc/cccev-ap.ttl">here</a>.
+
+<h3>UML representation</h3>
+The UML representation from which the Core Criterion and Core Evidence Vocabulary has been build is available <a href="./uml/CCCEV.eap">here</a>.
 
 <!--
 <h3>Mapping</h3>
@@ -3865,14 +4220,13 @@ SEMIC uses and will use the RDFS lexicalisation for all of its specifications. M
 <li> The usage of certain resource can be clarified in a skos:usageNote.</li>
 </ul>
 
-</section>
+</section>    
 </section>
  
 
 
 
  
-
 
 
 <section id="quick-reference" class="appendix">
@@ -3898,6 +4252,17 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					<tr>
 						<td><a href="#Agent">Agent</a></td>
 						<td><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				
+			</tr>
+		
+				
+					<tr>
+						<td><a href="#Asset">Asset</a></td>
+						<td><div class="shorten">http://www.w3.org/ns/adms#Asset</div></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -4011,6 +4376,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+					
+						
+					
+						
 					
 						
 					
@@ -4040,6 +4413,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Evidence.confidentialityleveltype">confidentiality level type </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/confidentialityLevelType</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
 						
 					
@@ -4098,6 +4481,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Evidence">Evidence</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
 								<td></td>
+								<td><a href="#Evidence.name">name </a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
 								<td><a href="#Evidence.supportsconcept">supports concept </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/supportsConcept</div></td>
 							</tr>
@@ -4148,6 +4541,12 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
 					
 						
 					
@@ -4159,6 +4558,22 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#EvidenceType">Evidence Type</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceType</div></td>
+								<td></td>
+								<td><a href="#EvidenceType.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -4197,6 +4612,26 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#EvidenceType.issuingplace">issuing place </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/issuingPlace</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#EvidenceType">Evidence Type</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceType</div></td>
+								<td></td>
+								<td><a href="#EvidenceType.name">name </a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#EvidenceType">Evidence Type</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceType</div></td>
+								<td></td>
+								<td><a href="#EvidenceType.sample">sample </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/adms#sample</div></td>
 							</tr>
 						
 					
@@ -4259,7 +4694,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://data.europa.eu/m8g/EvidenceTypeList</div></td>
 								<td></td>
 								<td><a href="#EvidenceTypeList.name">name </a></td>
-								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
 							</tr>
 						
 					
@@ -4336,7 +4771,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://data.europa.eu/m8g/InformationConcept</div></td>
 								<td></td>
 								<td><a href="#InformationConcept.name">name </a></td>
-								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
 							</tr>
 						
 					
@@ -4428,6 +4863,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+					
+						
+					
+						
 					
 						
 					
@@ -4437,8 +4880,28 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#ReferenceFramework">Reference Framework</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/ReferenceFramework</div></td>
 								<td></td>
+								<td><a href="#ReferenceFramework.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ReferenceFramework">Reference Framework</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/ReferenceFramework</div></td>
+								<td></td>
 								<td><a href="#ReferenceFramework.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ReferenceFramework">Reference Framework</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/ReferenceFramework</div></td>
+								<td></td>
+								<td><a href="#ReferenceFramework.name">name </a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
 							</tr>
 						
 					
@@ -4603,7 +5066,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://data.europa.eu/m8g/Requirement</div></td>
 								<td></td>
 								<td><a href="#Requirement.name">name </a></td>
-								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
 							</tr>
 						
 					
@@ -4682,36 +5145,37 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 
 
 	    var prefixes = [ 
+{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'a4g:', 'ns': 'http://data.europa.eu/a4g/ontology#'},
+{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
+{'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
+{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
+{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
 {'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
-{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'frbr:', 'ns': 'http://iflastandards.info/ns/fr/frbr/frbroo/'},
+{'pref':'geosparql:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
+{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
 {'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
 {'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'schema:', 'ns': 'https://schema.org/'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
 {'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
 {'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
-{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
-{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'},
-{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
-{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
-{'pref':'geo:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
-{'pref':'schema:', 'ns': 'https://schema.org/'},
-{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
-{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
-{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
-{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
 {'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
-
-
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
 				];
 
 	    function shorturl (url) {
@@ -4745,6 +5209,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
     <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
     <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+	<script src="https://unpkg.com/n3@1.14.0/browser/n3.min.js"></script>
+	<script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js"></script>
     <script src="./html/example.js" ></script>
 	<script type="text/javascript">
 		function elementInView(elem){
@@ -4769,37 +5235,98 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 	</script>
 	<style>
 		.CodeMirror {
-		  border: 1px solid #eee;
-		  height: auto;
+			border: 1px solid #eee;
+			height: auto;
 		}
 		.buttonsample {
-		cursor: pointer;
-		margin-top: 10px;
-		margin-left: 10px;
-		font-weight: 700;
-		border:0 outset buttonface;
-		background: #F5F6F8;
-		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
-		border-radius:4px;
-		box-shadow:0 1px 3px #666;
-		font-family: Arial;
-		color: grey;
-		font-size: 14px;
-		padding: 10px 5px;
-		text-decoration: none;
-		float: right
-	}
-	.buttonsample:hover {color:#2a70d3}
-	.tabsstyle {
-		padding: 10px;
-		overflow: hidden;
-	}
-	li.ui-tabs-tab > a:hover {
-		background-color:dodgerblue;
-		color:white;
-	}
-  </style>
+			cursor: pointer;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			background: #F5F6F8;
+			background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+			border-radius:4px;
+			box-shadow:0 1px 3px #666;
+			font-family: Arial;
+			color: grey;
+			font-size: 13px !important;
+			padding: 10px 5px;
+			text-decoration: none;
+			float: right
+		}
+		.chooseVersion {
+			cursor: pointer;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			background: #F5F6F8;
+			background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+			border-radius:4px;
+			box-shadow:0 1px 3px #666;
+			font-family: Arial;
+			color: grey;
+			font-size: 13px !important;
+			padding: 10px 5px;
+			text-decoration: none;
+			float: right
+		}
+		.infosample {
+			cursor: pointer;
+			margin-top: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			border-radius:4px;
+			font-family: Arial;
+			color: grey;
+			font-size: 14px;
+			padding: 10px 0px;
+			text-decoration: none;
+			float: right
+		}
+		.buttonsample:hover {color:#2a70d3}
+		.tabsstyle {
+			padding: 10px;
+			overflow: hidden;
+		}
+		li.ui-tabs-tab > a:hover {
+			background-color:dodgerblue;
+			color:white;
+		}
+		table.simple {
+			font-size: small;
+			border-spacing:0;
+			border-collapse:collapse;
+			border-bottom:3px solid #005a9c
+		}
+		.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+		.simple th a{color:#fff;padding:3px 5px;text-align:left}
+		.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+		.simple td{padding:3px 10px;border-top:1px solid #ddd}
+		.simple tr:nth-child(even){background:#f0f6ff}
+		body.darkmode .simple th{background:#005a9c94;color:#ddd}
+		body.darkmode .simple th a{color:#ddd}
+		body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+		body.darkmode :is(h4,h5,h6)+a.self-link::before {
+			color: var(--heading-text);
+		}
+		body.darkmode img {
+			background: none;
+		}
+		body.darkmode section#references :target {
+			background: #04162d;
+		}
+	</style>
 
-    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
 </html>

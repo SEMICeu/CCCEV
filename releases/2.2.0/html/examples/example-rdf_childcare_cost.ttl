@@ -25,7 +25,7 @@ ex:po a foaf:Agent ;
   dct:spatial <http://publications.europa.eu/resource/authority/atu/BEL> .
 
 ex:evidence a cv:Evidence ;
-  dct:description "Attestation en matière de frais de garde d'enfants"@fr ;
+  dct:description "Attestation en matière de frais de garde d'enfants" ;
   dct:creator ex:creche ;
   cv:isProvidedBy ex:person ;
   cv:validityPeriod ex:period ;

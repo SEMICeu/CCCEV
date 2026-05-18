@@ -13,8 +13,6 @@ The current version of the CCCEV is [2.2.0](https://semiceu.github.io/CCCEV/rele
 
 This specification is under development by the Working Group of the Core Public Event Vocabulary following an open and collaborative process (https://joinup.ec.europa.eu/document/process-and-methodology-developing-core-vocabularies). 
 
-Discussions about the version 2.1.0 of CCCEV took place during the webinar of the 27th of October 2021 [available here](https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies).
-
 The activities the SEMIC community organises around this specification are published on [Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary). 
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Criterion and Core Evidence Vocabulary repository on [GitHub](https://github.com/SEMICeu/CCCEV/issues). A short guideline for submitting issues can be found at [https://github.com/SEMICeu/CCCEV/wiki](https://github.com/SEMICeu/CCCEV/wiki).
@@ -23,55 +21,9 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 /releases: Core Criterion and Core Evidence releases (1.00, 2.00 etc), each release might have different distributions.
 
 ## License
-Copyright © 2024 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CCCEV repository on GitHub.
+Copyright © 2026 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CCCEV repository on GitHub.
 
-## Webinar Overview
-This section offers an overview of the webinars and events related to the Core Criterion and Core Evidence Vocabulary.
 
-The table below shows webinars and events related to **latest version of the Core Criterion and Core Evidence Vocabulary**:
-<table>  
-<tbody>  
-<tr>  
-<td>  
-<p><strong>Title</strong></p>  
-</td>  
-<td>  
-<p><strong>Date</strong></p>  
-</td>  
-</tr>  
-<tr>  
-<td>  
-<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies-and-style-guide-blog-post">Webinar on review of Core Vocabularies and Style Guide Blog post</a></p>  
-</td>  
-<td>  
-<p>09/04/2024</p>  
-</td>  
-</tr>  
-<tr>  
-<td>  
-<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies">Webinar on review of Core Vocabularies</a></p>  
-</td>  
-<td>  
-<p>27/10/2023</p>  
-</td>  
-</tr>  
-<tr>  
-<td>  
-<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-core-vocabularies-core-business-core-person-vocabulary-cccev">Webinar on Core Vocabularies: Core Business &amp; Core Person Vocabulary, CCCEV</a></p>  
-</td>  
-<td>  
-<p>21/02/2023</p>  
-</td>  
-</tr>  
-<tr>  
-<td>  
-<p><a href="https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-dedicated-review-core-vocabularies-27th-october-1030-cet">Webinar dedicated to the review of the Core Vocabularies</a></p>  
-</td>  
-<td>  
-<p>27/10/2022</p>  
-</td>  
-</tr>  
-</tbody>  
 </table>  
 
 The table below shows webinars and events related to **previous versions of the Core Criterion and Core Evidence Vocabulary**:

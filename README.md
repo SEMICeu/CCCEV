@@ -11,7 +11,7 @@ Using these basic core concepts, CCCEV provides a generic setting to define Crit
 
 The current version of the CCCEV is [2.2.0](https://semiceu.github.io/CCCEV/releases/2.2.0/).
 
-This specification is under development by the Working Group of the Core Public Event Vocabulary following an [open and collaborative process](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/document/process-and-methodology-developing-core-vocabularies). 
+This specification is under development by the Working Group of the Core Vocabularies following an [open and collaborative process](https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/document/process-and-methodology-developing-core-vocabularies). 
 
 The activities the SEMIC community organises around this specification are published on [SEMIC Support Centre](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary). 
 
